@@ -1,0 +1,8 @@
+{
+  "label": "API Docs",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation for the Figura Lua API."
+  }
+}
