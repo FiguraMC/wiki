@@ -41,7 +41,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/figuramc/wiki/tree/main/docs/',
+          editUrl: 'https://github.com/figuramc/wiki/tree/main/',
         },
         blog: false,
         theme: {
