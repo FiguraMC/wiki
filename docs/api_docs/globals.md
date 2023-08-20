@@ -6,5 +6,5 @@ sidebar_position: 1
 
 ## Player
 
-The player API is accessed through the `player` global, like so:
-`player:isGliding()`
+The player API is accessed through the <code>player</code> global, like so:
+<code>player:isGliding()</code>
