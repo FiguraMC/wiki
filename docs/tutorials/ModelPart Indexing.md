@@ -30,10 +30,10 @@ end
 
 # BBmodels in subfolders
 bbmodel files in subfolders are a special case. For them, the folder itself acts as another ModelPart.<br/>
-\- <Emoji icon="file_folder"/> <code>subfolderA</code><br/>
-\-- <Emoji icon="file_bbmodel"/> <code>Pet.bbmodel</code><br/>
-\-- <Emoji icon="file_bbmodel"/> <code>bow.bbmodel</code><br/>
-\- <Emoji icon="file_folder"/> <code>subfolderB</code><br/>
-\-- <Emoji icon="file_bbmodel"/> <code>model.bbmodel</code><br/>
-\-- <Emoji icon="file_bbmodel"/> <code>bow.bbmodel</code><br/>
-The bbmodel <Emoji icon="file_bbmodel"/> <code>Pet.bbmodel</code> would be accessed by <code>models.subfolderA.Pet</code>.<br/>
+\- <Emoji icon="file/folder"/> <code>subfolderA</code><br/>
+\-- <Emoji icon="file/bbmodel"/> <code>Pet.bbmodel</code><br/>
+\-- <Emoji icon="file/bbmodel"/> <code>bow.bbmodel</code><br/>
+\- <Emoji icon="file/folder"/> <code>subfolderB</code><br/>
+\-- <Emoji icon="file/bbmodel"/> <code>model.bbmodel</code><br/>
+\-- <Emoji icon="file/bbmodel"/> <code>bow.bbmodel</code><br/>
+The bbmodel <Emoji icon="file/bbmodel"/> <code>Pet.bbmodel</code> would be accessed by <code>models.subfolderA.Pet</code>.<br/>

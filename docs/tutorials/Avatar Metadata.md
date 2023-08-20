@@ -147,7 +147,7 @@ This is not table indexing like how you would index the `animations` table to ge
 
 ### <code>"ignoredTextures"</code> : String[]
 This key defines which textures should be ignored when loading the avatar. This is useful for when you have a cube that gets its texture set via code, but since all cubes must have a blockbench texture for Figura to even load the cube, you will either have to waste space with a dummy texture or use another texture in the model, which probably won't look good on the cube. This key allows you to have that dummy texture in blockbench without having to waste precious bytes on having that texture loaded with the avatar.<br/>
-Referencing a texture is exactly the same format as getting a Texture object with the <code>textures</code> global. Check out the page documenting [how to get a Texture reference](TODO)<br/>
+Referencing a texture is exactly the same format as getting a Texture object with the <code>textures</code> global.<br/>
 Consider this avatar:<br/>
 \- <Emoji icon="file/folder"/> <code>KattExampleAvatar</code><br/>
 \-- <Emoji icon="file/folder"/> <code>accessories</code><br/>
