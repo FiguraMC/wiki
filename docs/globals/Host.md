@@ -1,6 +1,6 @@
 The host API is accessed through the <code>host</code> global. Like so: <code>host:isFlying()</code>
 
-Functions in the host API aren't synced, meaning to be useful in multiplayer their information will need to be synced via [pings](https://github.com/KitCat962/FiguraRewriteRewrite/wiki/Pings).
+Functions in the host API aren't synced, meaning to be useful in multiplayer their information will need to be synced via [pings](../tutorials/Pings).
 
 ### isHost
 Returns true if this instance of the script is running on host

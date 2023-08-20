@@ -187,7 +187,7 @@ Returns the set color for the selected block outline
 Default nil
 
 ### setPostEffect(string)
-Sets the current [rendering effect](https://github.com/KitCat962/FiguraRewriteRewrite/wiki/PostEffects)
+Sets the current [rendering effect](../enums/PostEffects)
 
 Same as the discontinued Super Secret Settings
 

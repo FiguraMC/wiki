@@ -13,7 +13,7 @@ At this point, the keybind will show up in the avatar's keybind list- accessible
 
 More keybinds ids can be found in the Keybinds: Enums page
 
-There are multiple ways to detect keybinds, but the most common is through <code>press</code> and <code>release</code> as they are easiest to ping. If you're not familiar with pings see [Pings](Pings).
+There are multiple ways to detect keybinds, but the most common is through <code>press</code> and <code>release</code> as they are easiest to ping. If you're not familiar with pings see [Pings](./Pings).
 
 Underneath creating the key we will be tying the press of the key to a ping function. It's done underneath as the code is read top-down and the key must exist first.
 ```lua

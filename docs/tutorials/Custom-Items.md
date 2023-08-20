@@ -2,7 +2,7 @@ import Emoji from '@site/src/components/Emoji';
 
 Using Figura you can make custom items that are visible in first and third person.
 
-You'll need to use the Item [keyword](https://github.com/KitCat962/FiguraRewriteRewrite/wiki/ModelPart-ParentTypes) and the item_render event combined.
+You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the item_render event combined.
 
 ## Item Keyword
 If you give a Blockbench group the Item keyword (by starting the group name with <code>Item</code>) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold.
@@ -19,7 +19,7 @@ end
 This will replace every single item you're holding with your custom item
 
 ## Replacing Specific Items
-You can use the event's arguments to get different information from the item you're holding, and they are: the itemstack, rendering mode, position, rotation, scale, and if its in the left hand. [Possible item rendering modes.](https://github.com/KitCat962/FiguraRewriteRewrite/wiki/ItemDisplayModes:-Enums)
+You can use the event's arguments to get different information from the item you're holding, and they are: the itemstack, rendering mode, position, rotation, scale, and if its in the left hand. [Possible item rendering modes.](../enums/ItemDisplayModes)
 ```lua
 function events.item_render(item,mode,pos,rot,scale,left)
     

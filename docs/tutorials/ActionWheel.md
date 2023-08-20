@@ -43,7 +43,7 @@ Now we have an Action that does stuff. You may not notice anything, but there is
 
 The issue is that the leftClick code will only execute on your computer. 
 
-As described in [Pings](Pings), Figura is completely clientside. The Action Wheel is a feature added by Figura, meaning it will never be synced between clients via the Minecraft Server. So instead, we must use Pings that utilize Figura's Backend to sync data between clients.
+As described in [Pings](./Pings), Figura is completely clientside. The Action Wheel is a feature added by Figura, meaning it will never be synced between clients via the Minecraft Server. So instead, we must use Pings that utilize Figura's Backend to sync data between clients.
 
 First step is to take the code that would be executed on leftClick, and turn it into a ping function. Then, instead of assigning an anonymous function to <code>leftClick</code>, we assign the ping function itself to <code>leftClick</code>
 
@@ -215,7 +215,7 @@ return action_wheel:newAction()
   end)
 ```
 ### Setting Default State of Toggle Action
-This primarily utilizes calling a ping function without the network code, which is explained [here](Pings#ping-on-init)
+This primarily utilizes calling a ping function without the network code, which is explained [here](./Pings#ping-on-init)
 
 This example will correctly set the default visibility of a theoretical jetpack model
 ```lua

@@ -130,7 +130,7 @@ Consider the following avatar:<br/>
 If we want the animation <code>"idle"</code> in the bbmodel <Emoji icon="file/bbmodel"/> <code>player.bbmodel</code>, we would include the string <code>"player.idle"</code> in the <code>"autoAnims"</code> array.<br/>
 Folder seperation is done with a period (<code>.</code>) instead of slash (<code>/</code>).<br/>
 If we want the animation <code>"spin"</code> in the model <Emoji icon="file/bbmodel"/> <code>halo.bbmodel</code>, we would include the string <code>"accessories.halo.spin"</code> in the <code>"autoAnims"</code> array.<br/>
-This is not table indexing like how you would [index the animations table](Animation%20Indexing) to get an Animation. It is just string concatenation.<br/>
+This is not table indexing like how you would index the `animations` table to get an Animation. It is just string concatenation.<br/>
 <code>autoAnims</code> has a very niche use case as 99% of the time you have animations that you only want playing sometimes or want to play on a trigger. The only real use case is for a constantly playing looping animation that you don't want to waste ~8 instructions on play at the beginning of a script, or perhaps you have an avatar that does not have any script files and you want to keep it that way.
 
 ```json
@@ -147,7 +147,7 @@ This is not table indexing like how you would [index the animations table](Anima
 
 ### <code>"ignoredTextures"</code> : String[]
 This key defines which textures should be ignored when loading the avatar. This is useful for when you have a cube that gets its texture set via code, but since all cubes must have a blockbench texture for Figura to even load the cube, you will either have to waste space with a dummy texture or use another texture in the model, which probably won't look good on the cube. This key allows you to have that dummy texture in blockbench without having to waste precious bytes on having that texture loaded with the avatar.<br/>
-Referencing a texture is exactly the same format as getting a Texture object with the <code>textures</code> global. Check out the page documenting [how to get a Texture reference](Textures)<br/>
+Referencing a texture is exactly the same format as getting a Texture object with the <code>textures</code> global. Check out the page documenting [how to get a Texture reference](TODO)<br/>
 Consider this avatar:<br/>
 \- <Emoji icon="file/folder"/> <code>KattExampleAvatar</code><br/>
 \-- <Emoji icon="file/folder"/> <code>accessories</code><br/>

@@ -9,7 +9,7 @@ For example, the ParentType <code>"Head"</code>:<br/>
 When setting the ParentType via group names, ParentTypes are commonly referred to as Keywords or BlockBench Keywords.
 
 # Applying ParentTypes via Script
-To apply a ParentType through script, [index the ModelPart](ModelPart%20Indexing) you want to set the ParentType of, then call the <code>setParentType</code> method on it, passing in a ParentType as a string as the parameter.<br/>
+To apply a ParentType through script, [index the ModelPart](../tutorials/ModelPart%20Indexing) you want to set the ParentType of, then call the <code>setParentType</code> method on it, passing in a ParentType as a string as the parameter.<br/>
 <code>models.Pet:setParentType("World")</code><br/>
 After an avatar is loaded, there is no difference between <Emoji icon="blockbench/group"/> groups, <Emoji icon="blockbench/cube"/> cubes, or <Emoji icon="file/bbmodel"/> bbmodels. Everything is a ModelPart, meaning everything can have a ParentType.
 
@@ -17,7 +17,7 @@ After an avatar is loaded, there is no difference between <Emoji icon="blockbenc
 All ParentTypes have an alternate way of spelling it, an alias, though internally they do the same thing. They will be listed just underneath what Figura considers to be the true ParentType.<br/>
 Many ParentTypes share similar properties. You can roughly put them into 3 distinct groups: Mimic, Pivot, and Special. These groupings are not recognized by the mod itself and just serve to make explaining similar ParentTypes more convenient.<br/>
 
-**Mimic**: Mimic ParentTypes copy transformations (position, rotation, scale) from elsewhere, typically a Vanilla Part, and apply it to the ModelPart. This allows for a script-free way of making a ModelPart behave like a Vanilla Part. These transformations are added on top of any transformations set via script or transformations set via a BlockBench Animation. To prevent this ParentTypes transformations from being applied while a BlockBench Animation is playing, enable the [Animation's Override property](BlockBench#animation-properties).
+**Mimic**: Mimic ParentTypes copy transformations (position, rotation, scale) from elsewhere, typically a Vanilla Part, and apply it to the ModelPart. This allows for a script-free way of making a ModelPart behave like a Vanilla Part. These transformations are added on top of any transformations set via script or transformations set via a BlockBench Animation. To prevent this ParentTypes transformations from being applied while a BlockBench Animation is playing, enable the [Animation's Override property](../start_here/BlockBench#animation-properties).
 
 **Pivot**: Pivot ParentTypes move the location of specific Vanilla Parts to the pivot point of the ModelPart. If multiple of the same Pivot ParentType are in a bbmodel, multiple of them are rendered. These ParentTypes will only render their Vanilla Part if the part in the <code>vanilla_model</code> global is visible.
 

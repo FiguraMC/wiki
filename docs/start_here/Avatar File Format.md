@@ -6,7 +6,7 @@ A Figura Avatar consists of a named <Emoji icon="file/folder"/> folder or a <Emo
 \-- <Emoji icon="file/folder"/> <code>&lt;AvatarName&gt;</code><br/>
 \--- <Emoji icon="file/json"/> <code>avatar.json</code><br/>
 
-An <Emoji icon="file/json"/> <code>avatar.json</code> file is just a renamed text file which contains [Avatar Metadata](Avatar%20Metadata) in the form of a json object, but it can be empty. It's presence tells Figura that this folder is an Avatar.
+An <Emoji icon="file/json"/> <code>avatar.json</code> file is just a renamed text file which contains [Avatar Metadata](../tutorials/Avatar%20Metadata) in the form of a json object, but it can be empty. It's presence tells Figura that this folder is an Avatar.
 
 Figura also looks for an image named <Emoji icon="file/texture"/> <code>avatar.png</code>. This will be used as the avatar's icon which will appear next to it's name in the Wardrobe.
 
