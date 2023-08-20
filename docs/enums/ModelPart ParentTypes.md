@@ -11,7 +11,7 @@ When setting the ParentType via group names, ParentTypes are commonly referred t
 # Applying ParentTypes via Script
 To apply a ParentType through script, [index the ModelPart](ModelPart%20Indexing) you want to set the ParentType of, then call the <code>setParentType</code> method on it, passing in a ParentType as a string as the parameter.<br/>
 <code>models.Pet:setParentType("World")</code><br/>
-After an avatar is loaded, there is no difference between <Emoji icon="blockbench/group"/> groups, <Emoji icon="blockbench/cube"/> cubes, or <Emoji icon="file_bbmodel"/> bbmodels. Everything is a ModelPart, meaning everything can have a ParentType.
+After an avatar is loaded, there is no difference between <Emoji icon="blockbench/group"/> groups, <Emoji icon="blockbench/cube"/> cubes, or <Emoji icon="file/bbmodel"/> bbmodels. Everything is a ModelPart, meaning everything can have a ParentType.
 
 # List of ParentTypes
 All ParentTypes have an alternate way of spelling it, an alias, though internally they do the same thing. They will be listed just underneath what Figura considers to be the true ParentType.<br/>
