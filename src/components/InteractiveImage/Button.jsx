@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import InteractiveImageContext from '@site/src/contexts/InteractiveImageContext';
 import styles from '@site/src/components/InteractiveImage/Button.module.css';
 
@@ -26,6 +26,13 @@ export default function ({
     background: '#fff',
     opacity: _selected || hover ? 0.3 : 0.0,
   };
+
+  useEffect(() => {
+    document
+      .getAnimations()
+      .filter((a) => a.animationName === styles.pulse)
+      .forEach((a) => (a.startTime = 0));
+  }, [hover]);
 
   return (
     <>
