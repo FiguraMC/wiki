@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import InteractiveImageContext from '@site/src/contexts/InteractiveImageContext';
+import styles from '@site/src/components/InteractiveImage/Button.module.css';
 
 export default function ({
   id,
@@ -8,30 +9,34 @@ export default function ({
   width,
   height,
   style,
-  debug,
+  pulse,
   children,
 }) {
   const [hover, setHover] = useState(false);
   const { selected, setSelected } = useContext(InteractiveImageContext);
+  const _selected = selected === id;
+
+  const buttonStyle = {
+    left,
+    top,
+    width,
+    height,
+    position: 'absolute',
+    cursor: 'pointer',
+    background: '#fff',
+    opacity: _selected || hover ? 0.3 : 0.0,
+  };
+
   return (
     <>
       <div
-        onClick={() => setSelected(selected === id ? null : id)}
+        className={pulse && !hover && !_selected && styles.pulse}
+        onClick={() => setSelected(_selected ? null : id)}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        style={{
-          left: left,
-          top: top,
-          width: width,
-          height: height,
-          position: 'absolute',
-          border: debug ? 'solid red' : 'none',
-          background: 'white',
-          opacity: selected === id || hover ? 0.3 : 0.0,
-          cursor: 'pointer',
-        }}
+        style={buttonStyle}
       />
-      {selected === id && <div style={style}>{children}</div>}
+      {_selected && <div style={style}>{children}</div>}
     </>
   );
 }
