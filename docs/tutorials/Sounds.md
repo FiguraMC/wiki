@@ -9,7 +9,7 @@ sounds:playSound(soundID,position,volume,pitch,loop)
 ```
 As you can see this function takes five arguments, the sound ID, the position it will be played, the volume (this dictates how close players need to be to hear the sound, default is 1), its pitch (default is 1), and whether or not it will start playing immediately after it ends (default is false).
 
-For Minecraft sounds the sound ID is the internal name of the sound, you can find these on the [Minecraft Wiki](https://minecraft.fandom.com/wiki/Sounds.json/Java_Edition_values) under the Sound Event column. It will play one of the sounds associated with that ID at random.
+For Minecraft sounds the sound ID is the internal name of the sound, you can find these on the [Minecraft Wiki](https://minecraft.wiki/w/Sounds.json/Java_Edition_values) under the Sound Event column. It will play one of the sounds associated with that ID at random.
 
 Example, note that the id is a string because it's in quotes:
 ```lua
