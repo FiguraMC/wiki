@@ -64,7 +64,8 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [ // TODO: these aren't being centered correctly, figure out why
+        links: [
+          // TODO: these aren't being centered correctly, figure out why
           //   {
           //     title: 'Links',
           //     items: [
@@ -101,6 +102,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['lua'],
       },
     }),
 };
