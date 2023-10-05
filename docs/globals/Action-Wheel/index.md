@@ -1,5 +1,3 @@
----
-title: Action Wheel
----
+# Action Wheel
 
 This page is a WIP!
