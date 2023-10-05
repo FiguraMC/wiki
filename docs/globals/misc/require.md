@@ -8,6 +8,11 @@ If a required script has no returns, then require() will return true
 
 If the name you give isn't any of your scripts, it will error
 
+**Examples**:
 ```lua
+-- In the root directory
 require("JimmyAnims")
+
+-- In a nested folder (lib in this case)
+require("lib.GSAnimBlend")
 ```
