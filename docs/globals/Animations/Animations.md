@@ -1,7 +1,5 @@
 The global instance of the AnimationsAPI, accessed via the `animations` global.
 
-For functions concerning animations themselves go here.
-
 ## getPlaying
 Return a table with all playing animations
 ```lua
