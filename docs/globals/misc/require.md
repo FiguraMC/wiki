@@ -14,9 +14,9 @@ If the name you give isn't any of your scripts, it will error
 
 #### Script in root folder
 <pre>
-<Emoji icon="file/folder"/> <code>MyCoolAvatar/</code><br/>
-├─ <Emoji icon="file/lua"/> <code>script.lua</code><br/>
-├─ <Emoji icon="file/lua"/> <code>JimmyAnims.lua</code><br/>
+<Emoji icon="file/folder"/> MyCoolAvatar/<br/>
+├─ <Emoji icon="file/lua"/> script.lua<br/>
+├─ <Emoji icon="file/lua"/> JimmyAnims.lua<br/>
 </pre>
 
 ```lua
@@ -26,10 +26,10 @@ require("JimmyAnims")
 
 #### Script in another folder
 <pre>
-<Emoji icon="file/folder"/> <code>MyCoolAvatar/</code><br/>
-├─ <Emoji icon="file/lua"/> <code>script.lua</code><br/>
-├─ <Emoji icon="file/folder"/> <code>MyFolder/</code><br/>
-│  ├─ <Emoji icon="file/lua"/> <code>GSAnimBlend.lua</code><br/>
+<Emoji icon="file/folder"/> MyCoolAvatar/<br/>
+├─ <Emoji icon="file/lua"/> script.lua<br/>
+├─ <Emoji icon="file/folder"/> MyFolder/<br/>
+│  ├─ <Emoji icon="file/lua"/> GSAnimBlend.lua<br/>
 </pre>
 
 ```lua
