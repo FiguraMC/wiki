@@ -5,7 +5,7 @@ A table is a Lua value that can store values in specific keys. The act of gettin
 A table can be created using curly brackets.
 
 ```lua
-local t={}
+local t = {}
 ```
 
 ## Generic Indexing
@@ -13,11 +13,11 @@ local t={}
 <code>table[key]</code> is the way to index a table. You can either get what is currently at that key, or assign a value to that key. There is no limitation to what can be used as keys or values in a table. If you index a table with an unknown key, it will return <code>nil</code>. You can also use variables as a key to index a table using this method.
 
 ```lua
-local v=6
-t[2]="number key, string value"
-t["string key, table value"]={}
-t[false]=true
-t[v]="ree"
+local v = 6
+t[2] = "number key, string value"
+t["string key, table value"] = {}
+t[false] = true
+t[v] = "ree"
 
 print(t[2]) --> "number key, string value"
 print(t["reeee"]) --> nil
@@ -37,7 +37,7 @@ If that seems like a lot of work to index by a string, yes it is.<br/>
 t.name = "Katt"
 t.age = -1
 t.gender = t.name
-t.underscores_are_allowed=true
+t.underscores_are_allowed = true
 ```
 
 ## Object Oriented Method Indexing
@@ -45,9 +45,9 @@ t.underscores_are_allowed=true
 There is one more way to index a table. Many of the functions in Figura take in the object that called said function as the first parameter. This is because every object of the same type has the exact same functions. This is done via <code>table:key()</code>.<br/>
 
 ```lua
-local posA=player:getPos()
+local posA = player:getPos()
 
-local posB=player.getPos(player)
+local posB = player.getPos(player)
 ```
 
 ## Initialize Table with Values
@@ -55,33 +55,24 @@ local posB=player.getPos(player)
 You can assign values to keys when the table is initialized. Each key-value pair must be separated by a comma (<code>,</code>)<br/>
 
 ```lua
-local a={
-  [false]=1,
-  ["string with spaces"]="string",
-  [v]={
-    ["a"]=1,
-    ["b"]=2
+local a = {
+  [false] = 1,
+  ["string with spaces"] = "string",
+  [v] = {
+    a = 1,
+    b = 2,
   },
-
   --string shorthand rules still apply. This is equivalent to <code>["life"]=42,</code>
-  life=42,
+  life = 42,
 }
 ```
 
 If you do not specify an index, the provided values will automatically be assigned a numeric index, starting at <code>1</code>. This is how arrays are handled in lua, just a table that acts as an array. A table array if you will. Unlike other languages, Lua arrays begin indexing at <code>1</code> and functions that take in an array expect the first element at <code>1</code>.
 
 ```lua
-local array={
-  42,         --[1] = 42,
-  36,         --[2] = 36,
-  1024,       --[3] = 1024,
-  1,          --[4] = 1,
-  "string",   --[5] = "string",
-  v,          --[6] = v,
-  t           --[7] = t
-}
+local array = { 42, 36, 1024, 1, "string", v, t } --[1] = 42, --[2] = 36, --[3] = 1024, --[4] = 1, --[5] = "string", --[6] = v, --[7] = t
 --newlines are ignored, as with everything in lua
-local array2={42,36,1024,1,"string",v,t}
+local array2 = { 42, 36, 1024, 1, "string", v, t }
 ```
 
 ## Iterating Over a Table
@@ -91,7 +82,7 @@ You can iterate over every single index using <code>pairs</code>. This will go t
 
 ```lua
 for key, value in pairs(t) do
-  print(key,value)
+  print(key, value)
 end
 ```
 
@@ -99,7 +90,7 @@ If the order of the iteration is important, you can use <code>ipairs</code>, but
 
 ```lua
 for index, value in ipairs(array) do
-  print(index,value)
+  print(index, value)
 end
 ```
 
@@ -109,8 +100,8 @@ You can use the <code>#</code> operator to get the length of a table array. For 
 As an example, <code>ipairs</code> is pretty much just this.
 
 ```lua
-for index=1,#array,1 do
-  print(index,array[index])
+for index = 1, #array, 1 do
+  print(index, array[index])
 end
 ```
 

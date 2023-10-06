@@ -59,10 +59,10 @@ By nature, setPlaying needs to be in a function that will run multiple times, we
 
 ```lua
 function events.tick()
-    local crouching = player:getPose() == "CROUCHING"
-    -- This detects if you are crouching and stores it into crouch.
-    -- So: crouch == true when crouching, and crouch == false when you're not crouching
-    animations.example.idle:setPlaying(crouching)
+  local crouching = player:getPose() == "CROUCHING"
+  -- This detects if you are crouching and stores it into crouch.
+  -- So: crouch == true when crouching, and crouch == false when you're not crouching
+  animations.example.idle:setPlaying(crouching)
 end
 ```
 
@@ -77,21 +77,21 @@ As an example we'll do code for a set of four animations: idle, walk, sprint, an
 
 ```lua
 function events.tick()
-    local crouching = player:getPose() == "CROUCHING"
-    -- This is the same line of code from the previous example
-    local walking = player:getVelocity().xz:length() > .01
-    -- walking == true when moving, and walking == false when still (or going directly up/down as we excluded the y axis)
-    local sprinting = player:isSprinting()
-    -- If you want to find more player functions, check out the Player Global page
+  local crouching = player:getPose() == "CROUCHING"
+  -- This is the same line of code from the previous example
+  local walking = player:getVelocity().xz:length() > .01
+  -- walking == true when moving, and walking == false when still (or going directly up/down as we excluded the y axis)
+  local sprinting = player:isSprinting()
+  -- If you want to find more player functions, check out the Player Global page
 
-    -- Now we're going to use a lot of logic to figure out when animations should/shouldn't play
-    animations.example.idle:setPlaying(not walking and not crouching)
-    -- You're idle when not walking and not crouching
-    animations.example.walk:setPlaying(walking and not crouching and not sprinting)
-    -- You're walking when... walking and not crouching, but you want to make sure you're not sprinting either
-    animations.example.sprint:setPlaying(sprinting and not crouching)
-    -- You probably can catch my drift by now
-    animations.example.crouch:setPlaying(crouching)
+  -- Now we're going to use a lot of logic to figure out when animations should/shouldn't play
+  animations.example.idle:setPlaying(not walking and not crouching)
+  -- You're idle when not walking and not crouching
+  animations.example.walk:setPlaying(walking and not crouching and not sprinting)
+  -- You're walking when... walking and not crouching, but you want to make sure you're not sprinting either
+  animations.example.sprint:setPlaying(sprinting and not crouching)
+  -- You probably can catch my drift by now
+  animations.example.crouch:setPlaying(crouching)
 end
 ```
 

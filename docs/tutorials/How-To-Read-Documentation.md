@@ -48,7 +48,7 @@ At this point we have this: <code>player:getItem(5)</code> and we're going to te
 
 ```lua
 function events.tick()
-    log(player:getItem(5))
+  log(player:getItem(5))
 end
 ```
 
@@ -70,7 +70,7 @@ Like before, getID() is in ItemStack, meaning it wants an ItemStack, but we don'
 
 ```lua
 function events.tick()
-    log(player:getItem(5):getID())
+  log(player:getItem(5):getID())
 end
 ```
 
@@ -80,7 +80,7 @@ Notably, it's returning a String which is quite literally a string of characters
 
 ```lua
 function events.tick()
-    log(player:getItem(5):getID() == "minecraft:elytra")
+  log(player:getItem(5):getID() == "minecraft:elytra")
 end
 ```
 

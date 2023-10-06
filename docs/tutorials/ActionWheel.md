@@ -31,23 +31,20 @@ New Action, but it really doesn't look like much. Lets add a title, a display it
 One thing to remember is that all Action functions return itself. This allows for functions to be chained together, always modifying the same action
 
 ```lua
-local action = mainPage:newAction()
-    :title("My Action")
-    :item("minecraft:stick")
-    :hoverColor(1,0,1)
+local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1)
 ```
 
 Pretty, but functionally useless. Lets add a function to the <code>leftClick</code> field. When the Action is left clicked, the function stored in the Action's <code>leftClick</code> field gets invoked.
 
 ```lua
-local action = mainPage:newAction()
-    :title("My Action")
-    :item("minecraft:stick")
-    :hoverColor(1,0,1)
-    -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
-    :onLeftClick(function()
-        print("Hello World!")
-    end)
+local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(
+  1,
+  0,
+  1
+  -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
+):onLeftClick(function()
+  print("Hello World!")
+end)
 ```
 
 Now we have an Action that does stuff. You may not notice anything, but there is a glaring issue with the current code.
@@ -65,14 +62,14 @@ Also, please name your ping function so that it describes what it does. I _hate_
 -- Create ping function that does the same thing the Action would have done.
 -- It must be defined above the Action.
 function pings.actionClicked()
-    print("Hello World!")
+  print("Hello World!")
 end
-local action = mainPage:newAction()
-    :title("My Action")
-    :item("minecraft:stick")
-    :hoverColor(1,0,1)
-    -- Pass in the ping function itself into <code>onLeftClick</code>
-    :onLeftClick(pings.actionClicked)
+local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(
+  1,
+  0,
+  1
+  -- Pass in the ping function itself into <code>onLeftClick</code>
+):onLeftClick(pings.actionClicked)
 ```
 
 And there you have it. An Action that correctly executes it's contents across all clients.
@@ -81,15 +78,9 @@ While this will correctly sync the timing of the execution of the ping function 
 
 ```lua
 function pings.actionClicked(a)
-    print("Hello World!", a)
+  print("Hello World!", a)
 end
-local action = mainPage:newAction()
-    :title("My Action")
-    :item("minecraft:stick")
-    :hoverColor(1,0,1)
-    :onLeftClick(function()
-        pings.actionClicked(math.random())
-    end)
+local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick(end)
 ```
 
 What we are doing is wrapping the call to the ping function inside another function.
@@ -99,8 +90,7 @@ While the code might seem correct to those less code literate, it translates to 
 A ping will never have a return value, meaning <code>leftClick</code> is being assigned the value <code>nil</code>, meaning nothing.
 
 ```lua
-mainPage:newAction()
-    :onLeftClick(pings.actionClicked2(math.random()))
+mainPage:newAction():onLeftClick(pings.actionClicked2(math.random()))
 -- again to those not paying attention:
 --   This is incorect code. Do not use. Do not copy paste.
 ```
@@ -112,13 +102,10 @@ local mainPage = action_wheel:newPage()
 action_wheel:setPage(mainPage)
 
 function pings.actionClicked()
-    print("Hello World!")
+  print("Hello World!")
 end
-local action = mainPage:newAction()
-    :title("My Action")
-    :item("minecraft:stick")
-    :hoverColor(1,0,1)
-    :onLeftClick(pings.actionClicked)
+local action =
+  mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick(pings.actionClicked)
 ```
 
 ## Action Events
@@ -130,7 +117,8 @@ Technically they are "callbacks" and not "events" as you can only assign a singl
 Figura passes in the Action itself into the first paremeter of the function stored in <code>leftClick</code>.The function that assigns this field is <code>onLeftClick</code>
 
 ```lua
-function action.leftClick(self) end
+function action.leftClick(self)
+end
 ```
 
 ### RightClick
@@ -138,7 +126,8 @@ function action.leftClick(self) end
 Figura passes in the Action itself into the first paremeter of the function stored in <code>rightClick</code>. The function that assigns this field is <code>onRightClick</code>
 
 ```lua
-function action.rightClick(self) end
+function action.rightClick(self)
+end
 ```
 
 ### Toggle
@@ -146,21 +135,19 @@ function action.rightClick(self) end
 When the Action is assigned a function to the <code>toggle</code> field, it becomes a Toggle Action. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter, and the Action itself as the second. The function that assigns to the <code>toggle</code> field is <code>onToggle</code>.
 
 ```lua
-function action.toggle(state, self) end
+function action.toggle(state, self)
+end
 ```
 
 The Toggle Action has more functions that determine how it looks when it is toggled on. These functions start with <code>toggle</code>.
 
 ```lua
 function pings.setVisible(state)
-    models:setVisible(state)
+  models:setVisible(state)
 end
-page:newAction()
-    :title("disabled")
-    :toggleTitle("enabled")
-    :item("red_wool")
-    :toggleItem("green_wool")
-    :onToggle(pings.setVisible)
+page:newAction():title("disabled"):toggleTitle("enabled"):item("red_wool"):toggleItem("green_wool"):onToggle(
+  pings.setVisible
+)
 ```
 
 ### UnToggle
@@ -168,7 +155,8 @@ page:newAction()
 Unlike Toggle which gets executed when the Action is toggled on or off, UnToggle only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second. The function that assigns to the <code>untoggle</code> field is <code>onUntoggle</code>.
 
 ```lua
-function action.untoggle(state, self) end
+function action.untoggle(state, self)
+end
 ```
 
 ### Scroll
@@ -176,7 +164,8 @@ function action.untoggle(state, self) end
 This will execute when the mouse wheel scrolls while hovering over the Action. The first parameter is the direction the mouse scrolled (1 for scroll up, -1 for scroll down. Can be more than 1 for non-standard mouse wheels). The second paremeter is the Action itself
 
 ```lua
-function action.scroll(dir, self) end
+function action.scroll(dir, self)
+end
 ```
 
 ## Advanced Action Wheel
@@ -192,18 +181,18 @@ This allows Pages to be modular and easily reorganized if needed. More important
 ```lua
 --ActionWheel.lua
 -- This file controls the root Page. All Pages are 'children' of this Page.
-local mainpage=action_wheel:newPage()
+local mainpage = action_wheel:newPage()
 -- <code>setAction</code> is used to add an Action that already exists to this Page
 -- You need to specify the slot the Action wil go into, but <code>-1</code> can be used to put it in the next available slot.
-mainpage:setAction(-1,require("Page1"))
-mainpage:setAction(-1,require("Page2"))
+mainpage:setAction(-1, require("Page1"))
+mainpage:setAction(-1, require("Page2"))
 action_wheel:setPage(mainpage)
 ```
 
 ```lua
 --Page1.lua
 -- Create the Page
-local page=action_wheel:newPage()
+local page = action_wheel:newPage()
 -- Define the Actions within the Page (These are dummy example Actions)
 page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
@@ -212,48 +201,38 @@ page:newAction():title():color():onLeftClick()
 -- This variable stores the Page to go back to when done with this Page
 local prevPage
 -- This Action just sets the stored page as active
-page:newAction()
-  :title('GoBack')
-  :item("minecraft:barrier")
-  :onLeftClick(function()
-    action_wheel:setPage(prevPage)
-  end)
+page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
+  action_wheel:setPage(prevPage)
+end)
 
 -- <code>Page:newAction</code> automatically adds the Action to the Page.
 -- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
 -- This is the Action that will be returned by <code>require</code> and will be used to navigate to this file's Page
-return action_wheel:newAction()
-  :title("Page1")
-  :onLeftClick(function()
-    --store the current active page so that we can set it back as active later
-    prevPage=action_wheel:getCurrentPage()
-    --set this file's page as active
-    action_wheel:setPage(page)
-  end)
+return action_wheel:newAction():title("Page1"):onLeftClick(function()
+  --store the current active page so that we can set it back as active later
+  prevPage = action_wheel:getCurrentPage()
+  --set this file's page as active
+  action_wheel:setPage(page)
+end)
 ```
 
 ```lua
 --Page2.lua
 -- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are <code>local</code>.
-local page=action_wheel:newPage()
+local page = action_wheel:newPage()
 page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
 
 local prevPage
-page:newAction()
-  :title('GoBack')
-  :item("minecraft:barrier")
-  :onLeftClick(function()
-    action_wheel:setPage(prevPage)
-  end)
+page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
+  action_wheel:setPage(prevPage)
+end)
 
-return action_wheel:newAction()
-  :title("Page2")
-  :onLeftClick(function()
-    prevPage=action_wheel:getCurrentPage()
-    action_wheel:setPage(page)
-  end)
+return action_wheel:newAction():title("Page2"):onLeftClick(function()
+  prevPage = action_wheel:getCurrentPage()
+  action_wheel:setPage(page)
+end)
 ```
 
 ### Setting Default State of Toggle Action
@@ -264,24 +243,22 @@ This example will correctly set the default visibility of a theoretical jetpack 
 
 ```lua
 -- This variable's initial value will control the default state of the togglable thing.
-local jetpackEnabled=true
-local jetpackModel=models.model.Body.Jetpack -- reference a ModelPart for convinience
-
+local jetpackEnabled = true
+local jetpackModel = models.model.Body.Jetpack -- reference a ModelPart for convinience
 local function setJetpack(bool)
-    jetpackEnabled=bool -- this will be a ping function, so we still need to set the client's variable for when it is used in the toggle.
-    jetpackModel:setVisible(bool)
+  jetpackEnabled = bool -- this will be a ping function, so we still need to set the client's variable for when it is used in the toggle.
+  jetpackModel:setVisible(bool)
 end
-pings.setJetpack=setJetpack -- we now have a normal function and a ping function that calls the normal function after network stuff
-
+pings.setJetpack = setJetpack -- we now have a normal function and a ping function that calls the normal function after network stuff
 -- This event controls the particle effect of the jetpack
 function events.tick()
-    -- once every 4 ticks while the jetpack is visible
-    if jetpackEnabled and world.getTime()%4==0 then
-        -- spawn particles relative to the model itself in the world
-        local partMatrix=jetpackModel:partToWorldMatrix()
-        particles:newParticle("minecraft:flame",partMatrix:apply(3,-6,0))
-        particles:newParticle("minecraft:flame",partMatrix:apply(-3,-6,0))
-    end
+  -- once every 4 ticks while the jetpack is visible
+  if jetpackEnabled and world.getTime() % 4 == 0 then
+    -- spawn particles relative to the model itself in the world
+    local partMatrix = jetpackModel:partToWorldMatrix()
+    particles:newParticle("minecraft:flame", partMatrix:apply(3, -6, 0))
+    particles:newParticle("minecraft:flame", partMatrix:apply(-3, -6, 0))
+  end
 end
 
 -- Page boilerplate
@@ -290,9 +267,7 @@ action_wheel:setPage(mainpage)
 
 -- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
 setJetpack(jetpackEnabled)
-mainpage:newAction()
-    :title('Enable Jetpack')
-    :toggleTitle('Disable Jetpack')
-    :onToggle(pings.setJetpack) -- use the ping for the action toggle, as that is still needs to be pinged
-    :toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
+mainpage:newAction():title("Enable Jetpack"):toggleTitle("Disable Jetpack"):onToggle(
+  pings.setJetpack -- use the ping for the action toggle, as that is still needs to be pinged
+):toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
 ```

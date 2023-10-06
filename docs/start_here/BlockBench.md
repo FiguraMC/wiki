@@ -122,7 +122,7 @@ Keyframe time is measured in percentage, not seconds. So assuming a Step interpo
 They can be extracted via the following line:
 
 ```lua
-local time, anim=...
+local time, anim = ...
 ```
 
 Keyframe Expressions accept 2 different formats:
@@ -133,7 +133,7 @@ Keyframe Expressions accept 2 different formats:
 `math.sin(world.getTime())` is a single lua expression, so it is a valid Keyframe Expression.<br/> However, `local _, anim=... math.sin(anim:getTime())` is not a single lua expression and will need to have an explicit return value:
 
 ```lua
-local _, anim=...
+local _, anim = ...
 return math.sin(anim:getTime())
 ```
 

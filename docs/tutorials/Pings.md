@@ -61,11 +61,11 @@ Below is an example ping.
 
 ```lua
 function pings.pingName(a)
-    print("Ping")
-    print(".")
-    print("Data Recieved:", a)
-    print(".")
-    print("Pong")
+  print("Ping")
+  print(".")
+  print("Data Recieved:", a)
+  print(".")
+  print("Pong")
 end
 ```
 
@@ -106,13 +106,13 @@ How do we get around this? Well, when you assign a function to an index in the <
 
 ```lua
 local function doThing(state)
-    models.modelA:setVisible(state)
-    models.modelB:setVisible(not state)
+  models.modelA:setVisible(state)
+  models.modelB:setVisible(not state)
 end
 pings.doThing = doThing
 -- doThing and pings.doThing are 2 completely seperate values at this point, as the pings table has replaced the index at pings.doThing with a Java Function that wraps the doThing Lua Function.
 -- <code>doThing==pings.doThing</code> will return <code>false</code>
-print(doThing, pings.doThing, doThing==pings.doThing)
+print(doThing, pings.doThing, doThing == pings.doThing)
 
 local keybindState = false
 -- I call the local doThing instead of pings.doThing, as pings.doThing is a function that invokes network code.
@@ -120,9 +120,9 @@ local keybindState = false
 doThing(keybindState)
 local keyA = keybinds:newKeybind("KeybindName", "key.keyboard.k")
 function keyA.press()
-    keybindState = not keybindState
-    -- We still need to call the ping function in the keybind.
-    pings.doThing(keybindState)
+  keybindState = not keybindState
+  -- We still need to call the ping function in the keybind.
+  pings.doThing(keybindState)
 end
 ```
 

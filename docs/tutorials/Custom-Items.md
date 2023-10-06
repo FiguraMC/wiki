@@ -16,7 +16,7 @@ In order to make the Item show up you must return it in the item_render event. T
 
 ```lua
 function events.item_render()
-    return models.model.Item
+  return models.model.Item
 end
 ```
 
@@ -27,8 +27,7 @@ This will replace every single item you're holding with your custom item
 You can use the event's arguments to get different information from the item you're holding, and they are: the itemstack, rendering mode, position, rotation, scale, and if its in the left hand. [Possible item rendering modes.](../enums/ItemDisplayModes)
 
 ```lua
-function events.item_render(item,mode,pos,rot,scale,left)
-
+function events.item_render(item, mode, pos, rot, scale, left)
 end
 ```
 
@@ -41,13 +40,13 @@ This is storing all the values you can get, but in most cases you only need item
 
 ```lua
 function events.item_render(item)
-    if item.id == "minecraft:bow" then
-        return models.model.ItemBow
-    elseif item.id == "minecraft:shield" then
-        return models.model.ItemShield
-    elseif item.id:find("sword") then
-        return models.model.ItemSword
-    end
+  if item.id == "minecraft:bow" then
+    return models.model.ItemBow
+  elseif item.id == "minecraft:shield" then
+    return models.model.ItemShield
+  elseif item.id:find("sword") then
+    return models.model.ItemSword
+  end
 end
 ```
 

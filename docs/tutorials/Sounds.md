@@ -7,7 +7,7 @@ This article assumes you know to avoid calling the player in init.
 The most common way to play a sound is through the <code>playSound</code> function in the sound API.
 
 ```lua
-sounds:playSound(soundID,position,volume,pitch,loop)
+sounds:playSound(soundID, position, volume, pitch, loop)
 ```
 
 As you can see this function takes five arguments, the sound ID, the position it will be played, the volume (this dictates how close players need to be to hear the sound, default is 1), its pitch (default is 1), and whether or not it will start playing immediately after it ends (default is false).
@@ -17,7 +17,7 @@ For Minecraft sounds the sound ID is the internal name of the sound, you can fin
 Example, note that the id is a string because it's in quotes:
 
 ```lua
-sounds:playSound("entity.bat.ambient",player:getPos())
+sounds:playSound("entity.bat.ambient", player:getPos())
 ```
 
 For this example I'm supplying the player position as the location or else it will play at (0,0,0) in the world itself. Because I left out the volume, pitch, and loop, the default values of 1, 1, and false were filled in by Figura. Meaning, it will play with default pitch, default volume, and it won't loop.
@@ -25,7 +25,7 @@ For this example I'm supplying the player position as the location or else it wi
 Example with the other arguments filled:
 
 ```lua
-sounds:playSound("entity.bat.ambient",player:getPos(),5,3,false)
+sounds:playSound("entity.bat.ambient", player:getPos(), 5, 3, false)
 ```
 
 ## Custom Sounds
@@ -35,7 +35,7 @@ Playing a custom sound is exactly the same as playing a Minecraft sound, except 
 Ex: If your file is <code>horn.ogg</code> then your playSound line would look like this:
 
 ```lua
-sounds:playSound("horn",player:getPos())
+sounds:playSound("horn", player:getPos())
 ```
 
 Minecraft will only play specific sound files, namely sounds that are .ogg files. Here's an [online OGG converter](https://audio.online-convert.com/convert-to-ogg). You will want to change the audio channels setting to <code>mono</code> and the audio codec to <code>Vorbis</code> because Minecraft likes the Vorbic codec.
@@ -43,7 +43,7 @@ Minecraft will only play specific sound files, namely sounds that are .ogg files
 If your custom sound is stored in a subfolder in the avatar, the subfolder name gets added onto the sound name like this:
 
 ```lua
-sounds:playSound("subfolder.horn",player:getPos())
+sounds:playSound("subfolder.horn", player:getPos())
 ```
 
 ### Mono vs Stereo Sounds
@@ -74,7 +74,7 @@ Will play the sound, but without a position it will be at (0,0,0) in the world.
 
 ```lua
 function events.tick()
-     wDeath:pos(player:getPos())
+  wDeath:pos(player:getPos())
 end
 ```
 
@@ -84,7 +84,7 @@ Full example:
 local wDeath = sounds["entity.wither.death"]
 wDeath:play()
 function events.tick()
-    wDeath:pos(player:getPos())
+  wDeath:pos(player:getPos())
 end
 ```
 

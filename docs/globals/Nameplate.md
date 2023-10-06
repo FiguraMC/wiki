@@ -42,7 +42,7 @@ The entity nameplate has far more functions, they are all accessed via ENTITY, h
 
 ```lua
 nameplate.ENTITY:setText("Me")
-nameplate.ENTITY:setPos(0,1,0)
+nameplate.ENTITY:setPos(0, 1, 0)
 nameplate.ENTITY:setShadow(true)
 ```
 

@@ -24,9 +24,9 @@ As there is nothing special about indexing straight from <code>models</code> all
 
 ```lua
 --sets a World parented part to match the player's position and body rotation
-local worldPart=models.model.World
-function events.RENDER(delta,context)
-  worldPart:setPos(player:getPos(delta)*16)
+local worldPart = models.model.World
+function events.RENDER(delta, context)
+  worldPart:setPos(player:getPos(delta) * 16)
   worldPart:setRot(0, -player:getBodyYaw(delta) + 180, 0)
 end
 ```

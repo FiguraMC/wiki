@@ -12,15 +12,13 @@ To reiterate:
 
 ```lua
 player:isGliding() -- will error
-
 function events.entity_init()
-    player:isGliding() -- will not error, but will only play once
+  player:isGliding() -- will not error, but will only play once
 end
 
 player:isGliding() -- will error
-
 function events.tick()
-    player:isGliding() -- won't error, and will update once a tick
+  player:isGliding() -- won't error, and will update once a tick
 end
 
 player:isGliding() -- will error
@@ -278,7 +276,7 @@ Example combined with getType and with a nil check, the first <code>player:getVe
 
 ```lua
 if player:getVehicle() and player:getVehicle():getType() == "minecraft:pig" then
-    log("You're riding a pig")
+  log("You're riding a pig")
 end
 ```
 
@@ -328,7 +326,7 @@ Example with a nil check:
 
 ```lua
 if player:getTargetedEntity(4.5) and player:getTargetedEntity(4.5):getType() == "minecraft:creeper" then
-    log("You're looking at a creeper")
+  log("You're looking at a creeper")
 end
 ```
 
@@ -345,8 +343,8 @@ Maximum and Default distance is 20, Minimum is -20
 Returns a vararg of the block, the hit position and the block face the hit collided
 
 ```lua
-if player:getTargetedBlock(true,4.5).id == "minecraft:grass_block" then
-    log("You're looking at grass")
+if player:getTargetedBlock(true, 4.5).id == "minecraft:grass_block" then
+  log("You're looking at grass")
 end
 ```
 
@@ -402,7 +400,7 @@ If an invalid slot number is given, this will return nil
 
 ```lua
 if player:getItem(5).id == "minecraft:elytra" then
-    log("You're wearing an elytra")
+  log("You're wearing an elytra")
 end
 ```
 
@@ -416,10 +414,10 @@ If the entity isn't holding an item in that hand, returns air
 
 ```lua
 if player:getHeldItem(false).id ~= "minecraft:air" then
-    log("Item in mainhand")
+  log("Item in mainhand")
 end
 if player:getHeldItem(true).id ~= "minecraft:air" then
-    log("Item in offhand")
+  log("Item in offhand")
 end
 ```
 
