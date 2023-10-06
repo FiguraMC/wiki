@@ -7,10 +7,13 @@ User GrandpaScout has their [VSDocs](https://github.com/GrandpaScout/FiguraRewri
 In-game, Figura has a custom command to find documentation. <code>/figura docs</code>
 
 ## The Basics
+
 ### Globals
+
 Globals are where functions that allow you to access various information are stored. For instance, functions relating to player data are stored in the global <code>player</code>, and functions relating to the avatar's models are stored in the global <code>models</code>.
 
 ### Enums
+
 Enums are not functions, but rather lists of key words a function may return or take as an argument. For example, the <code>ParentTypes</code> enums contains all the parent types you could set a modelPart to (which are equivalent to the Blockbench keywords). On the other hand, the <code>EntityPoses</code> enums contains all the entity poses (including non-player poses) that an entity can achieve, as returned by <code>getPose()</code>
 
 ## Reading Figs
@@ -28,6 +31,7 @@ Figs has a search function which will find any word in the name or description o
 Let's say we want to make a custom elytra that turns off/on depending on if we're wearing an elytra. We're a player, so all of our information is going to be in the player API. On the left sidebar scroll down until you find <code>player</code> underneath the globals section. Aside from scrolling through the entire player API list you could search for the word 'item' (as we are looking for item information) until you find <code>getItem()</code>
 
 ### How To Read What's Being Given
+
 There's going to be some information there, and all of it is necessary. You can click on <code>PlayerAPI.getItem</code> to open the full page for the function (though this doesn't provide more information)
 
 <code>PlayerAPI.getItem</code> tells us that the function <code>getItem</code> is in the PlayerAPI. Functions in the player API are accessed via the <code>player</code> global so the function can be accessed by writing <code>player:getItem()</code>. But it doesn't tell us how to get all the information we want out of it yet.
@@ -41,11 +45,13 @@ The third piece of information is what's inside the brackets <code>()</code>. In
 Looking back up at the description of the item, Figs tells us <code>slots are indexed with 1 as the main hand, 2 as the off hand, and 3,4,5,6 as the 4 armor slots from the boots to the helmet</code>. In short, the integer we enter as an argument will dictate what slot it will search. Figs says 6 is the helmet and it goes down to the boots, and we want the chestplate slot so 5 is the integer we must give it.
 
 At this point we have this: <code>player:getItem(5)</code> and we're going to test that it's working with a bit of code
+
 ```lua
 function events.tick()
     log(player:getItem(5))
 end
 ```
+
 And... huzzah! Our game chat is being spammed by the log, and that log is telling us what's in our chestplate slot.
 
 The game is telling us, at the end of the message, that this is an ItemStack. If you look back at figs' overload: <code>PlayerAPI:getItem(index: Integer): ItemStack</code> you'll notice that 'ItemStack' is after the parenthesis. That's because the information after the colon <code>:</code> is what the function is going to return. Essentially, what it's going to give back to us after it's done.
@@ -67,9 +73,11 @@ function events.tick()
     log(player:getItem(5):getID())
 end
 ```
+
 You might be wondering about putting something in getID's parentehsis, so let's turn our attention back to the overload figs gives us. In <code>ItemStack:getID(): String</code> the parenthesis are empty here. That means no arguments are necessary and nothing should be put in the brackets. Anything given will be ignored.
 
 Notably, it's returning a String which is quite literally a string of characters. Putting something in quotes makes it a string. So <code>true</code> is a boolean, but <code>"true"</code> is a string. In our case this string of characters is the id of the item in our chestplate slot. At this point we can compare the string of our item with the string of the elytra id.
+
 ```lua
 function events.tick()
     log(player:getItem(5):getID() == "minecraft:elytra")
@@ -83,4 +91,5 @@ So, after all this, our elytra detection is <code>player:getItem(5):getID() == "
 For clarification: The log is another function that we put the final result into. It serves to make the information we put in it as an argument to the chat. If you copied the log that will break things
 
 ## Using The In-Game Docs
+
 WIP

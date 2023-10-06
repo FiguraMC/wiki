@@ -1,51 +1,51 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer").themes.github;
+const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Figura Wiki',
-  tagline: 'Wiki for FiguraMC',
-  favicon: 'img/favicon.png',
+  title: "Figura Wiki",
+  tagline: "Wiki for FiguraMC",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: 'https://wiki.figuramc.org',
+  url: "https://wiki.figuramc.org",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
   trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'figuramc', // Usually your GitHub org/user name.
-  projectName: 'wiki', // Usually your repo name.
+  organizationName: "figuramc", // Usually your GitHub org/user name.
+  projectName: "wiki", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/figuramc/wiki/tree/main/',
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/figuramc/wiki/tree/main/",
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -55,15 +55,15 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Figura Wiki',
+        title: "Figura Wiki",
         logo: {
-          alt: 'Figura Logo',
-          src: 'img/logo.svg',
+          alt: "Figura Logo",
+          src: "img/logo.svg",
         },
         items: [],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           // TODO: these aren't being centered correctly, figure out why
           //   {
@@ -102,7 +102,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['lua'],
+        additionalLanguages: ["lua"],
       },
     }),
 };

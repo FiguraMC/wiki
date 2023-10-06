@@ -4,31 +4,41 @@ The Action Wheel operates on Pages. Only a single Page can be active at a time.<
 Pages contain Actions. A Page can have an unlimited amount of Actions, but the Action Wheel can only render 8 at a time. While a Page with more than 8 Actions is active, you can use the scroll wheel to move between the groups of 8 Actions within the Page.
 
 ## Example Action Wheel
+
 First step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.
+
 ```lua
 local mainPage = action_wheel:newPage()
 ```
+
 This creates a new page, but thats it. If you save and try to open the Action Wheel (Default Keybind B), you will see a message stating that there is no active page. We can use the <code>setPage</code> function while providing a reference to a Page object to set the active page.
+
 ```lua
 action_wheel:setPage(mainPage)
 ```
+
 Tada. New blank page and Figura isnt screaming at us. Now for some actions.<br/>
-You can call the <code>newAction</code> function on a Page object. This will create a new Action *and* add it to the Page.
+You can call the <code>newAction</code> function on a Page object. This will create a new Action _and_ add it to the Page.
 
 You technically do not need to store the Action in a variable. If you do, please give it a unique variable name. Using the same variable name for all actions can cause issues when doing more advanced stuff.
+
 ```lua
 local action = mainPage:newAction()
 ```
+
 New Action, but it really doesn't look like much. Lets add a title, a display item, and perhaps change the color that appears when the Action is hovered over.
 
 One thing to remember is that all Action functions return itself. This allows for functions to be chained together, always modifying the same action
+
 ```lua
 local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1,0,1)
 ```
+
 Pretty, but functionally useless. Lets add a function to the <code>leftClick</code> field. When the Action is left clicked, the function stored in the Action's <code>leftClick</code> field gets invoked.
+
 ```lua
 local action = mainPage:newAction()
     :title("My Action")
@@ -39,16 +49,18 @@ local action = mainPage:newAction()
         print("Hello World!")
     end)
 ```
+
 Now we have an Action that does stuff. You may not notice anything, but there is a glaring issue with the current code.
 
-The issue is that the leftClick code will only execute on your computer. 
+The issue is that the leftClick code will only execute on your computer.
 
 As described in [Pings](./Pings), Figura is completely clientside. The Action Wheel is a feature added by Figura, meaning it will never be synced between clients via the Minecraft Server. So instead, we must use Pings that utilize Figura's Backend to sync data between clients.
 
 First step is to take the code that would be executed on leftClick, and turn it into a ping function. Then, instead of assigning an anonymous function to <code>leftClick</code>, we assign the ping function itself to <code>leftClick</code>
 
-***IMPORTANT: ALL PING FUNCTIONS MUST HAVE UNIQUE NAMES***<br/>
-Also, please name your ping function so that it describes what it does. I *hate* seeing <code>pings.actionClicked</code> in the hellp channel in discord. Do something like <code>pings.playEmote1</code> or <code>pings.setArmorVisibility</code>.
+**_IMPORTANT: ALL PING FUNCTIONS MUST HAVE UNIQUE NAMES_**<br/>
+Also, please name your ping function so that it describes what it does. I _hate_ seeing <code>pings.actionClicked</code> in the hellp channel in discord. Do something like <code>pings.playEmote1</code> or <code>pings.setArmorVisibility</code>.
+
 ```lua
 -- Create ping function that does the same thing the Action would have done.
 -- It must be defined above the Action.
@@ -62,9 +74,11 @@ local action = mainPage:newAction()
     -- Pass in the ping function itself into <code>onLeftClick</code>
     :onLeftClick(pings.actionClicked)
 ```
+
 And there you have it. An Action that correctly executes it's contents across all clients.
 
 While this will correctly sync the timing of the execution of the ping function with all clients, it needs a slight modification if you want to send arguments with the ping.
+
 ```lua
 function pings.actionClicked(a)
     print("Hello World!", a)
@@ -77,11 +91,13 @@ local action = mainPage:newAction()
         pings.actionClicked(math.random())
     end)
 ```
+
 What we are doing is wrapping the call to the ping function inside another function.
 
 The code below is a common mistake beginners can fall into.<br/>
 While the code might seem correct to those less code literate, it translates to "call the ping function, then assign the return result to the <code>leftClick</code> field".<br/>
 A ping will never have a return value, meaning <code>leftClick</code> is being assigned the value <code>nil</code>, meaning nothing.
+
 ```lua
 mainPage:newAction()
     :onLeftClick(pings.actionClicked2(math.random()))
@@ -90,6 +106,7 @@ mainPage:newAction()
 ```
 
 Here is the full copy paste for an example Action Wheel
+
 ```lua
 local mainPage = action_wheel:newPage()
 action_wheel:setPage(mainPage)
@@ -103,24 +120,37 @@ local action = mainPage:newAction()
     :hoverColor(1,0,1)
     :onLeftClick(pings.actionClicked)
 ```
+
 ## Action Events
+
 Technically they are "callbacks" and not "events" as you can only assign a single function, but eh.
+
 ### LeftClick
+
 Figura passes in the Action itself into the first paremeter of the function stored in <code>leftClick</code>.The function that assigns this field is <code>onLeftClick</code>
+
 ```lua
 function action.leftClick(self) end
 ```
+
 ### RightClick
+
 Figura passes in the Action itself into the first paremeter of the function stored in <code>rightClick</code>. The function that assigns this field is <code>onRightClick</code>
+
 ```lua
 function action.rightClick(self) end
 ```
+
 ### Toggle
+
 When the Action is assigned a function to the <code>toggle</code> field, it becomes a Toggle Action. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter, and the Action itself as the second. The function that assigns to the <code>toggle</code> field is <code>onToggle</code>.
+
 ```lua
 function action.toggle(state, self) end
 ```
+
 The Toggle Action has more functions that determine how it looks when it is toggled on. These functions start with <code>toggle</code>.
+
 ```lua
 function pings.setVisible(state)
     models:setVisible(state)
@@ -132,18 +162,27 @@ page:newAction()
     :toggleItem("green_wool")
     :onToggle(pings.setVisible)
 ```
+
 ### UnToggle
+
 Unlike Toggle which gets executed when the Action is toggled on or off, UnToggle only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second. The function that assigns to the <code>untoggle</code> field is <code>onUntoggle</code>.
+
 ```lua
 function action.untoggle(state, self) end
 ```
+
 ### Scroll
+
 This will execute when the mouse wheel scrolls while hovering over the Action. The first parameter is the direction the mouse scrolled (1 for scroll up, -1 for scroll down. Can be more than 1 for non-standard mouse wheels). The second paremeter is the Action itself
+
 ```lua
 function action.scroll(dir, self) end
 ```
+
 ## Advanced Action Wheel
+
 ### Multi Page Setup
+
 Creating a network of Pages can be overwhelming. Lets try to rectify that.
 
 This method for creating a Page Network divides the Pages into seperate, isolated files. These files return an Action that can be added to a different page. This Action will set the cuurrent page to the page in the file, but it first stores a reference to the Page it came from. That way when you want to go back to the previous page, its as simple as setting the current page to the stored Page.
@@ -160,6 +199,7 @@ mainpage:setAction(-1,require("Page1"))
 mainpage:setAction(-1,require("Page2"))
 action_wheel:setPage(mainpage)
 ```
+
 ```lua
 --Page1.lua
 -- Create the Page
@@ -175,8 +215,8 @@ local prevPage
 page:newAction()
   :title('GoBack')
   :item("minecraft:barrier")
-  :onLeftClick(function() 
-    action_wheel:setPage(prevPage) 
+  :onLeftClick(function()
+    action_wheel:setPage(prevPage)
   end)
 
 -- <code>Page:newAction</code> automatically adds the Action to the Page.
@@ -191,6 +231,7 @@ return action_wheel:newAction()
     action_wheel:setPage(page)
   end)
 ```
+
 ```lua
 --Page2.lua
 -- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are <code>local</code>.
@@ -203,8 +244,8 @@ local prevPage
 page:newAction()
   :title('GoBack')
   :item("minecraft:barrier")
-  :onLeftClick(function() 
-    action_wheel:setPage(prevPage) 
+  :onLeftClick(function()
+    action_wheel:setPage(prevPage)
   end)
 
 return action_wheel:newAction()
@@ -214,10 +255,13 @@ return action_wheel:newAction()
     action_wheel:setPage(page)
   end)
 ```
+
 ### Setting Default State of Toggle Action
+
 This primarily utilizes calling a ping function without the network code, which is explained [here](./Pings#ping-on-init)
 
 This example will correctly set the default visibility of a theoretical jetpack model
+
 ```lua
 -- This variable's initial value will control the default state of the togglable thing.
 local jetpackEnabled=true
@@ -245,7 +289,7 @@ local mainpage = action_wheel:newAction()
 action_wheel:setPage(mainpage)
 
 -- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
-setJetpack(jetpackEnabled) 
+setJetpack(jetpackEnabled)
 mainpage:newAction()
     :title('Enable Jetpack')
     :toggleTitle('Disable Jetpack')

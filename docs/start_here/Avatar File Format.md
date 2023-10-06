@@ -16,10 +16,11 @@ Figura also looks for an image named <Emoji icon="file/texture"/> <code>avatar.p
 \--- <Emoji icon="file/texture"/> <code>avatar.png</code><br/>
 
 Additional files go either in the same folder as the <Emoji icon="file/json"/> <code>avatar.json</code>, or within a <Emoji icon="file/folder"/> subfolder.
+
 - All files with the extension <Emoji icon="file/lua"/> <code>.lua</code> will be treated as script files and executed when your avatar is loaded.
 - All files with the extension <Emoji icon="file/bbmodel"/> <code>.bbmodel</code> will be treated as model files. The minimum BlockBench version supported is <code>4.0</code>.
 - All files with the extension <Emoji icon="file/ogg"/> <code>.ogg</code> will be treated as sound files. They must be in Vorbis codec.
 
 Stray <Emoji icon="file/texture"/> texture files in the avatar folder will not be loaded by Figura. For a texture to be loaded by Figura, it must be registered as a texture in a <Emoji icon="file/bbmodel"/> bbmodel file.
 
-*ALL* files that begin with a period (<code>.</code>) will be ignored when figura loads an avatar. Files that are not loaded by Figura are not accessible at all, so don't bother trying to get around the 100kb limit with this.
+_ALL_ files that begin with a period (<code>.</code>) will be ignored when figura loads an avatar. Files that are not loaded by Figura are not accessible at all, so don't bother trying to get around the 100kb limit with this.

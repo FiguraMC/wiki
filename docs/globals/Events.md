@@ -9,6 +9,7 @@ If code is run outside of any event or function that is the <code>init</code> ph
 The entity_init event runs when the avatar's entity (usually the player) first starts existing.
 
 It runs once and has no arguments. Calling the player API is safe here, making it a player-oriented init method.
+
 ```lua
 function events.entity_init()
     log("The player api has loaded!")
@@ -32,6 +33,7 @@ end
 The world_tick event runs every in game tick. There are 20 ticks in a second.
 
 World_tick has no arguments and calling the player API without a <code>player:isLoaded()</code> check will error here.
+
 ```lua
 function events.world_tick()
     log("A tick has passed")
@@ -57,6 +59,7 @@ end
 ```
 
 ### Post Render
+
 The render event runs once a frame after the avatar is rendered, after the avatar's entity exists. Calling the player is safe here.
 
 It has the same parameters as render
@@ -68,6 +71,7 @@ end
 ```
 
 ### World Render
+
 The world_render event is run every frame before the world is rendered. Calling the player without a <code>player:isLoaded()</code> check will error here.
 
 Its only parameter is delta
@@ -79,6 +83,7 @@ end
 ```
 
 ### Post World Render
+
 The world_render event is run every frame after the world is rendered. Calling the player without a <code>player:isLoaded()</code> check will error here.
 
 Its only parameter is delta
@@ -90,6 +95,7 @@ end
 ```
 
 ### Chat Send Message
+
 The CHAT_SEND_MESSAGE event is run every time you send a message in chat
 
 A string parameter is passed in, which contains the message that was sent
@@ -107,6 +113,7 @@ end
 ```
 
 ### Chat Receive Message
+
 The CHAT_RECEIVE_MESSAGE event is run every time a message is received in chat
 
 The first argument is the raw string of the received text
@@ -129,6 +136,7 @@ end
 ```
 
 ### Skull Render
+
 Called on every one of your skull blocks placed in the world
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
@@ -154,6 +162,7 @@ end
 ```
 
 ### Mouse Scroll
+
 The MOUSE_SCROLL event runs every time the mouse is scrolled
 
 Takes a parameter delta, which is the direction of the scroll
@@ -169,6 +178,7 @@ end
 ```
 
 ### Mouse Move
+
 The MOUSE_MOVE event runs every time the mouse is moved around
 
 Takes two parameters, x and y, which is the difference from the mouse position based on the latest saved position
@@ -186,6 +196,7 @@ end
 ```
 
 ### Mouse Press
+
 The MOUSE_PRESS event runs every time a mouse button is pressed
 
 Takes three number parameters, a "button", which is the number id of the button that was been pressed, the "action", which is the status of the press event (0 for release, 1 for press, 2 for hold), and the "modifier", which is a bitmask number detecting if you have any modifier keys being pressed (like shift or alt, for example)
@@ -220,6 +231,7 @@ end
 ```
 
 ### Char Typed
+
 The char_typed event runs every time a character is inputted
 
 Takes three parameters, the resulting "string" after converting the code point, the "modifier", which is a bitmask number detecting if you have any modifier keys being pressed (like shift or alt, for example), and the "codepoint" of the inputted char
@@ -233,6 +245,7 @@ end
 ```
 
 ### Use Item
+
 The use_item event is run every time the entity uses an item
 
 The item, action and amount of particles this item would produce is given as argument
@@ -250,6 +263,7 @@ end
 ```
 
 ### Arrow Render
+
 The ARROW_RENDER event is run for every arrow entity shot by the Avatar owner
 
 It takes two arguments, the tick delta, and the arrow entity- which contains all of the arrow's information like its position, or its type.
@@ -265,6 +279,7 @@ end
 ```
 
 ### Item Render
+
 Called on every one of your items that is being rendered
 
 It takes six arguments, the item, the rendering mode, the position, rotation and scale that it would be applied, and if its being rendered from the left hand
@@ -298,6 +313,7 @@ end
 ```
 
 ### Resource Reload
+
 Called every time that the client resources are reloaded, allowing you to re-create or update resource texture references.
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
@@ -309,6 +325,7 @@ end
 ```
 
 ### Safely Calling Player
+
 The easiest way to blanket-protect an entire event (or any function like a ping) against the entity init error caused by calling the player API when it doesn't exist is to exit the function at the beginning of the event with this:
 
 <code>if not player:isLoaded() then return end</code>
