@@ -1,6 +1,7 @@
 import Emoji from '@site/src/components/Emoji';
 
 # Custom Items
+
 Using Figura you can make custom items that are visible in first and third person.
 
 You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the item_render event combined.

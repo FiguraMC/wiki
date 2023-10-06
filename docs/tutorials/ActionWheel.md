@@ -141,12 +141,9 @@ page:newAction():title():color():onLeftClick()
 -- This variable stores the Page to go back to when done with this Page
 local prevPage
 -- This Action just sets the stored page as active
-page:newAction()
-  :title('GoBack')
-  :item("minecraft:barrier")
-  :onLeftClick(function()
-    action_wheel:setPage(prevPage)
-  end)
+page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
+  action_wheel:setPage(prevPage)
+end)
 
 -- <code>Page:newAction</code> automatically adds the Action to the Page.
 -- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
@@ -168,12 +165,9 @@ page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
 
 local prevPage
-page:newAction()
-  :title('GoBack')
-  :item("minecraft:barrier")
-  :onLeftClick(function()
-    action_wheel:setPage(prevPage)
-  end)
+page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
+  action_wheel:setPage(prevPage)
+end)
 
 return action_wheel:newAction():title("Page2"):onLeftClick(function()
   prevPage = action_wheel:getCurrentPage()
@@ -213,9 +207,7 @@ action_wheel:setPage(mainpage)
 
 -- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
 setJetpack(jetpackEnabled)
-mainpage:newAction()
-    :title('Enable Jetpack')
-    :toggleTitle('Disable Jetpack')
-    :onToggle(pings.setJetpack) -- use the ping for the action toggle, as that is still needs to be pinged
-    :toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
+mainpage:newAction():title("Enable Jetpack"):toggleTitle("Disable Jetpack"):onToggle(
+  pings.setJetpack -- use the ping for the action toggle, as that is still needs to be pinged
+):toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
 ```

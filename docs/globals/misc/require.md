@@ -13,6 +13,7 @@ If the name you give isn't any of your scripts, it will error
 ### Examples
 
 #### Script in root folder
+
 <pre>
 <Emoji icon="file/folder"/> MyCoolAvatar/<br/>
 ├─ <Emoji icon="file/lua"/> script.lua<br/>
@@ -25,6 +26,7 @@ require("JimmyAnims")
 ```
 
 #### Script in another folder
+
 <pre>
 <Emoji icon="file/folder"/> MyCoolAvatar/<br/>
 ├─ <Emoji icon="file/lua"/> script.lua<br/>

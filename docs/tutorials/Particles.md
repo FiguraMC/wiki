@@ -7,7 +7,9 @@ Most of the article assumes you know to avoid calling the player in init.
 ```lua
 particles:newParticle(particleID, position, velocity)
 ```
+
 If you're looking on the [Minecraft wiki](https://minecraft.wiki/w/Particles) then the particle id is the name under the 'Java Edition ID Name' column. Or, it's the same id used by the /particle command. If you're using Minecraft particles you can exclude the Minecraft "mod name".
+
 ```lua
 particles:newParticle("minecraft:explosion", player:getPos())
 ```
