@@ -30,21 +30,26 @@ New Action, but it really doesn't look like much. Lets add a title, a display it
 
 One thing to remember is that all Action functions return itself. This allows for functions to be chained together, always modifying the same action
 
+<!-- prettier-ignore -->
 ```lua
-local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1)
+local action = mainPage:newAction()
+    :title("My Action")
+    :item("minecraft:stick")
+    :hoverColor(1, 0, 1)
 ```
 
 Pretty, but functionally useless. Lets add a function to the <code>leftClick</code> field. When the Action is left clicked, the function stored in the Action's <code>leftClick</code> field gets invoked.
 
+<!-- prettier-ignore -->
 ```lua
-local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(
-    1,
-    0,
-    1
+local action = mainPage:newAction()
+    :title("My Action")
+    :item("minecraft:stick")
+    :hoverColor(1, 0, 1)
     -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
-):onLeftClick(function()
-    print("Hello World!")
-end)
+    :onLeftClick(function()
+        print("Hello World!")
+    end)
 ```
 
 Now we have an Action that does stuff. You may not notice anything, but there is a glaring issue with the current code.
@@ -58,29 +63,37 @@ First step is to take the code that would be executed on leftClick, and turn it 
 **_IMPORTANT: ALL PING FUNCTIONS MUST HAVE UNIQUE NAMES_**<br/>
 Also, please name your ping function so that it describes what it does. I _hate_ seeing <code>pings.actionClicked</code> in the hellp channel in discord. Do something like <code>pings.playEmote1</code> or <code>pings.setArmorVisibility</code>.
 
+<!-- prettier-ignore -->
 ```lua
 -- Create ping function that does the same thing the Action would have done.
 -- It must be defined above the Action.
 function pings.actionClicked()
     print("Hello World!")
 end
-local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(
-    1,
-    0,
-    1
+
+local action = mainPage:newAction()
+    :title("My Action")
+    :item("minecraft:stick")
+    :hoverColor(1, 0, 1)
     -- Pass in the ping function itself into <code>onLeftClick</code>
-):onLeftClick(pings.actionClicked)
+    :onLeftClick(pings.actionClicked)
 ```
 
 And there you have it. An Action that correctly executes it's contents across all clients.
 
 While this will correctly sync the timing of the execution of the ping function with all clients, it needs a slight modification if you want to send arguments with the ping.
 
+<!-- prettier-ignore -->
 ```lua
 function pings.actionClicked(a)
   print("Hello World!", a)
 end
-local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick(end)
+
+local action = mainPage:newAction()
+    :title("My Action")
+    :item("minecraft:stick")
+    :hoverColor(1, 0, 1)
+    :onLeftClick(end)
 ```
 
 What we are doing is wrapping the call to the ping function inside another function.
@@ -90,13 +103,14 @@ While the code might seem correct to those less code literate, it translates to 
 A ping will never have a return value, meaning <code>leftClick</code> is being assigned the value <code>nil</code>, meaning nothing.
 
 ```lua
-mainPage:newAction():onLeftClick(pings.actionClicked2(math.random()))
--- again to those not paying attention:
---   This is incorect code. Do not use. Do not copy paste.
+mainPage:newAction()
+    :onLeftClick(pings.actionClicked2(math.random()))
+    -- Do not do use this code. It will not work.
 ```
 
 Here is the full copy paste for an example Action Wheel
 
+<!-- prettier-ignore -->
 ```lua
 local mainPage = action_wheel:newPage()
 action_wheel:setPage(mainPage)
@@ -104,8 +118,12 @@ action_wheel:setPage(mainPage)
 function pings.actionClicked()
     print("Hello World!")
 end
-local action =
-    mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick(pings.actionClicked)
+
+local action = mainPage:newAction()
+    :title("My Action")
+    :item("minecraft:stick")
+    :hoverColor(1, 0, 1)
+    :onLeftClick(pings.actionClicked)
 ```
 
 ## Advanced Action Wheel
@@ -129,6 +147,7 @@ mainpage:setAction(-1, require("Page2"))
 action_wheel:setPage(mainpage)
 ```
 
+<!-- prettier-ignore -->
 ```lua
 --Page1.lua
 -- Create the Page
@@ -141,21 +160,27 @@ page:newAction():title():color():onLeftClick()
 -- This variable stores the Page to go back to when done with this Page
 local prevPage
 -- This Action just sets the stored page as active
-page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
-    action_wheel:setPage(prevPage)
-end)
+page:newAction()
+    :title("GoBack")
+    :item("minecraft:barrier")
+    :onLeftClick(function()
+        action_wheel:setPage(prevPage)
+    end)
 
 -- <code>Page:newAction</code> automatically adds the Action to the Page.
 -- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
 -- This is the Action that will be returned by <code>require</code> and will be used to navigate to this file's Page
-return action_wheel:newAction():title("Page1"):onLeftClick(function()
-    --store the current active page so that we can set it back as active later
-    prevPage = action_wheel:getCurrentPage()
-    --set this file's page as active
-    action_wheel:setPage(page)
-end)
+return action_wheel:newAction()
+    :title("Page1")
+    :onLeftClick(function()
+        -- store the current active page so that we can set it back as active later
+        prevPage = action_wheel:getCurrentPage()
+        -- set this file's page as active
+        action_wheel:setPage(page)
+    end)
 ```
 
+<!-- prettier-ignore -->
 ```lua
 --Page2.lua
 -- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are <code>local</code>.
@@ -165,14 +190,19 @@ page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
 
 local prevPage
-page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
-    action_wheel:setPage(prevPage)
-end)
+page:newAction()
+    :title("GoBack")
+    :item("minecraft:barrier")
+    :onLeftClick(function()
+        action_wheel:setPage(prevPage)
+    end)
 
-return action_wheel:newAction():title("Page2"):onLeftClick(function()
-    prevPage = action_wheel:getCurrentPage()
-    action_wheel:setPage(page)
-end)
+return action_wheel:newAction()
+    :title("Page2")
+    :onLeftClick(function()
+        prevPage = action_wheel:getCurrentPage()
+        action_wheel:setPage(page)
+    end)
 ```
 
 ### Setting Default State of Toggle Action
@@ -181,6 +211,7 @@ This primarily utilizes calling a ping function without the network code, which 
 
 This example will correctly set the default visibility of a theoretical jetpack model
 
+<!-- prettier-ignore -->
 ```lua
 -- This variable's initial value will control the default state of the togglable thing.
 local jetpackEnabled = true
@@ -207,7 +238,9 @@ action_wheel:setPage(mainpage)
 
 -- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
 setJetpack(jetpackEnabled)
-mainpage:newAction():title("Enable Jetpack"):toggleTitle("Disable Jetpack"):onToggle(
-    pings.setJetpack -- use the ping for the action toggle, as that is still needs to be pinged
-):toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
+mainpage:newAction()
+    :title("Enable Jetpack")
+    :toggleTitle("Disable Jetpack")
+    :onToggle(pings.setJetpack) -- use the ping for the action toggle, as that is still needs to be pinged
+    :toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
 ```

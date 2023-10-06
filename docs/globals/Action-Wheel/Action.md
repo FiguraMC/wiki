@@ -51,6 +51,7 @@ When the Action is assigned a function to the <code>toggle</code> field, it beco
 
 **Example**:
 
+<!-- prettier-ignore -->
 ```lua
 function pings.setVisible(state)
     models:setVisible(state)
@@ -74,6 +75,7 @@ Unlike Toggle which gets executed when the Action is toggled on or off, UnToggle
 
 **Example**:
 
+<!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
@@ -92,12 +94,13 @@ This will execute when the mouse wheel scrolls while hovering over the Action. T
 
 **Example**:
 
+<!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
 // highlight-start
     :setOnScroll(function(dir)
-        print('Scrolled in this direction: ' .. dir)
+        print("Scrolled in this direction: " .. dir)
     end)
 // highlight-end
 ```
