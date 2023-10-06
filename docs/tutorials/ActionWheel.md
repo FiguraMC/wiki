@@ -102,6 +102,7 @@ The code below is a common mistake beginners can fall into.<br/>
 While the code might seem correct to those less code literate, it translates to "call the ping function, then assign the return result to the <code>leftClick</code> field".<br/>
 A ping will never have a return value, meaning <code>leftClick</code> is being assigned the value <code>nil</code>, meaning nothing.
 
+<!-- prettier-ignore -->
 ```lua
 mainPage:newAction()
     :onLeftClick(pings.actionClicked2(math.random()))
