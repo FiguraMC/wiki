@@ -113,7 +113,7 @@ This ParentType replaces the model of arrows fired by you. The pivot point of th
 ## Item
 * #### ITEM
 **Special Type**<br/>
-This ParentType designates a Custom Item Model that can be used in the RENDER_ITEM event.
+This ParentType designates a Custom Item Model that can be used in the ITEM_RENDER event.
 ## RightItemPivot
 * #### RIGHT_ITEM_PIVOT
 **Pivot Type**<br/>

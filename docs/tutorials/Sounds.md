@@ -9,7 +9,7 @@ sounds:playSound(soundID,position,volume,pitch,loop)
 ```
 As you can see this function takes five arguments, the sound ID, the position it will be played, the volume (this dictates how close players need to be to hear the sound, default is 1), its pitch (default is 1), and whether or not it will start playing immediately after it ends (default is false).
 
-For Minecraft sounds the sound ID is the internal name of the sound, you can find these on the [Minecraft Wiki](https://minecraft.fandom.com/wiki/Sounds.json/Java_Edition_values) under the Sound Event column. It will play one of the sounds associated with that ID at random.
+For Minecraft sounds the sound ID is the internal name of the sound, you can find these on the [Minecraft Wiki](https://minecraft.wiki/w/Sounds.json/Java_Edition_values) under the Sound Event column. It will play one of the sounds associated with that ID at random.
 
 Example, note that the id is a string because it's in quotes:
 ```lua
@@ -69,50 +69,3 @@ function events.tick()
 end
 ```
 You can alter the volume, pitch, and loop with this method as well.
-### stop
-Stops the sound
-
-### play
-Plays the sound
-
-### pause
-Pauses the sound
-
-### setPos(vec3)
-Sets the position of the sound
-
-### getPos
-Gets the position of the sound as set by <code>setPos</code>
-
-### isPlaying
-Gets if the sound is playing, but this is an unreliable function. A workaround is to stop the sound before you play it (even if it isn't playing) so you can reset the playing state.
-
-### setVolume(number)
-Sets the volume of the sound
-
-### getVolume
-Gets the volume of the sound
-
-### setPitch(number)
-Sets the pitch of the sound
-
-### getPitch
-Gets the pitch of the sound
-
-### setLoop(bool)
-Sets if the sound will loop or not
-
-### isLooping
-Gets if the sound is set to loop or not
-
-### setAttenuation(number)
-Sets the attenuation of the sound
-
-### getAttenuation
-Gets the attenuation of the sound
-
-### setSubtitle(string)
-Sets the subtitle (the name that Minecraft's subtitle function will call the sound)
-
-### getSubtitle
-Gets the subtitle

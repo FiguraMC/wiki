@@ -26,12 +26,18 @@ player:isGliding() -- will error
 ```
 
 ## Player Transformations
-### getPos
+### `getPos()`
 Gets the position of the entity in the world
 
 If delta is passed in, then it will be used to linearly interpolate the position of the entity between the previous tick and the current tick
 
 The default value of delta is 1
+
+**Example**:
+```lua
+player:getPos()
+```
+<br/>
 
 ### getRot
 Gets the rotation of the entity in degrees
