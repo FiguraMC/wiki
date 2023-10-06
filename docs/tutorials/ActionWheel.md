@@ -108,66 +108,6 @@ local action =
   mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick(pings.actionClicked)
 ```
 
-## Action Events
-
-Technically they are "callbacks" and not "events" as you can only assign a single function, but eh.
-
-### LeftClick
-
-Figura passes in the Action itself into the first paremeter of the function stored in <code>leftClick</code>.The function that assigns this field is <code>onLeftClick</code>
-
-```lua
-function action.leftClick(self)
-end
-```
-
-### RightClick
-
-Figura passes in the Action itself into the first paremeter of the function stored in <code>rightClick</code>. The function that assigns this field is <code>onRightClick</code>
-
-```lua
-function action.rightClick(self)
-end
-```
-
-### Toggle
-
-When the Action is assigned a function to the <code>toggle</code> field, it becomes a Toggle Action. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter, and the Action itself as the second. The function that assigns to the <code>toggle</code> field is <code>onToggle</code>.
-
-```lua
-function action.toggle(state, self)
-end
-```
-
-The Toggle Action has more functions that determine how it looks when it is toggled on. These functions start with <code>toggle</code>.
-
-```lua
-function pings.setVisible(state)
-  models:setVisible(state)
-end
-page:newAction():title("disabled"):toggleTitle("enabled"):item("red_wool"):toggleItem("green_wool"):onToggle(
-  pings.setVisible
-)
-```
-
-### UnToggle
-
-Unlike Toggle which gets executed when the Action is toggled on or off, UnToggle only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second. The function that assigns to the <code>untoggle</code> field is <code>onUntoggle</code>.
-
-```lua
-function action.untoggle(state, self)
-end
-```
-
-### Scroll
-
-This will execute when the mouse wheel scrolls while hovering over the Action. The first parameter is the direction the mouse scrolled (1 for scroll up, -1 for scroll down. Can be more than 1 for non-standard mouse wheels). The second paremeter is the Action itself
-
-```lua
-function action.scroll(dir, self)
-end
-```
-
 ## Advanced Action Wheel
 
 ### Multi Page Setup
@@ -201,9 +141,12 @@ page:newAction():title():color():onLeftClick()
 -- This variable stores the Page to go back to when done with this Page
 local prevPage
 -- This Action just sets the stored page as active
-page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
-  action_wheel:setPage(prevPage)
-end)
+page:newAction()
+  :title('GoBack')
+  :item("minecraft:barrier")
+  :onLeftClick(function()
+    action_wheel:setPage(prevPage)
+  end)
 
 -- <code>Page:newAction</code> automatically adds the Action to the Page.
 -- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
@@ -225,9 +168,12 @@ page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
 
 local prevPage
-page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
-  action_wheel:setPage(prevPage)
-end)
+page:newAction()
+  :title('GoBack')
+  :item("minecraft:barrier")
+  :onLeftClick(function()
+    action_wheel:setPage(prevPage)
+  end)
 
 return action_wheel:newAction():title("Page2"):onLeftClick(function()
   prevPage = action_wheel:getCurrentPage()
@@ -267,7 +213,9 @@ action_wheel:setPage(mainpage)
 
 -- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
 setJetpack(jetpackEnabled)
-mainpage:newAction():title("Enable Jetpack"):toggleTitle("Disable Jetpack"):onToggle(
-  pings.setJetpack -- use the ping for the action toggle, as that is still needs to be pinged
-):toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
+mainpage:newAction()
+    :title('Enable Jetpack')
+    :toggleTitle('Disable Jetpack')
+    :onToggle(pings.setJetpack) -- use the ping for the action toggle, as that is still needs to be pinged
+    :toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
 ```

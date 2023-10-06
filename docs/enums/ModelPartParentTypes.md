@@ -147,11 +147,9 @@ Many ParentTypes share similar properties. You can roughly put them into 3 disti
   (0,0,0) in BlockBench is the point on the vanilla arrow's shaft that is just before the arrow head.
 
 ## Item
-
-- #### ITEM
-  **Special Type**<br/>
-  This ParentType designates a Custom Item Model that can be used in the RENDER_ITEM event.
-
+* #### ITEM
+**Special Type**<br/>
+This ParentType designates a Custom Item Model that can be used in the ITEM_RENDER event.
 ## RightItemPivot
 
 - #### RIGHT_ITEM_PIVOT
