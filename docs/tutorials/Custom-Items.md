@@ -18,7 +18,7 @@ In order to make the Item show up you must return it in the item_render event. T
 
 ```lua
 function events.item_render()
-  return models.model.Item
+    return models.model.Item
 end
 ```
 
@@ -42,13 +42,13 @@ This is storing all the values you can get, but in most cases you only need item
 
 ```lua
 function events.item_render(item)
-  if item.id == "minecraft:bow" then
-    return models.model.ItemBow
-  elseif item.id == "minecraft:shield" then
-    return models.model.ItemShield
-  elseif item.id:find("sword") then
-    return models.model.ItemSword
-  end
+    if item.id == "minecraft:bow" then
+        return models.model.ItemBow
+    elseif item.id == "minecraft:shield" then
+        return models.model.ItemShield
+    elseif item.id:find("sword") then
+        return models.model.ItemSword
+    end
 end
 ```
 

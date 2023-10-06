@@ -10,12 +10,12 @@ JSON objects operate on key value pairs. Keys are separated from their values us
 
 ```json
 {
-  "key": "value",
-  "stringKey,numberValue": 4,
-  "objectValue": {
-    "key, but of sub object": "value, but of sub object"
-  },
-  "arrayWooo": [1, 2, "stringlol", {}, "42"]
+    "key": "value",
+    "stringKey,numberValue": 4,
+    "objectValue": {
+        "key, but of sub object": "value, but of sub object"
+    },
+    "arrayWooo": [1, 2, "stringlol", {}, "42"]
 }
 ```
 
@@ -30,7 +30,7 @@ If this key is not present, the name of the folder containing the <Emoji icon="f
 
 ```json
 {
-  "name": "Katt"
+    "name": "Katt"
 }
 ```
 
@@ -40,8 +40,8 @@ The value of this key will appear below the avatar's name in the wardrobe.
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json"
+    "name": "Katt",
+    "description": "Example avatar.json"
 }
 ```
 
@@ -51,9 +51,9 @@ The value of this key is an array of strings. An array can contain many differen
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json",
-  "authors": ["@KitCat962", "KitCat#0962", "Katakana962"]
+    "name": "Katt",
+    "description": "Example avatar.json",
+    "authors": ["@KitCat962", "KitCat#0962", "Katakana962"]
 }
 ```
 
@@ -68,10 +68,10 @@ A place to define a [Semantic Versioning](https://semver.org/) version. You can 
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json",
-  "authors": ["KitCat962", "Katakana962"],
-  "version": "0.1.0"
+    "name": "Katt",
+    "description": "Example avatar.json",
+    "authors": ["KitCat962", "Katakana962"],
+    "version": "0.1.0"
 }
 ```
 
@@ -81,11 +81,11 @@ This key defines the color of the <Emoji icon="badge/mark"/> Figura mark on your
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json",
-  "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
-  "version": "0.1.0",
-  "color": "fc5bd9"
+    "name": "Katt",
+    "description": "Example avatar.json",
+    "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
+    "version": "0.1.0",
+    "color": "fc5bd9"
 }
 ```
 
@@ -118,12 +118,12 @@ For our example metadata file, we will state that only <Emoji icon="file/lua"/> 
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json",
-  "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
-  "version": "0.1.0",
-  "color": "fc5bd9",
-  "autoScripts": ["script"]
+    "name": "Katt",
+    "description": "Example avatar.json",
+    "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
+    "version": "0.1.0",
+    "color": "fc5bd9",
+    "autoScripts": ["script"]
 }
 ```
 
@@ -155,13 +155,13 @@ This is not table indexing like how you would index the `animations` table to ge
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json",
-  "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
-  "version": "0.1.0",
-  "color": "fc5bd9",
-  "autoScripts": ["script"],
-  "autoAnims": ["player.idle", "accessories.halo.spin"]
+    "name": "Katt",
+    "description": "Example avatar.json",
+    "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
+    "version": "0.1.0",
+    "color": "fc5bd9",
+    "autoScripts": ["script"],
+    "autoAnims": ["player.idle", "accessories.halo.spin"]
 }
 ```
 
@@ -189,14 +189,14 @@ Hypothetically, the armor of this avatar is being handled by <Emoji icon="file/l
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json",
-  "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
-  "version": "0.1.0",
-  "color": "fc5bd9",
-  "autoScripts": ["script"],
-  "autoAnims": ["player.idle", "accessories.halo.spin"],
-  "ignoredTextures": ["player.diamond_layer_1", "player.diamond_layer_2"]
+    "name": "Katt",
+    "description": "Example avatar.json",
+    "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
+    "version": "0.1.0",
+    "color": "fc5bd9",
+    "autoScripts": ["script"],
+    "autoAnims": ["player.idle", "accessories.halo.spin"],
+    "ignoredTextures": ["player.diamond_layer_1", "player.diamond_layer_2"]
 }
 ```
 
@@ -219,10 +219,10 @@ To target the <Emoji icon="file/bbmodel"/> <code>ribbon</code>, the correct key 
 
 ```json
 {
-  "customizations": {
-    "player.Head": {},
-    "accessories.ribbon": {}
-  }
+    "customizations": {
+        "player.Head": {},
+        "accessories.ribbon": {}
+    }
 }
 ```
 
@@ -234,12 +234,12 @@ Sets the RenderType to use for the Primary/Default texture. The default primaryR
 
 ```json
 {
-  "customizations": {
-    "player.Head": {},
-    "accessories.ribbon": {
-      "primaryRenderType": "END_PORTAL"
+    "customizations": {
+        "player.Head": {},
+        "accessories.ribbon": {
+            "primaryRenderType": "END_PORTAL"
+        }
     }
-  }
 }
 ```
 
@@ -249,14 +249,14 @@ Sets the RenderType to use for the Secondary/Emissive/<code>\_e</code> texture. 
 
 ```json
 {
-  "customizations": {
-    "player.Head": {
-      "secondaryRenderType": "GLINT"
-    },
-    "accessories.ribbon": {
-      "primaryRenderType": "END_PORTAL"
+    "customizations": {
+        "player.Head": {
+            "secondaryRenderType": "GLINT"
+        },
+        "accessories.ribbon": {
+            "primaryRenderType": "END_PORTAL"
+        }
     }
-  }
 }
 ```
 
@@ -266,15 +266,15 @@ Keywords in BlockBench set the ParentType of the ModelPart. This key overrides t
 
 ```json
 {
-  "customizations": {
-    "player.Head": {
-      "secondaryRenderType": "GLINT",
-      "parentType": "Body"
-    },
-    "accessories.ribbon": {
-      "primaryRenderType": "END_PORTAL"
+    "customizations": {
+        "player.Head": {
+            "secondaryRenderType": "GLINT",
+            "parentType": "Body"
+        },
+        "accessories.ribbon": {
+            "primaryRenderType": "END_PORTAL"
+        }
     }
-  }
 }
 ```
 
@@ -284,16 +284,16 @@ Forces the ModelPart reference given to be a child of this ModelPart. This is us
 
 ```json
 {
-  "customizations": {
-    "player.Head": {
-      "secondaryRenderType": "GLINT",
-      "parentType": "Body"
-    },
-    "accessories.ribbon": {
-      "primaryRenderType": "END_PORTAL",
-      "moveTo": "player.Head"
+    "customizations": {
+        "player.Head": {
+            "secondaryRenderType": "GLINT",
+            "parentType": "Body"
+        },
+        "accessories.ribbon": {
+            "primaryRenderType": "END_PORTAL",
+            "moveTo": "player.Head"
+        }
     }
-  }
 }
 ```
 
@@ -303,17 +303,17 @@ Overrides the visibility defined in BlockBench. Useful to be able to hide ModelP
 
 ```json
 {
-  "customizations": {
-    "player.Head": {
-      "secondaryRenderType": "GLINT",
-      "parentType": "Body"
-    },
-    "accessories.ribbon": {
-      "primaryRenderType": "END_PORTAL",
-      "moveTo": "player.Head",
-      "visible": true
+    "customizations": {
+        "player.Head": {
+            "secondaryRenderType": "GLINT",
+            "parentType": "Body"
+        },
+        "accessories.ribbon": {
+            "primaryRenderType": "END_PORTAL",
+            "moveTo": "player.Head",
+            "visible": true
+        }
     }
-  }
 }
 ```
 
@@ -323,11 +323,11 @@ This customization will prevent the targeted ModelPart from loading at all.<br/>
 
 ```json
 {
-  "customizations": {
-    "accessories.exampleMesh": {
-      "smooth": true
+    "customizations": {
+        "accessories.exampleMesh": {
+            "smooth": true
+        }
     }
-  }
 }
 ```
 
@@ -338,11 +338,11 @@ This will calculate the vertex normals so that the mesh appears smooth, reducing
 
 ```json
 {
-  "customizations": {
-    "accessories.exampleMesh": {
-      "smooth": true
+    "customizations": {
+        "accessories.exampleMesh": {
+            "smooth": true
+        }
     }
-  }
 }
 ```
 
@@ -350,24 +350,24 @@ This will calculate the vertex normals so that the mesh appears smooth, reducing
 
 ```json
 {
-  "name": "Katt",
-  "description": "Example avatar.json",
-  "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
-  "version": "0.1.0",
-  "color": "fc5bd9",
-  "autoScripts": ["script"],
-  "autoAnims": ["player.idle", "accessories.halo.spin"],
-  "ignoredTextures": ["player.diamond_layer_1", "player.diamond_layer_2"],
-  "customizations": {
-    "player.Head": {
-      "secondaryRenderType": "GLINT",
-      "parentType": "Body"
-    },
-    "accessories.ribbon": {
-      "primaryRenderType": "END_PORTAL",
-      "moveTo": "player.Head",
-      "visible": true
+    "name": "Katt",
+    "description": "Example avatar.json",
+    "authors": ["@KitCat962", "KitCat#0962", "Katakana962"],
+    "version": "0.1.0",
+    "color": "fc5bd9",
+    "autoScripts": ["script"],
+    "autoAnims": ["player.idle", "accessories.halo.spin"],
+    "ignoredTextures": ["player.diamond_layer_1", "player.diamond_layer_2"],
+    "customizations": {
+        "player.Head": {
+            "secondaryRenderType": "GLINT",
+            "parentType": "Body"
+        },
+        "accessories.ribbon": {
+            "primaryRenderType": "END_PORTAL",
+            "moveTo": "player.Head",
+            "visible": true
+        }
     }
-  }
 }
 ```

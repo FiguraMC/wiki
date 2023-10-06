@@ -38,12 +38,12 @@ Pretty, but functionally useless. Lets add a function to the <code>leftClick</co
 
 ```lua
 local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(
-  1,
-  0,
-  1
-  -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
+    1,
+    0,
+    1
+    -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
 ):onLeftClick(function()
-  print("Hello World!")
+    print("Hello World!")
 end)
 ```
 
@@ -62,13 +62,13 @@ Also, please name your ping function so that it describes what it does. I _hate_
 -- Create ping function that does the same thing the Action would have done.
 -- It must be defined above the Action.
 function pings.actionClicked()
-  print("Hello World!")
+    print("Hello World!")
 end
 local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(
-  1,
-  0,
-  1
-  -- Pass in the ping function itself into <code>onLeftClick</code>
+    1,
+    0,
+    1
+    -- Pass in the ping function itself into <code>onLeftClick</code>
 ):onLeftClick(pings.actionClicked)
 ```
 
@@ -102,10 +102,10 @@ local mainPage = action_wheel:newPage()
 action_wheel:setPage(mainPage)
 
 function pings.actionClicked()
-  print("Hello World!")
+    print("Hello World!")
 end
 local action =
-  mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick(pings.actionClicked)
+    mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick(pings.actionClicked)
 ```
 
 ## Advanced Action Wheel
@@ -142,17 +142,17 @@ page:newAction():title():color():onLeftClick()
 local prevPage
 -- This Action just sets the stored page as active
 page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
-  action_wheel:setPage(prevPage)
+    action_wheel:setPage(prevPage)
 end)
 
 -- <code>Page:newAction</code> automatically adds the Action to the Page.
 -- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
 -- This is the Action that will be returned by <code>require</code> and will be used to navigate to this file's Page
 return action_wheel:newAction():title("Page1"):onLeftClick(function()
-  --store the current active page so that we can set it back as active later
-  prevPage = action_wheel:getCurrentPage()
-  --set this file's page as active
-  action_wheel:setPage(page)
+    --store the current active page so that we can set it back as active later
+    prevPage = action_wheel:getCurrentPage()
+    --set this file's page as active
+    action_wheel:setPage(page)
 end)
 ```
 
@@ -166,12 +166,12 @@ page:newAction():title():color():onLeftClick()
 
 local prevPage
 page:newAction():title("GoBack"):item("minecraft:barrier"):onLeftClick(function()
-  action_wheel:setPage(prevPage)
+    action_wheel:setPage(prevPage)
 end)
 
 return action_wheel:newAction():title("Page2"):onLeftClick(function()
-  prevPage = action_wheel:getCurrentPage()
-  action_wheel:setPage(page)
+    prevPage = action_wheel:getCurrentPage()
+    action_wheel:setPage(page)
 end)
 ```
 
@@ -186,19 +186,19 @@ This example will correctly set the default visibility of a theoretical jetpack 
 local jetpackEnabled = true
 local jetpackModel = models.model.Body.Jetpack -- reference a ModelPart for convinience
 local function setJetpack(bool)
-  jetpackEnabled = bool -- this will be a ping function, so we still need to set the client's variable for when it is used in the toggle.
-  jetpackModel:setVisible(bool)
+    jetpackEnabled = bool -- this will be a ping function, so we still need to set the client's variable for when it is used in the toggle.
+    jetpackModel:setVisible(bool)
 end
 pings.setJetpack = setJetpack -- we now have a normal function and a ping function that calls the normal function after network stuff
 -- This event controls the particle effect of the jetpack
 function events.tick()
-  -- once every 4 ticks while the jetpack is visible
-  if jetpackEnabled and world.getTime() % 4 == 0 then
-    -- spawn particles relative to the model itself in the world
-    local partMatrix = jetpackModel:partToWorldMatrix()
-    particles:newParticle("minecraft:flame", partMatrix:apply(3, -6, 0))
-    particles:newParticle("minecraft:flame", partMatrix:apply(-3, -6, 0))
-  end
+    -- once every 4 ticks while the jetpack is visible
+    if jetpackEnabled and world.getTime() % 4 == 0 then
+        -- spawn particles relative to the model itself in the world
+        local partMatrix = jetpackModel:partToWorldMatrix()
+        particles:newParticle("minecraft:flame", partMatrix:apply(3, -6, 0))
+        particles:newParticle("minecraft:flame", partMatrix:apply(-3, -6, 0))
+    end
 end
 
 -- Page boilerplate
@@ -208,6 +208,6 @@ action_wheel:setPage(mainpage)
 -- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
 setJetpack(jetpackEnabled)
 mainpage:newAction():title("Enable Jetpack"):toggleTitle("Disable Jetpack"):onToggle(
-  pings.setJetpack -- use the ping for the action toggle, as that is still needs to be pinged
+    pings.setJetpack -- use the ping for the action toggle, as that is still needs to be pinged
 ):toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
 ```

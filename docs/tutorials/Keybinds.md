@@ -31,7 +31,7 @@ The false at the end decides whether or not the keybind will function while a gu
 
 ```lua
 function pings.examplePing()
-  log("Pressed!")
+    log("Pressed!")
 end
 local exampleKey = keybinds:newKeybind("Keybind Name", "key.keyboard.h")
 exampleKey.press = pings.examplePing
@@ -50,17 +50,17 @@ local keybindState = true
 -- Here the keybindState is true, meaning the first press will swap it to false
 -- If you wish the first press to swap to false, change the true to false above
 function pings.examplePing(state)
-  log("state is " .. tostring(state))
-  models:setVisible(state)
-  -- This will toggle the visibility of all or models, add in a model path to turn on/off specific modelParts
-  -- animations.bbmodelName.animationName:setPlaying(not state)
-  -- And this is an example of toggling an animation on/off, I'm using not state here because the first press will set this toggle to false and thusly stop the animation, swapping the boolean value like this will make the first press play it
+    log("state is " .. tostring(state))
+    models:setVisible(state)
+    -- This will toggle the visibility of all or models, add in a model path to turn on/off specific modelParts
+    -- animations.bbmodelName.animationName:setPlaying(not state)
+    -- And this is an example of toggling an animation on/off, I'm using not state here because the first press will set this toggle to false and thusly stop the animation, swapping the boolean value like this will make the first press play it
 end
 local exampleKey = keybinds:newKeybind("Keybind Name", "key.keyboard.h")
 exampleKey.press = function()
-  keybindState = not keybindState
-  -- This not is flipping the boolean value between true and false
-  pings.examplePing(keybindState)
+    keybindState = not keybindState
+    -- This not is flipping the boolean value between true and false
+    pings.examplePing(keybindState)
 end
 -- This time .press is being tied to a function that is then calling the ping, instead of being 'attached' to it directly.
 ```
@@ -73,22 +73,22 @@ If you have the know-how it is possible to use the <code>isPressed()</code> func
 local keybindState = false
 -- keybindState is the variable you will be using to keep track of the pressed-ness of the keybind
 function pings.examplePing(state)
-  keybindState = state
-  -- keybindState is made equivalent to the state sent by press or release for use in other parts of the script
+    keybindState = state
+    -- keybindState is made equivalent to the state sent by press or release for use in other parts of the script
 end
 local exampleKey = keybinds:newKeybind("Keybind Name", "key.keyboard.h")
 exampleKey.press = function()
-  pings.examplePing(true)
+    pings.examplePing(true)
 end
 -- Here, examplePing is sending the boolean value true to the ping function
 exampleKey.release = function()
-  pings.examplePing(false)
+    pings.examplePing(false)
 end
 -- When it's released, the boolean value false will be sent, indicating that the key is no longer being pressed
 
 -- This is unnecessary, but can be used to track the state of keybindState so you can see it working, at this point you can use keybindState wherever and however you wish- as long as it's in the same script file
 function events.tick()
-  log(keybindState)
+    log(keybindState)
 end
 ```
 

@@ -70,7 +70,7 @@ The table contains sub-tables, each of which contains the name, amplifier, durat
 
 ```lua
 for _, effect in pairs(host:getStatusEffects()) do
-  logTable(effect)
+    logTable(effect)
 end
 ```
 

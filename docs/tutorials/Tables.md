@@ -29,9 +29,9 @@ print(t["string key, table value"]) --> table 3be7a8
 If that seems like a lot of work to index by a string, yes it is.<br/>
 <code>table.key</code> is the shorthand for indexing a table with a string. This has very specific restrictions for what the string can contain.
 
-- Cannot start with a number (<code>t.2fort</code> will not work. Use <code>[]</code> indexing, or use a different string)
-- Cannot contain spaces, periods, or other special characters
-- Cannot be Lua Keywords (true, false, local, function)
+-   Cannot start with a number (<code>t.2fort</code> will not work. Use <code>[]</code> indexing, or use a different string)
+-   Cannot contain spaces, periods, or other special characters
+-   Cannot be Lua Keywords (true, false, local, function)
 
 ```lua
 t.name = "Katt"
@@ -56,14 +56,14 @@ You can assign values to keys when the table is initialized. Each key-value pair
 
 ```lua
 local a = {
-  [false] = 1,
-  ["string with spaces"] = "string",
-  [v] = {
-    a = 1,
-    b = 2,
-  },
-  --string shorthand rules still apply. This is equivalent to <code>["life"]=42,</code>
-  life = 42,
+    [false] = 1,
+    ["string with spaces"] = "string",
+    [v] = {
+        a = 1,
+        b = 2,
+    },
+    --string shorthand rules still apply. This is equivalent to <code>["life"]=42,</code>
+    life = 42,
 }
 ```
 
@@ -82,7 +82,7 @@ You can iterate over every single index using <code>pairs</code>. This will go t
 
 ```lua
 for key, value in pairs(t) do
-  print(key, value)
+    print(key, value)
 end
 ```
 
@@ -90,7 +90,7 @@ If the order of the iteration is important, you can use <code>ipairs</code>, but
 
 ```lua
 for index, value in ipairs(array) do
-  print(index, value)
+    print(index, value)
 end
 ```
 
@@ -101,7 +101,7 @@ As an example, <code>ipairs</code> is pretty much just this.
 
 ```lua
 for index = 1, #array, 1 do
-  print(index, array[index])
+    print(index, array[index])
 end
 ```
 

@@ -74,7 +74,7 @@ Will play the sound, but without a position it will be at (0,0,0) in the world.
 
 ```lua
 function events.tick()
-  wDeath:pos(player:getPos())
+    wDeath:pos(player:getPos())
 end
 ```
 
@@ -84,7 +84,7 @@ Full example:
 local wDeath = sounds["entity.wither.death"]
 wDeath:play()
 function events.tick()
-  wDeath:pos(player:getPos())
+    wDeath:pos(player:getPos())
 end
 ```
 

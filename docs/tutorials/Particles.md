@@ -42,7 +42,7 @@ You can store a reference to a specific particle, and then use it later to chang
 local boom = particles["explosion"]
 
 function events.entity_init()
-  boom:spawn():setPos(player:getPos())
+    boom:spawn():setPos(player:getPos())
 end
 ```
 

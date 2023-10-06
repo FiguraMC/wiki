@@ -12,7 +12,7 @@ It runs once and has no arguments. Calling the player API is safe here, making i
 
 ```lua
 function events.entity_init()
-  log("The player api has loaded!")
+    log("The player api has loaded!")
 end
 ```
 
@@ -24,7 +24,7 @@ Tick has no arguments and calling the player API is safe here.
 
 ```lua
 function events.tick()
-  log("A tick has passed")
+    log("A tick has passed")
 end
 ```
 
@@ -36,7 +36,7 @@ World_tick has no arguments and calling the player API without a <code>player:is
 
 ```lua
 function events.world_tick()
-  log("A tick has passed")
+    log("A tick has passed")
 end
 ```
 
@@ -54,7 +54,7 @@ The third is the source matrix used to render the avatar. Because of a Minecraft
 
 ```lua
 function events.render(delta, context, matrix)
-  log("The render context is... " .. context)
+    log("The render context is... " .. context)
 end
 ```
 
@@ -66,7 +66,7 @@ It has the same parameters as render
 
 ```lua
 function events.post_render(delta, context, matrix)
-  log("The render context is... " .. context)
+    log("The render context is... " .. context)
 end
 ```
 
@@ -78,7 +78,7 @@ Its only parameter is delta
 
 ```lua
 function events.world_render(delta)
-  log("A frame has passed!")
+    log("A frame has passed!")
 end
 ```
 
@@ -90,7 +90,7 @@ Its only parameter is delta
 
 ```lua
 function events.post_world_render(delta)
-  log("A frame has passed!")
+    log("A frame has passed!")
 end
 ```
 
@@ -106,9 +106,9 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.chat_send_message(msg)
-  host:setActionbar(msg)
-  return true
-  -- allows the message to be sent
+    host:setActionbar(msg)
+    return true
+    -- allows the message to be sent
 end
 ```
 
@@ -130,8 +130,8 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.chat_receive_message(raw, text)
-  host:setActionbar(raw)
-  -- logs are useful for visualizing when an event is running but doing it here is a bad idea
+    host:setActionbar(raw)
+    -- logs are useful for visualizing when an event is running but doing it here is a bad idea
 end
 ```
 
@@ -157,7 +157,7 @@ If the return value is true, the skull will not render
 
 ```lua
 function events.skull_render(delta, block, item, entity, mode)
-  log("The rendering mode of this skull is... " .. mode)
+    log("The rendering mode of this skull is... " .. mode)
 end
 ```
 
@@ -173,7 +173,7 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.mouse_scroll(delta)
-  log(delta)
+    log(delta)
 end
 ```
 
@@ -191,7 +191,7 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.mouse_move(x, y)
-  log(x, y)
+    log(x, y)
 end
 ```
 
@@ -209,7 +209,7 @@ The hold action is non-functional in mouse_press. Check the [keybind API](../tut
 
 ```lua
 function events.mouse_press(button, action, modifier)
-  log(button)
+    log(button)
 end
 ```
 
@@ -226,7 +226,7 @@ Check the [keybind API](../tutorials/Keybinds) for an alternative to key_press.
 
 ```lua
 function events.key_press(key, action, modifier)
-  log(key)
+    log(key)
 end
 ```
 
@@ -240,7 +240,7 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.char_typed(character, modifier, codepoint)
-  log(character .. " was typed!")
+    log(character .. " was typed!")
 end
 ```
 
@@ -258,7 +258,7 @@ Note: This event is several ticks slower than its alternative function in the [p
 
 ```lua
 function events.use_item(item, action, particles)
-  log(item)
+    log(item)
 end
 ```
 
@@ -274,7 +274,7 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.arrow_render(delta, arrow)
-  log(arrow)
+    log(arrow)
 end
 ```
 
@@ -292,7 +292,7 @@ See the [custom items page](../tutorials/Custom-Items) for a more in-depth expla
 
 ```lua
 function events.item_render(item, mode, pos, rot, scale, left)
-  log(item)
+    log(item)
 end
 ```
 
@@ -308,7 +308,7 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.on_play_sound(id, pos, vol, pitch, loop, category, path)
-  log(id)
+    log(id)
 end
 ```
 
@@ -320,7 +320,7 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.resource_reload()
-  log("Resources reloaded")
+    log("Resources reloaded")
 end
 ```
 
@@ -332,8 +332,8 @@ The easiest way to blanket-protect an entire event (or any function like a ping)
 
 ```lua
 function events.item_render()
-  if not player:isLoaded() then return end
-  log("An item is being held (and the player API has loaded)")
+    if not player:isLoaded() then return end
+    log("An item is being held (and the player API has loaded)")
 end
 ```
 

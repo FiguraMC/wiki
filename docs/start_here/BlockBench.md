@@ -64,9 +64,9 @@ When Figura loads a texture, it looks for another texture with the same name but
 
 List of suffixes used by Figura:
 
-- <code>\_e</code>: This texture will be used as the Secondary Texture, also known as the [Emissive Texture](../tutorials/Emissive%20Textures), of the ModelPart. The Secondary RenderType of a ModelPart is by default <code>"EMISSIVE"</code>, but can be changed in script.
-- <code>\_n</code>: This texture will be used as the [Normal Texture](https://en.wikipedia.org/wiki/Normal_mapping). <b>Do not confuse this with the Primary Texture</b>. "Normal" means something very specific in modeling. This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
-- <code>\_s</code>: This texture will be used as the [Specular Texture](https://en.wikipedia.org/wiki/Specularity). This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
+-   <code>\_e</code>: This texture will be used as the Secondary Texture, also known as the [Emissive Texture](../tutorials/Emissive%20Textures), of the ModelPart. The Secondary RenderType of a ModelPart is by default <code>"EMISSIVE"</code>, but can be changed in script.
+-   <code>\_n</code>: This texture will be used as the [Normal Texture](https://en.wikipedia.org/wiki/Normal_mapping). <b>Do not confuse this with the Primary Texture</b>. "Normal" means something very specific in modeling. This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
+-   <code>\_s</code>: This texture will be used as the [Specular Texture](https://en.wikipedia.org/wiki/Specularity). This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
 
 An example is the <Emoji icon="blockbench/group"/> <code>Head</code>, <Emoji icon="file/texture"/> <code>skin</code>, and <Emoji icon="file/texture"/> <code>skin_e</code>. When the <Emoji icon="blockbench/group"/> <code>Head</code> uses the texture <Emoji icon="file/texture"/> <code>skin</code>, when the Avatar is loaded, <Emoji icon="file/texture"/> <code>skin_e</code> is used as the Secondary Texture, ie the Emissive Texture.<br/>
 <img src={require("@site/static/img/blockbench/settexture.png").default} width="300"></img><br/>
@@ -127,8 +127,8 @@ local time, anim = ...
 
 Keyframe Expressions accept 2 different formats:
 
-- A single lua expression that evaluates to a number
-- A lua script that `returns` a number
+-   A single lua expression that evaluates to a number
+-   A lua script that `returns` a number
 
 `math.sin(world.getTime())` is a single lua expression, so it is a valid Keyframe Expression.<br/> However, `local _, anim=... math.sin(anim:getTime())` is not a single lua expression and will need to have an explicit return value:
 
