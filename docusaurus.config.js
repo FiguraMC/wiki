@@ -105,6 +105,14 @@ const config = {
         additionalLanguages: ['lua'],
       },
     }),
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        disableVersioning: true,
+      },
+    ],
+  ],
 };
 
 module.exports = config;
