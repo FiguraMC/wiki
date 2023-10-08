@@ -2,47 +2,47 @@ List of poses a living entity can have, as accessed by <code>:getPose()</code>
 
 ## All Living Entity Poses
 
-<code>STANDING</code>: All entities (including players) are STANDING when outside of any of the other poses
+<pre>STANDING: All entities (including players) are STANDING when outside of any of the other poses</pre>
 
 ## Player Poses
 These are all the poses the player can enter
 
-<code>FALL_FLYING</code>: While elytra gliding<br/>
+<pre>FALL_FLYING: While elytra gliding</pre>
 
-<code>SLEEPING</code>: While sleeping<br/>
+<pre>SLEEPING: While sleeping</pre>
 
-<code>SWIMMING</code>: While in the swimming pose, which includes while crawling<br/>
+<pre>SWIMMING: While in the swimming pose, which includes while crawling</pre>
 
-<code>SPIN_ATTACK</code>: While charging from a riptide enchanted trident<br/>
+<pre>SPIN_ATTACK: While charging from a riptide enchanted trident</pre>
 
-<code>CROUCHING</code>: While crouching<br/><br/>
+<pre>CROUCHING: While crouching</pre>
 
 ## Non-Player Poses
 
 It's impossible for players to enter these poses, but other living entities can
 
-<code>DYING</code>
+<pre>DYING</pre>
 
 #### Goat Poses
 
-<code>LONG_JUMPING</code>
+<pre>LONG_JUMPING</pre>
 
 #### Frog Poses
 
-<code>CROAKING</code><br/>
+<pre>CROAKING</pre>
 
-<code>USING_TONGUE</code>
+<pre>USING_TONGUE</pre>
 
 #### Camel Poses
 
-<code>SITTING</code>
+<pre>SITTING</pre>
 
 #### Warden Poses
 
-<code>ROARING</code><br/>
+<pre>ROARING</pre>
 
-<code>SNIFFING</code><br/>
+<pre>SNIFFING</pre>
 
-<code>EMERGING</code><br/>
+<pre>EMERGING</pre>
 
-<code>DIGGING</code>
+<pre>DIGGING</pre>

@@ -2,38 +2,38 @@ Modelpart render types that can be applied via <code>setPrimaryRenderType(string
 
 There can only be one primary and secondary type applied to a cube at once, so you may get unwanted behavior if you make the primary render type 'LINES' as all the pixels aside from the lines will vanish.
 
-<code>NONE</code><br/>
+<pre>NONE</pre>
 
-<code>CUTOUT</code><br/>
+<pre>CUTOUT</pre>
 
-<code>CUTOUT_CULL</code><br/>
+<pre>CUTOUT_CULL</pre>
 
-<code>TRANSLUCENT</code><br/>
+<pre>TRANSLUCENT</pre>
 
-<code>TRANSLUCENT_CULL</code><br/>
+<pre>TRANSLUCENT_CULL</pre>
 
-<code>EMISSIVE</code><br/>
+<pre>EMISSIVE</pre>
 
-<code>EMISSIVE_SOLID</code><br/>
+<pre>EMISSIVE_SOLID</pre>
 
-<code>EYES</code><br/>
+<pre>EYES</pre>
 
-<code>END_PORTAL</code><br/>
+<pre>END_PORTAL</pre>
 
-<code>END_GATEWAY</code><br/>
+<pre>END_GATEWAY</pre>
 
-<code>TEXTURED_PORTAL</code><br/>
+<pre>TEXTURED_PORTAL</pre>
 
-<code>GLINT</code><br/>
+<pre>GLINT</pre>
 
-<code>GLINT2</code><br/>
+<pre>GLINT2</pre>
 
-<code>TEXTURED_GLINT</code><br/>
+<pre>TEXTURED_GLINT</pre>
 
-<code>LINES</code><br/>
+<pre>LINES</pre>
 
-<code>LINES_STRIP</code><br/>
+<pre>LINES_STRIP</pre>
 
-<code>SOLID</code><br/>
+<pre>SOLID</pre>
 
-<code>BLURRY</code><br/>
+<pre>BLURRY</pre>

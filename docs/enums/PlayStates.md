@@ -1,7 +1,7 @@
 The play state of a Blockbench animation, detected with <code>getPlayState()</code>.
 
-<code>STOPPED</code>: The animation isn't playing<br/>
+<pre>STOPPED: The animation isn't playing</pre>
 
-<code>PAUSED</code>: The animation is paused on at a specific time<br/>
+<pre>PAUSED: The animation is paused on at a specific time</pre>
 
-<code>PLAYING</code>: The animation is playing
+<pre>PLAYING: The animation is playing</pre>
