@@ -73,7 +73,7 @@ const FileTreeRoot: FC<PropsWithChildren> = ({ children }) => {
             : "";
 
         return (
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div key={index} style={{ display: "flex", alignItems: "center" }}>
             <div style={{ marginRight: "-0.15rem" }}>{start}</div>
             <Emoji icon={node.icon ?? "file/folder"} />
             <div style={{ marginLeft: "0.25rem" }}>{node.label}</div>
