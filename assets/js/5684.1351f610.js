@@ -1,0 +1,1 @@
+(self.webpackChunkfigurawiki=self.webpackChunkfigurawiki||[]).push([[5684],{9039:(i,k,s)=>{"use strict";s.d(k,{Z:()=>a});var u=s(1336);const a=u},5525:()=>{}}]);

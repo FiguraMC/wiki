@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfigurawiki=self.webpackChunkfigurawiki||[]).push([[2572],{2572:(i,k,u)=>{u.r(k)}}]);
