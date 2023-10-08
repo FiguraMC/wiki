@@ -13,8 +13,6 @@ const resolveFileTree = (children: React.ReactNode): Node[] => {
     if (child.props.originalType === FileTreeNode) {
       const nodeProps = child.props as unknown as FileTreeNodeProps;
 
-      console.log(nodeProps.children);
-
       return {
         icon: nodeProps.icon,
         label: nodeProps.label,
