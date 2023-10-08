@@ -1,0 +1,46 @@
+{
+	"name": "Figura Wiki Editing Environment",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+
+	"forwardPorts": [3000],
+	"portsAttributes": {
+		"3000": {
+			"label": "Docusaurus Development Server",
+			"protocol": "http",
+			"onAutoForward": "openBrowser"
+		}
+	},
+
+	"postCreateCommand": "npm install",
+	"postStartCommand": "npm run start",
+
+	"hostRequirements": {
+		"cpus": 2,
+		"memory": "4gb",
+		"storage": "16gb"
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"yzhang.markdown-all-in-one",
+				"DavidAnson.vscode-markdownlint",
+				"unifiedjs.vscode-mdx",
+				"streetsidesoftware.code-spell-checker",
+				"vscode-icons-team.vscode-icons"
+			],
+			"settings": {
+				"editor.insertSpaces": true,
+				"editor.tabSize": 4,
+				"files.eol": "\n",
+				"files.trimTrailingWhitespace": true,
+				"files.insertFinalNewline": true,
+				"files.trimFinalNewlines": true,
+				"files.exclude": {
+					"**/.git": true,
+					"**/node_modules": true
+				}
+			}
+		}
+	}
+}
