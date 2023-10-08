@@ -63,8 +63,14 @@ const FileTreeRoot: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <pre>
-      {flattenedTree.map((node) => {
-        const start = node.depth > 0 ? "│  ".repeat(node.depth - 1) + (node.end ? "└─" : "├─") + " " : "";
+      {flattenedTree.map((node, index, all) => {
+        const useEndJoiner =
+          (node.end && node.depth > 1) || index === all.length - 1;
+
+        const start =
+          node.depth > 0
+            ? "│  ".repeat(node.depth - 1) + (useEndJoiner ? "└─" : "├─") + " "
+            : "";
 
         return (
           <div style={{ display: "flex", alignItems: "center" }}>
