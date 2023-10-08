@@ -1,19 +1,31 @@
 import Emoji from '@site/src/components/Emoji';
+import FileTreeRoot from '@site/src/components/FileTree/Root';
+import FileTreeNode from '@site/src/components/FileTree/Node';
 
 Avatars are stored in <code>&lt;minecraftDirectory&gt;/figura/avatars</code>. You can get to this folder quickly via the <Emoji icon="figura/folder"/> button in the Figura Menu.<br/>
 A Figura Avatar consists of a named <Emoji icon="file/folder"/> folder or a <Emoji icon="file/zip"/> zip file containing an <Emoji icon="file/json"/> <code>avatar.json</code> file. That is everything needed for an avatar to appear in Wardrobe.<br/>
-\- <Emoji icon="file/folder"/> <code>avatars</code><br/>
-\-- <Emoji icon="file/folder"/> <code>&lt;AvatarName&gt;</code><br/>
-\--- <Emoji icon="file/json"/> <code>avatar.json</code><br/>
+
+<FileTreeRoot>
+  <FileTreeNode label="avatars">
+    <FileTreeNode label="&lt;AvatarName&gt;">
+      <FileTreeNode label="avatar.json" icon="file/json" />
+    </FileTreeNode>
+  </FileTreeNode>
+</FileTreeRoot>
 
 An <Emoji icon="file/json"/> <code>avatar.json</code> file is just a renamed text file which contains [Avatar Metadata](../tutorials/Avatar%20Metadata) in the form of a json object, but it can be empty. It's presence tells Figura that this folder is an Avatar.
 
 Figura also looks for an image named <Emoji icon="file/texture"/> <code>avatar.png</code>. This will be used as the avatar's icon which will appear next to it's name in the Wardrobe.
 
-\- <Emoji icon="file/folder"/> <code>avatars</code><br/>
-\-- <Emoji icon="file/folder"/> <code>&lt;AvatarName&gt;</code><br/>
-\--- <Emoji icon="file/json"/> <code>avatar.json</code><br/>
-\--- <Emoji icon="file/texture"/> <code>avatar.png</code><br/>
+
+<FileTreeRoot>
+  <FileTreeNode label="avatars">
+    <FileTreeNode label="&lt;AvatarName&gt;">
+      <FileTreeNode label="avatar.json" icon="file/json" />
+      <FileTreeNode label="avatar.png" icon="file/texture" />
+    </FileTreeNode>
+  </FileTreeNode>
+</FileTreeRoot>
 
 Additional files go either in the same folder as the <Emoji icon="file/json"/> <code>avatar.json</code>, or within a <Emoji icon="file/folder"/> subfolder.
 

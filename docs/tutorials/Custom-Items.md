@@ -1,4 +1,6 @@
 import Emoji from '@site/src/components/Emoji';
+import FileTreeRoot from '@site/src/components/FileTree/Root';
+import FileTreeNode from '@site/src/components/FileTree/Node';
 
 # Custom Items
 
@@ -35,10 +37,14 @@ end
 
 This is storing all the values you can get, but in most cases you only need item and sometimes mode. Let's replace bows, shields, and all swords. These are all for a blockbench model that looks like this:
 
-\-<Emoji icon="file/bbmodel"/> <code>model.bbmodel</code><br/>
-\-- <Emoji icon="blockbench/group"/> <code>ItemSword</code><br/>
-\-- <Emoji icon="blockbench/group"/> <code>ItemBow</code><br/>
-\-- <Emoji icon="blockbench/group"/> <code>ItemShield</code><br/>
+<FileTreeRoot>
+  <FileTreeNode label="model.bbmodel" icon="file/bbmodel">
+    <FileTreeNode label="ItemSword" icon="blockbench/group"/>
+    <FileTreeNode label="ItemBow" icon="blockbench/group"/>
+    <FileTreeNode label="ItemShield" icon="blockbench/group"/>
+  </FileTreeNode>
+</FileTreeRoot>
+
 
 ```lua
 function events.item_render(item)
@@ -58,14 +64,20 @@ The find function is searching the id for the word 'sword' so you don't need to 
 
 1. Do _not_ put the Item group inside any other group. The Blockbench outliner should look like this:
 
-\-<Emoji icon="file/bbmodel"/> <code>model.bbmodel</code><br/>
-\-- <Emoji icon="blockbench/group"/> <code>Item</code><br/>
+<FileTreeRoot>
+  <FileTreeNode label="model.bbmodel" icon="file/bbmodel">
+    <FileTreeNode label="Item" icon="blockbench/group"/>
+  </FileTreeNode>
+</FileTreeRoot>
 
 or
 
-\-<Emoji icon="file/bbmodel"/> <code>model.bbmodel</code><br/>
-\-- <Emoji icon="blockbench/group"/> <code>Item</code><br/>
-\-- <Emoji icon="blockbench/group"/> <code>Item2</code><br/>
+<FileTreeRoot>
+  <FileTreeNode label="model.bbmodel" icon="file/bbmodel">
+    <FileTreeNode label="Item" icon="blockbench/group"/>
+    <FileTreeNode label="Item2" icon="blockbench/group"/>
+  </FileTreeNode>
+</FileTreeRoot>
 
 because you can have more than one of these keywords. Do **not** nest Item keywords inside another. And, do **not** have more than one custom item per instance of the Item keyword.
 

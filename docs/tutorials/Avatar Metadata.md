@@ -1,4 +1,6 @@
 import Emoji from '@site/src/components/Emoji';
+import FileTreeRoot from '@site/src/components/FileTree/Root';
+import FileTreeNode from '@site/src/components/FileTree/Node';
 
 <Emoji icon="file/json"/> <code>avatar.json</code> is the file that contains Avatar Metadata. It tells Figura specific information about the avatar.
 
@@ -93,21 +95,29 @@ This key defines the color of the <Emoji icon="badge/mark"/> Figura mark on your
 
 By default, every single <Emoji icon="file/lua"/> script file in the avatar will execute in an undefined order. The <code>require</code> function can be used to control when a script is first executed, but some may prefer to define the script order in the metadata. This key is an array of strings that define which scripts run and in which order. Scripts not defined here will not run by default on avatar init, but can still be ran via <code>require</code>. A script is specified via it's file name without the <code>.lua</code> extension. If a script is in a subfolder, that folder must also be defined, with the folder separator being a period (<code>.</code>).<br/>
 Consider the following avatar:<br/>
-\- <Emoji icon="file/folder"/> <code>KattExampleAvatar</code><br/>
-\-- <Emoji icon="file/folder"/> <code>accessories</code><br/>
-\--- <Emoji icon="file/bbmodel"/> <code>halo.bbmodel</code><br/>
-\--- <Emoji icon="file/bbmodel"/> <code>ribbon.bbmodel</code><br/>
-\-- <Emoji icon="file/folder"/> <code>libs</code><br/>
-\--- <Emoji icon="file/lua"/> <code>armorAidLib.lua</code><br/>
-\--- <Emoji icon="file/lua"/> <code>RainbowNameplate.lua</code><br/>
-\--- <Emoji icon="file/lua"/> <code>JsonifyTextLib.lua</code><br/>
-\-- <Emoji icon="file/json"/> <code>avatar.json</code><br/>
-\-- <Emoji icon="file/bbmodel"/> <code>player.bbmodel</code><br/>
-\--- <Emoji icon="file/texture"/> <code>diamond_layer_1</code><br/>
-\--- <Emoji icon="file/texture"/> <code>diamond_layer_2</code><br/>
-\-- <Emoji icon="file/lua"/> <code>script.lua</code><br/>
-\-- <Emoji icon="file/texture"/> <code>skin.png</code><br/>
-\-- <Emoji icon="file/bbmodel"/> <code>skull.bbmodel</code><br/>
+
+<FileTreeRoot>
+  <FileTreeNode label="KattExampleAvatar" icon="file/folder">
+    <FileTreeNode label="accessories" icon="file/folder">
+      <FileTreeNode label="halo.bbmodel" icon="file/bbmodel"/>
+      <FileTreeNode label="ribbon.bbmodel" icon="file/bbmodel"/>
+    </FileTreeNode>
+    <FileTreeNode label="libs" icon="file/folder">
+      <FileTreeNode label="armorAidLib.lua" icon="file/lua"/>
+      <FileTreeNode label="RainbowNameplate.lua" icon="file/lua"/>
+      <FileTreeNode label="JsonifyTextLib.lua" icon="file/lua"/>
+    </FileTreeNode>
+    <FileTreeNode label="avatar.json" icon="file/json"/>
+    <FileTreeNode label="player.bbmodel" icon="file/bbmodel">
+      <FileTreeNode label="diamond_layer_1" icon="file/texture"/>
+      <FileTreeNode label="diamond_layer_2" icon="file/texture"/>
+    </FileTreeNode>
+    <FileTreeNode label="script.lua" icon="file/lua"/>
+    <FileTreeNode label="skin.png" icon="file/texture"/>
+    <FileTreeNode label="skull.bbmodel" icon="file/bbmodel"/>
+  </FileTreeNode>
+</FileTreeRoot>
+
 To make only <code>RainbowNameplate.lua</code> run on avatar init, the <code>autoScripts</code> would look like<br/>
 
 ```json
@@ -131,21 +141,28 @@ For our example metadata file, we will state that only <Emoji icon="file/lua"/> 
 
 This key defines which animations should start playing when the avatar first loads. The string to reference an animation follows the pattern <code>"modelPath.animName"</code>.
 Consider the following avatar:<br/>
-\- <Emoji icon="file/folder"/> <code>KattExampleAvatar</code><br/>
-\-- <Emoji icon="file/folder"/> <code>accessories</code><br/>
-\--- <Emoji icon="file/bbmodel"/> <code>halo.bbmodel</code><br/>
-\--- <Emoji icon="file/bbmodel"/> <code>ribbon.bbmodel</code><br/>
-\-- <Emoji icon="file/folder"/> <code>libs</code><br/>
-\--- <Emoji icon="file/lua"/> <code>armorAidLib.lua</code><br/>
-\--- <Emoji icon="file/lua"/> <code>RainbowNameplate.lua</code><br/>
-\--- <Emoji icon="file/lua"/> <code>JsonifyTextLib.lua</code><br/>
-\-- <Emoji icon="file/json"/> <code>avatar.json</code><br/>
-\-- <Emoji icon="file/bbmodel"/> <code>player.bbmodel</code><br/>
-\--- <Emoji icon="file/texture"/> <code>diamond_layer_1</code><br/>
-\--- <Emoji icon="file/texture"/> <code>diamond_layer_2</code><br/>
-\-- <Emoji icon="file/lua"/> <code>script.lua</code><br/>
-\-- <Emoji icon="file/texture"/> <code>skin.png</code><br/>
-\-- <Emoji icon="file/bbmodel"/> <code>skull.bbmodel</code><br/>
+
+<FileTreeRoot>
+  <FileTreeNode label="KattExampleAvatar" icon="file/folder">
+    <FileTreeNode label="accessories" icon="file/folder">
+      <FileTreeNode label="halo.bbmodel" icon="file/bbmodel"/>
+      <FileTreeNode label="ribbon.bbmodel" icon="file/bbmodel"/>
+    </FileTreeNode>
+    <FileTreeNode label="libs" icon="file/folder">
+      <FileTreeNode label="armorAidLib.lua" icon="file/lua"/>
+      <FileTreeNode label="RainbowNameplate.lua" icon="file/lua"/>
+      <FileTreeNode label="JsonifyTextLib.lua" icon="file/lua"/>
+    </FileTreeNode>
+    <FileTreeNode label="avatar.json" icon="file/json"/>
+    <FileTreeNode label="player.bbmodel" icon="file/bbmodel">
+      <FileTreeNode label="diamond_layer_1" icon="file/texture"/>
+      <FileTreeNode label="diamond_layer_2" icon="file/texture"/>
+    </FileTreeNode>
+    <FileTreeNode label="script.lua" icon="file/lua"/>
+    <FileTreeNode label="skin.png" icon="file/texture"/>
+    <FileTreeNode label="skull.bbmodel" icon="file/bbmodel"/>
+  </FileTreeNode>
+</FileTreeRoot>
 
 If we want the animation <code>"idle"</code> in the bbmodel <Emoji icon="file/bbmodel"/> <code>player.bbmodel</code>, we would include the string <code>"player.idle"</code> in the <code>"autoAnims"</code> array.<br/>
 Folder seperation is done with a period (<code>.</code>) instead of slash (<code>/</code>).<br/>
@@ -170,21 +187,29 @@ This is not table indexing like how you would index the `animations` table to ge
 This key defines which textures should be ignored when loading the avatar. This is useful for when you have a cube that gets its texture set via code, but since all cubes must have a blockbench texture for Figura to even load the cube, you will either have to waste space with a dummy texture or use another texture in the model, which probably won't look good on the cube. This key allows you to have that dummy texture in blockbench without having to waste precious bytes on having that texture loaded with the avatar.<br/>
 Referencing a texture is exactly the same format as getting a Texture object with the <code>textures</code> global.<br/>
 Consider this avatar:<br/>
-\- <Emoji icon="file/folder"/> <code>KattExampleAvatar</code><br/>
-\-- <Emoji icon="file/folder"/> <code>accessories</code><br/>
-\--- <Emoji icon="file/bbmodel"/> <code>halo.bbmodel</code><br/>
-\--- <Emoji icon="file/bbmodel"/> <code>ribbon.bbmodel</code><br/>
-\-- <Emoji icon="file/folder"/> <code>libs</code><br/>
-\--- <Emoji icon="file/lua"/> <code>armorAidLib.lua</code><br/>
-\--- <Emoji icon="file/lua"/> <code>RainbowNameplate.lua</code><br/>
-\--- <Emoji icon="file/lua"/> <code>JsonifyTextLib.lua</code><br/>
-\-- <Emoji icon="file/json"/> <code>avatar.json</code><br/>
-\-- <Emoji icon="file/bbmodel"/> <code>player.bbmodel</code><br/>
-\--- <Emoji icon="file/texture"/> <code>diamond_layer_1</code><br/>
-\--- <Emoji icon="file/texture"/> <code>diamond_layer_2</code><br/>
-\-- <Emoji icon="file/lua"/> <code>script.lua</code><br/>
-\-- <Emoji icon="file/texture"/> <code>skin.png</code><br/>
-\-- <Emoji icon="file/bbmodel"/> <code>skull.bbmodel</code><br/>
+
+<FileTreeRoot>
+  <FileTreeNode label="KattExampleAvatar" icon="file/folder">
+    <FileTreeNode label="accessories" icon="file/folder">
+      <FileTreeNode label="halo.bbmodel" icon="file/bbmodel"/>
+      <FileTreeNode label="ribbon.bbmodel" icon="file/bbmodel"/>
+    </FileTreeNode>
+    <FileTreeNode label="libs" icon="file/folder">
+      <FileTreeNode label="armorAidLib.lua" icon="file/lua"/>
+      <FileTreeNode label="RainbowNameplate.lua" icon="file/lua"/>
+      <FileTreeNode label="JsonifyTextLib.lua" icon="file/lua"/>
+    </FileTreeNode>
+    <FileTreeNode label="avatar.json" icon="file/json"/>
+    <FileTreeNode label="player.bbmodel" icon="file/bbmodel">
+      <FileTreeNode label="diamond_layer_1" icon="file/texture"/>
+      <FileTreeNode label="diamond_layer_2" icon="file/texture"/>
+    </FileTreeNode>
+    <FileTreeNode label="script.lua" icon="file/lua"/>
+    <FileTreeNode label="skin.png" icon="file/texture"/>
+    <FileTreeNode label="skull.bbmodel" icon="file/bbmodel"/>
+  </FileTreeNode>
+</FileTreeRoot>
+
 Hypothetically, the armor of this avatar is being handled by <Emoji icon="file/lua"/> <code>armorAidLib.lua</code>. It changes the texture of cubes to the vanilla armor textures. There is no need to have the <Emoji icon="file/texture"/> <code>diamond_layer_1</code> and <Emoji icon="file/texture"/> <code>diamond_layer_2</code> textures in the bbmodel, but setting the cubes to use <Emoji icon="file/texture"/> <code>skin.png</code> will make editing the model a pain. So we remove both unused textures.
 
 ```json
@@ -206,14 +231,23 @@ Does that Type identifier make any sense? Not really, but thats what the <code>"
 <code>"customizations"</code> allows for modifications to ModelParts that cant be done in BlockBench. You can still do this stuff via script, but the intent is for an avatar that does not have a script to still have access to some functionality.<br/>
 <code>"customizations"</code> itself is a JSON object. The keys of that object are references to ModelParts, with the values being another JSON object. _That_ object contains key value pairs that operate on the referenced ModelPart.<br/>
 Consider the following avatar:<br/>
-\- <Emoji icon="file/folder"/> <code>KattExampleAvatar</code><br/>
-\-- <Emoji icon="file/folder"/> <code>accessories</code><br/>
-\--- <Emoji icon="file/bbmodel"/> <code>ribbon.bbmodel</code><br/>
-\---- <Emoji icon="blockbench/cube"/> <code>cube</code><br/>
-\-- <Emoji icon="file/json"/> <code>avatar.json</code><br/>
-\-- <Emoji icon="file/bbmodel"/> <code>player.bbmodel</code><br/>
-\--- <Emoji icon="blockbench/group"/> <code>Head</code><br/>
-\---- <Emoji icon="blockbench/cube"/> <code>Head</code><br/>
+
+<FileTreeRoot>
+  <FileTreeNode label="KattExampleAvatar" icon="file/folder">
+    <FileTreeNode label="accessories" icon="file/folder">
+      <FileTreeNode label="ribbon.bbmodel" icon="file/bbmodel">
+        <FileTreeNode label="cube" icon="blockbench/cube"/>
+      </FileTreeNode>
+    </FileTreeNode>
+    <FileTreeNode label="avatar.json" icon="file/json"/>
+    <FileTreeNode label="player.bbmodel" icon="file/bbmodel">
+      <FileTreeNode label="Head" icon="blockbench/group">
+        <FileTreeNode label="Head" icon="blockbench/cube"/>
+      </FileTreeNode>
+    </FileTreeNode>
+  </FileTreeNode>
+</FileTreeRoot>
+
 To target the <Emoji icon="blockbench/group"/> <code>Head</code>, the correct key to use would be <code>"player.Head"</code>.<br/>
 To target the <Emoji icon="file/bbmodel"/> <code>ribbon</code>, the correct key to use would be <code>"accessories.ribbon"</code>.<br/>
 

@@ -1,4 +1,6 @@
 import Emoji from '@site/src/components/Emoji';
+import FileTreeRoot from '@site/src/components/FileTree/Root';
+import FileTreeNode from '@site/src/components/FileTree/Node';
 
 The require() function takes the name of one of your scripts, without the .lua extension
 
@@ -14,11 +16,12 @@ If the name you give isn't any of your scripts, it will error
 
 #### Script in root folder
 
-<pre>
-<Emoji icon="file/folder"/> MyCoolAvatar/<br/>
-├─ <Emoji icon="file/lua"/> script.lua<br/>
-├─ <Emoji icon="file/lua"/> JimmyAnims.lua<br/>
-</pre>
+<FileTreeRoot>
+  <FileTreeNode label="MyCoolAvatar" icon="file/folder">
+    <FileTreeNode label="script" icon="file/lua"/>
+    <FileTreeNode label="JimmyAnims" icon="file/lua"/>
+  </FileTreeNode>
+</FileTreeRoot>
 
 ```lua
 -- script.lua
@@ -27,12 +30,14 @@ require("JimmyAnims")
 
 #### Script in another folder
 
-<pre>
-<Emoji icon="file/folder"/> MyCoolAvatar/<br/>
-├─ <Emoji icon="file/lua"/> script.lua<br/>
-├─ <Emoji icon="file/folder"/> MyFolder/<br/>
-│  ├─ <Emoji icon="file/lua"/> GSAnimBlend.lua<br/>
-</pre>
+<FileTreeRoot>
+  <FileTreeNode label="MyCoolAvatar" icon="file/folder">
+    <FileTreeNode label="script" icon="file/lua"/>
+    <FileTreeNode label="MyFolder" icon="file/folder">
+      <FileTreeNode label="GSAnimBlend" icon="file/lua"/>
+    </FileTreeNode>
+  </FileTreeNode>
+</FileTreeRoot>
 
 ```lua
 -- script.lua
