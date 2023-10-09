@@ -28,7 +28,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          BASE_URL_OVERRIDE: /wiki/pr-preview/pr-${{ github.event.number }}/
+          BASE_URL_OVERRIDE: /pr-preview/pr-${{ github.event.number }}/
 
       - name: Deploy Preview
         uses: rossjrw/pr-preview-action@v1.4.4
