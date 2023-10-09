@@ -5,6 +5,7 @@ List of poses a living entity can have, as accessed by <code>:getPose()</code>
 <pre>STANDING: All entities (including players) are STANDING when outside of any of the other poses</pre>
 
 ## Player Poses
+
 These are all the poses the player can enter
 
 <pre>FALL_FLYING: While elytra gliding</pre>

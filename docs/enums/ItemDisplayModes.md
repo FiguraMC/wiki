@@ -2,7 +2,7 @@ Item Display Modes can be used to detect the display mode of an item through the
 
 ## Item Task Exclusive
 
-When an item task's display mode is set transformations will be applied to make the item appear as if it's rendering in that circumstance. 
+When an item task's display mode is set transformations will be applied to make the item appear as if it's rendering in that circumstance.
 
 <code>GUI</code>: The transformations used by the item when being displayed in a GUI (the player's inventory for example)<br/>
 

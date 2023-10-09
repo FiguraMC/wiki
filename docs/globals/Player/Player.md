@@ -4,22 +4,21 @@ The player API is accessed through the <code>player</code> global. Like so: <cod
 
 Player information that isn't synced between clients is kept in the host API. Examples of unsynced data are: Creative flying, status effects, and remaining air amount.
 
-***Note:*** There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event. If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the <code>entity_init</code> event.
+**_Note:_** There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event. If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the <code>entity_init</code> event.
 
 For most other circumstances you will want the <code>tick</code> event, as checks like <code>player:isGliding()</code> will be updated once a game tick inside that event. (There are 20 ticks in a second, and this is how often Minecraft updates information- some player functions work better in a tick event for this reason).
 
 All provided examples assume you're using a tick event.
 
 To reiterate:
+
 ```lua
 player:isGliding() -- will error
-
 function events.entity_init()
     player:isGliding() -- will not error, but will only play once
 end
 
 player:isGliding() -- will error
-
 function events.tick()
     player:isGliding() -- won't error, and will update once a tick
 end
@@ -30,6 +29,7 @@ player:isGliding() -- will error
 ## Player Transformations
 ***
 ### `getPos()`
+
 Gets the position of the entity in the world
 
 If delta is passed in, then it will be used to linearly interpolate the position of the entity between the previous tick and the current tick
@@ -37,6 +37,7 @@ If delta is passed in, then it will be used to linearly interpolate the position
 The default value of delta is 1
 
 **Example**:
+
 ```lua
 player:getPos()
 ```
@@ -88,6 +89,7 @@ player:getVelocity()
 
 
 
+Gets the current velocity of this entity in world coordinates, calculated as its position this tick minus its position last tick
 
 ## Player Actions
 ***
@@ -174,6 +176,7 @@ player:riptideSpinning()
 ```
 
 
+Returns if this entity is riptide spinning
 
 ## Player Data
 ***
@@ -369,7 +372,6 @@ player:isAlive()
 Gets the Minecraft identifier of this entity
 
 For instance, "minecraft:pig"
-
 **Example**:
 ```lua
 player:getType() == "minecraft:player"
@@ -524,7 +526,7 @@ player:getBoundingBox()
 ### `isOnGround()`
 Returns whether or not this entity is currently on the ground
 
-***Note:*** Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the blockstate of the block directly underneath the player like so: <code>world.getBlockState(player:getPos():add(0,-0.1,0)):isSolidBlock()</code>
+**_Note:_** Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the blockstate of the block directly underneath the player like so: <code>world.getBlockState(player:getPos():add(0,-0.1,0)):isSolidBlock()</code>
 
 **Example**:
 ```lua
@@ -578,7 +580,7 @@ Returns a vararg of the block, the hit position and the block face the hit colli
 
 **Example:**
 ```lua
-if player:getTargetedBlock(true,4.5).id == "minecraft:grass_block" then
+if player:getTargetedBlock(true, 4.5).id == "minecraft:grass_block" then
     log("You're looking at grass")
 end
 ```
