@@ -41,19 +41,15 @@ enum Joiner {
 }
 
 const transposeJoiners = (matrix: Joiner[][]): Joiner[][] => {
-  if (matrix.length === 0) return matrix;
-
   const rows = matrix.length;
-  const cols = matrix[0]!.length;
-  const result: Joiner[][] = [];
+  if (rows === 0) return matrix;
 
-  for (let i = 0; i < cols; i++) {
-    result.push([]);
-  }
+  const cols = matrix[0].length;
+  const result: Joiner[][] = Array.from({ length: cols }, () => []);
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      result[j]![i] = matrix[i]![j]!;
+      result[j][i] = matrix[i][j];
     }
   }
 
