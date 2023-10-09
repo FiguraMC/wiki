@@ -54,7 +54,7 @@ jobs:
       - uses: rossjrw/pr-preview-action@v1.4.4
         name: Deploy Preview
         with:
-          source_dir: ./build/
+          source-dir: ./build/
 
   deploy:
     runs-on: ubuntu-latest
