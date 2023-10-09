@@ -74,13 +74,19 @@ const flattenFileTree = (tree: Node[], depth = 0) => {
     }
   }
 
-  const maxDepth = flattened.reduce((max, node) => Math.max(max, node.depth), 0);
-
-  let joiners = flattened.map((node): Joiner[] =>
-    Array(node.depth)
-      .fill(Joiner.VERTICAL)
-      .concat(node.end ? Joiner.END : Joiner.RIGHT, Array(maxDepth - node.depth).fill(Joiner.EMPTY)),
+  const maxDepth = flattened.reduce(
+    (max, node) => Math.max(max, node.depth),
+    0
   );
+
+  let joiners = flattened.map((node): Joiner[] => {
+    const arr = new Array(maxDepth).fill(Joiner.EMPTY);
+
+    arr.fill(Joiner.VERTICAL, 0, node.depth);
+    arr[node.depth] = node.end ? Joiner.END : Joiner.RIGHT;
+
+    return arr;
+  });
 
   joiners = transposeJoiners(joiners);
 
