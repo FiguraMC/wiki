@@ -43,7 +43,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Deploy Preview
+      - name: Cleanup Preview
         uses: rossjrw/pr-preview-action@v1.4.4
         with:
           source-dir: ./build/
+          action: remove
