@@ -25,6 +25,7 @@ jobs:
 
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
+          force: false
           folder: ./build/
           branch: gh-pages
           clean-exclude: pr-preview
