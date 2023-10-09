@@ -1,6 +1,7 @@
 These are outer layer parts used in conjunction with <code>player:isSkinLayerVisible(string)</code> to detect what parts a player has enabled via the Minecraft Skin Customizations setting.
 
 **Example:**
+
 ```lua
 log(player:isSkinLayerVisible("HAT"))
 ```

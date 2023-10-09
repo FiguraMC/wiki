@@ -17,7 +17,6 @@ An <Emoji icon="file/json"/> <code>avatar.json</code> file is just a renamed tex
 
 Figura also looks for an image named <Emoji icon="file/texture"/> <code>avatar.png</code>. This will be used as the avatar's icon which will appear next to it's name in the Wardrobe.
 
-
 <FileTreeRoot>
   <FileTreeNode label="avatars">
     <FileTreeNode label="&lt;AvatarName&gt;">

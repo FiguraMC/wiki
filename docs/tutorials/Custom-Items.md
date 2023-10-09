@@ -45,7 +45,6 @@ This is storing all the values you can get, but in most cases you only need item
   </FileTreeNode>
 </FileTreeRoot>
 
-
 ```lua
 function events.item_render(item)
     if item.id == "minecraft:bow" then
