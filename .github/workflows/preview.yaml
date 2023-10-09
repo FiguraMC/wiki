@@ -33,6 +33,7 @@ jobs:
       - name: Deploy Preview
         uses: rossjrw/pr-preview-action@v1.4.4
         with:
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
           source-dir: ./build/
 
   cleanup:
@@ -46,5 +47,6 @@ jobs:
       - name: Cleanup Preview
         uses: rossjrw/pr-preview-action@v1.4.4
         with:
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
           source-dir: ./build/
           action: remove
