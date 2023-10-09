@@ -11,9 +11,3 @@ const FileTreeNode: FC = () => {
 };
 
 export default FileTreeNode;
-
-export const isFileTreeNode = (
-  child: React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>>,
-): child is React.ReactElement<typeof FileTreeNode> => {
-  return child.type === FileTreeNode;
-};

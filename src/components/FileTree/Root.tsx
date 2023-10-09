@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren, useMemo } from "react";
 import Emoji from "../Emoji";
-import FileTreeNode, { FileTreeNodeProps, isFileTreeNode } from "./Node";
+import FileTreeNode, { FileTreeNodeProps } from "./Node";
 
 interface Node extends Omit<FileTreeNodeProps, "children"> {
   children?: Node[];
@@ -33,7 +33,34 @@ interface FlattenedNode extends Omit<Node, "children"> {
   end: boolean;
 }
 
-const flattenFileTree = (tree: Node[], depth = 0): FlattenedNode[] => {
+enum Joiner {
+  VERTICAL = "│  ",
+  RIGHT = "├─ ",
+  END = "└─ ",
+  EMPTY = "   ",
+}
+
+const transposeJoiners = (matrix: Joiner[][]): Joiner[][] => {
+  if (matrix.length === 0) return matrix;
+
+  const rows = matrix.length;
+  const cols = matrix[0]!.length;
+  const result: Joiner[][] = [];
+
+  for (let i = 0; i < cols; i++) {
+    result.push([]);
+  }
+
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      result[j]![i] = matrix[i]![j]!;
+    }
+  }
+
+  return result;
+};
+
+const flattenFileTree = (tree: Node[], depth = 0) => {
   const flattened: FlattenedNode[] = [];
 
   for (let index = 0; index < tree.length; index++) {
@@ -51,7 +78,58 @@ const flattenFileTree = (tree: Node[], depth = 0): FlattenedNode[] => {
     }
   }
 
-  return flattened;
+  const maxDepth = flattened.reduce((max, node) => Math.max(max, node.depth), 0);
+
+  let joiners = flattened.map((node): Joiner[] =>
+    Array(node.depth)
+      .fill(Joiner.VERTICAL)
+      .concat(node.end ? Joiner.END : Joiner.RIGHT, Array(maxDepth - node.depth).fill(Joiner.EMPTY)),
+  );
+
+  joiners = transposeJoiners(joiners);
+
+  joiners = joiners.map((row) => {
+    let foundEnd = false;
+
+    return row.map((joiner) => {
+      if (foundEnd) {
+        if (joiner === Joiner.EMPTY) {
+          foundEnd = false;
+        } else {
+          return Joiner.EMPTY;
+        }
+      } else if (joiner === Joiner.END) {
+        foundEnd = true;
+      }
+
+      return joiner;
+    });
+  });
+
+  if (joiners[0]?.[0] === Joiner.END) {
+    joiners.shift();
+  }
+
+  joiners = transposeJoiners(joiners);
+
+  joiners = joiners.map((row) => {
+    let lastNonEmpty = row.length - 1;
+
+    while (row[lastNonEmpty] === Joiner.EMPTY) {
+      lastNonEmpty--;
+    }
+
+    return row.slice(0, lastNonEmpty + 1);
+  });
+
+  return flattened.map((node, index) => {
+    const joiner = joiners[index]!;
+
+    return {
+      ...node,
+      start: joiner.join(""),
+    };
+  });
 };
 
 const FileTreeRoot: FC<PropsWithChildren> = ({ children }) => {
@@ -63,18 +141,10 @@ const FileTreeRoot: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <pre>
-      {flattenedTree.map((node, index, all) => {
-        const useEndJoiner =
-          (node.end && node.depth > 1) || index === all.length - 1;
-
-        const start =
-          node.depth > 0
-            ? "│  ".repeat(node.depth - 1) + (useEndJoiner ? "└─" : "├─") + " "
-            : "";
-
+      {flattenedTree.map((node, index) => {
         return (
           <div key={index} style={{ display: "flex", alignItems: "center" }}>
-            <div style={{ marginRight: "-0.15rem" }}>{start}</div>
+            <div style={{ marginRight: "-0.15rem" }}>{node.start}</div>
             <Emoji icon={node.icon ?? "file/folder"} />
             <div style={{ marginLeft: "0.25rem" }}>{node.label}</div>
           </div>
