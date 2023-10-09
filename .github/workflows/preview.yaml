@@ -10,7 +10,7 @@ concurrency: preview-${{ github.ref }}
 jobs:
   preview:
     runs-on: ubuntu-latest
-    if: github.event.action != "closed" && !github.event.pull_request.merged
+    if: github.event.action != 'closed' && !github.event.pull_request.merged
 
     steps:
       - name: Checkout
@@ -37,7 +37,7 @@ jobs:
 
   cleanup:
     runs-on: ubuntu-latest
-    if: github.event.action == "closed" || github.event.pull_request.merged
+    if: github.event.action == 'closed' || github.event.pull_request.merged
 
     steps:
       - name: Deploy Preview
