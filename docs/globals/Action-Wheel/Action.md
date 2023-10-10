@@ -1,9 +1,441 @@
-This page is a WIP!
+An action in the [`Action Wheel`](.). Actions are either interacted with by clicking or scrolling. Actions can either run an action on interaction or when toggled.
+
+## Appearance
+
+Functions to modify how your Action looks.
+
+---
+
+### `setTitle(string)` {#setTitle}
+
+Sets the title of the Action.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+// highlight-next-line
+    :setTitle('Click me!')
+```
+
+---
+
+### `setItem(ItemStack)` {#setItem}
+
+Sets an item to display on the Acton. Takes an `ItemStack`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+// highlight-next-line
+    :setItem('minecraft:stone')
+```
+
+---
+
+### `setColor(Vector3)` {#setColor}
+
+Sets the color of the Action. Takes a `Vector3` of rgb values. The rgb values are between 0 and 1.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local pink = vec(255 / 255, 192 / 255, 203 / 255)
+myPage:newAction()
+// highlight-next-line
+    :setColor(pink)
+```
+
+---
+
+### `setColor(number, number, number)` {#setColor}
+
+Sets the color of the Action. Takes the red, green, and blue values. The rgb values are between 0 and 1.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+// highlight-next-line
+    :setColor(255 / 255, 192 / 155, 203 / 255)
+```
+
+---
+
+### `setTexture(Texture, number?, number?, number?, number?, number?)` {#setTexture}
+
+Sets the texture of the Action. All parameters other than `Texture` are optional.
+
+**Parameters**:
+
+-   The `Texture` to set the action to
+-   `U` of the `UV`. Default: 0
+-   `V` of the `UV`. Default: 0
+-   `width` in pixels. Default: `Texture`'s width
+-   `height` in pixels. Default: `Texture`'s height
+-   `scale`. Default: 1
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+
+-- basic
+myPage:newAction()
+// highlight-next-line
+    :setTexture(textures['myTexture'])
+
+-- advanced
+myPage:newAction()
+// highlight-next-line
+    :setTexture(textures['myTexture'], 16, 32, nil, nil, 2)
+
+```
+
+---
+
+### `setHoverColor(Vector3)` {#setHoverColor}
+
+Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb values. The rgb values are between 0 and 1.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local pink = vec(255 / 255, 192 / 255, 203 / 255)
+myPage:newAction()
+// highlight-next-line
+    :setHoverColor(pink)
+```
+
+---
+
+### `setHoverColor(number, number, number)` {#setHoverColor}
+
+Sets the color of the Action when it's being hovered. Takes the red, green, and blue values. The rgb values are between 0 and 1.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+// highlight-next-line
+    :setHoverColor(255 / 255, 192 / 155, 203 / 255)
+```
+
+---
+
+### `setHoverTexture(Texture, number?, number?, number?, number?, number?)` {#setTexture}
+
+Sets the texture of the Action when it's hovered. All parameters other than `Texture` are optional.
+
+**Parameters**:
+
+-   The `Texture` to set the action to
+-   `U` of the `UV`. Default: 0
+-   `V` of the `UV`. Default: 0
+-   `width` in pixels. Default: `Texture`'s width
+-   `height` in pixels. Default: `Texture`'s height
+-   `scale`. Default: 1
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+
+-- basic
+myPage:newAction()
+// highlight-next-line
+    :setHoverTexture(textures['myTexture'])
+
+-- advanced
+myPage:newAction()
+// highlight-next-line
+    :setHoverTexture(textures['myTexture'], 16, 32, nil, nil, 2)
+
+```
+
+---
+
+### `getTitle()` {#getTitle}
+
+Gets the Action's title. Returns a `string`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction()
+    :setTitle('Click me!')
+
+// highlight-next-line
+print(myAction:getTitle())
+```
+
+---
+
+### `getColor()` {#getColor}
+
+Gets the Action's color. Returns a `Vector3`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setColor(255 / 255, 192 / 155, 203 / 255)
+
+// highlight-next-line
+print(myAction:getColor())
+```
+
+---
+
+### `getHoverColor()` {#getHoverColor}
+
+Gets the Action's hover color. Returns a `Vector3`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setHoverColor(255 / 255, 192 / 155, 203 / 255)
+
+// highlight-next-line
+print(myAction:getHoverColor())
+```
+
+---
+
+## Toggle Specific
+
+When the Action is assigned a function to the <code>[toggle](#setToggleTitle)</code> field, it becomes a Toggle Action. These functions apply to those Actions.
+
+---
+
+### `setToggleTitle(string)` {#setToggleTitle}
+
+Sets the title of the Action when toggled.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setTitle('Sit')
+    :setOnToggle(pings.sit)
+// highlight-next-line
+    :setToggleTitle('Stand')
+```
+
+---
+
+### `setToggleItem(ItemStack)` {#setItem}
+
+Sets an item to display on the Acton when toggled. Takes an `ItemStack`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setTitle('Sit')
+    :setITem('spruce_stairs')
+    :setOnToggle(pings.sit)
+    :setToggleTitle('Stand')
+// highlight-next-line
+    :setToggleItem('armor_stand')
+```
+
+---
+
+### `setToggleColor(Vector3)` {#setColor}
+
+Sets the color of the Action when toggled. Takes a `Vector3` of rgb values. The rgb values are between 0 and 1.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local pink = vec(255 / 255, 192 / 255, 203 / 255)
+local teal = vec(0, 128 / 255, 128 / 255)
+myPage:newAction()
+    :setColor(pink)
+// highlight-next-line
+    :setToggleColor(teal)
+```
+
+---
+
+### `setToggleColor(number, number, number)` {#setToggleColor}
+
+Sets the color of the Action when toggled. Takes the red, green, and blue values. The rgb values are between 0 and 1.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local pink = vec(255 / 255, 192 / 255, 203 / 255)
+local teal = vec(0, 128 / 255, 128 / 255)
+myPage:newAction()
+    :setColor(255 / 255, 192 / 255, 203 / 255)
+// highlight-next-line
+    :setToggleColor(0, 128 / 255, 128 / 255)
+```
+
+---
+
+### `setToggleTexture(Texture, number?, number?, number?, number?, number?)` {#setTexture}
+
+Sets the texture of the Action when toggled. All parameters other than `Texture` are optional.
+
+**Parameters**:
+
+-   The `Texture` to set the action to
+-   `U` of the `UV`. Default: 0
+-   `V` of the `UV`. Default: 0
+-   `width` in pixels. Default: `Texture`'s width
+-   `height` in pixels. Default: `Texture`'s height
+-   `scale`. Default: 1
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+
+-- basic
+myPage:newAction()
+    :setTexture(textures['myTexture'])
+// highlight-next-line
+    :setToggleTexture(textures['myToggleTexture'])
+
+-- advanced
+myPage:newAction()
+    :setTexture(textures['myTexture'], 0, 32, nil, nil, 2)
+// highlight-next-line
+    :setToggleTexture(textures['myTexture'], 16, 32, nil, nil, 2)
+
+```
+
+---
+
+### `getToggleTitle()` {#getToggleTitle}
+
+Gets the Action's title when toggled. Returns a `string`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+// highlight-next-line
+    :setToggleTitle('Stand')
+
+// highlight-next-line
+print(myAction:getToggleTitle())
+```
+
+---
+
+### `getToggleColor()` {#getToggleColor}
+
+Gets the Action's color when toggled. Returns a `Vector3`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setToggleColor(255 / 255, 192 / 155, 203 / 255)
+
+// highlight-next-line
+print(myAction:getToggleColor())
+```
+
+---
+
+### `isToggled()` {#isToggled}
+
+Checks if the action is toggled or not. Returns a `boolean`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction()
+    :setOnToggle(function(b) print('Toggled: ' .. b) end)
+
+local t = 0
+
+function events.tick()
+    if t % 20 == 0 then
+// highlight-next-line
+        local wasToggled = myAction:isToggled()
+        myAction:setToggled(not wasToggled)
+    end
+    t = t + 1
+end
+```
+
+---
+
+### `setToggled(boolean)` {#setToggled}
+
+Sets the toggle state of the Action.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction()
+    :setOnToggle(function(b) print('Toggled: ' .. b) end)
+
+local t = 0
+
+function events.tick()
+    if t % 20 == 0 then
+        local wasToggled = myAction:isToggled()
+// highlight-next-line
+        myAction:setToggled(not wasToggled)
+    end
+    t = t + 1
+end
+```
+
+---
 
 ## Action Events
 
 Technically they are "callbacks" and not "events" as you can only assign a single function, but eh.
 It's common practice to pass pings to these functions since interacting with the action_wheel is not sync'd between clients. Checkout the [`setOnToggle`](#setOnToggle) function to see an example.
+
+---
 
 ### `setOnLeftClick()` {#setOnLeftClick}
 
@@ -13,6 +445,7 @@ The first argument is this action itself
 
 **Example**:
 
+<!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
@@ -23,7 +456,7 @@ myPage:newAction()
 // highlight-end
 ```
 
-<br/>
+---
 
 ### `setOnRightClick(fn)` {#setOnRightClick}
 
@@ -33,6 +466,7 @@ The first argument is this action itself
 
 **Example**:
 
+<!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
@@ -43,7 +477,7 @@ myPage:newAction()
 // highlight-end
 ```
 
-<br/>
+---
 
 ### `setOnToggle(fn)` {#setOnToggle}
 
@@ -67,7 +501,7 @@ myPage:newAction()
     :setOnToggle(pings.setVisible)
 ```
 
-<br/>
+---
 
 ### `setOnUnToggle(fn)` {#setOnUnToggle}
 
@@ -86,7 +520,7 @@ myPage:newAction()
 // highlight-end
 ```
 
-<br/>
+---
 
 ### `setOnScroll(fn)` {#setOnScroll}
 
