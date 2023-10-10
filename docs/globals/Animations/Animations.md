@@ -1,6 +1,8 @@
 The global instance of the AnimationsAPI, accessed via the `animations` global.
 
-## getPlaying
+---
+
+### `getPlaying()` {#getPlaying}
 
 Return a table with all playing animations
 
@@ -8,7 +10,9 @@ Return a table with all playing animations
 animations:getPlaying()
 ```
 
-## stopAll
+---
+
+### `stopAll` {#stopAll}
 
 Stops all playing (and paused) animations
 
@@ -16,7 +20,9 @@ Stops all playing (and paused) animations
 animations:stopAll()
 ```
 
-## getAnimations
+---
+
+### `getAnimations()` {#getAnimations}
 
 Returns a table with all animations
 
