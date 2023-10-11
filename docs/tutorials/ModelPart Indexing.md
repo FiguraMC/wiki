@@ -45,15 +45,13 @@ end
 bbmodel files in subfolders are a special case. For them, the folder itself acts as another ModelPart.<br/>
 
 <FileTreeRoot>
-  <FileTreeNode label="<avatar>" icon="file/folder">
-    <FileTreeNode label="subfolderA" icon="file/folder">
+  <FileTreeNode label="subfolderA" icon="file/folder">
     <FileTreeNode label="Pet.bbmodel" icon="file/bbmodel"/>
     <FileTreeNode label="bow.bbmodel" icon="file/bbmodel"/>
   </FileTreeNode>
   <FileTreeNode label="subfolderB" icon="file/folder">
     <FileTreeNode label="model.bbmodel" icon="file/bbmodel"/>
     <FileTreeNode label="bow.bbmodel" icon="file/bbmodel"/>
-  </FileTreeNode>
   </FileTreeNode>
 </FileTreeRoot>
 
