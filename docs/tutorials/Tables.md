@@ -63,7 +63,7 @@ local a = {
         ["a"] = 1,
         ["b"] = 2,
     },
-    --string shorthand rules still apply. This is equivalent to <code>["life"]=42,</code>
+    -- string shorthand rules still apply. This is equivalent to <code>["life"] = 42</code>
     life = 42,
 }
 ```
