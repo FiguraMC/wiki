@@ -46,7 +46,7 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
+    -- the <code>onLeftClick</code> function just sets the Action's <code>leftClick</code> field
     :onLeftClick(function()
         print("Hello World!")
     end)
@@ -93,7 +93,9 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    :onLeftClick(end)
+    :onLeftClick(function()
+        pings.actionClicked(math.random())
+    end)
 ```
 
 What we are doing is wrapping the call to the ping function inside another function.
