@@ -1,52 +1,29 @@
-name: Deploy Preview for Pull Request
+name: Deploy Pull Request Preview
 
 on:
-  pull_request:
-    branches: ["main"]
-    types: [opened, reopened, synchronize, closed]
+  workflow_run:
+    workflows: ["Build Pull Request"]
+    types:
+      - completed
 
-concurrency: preview-${{ github.ref }}
+concurrency: preview-${{ github.event.workflow_run.pull_requests[0].number }}
 
 jobs:
   preview:
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed' && !github.event.pull_request.merged
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Download Artifact
+        uses: dawidd6/action-download-artifact@v2
         with:
-          node-version: 18.x
-          cache: "npm"
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-        env:
-          BASE_URL_OVERRIDE: /pr-preview/pr-${{ github.event.number }}/
+          run_id: ${{ github.event.workflow_run.id }}
+          name: build
+          path: ./build/
 
       - name: Deploy Preview
         uses: rossjrw/pr-preview-action@v1.4.4
         with:
           token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
           source-dir: ./build/
-
-  cleanup:
-    runs-on: ubuntu-latest
-    if: github.event.action == 'closed' || github.event.pull_request.merged
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Cleanup Preview
-        uses: rossjrw/pr-preview-action@v1.4.4
-        with:
-          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-          source-dir: ./build/
-          action: remove
