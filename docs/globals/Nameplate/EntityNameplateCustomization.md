@@ -45,7 +45,7 @@ nameplate.Entity:isVisible()
 Sets the position of the nameplate in blocks, this is an offset of the pivot location so 0,0,0 is the pivot's location
 
 ```lua
-nameplate.Entity:setPos(0,1,0)
+nameplate.Entity:setPos(0, 1, 0)
 ```
 
 ---
@@ -65,7 +65,7 @@ nameplate.Entity:getPos()
 Sets the scale of the nameplate
 
 ```lua
-nameplate.Entity:setScale(2,2,2)
+nameplate.Entity:setScale(2, 2, 2)
 ```
 
 ---
@@ -85,7 +85,7 @@ nameplate.Entity:getScale()
 Sets the pivot of the nameplate
 
 ```lua
-nameplate.Entity:setPivot(0,3,0)
+nameplate.Entity:setPivot(0, 3, 0)
 ```
 
 ---
@@ -105,7 +105,7 @@ nameplate.Entity:getPivot()
 Sets the brightness of the nameplate text, the first arg is blockLight and the second arg is skyLight
 
 ```lua
-nameplate.Entity:setLight(15,15)
+nameplate.Entity:setLight(15, 15)
 ```
 
 ---
@@ -145,7 +145,7 @@ nameplate.Entity:hasOutline()
 Sets the color used for the outline in rgb format and 0-1 ex: (100/255,100/255,100/255)
 
 ```lua
-nameplate.Entity:setOutlineColor(100/255,100/255,100/255)
+nameplate.Entity:setOutlineColor(100 / 255, 100 / 255, 100 / 255)
 ```
 
 ---
@@ -155,7 +155,7 @@ nameplate.Entity:setOutlineColor(100/255,100/255,100/255)
 Sets the color of the nameplate background, in rgba format and 0-1 ex: (100/255,100/255,100/255,100/255)
 
 ```lua
-nameplate.Entity:setBackgroundColor(100/255,100/255,100/255)
+nameplate.Entity:setBackgroundColor(100 / 255, 100 / 255, 100 / 255)
 ```
 
 ---

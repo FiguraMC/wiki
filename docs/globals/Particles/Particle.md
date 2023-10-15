@@ -5,6 +5,7 @@ Obtained by indexing the ParticleAPI
 Exists as an object-oriented alternative to particles:addParticle()
 
 For the examples on this page assume:
+
 ```lua
 myParticle = particles["explosion"]
 ```
@@ -54,7 +55,7 @@ Sets the particle color, most particles don't support it. The alpha value can be
 **Example**:
 
 ```lua
-myParticle:setColor(0,0,1)
+myParticle:setColor(0, 0, 1)
 ```
 
 ---
@@ -78,7 +79,7 @@ Sets the scale of the particle
 **Example**:
 
 ```lua
-myParticle:setScale(2,2,2)
+myParticle:setScale(2, 2, 2)
 ```
 
 ---
@@ -100,7 +101,7 @@ Sets the velocity of the particle
 **Example**:
 
 ```lua
-myParticle:setVelocity(2,2,2)
+myParticle:setVelocity(2, 2, 2)
 ```
 
 ---

@@ -17,7 +17,7 @@ If you don't give values for volume and pitch, the default values are 1
 **Example**:
 
 ```lua
-sounds:playSound("entity.bat.ambient", player:getPos(),1,1,false)
+sounds:playSound("entity.bat.ambient", player:getPos(), 1, 1, false)
 ```
 
 ---

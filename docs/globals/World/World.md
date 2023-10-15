@@ -265,7 +265,7 @@ Note: This doesn't create an item in the world, if you want to make a fake item 
 **Example**:
 
 ```lua
-world:newItem("grass_block",64,5)
+world:newItem("grass_block", 64, 5)
 ```
 
 ---
@@ -281,7 +281,7 @@ Note: This doesn't create a block in the world, if you want to make a fake block
 **Example**:
 
 ```lua
-world:newBlock("grass_block",player:getPos())
+world:newBlock("grass_block", player:getPos())
 ```
 
 ---

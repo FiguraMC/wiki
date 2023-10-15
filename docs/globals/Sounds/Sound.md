@@ -5,6 +5,7 @@ Obtained by indexing the SoundAPI
 Exists as an object-oriented alternative to sounds:playSound()
 
 For the purposes of the examples assume:
+
 ```lua
 local mySound = sounds["entity.bat.ambient"]
 ```

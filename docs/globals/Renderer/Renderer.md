@@ -19,7 +19,7 @@ For absolute rotation values, check out the non-offset pivot function
 **Example**:
 
 ```lua
-renderer:setOffsetCameraPivot(0,2,0)
+renderer:setOffsetCameraPivot(0, 2, 0)
 ```
 
 ---
@@ -51,7 +51,7 @@ For relative rotation values, check out the "offset" pivot function
 **Example**:
 
 ```lua
-rendereR:setCameraPivot(0,2,0)
+rendereR:setCameraPivot(0, 2, 0)
 ```
 
 ---
@@ -77,7 +77,7 @@ Nil values for position are assumed to be 0
 **Example**:
 
 ```lua
-renderer:setCameraPos(0,2,0)
+renderer:setCameraPos(0, 2, 0)
 ```
 
 ---
@@ -107,7 +107,7 @@ For absolute rotation values, check out the non-offset rot function
 **Example**:
 
 ```lua
-renderer:setOffsetCameraRot(0,90,0)
+renderer:setOffsetCameraRot(0, 90, 0)
 ```
 
 ---
@@ -137,7 +137,7 @@ For relative rotation values, check out the "offset" rot function
 **Example**:
 
 ```lua
-renderer:setCameraRot(0,90,0)
+renderer:setCameraRot(0, 90, 0)
 ```
 
 ---
@@ -225,7 +225,7 @@ Sets the glowing effect outline color
 **Example**:
 
 ```lua
-renderer:setOutlineColor(0,0,1)
+renderer:setOutlineColor(0, 0, 1)
 ```
 
 ---
@@ -253,7 +253,7 @@ Might not be compatible with shaders
 **Example**:
 
 ```lua
-renderer:setBlockOutlineColor(0,0,1,0.4)
+renderer:setBlockOutlineColor(0, 0, 1, 0.4)
 ```
 
 ---
@@ -340,7 +340,7 @@ Sets the offset of your crosshair
 **Example**:
 
 ```lua
-renderer:setCrosshairOffset(20,20)
+renderer:setCrosshairOffset(20, 20)
 ```
 
 ---
@@ -540,7 +540,7 @@ Might not be compatible with shaders
 **Example**:
 
 ```lua
-renderer:setBlockOutlineColor(0,0,1,0.4)
+renderer:setBlockOutlineColor(0, 0, 1, 0.4)
 ```
 
 ---
@@ -658,7 +658,7 @@ This function can be caught by anti-cheats and could get you banned from servers
 **Example**:
 
 ```lua
-renderer:setEyeOffset(0,2,0)
+renderer:setEyeOffset(0, 2, 0)
 ```
 
 ---

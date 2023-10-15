@@ -97,7 +97,7 @@ Only runs for creative mode
 **Example**:
 
 ```lua
-host:setSlot(0,"apple")
+host:setSlot(0, "apple")
 -- setSlot also accepts an ItemStack retrieved from an actual item or world:newItem()
 ```
 
@@ -251,7 +251,6 @@ host:sendChatCommand("kill @a")
 
 ---
 
-
 ### `sendChatMessage(string)` {#sendChatMessage}
 
 Sends the given message in the chat
@@ -281,7 +280,7 @@ The third arg is the background color of the message
 **Example**:
 
 ```lua
-host:setChatMessage(1,"Hi?",vec(1,0,0))
+host:setChatMessage(1, "Hi?", vec(1, 0, 0))
 ```
 
 ---
@@ -347,7 +346,7 @@ Sets the color of the text that is currently being typed into the chat window
 **Example**:
 
 ```lua
-host:setChatColor(0,0,1)
+host:setChatColor(0, 0, 1)
 ```
 
 ---
@@ -444,7 +443,7 @@ The inputs for the Vec3 are ordered like-so: (fadeInTime, stayTime, fadeOutTime)
 **Example**:
 
 ```lua
-host:setTitleTimes(5,5,5)
+host:setTitleTimes(5, 5, 5)
 ```
 
 ---

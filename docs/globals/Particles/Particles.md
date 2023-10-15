@@ -17,7 +17,7 @@ Particle behavior and spawning methods vary per particle, refer to the /particle
 **Example**:
 
 ```lua
-particles:newParticle("explosion",player:getPos())
+particles:newParticle("explosion", player:getPos())
 ```
 
 ---
