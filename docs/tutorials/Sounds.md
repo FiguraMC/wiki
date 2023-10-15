@@ -25,7 +25,7 @@ For this example I'm supplying the player position as the location or else it wi
 Example with the other arguments filled:
 
 ```lua
-sounds:playSound("entity.bat.ambient", player:getPos(), 5, 3, false)
+sounds:playSound("entity.bat.ambient", player:getPos(), 1, 1, false)
 ```
 
 ## Custom Sounds
