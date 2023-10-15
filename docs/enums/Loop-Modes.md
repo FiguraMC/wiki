@@ -8,6 +8,8 @@ These are the loop modes a blockbench animation can be set to. They can be initi
 animations.myModel.myAnimation:setLoop("ONCE")
 ```
 
+---
+
 | Mode   | Description                                         |
 | ------ | --------------------------------------------------- |
 | `LOOP` | Plays again once it reaches the end of the timeline |
