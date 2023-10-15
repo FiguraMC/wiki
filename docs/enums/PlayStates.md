@@ -1,7 +1,19 @@
 The play state of a Blockbench animation, detected with <code>getPlayState()</code>.
 
-<pre>STOPPED: The animation isn't playing</pre>
+**Example**:
 
-<pre>PAUSED: The animation is paused on at a specific time</pre>
+```lua
+function events.tick()
+//highlight-next-line
+    local isDancing = animations.myModel.dance:getPlayState() == "PLAYING"
+    models.myModel.discoBall:setVisible(isDancing)
+end
+```
 
-<pre>PLAYING: The animation is playing</pre>
+## All Play States
+
+| PlayState | Description                                   |
+| --------- | --------------------------------------------- |
+| `STOPPED` | The animation isn't playing                   |
+| `PAUSED`  | The animation is paused on at a specific time |
+| `PLAYING` | The animation is playing                      |
