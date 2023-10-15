@@ -22,6 +22,24 @@ myPage:newAction()
 
 ---
 
+### `getTitle()` {#getTitle}
+
+Gets the Action's title. Returns a `string`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction()
+    :setTitle('Click me!')
+
+// highlight-next-line
+print(myAction:getTitle())
+```
+
+---
+
 ### `setItem(ItemStack)` {#setItem}
 
 Sets an item to display on the Acton. Takes an `ItemStack`.
@@ -67,6 +85,24 @@ local myPage = action_wheel:new_page()
 myPage:newAction()
 // highlight-next-line
     :setColor(255 / 255, 192 / 155, 203 / 255)
+```
+
+---
+
+### `getColor()` {#getColor}
+
+Gets the Action's color. Returns a `Vector3`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setColor(255 / 255, 192 / 155, 203 / 255)
+
+// highlight-next-line
+print(myAction:getColor())
 ```
 
 ---
@@ -137,6 +173,24 @@ myPage:newAction()
 
 ---
 
+### `getHoverColor()` {#getHoverColor}
+
+Gets the Action's hover color. Returns a `Vector3`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setHoverColor(255 / 255, 192 / 155, 203 / 255)
+
+// highlight-next-line
+print(myAction:getHoverColor())
+```
+
+---
+
 ### `setHoverTexture(Texture, number?, number?, number?, number?, number?)` {#setTexture}
 
 Sets the texture of the Action when it's hovered. All parameters other than `Texture` are optional.
@@ -170,60 +224,6 @@ myPage:newAction()
 
 ---
 
-### `getTitle()` {#getTitle}
-
-Gets the Action's title. Returns a `string`.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setTitle('Click me!')
-
-// highlight-next-line
-print(myAction:getTitle())
-```
-
----
-
-### `getColor()` {#getColor}
-
-Gets the Action's color. Returns a `Vector3`.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-myPage:newAction()
-    :setColor(255 / 255, 192 / 155, 203 / 255)
-
-// highlight-next-line
-print(myAction:getColor())
-```
-
----
-
-### `getHoverColor()` {#getHoverColor}
-
-Gets the Action's hover color. Returns a `Vector3`.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-myPage:newAction()
-    :setHoverColor(255 / 255, 192 / 155, 203 / 255)
-
-// highlight-next-line
-print(myAction:getHoverColor())
-```
-
----
-
 ## Toggle Specific
 
 When the Action is assigned a function to the <code>[toggle](#setToggleTitle)</code> field, it becomes a Toggle Action. These functions apply to those Actions.
@@ -248,6 +248,25 @@ myPage:newAction()
 
 ---
 
+### `getToggleTitle()` {#getToggleTitle}
+
+Gets the Action's title when toggled. Returns a `string`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+// highlight-next-line
+    :setToggleTitle('Stand')
+
+// highlight-next-line
+print(myAction:getToggleTitle())
+```
+
+---
+
 ### `setToggleItem(ItemStack)` {#setItem}
 
 Sets an item to display on the Acton when toggled. Takes an `ItemStack`.
@@ -259,7 +278,7 @@ Sets an item to display on the Acton when toggled. Takes an `ItemStack`.
 local myPage = action_wheel:new_page()
 myPage:newAction()
     :setTitle('Sit')
-    :setITem('spruce_stairs')
+    :setItem('spruce_stairs')
     :setOnToggle(pings.sit)
     :setToggleTitle('Stand')
 // highlight-next-line
@@ -306,6 +325,24 @@ myPage:newAction()
 
 ---
 
+### `getToggleColor()` {#getToggleColor}
+
+Gets the Action's color when toggled. Returns a `Vector3`.
+
+**Example**:
+
+<!-- prettier-ignore -->
+```lua
+local myPage = action_wheel:new_page()
+myPage:newAction()
+    :setToggleColor(255 / 255, 192 / 155, 203 / 255)
+
+// highlight-next-line
+print(myAction:getToggleColor())
+```
+
+---
+
 ### `setToggleTexture(Texture, number?, number?, number?, number?, number?)` {#setTexture}
 
 Sets the texture of the Action when toggled. All parameters other than `Texture` are optional.
@@ -341,39 +378,28 @@ myPage:newAction()
 
 ---
 
-### `getToggleTitle()` {#getToggleTitle}
+### `setToggled(boolean)` {#setToggled}
 
-Gets the Action's title when toggled. Returns a `string`.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-myPage:newAction()
-// highlight-next-line
-    :setToggleTitle('Stand')
-
-// highlight-next-line
-print(myAction:getToggleTitle())
-```
-
----
-
-### `getToggleColor()` {#getToggleColor}
-
-Gets the Action's color when toggled. Returns a `Vector3`.
+Sets the toggle state of the Action.
 
 **Example**:
 
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
-    :setToggleColor(255 / 255, 192 / 155, 203 / 255)
+local myAction = myPage:newAction()
+    :setOnToggle(function(b) print('Toggled: ' .. b) end)
 
+local t = 0
+
+function events.tick()
+    if t % 20 == 0 then
+        local wasToggled = myAction:isToggled()
 // highlight-next-line
-print(myAction:getToggleColor())
+        myAction:setToggled(not wasToggled)
+    end
+    t = t + 1
+end
 ```
 
 ---
@@ -396,32 +422,6 @@ function events.tick()
     if t % 20 == 0 then
 // highlight-next-line
         local wasToggled = myAction:isToggled()
-        myAction:setToggled(not wasToggled)
-    end
-    t = t + 1
-end
-```
-
----
-
-### `setToggled(boolean)` {#setToggled}
-
-Sets the toggle state of the Action.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setOnToggle(function(b) print('Toggled: ' .. b) end)
-
-local t = 0
-
-function events.tick()
-    if t % 20 == 0 then
-        local wasToggled = myAction:isToggled()
-// highlight-next-line
         myAction:setToggled(not wasToggled)
     end
     t = t + 1
