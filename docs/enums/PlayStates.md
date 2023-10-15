@@ -10,6 +10,8 @@ function events.tick()
 end
 ```
 
+---
+
 ## All Play States
 
 | PlayState | Description                                   |
