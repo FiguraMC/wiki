@@ -1,4 +1,4 @@
-These are outer layer parts used in conjunction with <code>player:isSkinLayerVisible(string)</code> to detect what parts a player has enabled via the Minecraft Skin Customizations setting.
+These are outer layer parts used in conjunction with <code>player:isSkinLayerVisible(String)</code> to detect what parts a player has enabled via the Minecraft Skin Customizations setting.
 
 **Example:**
 
@@ -6,18 +6,16 @@ These are outer layer parts used in conjunction with <code>player:isSkinLayerVis
 log(player:isSkinLayerVisible("HAT"))
 ```
 
-## Part Names:
+---
 
-<pre>CAPE</pre>
+## All Part Names:
 
-<pre>JACKET</pre>
-
-<pre>LEFT_SLEEVE</pre>
-
-<pre>RIGHT_SLEEVE</pre>
-
-<pre>LEFT_PANTS</pre>
-
-<pre>RIGHT_PANTS</pre>
-
-<pre>HAT</pre>
+| Part           | Description                               |
+| -------------- | ----------------------------------------- |
+| `CAPE`         | The rectangle thing hanging off your back |
+| `JACKET`       | Secondary layer for the Body              |
+| `LEFT_SLEEVE`  | Secondary layer for the Left Arm          |
+| `RIGHT_SLEEVE` | Secondary layer for the Right Arm         |
+| `LEFT_PANTS`   | Secondary layer for the Left Leg          |
+| `RIGHT_PANTS`  | Secondary layer for the Right Leg         |
+| `HAT`          | Secondary layer for the Head              |
