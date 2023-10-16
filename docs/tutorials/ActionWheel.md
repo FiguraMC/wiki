@@ -3,6 +3,8 @@ The Action Wheel is a gui element provided by Figura that allows for adding high
 The Action Wheel operates on Pages. Only a single Page can be active at a time.<br/>
 Pages contain Actions. A Page can have an unlimited amount of Actions, but the Action Wheel can only render 8 at a time. While a Page with more than 8 Actions is active, you can use the scroll wheel to move between the groups of 8 Actions within the Page.
 
+The docs page for the [Action Wheel](../globals/action-wheel) has more examples for specific action wheel functions
+
 ## Example Action Wheel
 
 First step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.

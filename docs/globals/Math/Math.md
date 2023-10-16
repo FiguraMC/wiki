@@ -122,8 +122,20 @@ end
 
 The constant of the player scaling related to the world
 
+**Example**
+
+```lua
+math.playerScale
+```
+
 ---
 
 ### `worldScale` {#worldScale}
 
 The constant of the world scaling related with the player
+
+**Example**
+
+```lua
+math.worldScale
+```

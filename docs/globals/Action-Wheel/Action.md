@@ -58,24 +58,7 @@ myPage:newAction()
 
 ### `setColor(Vector3)` {#setColor}
 
-Sets the color of the Action. Takes a `Vector3` of rgb values. The rgb values are between 0 and 1.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-local pink = vec(255 / 255, 192 / 255, 203 / 255)
-myPage:newAction()
-// highlight-next-line
-    :setColor(pink)
-```
-
----
-
-### `setColor(number, number, number)` {#setColor}
-
-Sets the color of the Action. Takes the red, green, and blue values. The rgb values are between 0 and 1.
+Sets the color of the Action. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
 
 **Example**:
 
@@ -142,24 +125,7 @@ myPage:newAction()
 
 ### `setHoverColor(Vector3)` {#setHoverColor}
 
-Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb values. The rgb values are between 0 and 1.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-local pink = vec(255 / 255, 192 / 255, 203 / 255)
-myPage:newAction()
-// highlight-next-line
-    :setHoverColor(pink)
-```
-
----
-
-### `setHoverColor(number, number, number)` {#setHoverColor}
-
-Sets the color of the Action when it's being hovered. Takes the red, green, and blue values. The rgb values are between 0 and 1.
+Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
 
 **Example**:
 
@@ -170,8 +136,6 @@ myPage:newAction()
 // highlight-next-line
     :setHoverColor(255 / 255, 192 / 155, 203 / 255)
 ```
-
----
 
 ### `getHoverColor()` {#getHoverColor}
 
@@ -267,7 +231,7 @@ print(myAction:getToggleTitle())
 
 ---
 
-### `setToggleItem(ItemStack)` {#setItem}
+### `setToggleItem(ItemStack)` {#setToggleItem}
 
 Sets an item to display on the Acton when toggled. Takes an `ItemStack`.
 
@@ -287,36 +251,15 @@ myPage:newAction()
 
 ---
 
-### `setToggleColor(Vector3)` {#setColor}
+### `setToggleColor(Vector3)` {#setToggleColor}
 
-Sets the color of the Action when toggled. Takes a `Vector3` of rgb values. The rgb values are between 0 and 1.
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-local myPage = action_wheel:new_page()
-local pink = vec(255 / 255, 192 / 255, 203 / 255)
-local teal = vec(0, 128 / 255, 128 / 255)
-myPage:newAction()
-    :setColor(pink)
-// highlight-next-line
-    :setToggleColor(teal)
-```
-
----
-
-### `setToggleColor(number, number, number)` {#setToggleColor}
-
-Sets the color of the Action when toggled. Takes the red, green, and blue values. The rgb values are between 0 and 1.
+Sets the color of the Action when toggled. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
 
 **Example**:
 
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-local pink = vec(255 / 255, 192 / 255, 203 / 255)
-local teal = vec(0, 128 / 255, 128 / 255)
 myPage:newAction()
     :setColor(255 / 255, 192 / 255, 203 / 255)
 // highlight-next-line
@@ -343,7 +286,7 @@ print(myAction:getToggleColor())
 
 ---
 
-### `setToggleTexture(Texture, number?, number?, number?, number?, number?)` {#setTexture}
+### `setToggleTexture(Texture, number?, number?, number?, number?, number?)` {#setToggleTexture}
 
 Sets the texture of the Action when toggled. All parameters other than `Texture` are optional.
 
