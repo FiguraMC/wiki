@@ -138,7 +138,7 @@ This ParentType works even if you don't own a vanilla Cape.
 
 ---
 
-## Special Type
+## Special Types
 
 Special ParentTypes are ParentTypes that provide unique rendering functionality that is either difficult or impossible to recreate with script alone.
 
