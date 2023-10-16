@@ -4,9 +4,17 @@ ParentTypes are applied to ModelParts to apply specific transformations, or chan
 
 ## Applying ParentTypes via BlockBench
 
-To apply a ParentType through BlockBench, the <Emoji icon="blockbench/group"/> group name must start with the ParentType. Only <Emoji icon="blockbench/group"/> groups can have ParentTypes applied via BlockBench.<br/>
+To apply a ParentType through BlockBench, the <Emoji icon="blockbench/group"/> group name must start with the ParentType. Only <Emoji icon="blockbench/group"/> groups can have ParentTypes applied via BlockBench.
 
-For example, the ParentType <code>Head</code>:
+:::tip
+
+### Keywords
+
+When setting the ParentType via group names, ParentTypes are commonly referred to as Keywords or BlockBench Keywords.
+
+:::
+
+**Examples**:
 
 | Blockbench Name                               | `Head` ParentType | Reason                                                                            |
 | --------------------------------------------- | :---------------: | --------------------------------------------------------------------------------- |
@@ -21,13 +29,13 @@ For example, the ParentType <code>Head</code>:
 ## Applying ParentTypes via Script
 
 To apply a ParentType through script, [index the ModelPart](../tutorials/ModelPart%20Indexing) you want to set the ParentType of, then call the <code>setParentType</code> method on it, passing in a ParentType as a string as the parameter.<br/>
-<code>models.Pet:setParentType("World")</code><br/>
 After an avatar is loaded, there is no difference between <Emoji icon="blockbench/group"/> groups, <Emoji icon="blockbench/cube"/> cubes, or <Emoji icon="file/bbmodel"/> bbmodels. Everything is a ModelPart, meaning everything can have a ParentType.
 
 **Example**:
 
 ```lua
 models.myModel.myHat:setParentType("Head")
+models.myOtherModel.Pet:setParentType("World")
 ```
 
 ---
