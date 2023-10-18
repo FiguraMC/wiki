@@ -2,7 +2,7 @@ Here are some common issues new users encounter when working with Figura.
 
 ## Why is my vanilla model still showing?
 
-By default, Figura will render both your vanilla player model and your custom model. This can be disabled with the function:
+By default, Figura will render both your vanilla player model and your custom model(s). This can be disabled with the function:
 
 ```lua
 vanilla_model.PLAYER:setVisible(false)
@@ -29,18 +29,18 @@ vanilla_model.HELD_ITEMS:setVisible(false)
 
 There are multiple reasons this could occur.
 
-1. Make sure you are all using the latest version of Figura. You can find the latest version on [Modrinth](https://modrinth.com/mod/figura) or [Figura](https://github.com/FiguraMC/Figura/releases).
-2. Make sure you have uploaded your avatar. This is done by selecting the avatar you want to use and clicking the "upload" button (white arrow with an underline).
+1. Make sure you are all using the latest version of Figura. You can find the latest version on [Modrinth](https://modrinth.com/mod/figura) or [GitHub](https://github.com/FiguraMC/Figura/releases).
+2. Make sure you have uploaded your avatar to the cloud. This is done by selecting the avatar you want to use and clicking the "upload" button below the preview (white arrow with an underline).
 3. Make sure you are all connected to the same cloud. You can click the reset button in the settings to set it to the default. You should re-upload your avatar after resetting this option.
-4. Importantly, **Figura does not work on cracked servers or accounts**. This is due to the way it assigns avatars to players by their UUID. Cracked accounts and servers have obfuscated UUIDs, which means that Figura cannot match players to avatars properly. Aternos also obfuscates UUIDs which can cause similar issues
+4. Importantly, **Figura does not work on cracked servers or accounts**. This is due to the way it assigns avatars to players by their UUID. Cracked accounts and servers have obfuscated UUIDs, which means that Figura cannot match players to avatars properly. Aternos also affects UUIDs which can cause similar issues.
 
 ## How do I hide armor from Trinkets or another mod?
 
-This depends on how the mod in question handles custom armor. In the case of Trinkets, it handles armor in a way that is unsupported by Figura. There is nothing we can do about this.
+This depends on how the mod in question handles custom armor. In the case of Trinkets, it handles armor in a way that is unsupported by Figura. There is nothing we can do about this; if this is a problem for you please bring it up with the developers of the mod in question.
 
 ## Where do I put my avatars?
 
-Figura avatars are located in `%AppData%/.minecraft/figura/avatars`. If you are using a third party launcher this may be in a different folder; in any case, it is in the same place you put your mods and resource packs. You should create one folder for each avatar.
+Figura avatars are located in `%AppData%/.minecraft/figura/avatars`. If you are using a third party launcher this may be in a different folder; in any case, it is in the same place you put your mods and resource packs. You should create one folder for each avatar within this folder.
 
 ## Why isn't my avatar updating when I edit it?
 
