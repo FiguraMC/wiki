@@ -127,6 +127,10 @@ local action = mainPage:newAction()
     :onLeftClick(pings.actionClicked)
 ```
 
+### Further Reading
+
+Go [here](../globals/Action-Wheel/Action.md) for more information on Actions, like making your action [toggleable](../globals/Action-Wheel/Action.md#setOnToggle).
+
 ## Advanced Action Wheel
 
 ### Multi Page Setup

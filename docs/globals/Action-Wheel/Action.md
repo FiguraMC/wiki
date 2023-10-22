@@ -1,5 +1,12 @@
 This page is a WIP!
 
+For this entire page assume:
+
+```lua
+local myPage = action_wheel:newPage()
+action_wheel:setPage(myPage)
+```
+
 ## Action Events
 
 Technically they are "callbacks" and not "events" as you can only assign a single function, but eh.
@@ -14,7 +21,6 @@ The first argument is this action itself
 **Example**:
 
 ```lua
-local myPage = action_wheel:new_page()
 myPage:newAction()
 // highlight-start
     :setOnLeftClick(function()
@@ -34,7 +40,6 @@ The first argument is this action itself
 **Example**:
 
 ```lua
-local myPage = action_wheel:new_page()
 myPage:newAction()
 // highlight-start
     :setOnRightClick(function()
@@ -57,7 +62,6 @@ function pings.setVisible(state)
     models:setVisible(state)
 end
 
-local myPage = action_wheel:newPage()
 myPage:newAction()
     :title("disabled")
     :toggleTitle("enabled")
@@ -69,18 +73,26 @@ myPage:newAction()
 
 <br/>
 
-### `setOnUnToggle(fn)` {#setOnUnToggle}
+### `setOnUntoggle(fn)` {#setOnUntoggle}
 
-Unlike Toggle which gets executed when the Action is toggled on or off, UnToggle only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second.
+Unlike Toggle which gets executed when the Action is toggled on or off, `UnToggle` only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second.
+
+:::info
+
+`setOnUntoggle` is redundant because [`setOnToggle`](#setOnToggle) will also work when the action is untoggled if there is no `OnUntoggle` function set.
+
+:::
 
 **Example**:
 
 <!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
 myPage:newAction()
+    :setOnToggle(function(bool)
+        print('This is always true: ', .. bool)
+    end)
 // highlight-start
-    :setOnUnToggle(function(bool)
+    :setOnUntoggle(function(bool)
         print('This is always false: ' .. bool)
     end)
 // highlight-end
@@ -96,7 +108,6 @@ This will execute when the mouse wheel scrolls while hovering over the Action. T
 
 <!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
 myPage:newAction()
 // highlight-start
     :setOnScroll(function(dir)
