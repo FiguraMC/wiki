@@ -17,7 +17,7 @@ Check the docs enum command for all key names
 **Example**:
 
 ```lua
-local myKey = keybinds:newKeybind("Name","key.keyboard.h",false)
+local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
 ```
 
 ---
@@ -31,7 +31,7 @@ Check the docs enum command for all key names and vanilla actions
 **Example**:
 
 ```lua
-local myKey = keybinds:newKeybind("Name",keybinds:getVanillaKey("key.attack"),false)
+local myKey = keybinds:newKeybind("Name", keybinds:getVanillaKey("key.attack"), false)
 ```
 
 ---
@@ -59,4 +59,3 @@ keybinds:getKeybinds()
 ```
 
 ---
-

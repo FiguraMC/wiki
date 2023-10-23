@@ -5,7 +5,7 @@ Instances are obtained using the KeybindAPI's newKeybind() function
 For this entire page assume:
 
 ```lua
-local myKey = keybinds:newKeybind("Name","key.keyboard.h",false)
+local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
 ```
 
 ## Press/Release {#Press-Release}
@@ -25,7 +25,9 @@ The second argument is this keybind itself
 **Example**:
 
 ```lua
-myKey:setOnPress(function() log("hi") end)
+myKey:setOnPress(function()
+    log("hi")
+end)
 ```
 
 ---
@@ -45,7 +47,9 @@ The second argument is this keybind itself
 **Example**:
 
 ```lua
-myKey:setOnRelease(function() log("hi") end)
+myKey:setOnRelease(function()
+    log("hi")
+end)
 ```
 
 ---
@@ -59,7 +63,6 @@ Gets whether this keybind is currently pressed down
 ```lua
 myKey:isPressed()
 ```
-
 
 ## Key Properites {#Key-Properties}
 
@@ -171,7 +174,6 @@ myKey:setGUI(true)
 
 ---
 
-
 ### `isGuiEnabled()` {#isGuiEnabled}
 
 Returns if this keybind should work when a GUI screen (Chat, Inventory, etc) is open or not
@@ -181,4 +183,3 @@ Returns if this keybind should work when a GUI screen (Chat, Inventory, etc) is 
 ```lua
 myKey:isGuiEnabled()
 ```
-

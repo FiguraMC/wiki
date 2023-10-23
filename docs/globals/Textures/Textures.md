@@ -25,7 +25,7 @@ The copy is registered with the given name
 **Example**:
 
 ```lua
-textures:newTexture("Name",64,64)
+textures:newTexture("Name", 64, 64)
 ```
 
 ---
@@ -39,7 +39,7 @@ The copy is registered with the given name
 **Example**:
 
 ```lua
-textures:fromVanilla("Name","textures/item/apple.png")
+textures:fromVanilla("Name", "textures/item/apple.png")
 ```
 
 ---
@@ -71,5 +71,5 @@ The copy is registered with the given name
 **Example**:
 
 ```lua
-textures:copy("Name",textures["myTexture"])
+textures:copy("Name", textures["myTexture"])
 ```

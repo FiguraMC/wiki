@@ -371,7 +371,7 @@ Returns the width and height of the given text, wrapping lines and trimming to a
 **Example**:
 
 ```lua
-client:getTextDimensions("Example text",40,true)
+client:getTextDimensions("Example text", 40, true)
 ```
 
 ---
@@ -481,7 +481,7 @@ Compares two versions if they are less than (-1), equals (0) or greater than (1)
 **Example**:
 
 ```lua
-client:compareVersions("0.1.0","0.1.3")
+client:compareVersions("0.1.0", "0.1.3")
 ```
 
 ---
@@ -624,7 +624,6 @@ client:isDebugOverlayEnabled()
 
 ---
 
-
 ### `getEntityStatistics()` {#getEntityStatistics}
 
 Returns a string containing information about the loaded entities on the client
@@ -650,4 +649,3 @@ client:getActiveResourcePacks()
 ```
 
 ---
-

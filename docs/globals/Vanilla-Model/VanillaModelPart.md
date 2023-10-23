@@ -83,7 +83,7 @@ Set this part and its children's rotation
 **Example**:
 
 ```lua
-vanilla_model.HEAD:setRot(0,90,0)
+vanilla_model.HEAD:setRot(0, 90, 0)
 ```
 
 ---
@@ -109,7 +109,7 @@ Set this part and its children's position, preserving the previous values
 **Example**:
 
 ```lua
-vanilla_model.HEAD:setPos(0,10,0)
+vanilla_model.HEAD:setPos(0, 10, 0)
 ```
 
 ---
@@ -135,7 +135,7 @@ Set this part and its children's scale
 **Example**:
 
 ```lua
-vanilla_model.HEAD:setScale(2,2,2)
+vanilla_model.HEAD:setScale(2, 2, 2)
 ```
 
 ---
@@ -161,7 +161,7 @@ Offsets this part and its children's rotation, adding on top of the vanilla valu
 **Example**:
 
 ```lua
-vanilla_model.HEAD:setOffsetRot(0,90,0)
+vanilla_model.HEAD:setOffsetRot(0, 90, 0)
 ```
 
 ---
@@ -185,7 +185,7 @@ Offsets this part and its children's scale, multiplying with the vanilla values
 **Example**:
 
 ```lua
-vanilla_model.HEAD:setOffsetScale(2,2,2)
+vanilla_model.HEAD:setOffsetScale(2, 2, 2)
 ```
 
 ---

@@ -1,6 +1,7 @@
 An Action Wheel container which is used to store store and run actions, it can display up to 8 at a time
 
 For every example in this page assume:
+
 ```lua
 local myPage = action_wheel:newPage()
 ```
@@ -73,7 +74,7 @@ If index is -1, the action will be set in the latest empty index
 
 ```lua
 local myAction = action_wheel:newAction()
-myPage:setAction(-1,myAction)
+myPage:setAction(-1, myAction)
 ```
 
 ## Slot

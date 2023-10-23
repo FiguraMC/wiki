@@ -63,7 +63,7 @@ Sets the RGBA color of the specified pixel
 **Example**:
 
 ```lua
-myText:setPixel(32,32,0,0,1,1)
+myText:setPixel(32, 32, 0, 0, 1, 1)
 ```
 
 ---
@@ -75,7 +75,7 @@ Sets the RGBA color of the specified pixel
 **Example**:
 
 ```lua
-myText:getPixel(32,32)
+myText:getPixel(32, 32)
 ```
 
 ---
@@ -87,7 +87,7 @@ Sets the RGBA color of the entire specified region
 **Example**:
 
 ```lua
-myText:fill(0,0,32,32,0,0,1,1)
+myText:fill(0, 0, 32, 32, 0, 0, 1, 1)
 ```
 
 ---
@@ -129,4 +129,3 @@ Invalid return values or nil takes no effects
 Transforms all pixels in the specified area of this texture by the matrix
 
 ---
-

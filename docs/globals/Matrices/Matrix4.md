@@ -5,6 +5,7 @@ For this page assume:
 ```lua
 local myMat = matrices.mat4()
 ```
+
 ---
 
 ### `add(Matrix4)` {#add}
@@ -24,7 +25,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-myMat:scale(2,2,2)
+myMat:scale(2, 2, 2)
 ```
 
 ---
@@ -100,7 +101,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-myMat:rotate(90,90,90)
+myMat:rotate(90, 90, 90)
 ```
 
 ---
@@ -134,7 +135,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-myMat:translate(2,2,2)
+myMat:translate(2, 2, 2)
 ```
 
 ---
@@ -254,7 +255,6 @@ myMat:rotateX(90)
 ```
 
 ---
-
 
 ### `rotateY(number)` {#rotateY}
 

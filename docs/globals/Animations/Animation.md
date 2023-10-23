@@ -315,7 +315,6 @@ myAnim:setLoopDelay(1)
 
 ---
 
-
 ### `getLoopDelay()` {#getLoopDelay}
 
 Gets the animation's loop delay
@@ -461,5 +460,5 @@ If theres already code to run at that time, it is overridden
 **Example**:
 
 ```lua
-myAnim:newCode(1,"log('hi')")
+myAnim:newCode(1, "log('hi')")
 ```

@@ -13,9 +13,7 @@ An optional string argument can be given, grouping functions under that name, fo
 **Example**:
 
 ```lua
-events.TICK:register(function()
-
-end,"Name")
+events.TICK:register(function() end, "Name")
 ```
 
 ---

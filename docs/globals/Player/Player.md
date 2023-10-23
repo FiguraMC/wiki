@@ -783,20 +783,28 @@ player:getEyeHeight()
 
 ---
 
-### `getTargetedEntity(number)` {#getTargetedEntity}
+### `getTargetedEntity(distance : number?) : Entity, Vector3` {#getTargetedEntity}
 
-Returns a proxy for your currently targeted Entity
+Used to access the entity you are looking at.
 
-This Entity appears on the F3 screen
+#### Parameters
 
-The number is for distance in blocks to check
+| Name     | Type   | Description                                                           |
+| -------- | ------ | --------------------------------------------------------------------- |
+| distance | number | How far in blocks to check for an entity. Default and maximum are 20. |
 
-Maximum and Default distance is 20, Minimum is 0
+#### Returns
 
-**Example with a nil check:**
+| Name   | Type                         | Description                                  |
+| ------ | ---------------------------- | -------------------------------------------- |
+| entity | [Entity](./Entity)           | A reference to the targeted entity           |
+| pos    | [Vector3](./Vectors/Vector3) | The world coordinates of the targeted entity |
+
+**Example:**
 
 ```lua
-if player:getTargetedEntity(4.5) and player:getTargetedEntity(4.5):getType() == "minecraft:creeper" then
+local entity, pos = player:getTargetedEntity(host:getReachDistance() or 4.5) -- host is not synced
+if entity and entity:getType() == "minecraft:creeper" then
     log("You're looking at a creeper")
 end
 ```

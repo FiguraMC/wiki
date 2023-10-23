@@ -59,7 +59,7 @@ Can be given a rgb as vec3 or three numbers, it expects numbers 0-1
 **Example**:
 
 ```lua
-avatar:setColor(50/255,200/255,200/255)
+avatar:setColor(50 / 255, 200 / 255, 200 / 255)
 ```
 
 ---
@@ -87,7 +87,7 @@ The key must be a string
 **Example**:
 
 ```lua
-avatar:store("storing",true)
+avatar:store("storing", true)
 ```
 
 ---
@@ -269,7 +269,6 @@ avatar:getMaxWorldTickCount()
 ```
 
 ---
-
 
 ### `getRenderCount()` {#getRenderCount}
 

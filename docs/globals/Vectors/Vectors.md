@@ -21,7 +21,7 @@ Nil values become zero
 **Example**:
 
 ```lua
-vectors.vec2(90,90)
+vectors.vec2(90, 90)
 ```
 
 ---
@@ -35,7 +35,7 @@ Nil values become zero
 **Example**:
 
 ```lua
-vectors.vec3(90,90,90)
+vectors.vec3(90, 90, 90)
 ```
 
 ---
@@ -49,7 +49,7 @@ Nil values become zero
 **Example**:
 
 ```lua
-vectors.vec4(90,90,90,90)
+vectors.vec4(90, 90, 90, 90)
 ```
 
 ## Colors
@@ -61,7 +61,7 @@ Converts the given color from RGB format to Integer format
 **Example**:
 
 ```lua
-vectors.rgbToInt(50,50,50)
+vectors.rgbToInt(50, 50, 50)
 ```
 
 ---
@@ -75,7 +75,7 @@ The "#" is not included on the return value
 **Example**:
 
 ```lua
-vectors.rgbToHex(81,68,66)
+vectors.rgbToHex(81, 68, 66)
 ```
 
 ---
@@ -87,7 +87,7 @@ Converts the given color from HSV format to RGB format
 **Example**:
 
 ```lua
-vectors.rgbToHSV(81,68,66)
+vectors.rgbToHSV(81, 68, 66)
 ```
 
 ---
@@ -127,7 +127,7 @@ Converts the given color from HSV format to RGB format
 **Example**:
 
 ```lua
-vectors.hsvToRGB(181,68,66)
+vectors.hsvToRGB(181, 68, 66)
 ```
 
 ## Other
@@ -161,8 +161,7 @@ Converts a pitch/yaw angle (in degrees) into a direction vector
 **Example**:
 
 ```lua
-vectors.angleToDir(90,70)
+vectors.angleToDir(90, 70)
 ```
 
 ---
-

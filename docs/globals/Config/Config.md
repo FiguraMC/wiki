@@ -2,7 +2,6 @@ The global instance of the ConfigAPI
 
 ---
 
-
 ### `setName(string)` {#setName}
 
 Sets the name of the destination file, data will be saved and loaded from that file
@@ -38,7 +37,7 @@ If the value is nil, the variable is removed from the file
 **Example**:
 
 ```lua
-config:save("apple",false)
+config:save("apple", false)
 ```
 
 ---

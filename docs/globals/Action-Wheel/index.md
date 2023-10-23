@@ -122,7 +122,7 @@ A second parameter can be given to specify if it should be executed the left or 
 **Example**:
 
 ```lua
-action_wheel:execute(1,false)
+action_wheel:execute(1, false)
 ```
 
 ---

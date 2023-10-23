@@ -5,6 +5,7 @@ For this page assume:
 ```lua
 local myMat = matrices.mat3()
 ```
+
 ---
 
 ### `add(Matrix2)` {#add}
@@ -24,7 +25,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-myMat:scale(2,2)
+myMat:scale(2, 2)
 ```
 
 ---
@@ -124,6 +125,7 @@ Puts a 1 along the diagonal in the new spot, and the rest are zero
 ```lua
 myMat:augmented()
 ```
+
 ---
 
 ### `inverted()` {#inverted}

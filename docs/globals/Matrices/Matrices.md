@@ -37,7 +37,7 @@ Creates a new Matrix2 that scales by the specified factors
 **Example**:
 
 ```lua
-matrices.scale2(2,2)
+matrices.scale2(2, 2)
 ```
 
 ## Matrix3
@@ -65,7 +65,7 @@ Angles are given in degrees, and the rotation order is ZYX
 **Example**:
 
 ```lua
-matrices.rotation3(90,90,90)
+matrices.rotation3(90, 90, 90)
 ```
 
 ---
@@ -119,7 +119,7 @@ Creates a new Matrix3 that translates by the specified offset
 **Example**:
 
 ```lua
-matrices.translate3(90,90)
+matrices.translate3(90, 90)
 ```
 
 ---
@@ -131,7 +131,7 @@ Creates a new Matrix3 that scales by the specified factors
 **Example**:
 
 ```lua
-matrices.scale3(2,2,2)
+matrices.scale3(2, 2, 2)
 ```
 
 ## Matrix4
@@ -159,12 +159,10 @@ Angles are given in degrees, and the rotation order is ZYX
 **Example**:
 
 ```lua
-matrices.rotation4(90,90,90)
+matrices.rotation4(90, 90, 90)
 ```
 
 ---
-
-
 
 ### `xRotation4(number)` {#xRotation4}
 
@@ -194,7 +192,6 @@ matrices.yRotation4(90)
 
 ---
 
-
 ### `zRotation4(number)` {#zRotation4}
 
 Creates a new Matrix4 that rotates by the specified angle around the Z axis
@@ -216,7 +213,7 @@ Creates a new Matrix4 that translates by the specified offset
 **Example**:
 
 ```lua
-matrices.translate4(90,90,90)
+matrices.translate4(90, 90, 90)
 ```
 
 ---
@@ -228,5 +225,5 @@ Creates a new Matrix4 that scales by the specified factors
 **Example**:
 
 ```lua
-matrices.scale4(2,2,2)
+matrices.scale4(2, 2, 2)
 ```
