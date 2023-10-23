@@ -797,7 +797,7 @@ Used to access the entity you are looking at.
 
 | Name   | Type                         | Description                                  |
 | ------ | ---------------------------- | -------------------------------------------- |
-| entity | [Entity](./Entity)           | A reference to the targeted entity           |
+| entity | [Entity](./Player/Entity)    | A reference to the targeted entity           |
 | pos    | [Vector3](./Vectors/Vector3) | The world coordinates of the targeted entity |
 
 **Example:**
