@@ -23,7 +23,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy Preview
+      - name: Deploy
         uses: cloudflare/pages-action@v1
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
@@ -31,4 +31,3 @@ jobs:
           projectName: wiki
           directory: ./build
           gitHubToken: ${{ secrets.GH_TOKEN }}
-          branch: pr-${{ github.event.workflow_run.pull_requests[0].number }}
