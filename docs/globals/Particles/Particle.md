@@ -24,7 +24,7 @@ myParticle:spawn()
 
 ---
 
-### `setPos(Vec3)` {#setPos}
+### `setPos(Vector3)` {#setPos}
 
 Sets the position of the particle
 
@@ -48,7 +48,7 @@ myParticle:getPos()
 
 ---
 
-### `setColor(Vec3 or Vec4)` {#setColor}
+### `setColor(Vector3 or Vector4)` {#setColor}
 
 Sets the particle color, most particles don't support it. The alpha value can be excluded
 
@@ -72,7 +72,7 @@ myParticle:getColor()
 
 ---
 
-### `setScale(Vec3)` {#setScale}
+### `setScale(Vector3)` {#setScale}
 
 Sets the scale of the particle
 
@@ -94,7 +94,7 @@ Gets the scale of the particle
 myParticle:getScale()
 ```
 
-### `setVelocity(Vec3)` {#setVelocity}
+### `setVelocity(Vector3)` {#setVelocity}
 
 Sets the velocity of the particle
 

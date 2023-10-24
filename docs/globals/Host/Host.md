@@ -267,7 +267,7 @@ host:sendChatMessage("Hello World")
 
 ---
 
-### `setChatMessage(number, string, Vec3)` {#setChatMessage}
+### `setChatMessage(number, string, Vector3)` {#setChatMessage}
 
 Modifies a chat message with the given text
 
@@ -339,7 +339,7 @@ host:getChatText("Hello World")
 
 ---
 
-### `setChatColor(Vec3)` {#setChatColor}
+### `setChatColor(Vector3)` {#setChatColor}
 
 Sets the color of the text that is currently being typed into the chat window
 
@@ -434,11 +434,11 @@ host:setActionbar("Hello World")
 
 ---
 
-### `setTitleTimes(Vec3)` {#setTitleTimes}
+### `setTitleTimes(Vector3)` {#setTitleTimes}
 
 Sets the duration of the title on the screen, also its fade-in and fade-out durations.
 
-The inputs for the Vec3 are ordered like-so: (fadeInTime, stayTime, fadeOutTime)
+The inputs for the Vector3 are ordered like-so: (fadeInTime, stayTime, fadeOutTime)
 
 **Example**:
 

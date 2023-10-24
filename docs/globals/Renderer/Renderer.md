@@ -4,7 +4,7 @@ The renderer API is accessed with the <code>renderer</code> global. Like so: <co
 
 ---
 
-### `setOffsetCameraPivot(vec3)` {#setOffsetCameraPivot}
+### `setOffsetCameraPivot(Vector3)` {#setOffsetCameraPivot}
 
 Sets the offset pivot for the camera
 
@@ -36,7 +36,7 @@ renderer:getCameraOffsetPivot()
 
 ---
 
-### `setCameraPivot(vec3)` {#setCameraPivot}
+### `setCameraPivot(Vector3)` {#setCameraPivot}
 
 Sets the absolute pivot for the camera
 
@@ -68,7 +68,7 @@ renderer:getCameraPivot()
 
 ---
 
-### `setCameraPos(vec3)` {#setCameraPos}
+### `setCameraPos(Vector3)` {#setCameraPos}
 
 Sets the position offset for the camera
 
@@ -94,7 +94,7 @@ renderer:getCameraPos()
 
 ---
 
-### `setOffsetCameraRot(vec3)` {#setOffsetCameraRot}
+### `setOffsetCameraRot(Vector3)` {#setOffsetCameraRot}
 
 Sets the offset rotation for the camera
 
@@ -124,7 +124,7 @@ renderer:getCameraOffsetRot()
 
 ---
 
-### `setCameraRot(vec3)` {#setCameraRot}
+### `setCameraRot(Vector3)` {#setCameraRot}
 
 Sets the absolute rotation of the camera
 
@@ -218,7 +218,7 @@ renderer:isCameraBackwards()
 
 ---
 
-### `setOutlineColor(vec3)` {#setOutlineColor}
+### `setOutlineColor(Vector3)` {#setOutlineColor}
 
 Sets the glowing effect outline color
 
@@ -242,7 +242,7 @@ renderer:getOutlineColor()
 
 ---
 
-### `setBlockOutlineColor(vec4)` {#setBlockOutlineColor}
+### `setBlockOutlineColor(Vector4)` {#setBlockOutlineColor}
 
 Sets the color of the selected block outline
 
@@ -333,7 +333,7 @@ renderer:getSecondaryFireTexture()
 
 ---
 
-### `setCrosshairOffset(vec2)` {#setCrosshairOffset}
+### `setCrosshairOffset(Vector2)` {#setCrosshairOffset}
 
 Sets the offset of your crosshair
 
@@ -529,7 +529,7 @@ renderer:isUpsideDown()
 
 ---
 
-### `setBlockOutlineColor(vec4)` {#setBlockOutlineColor}
+### `setBlockOutlineColor(Vector4)` {#setBlockOutlineColor}
 
 Sets the color of the selected block outline
 
@@ -645,7 +645,7 @@ renderer:getRenderRightArm()
 
 ---
 
-### `setEyeOffset(vec3)` {#setEyeOffset}
+### `setEyeOffset(Vector3)` {#setEyeOffset}
 
 Sets an offset for the entity eye position, altering the targeted block and entity
 

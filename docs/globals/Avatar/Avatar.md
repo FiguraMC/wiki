@@ -54,7 +54,7 @@ avatar:hasTexture()
 
 Sets the current color string of your avatar, used as your avatar theme
 
-Can be given a rgb as vec3 or three numbers, it expects numbers 0-1
+Can be given a rgb as Vector3 or three numbers, it expects numbers 0-1
 
 **Example**:
 

@@ -1,6 +1,6 @@
 The global instance of ParticleAPI
 
-### `newParticle(string,vec3)` {#newParticle}
+### `newParticle(string,Vector3)` {#newParticle}
 
 Creates a particle with the given name at the specified position, with the given velocity
 

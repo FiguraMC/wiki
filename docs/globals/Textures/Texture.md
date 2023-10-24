@@ -118,7 +118,7 @@ myText:getDimensions()
 
 ### `applyFunc()` {#applyFunc}
 
-Calls the given function on the specified area of this texture, it will iterate over each pixel, and their current x, y and color will be given as arguments, the color in a RGBA vec4 format, and the return value will set that pixel color
+Calls the given function on the specified area of this texture, it will iterate over each pixel, and their current x, y and color will be given as arguments, the color in a RGBA Vector4 format, and the return value will set that pixel color
 
 Invalid return values or nil takes no effects
 

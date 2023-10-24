@@ -320,8 +320,8 @@ Called on every one of your items that is being rendered
 
 -   `ItemStack` - The item
 -   `string` - The rendering mode.
--   `Vec3` - Position of the item.
--   `Vec3` - Scale of the item.
+-   `Vector3` - Position of the item.
+-   `Vector3` - Scale of the item.
 -   `boolean` - If the item is being rendered from the left hand.
 
 Returning a ModelPart parented to Item, stops the rendering of this item and will render the returned part instead.
@@ -345,7 +345,7 @@ The on_play_sound event runs every time you hear a sound.
 **Arguments**:
 
 -   `string` - The sound ID.
--   `Vec3` - World position.
+-   `Vector3` - World position.
 -   `number` - Volume.
 -   `number` - Pitch.
 -   `boolean` - If the sound should loop.

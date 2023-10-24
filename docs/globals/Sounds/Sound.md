@@ -48,7 +48,7 @@ mySound:pause()
 
 ---
 
-### `setPos(vec3)` {#setPos}
+### `setPos(Vector3)` {#setPos}
 
 Sets the position of the sound
 

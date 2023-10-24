@@ -16,7 +16,7 @@ Returns a table with all sprite paths under this atlas
 
 ### `getSpriteUV(string)` {#getSpriteUV}
 
-Returns a vec4 containing the UV of the given sprite
+Returns a Vector4 containing the UV of the given sprite
 
 The UV is ordered as U0, V0, U1, V1
 
@@ -24,6 +24,6 @@ The UV is ordered as U0, V0, U1, V1
 
 ### `getHeight()` {#getHeight}
 
-Returns a vec4 containing the UV of the given sprite
+Returns a Vector4 containing the UV of the given sprite
 
 The UV is ordered as U0, V0, U1, V1

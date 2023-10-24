@@ -40,7 +40,7 @@ nameplate.Entity:isVisible()
 
 ---
 
-### setPos(vec3) {#setPos}
+### setPos(Vector3) {#setPos}
 
 Sets the position of the nameplate in blocks, this is an offset of the pivot location so 0,0,0 is the pivot's location
 
@@ -60,7 +60,7 @@ nameplate.Entity:getPos()
 
 ---
 
-### setScale(vec3) {#setScale}
+### setScale(Vector3) {#setScale}
 
 Sets the scale of the nameplate
 
@@ -80,7 +80,7 @@ nameplate.Entity:getScale()
 
 ---
 
-### setPivot(vec3) {#setPivot}
+### setPivot(Vector3) {#setPivot}
 
 Sets the pivot of the nameplate
 
@@ -100,7 +100,7 @@ nameplate.Entity:getPivot()
 
 ---
 
-### setLight(vec2) {#setLight}
+### setLight(Vector2) {#setLight}
 
 Sets the brightness of the nameplate text, the first arg is blockLight and the second arg is skyLight
 
@@ -140,7 +140,7 @@ nameplate.Entity:hasOutline()
 
 ---
 
-### setOutlineColor(vec3) {#setOutlineColor}
+### setOutlineColor(Vector3) {#setOutlineColor}
 
 Sets the color used for the outline in rgb format and 0-1 ex: (100/255,100/255,100/255)
 
@@ -150,7 +150,7 @@ nameplate.Entity:setOutlineColor(100 / 255, 100 / 255, 100 / 255)
 
 ---
 
-### setBackgroundColor(vec4) {#setBackgroundColor}
+### setBackgroundColor(Vector4) {#setBackgroundColor}
 
 Sets the color of the nameplate background, in rgba format and 0-1 ex: (100/255,100/255,100/255,100/255)
 
