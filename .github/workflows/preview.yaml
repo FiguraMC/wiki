@@ -1,0 +1,29 @@
+name: Deploy Pull Request Preview
+
+on:
+  workflow_run:
+    workflows: ["Build Pull Request"]
+    types:
+      - completed
+
+concurrency: preview-${{ github.event.workflow_run.pull_requests[0].number }}
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          run_id: ${{ github.event.workflow_run.id }}
+          name: build
+          path: ./build/
+
+      - name: Deploy Preview
+        uses: rossjrw/pr-preview-action@v1.4.4
+        with:
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          source-dir: ./build/

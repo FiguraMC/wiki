@@ -1,14 +1,11 @@
-name: Build Pull Request
+name: Deploy to GitHub Pages
 
 on:
-  pull_request:
+  push:
     branches: ["main"]
-    types: [opened, reopened, synchronize]
-
-concurrency: preview-${{ github.ref }}
 
 jobs:
-  preview:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,12 +22,11 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          BASE_URL_OVERRIDE: /pr-preview/pr-${{ github.event.number }}/
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          name: build
-          path: ./build/
-          retention-days: 1
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          force: false
+          folder: ./build/
+          branch: gh-pages
+          clean-exclude: pr-preview
