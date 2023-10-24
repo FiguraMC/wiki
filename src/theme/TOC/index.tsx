@@ -16,7 +16,7 @@ export default function TOC({ className, ...props }: Props): JSX.Element {
     toc: props.toc.map((tocItem) => {
       return {
         ...tocItem,
-        value: tocItem.level == 3 && re.test(tocItem.value) ? tocItem.id : tocItem.value,
+        value: tocItem.level == 3 && re.test(tocItem.value) ? `<code>${tocItem.id}</code>` : tocItem.value,
       };
     }),
   };
