@@ -8,7 +8,7 @@ on:
 concurrency: preview-${{ github.ref }}
 
 jobs:
-  preview:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,8 +25,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          BASE_URL_OVERRIDE: /pr-preview/pr-${{ github.event.number }}/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
