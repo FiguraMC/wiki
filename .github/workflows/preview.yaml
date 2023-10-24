@@ -12,9 +12,6 @@ jobs:
   preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Download Artifact
         uses: dawidd6/action-download-artifact@v2
         with:
@@ -23,7 +20,19 @@ jobs:
           path: ./build/
 
       - name: Deploy Preview
-        uses: rossjrw/pr-preview-action@v1.4.4
+        uses: cloudflare/pages-action@v1
         with:
-          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-          source-dir: ./build/
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          projectName: wiki
+          directory: ./build
+          gitHubToken: ${{ secrets.GH_TOKEN }}
+          branch: pr-${{ github.event.workflow_run.pull_requests[0].number }}
+
+      - name: Leave comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          issue-number: ${{ github.event.workflow_run.pull_requests[0].number }}
+          body: |
+            Preview: https://pr-${{ github.event.workflow_run.pull_requests[0].number }}.wiki-2e2.pages.dev
