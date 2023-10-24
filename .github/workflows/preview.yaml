@@ -24,7 +24,7 @@ jobs:
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          projectName: wiki
+          projectName: figura-wiki-test
           directory: ./build
           gitHubToken: ${{ secrets.GH_TOKEN }}
           branch: pr-${{ github.event.workflow_run.pull_requests[0].number }}
