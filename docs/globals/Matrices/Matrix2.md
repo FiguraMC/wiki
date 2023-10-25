@@ -3,7 +3,7 @@ A matrix with 2 rows and 2 columns
 For this page assume:
 
 ```lua
-local myMat = matrices.mat3()
+local myMat = matrices.mat2()
 ```
 
 ---
