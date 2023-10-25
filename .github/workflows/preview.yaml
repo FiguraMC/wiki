@@ -1,50 +1,38 @@
-name: Deploy Preview for Pull Request
+name: Deploy Pull Request Preview
 
 on:
-  pull_request:
-    branches: ["main"]
-    types: [opened, reopened, synchronize, closed]
+  workflow_run:
+    workflows: ["Build Pull Request"]
+    types:
+      - completed
 
-concurrency: preview-${{ github.ref }}
+concurrency: preview-${{ github.event.workflow_run.pull_requests[0].number }}
 
 jobs:
   preview:
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed' && !github.event.pull_request.merged
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Download Artifact
+        uses: dawidd6/action-download-artifact@v2
         with:
-          node-version: 18.x
-          cache: "npm"
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-        env:
-          BASE_URL_OVERRIDE: /pr-preview/pr-${{ github.event.number }}/
+          run_id: ${{ github.event.workflow_run.id }}
+          name: build
+          path: ./build/
 
       - name: Deploy Preview
-        uses: rossjrw/pr-preview-action@v1.4.4
+        uses: cloudflare/pages-action@v1
         with:
-          source-dir: ./build/
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          projectName: wiki
+          directory: ./build
+          gitHubToken: ${{ secrets.GH_TOKEN }}
+          branch: pr-${{ github.event.workflow_run.pull_requests[0].number }}
 
-  cleanup:
-    runs-on: ubuntu-latest
-    if: github.event.action == 'closed' || github.event.pull_request.merged
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Cleanup Preview
-        uses: rossjrw/pr-preview-action@v1.4.4
+      - name: Leave comment
+        uses: peter-evans/create-or-update-comment@v1
         with:
-          source-dir: ./build/
-          action: remove
+          token: ${{ secrets.GH_TOKEN }}
+          issue-number: ${{ github.event.workflow_run.pull_requests[0].number }}
+          body: |
+            Preview: https://pr-${{ github.event.workflow_run.pull_requests[0].number }}.wiki-2e2.pages.dev
