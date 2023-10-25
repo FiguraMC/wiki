@@ -205,6 +205,8 @@ myPage:newAction()
     :setHoverColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
+---
+
 ### <code>getHoverColor(): [Vector3](../Vectors/Vector3)</code> {#getHoverColor}
 
 Gets the Action's hover color. Returns a `Vector3`.
@@ -637,6 +639,8 @@ The field that holds the callback for when the Action is toggled. The type of th
 | ------ | ------------------------------- | ---------------------------------------- |
 | state  | boolean                         | Whether the action was toggled on or off |
 | action | <code>[Action](./Action)</code> | The action the callback was called by    |
+
+---
 
 ### <code>setOnToggle(toggleFunction: [ToggleFunction](#ToggleFunction)): [Action](./Action)</code> {#setOnToggle}
 
