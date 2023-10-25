@@ -7,7 +7,7 @@ export type EmojiProps = {
 const Emoji: FC<EmojiProps> = ({ icon }) => {
   const path = require("@site/static/img/emoji/" + icon + ".png");
 
-  return <img src={path?.default} style={{ height: "1em" }} />;
+  return <img src={path?.default} style={{ height: "1em", display: "inline-block", verticalAlign: "middle" }} />;
 };
 
 export default Emoji;

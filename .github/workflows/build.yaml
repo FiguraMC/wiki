@@ -1,11 +1,14 @@
-name: Deploy to GitHub Pages
+name: Build Pull Request
 
 on:
-  push:
+  pull_request:
     branches: ["main"]
+    types: [opened, reopened, synchronize]
+
+concurrency: preview-${{ github.ref }}
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,11 +26,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy
-        uses: cloudflare/pages-action@v1
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
         with:
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          projectName: wiki
-          directory: ./build
-          gitHubToken: ${{ secrets.GH_TOKEN }}
+          name: build
+          path: ./build/
+          retention-days: 1
