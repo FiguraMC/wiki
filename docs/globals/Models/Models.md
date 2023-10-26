@@ -43,7 +43,7 @@ For relative rotation values, check out the "offset" rot functions
 **Example**:
 
 ```lua
-models:setRot(0,90,0)
+models:setRot(0, 90, 0)
 ```
 
 ---
@@ -71,7 +71,7 @@ Nil values for position are assumed to be 0
 **Example**:
 
 ```lua
-models:setPos(0,5,0)
+models:setPos(0, 5, 0)
 ```
 
 ---
@@ -99,7 +99,7 @@ Nil values for scale are assumed to be 1
 **Example**:
 
 ```lua
-models:setScale(2,2,2)
+models:setScale(2, 2, 2)
 ```
 
 ---
@@ -129,7 +129,7 @@ For relative pivot offsets, check out the "offset" pivot functions
 **Example**:
 
 ```lua
-models:setPivot(0,5,0)
+models:setPivot(0, 5, 0)
 ```
 
 ---
@@ -161,11 +161,10 @@ For absolute rotation values, check out the non-offset rot functions
 **Example**:
 
 ```lua
-models:setOffsetRot(0,90,0)
+models:setOffsetRot(0, 90, 0)
 ```
 
 ---
-
 
 ### <code>getOffsetRot()</code> {#getOffsetRot}
 
@@ -192,7 +191,7 @@ For absolute scale values, check out the non-offset rot functions
 **Example**:
 
 ```lua
-models:setOffsetScale(2,2,2)
+models:setOffsetScale(2, 2, 2)
 ```
 
 ---
@@ -222,7 +221,7 @@ For absolute pivot point values, check out the non-offset pivot functions
 **Example**:
 
 ```lua
-models:setOffsetPivot(0,5,0)
+models:setOffsetPivot(0, 5, 0)
 ```
 
 ---
@@ -310,7 +309,6 @@ models:getNormalMatrixRaw()
 ```
 
 ---
-
 
 ## Part Information
 
@@ -511,9 +509,9 @@ Passing nil will reset the lighting override for this part
 
 ```lua
 -- Example for mimicking vanilla lighting
-local blockLight = world.getBlockLightLevel(player:getPos():add(0,.4,0))
-local skyLight = world.getSkyLightLevel(player:getPos():add(0,.4,0))
-models:setLight(blockLight,skyLight)
+local blockLight = world.getBlockLightLevel(player:getPos():add(0, .4, 0))
+local skyLight = world.getSkyLightLevel(player:getPos():add(0, .4, 0))
+models:setLight(blockLight, skyLight)
 ```
 
 ---
@@ -545,7 +543,7 @@ Passing nil will reset the overlay override for this part
 ```lua
 -- Example for a hurt overlay
 local hurt = player:getNbt().HurtTime > 0
-models:setOverlay(hurt and 0 or nil,1)
+models:setOverlay(hurt and 0 or nil, 1)
 ```
 
 ---
@@ -573,7 +571,7 @@ Values are RGB from 0 to 1
 **Example**:
 
 ```lua
-models:setColor(0/255,0/255,255/255)
+models:setColor(0 / 255, 0 / 255, 255 / 255)
 ```
 
 ---
@@ -601,7 +599,7 @@ Values are RGB from 0 to 1
 **Example**:
 
 ```lua
-models:setPrimaryColor(0/255,0/255,255/255)
+models:setPrimaryColor(0 / 255, 0 / 255, 255 / 255)
 ```
 
 ---
@@ -629,7 +627,7 @@ Values are RGB from 0 to 1
 **Example**:
 
 ```lua
-models:setSecondaryColor(0/255,0/255,255/255)
+models:setSecondaryColor(0 / 255, 0 / 255, 255 / 255)
 ```
 
 ---
@@ -764,9 +762,9 @@ If using "custom", the second parameter should indicate a texture object
 -- Vanilla Skin
 models:setPrimaryTexture("Skin")
 -- Custom Texture
-models:setPrimaryTexture("Custom",textures["myTexture"])
+models:setPrimaryTexture("Custom", textures["myTexture"])
 -- Minecraft Resource
-models:setPrimaryTexture("Resource","textures/entity/pig/pig.png")
+models:setPrimaryTexture("Resource", "textures/entity/pig/pig.png")
 ```
 
 ---
@@ -815,9 +813,9 @@ If using "custom", the second parameter should indicate a texture object
 -- Vanilla Skin
 models:setSecondaryTexture("Skin")
 -- Custom Texture
-models:setSecondaryTexture("Custom",textures["myTexture"])
+models:setSecondaryTexture("Custom", textures["myTexture"])
 -- Minecraft Resource
-models:setSecondaryTexture("Resource","textures/entity/pig/pig.png")
+models:setSecondaryTexture("Resource", "textures/entity/pig/pig.png")
 ```
 
 ---
@@ -893,7 +891,7 @@ If you say setUV(0.5, 0.25), for example, it will scroll by half of your texture
 **Example**:
 
 ```lua
-models:setUV(0.5,0.5)
+models:setUV(0.5, 0.5)
 ```
 
 ---
@@ -973,8 +971,6 @@ models:getUVMatrix()
 ```
 
 ---
-
-
 
 ## Render Tasks
 
@@ -1222,5 +1218,5 @@ Takes two arguments, the new part's name and optionally its parent type
 -- Example with same parent type
 models:newPart("Example")
 -- Example with different parent type
-models:newPart("Example","Head")
+models:newPart("Example", "Head")
 ```

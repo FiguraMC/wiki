@@ -24,7 +24,6 @@ client:getVerison()
 
 ---
 
-
 ### `getVersionName()` {#getVersionName}
 
 Returns the extended name of the Minecraft version of your client
@@ -37,7 +36,6 @@ client:getVersionName()
 
 ---
 
-
 ### `getJavaVersion()` {#getJavaVersion}
 
 Returns your current Java version you're playing Minecraft with
@@ -49,7 +47,6 @@ client:getJavaVersion()
 ```
 
 ---
-
 
 ### `isSnapshot()` {#isSnapshot}
 
@@ -269,7 +266,6 @@ client:isPaused()
 
 ---
 
-
 ### `isHudEnabled()` {#isHudEnabled}
 
 Returns true if the hud is enabled (F1 disables the HUD)
@@ -445,7 +441,6 @@ client:getFrameTime()
 ```
 
 ---
-
 
 ### `getSoundStatistics()` {#getSoundStatistics}
 

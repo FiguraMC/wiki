@@ -5,7 +5,7 @@ Can be created using functions in the "vectors" api
 For this entire page assume:
 
 ```lua
-local vec4 = vec(2,5,3,4)
+local vec4 = vec(2, 5, 3, 4)
 ```
 
 ---
@@ -17,7 +17,7 @@ Adds the given vector or values to this one, and returns self for chaining
 **Example**:
 
 ```lua
-vec4:add(2,0.5,4,5)
+vec4:add(2, 0.5, 4, 5)
 ```
 
 ---
@@ -101,7 +101,7 @@ Returns the dot product of this vector with the other
 **Example**:
 
 ```lua
-vec4:dot(vec(2,2,3,5))
+vec4:dot(vec(2, 2, 3, 5))
 ```
 
 ---
@@ -117,7 +117,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-vec4:set(10,3,2,4)
+vec4:set(10, 3, 2, 4)
 ```
 
 ---
@@ -167,7 +167,7 @@ Reduces this vector modulo the given vector or values, and returns self for chai
 **Example**:
 
 ```lua
-vec4:reduce(1,0.5,2,3)
+vec4:reduce(1, 0.5, 2, 3)
 ```
 
 ---
@@ -191,7 +191,7 @@ Subtracts the given vector or values from this one, and returns self for chainin
 **Example**:
 
 ```lua
-vec4:sub(1,0.5,1,0.5)
+vec4:sub(1, 0.5, 1, 0.5)
 ```
 
 ---
@@ -203,7 +203,7 @@ Multiplies the given vector or values into this one, and returns self for chaini
 **Example**:
 
 ```lua
-vec4:mul(2,3,2,3)
+vec4:mul(2, 3, 2, 3)
 ```
 
 ---
@@ -215,7 +215,7 @@ Divides this vector by the given vector or values, and returns self for chaining
 **Example**:
 
 ```lua
-vec4:mul(2,3,2,3)
+vec4:mul(2, 3, 2, 3)
 ```
 
 ---
@@ -234,7 +234,9 @@ Returns self for chaining
 -- Example 1:
 vec4:applyFunc(math.sqrt)
 -- Example 2:
-vec4:applyFunc(function(v) return v + math.random() -0.5 end)
+vec4:applyFunc(function(v)
+    return v + math.random() - 0.5
+end)
 ```
 
 ---
@@ -274,7 +276,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-vec4:clampLength(1,5)
+vec4:clampLength(1, 5)
 ```
 
 ---
@@ -300,7 +302,7 @@ If the vector has length zero, then the copy does too
 **Example**:
 
 ```lua
-vec4:clamped(1,3)
+vec4:clamped(1, 3)
 ```
 
 ---
@@ -372,4 +374,3 @@ Can also be gotten with the indices "a" and [4]
 ```lua
 vec4.w
 ```
-

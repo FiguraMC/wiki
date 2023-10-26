@@ -7,7 +7,7 @@ This proxy also contains a saved position for the BlockState
 For all exmaples on this page assume:
 
 ```lua
-local block = world.getBlockState(player:getPos():sub(0,0.5,0))
+local block = world.getBlockState(player:getPos():sub(0, 0.5, 0))
 ```
 
 ### `getProperties()` {#getProperties}

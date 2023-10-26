@@ -3,7 +3,7 @@ A proxy for an item stack from Minecraft
 For all exmaples on this page assume:
 
 ```lua
-local item  = player:getHeldItem()
+local item = player:getHeldItem()
 ```
 
 ### `getName()` {#getName}

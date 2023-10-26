@@ -5,7 +5,7 @@ Can be created using functions in the "vectors" api
 For this entire page assume:
 
 ```lua
-local vec2 = vec(2,5)
+local vec2 = vec(2, 5)
 ```
 
 ---
@@ -17,7 +17,7 @@ Adds the given vector or values to this one, and returns self for chaining
 **Example**:
 
 ```lua
-vec2:add(2,0.5)
+vec2:add(2, 0.5)
 ```
 
 ---
@@ -101,7 +101,7 @@ Returns the dot product of this vector with the other
 **Example**:
 
 ```lua
-vec2:dot(vec(2,2))
+vec2:dot(vec(2, 2))
 ```
 
 ---
@@ -117,7 +117,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-vec2:set(10,3)
+vec2:set(10, 3)
 ```
 
 ---
@@ -167,7 +167,7 @@ Reduces this vector modulo the given vector or values, and returns self for chai
 **Example**:
 
 ```lua
-vec2:reduce(1,0.5)
+vec2:reduce(1, 0.5)
 ```
 
 ---
@@ -191,7 +191,7 @@ Subtracts the given vector or values from this one, and returns self for chainin
 **Example**:
 
 ```lua
-vec2:sub(1,0.5)
+vec2:sub(1, 0.5)
 ```
 
 ---
@@ -203,7 +203,7 @@ Multiplies the given vector or values into this one, and returns self for chaini
 **Example**:
 
 ```lua
-vec2:mul(2,3)
+vec2:mul(2, 3)
 ```
 
 ---
@@ -215,12 +215,12 @@ Divides this vector by the given vector or values, and returns self for chaining
 **Example**:
 
 ```lua
-vec2:mul(2,3)
+vec2:mul(2, 3)
 ```
 
 ---
 
-### applyFunc(func: fun(value: number, index:  number): number): Vector2 {#applyFunc}
+### applyFunc(func: fun(value: number, index: number): number): Vector2 {#applyFunc}
 
 Calls the given function on each element of this vector, and sets the values of the vector to the returns
 
@@ -234,7 +234,9 @@ Returns self for chaining
 -- Example 1:
 vec2:applyFunc(math.sqrt)
 -- Example 2:
-vec2:applyFunc(function(v) return v + math.random() -0.5 end)
+vec2:applyFunc(function(v)
+    return v + math.random() - 0.5
+end)
 ```
 
 ---
@@ -274,7 +276,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-vec2:clampLength(1,5)
+vec2:clampLength(1, 5)
 ```
 
 ---
@@ -316,7 +318,7 @@ If the vector has length zero, then the copy does too
 **Example**:
 
 ```lua
-vec2:clamped(1,3)
+vec2:clamped(1, 3)
 ```
 
 ---

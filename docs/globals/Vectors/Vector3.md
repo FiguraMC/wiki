@@ -5,7 +5,7 @@ Can be created using functions in the "vectors" api
 For this entire page assume:
 
 ```lua
-local vec3 = vec(2,5,3)
+local vec3 = vec(2, 5, 3)
 ```
 
 ---
@@ -17,7 +17,7 @@ Adds the given vector or values to this one, and returns self for chaining
 **Example**:
 
 ```lua
-vec3:add(2,0.5,4)
+vec3:add(2, 0.5, 4)
 ```
 
 ---
@@ -101,7 +101,7 @@ Returns the dot product of this vector with the other
 **Example**:
 
 ```lua
-vec3:dot(vec(2,2,3))
+vec3:dot(vec(2, 2, 3))
 ```
 
 ---
@@ -117,7 +117,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-vec3:set(10,3,2)
+vec3:set(10, 3, 2)
 ```
 
 ---
@@ -167,7 +167,7 @@ Reduces this vector modulo the given vector or values, and returns self for chai
 **Example**:
 
 ```lua
-vec3:reduce(1,0.5,2)
+vec3:reduce(1, 0.5, 2)
 ```
 
 ---
@@ -191,7 +191,7 @@ Subtracts the given vector or values from this one, and returns self for chainin
 **Example**:
 
 ```lua
-vec3:sub(1,0.5,1)
+vec3:sub(1, 0.5, 1)
 ```
 
 ---
@@ -203,7 +203,7 @@ Multiplies the given vector or values into this one, and returns self for chaini
 **Example**:
 
 ```lua
-vec3:mul(2,3,2)
+vec3:mul(2, 3, 2)
 ```
 
 ---
@@ -215,7 +215,7 @@ Divides this vector by the given vector or values, and returns self for chaining
 **Example**:
 
 ```lua
-vec3:mul(2,3,2)
+vec3:mul(2, 3, 2)
 ```
 
 ---
@@ -234,7 +234,9 @@ Returns self for chaining
 -- Example 1:
 vec3:applyFunc(math.sqrt)
 -- Example 2:
-vec3:applyFunc(function(v) return v + math.random() -0.5 end)
+vec3:applyFunc(function(v)
+    return v + math.random() - 0.5
+end)
 ```
 
 ---
@@ -274,7 +276,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-vec3:clampLength(1,5)
+vec3:clampLength(1, 5)
 ```
 
 ---
@@ -302,7 +304,7 @@ Returns a new vector which is the cross product of this and the other one
 **Example**:
 
 ```lua
-vec3:crossed(vec(2,5,4))
+vec3:crossed(vec(2, 5, 4))
 ```
 
 ---
@@ -328,7 +330,7 @@ If the vector has length zero, then the copy does too
 **Example**:
 
 ```lua
-vec3:clamped(1,3)
+vec3:clamped(1, 3)
 ```
 
 ---
@@ -356,7 +358,7 @@ Returns self for chaining
 **Example**:
 
 ```lua
-vec3:cross(vec(2,3,5))
+vec3:cross(vec(2, 3, 5))
 ```
 
 ---
