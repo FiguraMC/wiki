@@ -6,7 +6,7 @@ For this entire page assume:
 local myBlock = models:newBlock("myCoolBlocksName")
 ```
 
-### <code>setBlock(block: [BlockState](./World/BlockState)): [BlockTask](./BlockTask)</code>
+### <code>setBlock(block: [BlockState](./World/BlockState)): [BlockTask](./BlockTask)</code> {#setBlock}
 
 Sets the Block for this task render
 
@@ -18,7 +18,7 @@ myBlock:setBlock("mycelium")
 
 ---
 
-### <code>remove(): [BlockTask](./BlockTask)</code>
+### <code>remove(): [BlockTask](./BlockTask)</code> {#remove}
 
 Removes this block task from the parent model part
 
@@ -30,7 +30,7 @@ myBlock:remove()
 
 ---
 
-### <code>getName(): string</code>
+### <code>getName(): string</code> {#getName}
 
 Get this task's name
 
@@ -42,7 +42,7 @@ myBlock:getName()
 
 ---
 
-### <code>setVisible(state: boolean): [BlockTask](./BlockTask)</code>
+### <code>setVisible(state: boolean): [BlockTask](./BlockTask)</code> {#setVisible}
 
 Sets whether or not this task should be rendered
 
@@ -57,7 +57,7 @@ end)
 
 ---
 
-### <code>isVisible(): boolean</code>
+### <code>isVisible(): boolean</code> {#isVisible}
 
 Checks if this task is visible
 
@@ -71,7 +71,7 @@ end
 
 ---
 
-### <code>setLight(blockLight: number?, skyLight: number?): [BlockTask](./BlockTask)</code>
+### <code>setLight(blockLight: number?, skyLight: number?): [BlockTask](./BlockTask)</code> {#setLight}
 
 Sets the light override value of this task
 Values are given from 0 to 15, indicating the block light and sky light levels you want to use
@@ -87,7 +87,7 @@ myBlock:setLight(blockLight, skyLight)
 
 ---
 
-### <code>getLight(): [Vector2](./Vectors/Vector2)</code>
+### <code>getLight(): [Vector2](./Vectors/Vector2)</code> {#getLight}
 
 Returns the light override value of this task
 
@@ -99,7 +99,7 @@ myBlock:getLight()
 
 ---
 
-### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [BlockTask](./BlockTask)</code>
+### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [BlockTask](./BlockTask)</code> {#setOverlay}
 
 Sets the overlay override value of this task
 Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
@@ -114,7 +114,7 @@ myBlock:setOverlay(hurt and 0 or nil, 1)
 
 ---
 
-### <code>getOverlay(): [Vector2](./Vectors/Vector2)</code>
+### <code>getOverlay(): [Vector2](./Vectors/Vector2)</code> {#getOverlay}
 
 Returns the overlay override value of this task
 
@@ -126,7 +126,7 @@ myBlock:getOverlay()
 
 ---
 
-### <code>setPos(pos: [Vector3](./Vectors/Vector3)): [BlockTask](./BlockTask)</code>
+### <code>setPos(pos: [Vector3](./Vectors/Vector3)): [BlockTask](./BlockTask)</code> {#setPos}
 
 Sets the position of the task, relative with its attached part
 Uses model coordinates
@@ -139,7 +139,7 @@ myBlock:setPos(0, 16, 0)
 
 ---
 
-### <code>getPos(): [Vector3](./Vectors/Vector3)</code>
+### <code>getPos(): [Vector3](./Vectors/Vector3)</code> {#getPos}
 
 Gets this task position
 
@@ -151,7 +151,7 @@ myBlock:getPos()
 
 ---
 
-### <code>setRot(rot: [Vector3](./Vectors/Vector3)): [BlockTask](./BlockTask)</code>
+### <code>setRot(rot: [Vector3](./Vectors/Vector3)): [BlockTask](./BlockTask)</code> {#setRot}
 
 Sets the rotation of the task, relative with its attached part
 
@@ -163,7 +163,7 @@ myBlock:setRot(0, 45, 22.5)
 
 ---
 
-### <code>getRot(): [Vector3](./Vectors/Vector3)</code>
+### <code>getRot(): [Vector3](./Vectors/Vector3)</code> {#getRot}
 
 Gets this task rotation
 
@@ -175,7 +175,7 @@ myBlock:getRot()
 
 ---
 
-### <code>setScale(scale: [Vector3](./Vectors/Vector3)): [BlockTask](./BlockTask)</code>
+### <code>setScale(scale: [Vector3](./Vectors/Vector3)): [BlockTask](./BlockTask)</code> {#setScale}
 
 Sets the scale of the task, relative with its attached part
 
@@ -187,7 +187,7 @@ myBlock:setScale(0.4, 0.4, 0.4) -- myBlock:setScale(0.4) also works
 
 ---
 
-### <code>getScale(): [BlockTask](./BlockTask)</code>
+### <code>getScale(): [BlockTask](./BlockTask)</code> {#getScale}
 
 Gets this task scale
 
@@ -199,7 +199,7 @@ myBlock:getScale()
 
 ---
 
-### <code>setMatrix(matrix: [Matrix4](./Matrices/Matrix4)): [BlockTask](./BlockTask)</code>
+### <code>setMatrix(matrix: [Matrix4](./Matrices/Matrix4)): [BlockTask](./BlockTask)</code> {#setMatrix}
 
 Sets the given matrix as the position matrix for this block task
 The normal matrix is automatically calculated as the inverse transpose of this matrix
@@ -214,7 +214,7 @@ myBlock:setMatrix(matrices.mat4())
 
 ---
 
-### <code>getPositionMatrix(): [Matrix4](./Matrices/Matrix4)</code>
+### <code>getPositionMatrix(): [Matrix4](./Matrices/Matrix4)</code> {#getPositionMatrix}
 
 Recalculates the matrix for this block task, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -226,7 +226,7 @@ myBlock:getPositionMatrix()
 
 ---
 
-### <code>getPositionMatrixRaw(): [Matrix4](./Matrices/Matrix4)</code>
+### <code>getPositionMatrixRaw(): [Matrix4](./Matrices/Matrix4)</code> {#getPositionMatrixRaw}
 
 Returns the position matrix for this block task
 The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
@@ -239,7 +239,7 @@ myBlock:getPositionMatrixRaw()
 
 ---
 
-### <code>getNormalMatrix(): [Matrix3](./Matrices/Matrix3)</code>
+### <code>getNormalMatrix(): [Matrix3](./Matrices/Matrix3)</code> {#getNormalMatrix}
 
 Recalculates the normal matrix for this block task, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -251,7 +251,7 @@ myBlock:getNormalMatrix()
 
 ---
 
-### <code>getNormalMatrixRaw(): [Matrix3](./Matrices/Matrix3)</code>
+### <code>getNormalMatrixRaw(): [Matrix3](./Matrices/Matrix3)</code> {#getNormalMatrixRaw}
 
 Returns the normal matrix for this block task
 The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
