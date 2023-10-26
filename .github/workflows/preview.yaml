@@ -63,7 +63,7 @@ jobs:
         uses: peter-evans/find-comment@v2
         id: fc
         with:
-          issue-number: ${{ github.event.pull_request.number }}
+          issue-number: ${{ github.event.workflow_run.pull_requests[0].number }}
           comment-author: "github-actions[bot]"
           body-includes: "A preview for this pull request is now ready. :tada:"
 
