@@ -6,7 +6,7 @@ on:
     types:
       - completed
 
-concurrency: preview-${{ github.event.workflow_run.pull_requests[0].number }}
+concurrency: preview-${{ env.PR_NUMBER }}
 
 jobs:
   preview:
@@ -50,6 +50,13 @@ jobs:
           name: build
           path: ./build/
 
+      #
+      - name: Read Pull Request Details
+        run: |
+          echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV &&
+          echo "PR_COMMIT_HASH=$(cat ./build/.pr_commit_hash)" >> $GITHUB_ENV &&
+          rm ./build/.pr_number ./build/.pr_commit_hash
+
       - name: Deploy Preview
         uses: cloudflare/pages-action@v1
         with:
@@ -57,13 +64,13 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           projectName: figura-wiki-test
           directory: ./build
-          branch: pr-${{ github.event.workflow_run.pull_requests[0].number }}
+          branch: pr-${{ env.PR_NUMBER }}
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
         id: fc
         with:
-          issue-number: ${{ github.event.workflow_run.pull_requests[0].number }}
+          issue-number: ${{ env.PR_NUMBER }}
           comment-author: "github-actions[bot]"
           body-includes: "A preview for this pull request is now ready. :tada:"
 
@@ -72,17 +79,16 @@ jobs:
       - name: Leave comment
         uses: peter-evans/create-or-update-comment@v1
         with:
-          issue-number: ${{ github.event.workflow_run.pull_requests[0].number }}
+          issue-number: ${{ env.PR_NUMBER }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
           body: |
             A preview for this pull request is now ready. :tada:
 
-            | **Preview Details**   |                                                                                                |
+            | **Name**              | **Details**                                                                                    |
             | --------------------- | ---------------------------------------------------------------------------------------------- |
-            | URL                   | https://pr-${{ github.event.workflow_run.pull_requests[0].number }}.figura-wiki-test.pages.dev |
+            | URL                   | https://pr-${{ env.PR_NUMBER }}.figura-wiki-test.pages.dev                                     |
             | Updated               | ${{ env.NOW }}                                                                                 |
-            | Latest Commit         | ${{ github.event.workflow_run.pull_requests[0].head.sha }}                                     |
-            | Latest Commit Message | ${{ github.event.workflow_run.pull_requests[0].head_commit.message }}                          |
+            | Latest Commit         | ${{ env.PR_COMMIT_HASH }}                                                                      |
 
             This preview will be automatically updated whenever new commits are pushed to this pull request.

@@ -26,6 +26,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Write Pull Request Details
+        run: |
+          echo ${{ github.event.number }} > ./build/.pr_number &&
+          echo ${{ github.event.pull_request.head.sha }} > ./build/.pr_commit_hash
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
