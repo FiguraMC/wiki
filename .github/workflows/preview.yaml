@@ -6,8 +6,6 @@ on:
     types:
       - completed
 
-concurrency: preview-${{ env.PR_NUMBER }}
-
 jobs:
   preview:
     runs-on: ubuntu-latest
@@ -50,7 +48,6 @@ jobs:
           name: build
           path: ./build/
 
-      #
       - name: Read Pull Request Details
         run: |
           echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV &&
@@ -88,7 +85,7 @@ jobs:
             | **Name**              | **Details**                                                                                    |
             | --------------------- | ---------------------------------------------------------------------------------------------- |
             | URL                   | https://pr-${{ env.PR_NUMBER }}.figura-wiki-test.pages.dev                                     |
-            | Updated               | ${{ env.NOW }}                                                                                 |
+            | Updated               | `${{ env.NOW }}`                                                                               |
             | Latest Commit         | ${{ env.PR_COMMIT_HASH }}                                                                      |
 
             This preview will be automatically updated whenever new commits are pushed to this pull request.
