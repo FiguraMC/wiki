@@ -78,7 +78,7 @@ jobs:
           body: |
             A preview for this pull request is now ready. :tada:
 
-            | **Preview Details**   |                                                                                                 |
+            | **Preview Details**   |                                                                                                |
             | --------------------- | ---------------------------------------------------------------------------------------------- |
             | URL                   | https://pr-${{ github.event.workflow_run.pull_requests[0].number }}.figura-wiki-test.pages.dev |
             | Updated               | ${{ env.NOW }}                                                                                 |
