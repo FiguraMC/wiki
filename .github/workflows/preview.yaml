@@ -3,44 +3,13 @@ name: Deploy Pull Request Preview
 on:
   workflow_run:
     workflows: ["Build Pull Request"]
-    types:
-      - completed
+    types: [completed]
 
 jobs:
   preview:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
-
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJson(steps) }}
-        run: echo "$STEPS_CONTEXT"
-
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo "$RUNNER_CONTEXT"
-
-      - name: Dump strategy context
-        env:
-          STRATEGY_CONTEXT: ${{ toJson(strategy) }}
-        run: echo "$STRATEGY_CONTEXT"
-
-      - name: Dump matrix context
-        env:
-          MATRIX_CONTEXT: ${{ toJson(matrix) }}
-        run: echo "$MATRIX_CONTEXT"
-
       - name: Download Artifact
         uses: dawidd6/action-download-artifact@v2
         with:
@@ -69,9 +38,9 @@ jobs:
         with:
           issue-number: ${{ env.PR_NUMBER }}
           comment-author: "github-actions[bot]"
-          body-includes: "A preview for this pull request is now ready. :tada:"
+          body-includes: "A preview for this pull request is now ready! :tada:"
 
-      - run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+      - run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       - name: Leave comment
         uses: peter-evans/create-or-update-comment@v1
@@ -80,12 +49,12 @@ jobs:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
           body: |
-            A preview for this pull request is now ready. :tada:
+            A preview for this pull request is now ready! :tada:
 
-            | **Name**              | **Details**                                                                                    |
-            | --------------------- | ---------------------------------------------------------------------------------------------- |
-            | URL                   | https://pr-${{ env.PR_NUMBER }}.figura-wiki-test.pages.dev                                     |
-            | Updated               | `${{ env.NOW }}`                                                                               |
-            | Latest Commit         | ${{ env.PR_COMMIT_HASH }}                                                                      |
+            | **Name**               | **Details**                                                                                    |
+            | ---------------------- | ---------------------------------------------------------------------------------------------- |
+            | URL                    | https://pr-${{ env.PR_NUMBER }}.figura-wiki-test.pages.dev                                     |
+            | Latest Commit Deployed | ${{ env.PR_COMMIT_HASH }}                                                                      |
+            | Last Updated           | `${{ env.NOW }} UTC`                                                                           |
 
-            This preview will be automatically updated whenever new commits are pushed to this pull request.
+            This preview will be automatically updated whenever new changes are added.
