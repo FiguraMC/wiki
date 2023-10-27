@@ -28,7 +28,7 @@ jobs:
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          projectName: figura-wiki-test
+          projectName: wiki
           directory: ./build
           branch: pr-${{ env.PR_NUMBER }}
 
@@ -53,7 +53,7 @@ jobs:
 
             | **Name**               | **Details**                                                                                    |
             | ---------------------- | ---------------------------------------------------------------------------------------------- |
-            | URL                    | https://pr-${{ env.PR_NUMBER }}.figura-wiki-test.pages.dev                                     |
+            | URL                    | https://pr-${{ env.PR_NUMBER }}.wiki-2e2.pages.dev                                             |
             | Latest Commit Deployed | ${{ env.PR_COMMIT_HASH }}                                                                      |
             | Last Updated           | `${{ env.NOW }} UTC`                                                                           |
 
