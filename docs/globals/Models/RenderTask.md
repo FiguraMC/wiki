@@ -1,5 +1,5 @@
 Represents a rendering task for Figura to complete each frame.
-An abstract superclass of ItemTask, BlockTask, and TextTask.
+An abstract superclass of [ItemTask](./ItemTask), [BlockTask](./BlockTask), [TextTask](./TextTask), and [SpriteTask](./SpriteTask).
 
 ### <code>remove(): [RenderTask](./RenderTask)</code> {#remove}
 

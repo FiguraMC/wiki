@@ -1,4 +1,4 @@
-A task for rendering a Block
+A task for rendering an Item from [newItem](.#newItem)
 
 For this entire page assume:
 
@@ -22,7 +22,7 @@ myItem:setItem("slime_ball")
 
 ### <code>setDisplayMode(displayMode: [DisplayMode](../../enums/ItemDisplayModes)): [ItemTask](./ItemTask)</code> {#setDisplayMode}
 
-Sets the item display mode for this task
+Sets the item [display mode](../../enums/ItemDisplayModes) for this task
 
 **Example**:
 
@@ -34,7 +34,7 @@ myItem:setDisplayMode("GROUND")
 
 ### <code>getDisplayMode(): [DisplayMode](../../enums/ItemDisplayModes)</code> {#getDisplayMode}
 
-Gets this task item display mode
+Gets this task item [display mode](../../enums/ItemDisplayModes)
 
 **Example**:
 

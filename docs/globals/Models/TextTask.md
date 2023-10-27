@@ -1,4 +1,4 @@
-A task for rendering a single Sprite.
+A task for rendering text from [newText](.#newText)
 
 For this entire page assume:
 

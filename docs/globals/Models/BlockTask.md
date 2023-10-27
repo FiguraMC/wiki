@@ -1,10 +1,12 @@
-A task for rendering a Block
+A task for rendering a Block from [newBlock](.#newBlock)
 
 For this entire page assume:
 
 ```lua
 local myBlock = models:newBlock("myCoolBlocksName")
 ```
+
+---
 
 ### <code>setBlock(block: [BlockState](../World/BlockState)): [BlockTask](./BlockTask)</code> {#setBlock}
 
