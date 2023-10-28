@@ -28,7 +28,7 @@ jobs:
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          projectName: wiki
+          projectName: figura-wiki
           directory: ./build
           branch: pr-${{ env.PR_NUMBER }}
 
@@ -37,7 +37,7 @@ jobs:
         id: fc
         with:
           issue-number: ${{ env.PR_NUMBER }}
-          comment-author: "github-actions[bot]"
+          comment-author: figuramcbot
           body-includes: "A preview for this pull request is now ready! :tada:"
 
       - run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
@@ -45,6 +45,7 @@ jobs:
       - name: Leave comment
         uses: peter-evans/create-or-update-comment@v1
         with:
+          token: ${{ secrets.GH_BOT_TOKEN }}
           issue-number: ${{ env.PR_NUMBER }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
@@ -53,7 +54,7 @@ jobs:
 
             | **Name**               | **Details**                                                                                    |
             | ---------------------- | ---------------------------------------------------------------------------------------------- |
-            | URL                    | https://pr-${{ env.PR_NUMBER }}.wiki-2e2.pages.dev                                             |
+            | URL                    | https://pr-${{ env.PR_NUMBER }}.figura-wiki.pages.dev                                             |
             | Latest Commit Deployed | ${{ env.PR_COMMIT_HASH }}                                                                      |
             | Last Updated           | `${{ env.NOW }} UTC`                                                                           |
 

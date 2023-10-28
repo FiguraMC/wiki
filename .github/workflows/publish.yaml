@@ -28,6 +28,6 @@ jobs:
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          projectName: wiki
+          projectName: figura-wiki
           directory: ./build
           gitHubToken: ${{ secrets.GH_TOKEN }}
