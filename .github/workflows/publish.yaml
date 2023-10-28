@@ -30,4 +30,4 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           projectName: figura-wiki
           directory: ./build
-          gitHubToken: ${{ secrets.GH_TOKEN }}
+          gitHubToken: ${{ secrets.GH_BOT_TOKEN }}

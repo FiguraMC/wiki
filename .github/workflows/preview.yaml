@@ -31,6 +31,7 @@ jobs:
           projectName: figura-wiki
           directory: ./build
           branch: pr-${{ env.PR_NUMBER }}
+          gitHubToken: ${{ secrets.GH_BOT_TOKEN }}
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
