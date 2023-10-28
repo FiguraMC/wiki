@@ -316,7 +316,7 @@ host:appendChatHistory("Hello World")
 Sets the text currently being typed in the chat window to the given string
 
 :::caution
-In order to you this function you must turn the `Chat Messages` setting on in Figura's settings
+In order to use this function you must turn the `Chat Messages` setting on in Figura's settings
 :::
 
 **Example**:
