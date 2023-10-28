@@ -1,65 +1,209 @@
-This page is a WIP!
+Represents a sound that can be played
 
-### stop
+Obtained by indexing the SoundAPI
+
+Exists as an object-oriented alternative to sounds:playSound()
+
+For the purposes of the examples assume:
+
+```lua
+local mySound = sounds["entity.bat.ambient"]
+```
+
+---
+
+### `stop()` {#stop}
 
 Stops the sound
 
-### play
+**Example**:
+
+```lua
+mySound:stop()
+```
+
+---
+
+### `play()` {#play}
 
 Plays the sound
 
-### pause
+**Example**:
+
+```lua
+mySound:play()
+```
+
+---
+
+### `pause()` {#pause}
 
 Pauses the sound
 
-### setPos(vec3)
+**Example**:
+
+```lua
+mySound:pause()
+```
+
+---
+
+### `setPos(Vector3)` {#setPos}
 
 Sets the position of the sound
 
-### getPos
+**Example**:
+
+```lua
+mySound:setPos(player:getPos())
+```
+
+---
+
+### `getPos()` {#getPos}
 
 Gets the position of the sound as set by <code>setPos</code>
 
-### isPlaying
+**Example**:
+
+```lua
+mySound:getPos()
+```
+
+---
+
+### `isPlaying()` {#isPlaying}
 
 Gets if the sound is playing, but this is an unreliable function. A workaround is to stop the sound before you play it (even if it isn't playing) so you can reset the playing state.
 
-### setVolume(number)
+:::caution
+
+This function is unreliable and may not work as intended. A usable workaround is to stop the sound before you play it (even if it isn't playing) so you can reset the playing state.
+
+:::
+
+**Example**:
+
+```lua
+mySound:isPlaying()
+```
+
+---
+
+### `setVolume(number)` {#setVolume}
 
 Sets the volume of the sound
 
-### getVolume
+**Example**:
+
+```lua
+mySound:setVolume(5)
+```
+
+---
+
+### `getVolume()` {#getVolume}
 
 Gets the volume of the sound
 
-### setPitch(number)
+**Example**:
+
+```lua
+mySound:getVolume()
+```
+
+---
+
+### `setPitch(number)` {#setPitch}
 
 Sets the pitch of the sound
 
-### getPitch
+**Example**:
+
+```lua
+mySound:setPitch(5)
+```
+
+---
+
+### `getPitch()` {#getPitch}
 
 Gets the pitch of the sound
 
-### setLoop(bool)
+**Example**:
+
+```lua
+mySound:getPitch()
+```
+
+---
+
+### `setLoop(bool)` {#setLoop}
 
 Sets if the sound will loop or not
 
-### isLooping
+**Example**:
+
+```lua
+mySound:setLoop(true)
+```
+
+---
+
+### `isLooping()` {#isLooping}
 
 Gets if the sound is set to loop or not
 
-### setAttenuation(number)
+**Example**:
+
+```lua
+mySound:isLooping()
+```
+
+---
+
+### `setAttenuation(number)` {#setAttenuation}
 
 Sets the attenuation of the sound
 
-### getAttenuation
+**Example**:
+
+```lua
+mySound:setAttenuation(5)
+```
+
+---
+
+### `getAttenuation()` {#getAttenuation}
 
 Gets the attenuation of the sound
 
-### setSubtitle(string)
+**Example**:
+
+```lua
+mySound:getAttenuation()
+```
+
+---
+
+### `setSubtitle(string)` {#setSubtitle}
 
 Sets the subtitle (the name that Minecraft's subtitle function will call the sound)
 
-### getSubtitle
+**Example**:
+
+```lua
+mySound:setSubtitle("Bat ecolocates")
+```
+
+---
+
+### `getSubtitle()` {#getSubtitle}
 
 Gets the subtitle
+
+**Example**:
+
+```lua
+mySound:getSubtitle()
+```
