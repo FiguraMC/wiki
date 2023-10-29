@@ -62,14 +62,19 @@ const config = {
         },
         items: [
           {
+            type: "html",
+            position: "left",
+            value: "<b>•</b>",
+          },
+          {
             type: "docSidebar",
-            position: "right",
+            position: "left",
             sidebarId: "tutorials",
             label: "Tutorials",
           },
           {
             type: "docSidebar",
-            position: "right",
+            position: "left",
             sidebarId: "api",
             label: "API",
           },
