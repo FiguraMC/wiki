@@ -134,8 +134,8 @@ It only overrides while the animation is playing.
 
 ### Jimmy's Animation Handler
 
-If you have a lot of animations that need detections, Jimmy's Animation Handler can play your animations for you. [Find it here in the Discord](https://discord.com/channels/1129805506354085959/1143024882041503844)
+If you have a lot of animations that need detections, Jimmy's Animation Handler can play your animations for you. [Find it here on GitHub](https://github.com/JimmyHelp/JimmyAnims)
 
 ### GSAnimBlend
 
-If you want to smooth the transition between animations so it doesn't jump between them you can use GSAnimBlend. [Find it here in the Discord](https://discord.com/channels/1129805506354085959/1135537784543776829)
+If you want to smooth the transition between animations so it doesn't jump between them you can use GSAnimBlend. [Find it here on GitHub](https://github.com/GrandpaScout/GSAnimBlend)
