@@ -8,9 +8,9 @@ For this entire page assume:
 local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
 ```
 
-## Press/Release {#Press-Release}
+## Press/Release \{#Press-Release}
 
-### `setOnPress(fn)` {#setOnPress}
+### `setOnPress(fn)` \{#setOnPress}
 
 Sets the function that is executed when this key is pressed
 
@@ -32,7 +32,7 @@ end)
 
 ---
 
-### `setOnRelease(fn)` {#setOnRelease}
+### `setOnRelease(fn)` \{#setOnRelease}
 
 Sets the function that is executed when this key is released
 
@@ -54,7 +54,7 @@ end)
 
 ---
 
-### `isPressed()` {#isPressed}
+### `isPressed()` \{#isPressed}
 
 Gets whether this keybind is currently pressed down
 
@@ -64,9 +64,9 @@ Gets whether this keybind is currently pressed down
 myKey:isPressed()
 ```
 
-## Key Properites {#Key-Properties}
+## Key Properites \{#Key-Properties}
 
-### `setKey(string)` {#setKey}
+### `setKey(string)` \{#setKey}
 
 Sets the key for this keybind
 
@@ -78,7 +78,7 @@ myKey:setKey("key.keyboard.l")
 
 ---
 
-### `getKey()` {#getKey}
+### `getKey()` \{#getKey}
 
 Gets the current key for this keybind
 
@@ -90,7 +90,7 @@ myKey:getKey()
 
 ---
 
-### `isDefault()` {#isDefault}
+### `isDefault()` \{#isDefault}
 
 Checks whether this key is currently set to its default state (not been changed using the keybind menu)
 
@@ -102,7 +102,7 @@ myKey:isDefault()
 
 ---
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Gets the name of the keybind, which you set when you created the keybind
 
@@ -114,7 +114,7 @@ myKey:getName()
 
 ---
 
-### `getKeyName()` {#getKeyName}
+### `getKeyName()` \{#getKeyName}
 
 Gets the name of the current key for this keybind
 
@@ -126,7 +126,7 @@ myKey:getKeyName()
 
 ---
 
-### `getID()` {#getID}
+### `getID()` \{#getID}
 
 Returns the numeric ID of this keybind
 
@@ -138,7 +138,7 @@ myKey:getID()
 
 ---
 
-### `setEnabled(bool)` {#setEnabled}
+### `setEnabled(bool)` \{#setEnabled}
 
 Toggles if this keybind should be processed or not
 
@@ -150,7 +150,7 @@ myKey:setEnabled(true)
 
 ---
 
-### `isEnabled()` {#isEnabled}
+### `isEnabled()` \{#isEnabled}
 
 Returns if this keybind is enabled or not
 
@@ -162,7 +162,7 @@ myKey:isEnabled()
 
 ---
 
-### `setGUI(bool)` {#setGUI}
+### `setGUI(bool)` \{#setGUI}
 
 Set whenever or not this keybind should run when a GUI screen is open
 
@@ -174,7 +174,7 @@ myKey:setGUI(true)
 
 ---
 
-### `isGuiEnabled()` {#isGuiEnabled}
+### `isGuiEnabled()` \{#isGuiEnabled}
 
 Returns if this keybind should work when a GUI screen (Chat, Inventory, etc) is open or not
 

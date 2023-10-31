@@ -8,7 +8,7 @@ local mySprite = models:newSprite("myCoolSpritesName")
 
 ---
 
-### <code>setTexture(texture: [Texture](../Textures/Texture) | string, width: number?, height: number?): [SpriteTask](./SpriteTask)</code> {#setTexture}
+### <code>setTexture(texture: [Texture](../Textures/Texture) | string, width: number?, height: number?): [SpriteTask](./SpriteTask)</code> \{#setTexture}
 
 Sets this task's texture
 The texture dimensions, Width and Height, must be provided if the texture is a location
@@ -43,7 +43,7 @@ mySprite:setTexture(textures["myTexture"], 16, 16)
 
 ---
 
-### <code>getTexture(): [Texture](../Textures/Texture)</code> {#getTexture}
+### <code>getTexture(): [Texture](../Textures/Texture)</code> \{#getTexture}
 
 Returns this task's current texture
 
@@ -55,7 +55,7 @@ mySprite:getTexture()
 
 ---
 
-### <code>setDimensions(dimensions: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> {#setDimensions}
+### <code>setDimensions(dimensions: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setDimensions}
 
 Sets the texture dimensions, used in UV calculation. Accepts a `Vector2` of dimension values or a number per value.
 
@@ -70,7 +70,7 @@ mySprite:setDimensions(32, 1024)
 
 ---
 
-### <code>getDimensions(): [Vector2](../Vectors/Vector2)</code> {#getDimensions}
+### <code>getDimensions(): [Vector2](../Vectors/Vector2)</code> \{#getDimensions}
 
 Returns the texture dimensions, used in UV calculation
 
@@ -82,7 +82,7 @@ mySprite:getDimensions()
 
 ---
 
-### <code>setSize(size: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> {#setSize}
+### <code>setSize(size: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setSize}
 
 Sets the width and height used to render this sprite. Accepts a `Vector2` of size values or a number per value.
 
@@ -96,7 +96,7 @@ mySprite:setSize(16, 16)
 
 ---
 
-### <code>getSize(): [Vector2](../Vectors/Vector2)</code> {#getSize}
+### <code>getSize(): [Vector2](../Vectors/Vector2)</code> \{#getSize}
 
 Returns the width and height used to render this sprite
 
@@ -108,7 +108,7 @@ mySprite:getSize()
 
 ---
 
-### <code>setRegion(region: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> {#setRegion}
+### <code>setRegion(region: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setRegion}
 
 Sets the texture UV region. Accepts a `Vector2` of region values or a number per value. Uses its dimensions to calculate the max UV.
 
@@ -120,7 +120,7 @@ mySprite:setRegion(64, 64)
 
 ---
 
-### <code>getRegion(): [Vector2](../Vectors/Vector2)</code> {#getRegion}
+### <code>getRegion(): [Vector2](../Vectors/Vector2)</code> \{#getRegion}
 
 Gets the texture UV region
 
@@ -132,7 +132,7 @@ mySprite:getRegion()
 
 ---
 
-### <code>setUV(uv: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> {#setUV}
+### <code>setUV(uv: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setUV}
 
 Sets this texture UV offset. Accepts a `Vector2` of UV values or a number per value. The Region and Dimension are used to calculate the end UV.
 
@@ -155,7 +155,7 @@ end
 
 ---
 
-### <code>getUV(): [Vector2](../Vectors/Vector2)</code> {#getUV}
+### <code>getUV(): [Vector2](../Vectors/Vector2)</code> \{#getUV}
 
 Gets this texture UV offset
 
@@ -167,7 +167,7 @@ mySprite:getUV()
 
 ---
 
-### <code>setUVPixels(uv: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> {#setUVPixels}
+### <code>setUVPixels(uv: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setUVPixels}
 
 Set this texture UV offset, in pixels, based on the texture's dimension. Accepts a `Vector2` of UV values or a number per value.
 
@@ -190,7 +190,7 @@ end
 
 ---
 
-### <code>getUVPixels(): [Vector2](../Vectors/Vector2)</code> {#getUVPixels}
+### <code>getUVPixels(): [Vector2](../Vectors/Vector2)</code> \{#getUVPixels}
 
 Get this texture UV offset, in pixels, based on the texture's dimension
 
@@ -202,7 +202,7 @@ mySprite:getUVPixels()
 
 ---
 
-### <code>setColor(rgba: [Vector4](../Vectors/Vector4)): [SpriteTask](./SpriteTask)</code> {#setColor}
+### <code>setColor(rgba: [Vector4](../Vectors/Vector4)): [SpriteTask](./SpriteTask)</code> \{#setColor}
 
 Sets a color multiplier for this sprite. Values are RGBA from 0 to 1. Default values are 1, alpha is optional. Takes a `Vector4` of rgba values or a number per value.
 
@@ -214,7 +214,7 @@ mySprite:setColor(world.getBiome():getWaterColor())
 
 ---
 
-### <code>getColor(): [Vector4](../Vectors/Vector4)</code> {#getColor}
+### <code>getColor(): [Vector4](../Vectors/Vector4)</code> \{#getColor}
 
 Gets the current color multiplier of this sprite
 Values are RGBA from 0 to 1
@@ -227,7 +227,7 @@ mySprite:getColor()
 
 ---
 
-### <code>setRenderType(renderType: [RenderType](../../enums/RenderTypes)): [SpriteTask](./SpriteTask)</code> {#setRenderType}
+### <code>setRenderType(renderType: [RenderType](../../enums/RenderTypes)): [SpriteTask](./SpriteTask)</code> \{#setRenderType}
 
 Sets the current render type of this sprite
 TRANSLUCENT by default
@@ -241,7 +241,7 @@ mySprite:setRenderType("CUTOUT")
 
 ---
 
-### <code>getRenderType(): [RenderType](../../enums/RenderTypes)</code> {#getRenderType}
+### <code>getRenderType(): [RenderType](../../enums/RenderTypes)</code> \{#getRenderType}
 
 Gets the name of the current render type for this sprite
 
@@ -253,7 +253,7 @@ mySprite:getRenderType()
 
 ---
 
-### <code>getVertices(): [Vertex](./Vertex)[]</code> {#getVertices}
+### <code>getVertices(): [Vertex](./Vertex)[]</code> \{#getVertices}
 
 Returns a table with all 4 vertices of this sprite
 Changing the values through other functions will reset those vertices
@@ -266,7 +266,7 @@ mySprite:getVertices()
 
 ---
 
-### <code>remove(): [SpriteTask](./SpriteTask)</code> {#remove}
+### <code>remove(): [SpriteTask](./SpriteTask)</code> \{#remove}
 
 Removes this sprite task from the parent model part
 
@@ -278,7 +278,7 @@ mySprite:remove()
 
 ---
 
-### <code>getName(): string</code> {#getName}
+### <code>getName(): string</code> \{#getName}
 
 Get this task's name
 
@@ -290,7 +290,7 @@ mySprite:getName()
 
 ---
 
-### <code>setVisible(state: boolean): [SpriteTask](./SpriteTask)</code> {#setVisible}
+### <code>setVisible(state: boolean): [SpriteTask](./SpriteTask)</code> \{#setVisible}
 
 Sets whether or not this task should be rendered
 
@@ -305,7 +305,7 @@ end)
 
 ---
 
-### <code>isVisible(): boolean</code> {#isVisible}
+### <code>isVisible(): boolean</code> \{#isVisible}
 
 Checks if this task is visible
 
@@ -319,7 +319,7 @@ end
 
 ---
 
-### <code>setLight(blockLight: number?, skyLight: number?): [SpriteTask](./SpriteTask)</code> {#setLight}
+### <code>setLight(blockLight: number?, skyLight: number?): [SpriteTask](./SpriteTask)</code> \{#setLight}
 
 Sets the light override value of this task
 Values are given from 0 to 15, indicating the block light and sky light levels you want to use
@@ -335,7 +335,7 @@ mySprite:setLight(blockLight, skyLight)
 
 ---
 
-### <code>getLight(): [Vector2](../Vectors/Vector2)</code> {#getLight}
+### <code>getLight(): [Vector2](../Vectors/Vector2)</code> \{#getLight}
 
 Returns the light override value of this task
 
@@ -347,7 +347,7 @@ mySprite:getLight()
 
 ---
 
-### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [SpriteTask](./SpriteTask)</code> {#setOverlay}
+### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [SpriteTask](./SpriteTask)</code> \{#setOverlay}
 
 Sets the overlay override value of this task
 Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
@@ -362,7 +362,7 @@ mySprite:setOverlay(hurt and 0 or nil, 1)
 
 ---
 
-### <code>getOverlay(): [Vector2](../Vectors/Vector2)</code> {#getOverlay}
+### <code>getOverlay(): [Vector2](../Vectors/Vector2)</code> \{#getOverlay}
 
 Returns the overlay override value of this task
 
@@ -374,7 +374,7 @@ mySprite:getOverlay()
 
 ---
 
-### <code>setPos(pos: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> {#setPos}
+### <code>setPos(pos: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> \{#setPos}
 
 Sets the position of the task, relative with its attached part
 Uses model coordinates
@@ -387,7 +387,7 @@ mySprite:setPos(0, 16, 0)
 
 ---
 
-### <code>getPos(): [Vector3](../Vectors/Vector3)</code> {#getPos}
+### <code>getPos(): [Vector3](../Vectors/Vector3)</code> \{#getPos}
 
 Gets this task position
 
@@ -399,7 +399,7 @@ mySprite:getPos()
 
 ---
 
-### <code>setRot(rot: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> {#setRot}
+### <code>setRot(rot: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> \{#setRot}
 
 Sets the rotation of the task, relative with its attached part
 
@@ -411,7 +411,7 @@ mySprite:setRot(0, 45, 22.5)
 
 ---
 
-### <code>getRot(): [Vector3](../Vectors/Vector3)</code> {#getRot}
+### <code>getRot(): [Vector3](../Vectors/Vector3)</code> \{#getRot}
 
 Gets this task rotation
 
@@ -423,7 +423,7 @@ mySprite:getRot()
 
 ---
 
-### <code>setScale(scale: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> {#setScale}
+### <code>setScale(scale: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> \{#setScale}
 
 Sets the scale of the task, relative with its attached part
 
@@ -435,7 +435,7 @@ mySprite:setScale(0.4, 0.4, 0.4) -- mySprite:setScale(0.4) also works
 
 ---
 
-### <code>getScale(): [SpriteTask](./SpriteTask)</code> {#getScale}
+### <code>getScale(): [SpriteTask](./SpriteTask)</code> \{#getScale}
 
 Gets this task scale
 
@@ -447,7 +447,7 @@ mySprite:getScale()
 
 ---
 
-### <code>setMatrix(matrix: [Matrix4](../Matrices/Matrix4)): [SpriteTask](./SpriteTask)</code> {#setMatrix}
+### <code>setMatrix(matrix: [Matrix4](../Matrices/Matrix4)): [SpriteTask](./SpriteTask)</code> \{#setMatrix}
 
 Sets the given matrix as the position matrix for this sprite task
 The normal matrix is automatically calculated as the inverse transpose of this matrix
@@ -462,7 +462,7 @@ mySprite:setMatrix(matrices.mat4())
 
 ---
 
-### <code>getPositionMatrix(): [Matrix4](../Matrices/Matrix4)</code> {#getPositionMatrix}
+### <code>getPositionMatrix(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrix}
 
 Recalculates the matrix for this sprite task, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -474,7 +474,7 @@ mySprite:getPositionMatrix()
 
 ---
 
-### <code>getPositionMatrixRaw(): [Matrix4](../Matrices/Matrix4)</code> {#getPositionMatrixRaw}
+### <code>getPositionMatrixRaw(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrixRaw}
 
 Returns the position matrix for this sprite task
 The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
@@ -487,7 +487,7 @@ mySprite:getPositionMatrixRaw()
 
 ---
 
-### <code>getNormalMatrix(): [Matrix3](../Matrices/Matrix3)</code> {#getNormalMatrix}
+### <code>getNormalMatrix(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrix}
 
 Recalculates the normal matrix for this sprite task, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -499,7 +499,7 @@ mySprite:getNormalMatrix()
 
 ---
 
-### <code>getNormalMatrixRaw(): [Matrix3](../Matrices/Matrix3)</code> {#getNormalMatrixRaw}
+### <code>getNormalMatrixRaw(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrixRaw}
 
 Returns the normal matrix for this sprite task
 The Raw version of the function is different in that it doesn't recalculate the matrix before returning it

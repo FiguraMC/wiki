@@ -10,7 +10,7 @@ For all exmaples on this page assume:
 local block = world.getBlockState(player:getPos():sub(0, 0.5, 0))
 ```
 
-### `getProperties()` {#getProperties}
+### `getProperties()` \{#getProperties}
 
 Returns a table with the properties of this BlockState
 
@@ -22,7 +22,7 @@ block:getProperties()
 
 ---
 
-### `isOpaque()` {#isOpaque}
+### `isOpaque()` \{#isOpaque}
 
 Gets whether or not this BlockState is opaque
 
@@ -34,7 +34,7 @@ block:isOpaque()
 
 ---
 
-### `getID()` {#getID}
+### `getID()` \{#getID}
 
 Returns this BlockState identifier
 
@@ -46,7 +46,7 @@ block:getID()
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Returns the saved position for this BlockState proxy
 
@@ -60,7 +60,7 @@ block:getID()
 
 ---
 
-### `setPos(Vector3)` {#setPos}
+### `setPos(Vector3)` \{#setPos}
 
 Sets the saved position for this BlockState proxy
 
@@ -74,7 +74,7 @@ block:setPos(player:getPos())
 
 ---
 
-### `setOpacity()` {#setOpacity}
+### `setOpacity()` \{#setOpacity}
 
 Gets the opacity of the BlockState, in terms of how much it affects light levels
 
@@ -86,7 +86,7 @@ block:setOpacity()
 
 ---
 
-### `getTags()` {#getTags}
+### `getTags()` \{#getTags}
 
 Returns a table containing all the tags of this block, as strings
 
@@ -98,7 +98,7 @@ block:getTags()
 
 ---
 
-### `isSolidBlock()` {#isSolidBlock}
+### `isSolidBlock()` \{#isSolidBlock}
 
 Gets whether or not the BlockState is considered a "solid" block by Minecraft
 
@@ -110,7 +110,7 @@ block:isSolidBlock()
 
 ---
 
-### `getBlastResistance()` {#getBlastResistance}
+### `getBlastResistance()` \{#getBlastResistance}
 
 Gets the blast resistance of this BlockState
 
@@ -122,7 +122,7 @@ block:getBlastResistance()
 
 ---
 
-### `isFullCube()` {#isFullCube}
+### `isFullCube()` \{#isFullCube}
 
 Gets whether or not the BlockState has a full cube as its collision hitbox
 
@@ -134,7 +134,7 @@ block:isFullCube()
 
 ---
 
-### `asItem()` {#asItem}
+### `asItem()` \{#asItem}
 
 Returns an ItemStack representing this block in item form, whatever Minecraft deems that to be
 
@@ -148,7 +148,7 @@ block:asItem()
 
 ---
 
-### `hasBlockEntity()` {#hasBlockEntity}
+### `hasBlockEntity()` \{#hasBlockEntity}
 
 Gets whether or not this BlockState has an associated block entity
 
@@ -160,7 +160,7 @@ block:hasBlockEntity()
 
 ---
 
-### `getCollisionShape()` {#getCollisionShape}
+### `getCollisionShape()` \{#getCollisionShape}
 
 Returns a table representing the bounding boxes of the collision shape
 
@@ -174,7 +174,7 @@ block:getCollisionShape()
 
 ---
 
-### `getOutlineShape()` {#getOutlineShape}
+### `getOutlineShape()` \{#getOutlineShape}
 
 Returns a table representing the bounding boxes of the outline shape
 
@@ -188,7 +188,7 @@ block:getOutlineShape()
 
 ---
 
-### `isTranslucent()` {#isTranslucent}
+### `isTranslucent()` \{#isTranslucent}
 
 Gets whether or not the BlockState would propagate sky light downwards
 
@@ -200,7 +200,7 @@ block:isTranslucent()
 
 ---
 
-### `getMapColor()` {#getMapColor}
+### `getMapColor()` \{#getMapColor}
 
 Gets the map color of this BlockState, as a Vector3 with R,G,B ranging 0 to 1
 
@@ -212,7 +212,7 @@ block:getMapColor()
 
 ---
 
-### `emitsRedstonePower()` {#emitsRedstonePower}
+### `emitsRedstonePower()` \{#emitsRedstonePower}
 
 Gets whether or not this BlockState emits redstone power
 
@@ -224,7 +224,7 @@ block:emitsRedstonePower()
 
 ---
 
-### `getFriction()` {#getFriction}
+### `getFriction()` \{#getFriction}
 
 Gets the friction of this BlockState
 
@@ -238,7 +238,7 @@ block:getFriction()
 
 ---
 
-### `toStateString()` {#toStateString}
+### `toStateString()` \{#toStateString}
 
 Converts this BlockState into a string, like you'd see in a Minecraft command
 
@@ -250,7 +250,7 @@ block:toStateString()
 
 ---
 
-### `getEntityData()` {#getEntityData}
+### `getEntityData()` \{#getEntityData}
 
 Returns the nbt of the Block Entity associated with this BlockState, at its position, as a table
 
@@ -264,7 +264,7 @@ block:getEntityData()
 
 ---
 
-### `isAir()` {#isAir}
+### `isAir()` \{#isAir}
 
 Checks if this block is air
 
@@ -276,7 +276,7 @@ block:isAir()
 
 ---
 
-### `getFluidTags()` {#getFluidTags}
+### `getFluidTags()` \{#getFluidTags}
 
 Returns a table containing all the fluid tags of this block, as strings
 
@@ -288,7 +288,7 @@ block:getFluidTags()
 
 ---
 
-### `getSounds()` {#getSounds}
+### `getSounds()` \{#getSounds}
 
 Gets the names of all the sounds which can play from this BlockState, as well as their pitch and volume
 
@@ -302,7 +302,7 @@ block:getSounds()
 
 ---
 
-### `getVelocityMultiplier()` {#getVelocityMultiplier}
+### `getVelocityMultiplier()` \{#getVelocityMultiplier}
 
 Gets the velocity multiplier of this BlockState
 
@@ -316,7 +316,7 @@ block:getVelocityMultiplier()
 
 ---
 
-### `getJumpVelocityMultiplier()` {#getJumpVelocityMultiplier}
+### `getJumpVelocityMultiplier()` \{#getJumpVelocityMultiplier}
 
 Gets the jump velocity multiplier of this BlockState
 
@@ -330,7 +330,7 @@ block:getJumpVelocityMultiplier()
 
 ---
 
-### `getLuminance()` {#getLuminance}
+### `getLuminance()` \{#getLuminance}
 
 Gets the emission light level of this BlockState
 
@@ -342,7 +342,7 @@ block:getLuminance()
 
 ---
 
-### `getHardness()` {#getHardness}
+### `getHardness()` \{#getHardness}
 
 Gets the hardness of the BlockState
 
@@ -354,7 +354,7 @@ block:getHardness()
 
 ---
 
-### `getTextures()` {#getTextures}
+### `getTextures()` \{#getTextures}
 
 Returns a List of this BlockState's textures
 
@@ -370,7 +370,7 @@ block:getTextures()
 
 ---
 
-### `hasCollision()` {#hasCollision}
+### `hasCollision()` \{#hasCollision}
 
 Returns true if this block has collision
 
@@ -382,7 +382,7 @@ block:hasCollision()
 
 ---
 
-### `hasEmissiveLighting()` {#hasEmissiveLighting}
+### `hasEmissiveLighting()` \{#hasEmissiveLighting}
 
 Gets whether or not the BlockState uses emissive lighting
 
@@ -394,7 +394,7 @@ block:hasEmissiveLighting()
 
 ---
 
-### `getComparatorOutput()` {#getComparatorOutput}
+### `getComparatorOutput()` \{#getComparatorOutput}
 
 Gets the amount of signal strength a comparator would get from this BlockState
 
@@ -406,7 +406,7 @@ block:getComparatorOutput()
 
 ---
 
-### `id` {#id}
+### `id` \{#id}
 
 The identifier of the block this BlockState comes from
 
@@ -418,7 +418,7 @@ block.id
 
 ---
 
-### `properties` {#properties}
+### `properties` \{#properties}
 
 A table containing the properties of this BlockState
 

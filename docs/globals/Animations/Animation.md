@@ -10,9 +10,9 @@ local myAnim = animations.myModel.myAnimation
 
 For an explanation on indexing animations, see the [Animations Tutorial](/tutorials/Animations)
 
-## Play/Stop {#Play-Stop}
+## Play/Stop \{#Play-Stop}
 
-### `play()` {#play}
+### `play()` \{#play}
 
 Initializes the animation
 
@@ -26,7 +26,7 @@ myAnim:play()
 
 ---
 
-### `stop()` {#stop}
+### `stop()` \{#stop}
 
 Gets the animation's priority
 
@@ -38,7 +38,7 @@ myAnim:stop()
 
 ---
 
-### `pause()` {#pause}
+### `pause()` \{#pause}
 
 Pause the animation's playback
 
@@ -50,7 +50,7 @@ myAnim:pause()
 
 ---
 
-### `restart()` {#restart}
+### `restart()` \{#restart}
 
 Restarts the animation
 
@@ -66,7 +66,7 @@ myAnim:restart()
 
 ---
 
-### `setPlaying(bool)` {#setPlaying}
+### `setPlaying(bool)` \{#setPlaying}
 
 A function that merges "play" and "stop" together
 
@@ -80,7 +80,7 @@ myAnim:setPlaying(player:getPose() == "CROUCHING")
 
 ---
 
-### `isPlaying()` {#isPlaying}
+### `isPlaying()` \{#isPlaying}
 
 Get if the animation is playing
 
@@ -92,7 +92,7 @@ myAnim:isPlaying()
 
 ---
 
-### `isStopped()` {#isStopped}
+### `isStopped()` \{#isStopped}
 
 Get if the animation is stopped
 
@@ -104,7 +104,7 @@ myAnim:isStopped()
 
 ---
 
-### `isPaused()` {#isPaused}
+### `isPaused()` \{#isPaused}
 
 Gets if the animation is paused
 
@@ -116,7 +116,7 @@ myAnim:isPaused()
 
 ---
 
-### `getPlayState()` {#getPlayState}
+### `getPlayState()` \{#getPlayState}
 
 Get the animation's playback state
 
@@ -128,9 +128,9 @@ These will either be `"PLAYING"`, `"STOPPED"`, or `"PAUSED"`
 myAnim:getPlayState() == "PLAYING"
 ```
 
-## Timing {#Timing}
+## Timing \{#Timing}
 
-### `setLength(number)` {#setLength}
+### `setLength(number)` \{#setLength}
 
 Gets the animation's length
 
@@ -142,7 +142,7 @@ myAnim:setLength(1)
 
 ---
 
-### `getLength()` {#getLength}
+### `getLength()` \{#getLength}
 
 Gets the animation's length
 
@@ -154,7 +154,7 @@ myAnim:getLength()
 
 ---
 
-### `setPriority(number)` {#setPriority}
+### `setPriority(number)` \{#setPriority}
 
 Sets the animation's priority
 
@@ -170,7 +170,7 @@ myAnim:setPriority(1)
 
 ---
 
-### `getPriority()` {#getPriority}
+### `getPriority()` \{#getPriority}
 
 Gets the animation's priority
 
@@ -182,7 +182,7 @@ myAnim:getPriority()
 
 ---
 
-### `setOffset(number)` {#setOffset}
+### `setOffset(number)` \{#setOffset}
 
 Sets how much time to skip for the animation
 
@@ -196,7 +196,7 @@ myAnim:setOffset(1)
 
 ---
 
-### `getOffset()` {#getOffset}
+### `getOffset()` \{#getOffset}
 
 Gets the animation's offset time
 
@@ -208,7 +208,7 @@ myAnim:getOffset()
 
 ---
 
-### `setTime(number)` {#setTime}
+### `setTime(number)` \{#setTime}
 
 Get the animation's playback current time
 **Example**:
@@ -219,7 +219,7 @@ myAnim:setTime(1)
 
 ---
 
-### `getTime()` {#getTime}
+### `getTime()` \{#getTime}
 
 Get the animation's playback current time
 **Example**:
@@ -230,7 +230,7 @@ myAnim:getTime()
 
 ---
 
-### `setLoop(bool)` {#setLoop}
+### `setLoop(bool)` \{#setLoop}
 
 Sets the animation's loop mode
 
@@ -242,7 +242,7 @@ myAnim:setLoop(true)
 
 ---
 
-### `getLoop()` {#getLoop}
+### `getLoop()` \{#getLoop}
 
 Gets the animation's loop mode
 **Example**:
@@ -253,7 +253,7 @@ myAnim:getLoop()
 
 ---
 
-### `setBlend(number)` {#setBlend}
+### `setBlend(number)` \{#setBlend}
 
 Sets the animation's keyframe blend factor
 
@@ -265,7 +265,7 @@ myAnim:setBlend(.5)
 
 ---
 
-### `getBlend()` {#getBlend}
+### `getBlend()` \{#getBlend}
 
 Gets the animation's keyframe blend factor
 
@@ -277,7 +277,7 @@ myAnim:getBlend()
 
 ---
 
-### `setStartDelay(number)` {#setStartDelay}
+### `setStartDelay(number)` \{#setStartDelay}
 
 Set how much time to wait before this animation is initialized
 
@@ -291,7 +291,7 @@ myAnim:setStartDelay(1)
 
 ---
 
-### `getStartDelay()` {#getStartDelay}
+### `getStartDelay()` \{#getStartDelay}
 
 Gets the animation's start delay
 
@@ -303,7 +303,7 @@ myAnim:getStartDelay()
 
 ---
 
-### `setLoopDelay(number)` {#setLoopDelay}
+### `setLoopDelay(number)` \{#setLoopDelay}
 
 Set how much time to wait in between the loops of this animation
 
@@ -315,7 +315,7 @@ myAnim:setLoopDelay(1)
 
 ---
 
-### `getLoopDelay()` {#getLoopDelay}
+### `getLoopDelay()` \{#getLoopDelay}
 
 Gets the animation's loop delay
 
@@ -327,7 +327,7 @@ myAnim:getLoopDelay()
 
 ---
 
-### `setSpeed(number)` {#setSpeed}
+### `setSpeed(number)` \{#setSpeed}
 
 Sets the animation's playback speed
 
@@ -341,7 +341,7 @@ myAnim:setSpeed(2)
 
 ---
 
-### `getSpeed()` {#getSpeed}
+### `getSpeed()` \{#getSpeed}
 
 Gets the animation's speed
 
@@ -351,9 +351,9 @@ Gets the animation's speed
 myAnim:getSpeed()
 ```
 
-## Overriding {#Overriding}
+## Overriding \{#Overriding}
 
-### `setOverride(bool)` {#setOverride}
+### `setOverride(bool)` \{#setOverride}
 
 Set if this animation should override all of its parts vanilla transforms
 
@@ -367,7 +367,7 @@ myAnim:setOverride()
 
 ---
 
-### `setOverrideRot(bool)` {#setOverrideRot}
+### `setOverrideRot(bool)` \{#setOverrideRot}
 
 Set if this animation should override its parts vanilla rotation
 
@@ -379,7 +379,7 @@ myAnim:setOverrideRot(true)
 
 ---
 
-### `getOverrideRot()` {#getOverrideRot}
+### `getOverrideRot()` \{#getOverrideRot}
 
 Gets if this animation should override its parts vanilla rotation
 
@@ -391,7 +391,7 @@ myAnim:getOverrideRot()
 
 ---
 
-### `setOverridePos(bool)` {#setOverridePos}
+### `setOverridePos(bool)` \{#setOverridePos}
 
 Set if this animation should override its parts vanilla position
 
@@ -403,7 +403,7 @@ myAnim:setOverridePos(true)
 
 ---
 
-### `getOverridePos()` {#getOverridePos}
+### `getOverridePos()` \{#getOverridePos}
 
 Gets if this animation should override its parts vanilla position
 
@@ -415,7 +415,7 @@ myAnim:getOverridePos()
 
 ---
 
-### `setOverrideScale(bool)` {#setOverrideScale}
+### `setOverrideScale(bool)` \{#setOverrideScale}
 
 Set if this animation should override its parts vanilla scale
 
@@ -427,7 +427,7 @@ myAnim:setOverrideScale(true)
 
 ---
 
-### `getOverrideScale()` {#getOverrideScale}
+### `getOverrideScale()` \{#getOverrideScale}
 
 Gets if this animation should override its parts vanilla scale
 
@@ -437,9 +437,9 @@ Gets if this animation should override its parts vanilla scale
 myAnim:getOverrideScale()
 ```
 
-## Misc {#Misc}
+## Misc \{#Misc}
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Returns this animation's name
 
@@ -451,7 +451,7 @@ myAnim:getName()
 
 ---
 
-### `newCode(number,string)` {#newCode}
+### `newCode(number,string)` \{#newCode}
 
 Adds a string to run in a determinant time
 

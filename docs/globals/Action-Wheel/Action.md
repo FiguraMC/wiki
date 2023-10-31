@@ -6,7 +6,7 @@ Functions to modify how your Action looks.
 
 ---
 
-### <code>setTitle(title: string): [Action](./Action)</code> {#setTitle}
+### <code>setTitle(title: string): [Action](./Action)</code> \{#setTitle}
 
 Sets the title of the Action.
 
@@ -34,7 +34,7 @@ myPage:newAction()
 
 ---
 
-### <code>getTitle(): string</code> {#getTitle}
+### <code>getTitle(): string</code> \{#getTitle}
 
 Gets the Action's title.
 
@@ -58,7 +58,7 @@ print(myAction:getTitle())
 
 ---
 
-### <code>setItem(item: [ItemStack](../World/ItemStack)): [Action](./Action)</code> {#setItem}
+### <code>setItem(item: [ItemStack](../World/ItemStack)): [Action](./Action)</code> \{#setItem}
 
 Sets an item to display on the Acton.
 
@@ -86,7 +86,7 @@ myPage:newAction()
 
 ---
 
-### <code>setColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> {#setColor}
+### <code>setColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> \{#setColor}
 
 Sets the color of the Action. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
 
@@ -114,7 +114,7 @@ myPage:newAction()
 
 ---
 
-### <code>getColor(): [Vector3](../Vectors/Vector3)</code> {#getColor}
+### <code>getColor(): [Vector3](../Vectors/Vector3)</code> \{#getColor}
 
 Gets the Action's color. Returns a `Vector3`.
 
@@ -138,7 +138,7 @@ print(myAction:getColor())
 
 ---
 
-### <code>setTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> {#setTexture}
+### <code>setTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> \{#setTexture}
 
 Sets the texture of the Action. All parameters other than `Texture` are optional.
 
@@ -179,7 +179,7 @@ myPage:newAction()
 
 ---
 
-### <code>setHoverColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> {#setHoverColor}
+### <code>setHoverColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> \{#setHoverColor}
 
 Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
 
@@ -207,7 +207,7 @@ myPage:newAction()
 
 ---
 
-### <code>getHoverColor(): [Vector3](../Vectors/Vector3)</code> {#getHoverColor}
+### <code>getHoverColor(): [Vector3](../Vectors/Vector3)</code> \{#getHoverColor}
 
 Gets the Action's hover color. Returns a `Vector3`.
 
@@ -231,7 +231,7 @@ print(myAction:getHoverColor())
 
 ---
 
-### <code>setHoverTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> {#setTexture}
+### <code>setHoverTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> \{#setTexture}
 
 Sets the texture of the Action when it's hovered. All parameters other than `Texture` are optional.
 
@@ -278,7 +278,7 @@ When the Action is assigned a function to the <code>[toggle](#setToggleTitle)</c
 
 ---
 
-### <code>setToggleTitle(title: string): [Action](./Action)</code> {#setToggleTitle}
+### <code>setToggleTitle(title: string): [Action](./Action)</code> \{#setToggleTitle}
 
 Sets the title of the Action when toggled.
 
@@ -308,7 +308,7 @@ myPage:newAction()
 
 ---
 
-### <code>getToggleTitle(): string</code> {#getToggleTitle}
+### <code>getToggleTitle(): string</code> \{#getToggleTitle}
 
 Gets the Action's title when toggled.
 
@@ -333,7 +333,7 @@ print(myAction:getToggleTitle())
 
 ---
 
-### <code>setToggleItem(item: [ItemStack](../World/ItemStack)): [Action](./Action)</code> {#setToggleItem}
+### <code>setToggleItem(item: [ItemStack](../World/ItemStack)): [Action](./Action)</code> \{#setToggleItem}
 
 Sets an item to display on the Acton when toggled.
 
@@ -365,7 +365,7 @@ myPage:newAction()
 
 ---
 
-### <code>setToggleColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> {#setToggleColor}
+### <code>setToggleColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> \{#setToggleColor}
 
 Sets the color of the Action when toggled. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
 
@@ -394,7 +394,7 @@ myPage:newAction()
 
 ---
 
-### <code>getToggleColor(): [Vector3](../Vectors/Vector3)</code> {#getToggleColor}
+### <code>getToggleColor(): [Vector3](../Vectors/Vector3)</code> \{#getToggleColor}
 
 Gets the Action's color when toggled. Returns a `Vector3`.
 
@@ -418,7 +418,7 @@ print(myAction:getToggleColor())
 
 ---
 
-### <code>setToggleTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> {#setToggleTexture}
+### <code>setToggleTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> \{#setToggleTexture}
 
 Sets the texture of the Action when toggled. All parameters other than `Texture` are optional.
 
@@ -461,7 +461,7 @@ myPage:newAction()
 
 ---
 
-### <code>setToggled(state: boolean): [Action](./Action)</code> {#setToggled}
+### <code>setToggled(state: boolean): [Action](./Action)</code> \{#setToggled}
 
 Sets the toggle state of the Action.
 
@@ -499,7 +499,7 @@ end
 
 ---
 
-### <code>isToggled(): boolean</code> {#isToggled}
+### <code>isToggled(): boolean</code> \{#isToggled}
 
 Checks if the action is toggled or not. Returns a `boolean`.
 
@@ -545,7 +545,7 @@ It's common practice to pass pings to these functions since interacting with the
 
 ---
 
-### `leftClick` {#leftClick}
+### `leftClick` \{#leftClick}
 
 The field that holds the callback for when the left mouse button is clicked on the Action. The type of this field is <code>fun(action: [Action](./Action))</code>. This type will be referred to as `LeftFunction` elsewhere in the wiki.
 
@@ -557,7 +557,7 @@ The field that holds the callback for when the left mouse button is clicked on t
 
 ---
 
-### <code>setOnLeftClick(leftFunction: [LeftFunction](#leftClick)): [Action](./Action)</code> {#setOnLeftClick}
+### <code>setOnLeftClick(leftFunction: [LeftFunction](#leftClick)): [Action](./Action)</code> \{#setOnLeftClick}
 
 Sets the function that is executed when the left mouse button is clicked. Figura passes the Action itself as the first parameter.
 
@@ -587,7 +587,7 @@ myPage:newAction()
 
 ---
 
-### `rightClick` {#rightClick}
+### `rightClick` \{#rightClick}
 
 The field that holds the callback for when the right mouse button is clicked on the Action. The type of this field is <code>fun(action: [Action](./Action))</code>. This type will be referred to as `RightFunction` elsewhere in the wiki.
 
@@ -599,7 +599,7 @@ The field that holds the callback for when the right mouse button is clicked on 
 
 ---
 
-### <code>setOnRightClick(rightFunction: [RightFunction](#rightClick)): [Action](./Action)</code> {#setOnRightClick}
+### <code>setOnRightClick(rightFunction: [RightFunction](#rightClick)): [Action](./Action)</code> \{#setOnRightClick}
 
 Sets the function that is executed when the right mouse button is clicked. Figura passes the Action itself as the first parameter.
 
@@ -629,7 +629,7 @@ myPage:newAction()
 
 ---
 
-### `toggle` {#toggle}
+### `toggle` \{#toggle}
 
 The field that holds the callback for when the Action is toggled. The type of this field is <code>fun(state: boolean, action: [Action](./Action))</code>. This type will be referred to as `ToggleFunction` elsewhere in the wiki.
 
@@ -642,7 +642,7 @@ The field that holds the callback for when the Action is toggled. The type of th
 
 ---
 
-### <code>setOnToggle(toggleFunction: [ToggleFunction](#ToggleFunction)): [Action](./Action)</code> {#setOnToggle}
+### <code>setOnToggle(toggleFunction: [ToggleFunction](#ToggleFunction)): [Action](./Action)</code> \{#setOnToggle}
 
 When the Action is assigned a function to the <code>toggle</code> field, it becomes a Toggle Action. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter, and the Action itself as the second.
 
@@ -690,7 +690,7 @@ The field that holds the callback for when the Action is untoggled. The type of 
 
 ---
 
-### <code>setOnUntoggle(untoggleFunction: [UntoggleFunction](#Untoggle)): [Action](./Action)</code> {#setOnUnToggle}
+### <code>setOnUntoggle(untoggleFunction: [UntoggleFunction](#Untoggle)): [Action](./Action)</code> \{#setOnUnToggle}
 
 Unlike Toggle which gets executed when the Action is toggled on or off, `UnToggle` only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second.
 
@@ -742,7 +742,7 @@ The field that holds the callback for when the Action is scrolled. The type of t
 
 ---
 
-### <code>setOnScroll(onScroll: [ScrollFunction](#scroll)): [Action](./Action)</code> {#setOnScroll}
+### <code>setOnScroll(onScroll: [ScrollFunction](#scroll)): [Action](./Action)</code> \{#setOnScroll}
 
 This will execute when the mouse wheel scrolls while hovering over the Action. The first parameter is the direction the mouse scrolled (1 for scroll up, -1 for scroll down. Can be more than 1 for non-standard mouse wheels). The second paremeter is the Action itself.
 

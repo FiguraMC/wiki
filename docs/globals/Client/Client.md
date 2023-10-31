@@ -1,6 +1,6 @@
 The global instance of ClientAPI
 
-### `getViewer()` {#getViewer}
+### `getViewer()` \{#getViewer}
 
 Returns the player entity from the running client
 
@@ -12,7 +12,7 @@ client:getViewer()
 
 ## Versions
 
-### `getVersion()` {#getVersion}
+### `getVersion()` \{#getVersion}
 
 Returns the Minecraft version of your client
 
@@ -24,7 +24,7 @@ client:getVerison()
 
 ---
 
-### `getVersionName()` {#getVersionName}
+### `getVersionName()` \{#getVersionName}
 
 Returns the extended name of the Minecraft version of your client
 
@@ -36,7 +36,7 @@ client:getVersionName()
 
 ---
 
-### `getJavaVersion()` {#getJavaVersion}
+### `getJavaVersion()` \{#getJavaVersion}
 
 Returns your current Java version you're playing Minecraft with
 
@@ -48,7 +48,7 @@ client:getJavaVersion()
 
 ---
 
-### `isSnapshot()` {#isSnapshot}
+### `isSnapshot()` \{#isSnapshot}
 
 Returns if the client is running a snapshot or full release version
 
@@ -60,7 +60,7 @@ client:isSnapshot()
 
 ---
 
-### `getFiguraVersion()` {#getFiguraVersion}
+### `getFiguraVersion()` \{#getFiguraVersion}
 
 Gets the client Figura version
 
@@ -72,7 +72,7 @@ client:getFiguraVersion()
 
 ---
 
-### `compareVersions()` {#compareVersions}
+### `compareVersions()` \{#compareVersions}
 
 Compares two versions if they are less than (-1), equals (0) or greater than (1)
 
@@ -84,7 +84,7 @@ client:compareVersions("0.1.0", "0.1.3")
 
 ---
 
-### `isModLoaded(string)` {#isModLoaded}
+### `isModLoaded(string)` \{#isModLoaded}
 
 Checks if the client have loaded the given mod ID
 
@@ -96,7 +96,7 @@ client:isModLoaded("origins")
 
 ---
 
-### `hasIris()` {#hasIris}
+### `hasIris()` \{#hasIris}
 
 Checks if the client has the Iris mod installed
 
@@ -108,7 +108,7 @@ client:hasIris()
 
 ---
 
-### `hasIrisShader()` {#hasIrisShader}
+### `hasIrisShader()` \{#hasIrisShader}
 
 Checks if the client is currently using an Iris shader
 
@@ -118,7 +118,7 @@ Checks if the client is currently using an Iris shader
 client:hasIrisShader()
 ```
 
-### `getClientBrand()` {#getClientBrand}
+### `getClientBrand()` \{#getClientBrand}
 
 Returns the "version type" of your client, usually the client modloader brand
 
@@ -130,7 +130,7 @@ client:getClientBrand()
 
 ---
 
-### `getServerBrand()` {#getServerBrand}
+### `getServerBrand()` \{#getServerBrand}
 
 Returns the type of server you're on
 
@@ -144,7 +144,7 @@ client:getServerBrand()
 
 ## Client Camera
 
-### `getCameraPos()` {#getCameraPos}
+### `getCameraPos()` \{#getCameraPos}
 
 Returns the position of the viewer's camera
 
@@ -156,7 +156,7 @@ client:getCameraPos()
 
 ---
 
-### `getCameraRot()` {#getCameraRot}
+### `getCameraRot()` \{#getCameraRot}
 
 Returns the rotation of the viewer's camera
 
@@ -168,7 +168,7 @@ client:getCameraRot()
 
 ---
 
-### `getFOV()` {#getFOV}
+### `getFOV()` \{#getFOV}
 
 Returns the current FOV option of the client, not including additional effects such as speed or sprinting
 
@@ -180,9 +180,9 @@ client:getFOV()
 
 ---
 
-### `getWindowSize()` {#getWindowSize}
+### `getWindowSize()` \{#getWindowSize}
 
-Returns the size of the Minecraft window in pixels, as {width, height}
+Returns the size of the Minecraft window in pixels, as \{width, height}
 
 **Example**:
 
@@ -192,7 +192,7 @@ client:getWindowSize()
 
 ---
 
-### `getScaledWindowSize()` {#getScaledWindowSize}
+### `getScaledWindowSize()` \{#getScaledWindowSize}
 
 Returns the size of the window in Minecraft's interal GUI units
 
@@ -204,7 +204,7 @@ client:getScaledWindowSize()
 
 ---
 
-### `getGuiScale()` {#getGuiScale}
+### `getGuiScale()` \{#getGuiScale}
 
 Returns the current value of your Gui Scale setting
 
@@ -218,7 +218,7 @@ client:getGuiScale()
 
 ---
 
-### `getMousePos()` {#getMousePos}
+### `getMousePos()` \{#getMousePos}
 
 Returns the position of the mouse in pixels, relative to the top-left corner
 
@@ -230,7 +230,7 @@ client:getMousePos()
 
 ---
 
-### `getCameraDir()` {#getCameraDir}
+### `getCameraDir()` \{#getCameraDir}
 
 Returns a unit vector pointing in the direction that the camera is facing
 
@@ -242,7 +242,7 @@ client:getCameraDir()
 
 ---
 
-### `getCameraEntity()` {#getCameraEntity}
+### `getCameraEntity()` \{#getCameraEntity}
 
 Returns the entity the camera is currently targeting, so returns the entity you are currently spectating, including yourself
 
@@ -254,7 +254,7 @@ client:getCameraEntity()
 
 ## Client State
 
-### `isPaused()` {#isPaused}
+### `isPaused()` \{#isPaused}
 
 Returns true if the client is paused
 
@@ -266,7 +266,7 @@ client:isPaused()
 
 ---
 
-### `isHudEnabled()` {#isHudEnabled}
+### `isHudEnabled()` \{#isHudEnabled}
 
 Returns true if the hud is enabled (F1 disables the HUD)
 
@@ -278,7 +278,7 @@ client:isHudEnabled()
 
 ---
 
-### `isDebugOverlayEnabled()` {#isDebugOverlayEnabled}
+### `isDebugOverlayEnabled()` \{#isDebugOverlayEnabled}
 
 Returns true if the F3 screen is currently open
 
@@ -290,7 +290,7 @@ client:isDebugOverlayEnabled()
 
 ---
 
-### `getActiveResourcePacks()` {#getActiveResourcePacks}
+### `getActiveResourcePacks()` \{#getActiveResourcePacks}
 
 Returns a table with the active resource pack names
 
@@ -302,7 +302,7 @@ client:getActiveResourcePacks()
 
 ---
 
-### `hasResource()` {#hasResource}
+### `hasResource()` \{#hasResource}
 
 Checks if the specific resource exists withing the client resources
 
@@ -314,7 +314,7 @@ client:hasResource()
 
 ---
 
-### `getActiveLang()` {#getActiveLang}
+### `getActiveLang()` \{#getActiveLang}
 
 Returns a string representation of the current game language
 
@@ -324,7 +324,7 @@ Returns a string representation of the current game language
 client:getActiveLang()
 ```
 
-### `isWindowFocused()` {#isWindowFocused}
+### `isWindowFocused()` \{#isWindowFocused}
 
 Returns true if the Minecraft window is currently focused
 
@@ -336,7 +336,7 @@ client:isWindowFocused()
 
 ---
 
-### `getCurrentEffect()` {#getCurrentEffect}
+### `getCurrentEffect()` \{#getCurrentEffect}
 
 Returns the path to the currently applied shader, used when spectating an entity that has different vision than normal
 
@@ -350,7 +350,7 @@ client:getCurrentEffect()
 
 ## Stats
 
-### `getEntityStatistics()` {#getEntityStatistics}
+### `getEntityStatistics()` \{#getEntityStatistics}
 
 Returns a string containing information about the loaded entities on the client
 
@@ -364,7 +364,7 @@ client:getEntityStatistics()
 
 ---
 
-### `getServerData()` {#getServerData}
+### `getServerData()` \{#getServerData}
 
 Returns a table with information of the current connected server (also for singleplayer worlds)
 
@@ -376,7 +376,7 @@ client:getServerData()
 
 ---
 
-### `getDate()` {#getDate}
+### `getDate()` \{#getDate}
 
 Returns a table with information about the client current time
 
@@ -388,7 +388,7 @@ client:getDate()
 
 ---
 
-### `getSystemTime()` {#getSystemTime}
+### `getSystemTime()` \{#getSystemTime}
 
 Returns the current system time in milliseconds
 
@@ -400,7 +400,7 @@ client:getSystemTime()
 
 ---
 
-### `getFPS()` {#getFPS}
+### `getFPS()` \{#getFPS}
 
 Gets the FPS of the client
 
@@ -414,7 +414,7 @@ client:getFPS()
 
 ---
 
-### `getFPSString()` {#getFPSString}
+### `getFPSString()` \{#getFPSString}
 
 Gets the FPS string of the client, displayed in the F3 menu
 
@@ -428,7 +428,7 @@ client:getFPSString()
 
 ---
 
-### `getFrameTime()` {#getFrameTime}
+### `getFrameTime()` \{#getFrameTime}
 
 Returns the current fraction between the last tick and the next tick
 
@@ -442,7 +442,7 @@ client:getFrameTime()
 
 ---
 
-### `getSoundStatistics()` {#getSoundStatistics}
+### `getSoundStatistics()` \{#getSoundStatistics}
 
 Returns a string containing information about the currently playing sounds on the client
 
@@ -456,7 +456,7 @@ client:getSoundStatistics()
 
 ---
 
-### `getMaxMemory()` {#getMaxMemory}
+### `getMaxMemory()` \{#getMaxMemory}
 
 Returns the maximum amount of memory that Minecraft will try to use
 
@@ -468,7 +468,7 @@ client:getMaxMemory()
 
 ---
 
-### `getAllocatedMemory()` {#getAllocatedMemory}
+### `getAllocatedMemory()` \{#getAllocatedMemory}
 
 Returns the maximum amount of memory that Minecraft can possibly use
 
@@ -480,7 +480,7 @@ client:getAllocatedMemory()
 
 ---
 
-### `getChunkStatistics()` {#getChunkStatistics}
+### `getChunkStatistics()` \{#getChunkStatistics}
 
 Returns a string containing information about the player's chunk
 
@@ -494,7 +494,7 @@ client:getChunkStatistics()
 
 ---
 
-### `getParticleCount()` {#getParticleCount}
+### `getParticleCount()` \{#getParticleCount}
 
 Returns the number of currently loaded particles
 
@@ -506,7 +506,7 @@ client:getParticleCount()
 
 ---
 
-### `getUsedMemory()` {#getUsedMemory}
+### `getUsedMemory()` \{#getUsedMemory}
 
 Returns the number of bytes of memory Minecraft is currently using
 
@@ -518,7 +518,7 @@ client:getUsedMemory()
 
 ---
 
-### `getEntityCount()` {#getEntityCount}
+### `getEntityCount()` \{#getEntityCount}
 
 Returns the number of currently loaded entities
 
@@ -530,7 +530,7 @@ client:getEntityCount()
 
 ## Misc
 
-### `getTranslatedString(string,any)` {#getTranslatedString}
+### `getTranslatedString(string,any)` \{#getTranslatedString}
 
 Returns the translated string of the given key
 
@@ -546,7 +546,7 @@ client.getTranslatedString("figura.gui.wardrobe.drop_files")
 
 ---
 
-### `listAtlases()` {#listAtlases}
+### `listAtlases()` \{#listAtlases}
 
 Returns a list of all registered atlases paths
 
@@ -558,7 +558,7 @@ client:listAtlases()
 
 ---
 
-### `getAtlas(string)` {#getAtlas}
+### `getAtlas(string)` \{#getAtlas}
 
 Returns a TextureAtlasAPI object with information about the given atlas
 
@@ -572,7 +572,7 @@ client:getAtlas()
 
 ---
 
-### `intUUIDToString(int,int,int,int)` {#intUUIDToString}
+### `intUUIDToString(int,int,int,int)` \{#intUUIDToString}
 
 Converts an int array UUID (as 4 separated arguments) into its hexadecimal string representation
 
@@ -584,7 +584,7 @@ client:intUUIDToString()
 
 ---
 
-### `uuidToIntArray(string)` {#uuidToIntArray}
+### `uuidToIntArray(string)` \{#uuidToIntArray}
 
 Converts a string UUID into its int array representation, returning a varargs of 4 ints
 
@@ -596,7 +596,7 @@ client:uuidToIntArray("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
 
 ---
 
-### `getTextDimensions(string,int,bool)` {#getTextDimensions}
+### `getTextDimensions(string,int,bool)` \{#getTextDimensions}
 
 Returns the width and height of the given text, wrapping lines and trimming to a max width
 
@@ -608,7 +608,7 @@ client:getTextDimensions("Example text", 40, true)
 
 ---
 
-### `getTextWidth(string)` {#getTextWidth}
+### `getTextWidth(string)` \{#getTextWidth}
 
 Returns the width and height of the given text, wrapping lines and trimming to a max width
 
@@ -620,7 +620,7 @@ client:getTextWidth("Example text")
 
 ---
 
-### `getTextHeight(string)` {#getTextHeight}
+### `getTextHeight(string)` \{#getTextHeight}
 
 Returns the height of the given text in pixels
 
@@ -632,7 +632,7 @@ client:getTextHeight("Example text")
 
 ---
 
-### `getTabList()` {#getTabList}
+### `getTabList()` \{#getTabList}
 
 Returns a table with the text shown in the tablist
 

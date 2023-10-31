@@ -2,7 +2,7 @@ The global instance of the TextureAPI
 
 ---
 
-### `getTextures(string,int,int)` {#getTextures}
+### `getTextures(string,int,int)` \{#getTextures}
 
 Returns a table with all textures used by this avatar
 
@@ -16,7 +16,7 @@ textures:getTextures()
 
 ---
 
-### `newTexture(string,int,int)` {#newTexture}
+### `newTexture(string,int,int)` \{#newTexture}
 
 Creates a copy of the texture
 
@@ -30,7 +30,7 @@ textures:newTexture("Name", 64, 64)
 
 ---
 
-### `fromVanilla(string,string)` {#fromVanilla}
+### `fromVanilla(string,string)` \{#fromVanilla}
 
 Creates a copy of the texture
 
@@ -44,7 +44,7 @@ textures:fromVanilla("Name", "textures/item/apple.png")
 
 ---
 
-### `get(string)` {#get}
+### `get(string)` \{#get}
 
 Gets a registered texture based on its name, or nil if no texture was found with that name
 
@@ -56,13 +56,13 @@ textures:get("Name")
 
 ---
 
-### `read(string)` {#read}
+### `read(string)` \{#read}
 
 Reads a texture from a base64 string or a byte array
 
 ---
 
-### `copy(string,texture)` {#copy}
+### `copy(string,texture)` \{#copy}
 
 Creates a copy of the texture
 
