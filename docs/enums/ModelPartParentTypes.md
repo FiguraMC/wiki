@@ -47,11 +47,11 @@ Many ParentTypes share similar properties. You can roughly put them into 3 disti
 
 ---
 
-### `None` {#None}
+### `None` \{#None}
 
--   #### `NONE` {#NONE}
--   #### `Model` {#Model}
--   #### `MODEL` {#MODEL}
+-   #### `NONE` \{#NONE}
+-   #### `Model` \{#Model}
+-   #### `MODEL` \{#MODEL}
 
 The default ParentType.<br/>
 Using this ParentType as a Keyword has no purpose, as <Emoji icon="blockbench/group"/> groups with no Keyword will have this ParentType, but it can still be used in scripts.
@@ -64,82 +64,82 @@ Player Mimic ParentTypes copy transformations (position, rotation, scale) from e
 
 ---
 
-### `Head` {#Head}
+### `Head` \{#Head}
 
--   #### `HEAD` {#HEAD}
+-   #### `HEAD` \{#HEAD}
 
 Mimics the transformation offsets of the Vanilla <code>HEAD</code><br/>
 If there is no ModelParts with the [Skull](#skull) ParentType, ModelParts with this ParentType will replace the Vanilla Skull.
 
 ---
 
-### `Body` {#Body}
+### `Body` \{#Body}
 
--   #### `BODY` {#BODY}
+-   #### `BODY` \{#BODY}
 
 Mimics the transformation offsets of the Vanilla <code>BODY</code>
 
 ---
 
-### `RightArm` {#RightArm}
+### `RightArm` \{#RightArm}
 
--   #### `RIGHT_ARM` {#RIGHT_ARM}
+-   #### `RIGHT_ARM` \{#RIGHT_ARM}
 
 Mimics the transformation offsets of the Vanilla <code>RIGHT_ARM</code><br/>
 This ParentType will appear in First Person under the same conditions as the Vanilla RightArm.
 
 ---
 
-### `LeftArm` {#LeftArm}
+### `LeftArm` \{#LeftArm}
 
--   #### `LEFT_ARM` {#LEFT_ARM}
+-   #### `LEFT_ARM` \{#LEFT_ARM}
 
 Mimics the transformation offsets of the Vanilla <code>LEFT_ARM</code><br/>
 This ParentType will appear in First Person under the same conditions as the Vanilla LeftArm.
 
 ---
 
-### `RightLeg` {#RightLeg}
+### `RightLeg` \{#RightLeg}
 
--   #### `RIGHT_LEG` {#RIGHT_LEG}
+-   #### `RIGHT_LEG` \{#RIGHT_LEG}
 
 Mimics the transformation offsets of the Vanilla <code>RIGHT_LEG</code>
 
 ---
 
-### `LeftLeg` {#LeftLeg}
+### `LeftLeg` \{#LeftLeg}
 
--   #### `LEFT_LEG` {#LEFT_LEG}
+-   #### `LEFT_LEG` \{#LEFT_LEG}
 
 Mimics the transformation offsets of the Vanilla <code>LEFT_LEG</code>
 
 ---
 
-### `RightElytra` {#RightElytra}
+### `RightElytra` \{#RightElytra}
 
--   #### `RIGHT_ELYTRA` {#RIGHT_ELYTRA}
--   #### `RightElytron` {#RightElytron}
--   #### `RIGHT_ELYTRON` {#RIGHT_ELYTRON}
+-   #### `RIGHT_ELYTRA` \{#RIGHT_ELYTRA}
+-   #### `RightElytron` \{#RightElytron}
+-   #### `RIGHT_ELYTRON` \{#RIGHT_ELYTRON}
 
 Mimics the transformation offsets of the Vanilla <code>RIGHT_ELYTRA</code><br/>
 ModelParts with this ParentType are only visible while an Elytra is equipped.<br/>
 
 ---
 
-### `LeftElytra` {#LeftElytra}
+### `LeftElytra` \{#LeftElytra}
 
--   #### `LEFT_ELYTRA` {#LEFT_ELYTRA}
--   #### `LeftElytron` {#LeftElytron}
--   #### `LEFT_ELYTRON` {#LEFT_ELYTRON}
+-   #### `LEFT_ELYTRA` \{#LEFT_ELYTRA}
+-   #### `LeftElytron` \{#LeftElytron}
+-   #### `LEFT_ELYTRON` \{#LEFT_ELYTRON}
 
 Mimics the transformation offsets of the Vanilla <code>LEFT_ELYTRA</code><br/>
 ModelParts with this ParentType are only visible while an Elytra is equipped.<br/>
 
 ---
 
-### `Cape` {#Cape}
+### `Cape` \{#Cape}
 
--   #### `CAPE` {#CAPE}
+-   #### `CAPE` \{#CAPE}
 
 Mimics the transformation offsets of the Vanilla <code>CAPE</code><br/>
 This ParentType works even if you don't own a vanilla Cape.
@@ -152,9 +152,9 @@ Special ParentTypes are ParentTypes that provide unique rendering functionality 
 
 ---
 
-### `World` {#World}
+### `World` \{#World}
 
--   #### `WORLD` {#WORLD}
+-   #### `WORLD` \{#WORLD}
 
 This ParentType will cause the ModelPart to be parented to the Minecraft World itself rather than your Player.<br/>
 Position (0,0,0) will be at the world's origin. 1 block is 16 ModelPart units, so multiply the world coordinates by 16 before setting the position of a World ParentType ModelPart.<br/>
@@ -163,60 +163,60 @@ ModelParts with this ParentType will be visible while in First Person.
 
 ---
 
-### `Hud` {#Hud}
+### `Hud` \{#Hud}
 
--   #### `HUD` {#HUD}
--   #### `HeadsUpDisplay` {#HeadsUpDisplay}
--   #### `Gui` {#Gui}
--   #### `GUI` {#GUI}
--   #### `GraphicalUserInterface` {#GraphicalUserInterface}
--   #### `JraficalUserInterface` {#JraficalUserInterface}
+-   #### `HUD` \{#HUD}
+-   #### `HeadsUpDisplay` \{#HeadsUpDisplay}
+-   #### `Gui` \{#Gui}
+-   #### `GUI` \{#GUI}
+-   #### `GraphicalUserInterface` \{#GraphicalUserInterface}
+-   #### `JraficalUserInterface` \{#JraficalUserInterface}
 
 This ParentType causes the ModelPart to render on the Hud instead of on your player. This only affects the owner's Hud, or players that spectate the owner of the avatar.<br/>
 (0,0,0) is the top left of the screen. 1 ModelPart unit is 1 Minecraft Gui unit. -X moves the ModelPart Right on the screen, and -Y moves the ModelPart Down on the screen. The Z axis determines which ModelParts render on top of others, with -Z moving the ModelPart closer. You can even have ModelParts render on top of the vanilla GUI.
 
 ---
 
-### `Camera` {#Camera}
+### `Camera` \{#Camera}
 
--   #### `CAMERA` {#CAMERA}
--   #### `Billboard` {#Billboard}
--   #### `BILLBOARD` {#BILLBOARD}
+-   #### `CAMERA` \{#CAMERA}
+-   #### `Billboard` \{#Billboard}
+-   #### `BILLBOARD` \{#BILLBOARD}
 
 This ParentType causes the ModelPart to _always_ face the camera. It behaves like the vanilla nameplate or particles.
 
 ---
 
-### `Skull` {#Skull}
+### `Skull` \{#Skull}
 
--   #### `SKULL` {#SKULL}
--   #### `☠️` {#☠️}
+-   #### `SKULL` \{#SKULL}
+-   #### `☠️` \{#☠️}
 
 This ParentType causes the ModelPart to replace the Vanilla Skull.
 
 ---
 
-### `Portrait` {#Portrait}
+### `Portrait` \{#Portrait}
 
--   #### `PORTRAIT` {#PORTRAIT}
+-   #### `PORTRAIT` \{#PORTRAIT}
 
 This ParentType will change the player icon in the TAB LIST.<br/>
 Blockbench 0, 0, 0 is the bottom center and the valid area extends 4 units horizontally on each since and 8 units up.<br/>
 
 ---
 
-### `Arrow` {#Arrow}
+### `Arrow` \{#Arrow}
 
--   #### `ARROW` {#ARROW}
+-   #### `ARROW` \{#ARROW}
 
 This ParentType replaces the model of arrows fired by you. The pivot point of the ModelPart that has this ParentType does not matter.<br/>
 (0,0,0) in BlockBench is the point on the vanilla arrow's shaft that is just before the arrow head.
 
 ---
 
-### `Item` {#Item}
+### `Item` \{#Item}
 
--   #### `ITEM` {#ITEM}
+-   #### `ITEM` \{#ITEM}
 
 This ParentType designates a Custom Item Model that can be used in the ITEM_RENDER event.
 
@@ -228,25 +228,25 @@ Pivot ParentTypes move the location of specific Vanilla Parts to the pivot point
 
 ---
 
-### `RightItemPivot` {#RightItemPivot}
+### `RightItemPivot` \{#RightItemPivot}
 
--   #### `RIGHT_ITEM_PIVOT` {#RIGHT_ITEM_PIVOT}
+-   #### `RIGHT_ITEM_PIVOT` \{#RIGHT_ITEM_PIVOT}
 
 This ParentType renders the right held item at the ModelPart's pivot point.
 
 ---
 
-### `LeftItemPivot` {#LeftItemPivot}
+### `LeftItemPivot` \{#LeftItemPivot}
 
--   #### `LEFT_ITEM_PIVOT` {#LEFT_ITEM_PIVOT}
+-   #### `LEFT_ITEM_PIVOT` \{#LEFT_ITEM_PIVOT}
 
 This ParentType renders the left held item at the ModelPart's pivot point.
 
 ---
 
-### `HelmetPivot` {#HelmetPivot}
+### `HelmetPivot` \{#HelmetPivot}
 
--   #### `HELMET_PIVOT` {#HELMET_PIVOT}
+-   #### `HELMET_PIVOT` \{#HELMET_PIVOT}
 
 This ParentType renders the helmet at the ModelPart's pivot point. For rendering an item in the helmet slot see [`HelmetItemPivot`](#HelmetItemPivot).
 
@@ -284,17 +284,17 @@ This ParentType renders the leggings at the ModelPart's pivot point.
 
 ---
 
-### `LeftLeggingPivot` {#LeftLeggingPivot}
+### `LeftLeggingPivot` \{#LeftLeggingPivot}
 
--   #### `LEFT_LEGGING_PIVOT` {#LEFT_LEGGING_PIVOT}
+-   #### `LEFT_LEGGING_PIVOT` \{#LEFT_LEGGING_PIVOT}
 
 This ParentType renders the left legging at the ModelPart's pivot point.
 
 ---
 
-### `RightLeggingPivot` {#RightLeggingPivot}
+### `RightLeggingPivot` \{#RightLeggingPivot}
 
--   #### `RIGHT_LEGGING_PIVOT` {#RIGHT_LEGGING_PIVOT}
+-   #### `RIGHT_LEGGING_PIVOT` \{#RIGHT_LEGGING_PIVOT}
 
 This ParentType renders the right legging at the ModelPart's pivot point.
 
@@ -316,40 +316,40 @@ This ParentType renders the right boot at the ModelPart's pivot point.
 
 ---
 
-### `RightSpyglassPivot` {#RightSpyglassPivot}
+### `RightSpyglassPivot` \{#RightSpyglassPivot}
 
--   #### `RIGHT_SPYGLASS_PIVOT` {#RIGHT_SPYGLASS_PIVOT}
+-   #### `RIGHT_SPYGLASS_PIVOT` \{#RIGHT_SPYGLASS_PIVOT}
 
 This ParentType renders a spyglass at this ModelPart's pivot point when you are using a spyglass in the RightHand.
 
 ---
 
-### `LeftSpyglassPivot` {#LeftSpyglassPivot}
+### `LeftSpyglassPivot` \{#LeftSpyglassPivot}
 
--   #### `LEFT_SPYGLASS_PIVOT` {#LEFT_SPYGLASS_PIVOT}
+-   #### `LEFT_SPYGLASS_PIVOT` \{#LEFT_SPYGLASS_PIVOT}
 
 This ParentType renders a spyglass at this ModelPart's pivot point when you are using a spyglass in the LeftHand.
 
 ---
 
-### `HelmetItemPivot` {#HelmetItemPivot}
+### `HelmetItemPivot` \{#HelmetItemPivot}
 
--   #### `HELMET_ITEM_PIVOT` {#HELMET_ITEM_PIVOT}
+-   #### `HELMET_ITEM_PIVOT` \{#HELMET_ITEM_PIVOT}
 
 This ParentType renders the item that is currently in the Helmet slot. This is for stull like pumpkins, banners, bones. For rendering the vanilla helmet in a different location see see [`HelmetPivot`](#HelmetPivot).
 
 ---
 
-### `RightParrotPivot` {#RightParrotPivot}
+### `RightParrotPivot` \{#RightParrotPivot}
 
--   #### `RIGHT_PARROT_PIVOT` {#RIGHT_PARROT_PIVOT}
+-   #### `RIGHT_PARROT_PIVOT` \{#RIGHT_PARROT_PIVOT}
 
 This ParentType renders the entity riding on your right shoulder at the ModelPart's pivot point. I say entity, but that entity will always be a parrot.
 
 ---
 
-### `LeftParrotPivot` {#LeftParrotPivot}
+### `LeftParrotPivot` \{#LeftParrotPivot}
 
--   #### `LEFT_PARROT_PIVOT` {#LEFT_PARROT_PIVOT}
+-   #### `LEFT_PARROT_PIVOT` \{#LEFT_PARROT_PIVOT}
 
 This ParentType renders the entity riding on your left shoulder at the ModelPart's pivot point. I say entity, but that entity will always be a parrot.
