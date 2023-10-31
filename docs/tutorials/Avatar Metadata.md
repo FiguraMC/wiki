@@ -225,7 +225,7 @@ Hypothetically, the armor of this avatar is being handled by <Emoji icon="file/l
 }
 ```
 
-### <code>"customizations"</code> : {"ModelPart" : {"Customization" : "String"}}
+### <code>"customizations"</code> : \{"ModelPart" : \{"Customization" : "String"}}
 
 Does that Type identifier make any sense? Not really, but thats what the <code>"customizations"</code> property is.<br/>
 <code>"customizations"</code> allows for modifications to ModelParts that cant be done in BlockBench. You can still do this stuff via script, but the intent is for an avatar that does not have a script to still have access to some functionality.<br/>

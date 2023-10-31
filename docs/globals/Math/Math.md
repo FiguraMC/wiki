@@ -4,7 +4,7 @@ Contains functions which Figura adds to the default Lua "math" library table. Th
 
 ---
 
-### `map(number, number, number, number, number)` {#map}
+### `map(number, number, number, number, number)` \{#map}
 
 Maps the given value from one range to another
 
@@ -18,7 +18,7 @@ math.map(20, 0, 200, 100, 200) -- returns 110
 
 ---
 
-### `round(number)` {#round}
+### `round(number)` \{#round}
 
 Rounds the given number to the nearest whole integer
 
@@ -30,7 +30,7 @@ math.round(21.74) -- returns 22
 
 ---
 
-### `sign(number)` {#sign}
+### `sign(number)` \{#sign}
 
 Returns the sign of the given number
 
@@ -46,7 +46,7 @@ math.sign(0) -- returns 0
 
 ---
 
-### `lerpAngle(number, number, number)` {#lerpAngle}
+### `lerpAngle(number, number, number)` \{#lerpAngle}
 
 Similar to the default lerp function, but numbers are limited to the range of 0-360
 
@@ -62,7 +62,7 @@ math.lerpAngle(340, 20, 0.75) -- returns 10
 
 ---
 
-### `shortAngle(number, number)` {#shortAngle}
+### `shortAngle(number, number)` \{#shortAngle}
 
 Returns the shortest angle between two angles
 
@@ -76,7 +76,7 @@ math.shortAngle(350, 0) -- returns 10
 
 ---
 
-### `clamp(number, number, number)` {#clamp}
+### `clamp(number, number, number)` \{#clamp}
 
 Clamps the given value between min and max
 
@@ -90,7 +90,7 @@ math.clamp(26, 0, 50) -- returns 26
 
 ---
 
-### `lerp(a, b, number)` {#lerp}
+### `lerp(a, b, number)` \{#lerp}
 
 Linearly interpolates from its first argument to its second argument, with the third argument as the parameter
 
@@ -118,7 +118,7 @@ end
 
 ---
 
-### `playerScale` {#playerScale}
+### `playerScale` \{#playerScale}
 
 The constant of the player scaling related to the world
 
@@ -130,7 +130,7 @@ math.playerScale
 
 ---
 
-### `worldScale` {#worldScale}
+### `worldScale` \{#worldScale}
 
 The constant of the world scaling related with the player
 

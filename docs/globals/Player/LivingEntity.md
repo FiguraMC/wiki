@@ -10,7 +10,7 @@ local thisEntity = thisEntity:getTargetedEntity()
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Gets the position of the entity in the world
 
@@ -26,7 +26,7 @@ thisEntity:getPos()
 
 ---
 
-### `getRot()` {#getRot}
+### `getRot()` \{#getRot}
 
 Gets the rotation of the entity in degrees
 
@@ -42,7 +42,7 @@ thisEntity:getRot()
 
 ---
 
-### `getBodyYaw()` {#getBodyYaw}
+### `getBodyYaw()` \{#getBodyYaw}
 
 Gets the yaw of this entity's body in degrees
 
@@ -58,7 +58,7 @@ thisEntity:getBodyYaw()
 
 ---
 
-### `getLookDir()` {#getLookDir}
+### `getLookDir()` \{#getLookDir}
 
 Returns a unit vector pointing in the direction that this entity is looking
 
@@ -72,7 +72,7 @@ thisEntity:getLookDir()
 
 ---
 
-### `getVelocity()` {#getVelocity}
+### `getVelocity()` \{#getVelocity}
 
 Gets the current velocity of this entity in world coordinates, calculated as its position this tick minus its position last tick
 
@@ -88,7 +88,7 @@ Gets the current velocity of this entity in world coordinates, calculated as its
 
 ---
 
-### `getPose()` {#getPose}
+### `getPose()` \{#getPose}
 
 Returns the current pose of the living entity
 
@@ -100,7 +100,7 @@ thisEntity:getPose() == "CROUCHING"
 
 ---
 
-### `isCrouching()` {#isCrouching}
+### `isCrouching()` \{#isCrouching}
 
 Returns true if this entity is visually sneaking
 
@@ -112,7 +112,7 @@ thisEntity:isCrouching()
 
 ---
 
-### `isGliding()` {#isGliding}
+### `isGliding()` \{#isGliding}
 
 Returns if this entity is gliding with an elytra
 
@@ -124,7 +124,7 @@ thisEntity:isGliding()
 
 ---
 
-### `isBlocking()` {#isBlocking}
+### `isBlocking()` \{#isBlocking}
 
 Return if this entity is blocking with a shield
 
@@ -136,7 +136,7 @@ thisEntity:isBlocking()
 
 ---
 
-### `isVisuallySwimming()` {#isVisuallySwimming}
+### `isVisuallySwimming()` \{#isVisuallySwimming}
 
 Returns if this entity have the swimming pose
 
@@ -148,7 +148,7 @@ thisEntity:isVisuallySwimming()
 
 ---
 
-### `isClimbing()` {#isClimbing}
+### `isClimbing()` \{#isClimbing}
 
 Returns true if the entity is currently using a climbable block, like a ladder or vine
 
@@ -160,7 +160,7 @@ thisEntity:isClimbing()
 
 ---
 
-### `isSneaking()` {#isSneaking}
+### `isSneaking()` \{#isSneaking}
 
 Returns true if this entity is logically sneaking (can't fall from blocks edges, can't see nameplate behind walls, etc)
 
@@ -172,7 +172,7 @@ thisEntity:isSneaking()
 
 ---
 
-### `isSprinting()` {#isSprinting}
+### `isSprinting()` \{#isSprinting}
 
 Returns true if this entity is currently sprinting
 
@@ -184,7 +184,7 @@ thisEntity:isSprinting()
 
 ---
 
-### `riptideSpinning()` {#riptideSpinning}
+### `riptideSpinning()` \{#riptideSpinning}
 
 Returns if this entity is riptide spinning
 
@@ -200,7 +200,7 @@ Returns if this entity is riptide spinning
 
 ---
 
-### `isLoaded()` {#isLoaded}
+### `isLoaded()` \{#isLoaded}
 
 Checks if this entity object is still being updated and loaded
 
@@ -214,7 +214,7 @@ thisEntity:isLoaded()
 
 ---
 
-### `getNbt()` {#getNbt}
+### `getNbt()` \{#getNbt}
 
 Gets a table containing the NBT of this entity
 
@@ -228,7 +228,7 @@ thisEntity:getNbt()
 
 ---
 
-### `getAbsorptionAmount()` {#getAbsorptionAmount}
+### `getAbsorptionAmount()` \{#getAbsorptionAmount}
 
 Returns the amount of this entity's absorption (yellow hearts)
 
@@ -240,7 +240,7 @@ thisEntity:getAbsorptionAmount()
 
 ---
 
-### `getArmor()` {#getArmor}
+### `getArmor()` \{#getArmor}
 
 Returns the amount of armor points this entity has
 
@@ -252,7 +252,7 @@ thisEntity:getArmor()
 
 ---
 
-### `getMaxHealth()` {#getMaxHealth}
+### `getMaxHealth()` \{#getMaxHealth}
 
 Returns the maximum amount of health this entity can have
 
@@ -264,7 +264,7 @@ thisEntity:getMaxHealth()
 
 ---
 
-### `getHealth()` {#getHealth}
+### `getHealth()` \{#getHealth}
 
 Returns the amount of health this entity has remaining
 
@@ -276,7 +276,7 @@ thisEntity:getHealth()
 
 ---
 
-### `getDeathTime()` {#getDeathTime}
+### `getDeathTime()` \{#getDeathTime}
 
 Returns the number of ticks this entity has been dead for
 
@@ -288,7 +288,7 @@ thisEntity:getDeathTime()
 
 ---
 
-### `getStingerCount()` {#getStingerCount}
+### `getStingerCount()` \{#getStingerCount}
 
 Returns the number of bee stingers sticking out of this entity
 
@@ -300,7 +300,7 @@ thisEntity:getStingercount()
 
 ---
 
-### `getArrowCount()` {#getArrowCount}
+### `getArrowCount()` \{#getArrowCount}
 
 Returns the number of arrows sticking out of this entity
 
@@ -312,7 +312,7 @@ thisEntity:getArrowCount()
 
 ---
 
-### `getEntityCategory()` {#getEntityCategory}
+### `getEntityCategory()` \{#getEntityCategory}
 
 Returns the category of this entity
 
@@ -326,7 +326,7 @@ thisEntity:getEntityCategory() == "UNDEAD"
 
 ---
 
-### `isSensitiveToWater()` {#isSensitiveToWater}
+### `isSensitiveToWater()` \{#isSensitiveToWater}
 
 Returns if this entity takes damage to water
 
@@ -338,7 +338,7 @@ thisEntity:isSensitiveToWater()
 
 ---
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Gets the name of this entity, if it has a custom name
 
@@ -352,7 +352,7 @@ thisEntity:getName()
 
 ---
 
-### `isAlive()` {#isAlive}
+### `isAlive()` \{#isAlive}
 
 Returns whether this entity is alive or not
 
@@ -364,7 +364,7 @@ thisEntity:isAlive()
 
 ---
 
-### `getType()` {#getType}
+### `getType()` \{#getType}
 
 Gets the Minecraft identifier of this entity
 
@@ -378,7 +378,7 @@ thisEntity:getType() == "minecraft:pig"
 
 ---
 
-### `getControlledVehicle()` {#getControlledVehicle}
+### `getControlledVehicle()` \{#getControlledVehicle}
 
 Return the vehicle that this entity is controlling
 
@@ -390,7 +390,7 @@ thisEntity:getControlledVehicle()
 
 ---
 
-### `getControllingPassenger()` {#getControllingPassenger}
+### `getControllingPassenger()` \{#getControllingPassenger}
 
 Returns the entity that is controlling this entity
 
@@ -402,7 +402,7 @@ thisEntity:getControllingPassenger()
 
 ---
 
-### `getPassengers()` {#getPassengers}
+### `getPassengers()` \{#getPassengers}
 
 Returns a List of entities of all passengers this entity have
 
@@ -414,7 +414,7 @@ thisEntity:getPassengers()
 
 ---
 
-### `getFrozenTicks()` {#getFrozenTicks}
+### `getFrozenTicks()` \{#getFrozenTicks}
 
 Gets the number of ticks this entity has been freezing in powder snow for
 
@@ -426,7 +426,7 @@ thisEntity:getFrozenTicks()
 
 ---
 
-### `getMaxAir()` {#getMaxAir}
+### `getMaxAir()` \{#getMaxAir}
 
 Gets the maximum amount of air this entity can have
 
@@ -438,7 +438,7 @@ thisEntity:getMaxAir()
 
 ---
 
-### `getDimensionName()` {#getDimensionName}
+### `getDimensionName()` \{#getDimensionName}
 
 Gets the Minecraft identifier of the dimension this entity is in
 
@@ -450,7 +450,7 @@ thisEntity:getDimensionName()
 
 ---
 
-### `isUnderwater()` {#isUnderwater}
+### `isUnderwater()` \{#isUnderwater}
 
 Returns true if this entity's eyes are touching water
 
@@ -462,7 +462,7 @@ thisEntity:isUnderwater()
 
 ---
 
-### `isInWater()` {#isInWater}
+### `isInWater()` \{#isInWater}
 
 Returns true if this entity is currently in a water block, including waterlogging
 
@@ -474,7 +474,7 @@ thisEntity:isInWater()
 
 ---
 
-### `isInRain()` {#isInRain}
+### `isInRain()` \{#isInRain}
 
 Returns true if this entity is currently standing in rain
 
@@ -486,7 +486,7 @@ thisEntity:isInRain()
 
 ---
 
-### `isWet()` {#isWet}
+### `isWet()` \{#isWet}
 
 Returns true in any of three conditions: if the entity is in water, if the entity is in rain, or if the entity is in a bubble column
 
@@ -500,7 +500,7 @@ thisEntity:isWet()
 
 ---
 
-### `isInLava()` {#isInLava}
+### `isInLava()` \{#isInLava}
 
 Returns true if this entity is currently in lava
 
@@ -512,7 +512,7 @@ thisEntity:isInLava()
 
 ---
 
-### `isOnFire()` {#isOnFire}
+### `isOnFire()` \{#isOnFire}
 
 Returns true if this entity is currently on fire
 
@@ -524,7 +524,7 @@ thisEntity:isOnFire()
 
 ---
 
-### `isInvisible()` {#isInvisible}
+### `isInvisible()` \{#isInvisible}
 
 Returns true if this entity is invisible, for one reason or another
 
@@ -536,7 +536,7 @@ thisEntity:isInvisible()
 
 ---
 
-### `getVehicle()` {#getVehicle}
+### `getVehicle()` \{#getVehicle}
 
 Returns a proxy for the entity that this entity is currently riding
 
@@ -552,7 +552,7 @@ end
 
 ---
 
-### `isSilent()` {#isSilent}
+### `isSilent()` \{#isSilent}
 
 Returns true if this entity is silent
 
@@ -564,7 +564,7 @@ thisEntity:isSilent()
 
 ---
 
-### `isGlowing()` {#isGlowing}
+### `isGlowing()` \{#isGlowing}
 
 Returns true if this entity is currently glowing
 
@@ -576,13 +576,13 @@ thisEntity:isGlowing()
 
 ---
 
-### `getBoundingBox()` {#getBoundingBox}
+### `getBoundingBox()` \{#getBoundingBox}
 
 Returns the size of this entity's bounding box as a Vector3
 
 ---
 
-{x, y, z} are the width, height, and width
+\{x, y, z} are the width, height, and width
 
 Minecraft entity hitboxes always have square bases
 
@@ -594,7 +594,7 @@ thisEntity:getBoundingBox()
 
 ---
 
-### `isOnGround()` {#isOnGround}
+### `isOnGround()` \{#isOnGround}
 
 Returns whether or not this entity is currently on the ground
 
@@ -609,7 +609,7 @@ thisEntity:isOnGround()
 
 ---
 
-### `getEyeY()` {#getEyeY}
+### `getEyeY()` \{#getEyeY}
 
 Returns the Y level of this entity's eyes
 
@@ -623,7 +623,7 @@ thisEntity:getEyeY()
 
 ---
 
-### `getEyeHeight()` {#getEyeHeight}
+### `getEyeHeight()` \{#getEyeHeight}
 
 Returns the current eye height of this entity
 
@@ -635,7 +635,7 @@ thisEntity:getEyeHeight()
 
 ---
 
-### `getTargetedEntity(number)` {#getTargetedEntity}
+### `getTargetedEntity(number)` \{#getTargetedEntity}
 
 Returns a proxy for your currently targeted Entity
 
@@ -655,7 +655,7 @@ end
 
 ---
 
-### `getTargetedBlock(bool, number)` {#getTargetedBlock}
+### `getTargetedBlock(bool, number)` \{#getTargetedBlock}
 
 Returns a proxy for your currently targeted BlockState
 
@@ -677,7 +677,7 @@ end
 
 ---
 
-### `hasInventory()` {#hasInventory}
+### `hasInventory()` \{#hasInventory}
 
 Checks if the entity has an inventory (Horses, Camels, Llamas, ...)
 
@@ -689,7 +689,7 @@ thisEntity:hasInventory()
 
 ---
 
-### `hasContainer()` {#hasContainer}
+### `hasContainer()` \{#hasContainer}
 
 Checks if the entity has a container (Chest Boats, Minecarts with Chests, ...)
 
@@ -701,7 +701,7 @@ thisEntity:hasContainer()
 
 ---
 
-### `isLiving()` {#isLiving}
+### `isLiving()` \{#isLiving}
 
 Gets if this entity is a Living Entity
 
@@ -713,7 +713,7 @@ thisEntity:isLiving()
 
 ---
 
-### `isPlayer()` {#isPlayer}
+### `isPlayer()` \{#isPlayer}
 
 Gets if this entity is a Player Entity
 
@@ -725,7 +725,7 @@ thisEntity:isPlayer()
 
 ---
 
-### `getPermissionLevel()` {#getPermissionLevel}
+### `getPermissionLevel()` \{#getPermissionLevel}
 
 Returns the permission level number of this entity
 
@@ -741,7 +741,7 @@ thisEntity:getPermissionLevel()
 
 ---
 
-### `getItem(integer)` {#getItem}
+### `getItem(integer)` \{#getItem}
 
 Gets an ItemStack for the item in the given slot
 
@@ -759,7 +759,7 @@ end
 
 ---
 
-### `getHeldItem(bool)` {#getHeldItem}
+### `getHeldItem(bool)` \{#getHeldItem}
 
 Returns an ItemStack representing the item in this entity's main hand
 
@@ -780,7 +780,7 @@ end
 
 ---
 
-### `isUsingItem()` {#isUsingItem}
+### `isUsingItem()` \{#isUsingItem}
 
 Returns true if the entity is currently using an item
 
@@ -792,7 +792,7 @@ thisEntity:isUsingItem()
 
 ---
 
-### `getActiveItem()` {#getActiveItem}
+### `getActiveItem()` \{#getActiveItem}
 
 Returns an ItemStack representing the item the entity is currently using
 
@@ -806,7 +806,7 @@ thisEntity:getActiveItem()
 
 ---
 
-### `getActiveItemTime()` {#getActiveItemTime}
+### `getActiveItemTime()` \{#getActiveItemTime}
 
 Returns the ticks this entity's active item has been used for
 
@@ -820,7 +820,7 @@ thisEntity:getActiveItemTime()
 
 ---
 
-### `isLeftHanded()` {#isLeftHanded}
+### `isLeftHanded()` \{#isLeftHanded}
 
 Returns true if the entity's main hand is its left
 
@@ -832,7 +832,7 @@ thisEntity:isLeftHanded()
 
 ---
 
-### `isSwingingArm()` {#isSwingingArm}
+### `isSwingingArm()` \{#isSwingingArm}
 
 Returns true if the entity is currently swinging its arm
 
@@ -844,7 +844,7 @@ thisEntity:isSwingingArm()
 
 ---
 
-### `getSwingDuration()` {#getSwingDuration}
+### `getSwingDuration()` \{#getSwingDuration}
 
 Returns the number of ticks this entity will have while swinging its arms
 
@@ -856,7 +856,7 @@ thisEntity:getSwingDuration()
 
 ---
 
-### `getSwingTime()` {#getSwingTime}
+### `getSwingTime()` \{#getSwingTime}
 
 Returns the number of ticks this entity has the arm swinging
 
@@ -868,7 +868,7 @@ thisEntity:getSwingTime()
 
 ---
 
-### `getActiveHand()` {#getActiveHand}
+### `getActiveHand()` \{#getActiveHand}
 
 Returns "OFF_HAND" or "MAIN_HAND", depending on which hand this entity uses an item with
 
@@ -880,7 +880,7 @@ thisEntity:getActiveHand() == "MAIN_HAND"
 
 ---
 
-### `getSwingArm()` {#getSwingArm}
+### `getSwingArm()` \{#getSwingArm}
 
 Returns "OFF_HAND" or "MAIN_HAND", based on the arm this entity is currently swinging
 
@@ -894,7 +894,7 @@ thisEntity:getSwingArm() == "OFF_HAND"
 
 ---
 
-### `getUUID()` {#getUUID}
+### `getUUID()` \{#getUUID}
 
 Gets the UUID of the proxied entity
 
@@ -906,7 +906,7 @@ thisEntity:getUUID()
 
 ---
 
-### `hasAvatar()` {#hasAvatar}
+### `hasAvatar()` \{#hasAvatar}
 
 Returns true if Figura has an avatar loaded for this entity
 
@@ -918,7 +918,7 @@ thisEntity:hasAvatar()
 
 ---
 
-### `getVariable()` {#getVariable}
+### `getVariable()` \{#getVariable}
 
 Gets the value of a variable this entity stored in themselves using the Avatar api's store() function
 

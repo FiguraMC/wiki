@@ -2,7 +2,7 @@ The global instance of the ConfigAPI
 
 ---
 
-### `setName(string)` {#setName}
+### `setName(string)` \{#setName}
 
 Sets the name of the destination file, data will be saved and loaded from that file
 
@@ -16,7 +16,7 @@ config:setName("Something")
 
 ---
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Returns the name of the destination file
 
@@ -28,7 +28,7 @@ config:getName()
 
 ---
 
-### `save(string,any)` {#save}
+### `save(string,any)` \{#save}
 
 Save to disk a variable under the specific key
 
@@ -42,7 +42,7 @@ config:save("apple", false)
 
 ---
 
-### `load(string)` {#load}
+### `load(string)` \{#load}
 
 Loads a saved variable under the specific key
 

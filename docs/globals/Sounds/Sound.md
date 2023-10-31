@@ -12,7 +12,7 @@ local mySound = sounds["entity.bat.ambient"]
 
 ---
 
-### `stop()` {#stop}
+### `stop()` \{#stop}
 
 Stops the sound
 
@@ -24,7 +24,7 @@ mySound:stop()
 
 ---
 
-### `play()` {#play}
+### `play()` \{#play}
 
 Plays the sound
 
@@ -36,7 +36,7 @@ mySound:play()
 
 ---
 
-### `pause()` {#pause}
+### `pause()` \{#pause}
 
 Pauses the sound
 
@@ -48,7 +48,7 @@ mySound:pause()
 
 ---
 
-### `setPos(Vector3)` {#setPos}
+### `setPos(Vector3)` \{#setPos}
 
 Sets the position of the sound
 
@@ -60,7 +60,7 @@ mySound:setPos(player:getPos())
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Gets the position of the sound as set by <code>setPos</code>
 
@@ -72,7 +72,7 @@ mySound:getPos()
 
 ---
 
-### `isPlaying()` {#isPlaying}
+### `isPlaying()` \{#isPlaying}
 
 Gets if the sound is playing, but this is an unreliable function. A workaround is to stop the sound before you play it (even if it isn't playing) so you can reset the playing state.
 
@@ -90,7 +90,7 @@ mySound:isPlaying()
 
 ---
 
-### `setVolume(number)` {#setVolume}
+### `setVolume(number)` \{#setVolume}
 
 Sets the volume of the sound
 
@@ -102,7 +102,7 @@ mySound:setVolume(5)
 
 ---
 
-### `getVolume()` {#getVolume}
+### `getVolume()` \{#getVolume}
 
 Gets the volume of the sound
 
@@ -114,7 +114,7 @@ mySound:getVolume()
 
 ---
 
-### `setPitch(number)` {#setPitch}
+### `setPitch(number)` \{#setPitch}
 
 Sets the pitch of the sound
 
@@ -126,7 +126,7 @@ mySound:setPitch(5)
 
 ---
 
-### `getPitch()` {#getPitch}
+### `getPitch()` \{#getPitch}
 
 Gets the pitch of the sound
 
@@ -138,7 +138,7 @@ mySound:getPitch()
 
 ---
 
-### `setLoop(bool)` {#setLoop}
+### `setLoop(bool)` \{#setLoop}
 
 Sets if the sound will loop or not
 
@@ -150,7 +150,7 @@ mySound:setLoop(true)
 
 ---
 
-### `isLooping()` {#isLooping}
+### `isLooping()` \{#isLooping}
 
 Gets if the sound is set to loop or not
 
@@ -162,7 +162,7 @@ mySound:isLooping()
 
 ---
 
-### `setAttenuation(number)` {#setAttenuation}
+### `setAttenuation(number)` \{#setAttenuation}
 
 Sets the attenuation of the sound
 
@@ -174,7 +174,7 @@ mySound:setAttenuation(5)
 
 ---
 
-### `getAttenuation()` {#getAttenuation}
+### `getAttenuation()` \{#getAttenuation}
 
 Gets the attenuation of the sound
 
@@ -186,7 +186,7 @@ mySound:getAttenuation()
 
 ---
 
-### `setSubtitle(string)` {#setSubtitle}
+### `setSubtitle(string)` \{#setSubtitle}
 
 Sets the subtitle (the name that Minecraft's subtitle function will call the sound)
 
@@ -198,7 +198,7 @@ mySound:setSubtitle("Bat ecolocates")
 
 ---
 
-### `getSubtitle()` {#getSubtitle}
+### `getSubtitle()` \{#getSubtitle}
 
 Gets the subtitle
 

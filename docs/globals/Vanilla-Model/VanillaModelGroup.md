@@ -6,7 +6,7 @@ All changes also applies to all children parts
 
 ---
 
-### `setVisible(bool)` {#setVisible}
+### `setVisible(bool)` \{#setVisible}
 
 Sets this part and its children to be visible or invisible
 
@@ -18,7 +18,7 @@ vanilla_model.ALL:setVisible(false)
 
 ---
 
-### `getVisible()` {#getVisible}
+### `getVisible()` \{#getVisible}
 
 Gets whether you have set this part to be visible or invisible
 
@@ -30,7 +30,7 @@ vanilla_model.ALL:getVisible()
 
 ---
 
-### `setRot(Vector3)` {#setRot}
+### `setRot(Vector3)` \{#setRot}
 
 Set this part and its children's rotation
 
@@ -42,7 +42,7 @@ vanilla_model.ALL:setRot(0, 90, 0)
 
 ---
 
-### `getRot()` {#getgetRotPos}
+### `getRot()` \{#getgetRotPos}
 
 Get this part's set rotation
 
@@ -56,7 +56,7 @@ vanilla_model.ALL:getRot()
 
 ---
 
-### `setPos(Vector3)` {#setPos}
+### `setPos(Vector3)` \{#setPos}
 
 Set this part and its children's position, preserving the previous values
 
@@ -68,7 +68,7 @@ vanilla_model.ALL:setPos(0, 10, 0)
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Get this part's set position
 
@@ -82,7 +82,7 @@ vanilla_model.ALL:getPos()
 
 ---
 
-### `setScale(Vector3)` {#setScale}
+### `setScale(Vector3)` \{#setScale}
 
 Set this part and its children's scale
 
@@ -94,7 +94,7 @@ vanilla_model.ALL:setScale(2, 2, 2)
 
 ---
 
-### `getScale()` {#getScale}
+### `getScale()` \{#getScale}
 
 Get this part's set scale
 
@@ -108,7 +108,7 @@ vanilla_model.ALL:getScale()
 
 ---
 
-### `setOffsetRot(Vector3)` {#setOffsetRot}
+### `setOffsetRot(Vector3)` \{#setOffsetRot}
 
 Offsets this part and its children's rotation, adding on top of the vanilla values
 
@@ -120,7 +120,7 @@ vanilla_model.ALL:setOffsetRot(0, 90, 0)
 
 ---
 
-### `getOffsetRot()` {#getOffsetRot}
+### `getOffsetRot()` \{#getOffsetRot}
 
 Gets this part's rotation offset
 
@@ -132,7 +132,7 @@ vanilla_model.ALL:getOffsetRot()
 
 ---
 
-### `setOffsetScale(Vector3)` {#setOffsetScale}
+### `setOffsetScale(Vector3)` \{#setOffsetScale}
 
 Offsets this part and its children's scale, multiplying with the vanilla values
 
@@ -144,7 +144,7 @@ vanilla_model.ALL:setOffsetScale(2, 2, 2)
 
 ---
 
-### `getOffsetScale()` {#getOffsetScale}
+### `getOffsetScale()` \{#getOffsetScale}
 
 Gets this part's scale offset
 

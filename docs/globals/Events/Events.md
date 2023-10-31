@@ -2,13 +2,13 @@ Events are special functions that run at specific times or from specific trigger
 
 ---
 
-### Init {#Init}
+### Init \{#Init}
 
 If code is run outside of any event or function that is the <code>init</code> phase, and it runs first before any other event. Calling the player API will error here, use entity_init instead.
 
 ---
 
-### `entity_init()` {#entity_init}
+### `entity_init()` \{#entity_init}
 
 The entity_init event runs when the avatar's entity (usually the player) first starts existing.
 
@@ -22,7 +22,7 @@ end
 
 ---
 
-### `tick()` {#tick}
+### `tick()` \{#tick}
 
 The tick event runs every in-game tick if the avatar's entity (the player) exists. There are 20 ticks in a second. This is the most commonly used event.
 
@@ -36,7 +36,7 @@ end
 
 ---
 
-### `world_tick()` {#world_tick}
+### `world_tick()` \{#world_tick}
 
 The world_tick event runs every in game tick. There are 20 ticks in a second.
 
@@ -50,7 +50,7 @@ end
 
 ---
 
-### `render(delta,context,matrix)` {#render}
+### `render(delta,context,matrix)` \{#render}
 
 The render event runs once a frame before the avatar is rendered, after the avatar's entity exists. Calling the player is safe here.
 
@@ -70,7 +70,7 @@ end
 
 ---
 
-### `post_render(delta,context,matrix)` {#post_render}
+### `post_render(delta,context,matrix)` \{#post_render}
 
 The render event runs once a frame after the avatar is rendered, after the avatar's entity exists. Calling the player is safe here.
 
@@ -84,7 +84,7 @@ end
 
 ---
 
-### `world_render(delta)` {#world_render}
+### `world_render(delta)` \{#world_render}
 
 The world_render event is run every frame before the world is rendered. Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -98,7 +98,7 @@ end
 
 ---
 
-### `post_world_render(delta)` {#post_world_render}
+### `post_world_render(delta)` \{#post_world_render}
 
 The world_render event is run every frame after the world is rendered. Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -112,7 +112,7 @@ end
 
 ---
 
-### `chat_send_message(message)` {#chat_send_message}
+### `chat_send_message(message)` \{#chat_send_message}
 
 The chat_send_message event is run every time you send a message in chat
 
@@ -132,7 +132,7 @@ end
 
 ---
 
-### `chat_receive_message(raw,text)` {#chat_receive_message}
+### `chat_receive_message(raw,text)` \{#chat_receive_message}
 
 The CHAT_RECEIVE_MESSAGE event is run every time a message is received in chat
 
@@ -157,7 +157,7 @@ end
 
 ---
 
-### `skull_render(delta,block,item,entity,mode)` {#skull_render}
+### `skull_render(delta,block,item,entity,mode)` \{#skull_render}
 
 Called on every one of your skull blocks placed in the world
 
@@ -181,7 +181,7 @@ end
 
 ---
 
-### `mouse_scroll(delta)` {#mouse_scroll}
+### `mouse_scroll(delta)` \{#mouse_scroll}
 
 The MOUSE_SCROLL event runs every time the mouse is scrolled
 
@@ -199,7 +199,7 @@ end
 
 ---
 
-### `mouse_move(x, y)` {#mouse_move}
+### `mouse_move(x, y)` \{#mouse_move}
 
 The MOUSE_MOVE event runs every time the mouse is moved around
 
@@ -219,7 +219,7 @@ end
 
 ---
 
-### `mouse_press(button, action, modifier)` {#mouse_press}
+### `mouse_press(button, action, modifier)` \{#mouse_press}
 
 The MOUSE_PRESS event runs every time a mouse button is pressed
 
@@ -239,7 +239,7 @@ end
 
 ---
 
-### `key_press(key, action, modifier)` {#key_press}
+### `key_press(key, action, modifier)` \{#key_press}
 
 The key_press event runs every time a keyboard key is pressed
 Takes three number parameters, a "key", which is the number id of the key that was been pressed, the "action", which is the status of the press event (0 for release, 1 for press, 2 for hold), and the "modifier", which is a bitmask number detecting if you have any modifier keys being pressed (like shift or alt, for example)
@@ -258,7 +258,7 @@ end
 
 ---
 
-### `char_typed(character, modifier, codepoint)` {#char_typed}
+### `char_typed(character, modifier, codepoint)` \{#char_typed}
 
 The char_typed event runs every time a character is inputted
 
@@ -274,7 +274,7 @@ end
 
 ---
 
-### `use_item(item, action, particles)` {#use_item}
+### `use_item(item, action, particles)` \{#use_item}
 
 The use_item event is run every time the entity uses an item
 
@@ -294,7 +294,7 @@ end
 
 ---
 
-### `arrow_render(delta, arrow)` {#arrow_render}
+### `arrow_render(delta, arrow)` \{#arrow_render}
 
 The ARROW_RENDER event is run for every arrow entity shot by the Avatar owner
 
@@ -312,7 +312,7 @@ end
 
 ---
 
-### `item_render(item, mode, pos, rot, scale, left)` {#item_render}
+### `item_render(item, mode, pos, rot, scale, left)` \{#item_render}
 
 Called on every one of your items that is being rendered
 
@@ -338,7 +338,7 @@ end
 
 ---
 
-### `on_play_sound(id, pos, vol, pitch, loop, category, path)` {#on_play_sound}
+### `on_play_sound(id, pos, vol, pitch, loop, category, path)` \{#on_play_sound}
 
 The on_play_sound event runs every time you hear a sound.
 
@@ -364,7 +364,7 @@ end
 
 ---
 
-### `resource_reload()` {#resource_reload}
+### `resource_reload()` \{#resource_reload}
 
 Called every time that the client resources are reloaded, allowing you to re-create or update resource texture references.
 

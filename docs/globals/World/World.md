@@ -2,7 +2,7 @@ The world API is accessed through the <code>world</code> global. Like so: <code>
 
 ---
 
-### `exists()` {#exists}
+### `exists()` \{#exists}
 
 Checks whether or not a world currently exists
 
@@ -16,7 +16,7 @@ world:exists()
 
 ---
 
-### `getPlayers()` {#getPlayers}
+### `getPlayers()` \{#getPlayers}
 
 Returns a table containing instances of Player for all players in the world
 
@@ -32,7 +32,7 @@ end
 
 ---
 
-### `getTime()` {#getTime}
+### `getTime()` \{#getTime}
 
 Gets the current game time of the world
 
@@ -48,7 +48,7 @@ world:getTime()
 
 ---
 
-### `getTimeOfDay()` {#getTimeOfDay}
+### `getTimeOfDay()` \{#getTimeOfDay}
 
 Gets the current day time of the world
 
@@ -64,7 +64,7 @@ world:getTimeOfDay()
 
 ---
 
-### `getMoonPhase()` {#getMoonPhase}
+### `getMoonPhase()` \{#getMoonPhase}
 
 Gets the current moon phase of the world, stored as an integer
 
@@ -76,7 +76,7 @@ world:getMoonPhase()
 
 ---
 
-### `getDimension()` {#getDimension}
+### `getDimension()` \{#getDimension}
 
 Gets the dimension name of this world
 
@@ -88,7 +88,7 @@ world:getDimension()
 
 ---
 
-### `getBiome(Vector3)` {#getBiome}
+### `getBiome(Vector3)` \{#getBiome}
 
 Gets the Biome located at the given position
 
@@ -100,7 +100,7 @@ world:getBiome(player:getPos())
 
 ---
 
-### `getEntity(string)` {#getEntity}
+### `getEntity(string)` \{#getEntity}
 
 Returns an EntityAPI object from this UUID's entity, or nil if no entity was found
 
@@ -112,7 +112,7 @@ world.getEntity("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
 
 ---
 
-### `getBlockState(Vector3)` {#getBlockState}
+### `getBlockState(Vector3)` \{#getBlockState}
 
 Gets the BlockState of the block at the given position
 
@@ -124,7 +124,7 @@ world:getBlockState(player:getPos())
 
 ---
 
-### `getStrongRedstonePower(Vector3)` {#getStrongRedstonePower}
+### `getStrongRedstonePower(Vector3)` \{#getStrongRedstonePower}
 
 Gets the direct redstone power level of the block at the given position
 
@@ -136,7 +136,7 @@ world:getStrongRedstonePower(player:getPos())
 
 ---
 
-### `getRedstonePower(Vector3)` {#getRedstonePower}
+### `getRedstonePower(Vector3)` \{#getRedstonePower}
 
 Gets the redstone power level of the block at the given position
 
@@ -148,7 +148,7 @@ world:getRedstonePower(player:getPos())
 
 ---
 
-### `getSkyLightLevel(Vector3)` {#getSkyLightLevel}
+### `getSkyLightLevel(Vector3)` \{#getSkyLightLevel}
 
 Gets the sky light level of the block at the given position
 
@@ -160,7 +160,7 @@ world:getSkyLightLevel(player:getPos())
 
 ---
 
-### `getBlockLightLevel(Vector3)` {#getBlockLightLevel}
+### `getBlockLightLevel(Vector3)` \{#getBlockLightLevel}
 
 Gets the block light level of the block at the given position
 
@@ -172,7 +172,7 @@ world:getBlockLightLevel(player:getPos())
 
 ---
 
-### `getLightLevel(Vector3)` {#getLightLevel}
+### `getLightLevel(Vector3)` \{#getLightLevel}
 
 Gets the overall light level of the block at the given position
 
@@ -184,7 +184,7 @@ world:getLightLevel(player:getPos())
 
 ---
 
-### `isOpenSky(Vector3)` {#isOpenSky}
+### `isOpenSky(Vector3)` \{#isOpenSky}
 
 Gets whether or not the sky is open at the given position
 
@@ -196,7 +196,7 @@ world:isOpenSky(player:getPos())
 
 ---
 
-### `getRainGradient(delta)` {#getRainGradient}
+### `getRainGradient(delta)` \{#getRainGradient}
 
 Gets the current rain gradient in the world, interpolated from the previous tick to the current one
 
@@ -210,7 +210,7 @@ world:getRainGradient()
 
 ---
 
-### `isThundering()` {#isThundering}
+### `isThundering()` \{#isThundering}
 
 Gets whether or not there is currently thunder/lightning happening in the world
 
@@ -222,7 +222,7 @@ world:isThundering()
 
 ---
 
-### `getBuildHeight()` {#getBuildHeight}
+### `getBuildHeight()` \{#getBuildHeight}
 
 Returns the minimum and maximum build height of the world, as varargs
 
@@ -234,7 +234,7 @@ world:getBuildHeight()
 
 ---
 
-### `getSpawnPoint()` {#getSpawnPoint}
+### `getSpawnPoint()` \{#getSpawnPoint}
 
 Returns a vector with the coordinates of the world spawn
 
@@ -246,7 +246,7 @@ world:getSpawnPoint()
 
 ---
 
-### `getBlocks(Vector3,Vector3)` {#getBlocks}
+### `getBlocks(Vector3,Vector3)` \{#getBlocks}
 
 Gets a list of all BlockStates in the specified area
 
@@ -254,7 +254,7 @@ The maximum area size is 8 x 8 x 8
 
 ---
 
-### `newItem(string,integer,integer)` {#newItem}
+### `newItem(string,integer,integer)` \{#newItem}
 
 Parses and create a new ItemStack from the given string
 
@@ -270,7 +270,7 @@ world:newItem("grass_block", 64, 5)
 
 ---
 
-### `newBlock(string,Vector3)` {#newBlock}
+### `newBlock(string,Vector3)` \{#newBlock}
 
 Parses and create a new BlockState from the given string
 
@@ -286,7 +286,7 @@ world:newBlock("grass_block", player:getPos())
 
 ---
 
-### `avatarVars()` {#avatarVars}
+### `avatarVars()` \{#avatarVars}
 
 Returns a table containing variables stored from all loaded Avatars "avatar:store()" function
 The table will be indexed by the avatar's owner UUID

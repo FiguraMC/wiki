@@ -1,0 +1,13 @@
+diff --git a/node_modules/docusaurus-lunr-search/src/theme/SearchBar/index.jsx b/node_modules/docusaurus-lunr-search/src/theme/SearchBar/index.jsx
+index 0e3e831..c397efd 100644
+--- a/node_modules/docusaurus-lunr-search/src/theme/SearchBar/index.jsx
++++ b/node_modules/docusaurus-lunr-search/src/theme/SearchBar/index.jsx
+@@ -71,7 +71,7 @@ const Search = props => {
+         import("./algolia.css")
+       ]).then(([searchDocFile, searchIndex, { default: DocSearch }]) => {
+         const { searchDocs, options } = searchDocFile;
+-        if (searchDocs.length === 0) {
++        if (!searchDocs || searchDocs.length === 0) {
+           return;
+         }
+         initAlgolia(searchDocs, searchIndex, DocSearch, options);
