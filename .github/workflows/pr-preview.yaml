@@ -19,8 +19,8 @@ jobs:
 
       - name: Read Pull Request Details
         run: |
-          echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV &&
-          echo "PR_COMMIT_HASH=$(cat ./build/.pr_commit_hash)" >> $GITHUB_ENV &&
+          echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV
+          echo "PR_COMMIT_HASH=$(cat ./build/.pr_commit_hash)" >> $GITHUB_ENV
           rm ./build/.pr_number ./build/.pr_commit_hash
 
       - name: Deploy Preview
