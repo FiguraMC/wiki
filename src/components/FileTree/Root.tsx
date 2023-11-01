@@ -10,7 +10,7 @@ const resolveFileTree = (children: React.ReactNode): Node[] => {
   const resolved = React.Children.map(children, (child): Node | null => {
     if (!React.isValidElement(child)) return null;
 
-    if (child.props.originalType === FileTreeNode) {
+    if (child.type === FileTreeNode) {
       const nodeProps = child.props as unknown as FileTreeNodeProps;
 
       return {
@@ -42,12 +42,12 @@ const transposeJoiners = (matrix: Joiner[][]): Joiner[][] => {
   const rows = matrix.length;
   if (rows === 0) return matrix;
 
-  const cols = matrix[0].length;
+  const cols = matrix[0]!.length;
   const result: Joiner[][] = Array.from({ length: cols }, () => []);
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      result[j][i] = matrix[i][j];
+      result[j]![i] = matrix[i]![j]!;
     }
   }
 
