@@ -35,7 +35,7 @@
 
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding-right: 0 var(--ifm-pre-padding);
+  padding-right: var(--ifm-pre-padding);
   padding-left: calc(var(--ifm-pre-padding) - var(--highlight-border-width));
   border-left-width: var(--highlight-border-width);
   border-left-style: solid;
