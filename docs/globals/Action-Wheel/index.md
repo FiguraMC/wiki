@@ -42,7 +42,7 @@ Sets the Page of the action wheel to the given Title or Page
 
 ```lua
 action_wheel:newPage("myPage")
-// highlight-next-line
+-- highlight-next-line
 action_wheel:getPage("myPage")
 -- because getPage needs a string you can only use getPage on pages with titles
 ```

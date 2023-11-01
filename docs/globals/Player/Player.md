@@ -13,19 +13,19 @@ All provided examples assume you're using a tick event.
 To reiterate:
 
 ```lua
-// error-next-line
+-- error-next-line
 player:isGliding() -- will error
 function events.entity_init()
     player:isGliding() -- will not error, but will only play once
 end
 
-// error-next-line
+-- error-next-line
 player:isGliding() -- will error
 function events.tick()
     player:isGliding() -- won't error, and will update once a tick
 end
 
-// error-next-line
+-- error-next-line
 player:isGliding() -- will error
 ```
 

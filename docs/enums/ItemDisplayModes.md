@@ -19,7 +19,7 @@ When an item task's display mode is set, transformations will be applied to make
 ```lua
 models:newItem('CarrotTask')
     :setItem('minecraft:carrot')
-// highlight-next-line
+-- highlight-next-line
     :setDisplayMode('GROUND')
 ```
 
@@ -39,7 +39,7 @@ models:newItem('CarrotTask')
 
 ```lua
 function events.item_render(item, mode, pos, rot, scale, lefty)
-// highlight-next-line
+-- highlight-next-line
     if mode == "HEAD" then
         return models.myModel.Item
     end
