@@ -41,7 +41,8 @@ jobs:
           comment-author: figuramcbot
           body-includes: "A preview for this pull request is now ready! :tada:"
 
-      - run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+      - name: Format Date
+        run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       - name: Leave comment
         uses: peter-evans/create-or-update-comment@v1
