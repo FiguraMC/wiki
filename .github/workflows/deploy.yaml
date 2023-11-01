@@ -1,0 +1,26 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup and Build
+        uses: ./.github/actions/setup-env
+        with:
+          build: true
+
+      - name: Deploy
+        uses: cloudflare/pages-action@v1
+        with:
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          projectName: figura-wiki
+          directory: ./build
+          gitHubToken: ${{ secrets.GH_BOT_TOKEN }}

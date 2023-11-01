@@ -1,0 +1,44 @@
+name: Setup Environment
+description: Installs node, pnpm, and dependencies
+
+inputs:
+  build:
+    description: Whether to build the project
+    default: "false"
+    required: false
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+        run_install: false
+
+    - name: Get pnpm Store Path
+      shell: bash
+      run: |
+        echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+    - name: Setup pnpm Cache
+      uses: actions/cache@v3
+      with:
+        path: ${{ env.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Install Dependencies
+      shell: bash
+      run: pnpm install
+
+    - name: Build
+      if: inputs.build == 'true'
+      shell: bash
+      run: pnpm build

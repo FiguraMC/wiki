@@ -53,10 +53,10 @@ jobs:
           body: |
             A preview for this pull request is now ready! :tada:
 
-            | **Name**               | **Details**                                                                                    |
-            | ---------------------- | ---------------------------------------------------------------------------------------------- |
-            | URL                    | https://pr-${{ env.PR_NUMBER }}.figura-wiki.pages.dev                                             |
-            | Latest Commit Deployed | ${{ env.PR_COMMIT_HASH }}                                                                      |
-            | Last Updated           | `${{ env.NOW }} UTC`                                                                           |
+            | Name           | Details                                               |
+            | -------------- | ----------------------------------------------------- |
+            | URL            | https://pr-${{ env.PR_NUMBER }}.figura-wiki.pages.dev |
+            | Latest Commit  | ${{ env.PR_COMMIT_HASH }}                             |
+            | Last Updated   | `${{ env.NOW }} UTC`                                  |
 
             This preview will be automatically updated whenever new changes are added.
