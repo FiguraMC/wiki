@@ -138,8 +138,6 @@ const FileTreeRoot: FC<PropsWithChildren> = ({ children }) => {
   return (
     <pre>
       {flattenedTree.map((node, index) => {
-        console.log(node);
-
         return (
           <span
             key={index}
