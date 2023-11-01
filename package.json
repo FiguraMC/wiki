@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "patch-package",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -21,7 +20,8 @@
     "@docusaurus/preset-classic": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
-    "docusaurus-lunr-search": "github:repository/docusaurus-lunr-search",
+    "docusaurus-lunr-search": "^3.2.0",
+    "lunr": "^2.3.9",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -31,8 +31,8 @@
     "@prettier/plugin-lua": "^0.0.3",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@tsconfig/docusaurus": "^2.0.1",
-    "patch-package": "^8.0.0",
     "prettier": "^3.0.3",
+    "swc-loader": "^0.2.3",
     "typescript": "^5.2.2"
   },
   "browserslist": {
