@@ -28,7 +28,7 @@ Sets the title of the Action.
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setTitle('Click me!')
 ```
 
@@ -52,7 +52,7 @@ local myPage = action_wheel:new_page()
 local myAction = myPage:newAction()
     :setTitle('Click me!')
 
-// highlight-next-line
+-- highlight-next-line
 print(myAction:getTitle())
 ```
 
@@ -80,7 +80,7 @@ Sets an item to display on the Acton.
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setItem('minecraft:stone')
 ```
 
@@ -108,7 +108,7 @@ Sets the color of the Action. Takes a `Vector3` of rgb values or a number per va
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
@@ -132,7 +132,7 @@ local myPage = action_wheel:new_page()
 myPage:newAction()
     :setColor(255 / 255, 192 / 155, 203 / 255)
 
-// highlight-next-line
+-- highlight-next-line
 print(myAction:getColor())
 ```
 
@@ -167,12 +167,12 @@ local myPage = action_wheel:new_page()
 
 -- basic
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setTexture(textures['myTexture'])
 
 -- advanced
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setTexture(textures['myTexture'], 16, 32, nil, nil, 2)
 
 ```
@@ -201,7 +201,7 @@ Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb v
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setHoverColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
@@ -225,7 +225,7 @@ local myPage = action_wheel:new_page()
 myPage:newAction()
     :setHoverColor(255 / 255, 192 / 155, 203 / 255)
 
-// highlight-next-line
+-- highlight-next-line
 print(myAction:getHoverColor())
 ```
 
@@ -260,12 +260,12 @@ local myPage = action_wheel:new_page()
 
 -- basic
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setHoverTexture(textures['myTexture'])
 
 -- advanced
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setHoverTexture(textures['myTexture'], 16, 32, nil, nil, 2)
 
 ```
@@ -302,7 +302,7 @@ local myPage = action_wheel:new_page()
 myPage:newAction()
     :setTitle('Sit')
     :setOnToggle(pings.sit)
-// highlight-next-line
+-- highlight-next-line
     :setToggleTitle('Stand')
 ```
 
@@ -324,10 +324,10 @@ Gets the Action's title when toggled.
 ```lua
 local myPage = action_wheel:new_page()
 myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setToggleTitle('Stand')
 
-// highlight-next-line
+-- highlight-next-line
 print(myAction:getToggleTitle())
 ```
 
@@ -359,7 +359,7 @@ myPage:newAction()
     :setItem('spruce_stairs')
     :setOnToggle(pings.sit)
     :setToggleTitle('Stand')
-// highlight-next-line
+-- highlight-next-line
     :setToggleItem('armor_stand')
 ```
 
@@ -388,7 +388,7 @@ Sets the color of the Action when toggled. Takes a `Vector3` of rgb values or a 
 local myPage = action_wheel:new_page()
 myPage:newAction()
     :setColor(255 / 255, 192 / 255, 203 / 255)
-// highlight-next-line
+-- highlight-next-line
     :setToggleColor(0, 128 / 255, 128 / 255)
 ```
 
@@ -412,7 +412,7 @@ local myPage = action_wheel:new_page()
 myPage:newAction()
     :setToggleColor(255 / 255, 192 / 155, 203 / 255)
 
-// highlight-next-line
+-- highlight-next-line
 print(myAction:getToggleColor())
 ```
 
@@ -448,13 +448,13 @@ local myPage = action_wheel:new_page()
 -- basic
 myPage:newAction()
     :setTexture(textures['myTexture'])
-// highlight-next-line
+-- highlight-next-line
     :setToggleTexture(textures['myToggleTexture'])
 
 -- advanced
 myPage:newAction()
     :setTexture(textures['myTexture'], 0, 32, nil, nil, 2)
-// highlight-next-line
+-- highlight-next-line
     :setToggleTexture(textures['myTexture'], 16, 32, nil, nil, 2)
 
 ```
@@ -490,7 +490,7 @@ local t = 0
 function events.tick()
     if t % 20 == 0 then
         local wasToggled = myAction:isToggled()
-// highlight-next-line
+-- highlight-next-line
         myAction:setToggled(not wasToggled)
     end
     t = t + 1
@@ -521,7 +521,7 @@ local t = 0
 
 function events.tick()
     if t % 20 == 0 then
-// highlight-next-line
+-- highlight-next-line
         local wasToggled = myAction:isToggled()
         myAction:setToggled(not wasToggled)
     end
@@ -578,11 +578,11 @@ Sets the function that is executed when the left mouse button is clicked. Figura
 <!-- prettier-ignore -->
 ```lua
 myPage:newAction()
-// highlight-start
+-- highlight-start
     :setOnLeftClick(function()
         print('I left clicked this button!')
     end)
-// highlight-end
+-- highlight-end
 ```
 
 ---
@@ -620,11 +620,11 @@ Sets the function that is executed when the right mouse button is clicked. Figur
 <!-- prettier-ignore -->
 ```lua
 myPage:newAction()
-// highlight-start
+-- highlight-start
     :setOnRightClick(function()
         print('I right clicked this button!')
     end)
-// highlight-end
+-- highlight-end
 ```
 
 ---
@@ -671,7 +671,7 @@ myPage:newAction()
     :toggleTitle("enabled")
     :item("red_wool")
     :toggleItem("green_wool")
-    // highlight-next-line
+    -- highlight-next-line
     :setOnToggle(pings.setVisible)
 ```
 
@@ -720,11 +720,11 @@ myPage:newAction()
     :setOnToggle(function(bool)
         print('This is always true: ', .. bool)
     end)
-// highlight-start
+-- highlight-start
     :setOnUntoggle(function(bool)
         print('This is always false: ' .. bool)
     end)
-// highlight-end
+-- highlight-end
 ```
 
 ---
@@ -763,9 +763,9 @@ This will execute when the mouse wheel scrolls while hovering over the Action. T
 <!-- prettier-ignore -->
 ```lua
 myPage:newAction()
-// highlight-start
+-- highlight-start
     :setOnScroll(function(dir)
         print("Scrolled in this direction: " .. dir)
     end)
-// highlight-end
+-- highlight-end
 ```

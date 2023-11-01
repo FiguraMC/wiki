@@ -64,7 +64,7 @@ Sets the texture dimensions, used in UV calculation. Accepts a `Vector2` of dime
 ```lua
 -- use the long water_flow texture then make it one block
 mySprite:setTexture('textures/block/water_flow.png', 16, 16)
-// highlight-next-line
+-- highlight-next-line
 mySprite:setDimensions(32, 1024)
 ```
 
@@ -139,7 +139,7 @@ Sets this texture UV offset. Accepts a `Vector2` of UV values or a number per va
 **Example**:
 
 ```lua
-// Let's make a sprite task of flowing water!
+-- Let's make a sprite task of flowing water!
 mySprite:setTexture('textures/block/water_flow.png', 16, 16)
 mySprite:setDimensions(32, 1024)
 mySprite:setColor(world.getBiome():getWaterColor())
@@ -147,7 +147,7 @@ mySprite:setColor(world.getBiome():getWaterColor())
 local t = 0
 
 function events.tick()
-// highlight-next-line
+-- highlight-next-line
     mySprite:setUV(1, t/32)
     t = t + 1
 end
@@ -174,7 +174,7 @@ Set this texture UV offset, in pixels, based on the texture's dimension. Accepts
 **Example**:
 
 ```lua
-// Let's make a sprite task of flowing water!
+-- Let's make a sprite task of flowing water!
 mySprite:setTexture('textures/block/water_flow.png', 16, 16)
 mySprite:setDimensions(32, 1024)
 mySprite:setColor(world.getBiome():getWaterColor())
@@ -182,7 +182,7 @@ mySprite:setColor(world.getBiome():getWaterColor())
 local t = 0
 
 function events.tick()
-// highlight-next-line
+-- highlight-next-line
     mySprite:setUVPixels(1, t)
     t = t - 1
 end

@@ -118,7 +118,7 @@ Sets the outline color this Text should render. Takes a `Vector3` of rgb values 
 
 ```lua
 myText:setOutline(true)
-// highlight-next-line
+-- highlight-next-line
 myText:setOutlineColor(255 / 255, 192 / 255, 203 / 255)
 ```
 

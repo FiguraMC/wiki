@@ -1157,7 +1157,7 @@ Moves this part to be a child of the given part
 **Example**:
 
 ```lua
-//error-next-line
+-- error-next-line
 models:moveTo(models)
 -- This is recursive
 ```
@@ -1171,7 +1171,7 @@ Adds the given part into this part's children list
 **Example**:
 
 ```lua
-//error-next-line
+-- error-next-line
 models:addChild(models)
 -- This is recursive
 ```
@@ -1185,7 +1185,7 @@ Removes the given part from this part's children list
 **Example**:
 
 ```lua
-//error-next-line
+-- error-next-line
 models:removeChild(models)
 -- This is recursive
 ```
