@@ -3,8 +3,8 @@ Render modes indicate what context the avatar is being rendered in.
 **Example**:
 
 ```lua
-function events.render(_,context)
--- highlight-next-line
+function events.render(_, context)
+    -- highlight-next-line
     models.myModel.World:setVisible(context ~= "FIRST_PERSON")
 end
 ```

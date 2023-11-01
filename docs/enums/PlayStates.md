@@ -4,7 +4,7 @@ The play state of a Blockbench animation, detected with <code>getPlayState()</co
 
 ```lua
 function events.tick()
--- highlight-next-line
+    -- highlight-next-line
     local isDancing = animations.myModel.dance:getPlayState() == "PLAYING"
     models.myModel.discoBall:setVisible(isDancing)
 end
