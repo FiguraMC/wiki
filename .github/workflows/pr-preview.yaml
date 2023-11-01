@@ -1,4 +1,4 @@
-name: Deploy Pull Request Preview
+name: Pull Request Preview
 
 on:
   workflow_run:
@@ -19,8 +19,8 @@ jobs:
 
       - name: Read Pull Request Details
         run: |
-          echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV &&
-          echo "PR_COMMIT_HASH=$(cat ./build/.pr_commit_hash)" >> $GITHUB_ENV &&
+          echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV
+          echo "PR_COMMIT_HASH=$(cat ./build/.pr_commit_hash)" >> $GITHUB_ENV
           rm ./build/.pr_number ./build/.pr_commit_hash
 
       - name: Deploy Preview
@@ -53,10 +53,10 @@ jobs:
           body: |
             A preview for this pull request is now ready! :tada:
 
-            | **Name**               | **Details**                                                                                    |
-            | ---------------------- | ---------------------------------------------------------------------------------------------- |
-            | URL                    | https://pr-${{ env.PR_NUMBER }}.figura-wiki.pages.dev                                             |
-            | Latest Commit Deployed | ${{ env.PR_COMMIT_HASH }}                                                                      |
-            | Last Updated           | `${{ env.NOW }} UTC`                                                                           |
+            | Name           | Details                                               |
+            | -------------- | ----------------------------------------------------- |
+            | URL            | https://pr-${{ env.PR_NUMBER }}.figura-wiki.pages.dev |
+            | Latest Commit  | ${{ env.PR_COMMIT_HASH }}                             |
+            | Last Updated   | `${{ env.NOW }} UTC`                                  |
 
             This preview will be automatically updated whenever new changes are added.
