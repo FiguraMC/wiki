@@ -4,7 +4,7 @@ What hold-right-click action an item you're using has. As this is for holding ac
 
 ```lua
 function events.tick()
--- highlight-next-line
+    -- highlight-next-line
     local isEating = player:getActiveItem():getUseAction() == "EAT"
     animations.myModel.eat:setPlaying(isEating)
 end

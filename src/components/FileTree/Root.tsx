@@ -16,6 +16,7 @@ const resolveFileTree = (children: React.ReactNode): Node[] => {
       return {
         icon: nodeProps.icon,
         label: nodeProps.label,
+        highlight: nodeProps.highlight,
         children: nodeProps.children ? resolveFileTree(nodeProps.children) : [],
       };
     } else {
@@ -63,6 +64,7 @@ const flattenFileTree = (tree: Node[], depth = 0) => {
     flattened.push({
       label: node.label,
       icon: node.icon,
+      highlight: node.highlight,
       depth,
       end: index === tree.length - 1,
     });
@@ -136,12 +138,18 @@ const FileTreeRoot: FC<PropsWithChildren> = ({ children }) => {
   return (
     <pre>
       {flattenedTree.map((node, index) => {
+        console.log(node);
+
         return (
-          <div key={index} style={{ display: "flex", alignItems: "center" }}>
-            <div style={{ marginRight: "-0.15rem" }}>{node.start}</div>
+          <span
+            key={index}
+            style={{ display: "flex", alignItems: "center" }}
+            className={node.highlight ? "code-block-highlighted-line" : ""}
+          >
+            <span style={{ marginRight: "-0.15rem" }}>{node.start}</span>
             <Emoji icon={node.icon ?? "file/folder"} />
-            <div style={{ marginLeft: "0.25rem" }}>{node.label}</div>
-          </div>
+            <span style={{ marginLeft: "0.25rem" }}>{node.label}</span>
+          </span>
         );
       })}
     </pre>

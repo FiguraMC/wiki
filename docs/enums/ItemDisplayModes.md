@@ -39,7 +39,7 @@ models:newItem('CarrotTask')
 
 ```lua
 function events.item_render(item, mode, pos, rot, scale, lefty)
--- highlight-next-line
+    -- highlight-next-line
     if mode == "HEAD" then
         return models.myModel.Item
     end
