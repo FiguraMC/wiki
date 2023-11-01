@@ -1,4 +1,4 @@
-name: Build Pull Request
+name: Check Pull Request
 
 on:
   pull_request:
@@ -27,3 +27,14 @@ jobs:
           name: build
           path: ./build/
           retention-days: 1
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup-env
+
+      - name: Check Formatting
+        run: pnpm run format:check

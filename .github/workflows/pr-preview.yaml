@@ -1,4 +1,4 @@
-name: Deploy Pull Request Preview
+name: Pull Request Preview
 
 on:
   workflow_run:
