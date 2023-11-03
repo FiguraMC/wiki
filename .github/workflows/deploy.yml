@@ -1,4 +1,7 @@
-name: Deploy
+# Clones the repository which then begins with building the environment,
+# Once built, It deploys the built wiki.
+
+name: Deploy Wiki
 
 on:
   push:

@@ -1,3 +1,6 @@
+# Clones the repository which then begins with building the environment,
+# Once built, It writes down the pull request details and uploads them to GitHub.
+
 name: Build Pull Request
 
 on:

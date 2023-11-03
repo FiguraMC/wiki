@@ -1,3 +1,7 @@
+# Downloads the artifacts from GitHub which then begins with reading the pull request details,
+# once read - it deploys the wiki for preview and once previewed,
+# it finds the required comment and then creates a comment with formatted date.
+
 name: Pull Request Preview
 
 on:

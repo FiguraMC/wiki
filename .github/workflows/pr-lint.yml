@@ -1,3 +1,6 @@
+# Clones the repository which then begins with building the environment,
+# Once built, It performs a formatting check.
+
 name: Lint Pull Request
 
 on:
