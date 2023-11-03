@@ -29,7 +29,7 @@ runs:
       run: |
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - name: Setup Cache for pnpm
+    - name: Setup pnpm Cache
       uses: actions/cache@v3
       with:
         path: ${{ env.STORE_PATH }}
@@ -37,11 +37,11 @@ runs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
 
-    - name: Install Dependencies using pnpm
+    - name: Install Dependencies
       shell: bash
       run: pnpm install
 
-    - name: Build using pnpm
+    - name: Build
       if: inputs.build == 'true'
       shell: bash
       run: pnpm build
