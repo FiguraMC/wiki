@@ -1,3 +1,7 @@
+# Downloads the artifacts from GitHub which then begins with reading the pull request details,
+# once read - it deploys the wiki for preview and once previewed,
+# it finds the required comment and then creates a comment with formatted date.
+
 name: Pull Request Preview
 
 on:
@@ -7,10 +11,10 @@ on:
 
 jobs:
   preview:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.workflow_run.conclusion == 'success'
     steps:
-      - name: Download Artifact
+      - name: Download Artifacts
         uses: dawidd6/action-download-artifact@v2
         with:
           run_id: ${{ github.event.workflow_run.id }}

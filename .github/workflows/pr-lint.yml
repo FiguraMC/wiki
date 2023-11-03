@@ -1,3 +1,6 @@
+# Clones the repository which then begins with building the environment,
+# Once built, It performs a formatting check.
+
 name: Lint Pull Request
 
 on:
@@ -6,12 +9,12 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup
+      - name: Setup Environment
         uses: ./.github/actions/setup-env
 
       - name: Check Formatting

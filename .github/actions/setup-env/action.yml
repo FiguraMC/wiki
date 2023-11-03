@@ -1,3 +1,6 @@
+# Sets up the environment where node, pnpm and dependencies are needed,
+# Once set up, This workflow will begin to build this repo using pnpm itself.
+
 name: Setup Environment
 description: Installs node, pnpm, and dependencies
 
@@ -11,7 +14,7 @@ runs:
   using: composite
   steps:
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 18.x
 

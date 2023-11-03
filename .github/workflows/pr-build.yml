@@ -1,3 +1,6 @@
+# Clones the repository which then begins with building the environment,
+# Once built, It writes down the pull request details and uploads them to GitHub.
+
 name: Build Pull Request
 
 on:
@@ -6,9 +9,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup and Build
@@ -21,7 +24,7 @@ jobs:
           echo ${{ github.event.number }} > ./build/.pr_number
           echo ${{ github.event.pull_request.head.sha }} > ./build/.pr_commit_hash
 
-      - name: Upload Artifact
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build
