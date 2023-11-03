@@ -10,8 +10,8 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - name: Setup Node
+      uses: actions/setup-node@v4
       with:
         node-version: 18.x
 
@@ -26,7 +26,7 @@ runs:
       run: |
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - name: Setup pnpm Cache
+    - name: Setup Cache for pnpm
       uses: actions/cache@v3
       with:
         path: ${{ env.STORE_PATH }}
@@ -34,11 +34,11 @@ runs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
 
-    - name: Install Dependencies
+    - name: Install Dependencies using pnpm
       shell: bash
       run: pnpm install
 
-    - name: Build
+    - name: Build using pnpm
       if: inputs.build == 'true'
       shell: bash
       run: pnpm build

@@ -7,10 +7,10 @@ on:
 
 jobs:
   preview:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.workflow_run.conclusion == 'success'
     steps:
-      - name: Download Artifact
+      - name: Download Artifacts
         uses: dawidd6/action-download-artifact@v2
         with:
           run_id: ${{ github.event.workflow_run.id }}
@@ -41,10 +41,10 @@ jobs:
           comment-author: figuramcbot
           body-includes: "A preview for this pull request is now ready! :tada:"
 
-      - name: Format Date
+      - name: Format the Date
         run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      - name: Leave comment
+      - name: Create a comment
         uses: peter-evans/create-or-update-comment@v1
         with:
           token: ${{ secrets.GH_BOT_TOKEN }}
