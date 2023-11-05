@@ -10,7 +10,7 @@ action_wheel:setPage(myPage)
 ## Action Events
 
 Technically they are "callbacks" and not "events" as you can only assign a single function, but eh.
-It's common practice to pass pings to these functions since interacting with the action_wheel is not sync'd between clients. Checkout the [`setOnToggle`](#setOnToggle) function to see an example.
+It's common practice to pass pings to these functions since interacting with the action_wheel is not synced between clients. Checkout the [`setOnToggle`](#setOnToggle) function to see an example.
 
 ---
 
