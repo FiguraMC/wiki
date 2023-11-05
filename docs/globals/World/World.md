@@ -5,7 +5,7 @@ The functions in the World API never receive `self` as a parameter. Because of t
 
 ```lua
 -- error-next-line
-word:getBlockState(player:getPos())
+world:getBlockState(player:getPos())
 
 -- highlight-next-line
 world.getBlockState(player:getPos())
