@@ -8,7 +8,7 @@ The documentation page for the [Action Wheel](../globals/action-wheel) has more 
 
 ## Example Action Wheel
 
-The first step is to create the page that will hold the actions. This is done with the`newPage` function.
+The first step is to create the page that will hold the actions. This is done with the `newPage` function.
 
 ```lua
 local mainPage = action_wheel:newPage()

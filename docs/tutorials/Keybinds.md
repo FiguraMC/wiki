@@ -7,10 +7,13 @@ Keybinds are unsynced information, meaning that without a ping other players can
 Keybinds can be used while the player is unloaded, such as when you are out of render distance.
 If the player API is called during this time your script will error.
 
-You can protect yourself from these errors by adding the following check at the top of ping.
+You can protect yourself from these errors by adding a check at the top of your ping function. For example:
 
 ```lua
-if not player:isLoaded() then return end
+function pings.examplePing()
+    if not player:isLoaded() then return end
+    -- ...rest of your code
+end
 ```
 
 :::
