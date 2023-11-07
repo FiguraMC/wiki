@@ -1,36 +1,36 @@
-The Action Wheel is a GUI element provided by Figura that allows for adding highly customizable Actions that can provide additional functionality to your avatar.
+The Action Wheel is a GUI element provided by Figura that allows for adding highly customizable actions that can provide additional functionality to your avatar.
 
-The Action Wheel operates on Pages. Only a single Page can be active at a time.<br/>
-Pages contain Actions. A Page can have an unlimited amount of Actions, but the Action Wheel can only render 8 at a time. While a Page with more than 8 Actions is active, you can use the scroll wheel to move between the groups of 8 Actions within the Page.
+The action wheel works with a system of pages, of which only one can be active at a time.
 
-The docs page for the [Action Wheel](../globals/action-wheel) has more examples for specific action wheel functions
+Each page can have an unlimited number of actions, but the action wheel can only render eight at a time. While a page with more than 8 actions is active, you can use the scroll wheel to move between the groups of 8 actions within the page.
+
+The documentation page for the [Action Wheel](../globals/action-wheel) has more examples for specific action wheel functions
 
 ## Example Action Wheel
 
-First step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.
+The first step is to create the page that will hold the actions. This is done with the`newPage` function.
 
 ```lua
 local mainPage = action_wheel:newPage()
 ```
 
-This creates a new page, but thats it. If you save and try to open the Action Wheel (Default Keybind B), you will see a message stating that there is no active page. We can use the <code>setPage</code> function while providing a reference to a Page object to set the active page.
+This creates a new page, but that's it. If you save and try to open the action wheel, bound to B by default, you will see a message stating that there is no active page. We can use the `setPage` function while providing a reference to a page object to set the active page.
 
 ```lua
 action_wheel:setPage(mainPage)
 ```
 
-Tada. New blank page and Figura isnt screaming at us. Now for some actions.<br/>
-You can call the <code>newAction</code> function on a Page object. This will create a new Action _and_ add it to the Page.
+Tada. New blank page, and Figura isn't screaming at us. Now for some actions. You can call the `newAction` function on a page object. This will create a new Action _and_ add it to the page.
 
-You technically do not need to store the Action in a variable. If you do, please give it a unique variable name. Using the same variable name for all actions can cause issues when doing more advanced stuff.
+You technically do not need to store the action in a variable. If you do, please give it a unique variable name. Using the same variable name for all actions can cause issues when doing more advanced stuff.
 
 ```lua
 local action = mainPage:newAction()
 ```
 
-New Action, but it really doesn't look like much. Lets add a title, a display item, and perhaps change the color that appears when the Action is hovered over.
+New action, but it really doesn't look like much. Let's add a title, a display item, and perhaps change the color that appears when the action is hovered over.
 
-One thing to remember is that all Action functions return itself. This allows for functions to be chained together, always modifying the same action
+One thing to remember is that all action functions return themselves. This allows functions to be chained together, always modifying the same action.
 
 <!-- prettier-ignore -->
 ```lua
@@ -40,7 +40,7 @@ local action = mainPage:newAction()
     :hoverColor(1, 0, 1)
 ```
 
-Pretty, but functionally useless. Lets add a function to the <code>leftClick</code> field. When the Action is left clicked, the function stored in the Action's <code>leftClick</code> field gets invoked.
+Pretty, but functionally useless. Lets add a function to the `leftClick` field. When the Action is left clicked, the function stored in the Action's `leftClick` field gets invoked.
 
 <!-- prettier-ignore -->
 ```lua
@@ -48,22 +48,27 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    -- the <code>onLeftClick</code> function just sets the Action's <code>leftClick</code> field
+    -- the onLeftClick function just sets the Action's leftClick field
     :onLeftClick(function()
         print("Hello World!")
     end)
 ```
 
-Now we have an Action that does stuff. You may not notice anything, but there is a glaring issue with the current code.
+Now we have an action that does stuff. You may not notice anything, but there is a glaring issue with the current code.
 
 The issue is that the leftClick code will only execute on your computer.
 
-As described in [Pings](./Pings), Figura is completely clientside. The Action Wheel is a feature added by Figura, meaning it will never be synced between clients via the Minecraft Server. So instead, we must use Pings that utilize Figura's Backend to sync data between clients.
+As described in [pings](./Pings), Figura is completely client-side. The action wheel is a feature added by Figura, meaning it will never be synced between clients via the Minecraft server. Instead, we must use pings that utilize Figura's backend to sync data between clients.
 
-First step is to take the code that would be executed on leftClick, and turn it into a ping function. Then, instead of assigning an anonymous function to <code>leftClick</code>, we assign the ping function itself to <code>leftClick</code>
+The first step is to take the code that would be executed on leftClick, and turn it into a ping function. Then, instead of assigning an anonymous function to `leftClick`, we assign the ping function itself to `leftClick`
 
-**_IMPORTANT: ALL PING FUNCTIONS MUST HAVE UNIQUE NAMES_**<br/>
-Also, please name your ping function so that it describes what it does. I _hate_ seeing <code>pings.actionClicked</code> in the hellp channel in discord. Do something like <code>pings.playEmote1</code> or <code>pings.setArmorVisibility</code>.
+:::tip
+
+All ping functions must have unique names.
+
+Ideally, they should also be named in a way that describes what they do to avoid confusion later on. Examples of good naming may include `pings.playEmote1` or `pings.setArmorVisibility`.
+
+:::
 
 <!-- prettier-ignore -->
 ```lua
@@ -77,11 +82,11 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    -- Pass in the ping function itself into <code>onLeftClick</code>
+    -- Pass in the ping function itself into onLeftClick
     :onLeftClick(pings.actionClicked)
 ```
 
-And there you have it. An Action that correctly executes it's contents across all clients.
+And there you have it, an action that correctly executes its contents across all clients.
 
 While this will correctly sync the timing of the execution of the ping function with all clients, it needs a slight modification if you want to send arguments with the ping.
 
@@ -102,18 +107,22 @@ local action = mainPage:newAction()
 
 What we are doing is wrapping the call to the ping function inside another function.
 
-The code below is a common mistake beginners can fall into.<br/>
-While the code might seem correct to those less code literate, it translates to "call the ping function, then assign the return result to the <code>leftClick</code> field".<br/>
-A ping will never have a return value, meaning <code>leftClick</code> is being assigned the value <code>nil</code>, meaning nothing.
+:::tip
+
+The code below is a common mistake beginners can fall into.
 
 <!-- prettier-ignore -->
 ```lua
 mainPage:newAction()
     :onLeftClick(pings.actionClicked2(math.random()))
-    -- Do not do use this code. It will not work.
+    -- This code will not work.
 ```
 
-Here is the full copy paste for an example Action Wheel
+While the code might look correct at first, what it actually does is immediately invoke `pings.actionClicked2` with a random number as an argument. It then attempts to assign whatever this function returns to the `onLeftClick` event. Since `pings.actionClicked2` is a ping function, which never return a value, `onLeftClick` receives `nil`, effectively assigning nothing. This results in no action being performed when the action is clicked.
+
+:::
+
+Here is a complete example of an action wheel.
 
 <!-- prettier-ignore -->
 ```lua
@@ -133,32 +142,30 @@ local action = mainPage:newAction()
 
 ### Further Reading
 
-Go [here](../globals/Action-Wheel/Action.md) for more information on Actions, like making your action [toggleable](../globals/Action-Wheel/Action.md#setOnToggle).
+Go [here](../globals/Action-Wheel/Action.md) for more information on actions, like [making your action toggleable](../globals/Action-Wheel/Action.md#setOnToggle).
 
 ## Advanced Action Wheel
 
-### Multi Page Setup
+### Multi-Page Setup
 
-Creating a network of Pages can be overwhelming. Lets try to rectify that.
+Creating a network of pages can be overwhelming. Let's try to rectify that.
 
-This method for creating a Page Network divides the Pages into seperate, isolated files. These files return an Action that can be added to a different page. This Action will set the cuurrent page to the page in the file, but it first stores a reference to the Page it came from. That way when you want to go back to the previous page, its as simple as setting the current page to the stored Page.
+This method for creating a page network divides the pages into separate, isolated files. These files return an action that can be added to a different page. This action will set the current page to the page in the file, but it first stores a reference to the page it came from. That way, when you want to go back to the previous page, it's as simple as setting the current page to the stored page.
 
-This allows Pages to be modular and easily reorganized if needed. More importantly, it can help make multiple pages less overwhelming.
+This structure allows pages to be modular and easily reorganized if necessary; more importantly, it can help make multiple pages less overwhelming.
 
-```lua
---ActionWheel.lua
+```lua title="ActionWheel.lua"
 -- This file controls the root Page. All Pages are 'children' of this Page.
-local mainpage = action_wheel:newPage()
--- <code>setAction</code> is used to add an Action that already exists to this Page
--- You need to specify the slot the Action wil go into, but <code>-1</code> can be used to put it in the next available slot.
-mainpage:setAction(-1, require("Page1"))
-mainpage:setAction(-1, require("Page2"))
-action_wheel:setPage(mainpage)
+local mainPage = action_wheel:newPage()
+-- setAction is used to add an Action that already exists to this Page
+-- You need to specify the slot the Action wil go into, but -1 can be used to put it in the next available slot.
+mainPage:setAction(-1, require("Page1"))
+mainPage:setAction(-1, require("Page2"))
+action_wheel:setPage(mainPage)
 ```
 
 <!-- prettier-ignore -->
-```lua
---Page1.lua
+```lua title="Page1.lua"
 -- Create the Page
 local page = action_wheel:newPage()
 -- Define the Actions within the Page (These are dummy example Actions)
@@ -176,9 +183,9 @@ page:newAction()
         action_wheel:setPage(prevPage)
     end)
 
--- <code>Page:newAction</code> automatically adds the Action to the Page.
--- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
--- This is the Action that will be returned by <code>require</code> and will be used to navigate to this file's Page
+-- Page:newAction automatically adds the Action to the Page.
+-- This is unwanted, so action_wheel:newAction() is used so just make an Action.
+-- This is the Action that will be returned by require and will be used to navigate to this file's Page
 return action_wheel:newAction()
     :title("Page1")
     :onLeftClick(function()
@@ -190,9 +197,8 @@ return action_wheel:newAction()
 ```
 
 <!-- prettier-ignore -->
-```lua
---Page2.lua
--- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are <code>local</code>.
+```lua title="Page2.lua"
+-- Page2 is just to show that the entire process can be repeated verbatim, so long as the variables are local.
 local page = action_wheel:newPage()
 page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
@@ -224,7 +230,7 @@ This example will correctly set the default visibility of a theoretical jetpack 
 ```lua
 -- This variable's initial value will control the default state of the togglable thing.
 local jetpackEnabled = true
-local jetpackModel = models.model.Body.Jetpack -- reference a ModelPart for convinience
+local jetpackModel = models.model.Body.Jetpack -- reference a ModelPart for convenience
 local function setJetpack(bool)
     jetpackEnabled = bool -- this will be a ping function, so we still need to set the client's variable for when it is used in the toggle.
     jetpackModel:setVisible(bool)
@@ -242,14 +248,14 @@ function events.tick()
 end
 
 -- Page boilerplate
-local mainpage = action_wheel:newAction()
-action_wheel:setPage(mainpage)
+local mainPage = action_wheel:newAction()
+action_wheel:setPage(mainPage)
 
 -- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
 setJetpack(jetpackEnabled)
-mainpage:newAction()
+mainPage:newAction()
     :title("Enable Jetpack")
     :toggleTitle("Disable Jetpack")
     :onToggle(pings.setJetpack) -- use the ping for the action toggle, as that is still needs to be pinged
-    :toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
+    :toggled(jetpackEnabled) -- the toggled function sets the internal state of the Toggle Action. It *does not* call toggle or untoggle.
 ```
