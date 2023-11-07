@@ -51,4 +51,8 @@ You can set the render type to "Eyes" like this
 models:setSecondaryRenderType("Eyes")
 ```
 
-Note: The glow on the paperdoll and the skull may look slightly different.
+:::note
+
+The glow on the paperdoll and the skull may look slightly different.
+
+:::

@@ -4,7 +4,11 @@ The player API is accessed through the <code>player</code> global. Like so: <cod
 
 Player information that isn't synced between clients is kept in the host API. Examples of unsynced data are: Creative flying, status effects, and remaining air amount.
 
-**_Note:_** There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event. If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the <code>entity_init</code> event.
+:::warning
+
+There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event. If you wish to initialize a check during the initialization phase of a script (outside any other event) you can use the <code>entity_init</code> event.
+
+:::
 
 For most other circumstances you will want the <code>tick</code> event, as checks like <code>player:isGliding()</code> will be updated once a game tick inside that event. (There are 20 ticks in a second, and this is how often Minecraft updates information- some player functions work better in a tick event for this reason).
 

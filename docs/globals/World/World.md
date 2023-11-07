@@ -273,7 +273,11 @@ Parses and create a new ItemStack from the given string
 
 A count and damage can be given, to be applied on this itemstack
 
-Note: This doesn't create an item in the world, if you want to make a fake item you want [item tasks](../globals/Models/ItemTask)
+:::note
+
+This doesn't create an item in the world. If you want to make a fake item, use [item tasks](../globals/Models/ItemTask)
+
+:::
 
 **Example**:
 
@@ -289,7 +293,11 @@ Parses and create a new BlockState from the given string
 
 A world position can be optionally given for the blockstate functions that relies on its position
 
-Note: This doesn't create a block in the world, if you want to make a fake block you want [block tasks](../globals/Models/BlockTask)
+:::note
+
+This doesn't create a block in the world. If you want to make a fake block, use [block tasks](../globals/Models/BlockTask)
+
+:::
 
 **Example**:
 

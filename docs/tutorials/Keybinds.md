@@ -2,7 +2,18 @@ Through Figura's keybind API you can have the script listen for key presses to m
 
 Keybinds are unsynced information, meaning that without a ping other players cannot know that you pressed a key at all. This guide will be using pings with all the example keybinds.
 
-**Note: Keybinds can be used while the player is unloaded (aka you are out of render distance), if the player API is called during this time your script will error.** You can protect yourself from these errors by adding this check: <code>if not player:isLoaded() then return end</code> as the first line of code run **_inside the ping._**
+:::warning
+
+Keybinds can be used while the player is unloaded, such as when you are out of render distance.
+If the player API is called during this time your script will error.
+
+You can protect yourself from these errors by adding the following check at the top of ping.
+
+```lua
+if not player:isLoaded() then return end
+```
+
+:::
 
 ## Example Keybind
 
@@ -12,7 +23,7 @@ First things first, you need to initialize the keybind
 local exampleKey = keybinds:newKeybind("Keybind Name", "key.keyboard.h")
 ```
 
-At this point, the keybind will show up in the avatar's keybind list- accessible via the Figura menu- with the name Keybind Name and assigned to the letter H. But pressing H won't do anything yet.
+At this point, the keybind will show up in the avatar's keybind list (accessible via the Figura menu) with the name Keybind Name and assigned to the letter H. But pressing H won't do anything yet.
 
 More keybinds ids can be found in the Keybinds: Enums page
 
