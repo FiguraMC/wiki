@@ -6,7 +6,7 @@ import FileTreeNode from '@site/src/components/FileTree/Node';
 
 Using Figura you can make custom items that are visible in first and third person.
 
-You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the item_render event combined.
+You'll need to use the Item [keyword](../enums/ParentTypes) and the item_render event combined.
 
 ## Item Keyword
 
