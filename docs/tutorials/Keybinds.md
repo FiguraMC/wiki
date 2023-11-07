@@ -1,6 +1,6 @@
 Through Figura's keybind API you can have the script listen for key presses to make things happen. Common uses are to trigger animations or toggle modelParts on and off.
 
-Keybinds are unsynced information, meaning that without a ping other players cannot know that you pressed a key at all. This GUIde will be using pings with all the example keybinds.
+Keybinds are unsynced information, meaning that without a ping other players cannot know that you pressed a key at all. This guide will be using pings with all the example keybinds.
 
 :::warning
 
