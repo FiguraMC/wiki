@@ -10,7 +10,7 @@ The name is used in the keybind menu
 
 The key parameter is an identifier for a key, such as "key.keyboard.r"
 
-The boolean gui indicates whether the keybind should always work, or if it should only work when you don't have a screen open
+The boolean GUI indicates whether the keybind should always work, or if it should only work when you don't have a screen open
 
 Check the docs enum command for all key names
 

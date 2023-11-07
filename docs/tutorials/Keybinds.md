@@ -1,6 +1,6 @@
 Through Figura's keybind API you can have the script listen for key presses to make things happen. Common uses are to trigger animations or toggle modelParts on and off.
 
-Keybinds are unsynced information, meaning that without a ping other players cannot know that you pressed a key at all. This guide will be using pings with all the example keybinds.
+Keybinds are unsynced information, meaning that without a ping other players cannot know that you pressed a key at all. This GUIde will be using pings with all the example keybinds.
 
 :::warning
 
@@ -38,7 +38,7 @@ exampleKey.press = pings.examplePing
 
 This itself won't do anything until we create the function pings.examplePing, this must be done above where press is assigned to the ping function, because the ping function will need to exist before it can be assigned. If it's done beneath nothing will happen.
 
-The false at the end decides whether or not the keybind will function while a gui like the inventory is opening. It can be skipped and the value will be considered false. If it's set to true then this keybind will run even while any gui is open or closed.
+The false at the end decides whether or not the keybind will function while a GUI like the inventory is opening. It can be skipped and the value will be considered false. If it's set to true then this keybind will run even while any GUI is open or closed.
 
 ```lua
 function pings.examplePing()
