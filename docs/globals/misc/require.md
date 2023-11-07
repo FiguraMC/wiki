@@ -2,15 +2,17 @@ import Emoji from '@site/src/components/Emoji';
 import FileTreeRoot from '@site/src/components/FileTree/Root';
 import FileTreeNode from '@site/src/components/FileTree/Node';
 
-The require() function takes the name of one of your scripts, without the .lua extension
+The `require` function takes the path to one of your scripts and returns the cached return value of that script.
 
-If this script has not been already run before, it will run that script and return the value that script returns
+The path to a script is always calclated from the `avatar.json` file, regardless of the location of the executing script. Additionally, the file path seperator is `.` instead of `/` and an extension of `.lua` is assumed.
 
-If it has been run before, then it will not run the file again, but it will return the same thing as the first time
+All scripts in an avatar will execute exactly once.<br/>
+If you `require` a script that has not executed yet, that script will execute. `require` will then return the value that that script returned.<br/>
+If you `require` a script that has already executed, `require` will return the value that the script originally returned without executing it again.
 
-If a required script has no returns, then require() will return true
+If a script returns nothing, `require` will return `true`.
 
-If the name you give isn't any of your scripts, it will error
+If you try to `require` a script that does not exist, it will error. This can be avoided by calling `require` in [`pcall`](https://www.lua.org/manual/5.2/manual.html#pdf-pcall), a base Lua function.
 
 ### Examples
 

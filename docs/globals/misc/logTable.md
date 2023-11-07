@@ -1,15 +1,19 @@
-The first argument is either a Table, or it's a Userdata, which refers to any of the added Figura types
+This is an alias of [printTable](./printTable.md)
 
-Prints the table out to chat, specially formatted
+### logTable(tbl : table | userdata, depth : number?, silent : boolean?) : string
 
-If userdata is passed in, it is automatically converted to a table or string, and displayed
+Prints a Table or Userdata object to the chat. Unlike `log`, this prints all indices of the Table or Userdata to chat.
 
-In the case of tables inside of tables, the "maxDepth" parameter will be used to determine how far to go
+This function also prints all indices of child tables, up to a depth of `depth`. If `depth` is undefined, `depth` is `1`.
 
-Default value for maxDepth is 1
+If the `silent` argument is `true`, the function will not print to chat. This allows using the formatted table in your script.
 
-Third argument, "silent", will skip the chat print and will only return the string
+Returns the string representation of the table formatted for chat for use in your script.
 
 ```lua
-logTable()
+local tbl = {
+    a = 2,
+    b = "stringValue"
+}
+logTable(tbl)
 ```

@@ -1,11 +1,12 @@
-Takes a Minecraft json string as an argument, and prints it to the chat formatted, without the lua print header
+This is an alias of [`printJson`](./printJson.md)
 
-Even though the syntax says only one argument, you can put as many as you want
+Takes a Minecraft json string as an argument. Prints it to the chat formatted without the lua print header.
 
-All of them will print, and they'll be appended in the end of the previous argument
+Takes in a variable amount of arguemnts. Arguments will be formatted independantly then concatenated together.
 
-Returns the formatted string
+Returns the formatted string.
 
 ```lua
-logJson()
+local jsonText = '[{"text":"some json text","color":"#555555"}," ",{"text":"as an example","color":"#ff55ff"}]'
+logJson(jsonText)
 ```
