@@ -11,7 +11,7 @@ Returns the string representation of the table formatted for chat for use in you
 ```lua
 local tbl = {
     a = 2,
-    b = "stringValue"
+    b = "stringValue",
 }
 printTable(tbl)
 ```
