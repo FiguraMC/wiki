@@ -1,10 +1,14 @@
 Events are special functions that run at specific times or from specific triggers.
 
-### Init
+---
+
+### Init \{#Init}
 
 If code is run outside of any event or function that is the <code>init</code> phase, and it runs first before any other event. Calling the player API will error here, use entity_init instead.
 
-### Entity Init
+---
+
+### `entity_init()` \{#entity_init}
 
 The entity_init event runs when the avatar's entity (usually the player) first starts existing.
 
@@ -16,7 +20,9 @@ function events.entity_init()
 end
 ```
 
-### Tick
+---
+
+### `tick()` \{#tick}
 
 The tick event runs every in-game tick if the avatar's entity (the player) exists. There are 20 ticks in a second. This is the most commonly used event.
 
@@ -28,7 +34,9 @@ function events.tick()
 end
 ```
 
-### World Tick
+---
+
+### `world_tick()` \{#world_tick}
 
 The world_tick event runs every in game tick. There are 20 ticks in a second.
 
@@ -40,7 +48,9 @@ function events.world_tick()
 end
 ```
 
-### Render
+---
+
+### `render(delta,context,matrix)` \{#render}
 
 The render event runs once a frame before the avatar is rendered, after the avatar's entity exists. Calling the player is safe here.
 
@@ -58,7 +68,9 @@ function events.render(delta, context, matrix)
 end
 ```
 
-### Post Render
+---
+
+### `post_render(delta,context,matrix)` \{#post_render}
 
 The render event runs once a frame after the avatar is rendered, after the avatar's entity exists. Calling the player is safe here.
 
@@ -70,7 +82,9 @@ function events.post_render(delta, context, matrix)
 end
 ```
 
-### World Render
+---
+
+### `world_render(delta)` \{#world_render}
 
 The world_render event is run every frame before the world is rendered. Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -82,7 +96,9 @@ function events.world_render(delta)
 end
 ```
 
-### Post World Render
+---
+
+### `post_world_render(delta)` \{#post_world_render}
 
 The world_render event is run every frame after the world is rendered. Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -94,25 +110,29 @@ function events.post_world_render(delta)
 end
 ```
 
-### Chat Send Message
+---
 
-The CHAT_SEND_MESSAGE event is run every time you send a message in chat
+### `chat_send_message(message)` \{#chat_send_message}
+
+The chat_send_message event is run every time you send a message in chat
 
 A string parameter is passed in, which contains the message that was sent
 
-The return value is chained to the next events of the same type, whereas NIL cancels the message from being sent and any other value will modify the sent message (if allowed in the settings)
+The return value is chained to the next events of the same type, whereas nil cancels the message from being sent and any other value will modify the sent message (if allowed in the settings)
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
 
 ```lua
 function events.chat_send_message(msg)
     host:setActionbar(msg)
-    return true
-    -- allows the message to be sent
+    return msg
+    -- returns the message, allowing it to be sent in chat
 end
 ```
 
-### Chat Receive Message
+---
+
+### `chat_receive_message(raw,text)` \{#chat_receive_message}
 
 The CHAT_RECEIVE_MESSAGE event is run every time a message is received in chat
 
@@ -135,23 +155,21 @@ function events.chat_receive_message(raw, text)
 end
 ```
 
-### Skull Render
+---
+
+### `skull_render(delta,block,item,entity,mode)` \{#skull_render}
 
 Called on every one of your skull blocks placed in the world
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
 
-It have 5 arguments, as listed below:
+**Arguments**:
 
-(number) - the tick delta
-
-(blockstate) - the block, when rendered from a block
-
-(itemstack) - the item, when rendered from an item
-
-(entity) - the entity, when rendered from a entity
-
-(string) - the type of the rendering (LEFT_HAND, HEAD, BLOCK, ...)
+-   `number` - the tick delta
+-   `BlockState` - the block, when rendered from a block
+-   `ItemStack` - the item, when rendered from an item
+-   `Entity` - the entity, when rendered from a entity
+-   `string` - the type of the rendering (LEFT_HAND, HEAD, BLOCK, ...)
 
 If the return value is true, the skull will not render
 
@@ -161,7 +179,9 @@ function events.skull_render(delta, block, item, entity, mode)
 end
 ```
 
-### Mouse Scroll
+---
+
+### `mouse_scroll(delta)` \{#mouse_scroll}
 
 The MOUSE_SCROLL event runs every time the mouse is scrolled
 
@@ -177,7 +197,9 @@ function events.mouse_scroll(delta)
 end
 ```
 
-### Mouse Move
+---
+
+### `mouse_move(x, y)` \{#mouse_move}
 
 The MOUSE_MOVE event runs every time the mouse is moved around
 
@@ -195,7 +217,9 @@ function events.mouse_move(x, y)
 end
 ```
 
-### Mouse Press
+---
+
+### `mouse_press(button, action, modifier)` \{#mouse_press}
 
 The MOUSE_PRESS event runs every time a mouse button is pressed
 
@@ -213,7 +237,9 @@ function events.mouse_press(button, action, modifier)
 end
 ```
 
-### Key Press
+---
+
+### `key_press(key, action, modifier)` \{#key_press}
 
 The key_press event runs every time a keyboard key is pressed
 Takes three number parameters, a "key", which is the number id of the key that was been pressed, the "action", which is the status of the press event (0 for release, 1 for press, 2 for hold), and the "modifier", which is a bitmask number detecting if you have any modifier keys being pressed (like shift or alt, for example)
@@ -230,7 +256,9 @@ function events.key_press(key, action, modifier)
 end
 ```
 
-### Char Typed
+---
+
+### `char_typed(character, modifier, codepoint)` \{#char_typed}
 
 The char_typed event runs every time a character is inputted
 
@@ -244,7 +272,9 @@ function events.char_typed(character, modifier, codepoint)
 end
 ```
 
-### Use Item
+---
+
+### `use_item(item, action, particles)` \{#use_item}
 
 The use_item event is run every time the entity uses an item
 
@@ -262,7 +292,9 @@ function events.use_item(item, action, particles)
 end
 ```
 
-### Arrow Render
+---
+
+### `arrow_render(delta, arrow)` \{#arrow_render}
 
 The ARROW_RENDER event is run for every arrow entity shot by the Avatar owner
 
@@ -278,11 +310,19 @@ function events.arrow_render(delta, arrow)
 end
 ```
 
-### Item Render
+---
+
+### `item_render(item, mode, pos, rot, scale, left)` \{#item_render}
 
 Called on every one of your items that is being rendered
 
-It takes six arguments, the item, the rendering mode, the position, rotation and scale that it would be applied, and if its being rendered from the left hand
+**Arguments**:
+
+-   `ItemStack` - The item
+-   `string` - The rendering mode.
+-   `Vector3` - Position of the item.
+-   `Vector3` - Scale of the item.
+-   `boolean` - If the item is being rendered from the left hand.
 
 Returning a ModelPart parented to Item, stops the rendering of this item and will render the returned part instead.
 
@@ -296,11 +336,21 @@ function events.item_render(item, mode, pos, rot, scale, left)
 end
 ```
 
-### On Play Sound
+---
+
+### `on_play_sound(id, pos, vol, pitch, loop, category, path)` \{#on_play_sound}
 
 The on_play_sound event runs every time you hear a sound.
 
-Take as arguments, the sound ID, its world position, volume, pitch, if the sound should loop, the sound category, and the sound file path.
+**Arguments**:
+
+-   `string` - The sound ID.
+-   `Vector3` - World position.
+-   `number` - Volume.
+-   `number` - Pitch.
+-   `boolean` - If the sound should loop.
+-   `string` - The sound category.
+-   `string` - The sound file path.
 
 The file path will always be nil when hearing sounds played by Figura avatars.
 
@@ -312,7 +362,9 @@ function events.on_play_sound(id, pos, vol, pitch, loop, category, path)
 end
 ```
 
-### Resource Reload
+---
+
+### `resource_reload()` \{#resource_reload}
 
 Called every time that the client resources are reloaded, allowing you to re-create or update resource texture references.
 
@@ -324,7 +376,9 @@ function events.resource_reload()
 end
 ```
 
-### Safely Calling Player
+---
+
+## Safely Calling Player
 
 The easiest way to blanket-protect an entire event (or any function like a ping) against the entity init error caused by calling the player API when it doesn't exist is to exit the function at the beginning of the event with this:
 

@@ -1,9 +1,17 @@
 # LoopModes
 
-These are the loop modes a blockbench animation can be set to, they can be initialized in blockbench itself. Or changed in the code via <code>setLoop(string)</code>
+These are the loop modes a blockbench animation can be set to. They can be initialized in blockbench itself or changed in the code via <code>setLoop(String)</code>.
 
-<code>LOOP</code>: Plays again once it reaches the end of the timeline<br/>
+**Example**:
 
-<code>ONCE</code>: No looping<br/>
+```lua
+animations.myModel.myAnimation:setLoop("ONCE")
+```
 
-<code>HOLD</code>: Stays on the last keyframe of an animation
+---
+
+| Mode   | Description                                         |
+| ------ | --------------------------------------------------- |
+| `LOOP` | Plays again once it reaches the end of the timeline |
+| `ONCE` | No looping                                          |
+| `HOLD` | Stays on the last keyframe of an animation          |

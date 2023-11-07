@@ -3,6 +3,8 @@ The Action Wheel is a gui element provided by Figura that allows for adding high
 The Action Wheel operates on Pages. Only a single Page can be active at a time.<br/>
 Pages contain Actions. A Page can have an unlimited amount of Actions, but the Action Wheel can only render 8 at a time. While a Page with more than 8 Actions is active, you can use the scroll wheel to move between the groups of 8 Actions within the Page.
 
+The docs page for the [Action Wheel](../globals/action-wheel) has more examples for specific action wheel functions
+
 ## Example Action Wheel
 
 First step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.
@@ -46,7 +48,7 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
+    -- the <code>onLeftClick</code> function just sets the Action's <code>leftClick</code> field
     :onLeftClick(function()
         print("Hello World!")
     end)
@@ -93,7 +95,9 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    :onLeftClick(end)
+    :onLeftClick(function()
+        pings.actionClicked(math.random())
+    end)
 ```
 
 What we are doing is wrapping the call to the ping function inside another function.
@@ -126,6 +130,10 @@ local action = mainPage:newAction()
     :hoverColor(1, 0, 1)
     :onLeftClick(pings.actionClicked)
 ```
+
+### Further Reading
+
+Go [here](../globals/Action-Wheel/Action.md) for more information on Actions, like making your action [toggleable](../globals/Action-Wheel/Action.md#setOnToggle).
 
 ## Advanced Action Wheel
 

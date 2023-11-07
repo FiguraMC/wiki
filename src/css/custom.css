@@ -26,5 +26,32 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+.code-block-highlighted-line,
+.code-block-error-line {
+  --highlight-border-width: 3px;
+
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding-right: var(--ifm-pre-padding);
+  padding-left: calc(var(--ifm-pre-padding) - var(--highlight-border-width));
+  border-left-width: var(--highlight-border-width);
+  border-left-style: solid;
+}
+
+.code-block-highlighted-line {
+  background-color: #00000010;
+  border-left-color: #00000080;
+}
+
+[data-theme='dark'] .code-block-highlighted-line {
+  background-color: #ffffff10;
+  border-left-color: #ffffff80;
+}
+
+.code-block-error-line {
+  background-color: #ff000020;
+  border-left-color: #ff000080;
 }
