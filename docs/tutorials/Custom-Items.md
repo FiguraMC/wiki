@@ -59,7 +59,7 @@ end
 
 The find function is searching the id for the word 'sword' so you don't need to type in every single sword id. This also makes it compatible with modded swords.
 
-## Things To Note
+## Things to Note
 
 1. Do _not_ put the Item group inside any other group. The Blockbench outliner should look like this:
 

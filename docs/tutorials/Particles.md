@@ -24,7 +24,7 @@ particles:newParticle("dust 0 1 1 1", player:getPos())
 
 This will spawn an aqua dust particle as the color values need a number between 0 and 1, the fourth number is the alpha. I excluded the 'minecraft:' mod name to demonstrate that it's unnecessary.
 
-## Spawning At A Part Location
+## Spawning at a Part Location
 
 To spawn a particle at a modelPart's position you'll need to get the position matrix of that part, and insert it into the position like normal.
 

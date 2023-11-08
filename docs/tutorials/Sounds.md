@@ -2,7 +2,7 @@ Using Figura you can play custom sounds and sounds from Minecraft itself.
 
 This article assumes you know to avoid calling the player in init.
 
-## Playing A Sound
+## Playing a Sound
 
 The most common way to play a sound is through the <code>playSound</code> function in the sound API.
 
@@ -54,7 +54,7 @@ Mono sounds are half the size of stereo when it comes to file size. Mono also ac
 
 Stereo sounds are much bigger (and sounds are already quite big when it comes to file size) and will play for _everyone in the server_ similarly to activating an end portal. There's no way to get around that other than to swap the audio channels to mono.
 
-## Alternative Ways To Play Sounds
+## Alternative Ways to Play Sounds
 
 If you want to make a long or looping sound follow your movement you're going to need to use a different method for playing sounds.
 

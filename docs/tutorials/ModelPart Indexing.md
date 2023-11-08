@@ -40,7 +40,7 @@ function events.RENDER(delta, context)
 end
 ```
 
-# BBmodels in subfolders
+# BBmodels in Subfolders
 
 bbmodel files in subfolders are a special case. For them, the folder itself acts as another ModelPart.<br/>
 

@@ -97,7 +97,7 @@ end
 
 ## Common Errors
 
-### Fixing the index error
+### Fixing the Index Error
 
 You might run into some script errors while doing this, here's some solutions to <code>attempt to index ? (a nil value)</code>
 
@@ -115,7 +115,7 @@ Here it is again, but this time the key is <code>idle</code>, meaning the proble
 
 You'll notice that it's misspelled in this version, fixing it will make the error go away or change.
 
-### Errors inside a keyframe
+### Errors Inside a Keyframe
 
 Errors inside keyframes are vary vastly, but you can indentify them by the name of the animation in the error. Here's three examples:
 <img src={require("@site/static/img/animation/exampleErrorKeyframe.png").default} width="800"></img>

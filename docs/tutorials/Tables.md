@@ -85,7 +85,7 @@ local array = {
 local array2 = { 42, 36, 1024, 1, "string", v, t }
 ```
 
-## Iterating Over a Table
+## Iterating over a Table
 
 Iterating over a table is simple.<br/>
 You can iterate over every single index using <code>pairs</code>. This will go through every index, but it will be in an undefined order. <code>pairs</code> has 2 values it returns when used in a for loop: the current <code>key</code>, and the current <code>value</code> at that <code>key</code>.<br/>

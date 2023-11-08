@@ -1,4 +1,4 @@
-# How To Read Documentation
+# How to Read Documentation
 
 **This article is a WIP.**
 

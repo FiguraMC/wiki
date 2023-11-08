@@ -79,7 +79,7 @@ end
 -- This time .press is being tied to a function that is then calling the ping, instead of being 'attached' to it directly.
 ```
 
-## Detecting When A Key Is Held Down
+## Detecting When a Key Is Held Down
 
 If you have the know-how it is possible to use the <code>isPressed()</code> function to detect when a key is being held down, but it's not recommended, as using press and release in conjunction is far more effective.
 
@@ -106,7 +106,7 @@ function events.tick()
 end
 ```
 
-## Using A Vanilla Keybind
+## Using a Vanilla Keybind
 
 If you want to detect a vanilla action like attacking or walking forwards but want it to be compatible in the case that someone bound forward to an arrow key you can directly get the vanilla keybind and use it. There's multiple ways to accomplish this but we'll use the same method as previous examples.
 

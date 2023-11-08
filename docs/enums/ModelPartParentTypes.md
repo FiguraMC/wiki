@@ -2,7 +2,7 @@ import Emoji from '@site/src/components/Emoji';
 
 ParentTypes are applied to ModelParts to apply specific transformations, or change how the ModelPart behaves.
 
-## Applying ParentTypes via BlockBench
+## Applying ParentTypes through BlockBench
 
 To apply a ParentType through BlockBench, the <Emoji icon="blockbench/group"/> group name must start with the ParentType. Only <Emoji icon="blockbench/group"/> groups can have ParentTypes applied via BlockBench.
 
@@ -10,7 +10,7 @@ To apply a ParentType through BlockBench, the <Emoji icon="blockbench/group"/> g
 
 ### Keywords
 
-When setting the ParentType via group names, ParentTypes are commonly referred to as Keywords or BlockBench Keywords.
+When setting the ParentType with group names, ParentTypes are commonly referred to as keywords or BlockBench keywords.
 
 :::
 
@@ -26,7 +26,7 @@ When setting the ParentType via group names, ParentTypes are commonly referred t
 
 ---
 
-## Applying ParentTypes via Script
+## Applying ParentTypes through Scripting
 
 To apply a ParentType through script, [index the ModelPart](../tutorials/ModelPart%20Indexing) you want to set the ParentType of, then call the <code>setParentType</code> method on it, passing in a ParentType as a string as the parameter.<br/>
 After an avatar is loaded, there is no difference between <Emoji icon="blockbench/group"/> groups, <Emoji icon="blockbench/cube"/> cubes, or <Emoji icon="file/bbmodel"/> bbmodels. Everything is a ModelPart, meaning everything can have a ParentType.
