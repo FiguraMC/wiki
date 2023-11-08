@@ -35,4 +35,4 @@ Additional files go either in the same folder as the <Emoji icon="file/json"/> `
 
 Stray <Emoji icon="file/texture"/> texture files in the avatar folder will not be loaded by Figura. For a texture to be loaded by Figura, it must be registered as a texture in a <Emoji icon="file/bbmodel"/> bbmodel file.
 
-_ALL_ files that begin with a period (`.`) will be ignored when figura loads an avatar. Files that are not loaded by Figura are not accessible at all, so don't bother trying to get around the 100kb limit with this.
+_ALL_ files that begin with a period (`.`) will be ignored when Figura loads an avatar. Files that are not loaded by Figura are not accessible at all, so don't bother trying to get around the 100kb limit with this.

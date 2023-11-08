@@ -107,7 +107,7 @@ This popup appears when you create an animation. To get back to this popup, Righ
 
 `Snapping` determines the snapping distance for keyframes. Holding ctrl while moving a keyframe ignores this. **Figura does not care about this value**.
 
-`Anim Time Update`. I have no clue what this does in Blockbench, but figura uses this value for determining the start offset. In other words, when you call `play` this is the time that figura will start the animation at. This allows you to put keyframes behind the start of the animation which can help with Cubic Interpolation keyframes. Default is `0`.
+`Anim Time Update`. I have no clue what this does in Blockbench, but Figura uses this value for determining the start offset. In other words, when you call `play` this is the time that figura will start the animation at. This allows you to put keyframes behind the start of the animation which can help with Cubic Interpolation keyframes. Default is `0`.
 
 `Blend Weight` is a multiplier for every single keyframe in the animation. Not very useful as a property, but it can be changed in script to raise or reduce the intensity of animations. Default is `1`.
 
@@ -125,7 +125,7 @@ Figura provides data for the keyframe expression, which is accessible via the `.
 
 It has 2 pieces of data, the keyframe time, and the Animation object of the animation itself.
 
-Keyframe time is measured in percentage, not seconds. So assuming a Step interpolation keyframe, `0` is at the time at the keyframe itself, and `1` is at the next keyframe. Keyframe time is only useful when the keyframe uses Step interpolation.
+Keyframe time is measured in percentage, not seconds. So assuming a step interpolation keyframe, `0` is at the time at the keyframe itself, and `1` is at the next keyframe. Keyframe time is only useful when the keyframe uses step interpolation.
 
 When using other interpolation types, the expression will execute before it has reached the keyframe itself to interpolate. While this happens, it will give the Keyframe time of the previous keyframe and go back to zero once it reaches itself.
 
@@ -173,7 +173,7 @@ Don't bother. Not a thing in Figura.
 
 #### Global Rotation
 
-There is a toggle for Global Rotation next to the Rotation timeline for ModelParts. Figura does not obey this, so keep it disabled.
+There is a toggle for Global Rotation next to the rotation timeline for ModelParts. Figura does not obey this, so keep it disabled.
 
 #### Sound Keyframes
 
