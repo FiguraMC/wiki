@@ -9,7 +9,7 @@ Some examples:
 -   Action Wheel<br/>
     -   The Action Wheel is a feature added by Figura. Remember how I said that Figura never comunicates with the Minecraft Server? It should be obvious why the Action Wheel isnt synced.
 -   HostAPI<br/>
-    -   The HostAPI exclusivly contains variables that only you, the owner of the avatar and the owner of the machine running Minecraft, has access to. All functions contained within are vanilla variables that are not synced with the Minecraft Server. They are wrapped in a nice, explicit package stating that they are never synced. This is unlike the PlayerAPI, which you can assume is always synced (to some extent (I'm looking at you <code>isGrounded</code>))
+    -   The HostAPI exclusivly contains variables that only you, the owner of the avatar and the owner of the machine running Minecraft, has access to. All functions contained within are vanilla variables that are not synced with the Minecraft Server. They are wrapped in a nice, explicit package stating that they are never synced. This is unlike the PlayerAPI, which you can assume is always synced (to some extent (I'm looking at you `isGrounded`))
 
 So how can we sync information with other players if we cannot do it through the Minecraft Server? The answer is Pings.<br/>
 
@@ -33,27 +33,27 @@ If either of these are reached, the backend will ignore any comunication from yo
 Pings can send most primitive types and some userdata types.<br/>
 All pingable types use a single byte to represent the type of data that is being sent. This byte is not included in the listed byte totals.
 
--   <code>nil</code> - 0 Bytes
-    -   if a type that is not supported is used as a parameter, it will be replaced with <code>nil</code>.
--   <code>boolean</code> - 0 Bytes
--   <code>integear</code> - 1-4 Bytes
-    -   <code>integears</code> only take up as many bytes as it needs.
-    -   <code>integears</code> are signed. For example, to only use a single byte the value must be between -128 and 127.
--   <code>double</code> - 8 Bytes
-    -   If the number has a decimal at all, or is outside the range of a 4 byte <code>integear</code>, it will be sent as a <code>double</code>.
--   <code>string</code> - 2+n Bytes
-    -   <code>strings</code> will always use 2 bytes to store the length.
+-   `nil` - 0 Bytes
+    -   if a type that is not supported is used as a parameter, it will be replaced with `nil`.
+-   `boolean` - 0 Bytes
+-   `integear` - 1-4 Bytes
+    -   `integears` only take up as many bytes as it needs.
+    -   `integears` are signed. For example, to only use a single byte the value must be between -128 and 127.
+-   `double` - 8 Bytes
+    -   If the number has a decimal at all, or is outside the range of a 4 byte `integear`, it will be sent as a `double`.
+-   `string` - 2+n Bytes
+    -   `strings` will always use 2 bytes to store the length.
     -   Ascii characters will be a single byte each.
     -   UTF-8 characters will be multiple bytes per character.
-    -   The absolute maximum size of string you can send is <code>65535</code> characters. If a larger string is sent, it will be truncated.
--   <code>table</code> - Too Many Bytes
+    -   The absolute maximum size of string you can send is `65535` characters. If a larger string is sent, it will be truncated.
+-   `table` - Too Many Bytes
     -   Every key and value is send as data, resulting in high byte costs.
     -   It is recommended to never send a table over pings.
--   <code>VectorN</code> - 1+8\*N Bytes
+-   `VectorN` - 1+8\*N Bytes
     -   Vectors have a single byte that stores the size of the Vector.
-    -   Vectors are always assumed to store <code>doubles</code>. If you have a Vector of integears, I recommend sending them as 3 seperate arguments instead.
--   <code>MatrixN</code> - 2+8\*W\*H Bytes
-    -   Matrices store both the width and height of the matrix, then every value as a <code>double</code>.
+    -   Vectors are always assumed to store `doubles`. If you have a Vector of integears, I recommend sending them as 3 seperate arguments instead.
+-   `MatrixN` - 2+8\*W\*H Bytes
+    -   Matrices store both the width and height of the matrix, then every value as a `double`.
 
 ### Ping
 
@@ -81,13 +81,13 @@ When you as the host call the ping, the function will execute for all other clie
 
 Do note that if a non-host client reaches a line where a ping gets called, it is completely ignored. No data is sent to the backend, and the contents of the ping will not be executed.
 
-Ping functions can be passed into functions that expect a function as a parameter, such as Action <code>onToggle</code>.
+Ping functions can be passed into functions that expect a function as a parameter, such as Action `onToggle`.
 
 ```lua
 actionVariable:onToggle(pings.pingName)
 ```
 
-Remember that we are passing the function itself as a variable. The below would be passing the _return result_ of the ping function, which is nigh guarenteed to be <code>nil</code> as Pings _should never_ return a value.
+Remember that we are passing the function itself as a variable. The below would be passing the _return result_ of the ping function, which is nigh guarenteed to be `nil` as Pings _should never_ return a value.
 
 ```lua
 --do not do
@@ -102,7 +102,7 @@ Situational techniques that may be handy, depending on the use case.
 
 Calling a ping function when the script is first loaded is a horrible idea. The ping will only ever execute for other clients when you, the host, load the avatar. Not only that, it may never be executed on other clients, as they might not have your avatar loaded by the time you broadcast the ping.
 
-How do we get around this? Well, when you assign a function to an index in the <code>pings</code> table, the Lua Function gets replaced with a Java Function. This happens because of metatables, specifically the <code>\_\_newindex</code> metamethod. Functions cannot be modified, so if we store the function before assing it to the <code>pings</code> table, we can use it like a regular function, and use the same code as a ping function.
+How do we get around this? Well, when you assign a function to an index in the `pings` table, the Lua Function gets replaced with a Java Function. This happens because of metatables, specifically the `\_\_newindex` metamethod. Functions cannot be modified, so if we store the function before assing it to the `pings` table, we can use it like a regular function, and use the same code as a ping function.
 
 ```lua
 local function doThing(state)
@@ -111,7 +111,7 @@ local function doThing(state)
 end
 pings.doThing = doThing
 -- doThing and pings.doThing are 2 completely seperate values at this point, as the pings table has replaced the index at pings.doThing with a Java Function that wraps the doThing Lua Function.
--- <code>doThing==pings.doThing</code> will return <code>false</code>
+-- `doThing==pings.doThing` will return `false`
 print(doThing, pings.doThing, doThing == pings.doThing)
 
 local keybindState = false
@@ -126,7 +126,7 @@ function keyA.press()
 end
 ```
 
-The alternative is to reiterate the <code>models.modelA:setVisible(state) models.modelB:setVisible(not state)</code> part of the ping.<br/>
+The alternative is to reiterate the `models.modelA:setVisible(state) models.modelB:setVisible(not state)` part of the ping.<br/>
 For larger pings it will be combersome to rewrite code that is already defined, which is why this technique is useful.
 
 ### Byte Array

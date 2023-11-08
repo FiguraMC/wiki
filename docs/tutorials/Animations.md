@@ -2,13 +2,13 @@ Figura can play animations from Blockbench using the Animation API.
 
 ## Playing an Animation
 
-In order to play an animation you need to index the animation through the Blockbench model it is in and the <code>animations</code> global.
+In order to play an animation you need to index the animation through the Blockbench model it is in and the `animations` global.
 
-Let's say we have a Blockbench model named <code>example</code>
+Let's say we have a Blockbench model named `example`
 
 <img src={require("@site/static/img/animation/exampleBbmodel.png").default} width="100"></img>
 
-and an animation named <code>idle</code>
+and an animation named `idle`
 
 <img src={require("@site/static/img/animation/exampleIdle.png").default} width="400"></img>
 
@@ -18,11 +18,11 @@ If we want to play this animation we can use this code:
 animations.example.idle:play()
 ```
 
-<code>animations</code> stores all the animation data for every Blockbench model.<br/>
+`animations` stores all the animation data for every Blockbench model.<br/>
 
-The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code> (if your Blockbench model is in a subfolder, that will need to be included as well, but you can find more information about that in ModelPart Indexing)
+The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is `example.bbmodel` (if your Blockbench model is in a subfolder, that will need to be included as well, but you can find more information about that in ModelPart Indexing)
 
-And the last is always the animation name, in this case <code>idle</code>.
+And the last is always the animation name, in this case `idle`.
 
 ## Blockbench is Tricking You
 
@@ -49,7 +49,7 @@ animations.example["animation.model.idle"]:play()
 
 ## Alternatives to play()
 
-There is another function that can play animations, <code>setPlaying(bool)</code>
+There is another function that can play animations, `setPlaying(bool)`
 
 You can put a boolean value inside the parenthesis for the function and it will play the animation if the boolean is true, or stop it if the boolean is false
 
@@ -66,7 +66,7 @@ function events.tick()
 end
 ```
 
-And now our animation <code>idle</code> will play whenever we're crouching!
+And now our animation `idle` will play whenever we're crouching!
 
 This methodology can be expanded infinitely but it gets more complex the more animations you add.
 
@@ -99,19 +99,19 @@ end
 
 ### Fixing the Index Error
 
-You might run into some script errors while doing this, here's some solutions to <code>attempt to index ? (a nil value)</code>
+You might run into some script errors while doing this, here's some solutions to `attempt to index ? (a nil value)`
 
 The error will tell you about a key, the key is AFTER the part that's experiencing an incorrect.
 
 <img src={require("@site/static/img/animation/exampleErrorAnim.png").default} width="400"></img>
 
-Like in this example, it says that <code>setPlaying</code> is the key, so we know that the problem is BEFORE it.
+Like in this example, it says that `setPlaying` is the key, so we know that the problem is BEFORE it.
 
 You'll notice that the animation name is misspelled, once you fix that the error will go away or change.
 
 <img src={require("@site/static/img/animation/exampleErrorBbmodel.png").default} width="400"></img>
 
-Here it is again, but this time the key is <code>idle</code>, meaning the problem is with the Blockbench model name.
+Here it is again, but this time the key is `idle`, meaning the problem is with the Blockbench model name.
 
 You'll notice that it's misspelled in this version, fixing it will make the error go away or change.
 

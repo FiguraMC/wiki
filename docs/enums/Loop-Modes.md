@@ -1,6 +1,6 @@
 # LoopModes
 
-These are the loop modes a blockbench animation can be set to. They can be initialized in blockbench itself or changed in the code via <code>setLoop(String)</code>.
+These are the loop modes a blockbench animation can be set to. They can be initialized in blockbench itself or changed in the code via `setLoop(String)`.
 
 **Example**:
 

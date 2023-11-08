@@ -1,4 +1,4 @@
-The renderer API is accessed with the <code>renderer</code> global. Like so: <code>renderer:setRenderVehicle(false)</code>
+The renderer API is accessed with the `renderer` global. Like so: `renderer:setRenderVehicle(false)`
 
 ## Altering the Camera
 

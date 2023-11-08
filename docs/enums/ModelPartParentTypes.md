@@ -28,7 +28,7 @@ When setting the ParentType with group names, ParentTypes are commonly referred 
 
 ## Applying ParentTypes through Scripting
 
-To apply a ParentType through script, [index the ModelPart](../tutorials/ModelPart%20Indexing) you want to set the ParentType of, then call the <code>setParentType</code> method on it, passing in a ParentType as a string as the parameter.<br/>
+To apply a ParentType through script, [index the ModelPart](../tutorials/ModelPart%20Indexing) you want to set the ParentType of, then call the `setParentType` method on it, passing in a ParentType as a string as the parameter.<br/>
 After an avatar is loaded, there is no difference between <Emoji icon="blockbench/group"/> groups, <Emoji icon="blockbench/cube"/> cubes, or <Emoji icon="file/bbmodel"/> bbmodels. Everything is a ModelPart, meaning everything can have a ParentType.
 
 **Example**:
@@ -68,7 +68,7 @@ Player Mimic ParentTypes copy transformations (position, rotation, scale) from e
 
 -   #### `HEAD` \{#HEAD}
 
-Mimics the transformation offsets of the Vanilla <code>HEAD</code><br/>
+Mimics the transformation offsets of the Vanilla `HEAD`<br/>
 If there is no ModelParts with the [Skull](#skull) ParentType, ModelParts with this ParentType will replace the Vanilla Skull.
 
 ---
@@ -77,7 +77,7 @@ If there is no ModelParts with the [Skull](#skull) ParentType, ModelParts with t
 
 -   #### `BODY` \{#BODY}
 
-Mimics the transformation offsets of the Vanilla <code>BODY</code>
+Mimics the transformation offsets of the Vanilla `BODY`
 
 ---
 
@@ -85,7 +85,7 @@ Mimics the transformation offsets of the Vanilla <code>BODY</code>
 
 -   #### `RIGHT_ARM` \{#RIGHT_ARM}
 
-Mimics the transformation offsets of the Vanilla <code>RIGHT_ARM</code><br/>
+Mimics the transformation offsets of the Vanilla `RIGHT_ARM`<br/>
 This ParentType will appear in First Person under the same conditions as the Vanilla RightArm.
 
 ---
@@ -94,7 +94,7 @@ This ParentType will appear in First Person under the same conditions as the Van
 
 -   #### `LEFT_ARM` \{#LEFT_ARM}
 
-Mimics the transformation offsets of the Vanilla <code>LEFT_ARM</code><br/>
+Mimics the transformation offsets of the Vanilla `LEFT_ARM`<br/>
 This ParentType will appear in First Person under the same conditions as the Vanilla LeftArm.
 
 ---
@@ -103,7 +103,7 @@ This ParentType will appear in First Person under the same conditions as the Van
 
 -   #### `RIGHT_LEG` \{#RIGHT_LEG}
 
-Mimics the transformation offsets of the Vanilla <code>RIGHT_LEG</code>
+Mimics the transformation offsets of the Vanilla `RIGHT_LEG`
 
 ---
 
@@ -111,7 +111,7 @@ Mimics the transformation offsets of the Vanilla <code>RIGHT_LEG</code>
 
 -   #### `LEFT_LEG` \{#LEFT_LEG}
 
-Mimics the transformation offsets of the Vanilla <code>LEFT_LEG</code>
+Mimics the transformation offsets of the Vanilla `LEFT_LEG`
 
 ---
 
@@ -121,7 +121,7 @@ Mimics the transformation offsets of the Vanilla <code>LEFT_LEG</code>
 -   #### `RightElytron` \{#RightElytron}
 -   #### `RIGHT_ELYTRON` \{#RIGHT_ELYTRON}
 
-Mimics the transformation offsets of the Vanilla <code>RIGHT_ELYTRA</code><br/>
+Mimics the transformation offsets of the Vanilla `RIGHT_ELYTRA`<br/>
 ModelParts with this ParentType are only visible while an Elytra is equipped.<br/>
 
 ---
@@ -132,7 +132,7 @@ ModelParts with this ParentType are only visible while an Elytra is equipped.<br
 -   #### `LeftElytron` \{#LeftElytron}
 -   #### `LEFT_ELYTRON` \{#LEFT_ELYTRON}
 
-Mimics the transformation offsets of the Vanilla <code>LEFT_ELYTRA</code><br/>
+Mimics the transformation offsets of the Vanilla `LEFT_ELYTRA`<br/>
 ModelParts with this ParentType are only visible while an Elytra is equipped.<br/>
 
 ---
@@ -141,7 +141,7 @@ ModelParts with this ParentType are only visible while an Elytra is equipped.<br
 
 -   #### `CAPE` \{#CAPE}
 
-Mimics the transformation offsets of the Vanilla <code>CAPE</code><br/>
+Mimics the transformation offsets of the Vanilla `CAPE`<br/>
 This ParentType works even if you don't own a vanilla Cape.
 
 ---
@@ -224,7 +224,7 @@ This ParentType designates a Custom Item Model that can be used in the ITEM_REND
 
 ## Pivot Types
 
-Pivot ParentTypes move the location of specific Vanilla Parts to the pivot point of the ModelPart. If multiple of the same Pivot ParentType are in a bbmodel, multiple of them are rendered. These ParentTypes will only render their Vanilla Part if the part in the <code>vanilla_model</code> global is visible.
+Pivot ParentTypes move the location of specific Vanilla Parts to the pivot point of the ModelPart. If multiple of the same Pivot ParentType are in a bbmodel, multiple of them are rendered. These ParentTypes will only render their Vanilla Part if the part in the `vanilla_model` global is visible.
 
 ---
 

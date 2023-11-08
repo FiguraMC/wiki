@@ -10,13 +10,13 @@ You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the ite
 
 ## Item Keyword
 
-If you give a Blockbench group the Item keyword (by starting the group name with <code>Item</code>) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold.
+If you give a Blockbench group the Item keyword (by starting the group name with `Item`) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold.
 
 ## Item Render Event
 
 The item_render event runs once a frame for every item you're holding (so, a max of two) and do their own things in their version of the event.
 
-In order to make the Item show up you must return it in the item_render event. This example assumes the bbmodel is named <code>model</code> and that the keyworded group is named Item. If you wish to test this change <code>model</code> to your bbmodel name and the Item group to your version.
+In order to make the Item show up you must return it in the item_render event. This example assumes the bbmodel is named `model` and that the keyworded group is named Item. If you wish to test this change `model` to your bbmodel name and the Item group to your version.
 
 ```lua
 function events.item_render()

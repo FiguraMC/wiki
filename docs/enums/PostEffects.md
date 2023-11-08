@@ -1,4 +1,4 @@
-These are the Super Secret Settings screen effects. They can be applied to the avatar user's POV via <code>renderer:setPostEffect(string)</code>.
+These are the Super Secret Settings screen effects. They can be applied to the avatar user's POV via `renderer:setPostEffect(string)`.
 For more information, consult the [wiki](https://minecraft.wiki/w/Shaders/Before_1.9).
 
 **Example**:

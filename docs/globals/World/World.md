@@ -1,4 +1,4 @@
-The world API is accessed through the <code>world</code> global. Like so: <code>world.getTime()</code>.
+The world API is accessed through the `world` global. Like so: `world.getTime()`.
 
 :::info
 The functions in the World API never receive `self` as a parameter. Because of this they should be called with a `.` instead of `:`

@@ -30,7 +30,7 @@ At this point, the keybind will show up in the avatar's keybind list (accessible
 
 More keybinds ids can be found in the Keybinds: Enums page
 
-There are multiple ways to detect keybinds, but the most common is through <code>press</code> and <code>release</code> as they are easiest to ping. If you're not familiar with pings see [Pings](./Pings).
+There are multiple ways to detect keybinds, but the most common is through `press` and `release` as they are easiest to ping. If you're not familiar with pings see [Pings](./Pings).
 
 Underneath creating the key we will be tying the press of the key to a ping function. It's done underneath as the code is read top-down and the key must exist first.
 
@@ -53,7 +53,7 @@ exampleKey.press = pings.examplePing
 
 And there we have it! Now this keybind will send Pressed! in chat every time H is pressed. At this point you could put whatever lines of code you wish into the ping function and it will be synced.
 
-Alternatively, <code>release</code> will run the keybind when the key is released rather than when it is first pressed.
+Alternatively, `release` will run the keybind when the key is released rather than when it is first pressed.
 
 ## Toggling With A Keybind
 
@@ -81,7 +81,7 @@ end
 
 ## Detecting When a Key Is Held Down
 
-If you have the know-how it is possible to use the <code>isPressed()</code> function to detect when a key is being held down, but it's not recommended, as using press and release in conjunction is far more effective.
+If you have the know-how it is possible to use the `isPressed()` function to detect when a key is being held down, but it's not recommended, as using press and release in conjunction is far more effective.
 
 ```lua
 local keybindState = false
@@ -114,4 +114,4 @@ If you want to detect a vanilla action like attacking or walking forwards but wa
 local exampleKey = keybinds:newKeybind("Keybind Name", keybinds:getVanillaKey("key.forward"))
 ```
 
-This will now detect the forward key regardless of what it's bound to. <code>getVanillaKey()</code> is going to need a key id from a specific list of ids that all correspond to a vanilla keybind. They can be found in the keyIDs enum.
+This will now detect the forward key regardless of what it's bound to. `getVanillaKey()` is going to need a key id from a specific list of ids that all correspond to a vanilla keybind. They can be found in the keyIDs enum.

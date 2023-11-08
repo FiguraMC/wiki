@@ -6,36 +6,36 @@ Proper tutorials for blockbench can be found online. This page just explains Fig
 
 This is the popup that appears when you create a Project. You can also get to this page via File->Project.<br/>
 <img src={require("@site/static/img/blockbench/project.png").default} width="400"></img><br/>
-Figura only accepts <Emoji icon="file/bbmodel"/> bbmodels in the Generic Model format. If your format is not Generic Model, Figura will refuse to load the avatar. To convert a project, File->Convert Project. Deselect <code>Create Copy</code>, ensure format is Generic Model, and press Confirm. If the popup does not go away after pressing Confirm, close it manually.<br/>
+Figura only accepts <Emoji icon="file/bbmodel"/> bbmodels in the Generic Model format. If your format is not Generic Model, Figura will refuse to load the avatar. To convert a project, File->Convert Project. Deselect `Create Copy`, ensure format is Generic Model, and press Confirm. If the popup does not go away after pressing Confirm, close it manually.<br/>
 <img src={require("@site/static/img/blockbench/convert_project.png").default} width="400"></img><br/>
 
-The <code>File Name</code> and <code>Model Identifier</code> fields are unused by Figura.<br/>
-<code>UV Mode</code> determines how BlockBench handles how UVs are positioned. Figura will handle both <code>Box UV</code> and <code>Per-face UV</code>. Its up to you which you want. UVs determine where a 2D texture is applied to a 3D model. Each face has it's own UV coordinates which determines where on the 2D texture it will get it's pixels from.<br/><br/>
+The `File Name` and `Model Identifier` fields are unused by Figura.<br/>
+`UV Mode` determines how BlockBench handles how UVs are positioned. Figura will handle both `Box UV` and `Per-face UV`. Its up to you which you want. UVs determine where a 2D texture is applied to a 3D model. Each face has it's own UV coordinates which determines where on the 2D texture it will get it's pixels from.<br/><br/>
 
 <img src={require("@site/static/img/blockbench/uvmode_box.png").default} width="200" style={{"float":"right"}}></img>
-<code>Box UV</code> forces each face of a cube to match how vanilla does UVs. If you have ever edited your own vanilla skin before, you will recognize the pattern. While this does simplify the texturing process, it limits what you can do. Also, all textures in the model must have the same size, as what is a pixel is determined by the project's global <code>Texture Size</code> instead of the size of the texture itself. Also, meshes cannot be used while using <code>Box UV</code><br/>
+`Box UV` forces each face of a cube to match how vanilla does UVs. If you have ever edited your own vanilla skin before, you will recognize the pattern. While this does simplify the texturing process, it limits what you can do. Also, all textures in the model must have the same size, as what is a pixel is determined by the project's global `Texture Size` instead of the size of the texture itself. Also, meshes cannot be used while using `Box UV`<br/>
 
 <div style={{"clear":"both"}}></div>
 
 <img src={require("@site/static/img/blockbench/uvmode_perface.png").default} width="200" style={{"float":"right"}}></img>
 
-<code>Per-face UV</code> allows full control over each face of the cube/mesh. Each face can be positioned, scaled, and rotated individually from each other. You can even set a different texture for each face, or remove a face to reduce clutter. While the pixel grid is effected by the project's global <code>Texture Size</code>, changing the <code>Texture Size</code> has zero effect on the UVs themselves, unlike <code>Box UV</code> which will have destructive effects when changing the project
+`Per-face UV` allows full control over each face of the cube/mesh. Each face can be positioned, scaled, and rotated individually from each other. You can even set a different texture for each face, or remove a face to reduce clutter. While the pixel grid is effected by the project's global `Texture Size`, changing the `Texture Size` has zero effect on the UVs themselves, unlike `Box UV` which will have destructive effects when changing the project
 
 <div style={{"clear":"both"}}></div>
 
-<code>Texture Size</code>.<br/>
+`Texture Size`.<br/>
 
-The <code>Texture Size</code> field aids with UV calculation. In rendering, UVs are a float from 0-1 representing the percentage of the texture that this point is at. A UV of (0.5,0.5) represents the center of the texture, regardless of the texture's own size. A way of calculating this percentage is to take the pixel coordinate you want and divide it by the texture's size. (32,16)/(64,64)=(0.5,0.25). The <code>Texture Size</code> field determines this texture size globally. BlockBench never uses the texture's actual size, which causes issues when you have a model with textures of different sizes. Thankfully, changing it only has an effect om ModelParts that use <code>Box UV</code>, so when you need to edit ModelParts using a different sized texture, you can change this with no worries so long as you are using <code>Per-face UV</code>.<br/>
+The `Texture Size` field aids with UV calculation. In rendering, UVs are a float from 0-1 representing the percentage of the texture that this point is at. A UV of (0.5,0.5) represents the center of the texture, regardless of the texture's own size. A way of calculating this percentage is to take the pixel coordinate you want and divide it by the texture's size. (32,16)/(64,64)=(0.5,0.25). The `Texture Size` field determines this texture size globally. BlockBench never uses the texture's actual size, which causes issues when you have a model with textures of different sizes. Thankfully, changing it only has an effect om ModelParts that use `Box UV`, so when you need to edit ModelParts using a different sized texture, you can change this with no worries so long as you are using `Per-face UV`.<br/>
 
 ## ModelParts
 
 ### ParentTypes
 
-If the name of a <Emoji icon="blockbench/group"/> group begins with a specific string, Figura will apply special effects to that group. Some examples include <code>"Head"</code>, <code>"RightArm"</code>, <code>"World"</code>. These are called [ParentTypes](../enums/ModelPartParentTypes).
+If the name of a <Emoji icon="blockbench/group"/> group begins with a specific string, Figura will apply special effects to that group. Some examples include `"Head"`, `"RightArm"`, `"World"`. These are called [ParentTypes](../enums/ModelPartParentTypes).
 
-### <code>Blank</code> Texture
+### `Blank` Texture
 
-ModelParts that use the BlockBench inbuilt <code>Blank</code> texture will not be loaded by Figura at all. If you want a Model to not have a texture and assign the texture via script, use the [<code>ignoredTextures</code> metadata customization](../tutorials/Avatar%20Metadata). The <code>Transparent</code> texture that can only be applied to individual faces in Per-face UV behave the same way. Figura will not load those faces.
+ModelParts that use the BlockBench inbuilt `Blank` texture will not be loaded by Figura at all. If you want a Model to not have a texture and assign the texture via script, use the [`ignoredTextures` metadata customization](../tutorials/Avatar%20Metadata). The `Transparent` texture that can only be applied to individual faces in Per-face UV behave the same way. Figura will not load those faces.
 
 ### Meshes
 
@@ -51,11 +51,11 @@ To determine the state your texture is in, Right Click a texture->Properties. An
 
 Whether a texture is Local or External will determine how Figura will load it which is important when getting a Texture in script.<br/>
 
-The <code>Render Mode</code> field determines how the texture will be rendered. In BlockBench, this changes nothing visually.<br/>
-**Figura ignores <code>Render Mode</code>.** The Primary Texture will always be <code>"TRANSLUCENT"</code> by default, and the Secondary Texture will always be <code>"EMISSIVE"</code> by default.<br/>
+The `Render Mode` field determines how the texture will be rendered. In BlockBench, this changes nothing visually.<br/>
+**Figura ignores `Render Mode`.** The Primary Texture will always be `"TRANSLUCENT"` by default, and the Secondary Texture will always be `"EMISSIVE"` by default.<br/>
 
-The <code>Render Sides</code> field determines if the cube should be rendered when looking at the back of a face.<br/>
-**Figura ignores <code>Render Sides</code>.** To apply the same effect, use the <code>"TRANSLUCENT_CULL"</code> [RenderType](../enums/RenderTypes) in a script.<br/>
+The `Render Sides` field determines if the cube should be rendered when looking at the back of a face.<br/>
+**Figura ignores `Render Sides`.** To apply the same effect, use the `"TRANSLUCENT_CULL"` [RenderType](../enums/RenderTypes) in a script.<br/>
 
 ### Texture Suffix
 
@@ -64,15 +64,15 @@ When Figura loads a texture, it looks for another texture with the same name but
 
 List of suffixes used by Figura:
 
--   <code>\_e</code>: This texture will be used as the Secondary Texture, also known as the [Emissive Texture](../tutorials/Emissive%20Textures), of the ModelPart. The Secondary RenderType of a ModelPart is by default <code>"EMISSIVE"</code>, but can be changed in script.
--   <code>\_n</code>: This texture will be used as the [Normal Texture](https://en.wikipedia.org/wiki/Normal_mapping). <b>Do not confuse this with the Primary Texture</b>. "Normal" means something very specific in modeling. This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
--   <code>\_s</code>: This texture will be used as the [Specular Texture](https://en.wikipedia.org/wiki/Specularity). This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
+-   `\_e`: This texture will be used as the Secondary Texture, also known as the [Emissive Texture](../tutorials/Emissive%20Textures), of the ModelPart. The Secondary RenderType of a ModelPart is by default `"EMISSIVE"`, but can be changed in script.
+-   `\_n`: This texture will be used as the [Normal Texture](https://en.wikipedia.org/wiki/Normal_mapping). <b>Do not confuse this with the Primary Texture</b>. "Normal" means something very specific in modeling. This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
+-   `\_s`: This texture will be used as the [Specular Texture](https://en.wikipedia.org/wiki/Specularity). This suffix is used with Iris Shaders, and does nothing with vanilla rendering. <b><i>This suffix currently does not function</i></b>.
 
-An example is the <Emoji icon="blockbench/group"/> <code>Head</code>, <Emoji icon="file/texture"/> <code>skin</code>, and <Emoji icon="file/texture"/> <code>skin_e</code>. When the <Emoji icon="blockbench/group"/> <code>Head</code> uses the texture <Emoji icon="file/texture"/> <code>skin</code>, when the Avatar is loaded, <Emoji icon="file/texture"/> <code>skin_e</code> is used as the Secondary Texture, ie the Emissive Texture.<br/>
+An example is the <Emoji icon="blockbench/group"/> `Head`, <Emoji icon="file/texture"/> `skin`, and <Emoji icon="file/texture"/> `skin_e`. When the <Emoji icon="blockbench/group"/> `Head` uses the texture <Emoji icon="file/texture"/> `skin`, when the Avatar is loaded, <Emoji icon="file/texture"/> `skin_e` is used as the Secondary Texture, ie the Emissive Texture.<br/>
 <img src={require("@site/static/img/blockbench/settexture.png").default} width="300"></img><br/>
 
 For a texture to have the same name, they must both be either [Local or External](#localexternal-textures), and should they be external, they must be in the same folder. Otherwise, they will not have the same name internally.<br/>
-For textures with file extensions, the suffix goes before the extension. <Emoji icon="file/texture"/> <code>skin_e.png</code><br/>
+For textures with file extensions, the suffix goes before the extension. <Emoji icon="file/texture"/> `skin_e.png`<br/>
 
 ## Animations
 
@@ -82,31 +82,31 @@ This popup appears when you create an animation. To get back to this popup, Righ
 
 <img src={require("@site/static/img/blockbench/animation_properties.png").default} width="500"></img><br/>
 
-<code>Name</code> is the animation's name. It is very important that you change this to something shorter. The entire textbox is the animation's name, so unless you want to refer to this animation in lua with <code>animations.player["animation.model.new"]</code>, change the name. An animation named just <code>"new"</code> is indexed via <code>animations.player.new</code>. Much nicer, right?
+`Name` is the animation's name. It is very important that you change this to something shorter. The entire textbox is the animation's name, so unless you want to refer to this animation in lua with `animations.player["animation.model.new"]`, change the name. An animation named just `"new"` is indexed via `animations.player.new`. Much nicer, right?
 <br/><br/>
 
-<code>Loop Mode</code> controls what happens when the animation stops. There are 3 valid loop modes: Play Once, Hold On Last Frame, and Loop.<br/>
+`Loop Mode` controls what happens when the animation stops. There are 3 valid loop modes: Play Once, Hold On Last Frame, and Loop.<br/>
 Play Once stops the animation once the animation ends.<br/>
 Hold On Last Frame keeps the animation values from the end of the animation. The animation is still technically playing.<br/>
 Loop sets the animation's time to 0, or to the animation's end if the animation is playing backwards.
 <br/><br/>
 
-<code>Override</code> determines if Mimic-type <a href="../enums/ModelPartParentTypes">ParentTypes</a> will apply their transformations while this animation is playing. It only effects ModelParts that have a keyframe in this animation. Default <code>false</code>
+`Override` determines if Mimic-type <a href="../enums/ModelPartParentTypes">ParentTypes</a> will apply their transformations while this animation is playing. It only effects ModelParts that have a keyframe in this animation. Default `false`
 <br/><br/>
 
-<code>Snapping</code> determines the snapping distance for keyframes. Holding ctrl while moving a keyframe ignores this. <b>Figura does not care about this value</b>.
+`Snapping` determines the snapping distance for keyframes. Holding ctrl while moving a keyframe ignores this. <b>Figura does not care about this value</b>.
 <br/><br/>
 
-<code>Anim Time Update</code>. I have no clue what this does in blockbench, but figura uses this value for determining the start offset. In other words, when you call <code>play</code> this is the time that figura will start the animation at. This allows you to put keyframes behind the start of the animation which can help with Cubic Interpolation keyframes. Default is <code>0</code>.
+`Anim Time Update`. I have no clue what this does in blockbench, but figura uses this value for determining the start offset. In other words, when you call `play` this is the time that figura will start the animation at. This allows you to put keyframes behind the start of the animation which can help with Cubic Interpolation keyframes. Default is `0`.
 <br/><br/>
 
-<code>Blend Weight</code> is a multiplier for every single keyframe in the animation. Not very useful as a property, but it can be changed in script to raise or reduce the intensity of animations. Default is <code>1</code>.
+`Blend Weight` is a multiplier for every single keyframe in the animation. Not very useful as a property, but it can be changed in script to raise or reduce the intensity of animations. Default is `1`.
 <br/><br/>
 
-<code>Start Delay</code> is the time it takes after calling <code>play</code> for the animation to actually start. Default is <code>0</code>.
+`Start Delay` is the time it takes after calling `play` for the animation to actually start. Default is `0`.
 <br/><br/>
 
-<code>Loop Delay</code> is a property that only shows up with the Loop <code>Loop Mode</code>. It adds a delay between the animation ending, then starting again. Default is <code>0</code>.
+`Loop Delay` is a property that only shows up with the Loop `Loop Mode`. It adds a delay between the animation ending, then starting again. Default is `0`.
 <br/><br/>
 
 ### Keyframe Expressions

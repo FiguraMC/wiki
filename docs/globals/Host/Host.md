@@ -1,4 +1,4 @@
-The host API is accessed through the <code>host</code> global. Like so: <code>host:isFlying()</code>
+The host API is accessed through the `host` global. Like so: `host:isFlying()`
 
 Functions in the host API aren't synced, meaning to be useful in multiplayer their information will need to be synced via [pings](../tutorials/Pings).
 
@@ -74,7 +74,7 @@ Gets an ItemStack for the item in the given slot
 
 The slot is either their numerical id (0 indexed) or the slot string, as used in the /item command
 
-For the numerical id, 0-8 are the hotbar, 9-35 are the rest of the inventory starting from the top left slot, 99 is the offhand, and 100-103 are the armor slots from the boots to the helmet. <code>player:getItem()</code> is a better alternative for getting equipment slots.
+For the numerical id, 0-8 are the hotbar, 9-35 are the rest of the inventory starting from the top left slot, 99 is the offhand, and 100-103 are the armor slots from the boots to the helmet. `player:getItem()` is a better alternative for getting equipment slots.
 
 **Example**:
 
@@ -151,7 +151,7 @@ host:getScreen()
 
 Returns a table of all of the player's status effects
 
-The table contains sub-tables, each of which contains the name, amplifier, duration, and particle visibility of each status effect. To access a sub table index the effect table with the sub-table's name. Re the example below: <code>effect.name</code>
+The table contains sub-tables, each of which contains the name, amplifier, duration, and particle visibility of each status effect. To access a sub table index the effect table with the sub-table's name. Re the example below: `effect.name`
 
 **Example**:
 
