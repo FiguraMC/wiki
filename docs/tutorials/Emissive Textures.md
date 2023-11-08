@@ -4,9 +4,9 @@ This page describes everything to know about Emissive Textures.
 
 ## Defining a Texture As Emissive
 
-Every ModelPart in BlockBench has a reference to a single texture. When Figura loads the avatar, Figura looks for a texture with the same name as the texture used by the ModelPart but with `\_e` added to the end of it. For example, the emissive texture used by ModelParts that use <Emoji icon="file/texture"/> `texture.png` will use <Emoji icon="file/texture"/> `texture_e.png` as their emissive texture.
+Every ModelPart in Blockbench has a reference to a single texture. When Figura loads the avatar, Figura looks for a texture with the same name as the texture used by the ModelPart but with `\_e` added to the end of it. For example, the emissive texture used by ModelParts that use <Emoji icon="file/texture"/> `texture.png` will use <Emoji icon="file/texture"/> `texture_e.png` as their emissive texture.
 
-`\_e` is one of the [texture suffixes](../start_here/BlockBench#texture-suffix) that Figura looks for when loading an avatar.
+`\_e` is one of the [texture suffixes](../start_here/Blockbench#texture-suffix) that Figura looks for when loading an avatar.
 
 ## Emissive Texture Behavior
 

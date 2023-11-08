@@ -1,6 +1,6 @@
 import Emoji from '@site/src/components/Emoji';
 
-Proper tutorials for blockbench can be found online. This page just explains Figura specific stuff. This page assumes you are using the Desktop version of BlockBench, not the online app.
+Proper tutorials for Blockbench can be found online. This page just explains Figura specific stuff. This page assumes you are using the Desktop version of Blockbench, not the online app.
 
 ## Project Properties
 
@@ -14,7 +14,7 @@ Figura only accepts <Emoji icon="file/bbmodel"/> bbmodels in the Generic Model f
 
 The `File Name` and `Model Identifier` fields are unused by Figura.
 
-`UV Mode` determines how BlockBench handles how UVs are positioned. Figura will handle both `Box UV` and `Per-face UV`. Its up to you which you want. UVs determine where a 2D texture is applied to a 3D model. Each face has it's own UV coordinates which determines where on the 2D texture it will get it's pixels from.
+`UV Mode` determines how Blockbench handles how UVs are positioned. Figura will handle both `Box UV` and `Per-face UV`. Its up to you which you want. UVs determine where a 2D texture is applied to a 3D model. Each face has it's own UV coordinates which determines where on the 2D texture it will get it's pixels from.
 
 <img src={require("@site/static/img/blockbench/uvmode_box.png").default} width="200" style={{"float":"right"}}></img>
 `Box UV` forces each face of a cube to match how vanilla does UVs. If you have ever edited your own vanilla skin before, you will recognize the pattern. While this does simplify the texturing process, it limits what you can do. Also, all textures in the model must have the same size, as what is a pixel is determined by the project's global `Texture Size` instead of the size of the texture itself. Also, meshes cannot be used while using `Box UV`
@@ -29,7 +29,7 @@ The `File Name` and `Model Identifier` fields are unused by Figura.
 
 `Texture Size`.
 
-The `Texture Size` field aids with UV calculation. In rendering, UVs are a float from 0-1 representing the percentage of the texture that this point is at. A UV of (0.5,0.5) represents the center of the texture, regardless of the texture's own size. A way of calculating this percentage is to take the pixel coordinate you want and divide it by the texture's size. (32,16)/(64,64)=(0.5,0.25). The `Texture Size` field determines this texture size globally. BlockBench never uses the texture's actual size, which causes issues when you have a model with textures of different sizes. Thankfully, changing it only has an effect om ModelParts that use `Box UV`, so when you need to edit ModelParts using a different sized texture, you can change this with no worries so long as you are using `Per-face UV`.
+The `Texture Size` field aids with UV calculation. In rendering, UVs are a float from 0-1 representing the percentage of the texture that this point is at. A UV of (0.5,0.5) represents the center of the texture, regardless of the texture's own size. A way of calculating this percentage is to take the pixel coordinate you want and divide it by the texture's size. (32,16)/(64,64)=(0.5,0.25). The `Texture Size` field determines this texture size globally. Blockbench never uses the texture's actual size, which causes issues when you have a model with textures of different sizes. Thankfully, changing it only has an effect om ModelParts that use `Box UV`, so when you need to edit ModelParts using a different sized texture, you can change this with no worries so long as you are using `Per-face UV`.
 
 ## ModelParts
 
@@ -39,7 +39,7 @@ If the name of a <Emoji icon="blockbench/group"/> group begins with a specific s
 
 ### `Blank` Texture
 
-ModelParts that use the BlockBench inbuilt `Blank` texture will not be loaded by Figura at all. If you want a Model to not have a texture and assign the texture via script, use the [`ignoredTextures` metadata customization](../tutorials/Avatar%20Metadata). The `Transparent` texture that can only be applied to individual faces in Per-face UV behave the same way. Figura will not load those faces.
+ModelParts that use the Blockbench inbuilt `Blank` texture will not be loaded by Figura at all. If you want a Model to not have a texture and assign the texture via script, use the [`ignoredTextures` metadata customization](../tutorials/Avatar%20Metadata). The `Transparent` texture that can only be applied to individual faces in Per-face UV behave the same way. Figura will not load those faces.
 
 ### Meshes
 
@@ -49,7 +49,7 @@ ModelParts that use the BlockBench inbuilt `Blank` texture will not be loaded by
 
 ### Local/External Textures
 
-In BlockBench, textures have 2 distinct states: local and external.
+In Blockbench, textures have 2 distinct states: local and external.
 
 To determine the state your texture is in, Right Click a texture->Properties. An External texture will have a file path, while a Local one will not.
 
@@ -60,7 +60,7 @@ There is one key factor for a texture to be External, and that is for the file i
 
 Whether a texture is Local or External will determine how Figura will load it which is important when getting a Texture in script.
 
-The `Render Mode` field determines how the texture will be rendered. In BlockBench, this changes nothing visually.
+The `Render Mode` field determines how the texture will be rendered. In Blockbench, this changes nothing visually.
 
 **Figura ignores `Render Mode`.** The Primary Texture will always be `TRANSLUCENT` by default, and the Secondary Texture will always be `EMISSIVE` by default.
 
@@ -70,9 +70,9 @@ The `Render Sides` field determines if the cube should be rendered when looking 
 
 ### Texture Suffix
 
-In BlockBench, each cube (face) can only point to a single texture, which means that Figura needs to get creative when it wants to link multiple textures together for stuff like emissive textures.
+In Blockbench, each cube (face) can only point to a single texture, which means that Figura needs to get creative when it wants to link multiple textures together for stuff like emissive textures.
 
-When Figura loads a texture, it looks for another texture with the same name but with a specific suffix. Then for all ModelParts in BlockBench that use the texture, Figura will link the suffixed texture to that ModelPart as well.
+When Figura loads a texture, it looks for another texture with the same name but with a specific suffix. Then for all ModelParts in Blockbench that use the texture, Figura will link the suffixed texture to that ModelPart as well.
 
 List of suffixes used by Figura:
 
@@ -107,7 +107,7 @@ This popup appears when you create an animation. To get back to this popup, Righ
 
 `Snapping` determines the snapping distance for keyframes. Holding ctrl while moving a keyframe ignores this. **Figura does not care about this value**.
 
-`Anim Time Update`. I have no clue what this does in blockbench, but figura uses this value for determining the start offset. In other words, when you call `play` this is the time that figura will start the animation at. This allows you to put keyframes behind the start of the animation which can help with Cubic Interpolation keyframes. Default is `0`.
+`Anim Time Update`. I have no clue what this does in Blockbench, but figura uses this value for determining the start offset. In other words, when you call `play` this is the time that figura will start the animation at. This allows you to put keyframes behind the start of the animation which can help with Cubic Interpolation keyframes. Default is `0`.
 
 `Blend Weight` is a multiplier for every single keyframe in the animation. Not very useful as a property, but it can be changed in script to raise or reduce the intensity of animations. Default is `1`.
 
@@ -117,7 +117,7 @@ This popup appears when you create an animation. To get back to this popup, Righ
 
 ### Keyframe Expressions
 
-While blockbench supports Molang, **Figura does not**.
+While Blockbench supports Molang, **Figura does not**.
 
 To remedy this, Figura allows writing lua code into keyframe fields.
 
@@ -159,7 +159,7 @@ You can access instruction keyframes via the magic wand icon. An effects timelin
 
 ### Unsupported Animation Features
 
-Below are features provided by BlockBench Animations that Figura does not use when loading the bbmodel.
+Below are features provided by Blockbench Animations that Figura does not use when loading the bbmodel.
 
 #### Variable Placeholders
 

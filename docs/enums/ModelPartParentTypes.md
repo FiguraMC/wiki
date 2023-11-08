@@ -2,13 +2,13 @@ import Emoji from '@site/src/components/Emoji';
 
 ParentTypes are applied to ModelParts to apply specific transformations, or change how the ModelPart behaves.
 
-## Applying ParentTypes through BlockBench
+## Applying ParentTypes through Blockbench
 
-To apply a ParentType through BlockBench, the <Emoji icon="blockbench/group"/> group name must start with the ParentType. Only <Emoji icon="blockbench/group"/> groups can have ParentTypes applied via BlockBench.
+To apply a ParentType through Blockbench, the <Emoji icon="blockbench/group"/> group name must start with the ParentType. Only <Emoji icon="blockbench/group"/> groups can have ParentTypes applied via Blockbench.
 
 :::tip
 
-When setting the ParentType with group names, ParentTypes are commonly referred to as keywords or BlockBench keywords.
+When setting the ParentType with group names, ParentTypes are commonly referred to as keywords or Blockbench keywords.
 
 :::
 
@@ -20,7 +20,7 @@ When setting the ParentType with group names, ParentTypes are commonly referred 
 | <Emoji icon="blockbench/group"/> `HeadPhones` |        ✔️         | Group's name starts with a ParentType.                                            |
 | <Emoji icon="blockbench/group"/> `MagicHead`  |        ❌         | Group's name does not start with a ParentType.                                    |
 | <Emoji icon="blockbench/group"/> `head`       |        ❌         | Group's name does not start with a ParentType. `head` is not an alias for `Head`. |
-| <Emoji icon="blockbench/cube"/> `Head`        |        ❌         | ParentTypes can only be applied to groups in BlockBench                           |
+| <Emoji icon="blockbench/cube"/> `Head`        |        ❌         | ParentTypes can only be applied to groups in Blockbench                           |
 
 ---
 
@@ -59,7 +59,7 @@ The default ParentType. Using this ParentType as a Keyword has no purpose, as <E
 
 ## Player Mimic Types
 
-Player Mimic ParentTypes copy transformations (position, rotation, scale) from elsewhere, typically a Vanilla Part, and apply it to the ModelPart. This allows for a script-free way of making a ModelPart behave like a Vanilla Part. These transformations are added on top of any transformations set via script or transformations set via a BlockBench Animation. To prevent this ParentTypes transformations from being applied while a BlockBench Animation is playing, enable the [Animation's Override property](../start_here/BlockBench#animation-properties).
+Player Mimic ParentTypes copy transformations (position, rotation, scale) from elsewhere, typically a Vanilla Part, and apply it to the ModelPart. This allows for a script-free way of making a ModelPart behave like a Vanilla Part. These transformations are added on top of any transformations set via script or transformations set via a Blockbench Animation. To prevent this ParentTypes transformations from being applied while a Blockbench Animation is playing, enable the [Animation's Override property](../start_here/Blockbench#animation-properties).
 
 ---
 
@@ -165,7 +165,7 @@ This ParentType will cause the ModelPart to be parented to the Minecraft World i
 
 Position (0,0,0) will be at the world's origin. 1 block is 16 ModelPart units, so multiply the world coordinates by 16 before setting the position of a World ParentType ModelPart.
 
-Rotation (0,0,0) will be facing South instead of what BlockBench defines as North.
+Rotation (0,0,0) will be facing South instead of what Blockbench defines as North.
 
 ModelParts with this ParentType will be visible while in First Person.
 
@@ -221,7 +221,7 @@ Blockbench 0, 0, 0 is the bottom center and the valid area extends 4 units horiz
 
 This ParentType replaces the model of arrows fired by you. The pivot point of the ModelPart that has this ParentType does not matter.
 
-(0,0,0) in BlockBench is the point on the vanilla arrow's shaft that is just before the arrow head.
+(0,0,0) in Blockbench is the point on the vanilla arrow's shaft that is just before the arrow head.
 
 ---
 

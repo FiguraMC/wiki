@@ -35,7 +35,7 @@ function events.item_render(item, mode, pos, rot, scale, left)
 end
 ```
 
-This is storing all the values you can get, but in most cases you only need item and sometimes mode. Let's replace bows, shields, and all swords. These are all for a blockbench model that looks like this:
+This is storing all the values you can get, but in most cases you only need item and sometimes mode. Let's replace bows, shields, and all swords. These are all for a Blockbench model that looks like this:
 
 <FileTreeRoot>
   <FileTreeNode label="model.bbmodel" icon="file/bbmodel">

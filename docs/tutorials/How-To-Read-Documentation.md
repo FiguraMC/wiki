@@ -4,7 +4,7 @@
 
 As of writing this article, the GitHub wiki is not complete, but there are other sources of documentation for Figura out there. The most updated one is called Figs and it's made and managed by GitHub user applejuiceyy. [Here's a link](https://applejuiceyy.github.io/figs/).
 
-User GrandpaScout has their [VSDocs](https://github.com/GrandpaScout/FiguraRewriteVSDocs) which are used in conjunction with the text/code editor Visual Studio Code. These docs will help autofill function names and blockbench model paths for you.
+User GrandpaScout has their [VSDocs](https://github.com/GrandpaScout/FiguraRewriteVSDocs) which are used in conjunction with the text/code editor Visual Studio Code. These docs will help autofill function names and Blockbench model paths for you.
 
 In-game, Figura has a custom command to find documentation. `/figura docs`
 

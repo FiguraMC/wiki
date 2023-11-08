@@ -187,7 +187,7 @@ This is not table indexing like how you would index the `animations` table to ge
 
 ### `ignoredTextures` : String[]
 
-This key defines which textures should be ignored when loading the avatar. This is useful for when you have a cube that gets its texture set via code, but since all cubes must have a blockbench texture for Figura to even load the cube, you will either have to waste space with a dummy texture or use another texture in the model, which probably won't look good on the cube. This key allows you to have that dummy texture in blockbench without having to waste precious bytes on having that texture loaded with the avatar.
+This key defines which textures should be ignored when loading the avatar. This is useful for when you have a cube that gets its texture set via code, but since all cubes must have a Blockbench texture for Figura to even load the cube, you will either have to waste space with a dummy texture or use another texture in the model, which probably won't look good on the cube. This key allows you to have that dummy texture in Blockbench without having to waste precious bytes on having that texture loaded with the avatar.
 
 Referencing a texture is exactly the same format as getting a Texture object with the `textures` global.
 
@@ -234,7 +234,7 @@ Hypothetically, the armor of this avatar is being handled by <Emoji icon="file/l
 
 Does that Type identifier make any sense? Not really, but thats what the `customizations` property is.
 
-`customizations` allows for modifications to ModelParts that cant be done in BlockBench. You can still do this stuff via script, but the intent is for an avatar that does not have a script to still have access to some functionality.
+`customizations` allows for modifications to ModelParts that cant be done in Blockbench. You can still do this stuff via script, but the intent is for an avatar that does not have a script to still have access to some functionality.
 
 `customizations` itself is a JSON object. The keys of that object are references to ModelParts, with the values being another JSON object. _That_ object contains key value pairs that operate on the referenced ModelPart.
 
@@ -305,7 +305,7 @@ Sets the RenderType to use for the Secondary/Emissive/`\_e` texture. The default
 
 #### `parentType` : String
 
-Keywords in BlockBench set the ParentType of the ModelPart. This key overrides that, or sets one if there is no Keyword. The default ParentType is `None`
+Keywords in Blockbench set the ParentType of the ModelPart. This key overrides that, or sets one if there is no Keyword. The default ParentType is `None`
 
 ```json
 {
@@ -342,7 +342,7 @@ Forces the ModelPart reference given to be a child of this ModelPart. This is us
 
 #### `visible` : Boolean
 
-Overrides the visibility defined in BlockBench. Useful to be able to hide ModelParts in BlockBench to edit the model more easily, without it affecting the final result of the Avatar.
+Overrides the visibility defined in Blockbench. Useful to be able to hide ModelParts in Blockbench to edit the model more easily, without it affecting the final result of the Avatar.
 
 ```json
 {
