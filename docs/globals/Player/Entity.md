@@ -408,7 +408,10 @@ thisEntity:getBoundingBox()
 
 Returns whether or not this entity is currently on the ground
 
-:::caution Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the blockstate of the block directly underneath the entity like so: `world.getBlockState(thisEntity:getPos():add(0,-0.1,0)):isSolidBlock()`
+:::caution
+
+Due to a glitch in Minecraft's code, this function is unreliable and will misfire in multiple situations, such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the block state of the block directly underneath the entity, like so: `world.getBlockState(thisEntity:getPos():add(0,-0.1,0)):isSolidBlock()`
+
 :::
 
 **Example**:

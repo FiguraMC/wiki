@@ -8,13 +8,11 @@ To apply a ParentType through BlockBench, the <Emoji icon="blockbench/group"/> g
 
 :::tip
 
-### Keywords
-
 When setting the ParentType with group names, ParentTypes are commonly referred to as keywords or BlockBench keywords.
 
 :::
 
-**Examples**:
+**Keyword Examples**
 
 | Blockbench Name                               | `Head` ParentType | Reason                                                                            |
 | --------------------------------------------- | :---------------: | --------------------------------------------------------------------------------- |
