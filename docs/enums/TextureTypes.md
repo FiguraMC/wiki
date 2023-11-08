@@ -1,4 +1,4 @@
-Texture Types you can set using `setPrimaryTexture` and `setSecondaryTexture`<br/>
+Texture Types you can set using `setPrimaryTexture` and `setSecondaryTexture`
 
 **Example**:
 

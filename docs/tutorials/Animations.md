@@ -18,7 +18,7 @@ If we want to play this animation we can use this code:
 animations.example.idle:play()
 ```
 
-`animations` stores all the animation data for every Blockbench model.<br/>
+`animations` stores all the animation data for every Blockbench model.
 
 The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is `example.bbmodel` (if your Blockbench model is in a subfolder, that will need to be included as well, but you can find more information about that in ModelPart Indexing)
 

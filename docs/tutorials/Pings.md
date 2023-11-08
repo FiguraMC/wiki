@@ -1,26 +1,26 @@
-With normal mods, there is comunication between the Minecraft Server and it's clients which allows everything to stay in sync. <br/>
-Figura is completely client-side. It will never comunicate with the Minecraft Server you are connected to. Figura does not have a server-side component, meaning nothing will happen if you put the mod on a server.<br/>
+With normal mods, there is comunication between the Minecraft Server and it's clients which allows everything to stay in sync. Figura, however, is completely client-side. It will never comunicate with the Minecraft server you are connected to. Figura does not have a server-side component, meaning nothing will happen if you put the mod on a server.
 
-What does this mean for you, the user? It means that certain functionality that only your client has access to will not be synced with other players.<br/>
+What does this mean for you, the user? It means that certain functionality that only your client has access to will not be synced with other players.
+
 Some examples:
 
--   Keybinds<br/>
+-   Keybinds
     -   If the Minecraft Server tracked every single keystroke, it would be a major security issue. The exact keystrokes are never sent, only the result of those keystrokes.
--   Action Wheel<br/>
+-   Action Wheel
     -   The Action Wheel is a feature added by Figura. Remember how I said that Figura never comunicates with the Minecraft Server? It should be obvious why the Action Wheel isnt synced.
--   HostAPI<br/>
+-   HostAPI
     -   The HostAPI exclusivly contains variables that only you, the owner of the avatar and the owner of the machine running Minecraft, has access to. All functions contained within are vanilla variables that are not synced with the Minecraft Server. They are wrapped in a nice, explicit package stating that they are never synced. This is unlike the PlayerAPI, which you can assume is always synced (to some extent (I'm looking at you `isGrounded`))
 
-So how can we sync information with other players if we cannot do it through the Minecraft Server? The answer is Pings.<br/>
+So how can we sync information with other players if we cannot do it through the Minecraft Server? The answer is Pings.
 
 ## General Pings
 
-Pings utilize Figura's Backend to sync information with other clients.<br/>
-Pings are functions that when called, triggers all other clients to call the same function for their instance of your avatar.
+Pings are special functions that when called, communicate with Figura's backend to trigger the same function on all other clients. This allows you to sync information with other players.
 
 ### Ping Rate Limiting
 
-The backend restricts you on how much data you can send over a period of time.<br/>
+The backend restricts you on how much data you can send over a period of time.
+
 The developer given limits are:
 
 -   1024 bytes per second
@@ -30,7 +30,8 @@ If either of these are reached, the backend will ignore any comunication from yo
 
 ### Pingable Values
 
-Pings can send most primitive types and some userdata types.<br/>
+Pings can send most primitive types and some userdata types.
+
 All pingable types use a single byte to represent the type of data that is being sent. This byte is not included in the listed byte totals.
 
 -   `nil` - 0 Bytes
@@ -126,8 +127,7 @@ function keyA.press()
 end
 ```
 
-The alternative is to reiterate the `models.modelA:setVisible(state) models.modelB:setVisible(not state)` part of the ping.<br/>
-For larger pings it will be combersome to rewrite code that is already defined, which is why this technique is useful.
+The alternative is to reiterate the `models.modelA:setVisible(state) models.modelB:setVisible(not state)` part of the ping. For larger pings, it will be cumbersome to rewrite code that is already defined, which is why this technique is useful.
 
 ### Byte Array
 

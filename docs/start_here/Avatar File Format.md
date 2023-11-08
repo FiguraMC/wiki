@@ -2,12 +2,13 @@ import Emoji from '@site/src/components/Emoji';
 import FileTreeRoot from '@site/src/components/FileTree/Root';
 import FileTreeNode from '@site/src/components/FileTree/Node';
 
-Avatars are stored in `<minecraftDirectory>/figura/avatars`. You can get to this folder quickly via the <Emoji icon="figura/folder"/> button in the Figura Menu.<br/>
-A Figura Avatar consists of a named <Emoji icon="file/folder"/> folder or a <Emoji icon="file/zip"/> zip file containing an <Emoji icon="file/json"/> `avatar.json` file. That is everything needed for an avatar to appear in Wardrobe.<br/>
+Avatars are stored in `<minecraftDirectory>/figura/avatars`. You can get to this folder quickly via the <Emoji icon="figura/folder"/> button in the Figura Menu.
+
+A Figura Avatar consists of a named <Emoji icon="file/folder"/> folder or a <Emoji icon="file/zip"/> zip file containing an <Emoji icon="file/json"/> `avatar.json` file. That is everything needed for an avatar to appear in Wardrobe.
 
 <FileTreeRoot>
   <FileTreeNode label="avatars">
-    <FileTreeNode label="&lt;AvatarName&gt;">
+    <FileTreeNode label="<AvatarName>">
       <FileTreeNode label="avatar.json" icon="file/json" />
     </FileTreeNode>
   </FileTreeNode>
@@ -19,7 +20,7 @@ Figura also looks for an image named <Emoji icon="file/texture"/> `avatar.png`. 
 
 <FileTreeRoot>
   <FileTreeNode label="avatars">
-    <FileTreeNode label="&lt;AvatarName&gt;">
+    <FileTreeNode label="<AvatarName>">
       <FileTreeNode label="avatar.json" icon="file/json" />
       <FileTreeNode label="avatar.png" icon="file/texture" />
     </FileTreeNode>

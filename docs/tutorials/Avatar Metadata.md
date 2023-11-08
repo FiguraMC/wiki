@@ -2,9 +2,9 @@ import Emoji from '@site/src/components/Emoji';
 import FileTreeRoot from '@site/src/components/FileTree/Root';
 import FileTreeNode from '@site/src/components/FileTree/Node';
 
-<Emoji icon="file/json"/> `avatar.json` is the file that contains Avatar Metadata. It tells Figura specific information about the avatar.
+<Emoji icon="file/json"/> `avatar.json` is the file that contains Avatar metadata. It tells Figura specific information about the avatar.
 
-## Json Basics
+## JSON Basics
 
 The format that metadata is stored in is JSON. More specifically, a JSON object. It behaves very similar to a Lua table, it just uses different syntax. However, JSON has a very strict syntax and any errors will cause the avatar to fail to load.
 
@@ -25,9 +25,10 @@ JSON objects operate on key value pairs. Keys are separated from their values us
 
 Figura looks for specific keys in this JSON object and does things based on the value. Remember that all of these keys are optional. You only need to define the ones you care about.
 
-### `"name"` : String
+### `name` : String
 
-The value of this key determines the name of the avatar. This name is showed on the avatar information sidebar on the right of the Wardrobe, but also determines the name used to find the avatar on the left of the Wardrobe.<br/>
+The value of this key determines the name of the avatar. This name is showed on the avatar information sidebar on the right of the Wardrobe, but also determines the name used to find the avatar on the left of the Wardrobe.
+
 If this key is not present, the name of the folder containing the <Emoji icon="file/json"/>`avatar.json` file is used.
 
 ```json
@@ -36,7 +37,7 @@ If this key is not present, the name of the folder containing the <Emoji icon="f
 }
 ```
 
-### `"description"` : String
+### `description` : String
 
 The value of this key will appear below the avatar's name in the wardrobe.
 
@@ -47,7 +48,7 @@ The value of this key will appear below the avatar's name in the wardrobe.
 }
 ```
 
-### `"authors"` : String[]
+### `authors` : String[]
 
 The value of this key is an array of strings. An array can contain many different values within itself, and Figura expects these values to be strings. The values are used in the Authors field in the avatar information sidebar.
 
@@ -59,14 +60,13 @@ The value of this key is an array of strings. An array can contain many differen
 }
 ```
 
-### `"author"` : String
+### `author` : String
 
-A place for a single author, should you dislike `"authors"`. Does the exact same thing as `"authors"` with only 1 element.<br/>
-If the `"authors"` key is present, this key is ignored.
+A place for a single author, should you dislike `authors`. Does the exact same thing as `authors` with only 1 element. If the `authors` key is present, this key is ignored.
 
-### `"version"` : String
+### `version` : String
 
-A place to define a [Semantic Versioning](https://semver.org/) version. You can define the lowest possible Figura version that this avatar will run on. If another client uses a Figura version that is less than the version defined here, a <Emoji icon="badge/warning"/> warning badge will appear on your nameplate for them. If they hover over it, it will state that their Figura version is lower than what this avatar was designed to run on. If this key does not exist, Figura will use the version that was used to load the avatar.<br/>
+A place to define a [Semantic Versioning](https://semver.org/) version. You can define the lowest possible Figura version that this avatar will run on. If another client uses a Figura version that is less than the version defined here, a <Emoji icon="badge/warning"/> warning badge will appear on your nameplate for them. If they hover over it, it will state that their Figura version is lower than what this avatar was designed to run on. If this key does not exist, Figura will use the version that was used to load the avatar.
 
 ```json
 {
@@ -77,9 +77,9 @@ A place to define a [Semantic Versioning](https://semver.org/) version. You can 
 }
 ```
 
-### `"color"` : String
+### `color` : String
 
-This key defines the color of the <Emoji icon="badge/mark"/> Figura mark on your nameplate. It must be a string in the format of a 3 character hex code or a 6 character hex code. For example, both `"3ab"` and `"FF00FF"` are valid inputs. If this key does not exist, the color `"5AAAFF"` will be used.
+This key defines the color of the <Emoji icon="badge/mark"/> Figura mark on your nameplate. It must be a string in the format of a 3 character hex code or a 6 character hex code. For example, both `3ab` and `FF00FF` are valid inputs. If this key does not exist, the color `5AAAFF` will be used.
 
 ```json
 {
@@ -91,10 +91,11 @@ This key defines the color of the <Emoji icon="badge/mark"/> Figura mark on your
 }
 ```
 
-### `"autoScripts"` : String[]
+### `autoScripts` : String[]
 
-By default, every single <Emoji icon="file/lua"/> script file in the avatar will execute in an undefined order. The `require` function can be used to control when a script is first executed, but some may prefer to define the script order in the metadata. This key is an array of strings that define which scripts run and in which order. Scripts not defined here will not run by default on avatar init, but can still be ran via `require`. A script is specified via it's file name without the `.lua` extension. If a script is in a subfolder, that folder must also be defined, with the folder separator being a period (`.`).<br/>
-Consider the following avatar:<br/>
+By default, every single <Emoji icon="file/lua"/> script file in the avatar will execute in an undefined order. The `require` function can be used to control when a script is first executed, but some may prefer to define the script order in the metadata. This key is an array of strings that define which scripts run and in which order. Scripts not defined here will not run by default on avatar init, but can still be ran via `require`. A script is specified via it's file name without the `.lua` extension. If a script is in a subfolder, that folder must also be defined, with the folder separator being a period (`.`).
+
+Consider the following avatar:
 
 <FileTreeRoot>
   <FileTreeNode label="KattExampleAvatar" icon="file/folder">
@@ -118,13 +119,13 @@ Consider the following avatar:<br/>
   </FileTreeNode>
 </FileTreeRoot>
 
-To make only `RainbowNameplate.lua` run on avatar init, the `autoScripts` would look like<br/>
+To make only `RainbowNameplate.lua` run on avatar init, the `autoScripts` would look like
 
 ```json
 "autoScripts":["libs.RainbowNameplate"]
 ```
 
-For our example metadata file, we will state that only <Emoji icon="file/lua"/> `script.lua` will run by default, and the script itself will call `require` on the library scripts which will "import" them into itself. You may be thinking "whats the point of `"autoScripts"` if `require` is objectively better at controlling script load order?", To which my response would be "I don't know". But if you give an empty array, then no script will run which can be useful for debugging.
+For our example metadata file, we will state that only <Emoji icon="file/lua"/> `script.lua` will run by default, and the script itself will call `require` on the library scripts which will "import" them into itself. You may be thinking "whats the point of `autoScripts` if `require` is objectively better at controlling script load order?", To which my response would be "I don't know". But if you give an empty array, then no script will run which can be useful for debugging.
 
 ```json
 {
@@ -137,10 +138,10 @@ For our example metadata file, we will state that only <Emoji icon="file/lua"/> 
 }
 ```
 
-### `"autoAnims"` : String[]
+### `autoAnims` : String[]
 
-This key defines which animations should start playing when the avatar first loads. The string to reference an animation follows the pattern `"modelPath.animName"`.
-Consider the following avatar:<br/>
+This key defines which animations should start playing when the avatar first loads. The string to reference an animation follows the pattern `modelPath.animName`.
+Consider the following avatar:
 
 <FileTreeRoot>
   <FileTreeNode label="KattExampleAvatar" icon="file/folder">
@@ -164,10 +165,12 @@ Consider the following avatar:<br/>
   </FileTreeNode>
 </FileTreeRoot>
 
-If we want the animation `"idle"` in the bbmodel <Emoji icon="file/bbmodel"/> `player.bbmodel`, we would include the string `"player.idle"` in the `"autoAnims"` array.<br/>
-Folder seperation is done with a period (`.`) instead of slash (`/`).<br/>
-If we want the animation `"spin"` in the model <Emoji icon="file/bbmodel"/> `halo.bbmodel`, we would include the string `"accessories.halo.spin"` in the `"autoAnims"` array.<br/>
-This is not table indexing like how you would index the `animations` table to get an Animation. It is just string concatenation.<br/>
+Folder separation is done with a period (`.`) instead of slash (`/`).
+
+If we want the animation `idle` in the bbmodel <Emoji icon="file/bbmodel"/> `player.bbmodel`, we would include the string `player.idle` in the `autoAnims` array If we want the animation `spin` in the model <Emoji icon="file/bbmodel"/> `halo.bbmodel`, we would include the string `accessories.halo.spin` in the `autoAnims` array.
+
+This is not table indexing like how you would index the `animations` table to get an Animation. It is just string concatenation.
+
 `autoAnims` has a very niche use case as 99% of the time you have animations that you only want playing sometimes or want to play on a trigger. The only real use case is for a constantly playing looping animation that you don't want to waste ~8 instructions on play at the beginning of a script, or perhaps you have an avatar that does not have any script files and you want to keep it that way.
 
 ```json
@@ -182,11 +185,13 @@ This is not table indexing like how you would index the `animations` table to ge
 }
 ```
 
-### `"ignoredTextures"` : String[]
+### `ignoredTextures` : String[]
 
-This key defines which textures should be ignored when loading the avatar. This is useful for when you have a cube that gets its texture set via code, but since all cubes must have a blockbench texture for Figura to even load the cube, you will either have to waste space with a dummy texture or use another texture in the model, which probably won't look good on the cube. This key allows you to have that dummy texture in blockbench without having to waste precious bytes on having that texture loaded with the avatar.<br/>
-Referencing a texture is exactly the same format as getting a Texture object with the `textures` global.<br/>
-Consider this avatar:<br/>
+This key defines which textures should be ignored when loading the avatar. This is useful for when you have a cube that gets its texture set via code, but since all cubes must have a blockbench texture for Figura to even load the cube, you will either have to waste space with a dummy texture or use another texture in the model, which probably won't look good on the cube. This key allows you to have that dummy texture in blockbench without having to waste precious bytes on having that texture loaded with the avatar.
+
+Referencing a texture is exactly the same format as getting a Texture object with the `textures` global.
+
+Consider this avatar:
 
 <FileTreeRoot>
   <FileTreeNode label="KattExampleAvatar" icon="file/folder">
@@ -225,12 +230,15 @@ Hypothetically, the armor of this avatar is being handled by <Emoji icon="file/l
 }
 ```
 
-### `"customizations"` : \{"ModelPart" : \{"Customization" : "String"}}
+### `customizations` : \{"ModelPart" : \{"Customization" : "String"}}
 
-Does that Type identifier make any sense? Not really, but thats what the `"customizations"` property is.<br/>
-`"customizations"` allows for modifications to ModelParts that cant be done in BlockBench. You can still do this stuff via script, but the intent is for an avatar that does not have a script to still have access to some functionality.<br/>
-`"customizations"` itself is a JSON object. The keys of that object are references to ModelParts, with the values being another JSON object. _That_ object contains key value pairs that operate on the referenced ModelPart.<br/>
-Consider the following avatar:<br/>
+Does that Type identifier make any sense? Not really, but thats what the `customizations` property is.
+
+`customizations` allows for modifications to ModelParts that cant be done in BlockBench. You can still do this stuff via script, but the intent is for an avatar that does not have a script to still have access to some functionality.
+
+`customizations` itself is a JSON object. The keys of that object are references to ModelParts, with the values being another JSON object. _That_ object contains key value pairs that operate on the referenced ModelPart.
+
+Consider the following avatar:
 
 <FileTreeRoot>
   <FileTreeNode label="KattExampleAvatar" icon="file/folder">
@@ -248,8 +256,9 @@ Consider the following avatar:<br/>
   </FileTreeNode>
 </FileTreeRoot>
 
-To target the <Emoji icon="blockbench/group"/> `Head`, the correct key to use would be `"player.Head"`.<br/>
-To target the <Emoji icon="file/bbmodel"/> `ribbon`, the correct key to use would be `"accessories.ribbon"`.<br/>
+To target the <Emoji icon="blockbench/group"/> `Head`, the correct key to use would be `player.Head`.
+
+To target the <Emoji icon="file/bbmodel"/> `ribbon`, the correct key to use would be `accessories.ribbon`.
 
 ```json
 {
@@ -262,9 +271,9 @@ To target the <Emoji icon="file/bbmodel"/> `ribbon`, the correct key to use woul
 
 Now for the keys that work inside these sub-objects.
 
-#### `"primaryRenderType"` : String
+#### `primaryRenderType` : String
 
-Sets the RenderType to use for the Primary/Default texture. The default primaryRenderType is `"TRANSLUCENT"`.
+Sets the RenderType to use for the Primary/Default texture. The default primaryRenderType is `TRANSLUCENT`.
 
 ```json
 {
@@ -277,9 +286,9 @@ Sets the RenderType to use for the Primary/Default texture. The default primaryR
 }
 ```
 
-#### `"secondaryRenderType"` : String
+#### `secondaryRenderType` : String
 
-Sets the RenderType to use for the Secondary/Emissive/`\_e` texture. The default secondaryRenderType is `"EMISSIVE"`.
+Sets the RenderType to use for the Secondary/Emissive/`\_e` texture. The default secondaryRenderType is `EMISSIVE`.
 
 ```json
 {
@@ -294,9 +303,9 @@ Sets the RenderType to use for the Secondary/Emissive/`\_e` texture. The default
 }
 ```
 
-#### `"parentType"` : String
+#### `parentType` : String
 
-Keywords in BlockBench set the ParentType of the ModelPart. This key overrides that, or sets one if there is no Keyword. The default ParentType is `"None"`
+Keywords in BlockBench set the ParentType of the ModelPart. This key overrides that, or sets one if there is no Keyword. The default ParentType is `None`
 
 ```json
 {
@@ -312,7 +321,7 @@ Keywords in BlockBench set the ParentType of the ModelPart. This key overrides t
 }
 ```
 
-#### `"moveTo"` : String
+#### `moveTo` : String
 
 Forces the ModelPart reference given to be a child of this ModelPart. This is useful if you like to organize your avatar into separate bbmodels. You can use this to stitch them together.
 
@@ -331,7 +340,7 @@ Forces the ModelPart reference given to be a child of this ModelPart. This is us
 }
 ```
 
-#### `"visible"` : Boolean
+#### `visible` : Boolean
 
 Overrides the visibility defined in BlockBench. Useful to be able to hide ModelParts in BlockBench to edit the model more easily, without it affecting the final result of the Avatar.
 
@@ -351,9 +360,9 @@ Overrides the visibility defined in BlockBench. Useful to be able to hide ModelP
 }
 ```
 
-#### `"remove"` : Boolean
+#### `remove` : Boolean
 
-This customization will prevent the targeted ModelPart from loading at all.<br/>
+This customization will prevent the targeted ModelPart from loading at all.
 
 ```json
 {
@@ -365,9 +374,10 @@ This customization will prevent the targeted ModelPart from loading at all.<br/>
 }
 ```
 
-#### `"smooth"` : Boolean
+#### `smooth` : Boolean
 
-This customization must be applied directly to a mesh object.<br/>
+This customization must be applied directly to a mesh object.
+
 This will calculate the vertex normals so that the mesh appears smooth, reducing the visibility of individual triangles.
 
 ```json

@@ -26,7 +26,8 @@ When setting the ParentType with group names, ParentTypes are commonly referred 
 
 ## Applying ParentTypes through Scripting
 
-To apply a ParentType through script, [index the ModelPart](../tutorials/ModelPart%20Indexing) you want to set the ParentType of, then call the `setParentType` method on it, passing in a ParentType as a string as the parameter.<br/>
+To apply a ParentType through script, [index the ModelPart](../tutorials/ModelPart%20Indexing) you want to set the ParentType of, then call the `setParentType` method on it, passing in a ParentType as a string as the parameter.
+
 After an avatar is loaded, there is no difference between <Emoji icon="blockbench/group"/> groups, <Emoji icon="blockbench/cube"/> cubes, or <Emoji icon="file/bbmodel"/> bbmodels. Everything is a ModelPart, meaning everything can have a ParentType.
 
 **Example**:
@@ -40,8 +41,9 @@ models.myOtherModel.Pet:setParentType("World")
 
 ## List of ParentTypes
 
-All ParentTypes have an alternate way of spelling it, an alias, though internally they do the same thing. They will be listed just underneath what Figura considers to be the true ParentType.<br/>
-Many ParentTypes share similar properties. You can roughly put them into 3 distinct groups: Mimic, Pivot, and Special. These groupings are not recognized by the mod itself and just serve to make explaining similar ParentTypes more convenient.<br/>
+All ParentTypes have an alternate way of spelling it, an alias, though internally they do the same thing. They will be listed just underneath what Figura considers to be the true ParentType.
+
+Many ParentTypes share similar properties. You can roughly put them into 3 distinct groups: Mimic, Pivot, and Special. These groupings are not recognized by the mod itself and just serve to make explaining similar ParentTypes more convenient.
 
 ---
 
@@ -51,8 +53,7 @@ Many ParentTypes share similar properties. You can roughly put them into 3 disti
 -   #### `Model` \{#Model}
 -   #### `MODEL` \{#MODEL}
 
-The default ParentType.<br/>
-Using this ParentType as a Keyword has no purpose, as <Emoji icon="blockbench/group"/> groups with no Keyword will have this ParentType, but it can still be used in scripts.
+The default ParentType. Using this ParentType as a Keyword has no purpose, as <Emoji icon="blockbench/group"/> groups with no Keyword will have this ParentType, but it can still be used in scripts.
 
 ---
 
@@ -66,7 +67,8 @@ Player Mimic ParentTypes copy transformations (position, rotation, scale) from e
 
 -   #### `HEAD` \{#HEAD}
 
-Mimics the transformation offsets of the Vanilla `HEAD`<br/>
+Mimics the transformation offsets of the Vanilla `HEAD`.
+
 If there is no ModelParts with the [Skull](#skull) ParentType, ModelParts with this ParentType will replace the Vanilla Skull.
 
 ---
@@ -83,7 +85,8 @@ Mimics the transformation offsets of the Vanilla `BODY`
 
 -   #### `RIGHT_ARM` \{#RIGHT_ARM}
 
-Mimics the transformation offsets of the Vanilla `RIGHT_ARM`<br/>
+Mimics the transformation offsets of the Vanilla `RIGHT_ARM`
+
 This ParentType will appear in First Person under the same conditions as the Vanilla RightArm.
 
 ---
@@ -92,7 +95,8 @@ This ParentType will appear in First Person under the same conditions as the Van
 
 -   #### `LEFT_ARM` \{#LEFT_ARM}
 
-Mimics the transformation offsets of the Vanilla `LEFT_ARM`<br/>
+Mimics the transformation offsets of the Vanilla `LEFT_ARM`
+
 This ParentType will appear in First Person under the same conditions as the Vanilla LeftArm.
 
 ---
@@ -119,8 +123,9 @@ Mimics the transformation offsets of the Vanilla `LEFT_LEG`
 -   #### `RightElytron` \{#RightElytron}
 -   #### `RIGHT_ELYTRON` \{#RIGHT_ELYTRON}
 
-Mimics the transformation offsets of the Vanilla `RIGHT_ELYTRA`<br/>
-ModelParts with this ParentType are only visible while an Elytra is equipped.<br/>
+Mimics the transformation offsets of the Vanilla `RIGHT_ELYTRA`
+
+ModelParts with this ParentType are only visible while an Elytra is equipped.
 
 ---
 
@@ -130,8 +135,9 @@ ModelParts with this ParentType are only visible while an Elytra is equipped.<br
 -   #### `LeftElytron` \{#LeftElytron}
 -   #### `LEFT_ELYTRON` \{#LEFT_ELYTRON}
 
-Mimics the transformation offsets of the Vanilla `LEFT_ELYTRA`<br/>
-ModelParts with this ParentType are only visible while an Elytra is equipped.<br/>
+Mimics the transformation offsets of the Vanilla `LEFT_ELYTRA`
+
+ModelParts with this ParentType are only visible while an Elytra is equipped.
 
 ---
 
@@ -139,7 +145,8 @@ ModelParts with this ParentType are only visible while an Elytra is equipped.<br
 
 -   #### `CAPE` \{#CAPE}
 
-Mimics the transformation offsets of the Vanilla `CAPE`<br/>
+Mimics the transformation offsets of the Vanilla `CAPE`
+
 This ParentType works even if you don't own a vanilla Cape.
 
 ---
@@ -154,9 +161,12 @@ Special ParentTypes are ParentTypes that provide unique rendering functionality 
 
 -   #### `WORLD` \{#WORLD}
 
-This ParentType will cause the ModelPart to be parented to the Minecraft World itself rather than your Player.<br/>
-Position (0,0,0) will be at the world's origin. 1 block is 16 ModelPart units, so multiply the world coordinates by 16 before setting the position of a World ParentType ModelPart.<br/>
-Rotation (0,0,0) will be facing South instead of what BlockBench defines as North.<br/>
+This ParentType will cause the ModelPart to be parented to the Minecraft World itself rather than your Player.
+
+Position (0,0,0) will be at the world's origin. 1 block is 16 ModelPart units, so multiply the world coordinates by 16 before setting the position of a World ParentType ModelPart.
+
+Rotation (0,0,0) will be facing South instead of what BlockBench defines as North.
+
 ModelParts with this ParentType will be visible while in First Person.
 
 ---
@@ -170,7 +180,8 @@ ModelParts with this ParentType will be visible while in First Person.
 -   #### `GraphicalUserInterface` \{#GraphicalUserInterface}
 -   #### `JraficalUserInterface` \{#JraficalUserInterface}
 
-This ParentType causes the ModelPart to render on the Hud instead of on your player. This only affects the owner's Hud, or players that spectate the owner of the avatar.<br/>
+This ParentType causes the ModelPart to render on the Hud instead of on your player. This only affects the owner's Hud, or players that spectate the owner of the avatar.
+
 (0,0,0) is the top left of the screen. 1 ModelPart unit is 1 Minecraft Gui unit. -X moves the ModelPart Right on the screen, and -Y moves the ModelPart Down on the screen. The Z axis determines which ModelParts render on top of others, with -Z moving the ModelPart closer. You can even have ModelParts render on top of the vanilla GUI.
 
 ---
@@ -198,8 +209,9 @@ This ParentType causes the ModelPart to replace the Vanilla Skull.
 
 -   #### `PORTRAIT` \{#PORTRAIT}
 
-This ParentType will change the player icon in the TAB LIST.<br/>
-Blockbench 0, 0, 0 is the bottom center and the valid area extends 4 units horizontally on each since and 8 units up.<br/>
+This ParentType will change the player icon in the TAB LIST.
+
+Blockbench 0, 0, 0 is the bottom center and the valid area extends 4 units horizontally on each since and 8 units up.
 
 ---
 
@@ -207,7 +219,8 @@ Blockbench 0, 0, 0 is the bottom center and the valid area extends 4 units horiz
 
 -   #### `ARROW` \{#ARROW}
 
-This ParentType replaces the model of arrows fired by you. The pivot point of the ModelPart that has this ParentType does not matter.<br/>
+This ParentType replaces the model of arrows fired by you. The pivot point of the ModelPart that has this ParentType does not matter.
+
 (0,0,0) in BlockBench is the point on the vanilla arrow's shaft that is just before the arrow head.
 
 ---

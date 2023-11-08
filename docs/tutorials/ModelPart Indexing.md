@@ -6,11 +6,11 @@ This page describes the process to access any ModelPart from the global ModelPar
 
 # Getting a ModelPart
 
-A property of all ModelParts is that you can get a child ModelPart of a parent ModelPart by [indexing](../tutorials/Tables#generic-indexing) the parent with the child's name.<br/>
-`models` itself is a ModelPart. All bbmodel files in the avatar act as child ModelParts to `models`.<br/>
-Everything in the root of a Blockbench project is a child of the bbmodel ModelPart.<br/>
-After that, parenting follows the parent structure as defined in the Blockbench OUTLINER.<br/>
-For example the cube <Emoji icon="blockbench/cube"/> `RightArm`,<br/>
+A property of all ModelParts is that you can get a child ModelPart of a parent ModelPart by [indexing](../tutorials/Tables#generic-indexing) the parent with the child's name.
+
+`models` itself is a ModelPart. All bbmodel files in the avatar act as child ModelParts to `models`. Everything in the root of a Blockbench project is a child of the bbmodel ModelPart. After that, parenting follows the parent structure as defined in the Blockbench OUTLINER.
+
+For example, the cube <Emoji icon="blockbench/cube"/> `RightArm`,
 
 <FileTreeRoot>
   <FileTreeNode label="model.bbmodel" icon="file/bbmodel">
@@ -42,7 +42,7 @@ end
 
 # BBmodels in Subfolders
 
-bbmodel files in subfolders are a special case. For them, the folder itself acts as another ModelPart.<br/>
+bbmodel files in subfolders are a special case. For them, the folder itself acts as another ModelPart.
 
 <FileTreeRoot>
   <FileTreeNode label="subfolderA" icon="file/folder">
@@ -55,4 +55,4 @@ bbmodel files in subfolders are a special case. For them, the folder itself acts
   </FileTreeNode>
 </FileTreeRoot>
 
-The bbmodel <Emoji icon="file/bbmodel"/> `Pet.bbmodel` would be accessed by `models.subfolderA.Pet`.<br/>
+The bbmodel <Emoji icon="file/bbmodel"/> `Pet.bbmodel` would be accessed by `models.subfolderA.Pet`.
