@@ -124,7 +124,7 @@ Lua comes built in with ways to manipulate tables. Not all are described here, j
 
 This function can add a value at any index, shifting the other values to account for the added value.
 
-For example, `table.insert(array, 1, "e")` will insert `"e"` at the beggining of the table `array`, shifting every other value forward one index. When adding elements to the end of the array, you use the function as `table.insert(t, value)`. So `table.insert(array, "l")` appends `"l"` to the end of the table `array`.
+For example, `table.insert(array, 1, "e")` will insert `e` at the beggining of the table `array`, shifting every other value forward one index. When adding elements to the end of the array, you use the function as `table.insert(t, value)`. So `table.insert(array, "l")` appends `l` to the end of the table `array`.
 
 ### `table.remove(t, pos)`
 

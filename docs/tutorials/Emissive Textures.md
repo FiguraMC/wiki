@@ -12,11 +12,11 @@ Every ModelPart in Blockbench has a reference to a single texture. When Figura l
 
 <img src={require("@site/static/img/emissive-example/emissive.png").default} align="right"/>
 
-The pixels on a Texture using the `"EMISSIVE"` [RenderType](../enums/RenderTypes) are not interpreted the same was as a regular texture.
+The pixels on a Texture using the `EMISSIVE` [RenderType](../enums/RenderTypes) are not interpreted the same was as a regular texture.
 
 First of all, the alpha values of pixels are ignored. This means that the emissive texture itself cannot be halfway visible. Its either the pixel is completely opaque, or completely gone. No in between.
 
-On the texture below, both pixels will render the exact same. Even though they appear to be 2 distinct colors, the right color has an alpha value of `139` and is blending with the gray GitHub background. They have the exact same RGB values and will be rendered exactly the same under the `"EMISSIVE"` RenderType.
+On the texture below, both pixels will render the exact same. Even though they appear to be 2 distinct colors, the right color has an alpha value of `139` and is blending with the gray GitHub background. They have the exact same RGB values and will be rendered exactly the same under the `EMISSIVE` RenderType.
 
 <img src={require("@site/static/img/emissive-example/alpha.png").default} width="40"/>
 
@@ -28,7 +28,7 @@ On the texture below, both pixels will render with the same color. The pixel on 
 
 ## Iris Emissives
 
-If you use Iris, regardless of the fact of if you are currently using custom shaders, the `"EMISSIVE"` RenderType is modified to use the alpha value when rendering the emissive texture. How exactly is not known. Experimentation is required.
+If you use Iris, regardless of the fact of if you are currently using custom shaders, the `EMISSIVE` RenderType is modified to use the alpha value when rendering the emissive texture. How exactly is not known. Experimentation is required.
 
 ## Emissive Render Types
 

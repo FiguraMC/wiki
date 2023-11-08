@@ -78,7 +78,7 @@ end
 
 You might be wondering about putting something in getID's parentehsis, so let's turn our attention back to the overload figs gives us. In `ItemStack:getID(): String` the parenthesis are empty here. That means no arguments are necessary and nothing should be put in the brackets. Anything given will be ignored.
 
-Notably, it's returning a String which is quite literally a string of characters. Putting something in quotes makes it a string. So `true` is a boolean, but `"true"` is a string. In our case this string of characters is the id of the item in our chestplate slot. At this point we can compare the string of our item with the string of the elytra id.
+Notably, it's returning a String which is quite literally a string of characters. Putting something in quotes makes it a string. So `true` is a boolean, but `true` is a string. In our case this string of characters is the id of the item in our chestplate slot. At this point we can compare the string of our item with the string of the elytra id.
 
 ```lua
 function events.tick()
@@ -86,9 +86,9 @@ function events.tick()
 end
 ```
 
-This statement is known as an evaluation. The doubled equals sign `==` tells the game to compare the two values on either side of it. In the case of functions, it will compare the value the function returns. If an elytra is worn then `player:getItem(5):getID()` will return `"minecraft:elytra`, which is equal to what we're checking for and as such the game will show `true`. The evaluation can be combined with other code to do more with it, such as store its value in a variable or put it in an if statement.
+This statement is known as an evaluation. The doubled equals sign `==` tells the game to compare the two values on either side of it. In the case of functions, it will compare the value the function returns. If an elytra is worn then `player:getItem(5):getID()` will return `minecraft:elytra`, which is equal to what we're checking for and as such the game will show `true`. The evaluation can be combined with other code to do more with it, such as store its value in a variable or put it in an if statement.
 
-So, after all this, our elytra detection is `player:getItem(5):getID() == "minecraft:elytra"`. It's using the player API to run `getItem()` on the player, and then use `getID()` on the player's item, and then compare it's ID to that of the elytra to find out if we're wearing an elytra or not.
+So, after all this, our elytra detection is `player:getItem(5):getID() == "minecraft:elytra`. It's using the player API to run `getItem()` on the player, and then use `getID()` on the player's item, and then compare it's ID to that of the elytra to find out if we're wearing an elytra or not.
 
 For clarification: The log is another function that we put the final result into. It serves to make the information we put in it as an argument to the chat. If you copied the log that will break things
 
