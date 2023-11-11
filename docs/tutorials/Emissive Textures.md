@@ -1,4 +1,5 @@
 import Emoji from '@site/src/components/Emoji';
+import Image from '@site/src/components/Image';
 
 This page describes everything to know about Emissive Textures.
 
@@ -10,7 +11,7 @@ Every ModelPart in Blockbench has a reference to a single texture. When Figura l
 
 ## Emissive Texture Behavior
 
-<img src={require("@site/static/img/emissive-example/emissive.png").default} align="right"/>
+<Image src="/img/emissive-example/emissive.png" className="float-right clear-right" />
 
 The pixels on a Texture using the `EMISSIVE` [RenderType](../enums/RenderTypes) are not interpreted the same was as a regular texture.
 
@@ -18,13 +19,13 @@ First of all, the alpha values of pixels are ignored. This means that the emissi
 
 On the texture below, both pixels will render the exact same. Even though they appear to be 2 distinct colors, the right color has an alpha value of `139` and is blending with the gray GitHub background. They have the exact same RGB values and will be rendered exactly the same under the `EMISSIVE` RenderType.
 
-<img src={require("@site/static/img/emissive-example/alpha.png").default} width="40"/>
+<Image src="/img/emissive-example/alpha.png" width="40" />
 
 Second, the "brightness" of a pixel is what determines the intensity of the emissive glow. If you know HSV, its the Value that controls this property. Emissive Intensity controls how bright the pixel will render, but also how much of the pixel behind it will show through.
 
 On the texture below, both pixels will render with the same color. The pixel on the left will render with max brightness, not allowing the pixels on the base texture to blend through. The pixel on the right won't glow as much, but allows the pixels on the base texture to blend through.
 
-<img src={require("@site/static/img/emissive-example/brightness.png").default} width="40"/>
+<Image src="/img/emissive-example/brightness.png" width="40" />
 
 ## Iris Emissives
 

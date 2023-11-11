@@ -1,4 +1,5 @@
 import Emoji from '@site/src/components/Emoji';
+import Image from '@site/src/components/Image';
 
 Proper tutorials for Blockbench can be found online. This page just explains Figura specific stuff. This page assumes you are using the Desktop version of Blockbench, not the online app.
 
@@ -6,26 +7,27 @@ Proper tutorials for Blockbench can be found online. This page just explains Fig
 
 This is the popup that appears when you create a Project. You can also get to this page via File->Project.
 
-<img src={require("@site/static/img/blockbench/project.png").default} width="400"></img>
+<Image src="/img/blockbench/project.png" width="400" />
 
 Figura only accepts <Emoji icon="file/bbmodel"/> bbmodels in the Generic Model format. If your format is not Generic Model, Figura will refuse to load the avatar. To convert a project, File->Convert Project. Deselect `Create Copy`, ensure format is Generic Model, and press Confirm. If the popup does not go away after pressing Confirm, close it manually.
 
-<img src={require("@site/static/img/blockbench/convert_project.png").default} width="400"></img>
+<Image src="/img/blockbench/convert_project.png" width="400" />
 
 The `File Name` and `Model Identifier` fields are unused by Figura.
 
 `UV Mode` determines how Blockbench handles how UVs are positioned. Figura will handle both `Box UV` and `Per-face UV`. Its up to you which you want. UVs determine where a 2D texture is applied to a 3D model. Each face has it's own UV coordinates which determines where on the 2D texture it will get it's pixels from.
 
-<img src={require("@site/static/img/blockbench/uvmode_box.png").default} width="200" style={{"float":"right"}}></img>
+<Image src="/img/blockbench/uvmode_box.png" width="200" className="float-right" />
+
 `Box UV` forces each face of a cube to match how vanilla does UVs. If you have ever edited your own vanilla skin before, you will recognize the pattern. While this does simplify the texturing process, it limits what you can do. Also, all textures in the model must have the same size, as what is a pixel is determined by the project's global `Texture Size` instead of the size of the texture itself. Also, meshes cannot be used while using `Box UV`
 
-<div style={{"clear":"both"}}></div>
+<div className="clear-both" />
 
-<img src={require("@site/static/img/blockbench/uvmode_perface.png").default} width="200" style={{"float":"right"}}></img>
+<Image src="/img/blockbench/uvmode_perface.png" width="200" className="float-right" />
 
 `Per-face UV` allows full control over each face of the cube/mesh. Each face can be positioned, scaled, and rotated individually from each other. You can even set a different texture for each face, or remove a face to reduce clutter. While the pixel grid is effected by the project's global `Texture Size`, changing the `Texture Size` has zero effect on the UVs themselves, unlike `Box UV` which will have destructive effects when changing the project
 
-<div style={{"clear":"both"}}></div>
+<div className="clear-both" />
 
 `Texture Size`.
 
@@ -55,8 +57,9 @@ To determine the state your texture is in, Right Click a texture->Properties. An
 
 There is one key factor for a texture to be External, and that is for the file itself to be inside the avatar's folder. If the filepath does not lead to a file inside the avatar's folder, Figura will load it as a local file.
 
-<img src={require("@site/static/img/blockbench/texture_local.png").default} width="300"></img>
-<img src={require("@site/static/img/blockbench/texture_external.png").default} width="300"></img>
+<Image src="/img/blockbench/texture_local.png" width="300" />
+
+<Image src="/img/blockbench/texture_external.png" width="300" />
 
 Whether a texture is Local or External will determine how Figura will load it which is important when getting a Texture in script.
 
@@ -81,7 +84,8 @@ List of suffixes used by Figura:
 -   `\_s`: This texture will be used as the [Specular Texture](https://en.wikipedia.org/wiki/Specularity). This suffix is used with Iris Shaders, and does nothing with vanilla rendering. **_This suffix currently does not function_**.
 
 An example is the <Emoji icon="blockbench/group"/> `Head`, <Emoji icon="file/texture"/> `skin`, and <Emoji icon="file/texture"/> `skin_e`. When the <Emoji icon="blockbench/group"/> `Head` uses the texture <Emoji icon="file/texture"/> `skin`, when the Avatar is loaded, <Emoji icon="file/texture"/> `skin_e` is used as the Secondary Texture, ie the Emissive Texture.
-<img src={require("@site/static/img/blockbench/settexture.png").default} width="300"></img>
+
+<Image src="/img/blockbench/settexture.png" width="300" />
 
 For a texture to have the same name, they must both be either [Local or External](#localexternal-textures), and should they be external, they must be in the same folder. Otherwise, they will not have the same name internally.
 
@@ -93,7 +97,7 @@ For textures with file extensions, the suffix goes before the extension. <Emoji 
 
 This popup appears when you create an animation. To get back to this popup, Right Click an Animation->Properties.
 
-<img src={require("@site/static/img/blockbench/animation_properties.png").default} width="500"></img>
+<Image src="/img/blockbench/animation_properties.png" width="500" />
 
 `Name` is the animation's name. It is very important that you change this to something shorter. The entire textbox is the animation's name, so unless you want to refer to this animation in lua with `animations.player["animation.model.new"]`, change the name. An animation named just `new` is indexed via `animations.player.new`. Much nicer, right?
 
@@ -163,7 +167,7 @@ Below are features provided by Blockbench Animations that Figura does not use wh
 
 #### Variable Placeholders
 
-<img src={require("@site/static/img/blockbench/animation_variableplaceholders.png").default} width="200"></img>
+<Image src="/img/blockbench/animation_variableplaceholders.png" width="200" />
 
 This is completely ignored by Figura.
 
