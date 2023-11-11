@@ -2,9 +2,9 @@ Using Figura you can play custom sounds and sounds from Minecraft itself.
 
 This article assumes you know to avoid calling the player in init.
 
-## Playing A Sound
+## Playing a Sound
 
-The most common way to play a sound is through the <code>playSound</code> function in the sound API.
+The most common way to play a sound is through the `playSound` function in the sound API.
 
 ```lua
 sounds:playSound(soundID, position, volume, pitch, loop)
@@ -32,13 +32,13 @@ sounds:playSound("entity.bat.ambient", player:getPos(), 1, 1, false)
 
 Playing a custom sound is exactly the same as playing a Minecraft sound, except the sound ID is now the name of the sound file.
 
-Ex: If your file is <code>horn.ogg</code> then your playSound line would look like this:
+Ex: If your file is `horn.ogg` then your playSound line would look like this:
 
 ```lua
 sounds:playSound("horn", player:getPos())
 ```
 
-Minecraft will only play specific sound files, namely sounds that are .ogg files. Here's an [online OGG converter](https://audio.online-convert.com/convert-to-ogg). You will want to change the audio channels setting to <code>mono</code> and the audio codec to <code>Vorbis</code> because Minecraft likes the Vorbic codec.
+Minecraft will only play specific sound files, namely sounds that are .ogg files. Here's an [online OGG converter](https://audio.online-convert.com/convert-to-ogg). You will want to change the audio channels setting to `mono` and the audio codec to `Vorbis` because Minecraft likes the Vorbic codec.
 
 If your custom sound is stored in a subfolder in the avatar, the subfolder name gets added onto the sound name like this:
 
@@ -54,7 +54,7 @@ Mono sounds are half the size of stereo when it comes to file size. Mono also ac
 
 Stereo sounds are much bigger (and sounds are already quite big when it comes to file size) and will play for _everyone in the server_ similarly to activating an end portal. There's no way to get around that other than to swap the audio channels to mono.
 
-## Alternative Ways To Play Sounds
+## Alternative Ways to Play Sounds
 
 If you want to make a long or looping sound follow your movement you're going to need to use a different method for playing sounds.
 

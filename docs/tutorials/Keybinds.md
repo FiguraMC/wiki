@@ -2,7 +2,21 @@ Through Figura's keybind API you can have the script listen for key presses to m
 
 Keybinds are unsynced information, meaning that without a ping other players cannot know that you pressed a key at all. This guide will be using pings with all the example keybinds.
 
-**Note: Keybinds can be used while the player is unloaded (aka you are out of render distance), if the player API is called during this time your script will error.** You can protect yourself from these errors by adding this check: <code>if not player:isLoaded() then return end</code> as the first line of code run **_inside the ping._**
+:::warning
+
+Keybinds can be used while the player is unloaded, such as when you are out of render distance.
+If the player API is called during this time your script will error.
+
+You can protect yourself from these errors by adding a check at the top of your ping function. For example:
+
+```lua
+function pings.examplePing()
+    if not player:isLoaded() then return end
+    -- ...rest of your code
+end
+```
+
+:::
 
 ## Example Keybind
 
@@ -12,11 +26,11 @@ First things first, you need to initialize the keybind
 local exampleKey = keybinds:newKeybind("Keybind Name", "key.keyboard.h")
 ```
 
-At this point, the keybind will show up in the avatar's keybind list- accessible via the Figura menu- with the name Keybind Name and assigned to the letter H. But pressing H won't do anything yet.
+At this point, the keybind will show up in the avatar's keybind list (accessible via the Figura menu) with the name Keybind Name and assigned to the letter H. But pressing H won't do anything yet.
 
 More keybinds ids can be found in the Keybinds: Enums page
 
-There are multiple ways to detect keybinds, but the most common is through <code>press</code> and <code>release</code> as they are easiest to ping. If you're not familiar with pings see [Pings](./Pings).
+There are multiple ways to detect keybinds, but the most common is through `press` and `release` as they are easiest to ping. If you're not familiar with pings see [Pings](./Pings).
 
 Underneath creating the key we will be tying the press of the key to a ping function. It's done underneath as the code is read top-down and the key must exist first.
 
@@ -27,7 +41,7 @@ exampleKey.press = pings.examplePing
 
 This itself won't do anything until we create the function pings.examplePing, this must be done above where press is assigned to the ping function, because the ping function will need to exist before it can be assigned. If it's done beneath nothing will happen.
 
-The false at the end decides whether or not the keybind will function while a gui like the inventory is opening. It can be skipped and the value will be considered false. If it's set to true then this keybind will run even while any gui is open or closed.
+The false at the end decides whether or not the keybind will function while a GUI like the inventory is opening. It can be skipped and the value will be considered false. If it's set to true then this keybind will run even while any GUI is open or closed.
 
 ```lua
 function pings.examplePing()
@@ -39,7 +53,7 @@ exampleKey.press = pings.examplePing
 
 And there we have it! Now this keybind will send Pressed! in chat every time H is pressed. At this point you could put whatever lines of code you wish into the ping function and it will be synced.
 
-Alternatively, <code>release</code> will run the keybind when the key is released rather than when it is first pressed.
+Alternatively, `release` will run the keybind when the key is released rather than when it is first pressed.
 
 ## Toggling With A Keybind
 
@@ -65,9 +79,9 @@ end
 -- This time .press is being tied to a function that is then calling the ping, instead of being 'attached' to it directly.
 ```
 
-## Detecting When A Key Is Held Down
+## Detecting When a Key Is Held Down
 
-If you have the know-how it is possible to use the <code>isPressed()</code> function to detect when a key is being held down, but it's not recommended, as using press and release in conjunction is far more effective.
+If you have the know-how it is possible to use the `isPressed()` function to detect when a key is being held down, but it's not recommended, as using press and release in conjunction is far more effective.
 
 ```lua
 local keybindState = false
@@ -92,7 +106,7 @@ function events.tick()
 end
 ```
 
-## Using A Vanilla Keybind
+## Using a Vanilla Keybind
 
 If you want to detect a vanilla action like attacking or walking forwards but want it to be compatible in the case that someone bound forward to an arrow key you can directly get the vanilla keybind and use it. There's multiple ways to accomplish this but we'll use the same method as previous examples.
 
@@ -100,4 +114,4 @@ If you want to detect a vanilla action like attacking or walking forwards but wa
 local exampleKey = keybinds:newKeybind("Keybind Name", keybinds:getVanillaKey("key.forward"))
 ```
 
-This will now detect the forward key regardless of what it's bound to. <code>getVanillaKey()</code> is going to need a key id from a specific list of ids that all correspond to a vanilla keybind. They can be found in the keyIDs enum.
+This will now detect the forward key regardless of what it's bound to. `getVanillaKey()` is going to need a key id from a specific list of ids that all correspond to a vanilla keybind. They can be found in the keyIDs enum.

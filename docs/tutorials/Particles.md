@@ -1,4 +1,4 @@
-Using the particle API you can spawn particles from Minecraft. These work similarly to the <code>/particle</code> command in-game. For particles with special properties like dust, they are placed in the name.
+Using the particle API you can spawn particles from Minecraft. These work similarly to the `/particle` command in-game. For particles with special properties like dust, they are placed in the name.
 
 Most of the article assumes you know to avoid calling the player in init.
 
@@ -24,7 +24,7 @@ particles:newParticle("dust 0 1 1 1", player:getPos())
 
 This will spawn an aqua dust particle as the color values need a number between 0 and 1, the fourth number is the alpha. I excluded the 'minecraft:' mod name to demonstrate that it's unnecessary.
 
-## Spawning At A Part Location
+## Spawning at a Part Location
 
 To spawn a particle at a modelPart's position you'll need to get the position matrix of that part, and insert it into the position like normal.
 
@@ -32,7 +32,7 @@ To spawn a particle at a modelPart's position you'll need to get the position ma
 particles:newParticle("explosion", modelPart:partToWorldMatrix():apply())
 ```
 
-Where <code>modelPart</code> is a reference to a real modelPart in your avatar.
+Where `modelPart` is a reference to a real modelPart in your avatar.
 
 ## An Alternative Method
 

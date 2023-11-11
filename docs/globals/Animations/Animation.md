@@ -120,7 +120,7 @@ myAnim:isPaused()
 
 Get the animation's playback state
 
-These will either be `"PLAYING"`, `"STOPPED"`, or `"PAUSED"`
+These will either be `PLAYING`, `STOPPED`, or `PAUSED`
 
 **Example**:
 

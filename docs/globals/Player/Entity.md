@@ -352,7 +352,7 @@ Returns a proxy for the entity that this entity is currently riding
 
 If the entity isn't riding anything, returns nil
 
-**Example** combined with getType and with a nil check, the first <code>thisEntity:getVehicle()</code> is preventing a nil value from being check by <code>getType()</code> after the and:
+**Example** combined with getType and with a nil check, the first `thisEntity:getVehicle()` is preventing a nil value from being check by `getType()` after the and:
 
 ```lua
 if thisEntity:getVehicle() and thisEntity:getVehicle():getType() == "minecraft:pig" then
@@ -408,7 +408,10 @@ thisEntity:getBoundingBox()
 
 Returns whether or not this entity is currently on the ground
 
-:::caution Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the blockstate of the block directly underneath the entity like so: <code>world.getBlockState(thisEntity:getPos():add(0,-0.1,0)):isSolidBlock()</code>
+:::caution
+
+Due to a glitch in Minecraft's code, this function is unreliable and will misfire in multiple situations, such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the block state of the block directly underneath the entity, like so: `world.getBlockState(thisEntity:getPos():add(0,-0.1,0)):isSolidBlock()`
+
 :::
 
 **Example**:

@@ -62,7 +62,7 @@ mySound:setPos(player:getPos())
 
 ### `getPos()` \{#getPos}
 
-Gets the position of the sound as set by <code>setPos</code>
+Gets the position of the sound as set by `setPos`
 
 **Example**:
 

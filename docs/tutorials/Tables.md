@@ -10,7 +10,7 @@ local t = {}
 
 ## Generic Indexing
 
-<code>table[key]</code> is the way to index a table. You can either get what is currently at that key, or assign a value to that key. There is no limitation to what can be used as keys or values in a table. If you index a table with an unknown key, it will return <code>nil</code>. You can also use variables as a key to index a table using this method.
+`table[key]` is the way to index a table. You can either get what is currently at that key, or assign a value to that key. There is no limitation to what can be used as keys or values in a table. If you index a table with an unknown key, it will return `nil`. You can also use variables as a key to index a table using this method.
 
 ```lua
 local v = 6
@@ -26,10 +26,11 @@ print(t["string key, table value"]) --> table 3be7a8
 
 ## String Indexing Shorthand
 
-If that seems like a lot of work to index by a string, yes it is.<br/>
-<code>table.key</code> is the shorthand for indexing a table with a string. This has very specific restrictions for what the string can contain.
+If that seems like a lot of work to index by a string, yes it is.
 
--   Cannot start with a number (<code>t.2fort</code> will not work. Use <code>[]</code> indexing, or use a different string)
+`table.key` is the shorthand for indexing a table with a string. This has very specific restrictions for what the string can contain.
+
+-   Cannot start with a number (`t.2fort` will not work. Use `[]` indexing, or use a different string)
 -   Cannot contain spaces, periods, or other special characters
 -   Cannot be Lua Keywords (true, false, local, function)
 
@@ -42,7 +43,7 @@ t.underscores_are_allowed = true
 
 ## Object Oriented Method Indexing
 
-There is one more way to index a table. Many of the functions in Figura take in the object that called said function as the first parameter. This is because every object of the same type has the exact same functions. This is done via <code>table:key()</code>.<br/>
+There is one more way to index a table. Many of the functions in Figura take in the object that called said function as the first parameter. This is because every object of the same type has the exact same functions. This is done via `table:key()`.
 
 ```lua
 local posA = player:getPos()
@@ -52,7 +53,7 @@ local posB = player.getPos(player)
 
 ## Initialize Table with Values
 
-You can assign values to keys when the table is initialized. Each key-value pair must be separated by a comma (<code>,</code>)<br/>
+You can assign values to keys when the table is initialized. Each key-value pair must be separated by a comma (`,`)
 
 <!-- prettier-ignore -->
 ```lua
@@ -63,12 +64,12 @@ local a = {
         ["a"] = 1,
         ["b"] = 2,
     },
-    -- string shorthand rules still apply. This is equivalent to <code>["life"] = 42</code>
+    -- string shorthand rules still apply. This is equivalent to `["life"] = 42`
     life = 42,
 }
 ```
 
-If you do not specify an index, the provided values will automatically be assigned a numeric index, starting at <code>1</code>. This is how arrays are handled in lua, just a table that acts as an array. A table array if you will. Unlike other languages, Lua arrays begin indexing at <code>1</code> and functions that take in an array expect the first element at <code>1</code>.
+If you do not specify an index, the provided values will automatically be assigned a numeric index, starting at `1`. This is how arrays are handled in lua, just a table that acts as an array. A table array if you will. Unlike other languages, Lua arrays begin indexing at `1` and functions that take in an array expect the first element at `1`.
 
 <!-- prettier-ignore -->
 ```lua
@@ -85,10 +86,9 @@ local array = {
 local array2 = { 42, 36, 1024, 1, "string", v, t }
 ```
 
-## Iterating Over a Table
+## Iterating over a Table
 
-Iterating over a table is simple.<br/>
-You can iterate over every single index using <code>pairs</code>. This will go through every index, but it will be in an undefined order. <code>pairs</code> has 2 values it returns when used in a for loop: the current <code>key</code>, and the current <code>value</code> at that <code>key</code>.<br/>
+Iterating over a table is simple. You can iterate over every single index using `pairs`. This will go through every index, but it will be in an undefined order. `pairs` has 2 values it returns when used in a for loop: the current `key`, and the current `value` at that `key`.
 
 ```lua
 for key, value in pairs(t) do
@@ -96,7 +96,7 @@ for key, value in pairs(t) do
 end
 ```
 
-If the order of the iteration is important, you can use <code>ipairs</code>, but it only goes over numerical indices. This is what you want to use for table arrays. It starts at index <code>1</code>, and increments by <code>1</code> until the table returns <code>nil</code>. When used in a for loop, <code>ipairs</code> returns the current index and the <code>value</code> at that <code>index</code>.<br/>
+If the order of the iteration is important, you can use `ipairs`, but it only goes over numerical indices. This is what you want to use for table arrays. It starts at index `1`, and increments by `1` until the table returns `nil`. When used in a for loop, `ipairs` returns the current index and the `value` at that `index`.
 
 ```lua
 for index, value in ipairs(array) do
@@ -106,8 +106,9 @@ end
 
 ## Length of Table Array
 
-You can use the <code>#</code> operator to get the length of a table array. For tables with non-numeric indexes, you have to use <code>pairs</code> and calculate the length yourself, though the "length" of that kind of table isnt really useful. This follows the same rules as <code>ipairs</code> in the way that the table's length is every numeric index until one returns <code>nil</code>. So <code>#\{1,2,3,4}</code> will return <code>4</code>, and <code>#\{1,2,nil,4}</code> will return <code>2</code>.<br/>
-As an example, <code>ipairs</code> is pretty much just this.
+You can use the `#` operator to get the length of a table array. For tables with non-numeric indexes, you have to use `pairs` and calculate the length yourself, though the "length" of that kind of table isnt really useful. This follows the same rules as `ipairs` in the way that the table's length is every numeric index until one returns `nil`. So `#\{1,2,3,4}` will return `4`, and `#\{1,2,nil,4}` will return `2`.
+
+As an example, `ipairs` is pretty much just this.
 
 ```lua
 for index = 1, #array, 1 do
@@ -117,17 +118,18 @@ end
 
 ## Manipulating Table Arrays
 
-Lua comes built in with ways to manipulate tables. Not all are described here, just the ones that I feel are most important.<br/>
-All of these functions are available via the <code>tables</code> global.
+Lua comes built in with ways to manipulate tables. Not all are described here, just the ones that I feel are most important. All of these functions are available via the `tables` global.
 
-### <code>table.insert(t, pos, value)</code>
+### `table.insert(t, pos, value)`
 
-This function can add a value at any index, shifting the other values to account for the added value.<br/>
-<code>table.insert(array, 1, "e")</code> will insert <code>"e"</code> at the beggining of the table <code>array</code>, shifting every other value forward one index.<br/>
-When adding elements to the end of the array, you use the function as <code>table.insert(t, value)</code>. So <code>table.insert(array, "l")</code> appends <code>"l"</code> to the end of the table <code>array</code>.
+This function can add a value at any index, shifting the other values to account for the added value.
 
-### <code>table.remove(t, pos)</code>
+For example, `table.insert(array, 1, "e")` will insert `"e"` at the beggining of the table `array`, shifting every other value forward one index. When adding elements to the end of the array, you use the function as `table.insert(t, value)`. So `table.insert(array, "l")` appends `"l"` to the end of the table `array`.
 
-This function can remove a value at any index, shifting the other values to account for the removed value. The value that was removed will be returned by this function as well.<br/>
-<code>table.remove(array, 1)</code> will remove the value at index <code>1</code> from the table, shifting all the values back an index.<br/>
-<code>pos</code> is optional, with the default value being <code>#t</code>. <code>table.remove(array)</code> will remove the last value in the table.
+### `table.remove(t, pos)`
+
+This function can remove a value at any index, shifting the other values to account for the removed value. The value that was removed will be returned by this function as well.
+
+`table.remove(array, 1)` will remove the value at index `1` from the table, shifting all the values back an index. `pos` is optional, with the default value being `#t`.
+
+`table.remove(array)` will remove the last value in the table.

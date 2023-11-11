@@ -1,4 +1,4 @@
-These are outer layer parts used in conjunction with <code>player:isSkinLayerVisible(String)</code> to detect what parts a player has enabled via the Minecraft Skin Customizations setting.
+These are outer layer parts used in conjunction with `player:isSkinLayerVisible(String)` to detect what parts a player has enabled via the Minecraft Skin Customizations setting.
 
 **Example:**
 

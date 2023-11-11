@@ -284,7 +284,11 @@ If returned true, the event cancels its vanilla function
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
 
-Note: This event is several ticks slower than its alternative function in the [player API](../globals/Player#isusingitem): <code>player:isUsingItem()</code>
+:::tip
+
+This event is several ticks slower than its alternative function in the [player API](../globals/Player#isusingitem), <code>player:isUsingItem()</code>.
+
+:::
 
 ```lua
 function events.use_item(item, action, particles)

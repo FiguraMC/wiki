@@ -10,13 +10,13 @@ You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the ite
 
 ## Item Keyword
 
-If you give a Blockbench group the Item keyword (by starting the group name with <code>Item</code>) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold.
+If you give a Blockbench group the Item keyword (by starting the group name with `Item`) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold.
 
 ## Item Render Event
 
 The item_render event runs once a frame for every item you're holding (so, a max of two) and do their own things in their version of the event.
 
-In order to make the Item show up you must return it in the item_render event. This example assumes the bbmodel is named <code>model</code> and that the keyworded group is named Item. If you wish to test this change <code>model</code> to your bbmodel name and the Item group to your version.
+In order to make the Item show up you must return it in the item_render event. This example assumes the bbmodel is named `model` and that the keyworded group is named Item. If you wish to test this change `model` to your bbmodel name and the Item group to your version.
 
 ```lua
 function events.item_render()
@@ -35,7 +35,7 @@ function events.item_render(item, mode, pos, rot, scale, left)
 end
 ```
 
-This is storing all the values you can get, but in most cases you only need item and sometimes mode. Let's replace bows, shields, and all swords. These are all for a blockbench model that looks like this:
+This is storing all the values you can get, but in most cases you only need item and sometimes mode. Let's replace bows, shields, and all swords. These are all for a Blockbench model that looks like this:
 
 <FileTreeRoot>
   <FileTreeNode label="model.bbmodel" icon="file/bbmodel">
@@ -59,7 +59,7 @@ end
 
 The find function is searching the id for the word 'sword' so you don't need to type in every single sword id. This also makes it compatible with modded swords.
 
-## Things To Note
+## Things to Note
 
 1. Do _not_ put the Item group inside any other group. The Blockbench outliner should look like this:
 

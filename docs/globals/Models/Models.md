@@ -50,7 +50,7 @@ models:setRot(0, 90, 0)
 
 ### <code>getRot()</code> \{#getRot}
 
-Gets the rotation of the model part, including its rotation in blockbench
+Gets the rotation of the model part, including its rotation in Blockbench
 
 For relative rotation values, check out the "offset" rot functions
 
@@ -64,7 +64,7 @@ models:setRot()
 
 ### <code>setPos(Vector3)</code> \{#setPos}
 
-Sets the position offset for this part from its blockbench position
+Sets the position offset for this part from its Blockbench position
 
 Nil values for position are assumed to be 0
 
@@ -78,7 +78,7 @@ models:setPos(0, 5, 0)
 
 ### <code>getPos()</code> \{#getPos}
 
-Gets the position of the model part, as an offset from its position in blockbench
+Gets the position of the model part, as an offset from its position in Blockbench
 
 Only changes from {0,0,0} when you call setPos()
 
@@ -106,7 +106,7 @@ models:setScale(2, 2, 2)
 
 ### <code>getScale()</code> \{#getScale}
 
-Gets the scale of the model part, as a multiple of its blockbench size
+Gets the scale of the model part, as a multiple of its Blockbench size
 
 Only changes from {1,1,1} when you call setScale()
 
@@ -136,7 +136,7 @@ models:setPivot(0, 5, 0)
 
 ### <code>getPivot()</code> \{#getPivot}
 
-Gets the pivot point of the model part, including its pivot in blockbench
+Gets the pivot point of the model part, including its pivot in Blockbench
 
 For relative values, check out the "offset" pivot functions
 
@@ -168,7 +168,7 @@ models:setOffsetRot(0, 90, 0)
 
 ### <code>getOffsetRot()</code> \{#getOffsetRot}
 
-Gets the offset rotation of the model part, offset from its rotation in blockbench
+Gets the offset rotation of the model part, offset from its rotation in Blockbench
 
 For absolute rotation values, check out the non-offset rot functions
 
@@ -228,7 +228,7 @@ models:setOffsetPivot(0, 5, 0)
 
 ### <code>getOffsetPivot()</code> \{#getOffsetPivot}
 
-Gets the offset pivot of the model part, offset from its pivot in blockbench
+Gets the offset pivot of the model part, offset from its pivot in Blockbench
 
 For absolute pivot point values, check out the non-offset pivot functions
 

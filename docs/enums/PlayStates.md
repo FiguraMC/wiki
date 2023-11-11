@@ -1,4 +1,4 @@
-The play state of a Blockbench animation, detected with <code>getPlayState()</code>.
+The play state of a Blockbench animation, detected with `getPlayState()`.
 
 **Example**:
 

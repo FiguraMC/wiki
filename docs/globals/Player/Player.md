@@ -1,12 +1,16 @@
 The player API inherits functions from the [living entity API](../globals/Player/LivingEntity)
 
-The player API is accessed through the <code>player</code> global. Like so: <code>player:isGliding()</code>
+The player API is accessed through the `player` global. Like so: `player:isGliding()`
 
 Player information that isn't synced between clients is kept in the host API. Examples of unsynced data are: Creative flying, status effects, and remaining air amount.
 
-**_Note:_** There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event. If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the <code>entity_init</code> event.
+:::warning
 
-For most other circumstances you will want the <code>tick</code> event, as checks like <code>player:isGliding()</code> will be updated once a game tick inside that event. (There are 20 ticks in a second, and this is how often Minecraft updates information- some player functions work better in a tick event for this reason).
+There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event. If you wish to initialize a check during the initialization phase of a script (outside any other event) you can use the `entity_init` event.
+
+:::
+
+For most other circumstances you will want the `tick` event, as checks like `player:isGliding()` will be updated once a game tick inside that event. (There are 20 ticks in a second, and this is how often Minecraft updates information- some player functions work better in a tick event for this reason).
 
 All provided examples assume you're using a tick event.
 
@@ -690,7 +694,7 @@ Returns a proxy for the entity that this player is currently riding
 
 If the player isn't riding anything, returns nil
 
-**Example** combined with getType and with a nil check, the first <code>player:getVehicle()</code> is preventing a nil value from being check by <code>getType()</code> after the and:
+**Example** combined with getType and with a nil check, the first `player:getVehicle()` is preventing a nil value from being check by `getType()` after the and:
 
 ```lua
 if player:getVehicle() and player:getVehicle():getType() == "minecraft:pig" then
@@ -746,7 +750,10 @@ player:getBoundingBox()
 
 Returns whether or not this entity is currently on the ground
 
-:::cation Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the blockstate of the block directly underneath the player like so: <code>world.getBlockState(player:getPos():add(0,-0.1,0)):isSolidBlock()</code>
+:::caution
+
+Due to a glitch in Minecraft's code, this function is unreliable and will misfire in multiple situations, such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the block state of the block directly underneath the entity, like so: `world.getBlockState(player:getPos():add(0,-0.1,0)):isSolidBlock()`
+
 :::
 
 **Example**:

@@ -14,7 +14,7 @@ If the name you give isn't any of your scripts, it will error
 
 ### Examples
 
-#### Script in root folder
+#### Script in Root Folder
 
 <FileTreeRoot>
   <FileTreeNode label="MyCoolAvatar" icon="file/folder">
@@ -28,7 +28,7 @@ If the name you give isn't any of your scripts, it will error
 require("JimmyAnims")
 ```
 
-#### Script in another folder
+#### Script in Another Folder
 
 <FileTreeRoot>
   <FileTreeNode label="MyCoolAvatar" icon="file/folder">

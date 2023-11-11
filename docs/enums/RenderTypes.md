@@ -1,4 +1,4 @@
-Modelpart render types that can be applied via <code>setPrimaryRenderType(string)</code> or <code>setSecondaryRenderType(string)</code>
+Modelpart render types that can be applied via `setPrimaryRenderType(string)` or `setSecondaryRenderType(string)`
 
 There can only be one primary and secondary type applied to a cube at once, so you may get unwanted behavior if you make the primary render type `LINES` as all the pixels aside from the lines will vanish.
 

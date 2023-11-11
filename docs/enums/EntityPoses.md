@@ -1,4 +1,4 @@
-List of poses a living entity can have, as accessed by <code>:getPose()</code>
+List of poses a living entity can have, as accessed by `:getPose()`
 
 **Example**:
 

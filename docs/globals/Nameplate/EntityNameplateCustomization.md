@@ -12,7 +12,7 @@ nameplate.Entity:setText("Hi")
 
 ### getText() \{#getText}
 
-Gets the text of the nameplate as set by <code>setText</code>
+Gets the text of the nameplate as set by `setText`
 
 ```lua
 nameplate.Entity:getText()
@@ -112,7 +112,7 @@ nameplate.Entity:setLight(15, 15)
 
 ### getLight() \{#getLight}
 
-Gets the brightness of the nameplate text as set by <code>setLight</code>
+Gets the brightness of the nameplate text as set by `setLight`
 
 ```lua
 nameplate.Entity:getLight()
@@ -122,7 +122,7 @@ nameplate.Entity:getLight()
 
 ### setOutline(bool) \{#setOutline}
 
-Sets if the nameplate text should be outlined. Incompatible with <code>setShadow</code>
+Sets if the nameplate text should be outlined. Incompatible with `setShadow`
 
 ```lua
 nameplate.Entity:setOutline(true)
@@ -162,7 +162,7 @@ nameplate.Entity:setBackgroundColor(100 / 255, 100 / 255, 100 / 255)
 
 ### getBackgroundColor() \{#getBackgroundColor}
 
-Gets the color of the nameplate background as set by <code>setBackgroundColor</code>
+Gets the color of the nameplate background as set by `setBackgroundColor`
 
 ```lua
 nameplate.Entity:getBackgroundColor()
