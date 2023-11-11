@@ -37,7 +37,7 @@ const Image: FC<ImageProps> = ({ src, alt, className, width, children }) => {
   return (
     <figure
       className={
-        "flex flex-col m-0 overflow-hidden rounded-md shadow-sm dark:shadow-none mb-[var(--ifm-leading)] w-fit " +
+        "flex flex-col mx-0 mt-0 mb-[var(--ifm-leading)] overflow-hidden rounded-md shadow-sm dark:shadow-none w-fit " +
         (className ?? "")
       }
     >
