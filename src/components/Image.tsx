@@ -35,7 +35,12 @@ const Image: FC<ImageProps> = ({ src, alt, className, width, children }) => {
   };
 
   return (
-    <figure className={"flex flex-col m-0 overflow-hidden rounded-md shadow-sm dark:shadow-none mb-[var(--ifm-leading)] w-fit " + (className ?? "")}>
+    <figure
+      className={
+        "flex flex-col m-0 overflow-hidden rounded-md shadow-sm dark:shadow-none mb-[var(--ifm-leading)] w-fit " +
+        (className ?? "")
+      }
+    >
       <div className="flex bg-gray-100 dark:bg-slate-900">
         <img src={path} alt={alt} width={width} ref={attachZoom} />
       </div>
