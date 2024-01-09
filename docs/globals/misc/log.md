@@ -1,11 +1,11 @@
-A function that writes its arguments to chat
+This is an alias of [`print`](./print.md)
 
-Even though the syntax says only one argument, you can put as many as you want
+A function that writes its arguments to chat. Takes in a variable amount of arguments.
 
-All of them will print, and they'll be separated by a tab space
-
-Returns the string representation of all values
+Returns the string representation of all values joined with a single space.
 
 ```lua
-log()
+local variableA = 20,
+local variableB = "stringValue"
+log(variableA, variableB)
 ```

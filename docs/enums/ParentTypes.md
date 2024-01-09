@@ -201,7 +201,7 @@ This ParentType causes the ModelPart to replace the Vanilla Skull.
 -   #### `PORTRAIT` \{#PORTRAIT}
 
 This ParentType will change the player icon in the TAB LIST.<br/>
-Blockbench 0, 0, 0 is the bottom center and the valid area extends 4 units horizontally on each since and 8 units up.<br/>
+Blockbench 0, 0, 0 is the bottom center and the valid area extends 4 units horizontally on each side and 8 units up.<br/>
 
 ---
 

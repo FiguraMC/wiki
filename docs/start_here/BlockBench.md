@@ -31,7 +31,7 @@ The <code>Texture Size</code> field aids with UV calculation. In rendering, UVs 
 
 ### ParentTypes
 
-If the name of a <Emoji icon="blockbench/group"/> group begins with a specific string, Figura will apply special effects to that group. Some examples include <code>"Head"</code>, <code>"RightArm"</code>, <code>"World"</code>. These are called [ParentTypes](../enums/ModelPartParentTypes).
+If the name of a <Emoji icon="blockbench/group"/> group begins with a specific string, Figura will apply special effects to that group. Some examples include <code>"Head"</code>, <code>"RightArm"</code>, <code>"World"</code>. These are called [ParentTypes](../enums/ParentTypes).
 
 ### <code>Blank</code> Texture
 
@@ -91,7 +91,7 @@ Hold On Last Frame keeps the animation values from the end of the animation. The
 Loop sets the animation's time to 0, or to the animation's end if the animation is playing backwards.
 <br/><br/>
 
-<code>Override</code> determines if Mimic-type <a href="../enums/ModelPartParentTypes">ParentTypes</a> will apply their transformations while this animation is playing. It only effects ModelParts that have a keyframe in this animation. Default <code>false</code>
+<code>Override</code> determines if Mimic-type <a href="../enums/ParentTypes">ParentTypes</a> will apply their transformations while this animation is playing. It only effects ModelParts that have a keyframe in this animation. Default <code>false</code>
 <br/><br/>
 
 <code>Snapping</code> determines the snapping distance for keyframes. Holding ctrl while moving a keyframe ignores this. <b>Figura does not care about this value</b>.
