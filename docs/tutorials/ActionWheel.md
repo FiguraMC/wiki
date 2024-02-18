@@ -182,18 +182,21 @@ local toggleaction = myPage:newAction():title("disabled"):toggleTitle("enabled")
 local mainPage = action_wheel:newPage()
 local secondPage = action_wheel:newPage() -- make sure you save the pages to unique variables
 action_wheel:setPage(mainPage) -- this is setting the page you'll see when you first open the wheel to mainPage
-local toSecond = mainPage:newAction():title("Change To Second Page"):item("item_frame"):onLeftClick(function() -- this is a new action on mainPage. its purpose will be to swap to secondPage
+local toSecond = mainPage:newAction():title("Change To Second Page"):item("item_frame"):onLeftClick(function()
+    -- this is a new action on mainPage. its purpose will be to swap to secondPage
     -- this doesn't need to be pinged
     log("Swapped to the second page")
     action_wheel:setPage(secondPage)
 end)
 
-local toMain = secondPage:newAction():title("Change To Main Page"):item("glow_item_frame"):onLeftClick(function() -- this is a new action on secondPage. its purpose will be to swap to mainPage
+local toMain = secondPage:newAction():title("Change To Main Page"):item("glow_item_frame"):onLeftClick(function()
+    -- this is a new action on secondPage. its purpose will be to swap to mainPage
     log("Swapped to the main page")
     action_wheel:setPage(mainPage)
 end)
 
-local newAction = secondPage:newAction():title("Hello"):item("zombie_head"):onLeftClick(function() -- this is a second action on the second page just to show it can be done
+local newAction = secondPage:newAction():title("Hello"):item("zombie_head"):onLeftClick(function()
+    -- this is a second action on the second page just to show it can be done
     log("Hello World")
 end)
 ```
