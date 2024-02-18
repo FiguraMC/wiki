@@ -1,6 +1,6 @@
 Nameplate customization that applies to Entity (the nameplate above your head)
 
-### setText(string) {#setText}
+### `setText(string)` {#setText}
 
 Sets the text of the nameplate
 
@@ -10,7 +10,7 @@ nameplate.Entity:setText("Hi")
 
 ---
 
-### getText() {#getText}
+### `getText()` {#getText}
 
 Gets the text of the nameplate as set by <code>setText</code>
 
@@ -20,7 +20,7 @@ nameplate.Entity:getText()
 
 ---
 
-### setVisible(bool) {#setVisible}
+### `setVisible(bool)` {#setVisible}
 
 Sets the visibility of the nameplate
 
@@ -30,7 +30,7 @@ nameplate.Entity:setVisible(false)
 
 ---
 
-### isVisible() {#isVisible}
+### `isVisible()` {#isVisible}
 
 Gets the visibility of the nameplate
 
@@ -40,7 +40,7 @@ nameplate.Entity:isVisible()
 
 ---
 
-### setPos(Vector3) {#setPos}
+### `setPos(Vector3)` {#setPos}
 
 Sets the position of the nameplate in blocks, this is an offset of the pivot location so 0,0,0 is the pivot's location
 
@@ -50,7 +50,7 @@ nameplate.Entity:setPos(0, 1, 0)
 
 ---
 
-### getPos() {#getPos}
+### `getPos()` {#getPos}
 
 Gets the position of the nameplate
 
@@ -60,7 +60,7 @@ nameplate.Entity:getPos()
 
 ---
 
-### setScale(Vector3) {#setScale}
+### `setScale(Vector3)` {#setScale}
 
 Sets the scale of the nameplate
 
@@ -70,7 +70,7 @@ nameplate.Entity:setScale(2, 2, 2)
 
 ---
 
-### getScale() {#getScale}
+### `getScale()` {#getScale}
 
 Gets the scale of the nameplate
 
@@ -80,7 +80,7 @@ nameplate.Entity:getScale()
 
 ---
 
-### setPivot(Vector3) {#setPivot}
+### `setPivot(Vector3)` {#setPivot}
 
 Sets the pivot of the nameplate
 
@@ -90,7 +90,7 @@ nameplate.Entity:setPivot(0, 3, 0)
 
 ---
 
-### getPivot() {#getPivot}
+### `getPivot()` {#getPivot}
 
 Gets the pivot of the nameplate
 
@@ -100,7 +100,7 @@ nameplate.Entity:getPivot()
 
 ---
 
-### setLight(Vector2) {#setLight}
+### `setLight(Vector2)` {#setLight}
 
 Sets the brightness of the nameplate text, the first arg is blockLight and the second arg is skyLight
 
@@ -110,7 +110,7 @@ nameplate.Entity:setLight(15, 15)
 
 ---
 
-### getLight() {#getLight}
+### `getLight()` {#getLight}
 
 Gets the brightness of the nameplate text as set by <code>setLight</code>
 
@@ -120,7 +120,7 @@ nameplate.Entity:getLight()
 
 ---
 
-### setOutline(bool) {#setOutline}
+### `setOutline(bool)` {#setOutline}
 
 Sets if the nameplate text should be outlined. Incompatible with <code>setShadow</code>
 
@@ -130,7 +130,7 @@ nameplate.Entity:setOutline(true)
 
 ---
 
-### hasOutline() {#hasOutline}
+### `hasOutline()` {#hasOutline}
 
 Gets if the nameplate has an outline
 
@@ -140,7 +140,7 @@ nameplate.Entity:hasOutline()
 
 ---
 
-### setOutlineColor(Vector3) {#setOutlineColor}
+### `setOutlineColor(Vector3)` {#setOutlineColor}
 
 Sets the color used for the outline in rgb format and 0-1 ex: (100/255,100/255,100/255)
 
@@ -150,7 +150,7 @@ nameplate.Entity:setOutlineColor(100 / 255, 100 / 255, 100 / 255)
 
 ---
 
-### setBackgroundColor(Vector4) {#setBackgroundColor}
+### `setBackgroundColor(Vector4)` {#setBackgroundColor}
 
 Sets the color of the nameplate background, in rgba format and 0-1 ex: (100/255,100/255,100/255,100/255)
 
@@ -160,7 +160,7 @@ nameplate.Entity:setBackgroundColor(100 / 255, 100 / 255, 100 / 255)
 
 ---
 
-### getBackgroundColor() {#getBackgroundColor}
+### `getBackgroundColor()` {#getBackgroundColor}
 
 Gets the color of the nameplate background as set by <code>setBackgroundColor</code>
 
@@ -170,7 +170,7 @@ nameplate.Entity:getBackgroundColor()
 
 ---
 
-### setShadow(bool) {#setShadow}
+### `setShadow(bool)` {#setShadow}
 
 Sets if the nameplate text has a shadow
 
@@ -180,7 +180,7 @@ nameplate.Entity:setShadow(true)
 
 ---
 
-### hasShadow() {#hasShadow}
+### `hasShadow()` {#hasShadow}
 
 Gets if the nameplate has a shadow
 

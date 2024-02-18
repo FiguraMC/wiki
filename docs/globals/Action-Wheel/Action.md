@@ -27,7 +27,7 @@ Sets the title of the Action.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
 // highlight-next-line
     :setTitle('Click me!')
 ```
@@ -79,7 +79,7 @@ Sets an item to display on the Acton.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
 // highlight-next-line
     :setItem('minecraft:stone')
 ```
@@ -107,7 +107,7 @@ Sets the color of the Action. Takes a `Vector3` of rgb values or a number per va
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
 // highlight-next-line
     :setColor(255 / 255, 192 / 155, 203 / 255)
 ```
@@ -129,7 +129,7 @@ Gets the Action's color. Returns a `Vector3`.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
     :setColor(255 / 255, 192 / 155, 203 / 255)
 
 // highlight-next-line
@@ -200,7 +200,7 @@ Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb v
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
 // highlight-next-line
     :setHoverColor(255 / 255, 192 / 155, 203 / 255)
 ```
@@ -222,7 +222,7 @@ Gets the Action's hover color. Returns a `Vector3`.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
     :setHoverColor(255 / 255, 192 / 155, 203 / 255)
 
 // highlight-next-line
@@ -231,7 +231,7 @@ print(myAction:getHoverColor())
 
 ---
 
-### <code>setHoverTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> {#setTexture}
+### <code>setHoverTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> {#setHoverTexture}
 
 Sets the texture of the Action when it's hovered. All parameters other than `Texture` are optional.
 
@@ -259,12 +259,12 @@ Sets the texture of the Action when it's hovered. All parameters other than `Tex
 local myPage = action_wheel:new_page()
 
 -- basic
-myPage:newAction()
+local myAction = myPage:newAction()
 // highlight-next-line
     :setHoverTexture(textures['myTexture'])
 
 -- advanced
-myPage:newAction()
+local myAction = myPage:newAction()
 // highlight-next-line
     :setHoverTexture(textures['myTexture'], 16, 32, nil, nil, 2)
 
@@ -299,7 +299,7 @@ Sets the title of the Action when toggled.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
     :setTitle('Sit')
     :setOnToggle(pings.sit)
 // highlight-next-line
@@ -323,7 +323,7 @@ Gets the Action's title when toggled.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
 // highlight-next-line
     :setToggleTitle('Stand')
 
@@ -354,7 +354,7 @@ Sets an item to display on the Acton when toggled.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
     :setTitle('Sit')
     :setItem('spruce_stairs')
     :setOnToggle(pings.sit)
@@ -386,7 +386,7 @@ Sets the color of the Action when toggled. Takes a `Vector3` of rgb values or a 
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
     :setColor(255 / 255, 192 / 255, 203 / 255)
 // highlight-next-line
     :setToggleColor(0, 128 / 255, 128 / 255)
@@ -409,7 +409,7 @@ Gets the Action's color when toggled. Returns a `Vector3`.
 <!-- prettier-ignore -->
 ```lua
 local myPage = action_wheel:new_page()
-myPage:newAction()
+local myAction = myPage:newAction()
     :setToggleColor(255 / 255, 192 / 155, 203 / 255)
 
 // highlight-next-line
@@ -446,13 +446,13 @@ Sets the texture of the Action when toggled. All parameters other than `Texture`
 local myPage = action_wheel:new_page()
 
 -- basic
-myPage:newAction()
+local myAction = myPage:newAction()
     :setTexture(textures['myTexture'])
 // highlight-next-line
     :setToggleTexture(textures['myToggleTexture'])
 
 -- advanced
-myPage:newAction()
+local myAction = myPage:newAction()
     :setTexture(textures['myTexture'], 0, 32, nil, nil, 2)
 // highlight-next-line
     :setToggleTexture(textures['myTexture'], 16, 32, nil, nil, 2)
@@ -577,11 +577,12 @@ Sets the function that is executed when the left mouse button is clicked. Figura
 
 <!-- prettier-ignore -->
 ```lua
-myPage:newAction()
+function pings.example()
+    print('I left clicked this button!')
+end
+local myAction = myPage:newAction()
 // highlight-start
-    :setOnLeftClick(function()
-        print('I left clicked this button!')
-    end)
+    :setOnLeftClick(pings.example)
 // highlight-end
 ```
 
@@ -619,11 +620,13 @@ Sets the function that is executed when the right mouse button is clicked. Figur
 
 <!-- prettier-ignore -->
 ```lua
-myPage:newAction()
+function pings.example()
+    print('I right clicked this button!')
+end
+
+local myAction = myPage:newAction()
 // highlight-start
-    :setOnRightClick(function()
-        print('I right clicked this button!')
-    end)
+    :setOnRightClick(pings.example)
 // highlight-end
 ```
 
@@ -662,17 +665,17 @@ When the Action is assigned a function to the <code>toggle</code> field, it beco
 
 <!-- prettier-ignore -->
 ```lua
-function pings.setVisible(state)
+function pings.example(state)
     models:setVisible(state)
 end
 
-myPage:newAction()
+local myAction = myPage:newAction()
     :title("disabled")
     :toggleTitle("enabled")
     :item("red_wool")
     :toggleItem("green_wool")
     // highlight-next-line
-    :setOnToggle(pings.setVisible)
+    :setOnToggle(pings.example)
 ```
 
 ---
@@ -716,14 +719,17 @@ Unlike Toggle which gets executed when the Action is toggled on or off, `UnToggl
 
 <!-- prettier-ignore -->
 ```lua
-myPage:newAction()
-    :setOnToggle(function(bool)
-        print('This is always true: ', .. bool)
-    end)
+function pings.toggleexample(bool)
+    print('This is always true: ', .. bool)
+end
+
+function pings.unexample(bool)
+    print('This is always false: ' .. bool)
+end
+local myAction = myPage:newAction()
+    :setOnToggle(fpings.toggleexample)
 // highlight-start
-    :setOnUntoggle(function(bool)
-        print('This is always false: ' .. bool)
-    end)
+    :setOnUntoggle(pings.unexample)
 // highlight-end
 ```
 
@@ -762,10 +768,11 @@ This will execute when the mouse wheel scrolls while hovering over the Action. T
 
 <!-- prettier-ignore -->
 ```lua
-myPage:newAction()
+function pings.example(dir)
+    print("Scrolled in this direction: " .. dir)
+end
+local myAction = myPage:newAction()
 // highlight-start
-    :setOnScroll(function(dir)
-        print("Scrolled in this direction: " .. dir)
-    end)
+    :setOnScroll(pings.example)
 // highlight-end
 ```

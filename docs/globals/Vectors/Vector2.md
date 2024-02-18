@@ -10,7 +10,7 @@ local vec2 = vec(2, 5)
 
 ---
 
-### add(Vector2) {#add}
+### `add(Vector2)` {#add}
 
 Adds the given vector or values to this one, and returns self for chaining
 
@@ -22,7 +22,7 @@ vec2:add(2, 0.5)
 
 ---
 
-### length() {#length}
+### `length()` {#length}
 
 Returns the length of this vector
 
@@ -34,7 +34,7 @@ vec2:length()
 
 ---
 
-### floor() {#floor}
+### `floor()` {#floor}
 
 Returns a copy of this vector with its values rounded down
 
@@ -46,7 +46,7 @@ vec2:floor()
 
 ---
 
-### ceil() {#ceil}
+### `ceil()` {#ceil}
 
 Returns a copy of this vector with its values rounded up
 
@@ -58,7 +58,7 @@ vec2:ceil()
 
 ---
 
-### scale(Number) {#scale}
+### `scale(Number)` {#scale}
 
 Scales this vector by the given factor, and returns self for chaining
 
@@ -70,7 +70,7 @@ vec2:scale(2)
 
 ---
 
-### offset(Number) {#offset}
+### `offset(Number)` {#offset}
 
 Offsets this vector by the given factor, adding the factor to all components, and returns self for chaining
 
@@ -82,7 +82,7 @@ vec2:offset(2)
 
 ---
 
-### transform(Matrix2) {#transform}
+### `transform(Matrix2)` {#transform}
 
 Transforms this vector by the given matrix, and returns self for chaining
 
@@ -94,7 +94,7 @@ vec2:transform(matrices.mat2())
 
 ---
 
-### dot(Vector2) {#dot}
+### `dot(Vector2)` {#dot}
 
 Returns the dot product of this vector with the other
 
@@ -106,7 +106,7 @@ vec2:dot(vec(2, 2))
 
 ---
 
-### set(Vector2) {#set}
+### `set(Vector2)` {#set}
 
 Sets this vector to have the given values
 
@@ -122,7 +122,7 @@ vec2:set(10, 3)
 
 ---
 
-### copy() {#copy}
+### `copy()` {#copy}
 
 Creates and returns a copy of this vector
 
@@ -134,7 +134,7 @@ vec2:copy()
 
 ---
 
-### normalize() {#normalize}
+### `normalize()` {#normalize}
 
 Modifies this vector so that its length is 1, unless its length was originally 0
 
@@ -148,7 +148,7 @@ vec2:normalize()
 
 ---
 
-### reset() {#reset}
+### `reset()` {#reset}
 
 Resets this vector back to being all zeroes, and returns itself for chaining
 
@@ -160,7 +160,7 @@ vec2:reset()
 
 ---
 
-### reduce(Vector2) {#reduce}
+### `reduce(Vector2)` {#reduce}
 
 Reduces this vector modulo the given vector or values, and returns self for chaining
 
@@ -172,7 +172,7 @@ vec2:reduce(1, 0.5)
 
 ---
 
-### normalized() {#normalized}
+### `normalized()` {#normalized}
 
 Returns a copy of this vector with length 1, unless its length was originally 0
 
@@ -184,7 +184,7 @@ vec2:normalized()
 
 ---
 
-### sub(Vector2) {#sub}
+### `sub(Vector2)` {#sub}
 
 Subtracts the given vector or values from this one, and returns self for chaining
 
@@ -196,7 +196,7 @@ vec2:sub(1, 0.5)
 
 ---
 
-### mul(Vector2) {#mul}
+### `mul(Vector2)` {#mul}
 
 Multiplies the given vector or values into this one, and returns self for chaining
 
@@ -208,7 +208,7 @@ vec2:mul(2, 3)
 
 ---
 
-### div(Vector2) {#div}
+### `div(Vector2)` {#div}
 
 Divides this vector by the given vector or values, and returns self for chaining
 
@@ -220,7 +220,7 @@ vec2:mul(2, 3)
 
 ---
 
-### applyFunc(func: fun(value: number, index: number): number): Vector2 {#applyFunc}
+### `applyFunc(func: fun(value: number, index: number): number): Vector2` {#applyFunc}
 
 Calls the given function on each element of this vector, and sets the values of the vector to the returns
 
@@ -241,7 +241,7 @@ end)
 
 ---
 
-### toRad() {#toRad}
+### `toRad()` {#toRad}
 
 Returns a copy of this vector, in radians
 
@@ -253,7 +253,7 @@ vec2:toRad()
 
 ---
 
-### toDeg() {#toDeg}
+### `toDeg()` {#toDeg}
 
 Returns a copy of this vector, in degrees
 
@@ -265,7 +265,7 @@ vec2:toDeg()
 
 ---
 
-### clampLength(Number,Number) {#clampLength}
+### `clampLength(Number,Number)` {#clampLength}
 
 Modifies this vector so that its length is between minLength and maxLength
 
@@ -281,7 +281,7 @@ vec2:clampLength(1, 5)
 
 ---
 
-### augmented(Number) {#augmented}
+### `augmented(Number)` {#augmented}
 
 Returns the augmented form of this vector
 
@@ -297,7 +297,7 @@ vec2:augmented(4)
 
 ---
 
-### unpack() {#unpack}
+### `unpack()` {#unpack}
 
 Returns each of this vector values as argument
 
@@ -309,7 +309,7 @@ vec2:unpack()
 
 ---
 
-### clamped(Number,Number) {#clamped}
+### `clamped(Number,Number)` {#clamped}
 
 Returns a modified copy of this vector, with its length clamped from minLength to maxLength
 
@@ -323,7 +323,7 @@ vec2:clamped(1, 3)
 
 ---
 
-### lengthSquared() {#lengthSquared}
+### `lengthSquared()` {#lengthSquared}
 
 Returns the length of this vector squared
 
@@ -337,7 +337,7 @@ vec2:lengthSquared()
 
 ---
 
-### x {#x}
+### `x` {#x}
 
 The first coordinate of this vector
 
@@ -351,7 +351,7 @@ vec2.x
 
 ---
 
-### y {#y}
+### `y` {#y}
 
 The second coordinate of this vector
 
