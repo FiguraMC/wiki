@@ -106,7 +106,7 @@ end
 
 ## Length of Table Array
 
-You can use the <code>#</code> operator to get the length of a table array. For tables with non-numeric indexes, you have to use <code>pairs</code> and calculate the length yourself, though the "length" of that kind of table isnt really useful. This follows the same rules as <code>ipairs</code> in the way that the table's length is every numeric index until one returns <code>nil</code>. So <code>#{1,2,3,4}</code> will return <code>4</code>, and <code>#{1,2,nil,4}</code> will return <code>2</code>.<br/>
+You can use the <code>#</code> operator to get the length of a table array. For tables with non-numeric indexes, you have to use <code>pairs</code> and calculate the length yourself, though the "length" of that kind of table isnt really useful. This follows the same rules as <code>ipairs</code> in the way that the table's length is every numeric index until one returns <code>nil</code>. So <code>#\{1,2,3,4}</code> will return <code>4</code>, and <code>#\{1,2,nil,4}</code> will return <code>2</code>.<br/>
 As an example, <code>ipairs</code> is pretty much just this.
 
 ```lua

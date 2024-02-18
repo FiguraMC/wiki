@@ -8,7 +8,7 @@ local myPage = action_wheel:newPage()
 
 ---
 
-### `getTitle` {#getTitle}
+### `getTitle` \{#getTitle}
 
 Returns the title of this Page
 
@@ -22,7 +22,7 @@ myPage:getTitle()
 
 For more information on actions see [Action](Action)
 
-### `newAction(int)` {#newAction}
+### `newAction(int)` \{#newAction}
 
 Adds a new Action on the selected Page's index
 
@@ -36,7 +36,7 @@ local myAction = myPage:newAction()
 
 ---
 
-### `getAction(int)` {#getAction}
+### `getAction(int)` \{#getAction}
 
 Gets an Action from the Page's given index
 
@@ -48,7 +48,7 @@ myPage:getAction(1)
 
 ---
 
-### `getActions(int)` {#getActions}
+### `getActions(int)` \{#getActions}
 
 Gets a table of the Actions shifted by the given number
 
@@ -64,7 +64,7 @@ myPage:getActions()
 
 ---
 
-### `setAction(int,action)` {#setAction}
+### `setAction(int,action)` \{#setAction}
 
 Sets an Action in the Page's given index
 
@@ -79,7 +79,7 @@ myPage:setAction(-1, myAction)
 
 ## Slot
 
-### `setSlotsShift(int)` {#setSlotsShift}
+### `setSlotsShift(int)` \{#setSlotsShift}
 
 Sets this page's current slots shift
 
@@ -93,7 +93,7 @@ myPage:setSlotsShift(1)
 
 ---
 
-### `getSlotsShift()` {#getSlotsShift}
+### `getSlotsShift()` \{#getSlotsShift}
 
 Gets this page's current slots shift
 
@@ -107,7 +107,7 @@ myPage:getSlotsShift()
 
 ---
 
-### `setKeepSlots(bool)` {#setKeepSlots}
+### `setKeepSlots(bool)` \{#setKeepSlots}
 
 Gets this page's current slots shift
 
@@ -121,7 +121,7 @@ myPage:setKeepSlots(true)
 
 ---
 
-### `shouldKeepSlots()` {#shouldKeepSlots}
+### `shouldKeepSlots()` \{#shouldKeepSlots}
 
 Gets this page's current slots shift
 

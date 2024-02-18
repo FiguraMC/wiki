@@ -2,7 +2,7 @@ The global instance of AvatarAPI
 
 ## Metadata
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Gets the name string of this avatar
 
@@ -14,7 +14,7 @@ avatar:getName()
 
 ---
 
-### `getAuthors()` {#getAuthors}
+### `getAuthors()` \{#getAuthors}
 
 Gets the authors string of this avatar
 
@@ -26,7 +26,7 @@ avatar:getAuthors()
 
 ---
 
-### `getVersion()` {#getVersion}
+### `getVersion()` \{#getVersion}
 
 Gets the version string of this avatar
 
@@ -38,7 +38,7 @@ avatar:getVersion()
 
 ---
 
-### `hasTexture()` {#hasTexture}
+### `hasTexture()` \{#hasTexture}
 
 Gets whether or not this avatar has a texture
 
@@ -50,7 +50,7 @@ avatar:hasTexture()
 
 ---
 
-### `setColor(Vector3)` {#setColor}
+### `setColor(Vector3)` \{#setColor}
 
 Sets the current color string of your avatar, used as your avatar theme
 
@@ -64,7 +64,7 @@ avatar:setColor(50 / 255, 200 / 255, 200 / 255)
 
 ---
 
-### `getColor()` {#getColor}
+### `getColor()` \{#getColor}
 
 Gets the current color string of your avatar, used as your avatar theme
 
@@ -76,7 +76,7 @@ avatar:getColor()
 
 ## Misc
 
-### `store(string,any)` {#store}
+### `store(string,any)` \{#store}
 
 Store the given key-value pair inside your current avatar's metadata
 
@@ -92,7 +92,7 @@ avatar:store("storing", true)
 
 ---
 
-### `getSize()` {#getSize}
+### `getSize()` \{#getSize}
 
 Gets the file size of this avatar in bytes
 
@@ -104,7 +104,7 @@ avatar:getSize()
 
 ---
 
-### `getEntityName()` {#getEntityName}
+### `getEntityName()` \{#getEntityName}
 
 Attempts to get the entity name of this avatar, defaulting to the avatar name
 
@@ -116,7 +116,7 @@ avatar:getEntityName()
 
 ---
 
-### `getUUID()` {#getUUID}
+### `getUUID()` \{#getUUID}
 
 Returns the UUID of the owner of this avatar
 
@@ -126,7 +126,7 @@ Returns the UUID of the owner of this avatar
 avatar:getUUID()
 ```
 
-### `getNBT()` {#getNBT}
+### `getNBT()` \{#getNBT}
 
 Gets the NBT data this avatar is stored as
 
@@ -136,7 +136,7 @@ Gets the NBT data this avatar is stored as
 avatar:getNBT()
 ```
 
-### `hasScriptError()` {#hasScriptError}
+### `hasScriptError()` \{#hasScriptError}
 
 Gets whether this script currently has stopped due to an error (kinda useless lol)
 
@@ -150,7 +150,7 @@ avatar:hasScriptError()
 
 ## Permissions
 
-### `getPermissionLevel()` {#getPermissionLevel}
+### `getPermissionLevel()` \{#getPermissionLevel}
 
 Returns this avatar current permission level
 
@@ -162,7 +162,7 @@ avatar:getPermissionLevel()
 
 ---
 
-### `getComplexity()` {#getComplexity}
+### `getComplexity()` \{#getComplexity}
 
 Gets the current complexity of this avatar
 
@@ -174,7 +174,7 @@ avatar:getComplexity()
 
 ---
 
-### `getMaxComplexity()` {#getMaxComplexity}
+### `getMaxComplexity()` \{#getMaxComplexity}
 
 Gets the maximum allowed model complexity (number of faces) as permitted by the viewer
 
@@ -186,7 +186,7 @@ avatar:getMaxComplexity()
 
 ---
 
-### `getInitCount()` {#getInitCount}
+### `getInitCount()` \{#getInitCount}
 
 Gets the number of initialization instructions of this avatar
 
@@ -198,7 +198,7 @@ avatar:getInitCount()
 
 ---
 
-### `getMaxInitCount()` {#getMaxInitCount}
+### `getMaxInitCount()` \{#getMaxInitCount}
 
 Gets the maximum allowed instructions during initialization as permitted by the viewer
 
@@ -210,7 +210,7 @@ avatar:getMaxInitCount()
 
 ---
 
-### `getEntityInitCount()` {#getEntityInitCount}
+### `getEntityInitCount()` \{#getEntityInitCount}
 
 Gets the number of events.ENTITY_INIT instructions of this avatar
 
@@ -222,7 +222,7 @@ avatar:getEntityInitCount()
 
 ---
 
-### `getTickCount()` {#getTickCount}
+### `getTickCount()` \{#getTickCount}
 
 Gets the number of events.TICK instructions of this avatar last tick
 
@@ -234,7 +234,7 @@ avatar:getTickCount()
 
 ---
 
-### `getMaxTickCount()` {#getMaxTickCount}
+### `getMaxTickCount()` \{#getMaxTickCount}
 
 Gets the maximum allowed instructions in events.TICK as permitted by the viewer
 
@@ -246,7 +246,7 @@ avatar:getMaxTickCount()
 
 ---
 
-### `getWorldTickCount()` {#getWorldTickCount}
+### `getWorldTickCount()` \{#getWorldTickCount}
 
 Gets the number of events.WORLD_TICK instructions of this avatar last tick
 
@@ -258,7 +258,7 @@ avatar:getWorldTickCount()
 
 ---
 
-### `getMaxWorldTickCount()` {#getMaxWorldTickCount}
+### `getMaxWorldTickCount()` \{#getMaxWorldTickCount}
 
 Gets the maximum allowed instructions in events.WORLD_TICK as permitted by the viewer
 
@@ -270,7 +270,7 @@ avatar:getMaxWorldTickCount()
 
 ---
 
-### `getRenderCount()` {#getRenderCount}
+### `getRenderCount()` \{#getRenderCount}
 
 Gets the number of events.RENDER and events.POST_RENDER instructions of this avatar last frame
 
@@ -282,7 +282,7 @@ avatar:getRenderCount()
 
 ---
 
-### `getMaxRenderCount()` {#getMaxRenderCount}
+### `getMaxRenderCount()` \{#getMaxRenderCount}
 
 Gets the maximum allowed instructions in events.RENDER and Events.POST_RENDER as permitted by the viewer
 
@@ -294,7 +294,7 @@ avatar:getMaxRenderCount()
 
 ---
 
-### `getWorldRenderCount()` {#getWorldRenderCount}
+### `getWorldRenderCount()` \{#getWorldRenderCount}
 
 Gets the number of events.WORLD_RENDER and events.POST_WORLD_RENDER instructions of this avatar last frame
 **Example**:
@@ -305,7 +305,7 @@ avatar:getWorldRenderCount()
 
 ---
 
-### `getMaxWorldRenderCount()` {#getMaxWorldRenderCount}
+### `getMaxWorldRenderCount()` \{#getMaxWorldRenderCount}
 
 Gets the maximum allowed instructions in events.WORLD_RENDER and events.POST_WORLD_RENDER as permitted by the viewer
 
@@ -317,7 +317,7 @@ avatar:getMaxWorldRenderCount()
 
 ---
 
-### `getRemainingSounds()` {#getRemainingSounds}
+### `getRemainingSounds()` \{#getRemainingSounds}
 
 Gets the remaining amount of sound this avatar can play
 
@@ -329,7 +329,7 @@ avatar:getRemainingSounds()
 
 ---
 
-### `getMaxSounds()` {#getMaxSounds}
+### `getMaxSounds()` \{#getMaxSounds}
 
 Gets the maximum allowed number of sounds as permitted by the viewer
 
@@ -341,7 +341,7 @@ avatar:getMaxSounds()
 
 ---
 
-### `getAnimationCount()` {#getAnimationCount}
+### `getAnimationCount()` \{#getAnimationCount}
 
 Gets the number of Lua instructions used within animations
 
@@ -353,7 +353,7 @@ avatar:getAnimationCount()
 
 ---
 
-### `getMaxAnimationCount()` {#getMaxAnimationCount}
+### `getMaxAnimationCount()` \{#getMaxAnimationCount}
 
 Gets the maximum allowed Lua instructions in animations as permitted by the viewer
 
@@ -365,7 +365,7 @@ avatar:getMaxAnimationCount()
 
 ---
 
-### `getAnimationComplexity()` {#getAnimationComplexity}
+### `getAnimationComplexity()` \{#getAnimationComplexity}
 
 Gets the current animation complexity of this avatar
 
@@ -377,7 +377,7 @@ avatar:getAnimationComplexity()
 
 ---
 
-### `getMaxAnimationComplexity()` {#getMaxAnimationComplexity}
+### `getMaxAnimationComplexity()` \{#getMaxAnimationComplexity}
 
 Gets the maximum allowed animation complexity (number of playing channels) as permitted by the viewer
 
@@ -389,7 +389,7 @@ avatar:getMaxAnimationComplexity()
 
 ---
 
-### `getMaxTextureSize()` {#getMaxTextureSize}
+### `getMaxTextureSize()` \{#getMaxTextureSize}
 
 Gets the max dimensions of custom textures that this avatar can create
 
@@ -401,7 +401,7 @@ avatar:getMaxTextureSize()
 
 ---
 
-### `getRemainingParticles()` {#getRemainingParticles}
+### `getRemainingParticles()` \{#getRemainingParticles}
 
 Gets the remaining amount of particles this avatar can summon
 
@@ -413,7 +413,7 @@ avatar:getRemainingParticles()
 
 ---
 
-### `getMaxParticles()` {#getMaxParticles}
+### `getMaxParticles()` \{#getMaxParticles}
 
 Gets the maximum allowed number of particles as permitted by the viewer
 
@@ -425,7 +425,7 @@ avatar:getMaxParticles()
 
 ---
 
-### `getCurrentInstructions()` {#getCurrentInstructions}
+### `getCurrentInstructions()` \{#getCurrentInstructions}
 
 Gets the current number of instructions that have been executed by your avatar
 
@@ -439,7 +439,7 @@ avatar:getCurrentInstructions()
 
 ---
 
-### `canEditVanillaModel()` {#canEditVanillaModel}
+### `canEditVanillaModel()` \{#canEditVanillaModel}
 
 Gets whether or not the viewer allows your avatar to edit the vanilla models
 
@@ -451,7 +451,7 @@ avatar:canEditVanillaModel()
 
 ---
 
-### `canRenderOffscreen()` {#canRenderOffscreen}
+### `canRenderOffscreen()` \{#canRenderOffscreen}
 
 Gets whether or not the viewer allows you to render the avatar off-screen
 
@@ -463,7 +463,7 @@ avatar:canRenderOffscreen()
 
 ---
 
-### `canHaveCustomSkull()` {#canHaveCustomSkull}
+### `canHaveCustomSkull()` \{#canHaveCustomSkull}
 
 Gets whether or not your avatar is allowed to have custom player skull
 
@@ -475,7 +475,7 @@ avatar:canHaveCustomSkull()
 
 ---
 
-### `canUseCustomSounds()` {#canUseCustomSounds}
+### `canUseCustomSounds()` \{#canUseCustomSounds}
 
 Gets whether or not the viewer allows your avatar to play custom sounds
 
@@ -487,7 +487,7 @@ avatar:canUseCustomSounds()
 
 ---
 
-### `canEditNameplate()` {#canEditNameplate}
+### `canEditNameplate()` \{#canEditNameplate}
 
 Gets whether or not the viewer allows your avatar to edit your nameplate
 
@@ -499,7 +499,7 @@ avatar:canEditNameplate()
 
 ---
 
-### `getVolume()` {#getVolume}
+### `getVolume()` \{#getVolume}
 
 Gets the maximum allowed volume of this avatar as permitted by the viewer
 

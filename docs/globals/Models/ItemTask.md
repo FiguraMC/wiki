@@ -8,7 +8,7 @@ local myItem = models:newItem("myCoolItemsName")
 
 ---
 
-### <code>setItem(item: [ItemStack](../World/ItemStack)): [ItemTask](./ItemTask)</code> {#setItem}
+### <code>setItem(item: [ItemStack](../World/ItemStack)): [ItemTask](./ItemTask)</code> \{#setItem}
 
 Sets the Item for this task render
 
@@ -20,7 +20,7 @@ myItem:setItem("slime_ball")
 
 ---
 
-### <code>setDisplayMode(displayMode: [DisplayMode](../../enums/ItemDisplayModes)): [ItemTask](./ItemTask)</code> {#setDisplayMode}
+### <code>setDisplayMode(displayMode: [DisplayMode](../../enums/ItemDisplayModes)): [ItemTask](./ItemTask)</code> \{#setDisplayMode}
 
 Sets the item [display mode](../../enums/ItemDisplayModes) for this task
 
@@ -32,7 +32,7 @@ myItem:setDisplayMode("GROUND")
 
 ---
 
-### <code>getDisplayMode(): [DisplayMode](../../enums/ItemDisplayModes)</code> {#getDisplayMode}
+### <code>getDisplayMode(): [DisplayMode](../../enums/ItemDisplayModes)</code> \{#getDisplayMode}
 
 Gets this task item [display mode](../../enums/ItemDisplayModes)
 
@@ -44,7 +44,7 @@ myItem:getDisplayMode()
 
 ---
 
-### <code>remove(): [ItemTask](./ItemTask)</code> {#remove}
+### <code>remove(): [ItemTask](./ItemTask)</code> \{#remove}
 
 Removes this item task from the parent model part
 
@@ -56,7 +56,7 @@ myItem:remove()
 
 ---
 
-### <code>getName(): string</code> {#getName}
+### <code>getName(): string</code> \{#getName}
 
 Get this task's name
 
@@ -68,7 +68,7 @@ myItem:getName()
 
 ---
 
-### <code>setVisible(state: boolean): [ItemTask](./ItemTask)</code> {#setVisible}
+### <code>setVisible(state: boolean): [ItemTask](./ItemTask)</code> \{#setVisible}
 
 Sets whether or not this task should be rendered
 
@@ -83,7 +83,7 @@ end)
 
 ---
 
-### <code>isVisible(): boolean</code> {#isVisible}
+### <code>isVisible(): boolean</code> \{#isVisible}
 
 Checks if this task is visible
 
@@ -97,7 +97,7 @@ end
 
 ---
 
-### <code>setLight(blockLight: number?, skyLight: number?): [ItemTask](./ItemTask)</code> {#setLight}
+### <code>setLight(blockLight: number?, skyLight: number?): [ItemTask](./ItemTask)</code> \{#setLight}
 
 Sets the light override value of this task
 Values are given from 0 to 15, indicating the block light and sky light levels you want to use
@@ -113,7 +113,7 @@ myItem:setLight(blockLight, skyLight)
 
 ---
 
-### <code>getLight(): [Vector2](../Vectors/Vector2)</code> {#getLight}
+### <code>getLight(): [Vector2](../Vectors/Vector2)</code> \{#getLight}
 
 Returns the light override value of this task
 
@@ -125,7 +125,7 @@ myItem:getLight()
 
 ---
 
-### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [ItemTask](./ItemTask)</code> {#setOverlay}
+### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [ItemTask](./ItemTask)</code> \{#setOverlay}
 
 Sets the overlay override value of this task
 Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
@@ -140,7 +140,7 @@ myItem:setOverlay(hurt and 0 or nil, 1)
 
 ---
 
-### <code>getOverlay(): [Vector2](../Vectors/Vector2)</code> {#getOverlay}
+### <code>getOverlay(): [Vector2](../Vectors/Vector2)</code> \{#getOverlay}
 
 Returns the overlay override value of this task
 
@@ -152,7 +152,7 @@ myItem:getOverlay()
 
 ---
 
-### <code>setPos(pos: [Vector3](../Vectors/Vector3)): [ItemTask](./ItemTask)</code> {#setPos}
+### <code>setPos(pos: [Vector3](../Vectors/Vector3)): [ItemTask](./ItemTask)</code> \{#setPos}
 
 Sets the position of the task, relative with its attached part
 Uses model coordinates
@@ -165,7 +165,7 @@ myItem:setPos(0, 16, 0)
 
 ---
 
-### <code>getPos(): [Vector3](../Vectors/Vector3)</code> {#getPos}
+### <code>getPos(): [Vector3](../Vectors/Vector3)</code> \{#getPos}
 
 Gets this task position
 
@@ -177,7 +177,7 @@ myItem:getPos()
 
 ---
 
-### <code>setRot(rot: [Vector3](../Vectors/Vector3)): [ItemTask](./ItemTask)</code> {#setRot}
+### <code>setRot(rot: [Vector3](../Vectors/Vector3)): [ItemTask](./ItemTask)</code> \{#setRot}
 
 Sets the rotation of the task, relative with its attached part
 
@@ -189,7 +189,7 @@ myItem:setRot(0, 45, 22.5)
 
 ---
 
-### <code>getRot(): [Vector3](../Vectors/Vector3)</code> {#getRot}
+### <code>getRot(): [Vector3](../Vectors/Vector3)</code> \{#getRot}
 
 Gets this task rotation
 
@@ -201,7 +201,7 @@ myItem:getRot()
 
 ---
 
-### <code>setScale(scale: [Vector3](../Vectors/Vector3)): [ItemTask](./ItemTask)</code> {#setScale}
+### <code>setScale(scale: [Vector3](../Vectors/Vector3)): [ItemTask](./ItemTask)</code> \{#setScale}
 
 Sets the scale of the task, relative with its attached part
 
@@ -213,7 +213,7 @@ myItem:setScale(0.4, 0.4, 0.4) -- myItem:setScale(0.4) also works
 
 ---
 
-### <code>getScale(): [ItemTask](./ItemTask)</code> {#getScale}
+### <code>getScale(): [ItemTask](./ItemTask)</code> \{#getScale}
 
 Gets this task scale
 
@@ -225,7 +225,7 @@ myItem:getScale()
 
 ---
 
-### <code>setMatrix(matrix: [Matrix4](../Matrices/Matrix4)): [ItemTask](./ItemTask)</code> {#setMatrix}
+### <code>setMatrix(matrix: [Matrix4](../Matrices/Matrix4)): [ItemTask](./ItemTask)</code> \{#setMatrix}
 
 Sets the given matrix as the position matrix for this item task
 The normal matrix is automatically calculated as the inverse transpose of this matrix
@@ -240,7 +240,7 @@ myItem:setMatrix(matrices.mat4())
 
 ---
 
-### <code>getPositionMatrix(): [Matrix4](../Matrices/Matrix4)</code> {#getPositionMatrix}
+### <code>getPositionMatrix(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrix}
 
 Recalculates the matrix for this item task, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -252,7 +252,7 @@ myItem:getPositionMatrix()
 
 ---
 
-### <code>getPositionMatrixRaw(): [Matrix4](../Matrices/Matrix4)</code> {#getPositionMatrixRaw}
+### <code>getPositionMatrixRaw(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrixRaw}
 
 Returns the position matrix for this item task
 The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
@@ -265,7 +265,7 @@ myItem:getPositionMatrixRaw()
 
 ---
 
-### <code>getNormalMatrix(): [Matrix3](../Matrices/Matrix3)</code> {#getNormalMatrix}
+### <code>getNormalMatrix(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrix}
 
 Recalculates the normal matrix for this item task, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -277,7 +277,7 @@ myItem:getNormalMatrix()
 
 ---
 
-### <code>getNormalMatrixRaw(): [Matrix3](../Matrices/Matrix3)</code> {#getNormalMatrixRaw}
+### <code>getNormalMatrixRaw(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrixRaw}
 
 Returns the normal matrix for this item task
 The Raw version of the function is different in that it doesn't recalculate the matrix before returning it

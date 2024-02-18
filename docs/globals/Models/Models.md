@@ -2,7 +2,7 @@ The global instance of the Avatar Models and its subtypes
 
 ## Transformations
 
-### <code>setVisible(bool)</code> {#setVisible}
+### <code>setVisible(bool)</code> \{#setVisible}
 
 Sets this part to be visible or invisible
 
@@ -16,7 +16,7 @@ models:setVisible(false)
 
 ---
 
-### <code>getVisible()</code> {#getVisible}
+### <code>getVisible()</code> \{#getVisible}
 
 Gets whether or not this model part is visible
 
@@ -30,7 +30,7 @@ models:getVisible()
 
 ---
 
-### <code>setRot(Vector3)</code> {#setRot}
+### <code>setRot(Vector3)</code> \{#setRot}
 
 Sets the absolute rotation for this part
 
@@ -48,7 +48,7 @@ models:setRot(0, 90, 0)
 
 ---
 
-### <code>getRot()</code> {#getRot}
+### <code>getRot()</code> \{#getRot}
 
 Gets the rotation of the model part, including its rotation in blockbench
 
@@ -62,7 +62,7 @@ models:setRot()
 
 ---
 
-### <code>setPos(Vector3)</code> {#setPos}
+### <code>setPos(Vector3)</code> \{#setPos}
 
 Sets the position offset for this part from its blockbench position
 
@@ -76,7 +76,7 @@ models:setPos(0, 5, 0)
 
 ---
 
-### <code>getPos()</code> {#getPos}
+### <code>getPos()</code> \{#getPos}
 
 Gets the position of the model part, as an offset from its position in blockbench
 
@@ -90,7 +90,7 @@ models:getPos()
 
 ---
 
-### <code>setScale(Vector3)</code> {#setScale}
+### <code>setScale(Vector3)</code> \{#setScale}
 
 Sets the scale factor for this part
 
@@ -104,7 +104,7 @@ models:setScale(2, 2, 2)
 
 ---
 
-### <code>getScale()</code> {#getScale}
+### <code>getScale()</code> \{#getScale}
 
 Gets the scale of the model part, as a multiple of its blockbench size
 
@@ -118,7 +118,7 @@ models:getScale()
 
 ---
 
-### <code>setPivot(Vector3)</code> {#setPivot}
+### <code>setPivot(Vector3)</code> \{#setPivot}
 
 Sets the absolute pivot for this part
 
@@ -134,7 +134,7 @@ models:setPivot(0, 5, 0)
 
 ---
 
-### <code>getPivot()</code> {#getPivot}
+### <code>getPivot()</code> \{#getPivot}
 
 Gets the pivot point of the model part, including its pivot in blockbench
 
@@ -148,7 +148,7 @@ models:getPivot()
 
 ---
 
-### <code>setOffsetRot(Vector3)</code> {#setOffsetRot}
+### <code>setOffsetRot(Vector3)</code> \{#setOffsetRot}
 
 Sets the offset rotation for this part
 
@@ -166,7 +166,7 @@ models:setOffsetRot(0, 90, 0)
 
 ---
 
-### <code>getOffsetRot()</code> {#getOffsetRot}
+### <code>getOffsetRot()</code> \{#getOffsetRot}
 
 Gets the offset rotation of the model part, offset from its rotation in blockbench
 
@@ -180,7 +180,7 @@ models:getOffsetRot()
 
 ---
 
-### <code>setOffsetScale(Vector3)</code> {#setOffsetScale}
+### <code>setOffsetScale(Vector3)</code> \{#setOffsetScale}
 
 Sets the offset scale for this part
 
@@ -196,7 +196,7 @@ models:setOffsetScale(2, 2, 2)
 
 ---
 
-### <code>getOffsetScale()</code> {#getOffsetScale}
+### <code>getOffsetScale()</code> \{#getOffsetScale}
 
 Gets the offset scale of the model part, offset from its default scale
 
@@ -210,7 +210,7 @@ models:getOffsetScale()
 
 ---
 
-### <code>setOffsetPivot(Vector3)</code> {#setOffsetPivot}
+### <code>setOffsetPivot(Vector3)</code> \{#setOffsetPivot}
 
 Sets the offset pivot point for this part
 
@@ -226,7 +226,7 @@ models:setOffsetPivot(0, 5, 0)
 
 ---
 
-### <code>getOffsetPivot()</code> {#getOffsetPivot}
+### <code>getOffsetPivot()</code> \{#getOffsetPivot}
 
 Gets the offset pivot of the model part, offset from its pivot in blockbench
 
@@ -240,7 +240,7 @@ models:getOffsetPivot()
 
 ---
 
-### <code>setMatrix(Matrix4)</code> {#setMatrix}
+### <code>setMatrix(Matrix4)</code> \{#setMatrix}
 
 Sets the given matrix as the position matrix for this model part
 
@@ -258,7 +258,7 @@ models:setMatrix(matrices.mat4())
 
 ---
 
-### <code>getPositionMatrix()</code> {#getPositionMatrix}
+### <code>getPositionMatrix()</code> \{#getPositionMatrix}
 
 Recalculates the matrix for this model part, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -270,7 +270,7 @@ models:getPositionMatrix()
 
 ---
 
-### <code>getPositionMatrixRaw()</code> {#getPositionMatrixRaw}
+### <code>getPositionMatrixRaw()</code> \{#getPositionMatrixRaw}
 
 Returns the position matrix for this model part
 
@@ -284,7 +284,7 @@ models:getPositionMatrixRaw()
 
 ---
 
-### <code>getNormalMatrix()</code> {#getNormalMatrix}
+### <code>getNormalMatrix()</code> \{#getNormalMatrix}
 
 Recalculates the normal matrix for this model part, based on its current position, rotation, scale, and pivot, then returns this matrix
 
@@ -296,7 +296,7 @@ models:getNormalMatrix()
 
 ---
 
-### <code>getNormalMatrixRaw()</code> {#getNormalMatrixRaw}
+### <code>getNormalMatrixRaw()</code> \{#getNormalMatrixRaw}
 
 Returns the normal matrix for this model part
 
@@ -312,7 +312,7 @@ models:getNormalMatrixRaw()
 
 ## Part Information
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 The name of this model part
 
@@ -324,7 +324,7 @@ models:getName()
 
 ---
 
-### `getType()` {#getType}
+### `getType()` \{#getType}
 
 Returns whether this part is a "GROUP", a "CUBE", or a "MESH"
 **Example**
@@ -335,7 +335,7 @@ models:getType()
 
 ---
 
-### <code>getTrueRot()</code> {#getTrueRot}
+### <code>getTrueRot()</code> \{#getTrueRot}
 
 Gets the true rotation of this model part, which is a sum of the rotation, the offset rotation and the animation position
 
@@ -347,7 +347,7 @@ models:getTrueRot()
 
 ---
 
-### <code>getTruePos()</code> {#getTruePos}
+### <code>getTruePos()</code> \{#getTruePos}
 
 Gets the true position of this model part, which is a sum of the position and the animation position
 
@@ -359,7 +359,7 @@ models:getTruePos()
 
 ---
 
-### <code>getTrueScale()</code> {#getTrueScale}
+### <code>getTrueScale()</code> \{#getTrueScale}
 
 Gets the true scale of this model part, which is a sum of the scale, the offset scale and the animation scale
 
@@ -371,7 +371,7 @@ models:getTrueScale()
 
 ---
 
-### <code>getTruePivot()</code> {#getTruePivot}
+### <code>getTruePivot()</code> \{#getTruePivot}
 
 Gets the true pivot of this model part, which is a sum of the pivot and the offset pivot
 
@@ -383,7 +383,7 @@ models:getTruePivot()
 
 ---
 
-### <code>partToWorldMatrix()</code> {#partToWorldMatrix}
+### <code>partToWorldMatrix()</code> \{#partToWorldMatrix}
 
 Gets a matrix which transforms a point from this part's position to a world location
 
@@ -405,7 +405,7 @@ models:partToWorldMatrix():apply()
 
 ## Rendering
 
-### <code>setPrimaryRenderType(string)</code> {#setPrimaryRenderType}
+### <code>setPrimaryRenderType(string)</code> \{#setPrimaryRenderType}
 
 Sets the current primary render type of this model part
 
@@ -421,7 +421,7 @@ models:setPrimaryRenderType("END_PORTAL")
 
 ---
 
-### <code>getPrimaryRenderType()</code> {#getPrimaryRenderType}
+### <code>getPrimaryRenderType()</code> \{#getPrimaryRenderType}
 
 Gets the current primary render type of this model part
 
@@ -435,7 +435,7 @@ models:getPrimaryRenderType() == "TRANSLUCENT_CULL"
 
 ---
 
-### <code>setSecondaryRenderType(string)</code> {#setSecondaryRenderType}
+### <code>setSecondaryRenderType(string)</code> \{#setSecondaryRenderType}
 
 Sets the current secondary render type of this model part
 
@@ -451,7 +451,7 @@ models:setSecondaryRenderType("GLINT")
 
 ---
 
-### <code>getSecondaryRenderType()</code> {#getSecondaryRenderType}
+### <code>getSecondaryRenderType()</code> \{#getSecondaryRenderType}
 
 Gets the current secondary render type of this model part
 
@@ -465,7 +465,7 @@ models:getSecondaryRenderType() == "LINES"
 
 ---
 
-### <code>setOpacity(Number)</code> {#setOpacity}
+### <code>setOpacity(Number)</code> \{#setOpacity}
 
 Sets the opacity multiplier of this part
 
@@ -481,7 +481,7 @@ models:setOpacity(0.5)
 
 ---
 
-### <code>getOpacity()</code> {#getOpacity}
+### <code>getOpacity()</code> \{#getOpacity}
 
 Gets the opacity multiplier of this part
 
@@ -497,7 +497,7 @@ models:getOpacity()
 
 ---
 
-### <code>setLight()</code> {#setLight}
+### <code>setLight()</code> \{#setLight}
 
 Sets the light level to be used when rendering this part
 
@@ -516,7 +516,7 @@ models:setLight(blockLight, skyLight)
 
 ---
 
-### <code>getLight()</code> {#getLight}
+### <code>getLight()</code> \{#getLight}
 
 Gets the light level you set earlier to this part
 
@@ -530,7 +530,7 @@ models:getOpacity()
 
 ---
 
-### <code>setOverlay()</code> {#setOverlay}
+### <code>setOverlay()</code> \{#setOverlay}
 
 Sets the overlay color to be used when rendering this part
 
@@ -548,7 +548,7 @@ models:setOverlay(hurt and 0 or nil, 1)
 
 ---
 
-### <code>getOverlay()</code> {#getOverlay}
+### <code>getOverlay()</code> \{#getOverlay}
 
 Gets the overlay color you set earlier to this part
 
@@ -562,7 +562,7 @@ models:getOverlay()
 
 ---
 
-### <code>setColor(Vector3)</code> {#setColor}
+### <code>setColor(Vector3)</code> \{#setColor}
 
 Sets the color multiplier for this part for primary and secondary colors
 
@@ -576,7 +576,7 @@ models:setColor(0 / 255, 0 / 255, 255 / 255)
 
 ---
 
-### <code>getColor()</code> {#getColor}
+### <code>getColor()</code> \{#getColor}
 
 Returns the average set color from this part, as adding the primary color with the secondary, then dividing them
 
@@ -590,7 +590,7 @@ models:getColor()
 
 ---
 
-### <code>setPrimaryColor(Vector3)</code> {#setPrimaryColor}
+### <code>setPrimaryColor(Vector3)</code> \{#setPrimaryColor}
 
 Sets the primary color multiplier for this part
 
@@ -604,7 +604,7 @@ models:setPrimaryColor(0 / 255, 0 / 255, 255 / 255)
 
 ---
 
-### <code>getPrimaryColor()</code> {#getPrimaryColor}
+### <code>getPrimaryColor()</code> \{#getPrimaryColor}
 
 Gets the primary color multiplier of this part
 
@@ -618,7 +618,7 @@ models:getPrimaryColor()
 
 ---
 
-### <code>setSecondaryColor(Vector3)</code> {#setSecondaryColor}
+### <code>setSecondaryColor(Vector3)</code> \{#setSecondaryColor}
 
 Sets the secondary color multiplier for this part
 
@@ -632,7 +632,7 @@ models:setSecondaryColor(0 / 255, 0 / 255, 255 / 255)
 
 ---
 
-### <code>getSecondaryColor()</code> {#getSecondaryColor}
+### <code>getSecondaryColor()</code> \{#getSecondaryColor}
 
 Gets the secondary color multiplier of this part
 
@@ -646,33 +646,33 @@ models:getSecondaryColor()
 
 ---
 
-### <code>setPreRender(fun)</code> {#setPreRender}
+### <code>setPreRender(fun)</code> \{#setPreRender}
 
 Sets a function to run before this part starts being rendered
 
-### <code>setMidRender(fun)</code> {#setMidRender}
+### <code>setMidRender(fun)</code> \{#setMidRender}
 
 Sets a function to run during the middle of this part's rendering, after its matrices are calculated
 
-### <code>setPostRender(fun)</code> {#setPostRender}
+### <code>setPostRender(fun)</code> \{#setPostRender}
 
 Sets a function to run after this part and its children is rendered
 
-### <code>preRender</code> {#preRender}
+### <code>preRender</code> \{#preRender}
 
 Function to run before this part starts being rendered
 
-### <code>midRender</code> {#midRender}
+### <code>midRender</code> \{#midRender}
 
 Function to run during the middle of this part's rendering, after its matrices are calculated
 
-### <code>postRender</code> {#postRender}
+### <code>postRender</code> \{#postRender}
 
 Function to run after this part and its children is rendered
 
 ## Animations
 
-### <code>getAnimRot()</code> {#getAnimRot}
+### <code>getAnimRot()</code> \{#getAnimRot}
 
 Gets the rotation offset provided by the currently active animation of this model part
 
@@ -684,7 +684,7 @@ models:getAnimRot()
 
 ---
 
-### <code>getAnimPos()</code> {#getAnimPos}
+### <code>getAnimPos()</code> \{#getAnimPos}
 
 Gets the position offset provided by the currently active animation of this model part
 
@@ -696,7 +696,7 @@ models:getAnimPos()
 
 ---
 
-### <code>getAnimScale()</code> {#getAnimScale}
+### <code>getAnimScale()</code> \{#getAnimScale}
 
 Gets the scale multiplier provided by the currently active animation of this model part
 
@@ -708,7 +708,7 @@ models:getAnimScale()
 
 ---
 
-### <code>overrideVanillaRot()</code> {#overrideVanillaRot}
+### <code>overrideVanillaRot()</code> \{#overrideVanillaRot}
 
 Returns if this part vanilla rotation is being overridden by an animation
 
@@ -720,7 +720,7 @@ models:overrideVanillaRot()
 
 ---
 
-### <code>overrideVanillaPos()</code> {#overrideVanillaPos}
+### <code>overrideVanillaPos()</code> \{#overrideVanillaPos}
 
 Returns if this part vanilla position is being overridden by an animation
 
@@ -732,7 +732,7 @@ models:overrideVanillaPos()
 
 ---
 
-### <code>overrideVanillaScale()</code> {#overrideVanillaScale}
+### <code>overrideVanillaScale()</code> \{#overrideVanillaScale}
 
 Returns if this part vanilla scale is being overridden by an animation
 
@@ -746,7 +746,7 @@ models:overrideVanillaScale()
 
 ## Texturing
 
-### <code>setPrimaryTexture(string)</code> {#setPrimaryTexture}
+### <code>setPrimaryTexture(string)</code> \{#setPrimaryTexture}
 
 Sets the primary texture override of this part
 
@@ -769,7 +769,7 @@ models:setPrimaryTexture("Resource", "textures/entity/pig/pig.png")
 
 ---
 
-### <code>getPrimaryTexture()</code> {#getPrimaryTexture}
+### <code>getPrimaryTexture()</code> \{#getPrimaryTexture}
 
 Gets the primary texture of this part
 
@@ -783,7 +783,7 @@ models:getPrimaryTexture()
 
 ---
 
-<!-- ### <code>getPrimaryDefinedTextures()</code> {#getPrimaryDefinedTextures}
+<!-- ### <code>getPrimaryDefinedTextures()</code> \{#getPrimaryDefinedTextures}
 
 Gets the primary textures of this part
 
@@ -797,7 +797,7 @@ Returns a table of each texture for the specified face.
 
 --- -->
 
-### <code>setSecondaryTexture(string)</code> {#setSecondaryTexture}
+### <code>setSecondaryTexture(string)</code> \{#setSecondaryTexture}
 
 Sets the secondary texture override of this part
 
@@ -820,7 +820,7 @@ models:setSecondaryTexture("Resource", "textures/entity/pig/pig.png")
 
 ---
 
-### <code>getSecondaryTexture()</code> {#getSecondaryTexture}
+### <code>getSecondaryTexture()</code> \{#getSecondaryTexture}
 
 Gets the secondary texture of this part
 
@@ -834,7 +834,7 @@ models:getSecondaryTexture()
 
 ---
 
-<!--### <code>getSecondaryDefinedTextures()</code> {#getSecondaryDefinedTextures}
+<!--### <code>getSecondaryDefinedTextures()</code> \{#getSecondaryDefinedTextures}
 
 Gets the secondary textures of this part
 
@@ -848,7 +848,7 @@ Returns a table of each texture for the specified face.
 
 --- -->
 
-### <code>getTextures()</code> {#getTextures}
+### <code>getTextures()</code> \{#getTextures}
 
 Returns a table with all textures used by this part
 
@@ -866,7 +866,7 @@ models:getTextures()
 
 ---
 
-### <code>getTextureSize()</code> {#getTextureSize}
+### <code>getTextureSize()</code> \{#getTextureSize}
 
 Gets the width, height of this part's texture in pixels
 
@@ -880,7 +880,7 @@ models:getTextureSize()
 
 ---
 
-### <code>setUV(Vector2)</code> {#setUV}
+### <code>setUV(Vector2)</code> \{#setUV}
 
 Sets the UV of this part
 
@@ -896,7 +896,7 @@ models:setUV(0.5, 0.5)
 
 ---
 
-### <code>getUV()</code> {#getUV}
+### <code>getUV()</code> \{#getUV}
 
 Gets the UV of this part
 
@@ -910,7 +910,7 @@ models:getUV()
 
 ---
 
-### <code>setUVPixels(Vector2)</code> {#setUVPixels}
+### <code>setUVPixels(Vector2)</code> \{#setUVPixels}
 
 Sets the UV of this part in pixels
 
@@ -928,7 +928,7 @@ models:setUVPixels(16.16)
 
 ---
 
-### <code>getUVPixels()</code> {#getUVPixels}
+### <code>getUVPixels()</code> \{#getUVPixels}
 
 Gets the UV of this part
 
@@ -944,7 +944,7 @@ models:getUVPixels()
 
 ---
 
-### <code>setUVMatrix(Matrix3)</code> {#setUVMatrix}
+### <code>setUVMatrix(Matrix3)</code> \{#setUVMatrix}
 
 Sets the UV matrix of this part
 
@@ -960,7 +960,7 @@ models:setUVMatrix(matrices.mat3())
 
 ---
 
-### <code>getUVMatrix()</code> {#getUVMatrix}
+### <code>getUVMatrix()</code> \{#getUVMatrix}
 
 Gets the UV matrix of this part
 
@@ -974,7 +974,7 @@ models:getUVMatrix()
 
 ## Render Tasks
 
-### <code>newText(string)</code> {#newText}
+### <code>newText(string)</code> \{#newText}
 
 Adds a new Text Render Task on this part with the given name
 
@@ -988,7 +988,7 @@ models:newText("Example")
 
 ---
 
-### <code>newItem(string)</code> {#newItem}
+### <code>newItem(string)</code> \{#newItem}
 
 Adds a new Item Render Task on this part with the given name
 
@@ -1000,7 +1000,7 @@ models:newItem("Example")
 
 ---
 
-### <code>newBlock(string)</code> {#newBlock}
+### <code>newBlock(string)</code> \{#newBlock}
 
 Adds a new Block Render Task on this part with the given name
 
@@ -1012,7 +1012,7 @@ models:newBlock("Example")
 
 ---
 
-### <code>newSprite(string)</code> {#newSprite}
+### <code>newSprite(string)</code> \{#newSprite}
 
 Adds a new Sprite Render Task on this part with the given name
 
@@ -1024,13 +1024,13 @@ models:newSprite("Example")
 
 ---
 
-### <code>newTask(renderTask)</code> {#newTask}
+### <code>newTask(renderTask)</code> \{#newTask}
 
 Adds the given Render Task on this part, effectively duplicating it
 
 ---
 
-### <code>getTask(string?)</code> {#getTask}
+### <code>getTask(string?)</code> \{#getTask}
 
 Gets the Render Task with the given name from this part
 
@@ -1044,7 +1044,7 @@ models:getTask()
 
 ---
 
-### <code>removeTask(string?)</code> {#removeTask}
+### <code>removeTask(string?)</code> \{#removeTask}
 
 Removes the Task with the given name from this part
 
@@ -1060,7 +1060,7 @@ models:removeTask()
 
 ## Misc
 
-### <code>setParentType()</code> {#setParentType}
+### <code>setParentType()</code> \{#setParentType}
 
 Sets the parent type of the part
 
@@ -1074,7 +1074,7 @@ models:setParentType("Head")
 
 ---
 
-### <code>getParentType()</code> {#getParentType}
+### <code>getParentType()</code> \{#getParentType}
 
 Returns the current parent type of the part
 
@@ -1086,7 +1086,7 @@ models:getParentType()
 
 ---
 
-### <code>getVertices(string)</code> {#getVertices}
+### <code>getVertices(string)</code> \{#getVertices}
 
 Return a table with all vertices from the given texture id
 
@@ -1100,7 +1100,7 @@ models:getVertices("myTexture")
 
 ---
 
-### <code>getAllVertices()</code> {#getAllVertices}
+### <code>getAllVertices()</code> \{#getAllVertices}
 
 Return a table of all texture ids and its vertices
 
@@ -1112,7 +1112,7 @@ models:getAllVertices()
 
 ---
 
-### `getParent()` {#getParent}
+### `getParent()` \{#getParent}
 
 Gets the parent part of this part
 
@@ -1126,7 +1126,7 @@ models:getParent()
 
 ---
 
-### <code>getChildren()</code> {#getChildren}
+### <code>getChildren()</code> \{#getChildren}
 
 Gets the children of this part, stored in a table
 
@@ -1138,7 +1138,7 @@ models:getChildren()
 
 ---
 
-### <code>isChildOf(ModelPart)</code> {#isChildOf}
+### <code>isChildOf(ModelPart)</code> \{#isChildOf}
 
 Checks if this part is a child of the given part
 
@@ -1150,49 +1150,49 @@ models:isChildOf(models)
 
 ---
 
-### <code>moveTo(ModelPart)</code> {#moveTo}
+### <code>moveTo(ModelPart)</code> \{#moveTo}
 
 Moves this part to be a child of the given part
 
 **Example**:
 
 ```lua
-//error-next-line
+-- error-next-line
 models:moveTo(models)
 -- This is recursive
 ```
 
 ---
 
-### <code>addChild(ModelPart)</code> {#addChild}
+### <code>addChild(ModelPart)</code> \{#addChild}
 
 Adds the given part into this part's children list
 
 **Example**:
 
 ```lua
-//error-next-line
+-- error-next-line
 models:addChild(models)
 -- This is recursive
 ```
 
 ---
 
-### <code>removeChild(ModelPart)</code> {#removeChild}
+### <code>removeChild(ModelPart)</code> \{#removeChild}
 
 Removes the given part from this part's children list
 
 **Example**:
 
 ```lua
-//error-next-line
+-- error-next-line
 models:removeChild(models)
 -- This is recursive
 ```
 
 ---
 
-### <code>copy(string)</code> {#copy}
+### <code>copy(string)</code> \{#copy}
 
 Returns a copy of this part, with all customizations and vertices copied
 
@@ -1206,7 +1206,7 @@ models:copy("Example")
 
 ---
 
-### <code>newPart(string,string?)</code> {#newPart}
+### <code>newPart(string,string?)</code> \{#newPart}
 
 Creates a new, empty, group model part as a child of this part, at the same pivot point
 

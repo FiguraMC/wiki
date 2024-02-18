@@ -8,7 +8,7 @@ local myTex = textures["myTexture"]
 
 ---
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Returns this texture name
 
@@ -20,7 +20,7 @@ myText:getName()
 
 ---
 
-### `update()` {#update}
+### `update()` \{#update}
 
 Updates the texture to the gpu, applying all the changes
 
@@ -32,7 +32,7 @@ myText:update()
 
 ---
 
-### `save()` {#save}
+### `save()` \{#save}
 
 Returns a base64 string representation of this texture
 
@@ -44,7 +44,7 @@ myText:save()
 
 ---
 
-### `restore()` {#restore}
+### `restore()` \{#restore}
 
 Restores the texture to its original state, before any modifications
 
@@ -56,7 +56,7 @@ myText:restore()
 
 ---
 
-### `setPixel(int,int,Vector4)` {#setPixel}
+### `setPixel(int,int,Vector4)` \{#setPixel}
 
 Sets the RGBA color of the specified pixel
 
@@ -68,7 +68,7 @@ myText:setPixel(32, 32, 0, 0, 1, 1)
 
 ---
 
-### `getPixel(int,int)` {#getPixel}
+### `getPixel(int,int)` \{#getPixel}
 
 Sets the RGBA color of the specified pixel
 
@@ -80,7 +80,7 @@ myText:getPixel(32, 32)
 
 ---
 
-### `fill(int,int,int,int,int,Vector4)` {#fill}
+### `fill(int,int,int,int,int,Vector4)` \{#fill}
 
 Sets the RGBA color of the entire specified region
 
@@ -92,7 +92,7 @@ myText:fill(0, 0, 32, 32, 0, 0, 1, 1)
 
 ---
 
-### `getPath()` {#getPath}
+### `getPath()` \{#getPath}
 
 Returns this texture resource path location
 
@@ -104,7 +104,7 @@ myText:getPath()
 
 ---
 
-### `getDimensions()` {#getDimensions}
+### `getDimensions()` \{#getDimensions}
 
 Returns a vector of this texture width and height
 
@@ -116,7 +116,7 @@ myText:getDimensions()
 
 ---
 
-### `applyFunc()` {#applyFunc}
+### `applyFunc()` \{#applyFunc}
 
 Calls the given function on the specified area of this texture, it will iterate over each pixel, and their current x, y and color will be given as arguments, the color in a RGBA Vector4 format, and the return value will set that pixel color
 
@@ -124,7 +124,7 @@ Invalid return values or nil takes no effects
 
 ---
 
-### `applyMatrix()` {#applyMatrix}
+### `applyMatrix()` \{#applyMatrix}
 
 Transforms all pixels in the specified area of this texture by the matrix
 

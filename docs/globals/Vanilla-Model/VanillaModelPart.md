@@ -4,7 +4,7 @@ Can be queried for vanilla transform values
 
 ---
 
-### `setVisible(bool)` {#setVisible}
+### `setVisible(bool)` \{#setVisible}
 
 Sets this part and its children to be visible or invisible
 
@@ -16,7 +16,7 @@ vanilla_model.HEAD:setVisible(false)
 
 ---
 
-### `getVisible()` {#getVisible}
+### `getVisible()` \{#getVisible}
 
 Gets whether you have set this part to be visible or invisible
 
@@ -28,7 +28,7 @@ vanilla_model.HEAD:getVisible()
 
 ---
 
-### `getOriginVisible()` {#getOriginVisible}
+### `getOriginVisible()` \{#getOriginVisible}
 
 Gets if this vanilla model part is visible or not, without interference from your script
 
@@ -40,7 +40,7 @@ vanilla_model.HEAD:getOriginVisible()
 
 ---
 
-### `getOriginRot()` {#getOriginRot}
+### `getOriginRot()` \{#getOriginRot}
 
 Gets the rotation to this vanilla model part currently applied by Minecraft
 
@@ -52,7 +52,7 @@ vanilla_model.HEAD:getOriginRot()
 
 ---
 
-### `getOriginPos()` {#getOriginPos}
+### `getOriginPos()` \{#getOriginPos}
 
 Gets the position offset to this vanilla model part currently applied by Minecraft
 
@@ -64,7 +64,7 @@ vanilla_model.HEAD:getOriginPos()
 
 ---
 
-### `getOriginScale()` {#getOriginScale}
+### `getOriginScale()` \{#getOriginScale}
 
 Gets the scale to this vanilla model part currently applied by Minecraft
 
@@ -76,7 +76,7 @@ vanilla_model.HEAD:getOriginScale()
 
 ---
 
-### `setRot(Vector3)` {#setRot}
+### `setRot(Vector3)` \{#setRot}
 
 Set this part and its children's rotation
 
@@ -88,7 +88,7 @@ vanilla_model.HEAD:setRot(0, 90, 0)
 
 ---
 
-### `getRot()` {#getgetRotPos}
+### `getRot()` \{#getgetRotPos}
 
 Get this part's set rotation
 
@@ -102,7 +102,7 @@ vanilla_model.HEAD:getRot()
 
 ---
 
-### `setPos(Vector3)` {#setPos}
+### `setPos(Vector3)` \{#setPos}
 
 Set this part and its children's position, preserving the previous values
 
@@ -114,7 +114,7 @@ vanilla_model.HEAD:setPos(0, 10, 0)
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Get this part's set position
 
@@ -128,7 +128,7 @@ vanilla_model.HEAD:getPos()
 
 ---
 
-### `setScale(Vector3)` {#setScale}
+### `setScale(Vector3)` \{#setScale}
 
 Set this part and its children's scale
 
@@ -140,7 +140,7 @@ vanilla_model.HEAD:setScale(2, 2, 2)
 
 ---
 
-### `getScale()` {#getScale}
+### `getScale()` \{#getScale}
 
 Get this part's set scale
 
@@ -154,7 +154,7 @@ vanilla_model.HEAD:getScale()
 
 ---
 
-### `setOffsetRot(Vector3)` {#setOffsetRot}
+### `setOffsetRot(Vector3)` \{#setOffsetRot}
 
 Offsets this part and its children's rotation, adding on top of the vanilla values
 
@@ -166,7 +166,7 @@ vanilla_model.HEAD:setOffsetRot(0, 90, 0)
 
 ---
 
-### `getOffsetRot()` {#getOffsetRot}
+### `getOffsetRot()` \{#getOffsetRot}
 
 Gets this part's rotation offset
 
@@ -178,7 +178,7 @@ vanilla_model.HEAD:getOffsetRot()
 
 ---
 
-### `setOffsetScale(Vector3)` {#setOffsetScale}
+### `setOffsetScale(Vector3)` \{#setOffsetScale}
 
 Offsets this part and its children's scale, multiplying with the vanilla values
 
@@ -190,7 +190,7 @@ vanilla_model.HEAD:setOffsetScale(2, 2, 2)
 
 ---
 
-### `getOffsetScale()` {#getOffsetScale}
+### `getOffsetScale()` \{#getOffsetScale}
 
 Gets this part's scale offset
 

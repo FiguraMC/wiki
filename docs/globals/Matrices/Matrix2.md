@@ -8,7 +8,7 @@ local myMat = matrices.mat2()
 
 ---
 
-### `add(Matrix2)` {#add}
+### `add(Matrix2)` \{#add}
 
 Adds the other matrix to this one
 
@@ -16,7 +16,7 @@ Returns self for chaining
 
 ---
 
-### `scale(Vector2)` {#scale}
+### `scale(Vector2)` \{#scale}
 
 Adds the other matrix to this one
 
@@ -30,7 +30,7 @@ myMat:scale(2, 2)
 
 ---
 
-### `apply(number)` {#apply}
+### `apply(number)` \{#apply}
 
 Treats the given values as a vector, augments this vector with a 1, multiplies it against the matrix, and returns a deaugmented vector of the first values
 
@@ -42,7 +42,7 @@ myMat:apply()
 
 ---
 
-### `set(Matrix2)` {#set}
+### `set(Matrix2)` \{#set}
 
 Sets this matrix to have the same values as the matrix passed in
 
@@ -56,7 +56,7 @@ myMat:set()
 
 ---
 
-### `copy()` {#copy}
+### `copy()` \{#copy}
 
 Creates and returns a new copy of this matrix
 
@@ -68,7 +68,7 @@ myMat:copy()
 
 ---
 
-### `reset()` {#reset}
+### `reset()` \{#reset}
 
 Resets this matrix back to the identity matrix
 
@@ -82,7 +82,7 @@ myMat:reset()
 
 ---
 
-### `multiply(Matrix2)` {#multiply}
+### `multiply(Matrix2)` \{#multiply}
 
 Multiplies this matrix by the other matrix, with the other matrix on the left
 
@@ -90,7 +90,7 @@ Returns self for chaining
 
 ---
 
-### `rotate(number)` {#rotate}
+### `rotate(number)` \{#rotate}
 
 Rotates this matrix by the specified amount, changing the values inside
 
@@ -106,7 +106,7 @@ myMat:rotate(90)
 
 ---
 
-### `sub(Matrix2)` {#sub}
+### `sub(Matrix2)` \{#sub}
 
 Subtracts the other matrix from this one
 
@@ -114,7 +114,7 @@ Returns self for chaining
 
 ---
 
-### `augmented()` {#augmented}
+### `augmented()` \{#augmented}
 
 Augments this matrix, adding an additional row and column
 
@@ -128,7 +128,7 @@ myMat:augmented()
 
 ---
 
-### `inverted()` {#inverted}
+### `inverted()` \{#inverted}
 
 Returns a copy of this matrix, but inverted
 
@@ -140,7 +140,7 @@ myMat:inverted()
 
 ---
 
-### `transposed()` {#transposed}
+### `transposed()` \{#transposed}
 
 Returns a copy of this matrix, but transposed
 
@@ -154,7 +154,7 @@ myMat:transposed()
 
 ---
 
-### `rightMultiplty(Matrix2)` {#transposed}
+### `rightMultiplty(Matrix2)` \{#transposed}
 
 Multiplies this matrix by the other matrix, with the other matrix on the right
 
@@ -162,7 +162,7 @@ Returns self for chaining
 
 ---
 
-### `applyDir(number)` {#applyDir}
+### `applyDir(number)` \{#applyDir}
 
 Treats the given values as a vector, augments this vector with a 0, multiplies it against the matrix, and returns a deaugmented vector of the first values
 
@@ -174,7 +174,7 @@ myMat:applyDir()
 
 ---
 
-### `det()` {#det}
+### `det()` \{#det}
 
 Calculates and returns the determinant of this matrix
 
@@ -186,7 +186,7 @@ myMat:det()
 
 ---
 
-### `transpose()` {#transpose}
+### `transpose()` \{#transpose}
 
 Transposes this matrix, changing the values inside
 
@@ -202,7 +202,7 @@ myMat:transpose()
 
 ---
 
-### `getColumn(int)` {#getColumn}
+### `getColumn(int)` \{#getColumn}
 
 Gets the given column of this matrix, as a vector
 
@@ -216,7 +216,7 @@ myMat:getColumn(1)
 
 ---
 
-### `getRow(int)` {#getRow}
+### `getRow(int)` \{#getRow}
 
 Gets the given row of this matrix, as a vector
 
@@ -230,7 +230,7 @@ myMat:getRow(1)
 
 ---
 
-### `invert()` {#invert}
+### `invert()` \{#invert}
 
 Inverts this matrix, changing the values inside
 

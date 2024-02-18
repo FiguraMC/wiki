@@ -1,4 +1,8 @@
-name: Deploy Pull Request Preview
+# Downloads the artifacts from GitHub which then begins with reading the pull request details,
+# once read - it deploys the wiki for preview and once previewed,
+# it finds the required comment and then creates a comment with formatted date.
+
+name: Pull Request Preview
 
 on:
   workflow_run:
@@ -7,10 +11,10 @@ on:
 
 jobs:
   preview:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.workflow_run.conclusion == 'success'
     steps:
-      - name: Download Artifact
+      - name: Download Artifacts
         uses: dawidd6/action-download-artifact@v2
         with:
           run_id: ${{ github.event.workflow_run.id }}
@@ -19,8 +23,8 @@ jobs:
 
       - name: Read Pull Request Details
         run: |
-          echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV &&
-          echo "PR_COMMIT_HASH=$(cat ./build/.pr_commit_hash)" >> $GITHUB_ENV &&
+          echo "PR_NUMBER=$(cat ./build/.pr_number)" >> $GITHUB_ENV
+          echo "PR_COMMIT_HASH=$(cat ./build/.pr_commit_hash)" >> $GITHUB_ENV
           rm ./build/.pr_number ./build/.pr_commit_hash
 
       - name: Deploy Preview
@@ -41,7 +45,8 @@ jobs:
           comment-author: figuramcbot
           body-includes: "A preview for this pull request is now ready! :tada:"
 
-      - run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+      - name: Format Date
+        run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       - name: Leave comment
         uses: peter-evans/create-or-update-comment@v1
@@ -53,10 +58,10 @@ jobs:
           body: |
             A preview for this pull request is now ready! :tada:
 
-            | **Name**               | **Details**                                                                                    |
-            | ---------------------- | ---------------------------------------------------------------------------------------------- |
-            | URL                    | https://pr-${{ env.PR_NUMBER }}.figura-wiki.pages.dev                                             |
-            | Latest Commit Deployed | ${{ env.PR_COMMIT_HASH }}                                                                      |
-            | Last Updated           | `${{ env.NOW }} UTC`                                                                           |
+            | Name           | Details                                               |
+            | -------------- | ----------------------------------------------------- |
+            | URL            | https://pr-${{ env.PR_NUMBER }}.figura-wiki.pages.dev |
+            | Latest Commit  | ${{ env.PR_COMMIT_HASH }}                             |
+            | Last Updated   | `${{ env.NOW }} UTC`                                  |
 
             This preview will be automatically updated whenever new changes are added.

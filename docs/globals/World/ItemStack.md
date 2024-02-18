@@ -6,7 +6,7 @@ For all exmaples on this page assume:
 local item = player:getHeldItem()
 ```
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Gets the name of the item
 
@@ -18,7 +18,7 @@ item:getName()
 
 ---
 
-### `copy()` {#copy}
+### `copy()` \{#copy}
 
 Returns a copy of this item stack
 
@@ -30,7 +30,7 @@ item:copy()
 
 ---
 
-### `getCount()` {#getCount}
+### `getCount()` \{#getCount}
 
 Gets the number of items in this stack
 
@@ -42,7 +42,7 @@ item:getCount()
 
 ---
 
-### `getTag()` {#getTag}
+### `getTag()` \{#getTag}
 
 Gets a table of the NBT tags of this stack
 
@@ -54,7 +54,7 @@ item:getTag()
 
 ---
 
-### `getTags()` {#getTags}
+### `getTags()` \{#getTags}
 
 Gets all the tags of this item as strings in a table
 
@@ -66,7 +66,7 @@ item:getTags()
 
 ---
 
-### `getID()` {#getID}
+### `getID()` \{#getID}
 
 Gets the ID of this stack
 
@@ -78,7 +78,7 @@ item:getID()
 
 ---
 
-### `getDamage()` {#getDamage}
+### `getDamage()` \{#getDamage}
 
 Gets the damage value of the item in this stack
 
@@ -92,7 +92,7 @@ item:getDamage()
 
 ---
 
-### `isEnchantable()` {#isEnchantable}
+### `isEnchantable()` \{#isEnchantable}
 
 Returns true if this item stack can be put in an enchanting table
 
@@ -104,7 +104,7 @@ item:isEnchantable()
 
 ---
 
-### `hasGlint()` {#hasGlint}
+### `hasGlint()` \{#hasGlint}
 
 Returns true if this item glows with enchantment glint
 
@@ -116,7 +116,7 @@ item:hasGlint()
 
 ---
 
-### `getMaxCount()` {#getMaxCount}
+### `getMaxCount()` \{#getMaxCount}
 
 Gets the maximum stack size of this item
 
@@ -128,7 +128,7 @@ item:getMaxCount()
 
 ---
 
-### `getMaxDamage()` {#getMaxDamage}
+### `getMaxDamage()` \{#getMaxDamage}
 
 Gets the maximum durability of this item stack
 
@@ -140,7 +140,7 @@ item:getMaxDamage()
 
 ---
 
-### `isDamageable()` {#isDamageable}
+### `isDamageable()` \{#isDamageable}
 
 Returns true if this item stack has durability
 
@@ -152,7 +152,7 @@ item:isDamageable()
 
 ---
 
-### `isStackable()` {#isStackable}
+### `isStackable()` \{#isStackable}
 
 Returns true if the item is stackable
 
@@ -164,7 +164,7 @@ item:isStackable()
 
 ---
 
-### `getUseDuration()` {#getUseDuration}
+### `getUseDuration()` \{#getUseDuration}
 
 Gets the number of ticks needed to "use" this item
 
@@ -180,7 +180,7 @@ item:getUseDuration()
 
 ---
 
-### `isFood()` {#isFood}
+### `isFood()` \{#isFood}
 
 Returns true if this item is edible
 
@@ -192,7 +192,7 @@ item:isFood()
 
 ---
 
-### `getPopTime()` {#getPopTime}
+### `getPopTime()` \{#getPopTime}
 
 Gets the item's animation bobbing time, in ticks. This value is used to move an item to the player when it is picked up
 
@@ -204,7 +204,7 @@ item:getPopTime()
 
 ---
 
-### `getRepairCost()` {#getRepairCost}
+### `getRepairCost()` \{#getRepairCost}
 
 Gets the repair cost modifier, in an anvil, for this item stack
 
@@ -216,7 +216,7 @@ item:getRepairCost()
 
 ---
 
-### `toStackString()` {#toStackString}
+### `toStackString()` \{#toStackString}
 
 Converts this ItemStack to a string, like you'd see in a command
 
@@ -228,7 +228,7 @@ item:toStackString()
 
 ---
 
-### `getRarity()` {#getRarity}
+### `getRarity()` \{#getRarity}
 
 Gets the rarity of this item stack
 
@@ -242,7 +242,7 @@ item:getRarity()
 
 ---
 
-### `getUseAction()` {#getUseAction}
+### `getUseAction()` \{#getUseAction}
 
 Returns the name of the animation that plays when using this item
 
@@ -254,7 +254,7 @@ item:getUseAction()
 
 ---
 
-### `isTool()` {#isTool}
+### `isTool()` \{#isTool}
 
 Check if this item is a Tool (Axe, Shovel, Pickaxe, ...)
 
@@ -266,7 +266,7 @@ item:isTool()
 
 ---
 
-### `isBlockItem()` {#isBlockItem}
+### `isBlockItem()` \{#isBlockItem}
 
 Returns true if this item represents a block
 
@@ -278,7 +278,7 @@ item:isBlockItem()
 
 ---
 
-### `getBlockstate()` {#getBlockstate}
+### `getBlockstate()` \{#getBlockstate}
 
 Returns the blockstate representation of this item stack
 
@@ -292,7 +292,7 @@ item:getBlockstate()
 
 ---
 
-### `getEquipmentSlot()` {#getEquipmentSlot}
+### `getEquipmentSlot()` \{#getEquipmentSlot}
 
 Returns the slot name of where this item is used
 
@@ -304,7 +304,7 @@ item:getEquipmentSlot()
 
 ---
 
-### `isArmor()` {#isArmor}
+### `isArmor()` \{#isArmor}
 
 Checks if this item is a Armor
 
@@ -316,7 +316,7 @@ item:isArmor()
 
 ---
 
-### `id` {#id}
+### `id` \{#id}
 
 Contains the id of the item this ItemStack refers to
 
@@ -328,7 +328,7 @@ item.id
 
 ---
 
-### `tag` {#tag}
+### `tag` \{#tag}
 
 A table containing the NBT tag of this ItemStack
 

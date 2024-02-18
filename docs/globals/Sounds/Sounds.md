@@ -4,7 +4,7 @@ Any place where a sound is used, it can be either a Minecraft sound id or a cust
 
 ---
 
-### `playSound()` {#playSound}
+### `playSound()` \{#playSound}
 
 Plays the specified sound at the specified position with the given volume and pitch multipliers
 
@@ -22,7 +22,7 @@ sounds:playSound("entity.bat.ambient", player:getPos(), 1, 1, false)
 
 ---
 
-### `stopSound(string)` {#stopSound}
+### `stopSound(string)` \{#stopSound}
 
 Stops the playing sounds from this avatar
 
@@ -34,7 +34,7 @@ sounds:stopSound()
 
 ---
 
-### `isPresent(string)` {#isPresent}
+### `isPresent(string)` \{#isPresent}
 
 Checks if this sound id is registered either by custom avatar sounds or a vanilla sound
 
@@ -46,7 +46,7 @@ sounds:isPresent("entity.bat.ambient")
 
 ---
 
-### `newSound(string,table)` {#newSound}
+### `newSound(string,table)` \{#newSound}
 
 Registers a new custom sound for this avatar
 
@@ -54,7 +54,7 @@ The first argument is the sound id while the second argument is either a byte ar
 
 ---
 
-### `getCustomSounds()` {#getCustomSounds}
+### `getCustomSounds()` \{#getCustomSounds}
 
 Returns a table with all registered custom sounds ids
 

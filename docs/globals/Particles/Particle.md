@@ -12,7 +12,7 @@ myParticle = particles["explosion"]
 
 ---
 
-### `spawn()` {#spawn}
+### `spawn()` \{#spawn}
 
 Spawns the particle with its current properties (set with the other functions)
 
@@ -24,7 +24,7 @@ myParticle:spawn()
 
 ---
 
-### `setPos(Vector3)` {#setPos}
+### `setPos(Vector3)` \{#setPos}
 
 Sets the position of the particle
 
@@ -36,7 +36,7 @@ myParticle:setPos(player:getPos())
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Gets the position of the particle
 
@@ -48,7 +48,7 @@ myParticle:getPos()
 
 ---
 
-### `setColor(Vector3 or Vector4)` {#setColor}
+### `setColor(Vector3 or Vector4)` \{#setColor}
 
 Sets the particle color, most particles don't support it. The alpha value can be excluded
 
@@ -60,7 +60,7 @@ myParticle:setColor(0, 0, 1)
 
 ---
 
-### `getColor()` {#getColor}
+### `getColor()` \{#getColor}
 
 Gets the color as set by setcolor
 
@@ -72,7 +72,7 @@ myParticle:getColor()
 
 ---
 
-### `setScale(Vector3)` {#setScale}
+### `setScale(Vector3)` \{#setScale}
 
 Sets the scale of the particle
 
@@ -84,7 +84,7 @@ myParticle:setScale(2, 2, 2)
 
 ---
 
-### `getScale()` {#getScale}
+### `getScale()` \{#getScale}
 
 Gets the scale of the particle
 
@@ -94,7 +94,7 @@ Gets the scale of the particle
 myParticle:getScale()
 ```
 
-### `setVelocity(Vector3)` {#setVelocity}
+### `setVelocity(Vector3)` \{#setVelocity}
 
 Sets the velocity of the particle
 
@@ -106,7 +106,7 @@ myParticle:setVelocity(2, 2, 2)
 
 ---
 
-### `getVelocity()` {#getVelocity}
+### `getVelocity()` \{#getVelocity}
 
 Gets the velocity of the particle
 
@@ -116,7 +116,7 @@ Gets the velocity of the particle
 myParticle:getVelocity()
 ```
 
-### `setLifetime(integer)` {#setLifetime}
+### `setLifetime(integer)` \{#setLifetime}
 
 Sets how long the particle should stay in the world. Particles with animations will animate in relation to their life left, so longer lives will make the animation play slower.
 
@@ -128,7 +128,7 @@ myParticle:setLifetime(200)
 
 ---
 
-### `getLifetime()` {#getLifetime}
+### `getLifetime()` \{#getLifetime}
 
 Gets the lifetime
 
@@ -138,7 +138,7 @@ Gets the lifetime
 myParticle:getLifetime()
 ```
 
-### `setPower(number)` {#setPower}
+### `setPower(number)` \{#setPower}
 
 Multiplies the particle's velocity every time it's run
 
@@ -150,7 +150,7 @@ myParticle:setPower(5)
 
 ---
 
-### `getPower()` {#getPower}
+### `getPower()` \{#getPower}
 
 Silly power
 
@@ -164,7 +164,7 @@ getPower doesn't get the particle's actual power, but the number last passed int
 myParticle:getPower()
 ```
 
-### `setGravity(number)` {#setGravity}
+### `setGravity(number)` \{#setGravity}
 
 Sets the strength of gravity
 
@@ -176,7 +176,7 @@ myParticle:setGravity(5)
 
 ---
 
-### `getGravity()` {#getGravity}
+### `getGravity()` \{#getGravity}
 
 Gets the gravity value
 
@@ -186,7 +186,7 @@ Gets the gravity value
 myParticle:getGravity()
 ```
 
-### `setPhysics(bool)` {#setPhysics}
+### `setPhysics(bool)` \{#setPhysics}
 
 Sets if the particle will experience physics
 
@@ -198,7 +198,7 @@ myParticle:setPhysics(false)
 
 ---
 
-### `hasPhysics()` {#hasPhysics}
+### `hasPhysics()` \{#hasPhysics}
 
 Gets if the particle has physics
 
@@ -208,7 +208,7 @@ Gets if the particle has physics
 myParticle:hasPhysics()
 ```
 
-### `setSize(number)` {#setSize}
+### `setSize(number)` \{#setSize}
 
 Sets the scale of the particle, identical to setScale
 
@@ -220,7 +220,7 @@ myParticle:setSize(5)
 
 ---
 
-### `getSize()` {#getSize}
+### `getSize()` \{#getSize}
 
 Gets the size of the particle
 
@@ -232,7 +232,7 @@ myParticle:getSize()
 
 ---
 
-### `isAlive()` {#isAlive}
+### `isAlive()` \{#isAlive}
 
 Gets if the particle is still in the world
 

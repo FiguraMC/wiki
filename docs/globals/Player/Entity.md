@@ -10,7 +10,7 @@ local thisEntity = thisEntity:getTargetedEntity()
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Gets the position of the entity in the world
 
@@ -26,7 +26,7 @@ thisEntity:getPos()
 
 ---
 
-### `getRot()` {#getRot}
+### `getRot()` \{#getRot}
 
 Gets the rotation of the entity in degrees
 
@@ -42,7 +42,7 @@ thisEntity:getRot()
 
 ---
 
-### `getLookDir()` {#getLookDir}
+### `getLookDir()` \{#getLookDir}
 
 Returns a unit vector pointing in the direction that this entity is looking
 
@@ -56,7 +56,7 @@ thisEntity:getLookDir()
 
 ---
 
-### `getVelocity()` {#getVelocity}
+### `getVelocity()` \{#getVelocity}
 
 Gets the current velocity of this entity in world coordinates, calculated as its position this tick minus its position last tick
 
@@ -72,7 +72,7 @@ Gets the current velocity of this entity in world coordinates, calculated as its
 
 ---
 
-### `getPose()` {#getPose}
+### `getPose()` \{#getPose}
 
 Returns the current pose of the entity
 
@@ -84,7 +84,7 @@ thisEntity:getPose() == "CROUCHING"
 
 ---
 
-### `isCrouching()` {#isCrouching}
+### `isCrouching()` \{#isCrouching}
 
 Returns true if this entity is visually sneaking
 
@@ -96,7 +96,7 @@ thisEntity:isCrouching()
 
 ---
 
-### `isSneaking()` {#isSneaking}
+### `isSneaking()` \{#isSneaking}
 
 Returns true if this entity is logically sneaking (can't fall from blocks edges, can't see nameplate behind walls, etc)
 
@@ -108,7 +108,7 @@ thisEntity:isSneaking()
 
 ---
 
-### `isSprinting()` {#isSprinting}
+### `isSprinting()` \{#isSprinting}
 
 Returns true if this entity is currently sprinting
 
@@ -120,7 +120,7 @@ thisEntity:isSprinting()
 
 ---
 
-### `isLoaded()` {#isLoaded}
+### `isLoaded()` \{#isLoaded}
 
 Checks if this entity object is still being updated and loaded
 
@@ -134,7 +134,7 @@ thisEntity:isLoaded()
 
 ---
 
-### `getNbt()` {#getNbt}
+### `getNbt()` \{#getNbt}
 
 Gets a table containing the NBT of this entity
 
@@ -148,7 +148,7 @@ thisEntity:getNbt()
 
 ---
 
-### `getName()` {#getName}
+### `getName()` \{#getName}
 
 Gets the name of this entity, if it has a custom name
 
@@ -162,7 +162,7 @@ thisEntity:getName()
 
 ---
 
-### `isAlive()` {#isAlive}
+### `isAlive()` \{#isAlive}
 
 Returns whether this entity is alive or not
 
@@ -174,7 +174,7 @@ thisEntity:isAlive()
 
 ---
 
-### `getType()` {#getType}
+### `getType()` \{#getType}
 
 Gets the Minecraft identifier of this entity
 
@@ -188,7 +188,7 @@ thisEntity:getType() == "minecraft:pig"
 
 ---
 
-### `getControlledVehicle()` {#getControlledVehicle}
+### `getControlledVehicle()` \{#getControlledVehicle}
 
 Return the vehicle that this entity is controlling
 
@@ -200,7 +200,7 @@ thisEntity:getControlledVehicle()
 
 ---
 
-### `getControllingPassenger()` {#getControllingPassenger}
+### `getControllingPassenger()` \{#getControllingPassenger}
 
 Returns the entity that is controlling this entity
 
@@ -212,7 +212,7 @@ thisEntity:getControllingPassenger()
 
 ---
 
-### `getPassengers()` {#getPassengers}
+### `getPassengers()` \{#getPassengers}
 
 Returns a List of entities of all passengers this entity have
 
@@ -224,7 +224,7 @@ thisEntity:getPassengers()
 
 ---
 
-### `getFrozenTicks()` {#getFrozenTicks}
+### `getFrozenTicks()` \{#getFrozenTicks}
 
 Gets the number of ticks this entity has been freezing in powder snow for
 
@@ -236,7 +236,7 @@ thisEntity:getFrozenTicks()
 
 ---
 
-### `getMaxAir()` {#getMaxAir}
+### `getMaxAir()` \{#getMaxAir}
 
 Gets the maximum amount of air this entity can have
 
@@ -248,7 +248,7 @@ thisEntity:getMaxAir()
 
 ---
 
-### `getDimensionName()` {#getDimensionName}
+### `getDimensionName()` \{#getDimensionName}
 
 Gets the Minecraft identifier of the dimension this entity is in
 
@@ -260,7 +260,7 @@ thisEntity:getDimensionName()
 
 ---
 
-### `isUnderwater()` {#isUnderwater}
+### `isUnderwater()` \{#isUnderwater}
 
 Returns true if this entity's eyes are touching water
 
@@ -272,7 +272,7 @@ thisEntity:isUnderwater()
 
 ---
 
-### `isInWater()` {#isInWater}
+### `isInWater()` \{#isInWater}
 
 Returns true if this entity is currently in a water block, including waterlogging
 
@@ -284,7 +284,7 @@ thisEntity:isInWater()
 
 ---
 
-### `isInRain()` {#isInRain}
+### `isInRain()` \{#isInRain}
 
 Returns true if this entity is currently standing in rain
 
@@ -296,7 +296,7 @@ thisEntity:isInRain()
 
 ---
 
-### `isWet()` {#isWet}
+### `isWet()` \{#isWet}
 
 Returns true in any of three conditions: if the entity is in water, if the entity is in rain, or if the entity is in a bubble column
 
@@ -310,7 +310,7 @@ thisEntity:isWet()
 
 ---
 
-### `isInLava()` {#isInLava}
+### `isInLava()` \{#isInLava}
 
 Returns true if this entity is currently in lava
 
@@ -322,7 +322,7 @@ thisEntity:isInLava()
 
 ---
 
-### `isOnFire()` {#isOnFire}
+### `isOnFire()` \{#isOnFire}
 
 Returns true if this entity is currently on fire
 
@@ -334,7 +334,7 @@ thisEntity:isOnFire()
 
 ---
 
-### `isInvisible()` {#isInvisible}
+### `isInvisible()` \{#isInvisible}
 
 Returns true if this entity is invisible, for one reason or another
 
@@ -346,7 +346,7 @@ thisEntity:isInvisible()
 
 ---
 
-### `getVehicle()` {#getVehicle}
+### `getVehicle()` \{#getVehicle}
 
 Returns a proxy for the entity that this entity is currently riding
 
@@ -362,7 +362,7 @@ end
 
 ---
 
-### `isSilent()` {#isSilent}
+### `isSilent()` \{#isSilent}
 
 Returns true if this entity is silent
 
@@ -374,7 +374,7 @@ thisEntity:isSilent()
 
 ---
 
-### `isGlowing()` {#isGlowing}
+### `isGlowing()` \{#isGlowing}
 
 Returns true if this entity is currently glowing
 
@@ -386,13 +386,13 @@ thisEntity:isGlowing()
 
 ---
 
-### `getBoundingBox()` {#getBoundingBox}
+### `getBoundingBox()` \{#getBoundingBox}
 
 Returns the size of this entity's bounding box as a Vector3
 
 ---
 
-{x, y, z} are the width, height, and width
+\{x, y, z} are the width, height, and width
 
 Minecraft entity hitboxes always have square bases
 
@@ -404,7 +404,7 @@ thisEntity:getBoundingBox()
 
 ---
 
-### `isOnGround()` {#isOnGround}
+### `isOnGround()` \{#isOnGround}
 
 Returns whether or not this entity is currently on the ground
 
@@ -419,7 +419,7 @@ thisEntity:isOnGround()
 
 ---
 
-### `getEyeY()` {#getEyeY}
+### `getEyeY()` \{#getEyeY}
 
 Returns the Y level of this entity's eyes
 
@@ -433,7 +433,7 @@ thisEntity:getEyeY()
 
 ---
 
-### `getEyeHeight()` {#getEyeHeight}
+### `getEyeHeight()` \{#getEyeHeight}
 
 Returns the current eye height of this entity
 
@@ -445,7 +445,7 @@ thisEntity:getEyeHeight()
 
 ---
 
-### `getTargetedEntity(number)` {#getTargetedEntity}
+### `getTargetedEntity(number)` \{#getTargetedEntity}
 
 Returns a proxy for your currently targeted Entity
 
@@ -465,7 +465,7 @@ end
 
 ---
 
-### `getTargetedBlock(bool, number)` {#getTargetedBlock}
+### `getTargetedBlock(bool, number)` \{#getTargetedBlock}
 
 Returns a proxy for your currently targeted BlockState
 
@@ -487,7 +487,7 @@ end
 
 ---
 
-### `hasInventory()` {#hasInventory}
+### `hasInventory()` \{#hasInventory}
 
 Checks if the entity has an inventory (Horses, Camels, Llamas, ...)
 
@@ -499,7 +499,7 @@ thisEntity:hasInventory()
 
 ---
 
-### `hasContainer()` {#hasContainer}
+### `hasContainer()` \{#hasContainer}
 
 Checks if the entity has a container (Chest Boats, Minecarts with Chests, ...)
 
@@ -511,7 +511,7 @@ thisEntity:hasContainer()
 
 ---
 
-### `isLiving()` {#isLiving}
+### `isLiving()` \{#isLiving}
 
 Gets if this entity is a Living Entity
 
@@ -523,7 +523,7 @@ thisEntity:isLiving()
 
 ---
 
-### `isPlayer()` {#isPlayer}
+### `isPlayer()` \{#isPlayer}
 
 Gets if this entity is a Player Entity
 
@@ -535,7 +535,7 @@ thisEntity:isPlayer()
 
 ---
 
-### `getPermissionLevel()` {#getPermissionLevel}
+### `getPermissionLevel()` \{#getPermissionLevel}
 
 Returns the permission level number of this entity
 
@@ -551,7 +551,7 @@ thisEntity:getPermissionLevel()
 
 ---
 
-### `getItem(integer)` {#getItem}
+### `getItem(integer)` \{#getItem}
 
 Gets an ItemStack for the item in the given slot
 
@@ -571,7 +571,7 @@ end
 
 ---
 
-### `getUUID()` {#getUUID}
+### `getUUID()` \{#getUUID}
 
 Gets the UUID of the proxied entity
 
@@ -583,7 +583,7 @@ thisEntity:getUUID()
 
 ---
 
-### `hasAvatar()` {#hasAvatar}
+### `hasAvatar()` \{#hasAvatar}
 
 Returns true if Figura has an avatar loaded for this entity
 
@@ -595,7 +595,7 @@ thisEntity:hasAvatar()
 
 ---
 
-### `getVariable()` {#getVariable}
+### `getVariable()` \{#getVariable}
 
 Gets the value of a variable this entity stored in themselves using the Avatar api's store() function
 

@@ -8,7 +8,7 @@ local myMat = matrices.mat3()
 
 ---
 
-### `add(Matrix3)` {#add}
+### `add(Matrix3)` \{#add}
 
 Adds the other matrix to this one
 
@@ -16,7 +16,7 @@ Returns self for chaining
 
 ---
 
-### `scale(Vector3)` {#scale}
+### `scale(Vector3)` \{#scale}
 
 Adds the other matrix to this one
 
@@ -30,7 +30,7 @@ myMat:scale(2, 2, 2)
 
 ---
 
-### `apply(Vector2)` {#apply}
+### `apply(Vector2)` \{#apply}
 
 Treats the given values as a vector, augments this vector with a 1, multiplies it against the matrix, and returns a deaugmented vector of the first values
 
@@ -42,7 +42,7 @@ myMat:apply()
 
 ---
 
-### `set(Matrix3)` {#set}
+### `set(Matrix3)` \{#set}
 
 Sets this matrix to have the same values as the matrix passed in
 
@@ -56,7 +56,7 @@ myMat:set()
 
 ---
 
-### `copy()` {#copy}
+### `copy()` \{#copy}
 
 Creates and returns a new copy of this matrix
 
@@ -68,7 +68,7 @@ myMat:copy()
 
 ---
 
-### `reset()` {#reset}
+### `reset()` \{#reset}
 
 Resets this matrix back to the identity matrix
 
@@ -82,7 +82,7 @@ myMat:reset()
 
 ---
 
-### `multiply(Matrix3)` {#multiply}
+### `multiply(Matrix3)` \{#multiply}
 
 Multiplies this matrix by the other matrix, with the other matrix on the left
 
@@ -90,7 +90,7 @@ Returns self for chaining
 
 ---
 
-### `rotate(Vector3)` {#rotate}
+### `rotate(Vector3)` \{#rotate}
 
 Rotates this matrix by the specified amount, changing the values inside
 
@@ -106,7 +106,7 @@ myMat:rotate(90, 90, 90)
 
 ---
 
-### `sub(Matrix3)` {#sub}
+### `sub(Matrix3)` \{#sub}
 
 Subtracts the other matrix from this one
 
@@ -114,7 +114,7 @@ Returns self for chaining
 
 ---
 
-### `augmented()` {#augmented}
+### `augmented()` \{#augmented}
 
 Augments this matrix, adding an additional row and column
 
@@ -128,7 +128,7 @@ myMat:augmented()
 
 ---
 
-### `inverted()` {#inverted}
+### `inverted()` \{#inverted}
 
 Returns a copy of this matrix, but inverted
 
@@ -140,7 +140,7 @@ myMat:inverted()
 
 ---
 
-### `translate(Vector2)` {#translate}
+### `translate(Vector2)` \{#translate}
 
 Translates this matrix by the specified amount, changing the values inside
 
@@ -154,7 +154,7 @@ myMat:translate(2, 2, 2)
 
 ---
 
-### `transposed()` {#transposed}
+### `transposed()` \{#transposed}
 
 Returns a copy of this matrix, but transposed
 
@@ -168,7 +168,7 @@ myMat:transposed()
 
 ---
 
-### `rightMultiplty(Matrix3)` {#transposed}
+### `rightMultiplty(Matrix3)` \{#transposed}
 
 Multiplies this matrix by the other matrix, with the other matrix on the right
 
@@ -176,7 +176,7 @@ Returns self for chaining
 
 ---
 
-### `applyDir(Vector2)` {#applyDir}
+### `applyDir(Vector2)` \{#applyDir}
 
 Treats the given values as a vector, augments this vector with a 0, multiplies it against the matrix, and returns a deaugmented vector of the first values
 
@@ -188,7 +188,7 @@ myMat:applyDir()
 
 ---
 
-### `deaugmented()` {#deaugmented}
+### `deaugmented()` \{#deaugmented}
 
 Deaugments this matrix, removing a row and column
 
@@ -200,7 +200,7 @@ myMat:deaugmented()
 
 ---
 
-### `det()` {#det}
+### `det()` \{#det}
 
 Calculates and returns the determinant of this matrix
 
@@ -212,7 +212,7 @@ myMat:det()
 
 ---
 
-### `transpose()` {#transpose}
+### `transpose()` \{#transpose}
 
 Transposes this matrix, changing the values inside
 
@@ -228,7 +228,7 @@ myMat:transpose()
 
 ---
 
-### `getColumn(int)` {#getColumn}
+### `getColumn(int)` \{#getColumn}
 
 Gets the given column of this matrix, as a vector
 
@@ -242,7 +242,7 @@ myMat:getColumn(1)
 
 ---
 
-### `getRow(int)` {#getRow}
+### `getRow(int)` \{#getRow}
 
 Gets the given row of this matrix, as a vector
 
@@ -256,7 +256,7 @@ myMat:getRow(1)
 
 ---
 
-### `rotateX(number)` {#rotateX}
+### `rotateX(number)` \{#rotateX}
 
 Rotates this matrix around the X axis by the specified number of degrees
 
@@ -270,7 +270,7 @@ myMat:rotateX(90)
 
 ---
 
-### `rotateY(number)` {#rotateY}
+### `rotateY(number)` \{#rotateY}
 
 Rotates this matrix around the Y axis by the specified number of degrees
 
@@ -284,7 +284,7 @@ myMat:rotateY(90)
 
 ---
 
-### `rotateZ(number)` {#rotateZ}
+### `rotateZ(number)` \{#rotateZ}
 
 Rotates this matrix around the Z axis by the specified number of degrees
 
@@ -298,7 +298,7 @@ myMat:rotateZ(90)
 
 ---
 
-### `invert()` {#invert}
+### `invert()` \{#invert}
 
 Inverts this matrix, changing the values inside
 

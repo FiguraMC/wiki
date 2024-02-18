@@ -12,7 +12,7 @@ local biome = world.getBiome(player:getPos())
 
 ---
 
-### `getPos()` {#getPos}
+### `getPos()` \{#getPos}
 
 Returns the saved position for this Biome's proxy
 
@@ -26,7 +26,7 @@ biome:getPos()
 
 ---
 
-### `setPos(Vector3)` {#setPos}
+### `setPos(Vector3)` \{#setPos}
 
 Returns the saved position for this Biome's proxy
 
@@ -40,7 +40,7 @@ biome:setPos(player:getPos())
 
 ---
 
-### `getTags()` {#getTags}
+### `getTags()` \{#getTags}
 
 Gets the worldgen related tags from this Biome
 
@@ -52,7 +52,7 @@ biome:getTags()
 
 ---
 
-### `getTemperature()` {#getTemperature}
+### `getTemperature()` \{#getTemperature}
 
 Gets the temperature of this biome
 
@@ -64,7 +64,7 @@ biome:getTemperature()
 
 ---
 
-### `getWaterColor()` {#getWaterColor}
+### `getWaterColor()` \{#getWaterColor}
 
 Gets this biome's water color as a RGB vector
 
@@ -76,7 +76,7 @@ biome:getWaterColor()
 
 ---
 
-### `getWaterFogColor()` {#getWaterFogColor}
+### `getWaterFogColor()` \{#getWaterFogColor}
 
 Gets this biome's water fog color as a RGB vector
 
@@ -88,7 +88,7 @@ biome:getWaterFogColor()
 
 ---
 
-### `isHot()` {#isHot}
+### `isHot()` \{#isHot}
 
 Checks if this biome is hot
 
@@ -100,7 +100,7 @@ biome:isHot()
 
 ---
 
-### `isCold()` {#isCold}
+### `isCold()` \{#isCold}
 
 Checks if this biome is cold
 
@@ -112,7 +112,7 @@ biome:isCold()
 
 ---
 
-### `getPrecipitation()` {#getPrecipitation}
+### `getPrecipitation()` \{#getPrecipitation}
 
 Gets the rain type of this biome
 
@@ -126,7 +126,7 @@ biome:getPrecipitation()
 
 ---
 
-### `getDownfall()` {#getDownfall}
+### `getDownfall()` \{#getDownfall}
 
 Gets this biome's humidity
 
@@ -138,7 +138,7 @@ biome:getDownfall()
 
 ---
 
-### `getSkyColor()` {#getSkyColor}
+### `getSkyColor()` \{#getSkyColor}
 
 Gets this biome's sky color as a RGB vector
 
@@ -150,7 +150,7 @@ biome:getSkyColor()
 
 ---
 
-### `getFogColor()` {#getFogColor}
+### `getFogColor()` \{#getFogColor}
 
 Gets this biome's fog color as a RGB vector
 
@@ -162,7 +162,7 @@ biome:getFogColor()
 
 ---
 
-### `getGrassColor()` {#getGrassColor}
+### `getGrassColor()` \{#getGrassColor}
 
 Gets this biome's grass color as a RGB vector
 
@@ -174,7 +174,7 @@ biome:getGrassColor()
 
 ---
 
-### `getFoliageColor()` {#getFoliageColor}
+### `getFoliageColor()` \{#getFoliageColor}
 
 Gets this biome's foliage color as a RGB vector
 
@@ -186,7 +186,7 @@ biome:getFoliageColor()
 
 ---
 
-### `id` {#id}
+### `id` \{#id}
 
 The id of this biome
 

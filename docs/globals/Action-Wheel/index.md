@@ -6,7 +6,7 @@ The global instance of the ActionWheelAPI and its subtypes
 
 For more on pages go to [Page](./action-wheel/Page)
 
-### `newPage(string)` {#newPage}
+### `newPage(string)` \{#newPage}
 
 Creates a new Page for the action wheel
 
@@ -22,7 +22,7 @@ local myPage = action_wheel:newPage()
 
 ---
 
-### `setPage()` {#setPage}
+### `setPage()` \{#setPage}
 
 Sets the Page of the action wheel to the given Title or Page
 
@@ -34,7 +34,7 @@ action_wheel:setPage(myPage)
 
 ---
 
-### `getPage(string)` {#getPage}
+### `getPage(string)` \{#getPage}
 
 Sets the Page of the action wheel to the given Title or Page
 
@@ -42,14 +42,14 @@ Sets the Page of the action wheel to the given Title or Page
 
 ```lua
 action_wheel:newPage("myPage")
-// highlight-next-line
+-- highlight-next-line
 action_wheel:getPage("myPage")
 -- because getPage needs a string you can only use getPage on pages with titles
 ```
 
 ---
 
-### `getCurrentPage()` {#getCurrentPage}
+### `getCurrentPage()` \{#getCurrentPage}
 
 Returns the current set Page from the Action Wheel, or NIL if no Page has been set
 
@@ -63,7 +63,7 @@ action_wheel:getCurrentPage()
 
 For more information on actions see [Action](./action-wheel/Action)
 
-### `newAction()` {#newAction}
+### `newAction()` \{#newAction}
 
 Creates a new Action that is not automatically asigned to a Page
 
@@ -75,7 +75,7 @@ local myAction = action_wheel:newAction()
 
 ---
 
-### `getSelectedAction()` {#getSelectedAction}
+### `getSelectedAction()` \{#getSelectedAction}
 
 Returns the Action that is currently selected in the Action Wheel
 
@@ -87,7 +87,7 @@ action_wheel:getSelectedAction()
 
 ---
 
-### `getSelected()` {#getSelected}
+### `getSelected()` \{#getSelected}
 
 Returns the index of the currently selected action
 
@@ -99,7 +99,7 @@ action_wheel:getSelected()
 
 ## Wheel
 
-### `isEnabled()` {#isEnabled}
+### `isEnabled()` \{#isEnabled}
 
 Returns if the Action Wheel is being currently rendered or not
 
@@ -111,7 +111,7 @@ action_wheel:isEnabled()
 
 ---
 
-### `execute(int,bool)` {#execute}
+### `execute(int,bool)` \{#execute}
 
 Executes the action of the given index, only if the action wheel is open
 
@@ -127,7 +127,7 @@ action_wheel:execute(1, false)
 
 ---
 
-### `leftClick` {#leftClick}
+### `leftClick` \{#leftClick}
 
 Function that is executed when the left mouse button is clicked, only if the action wheel is open
 
@@ -141,7 +141,7 @@ end
 
 ---
 
-### `rightClick` {#rightClick}
+### `rightClick` \{#rightClick}
 
 Function that is executed when the right mouse button is clicked, only if the action wheel is open
 
@@ -155,7 +155,7 @@ end
 
 ---
 
-### `scroll` {#scroll}
+### `scroll` \{#scroll}
 
 Function that is executed when the mouse is scrolled, only if the action wheel is open
 

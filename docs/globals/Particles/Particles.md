@@ -1,6 +1,6 @@
 The global instance of ParticleAPI
 
-### `newParticle(string,Vector3)` {#newParticle}
+### `newParticle(string,Vector3)` \{#newParticle}
 
 Creates a particle with the given name at the specified position, with the given velocity
 
@@ -22,7 +22,7 @@ particles:newParticle("explosion", player:getPos())
 
 ---
 
-### `removeParticles()` {#removeParticles}
+### `removeParticles()` \{#removeParticles}
 
 **Example**:
 
@@ -32,7 +32,7 @@ particles:removeParticles()
 
 ---
 
-### `isPresent(string)` {#isPresent}
+### `isPresent(string)` \{#isPresent}
 
 **Example**:
 

@@ -1,8 +1,21 @@
-The world API is accessed through the <code>world</code> global. Like so: <code>world.getTime()</code>. Note how the world API uses a period (.) instead of a colon (:) like most other APIs.
+The world API is accessed through the <code>world</code> global. Like so: <code>world.getTime()</code>.
+
+:::info
+The functions in the World API never receive `self` as a parameter. Because of this they should be called with a `.` instead of `:`
+
+```lua
+-- error-next-line
+world:getBlockState(player:getPos())
+
+-- highlight-next-line
+world.getBlockState(player:getPos())
+```
+
+:::
 
 ---
 
-### `exists()` {#exists}
+### `exists()` \{#exists}
 
 Checks whether or not a world currently exists
 
@@ -11,12 +24,12 @@ This will almost always be true, but might be false on some occasions such as wh
 **Example**:
 
 ```lua
-world:exists()
+world.exists()
 ```
 
 ---
 
-### `getPlayers()` {#getPlayers}
+### `getPlayers()` \{#getPlayers}
 
 Returns a table containing instances of Player for all players in the world
 
@@ -25,14 +38,14 @@ The players are indexed by their names
 **Example**:
 
 ```lua
-for _, players in pairs(world:getPlayers()) do
+for _, players in pairs(world.getPlayers()) do
     log(players)
 end
 ```
 
 ---
 
-### `getTime()` {#getTime}
+### `getTime()` \{#getTime}
 
 Gets the current game time of the world
 
@@ -43,12 +56,12 @@ The default value of delta is zero
 **Example**:
 
 ```lua
-world:getTime()
+world.getTime()
 ```
 
 ---
 
-### `getTimeOfDay()` {#getTimeOfDay}
+### `getTimeOfDay()` \{#getTimeOfDay}
 
 Gets the current day time of the world
 
@@ -59,48 +72,48 @@ The default value of delta is zero
 **Example**:
 
 ```lua
-world:getTimeOfDay()
+world.getTimeOfDay()
 ```
 
 ---
 
-### `getMoonPhase()` {#getMoonPhase}
+### `getMoonPhase()` \{#getMoonPhase}
 
 Gets the current moon phase of the world, stored as an integer
 
 **Example**:
 
 ```lua
-world:getMoonPhase()
+world.getMoonPhase()
 ```
 
 ---
 
-### `getDimension()` {#getDimension}
+### `getDimension()` \{#getDimension}
 
 Gets the dimension name of this world
 
 **Example**:
 
 ```lua
-world:getDimension()
+world.getDimension()
 ```
 
 ---
 
-### `getBiome(Vector3)` {#getBiome}
+### `getBiome(Vector3)` \{#getBiome}
 
 Gets the Biome located at the given position
 
 **Example**:
 
 ```lua
-world:getBiome(player:getPos())
+world.getBiome(player:getPos())
 ```
 
 ---
 
-### `getEntity(string)` {#getEntity}
+### `getEntity(string)` \{#getEntity}
 
 Returns an EntityAPI object from this UUID's entity, or nil if no entity was found
 
@@ -112,91 +125,91 @@ world.getEntity("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
 
 ---
 
-### `getBlockState(Vector3)` {#getBlockState}
+### `getBlockState(Vector3)` \{#getBlockState}
 
 Gets the BlockState of the block at the given position
 
 **Example**:
 
 ```lua
-world:getBlockState(player:getPos())
+world.getBlockState(player:getPos())
 ```
 
 ---
 
-### `getStrongRedstonePower(Vector3)` {#getStrongRedstonePower}
+### `getStrongRedstonePower(Vector3)` \{#getStrongRedstonePower}
 
 Gets the direct redstone power level of the block at the given position
 
 **Example**:
 
 ```lua
-world:getStrongRedstonePower(player:getPos())
+world.getStrongRedstonePower(player:getPos())
 ```
 
 ---
 
-### `getRedstonePower(Vector3)` {#getRedstonePower}
+### `getRedstonePower(Vector3)` \{#getRedstonePower}
 
 Gets the redstone power level of the block at the given position
 
 **Example**:
 
 ```lua
-world:getRedstonePower(player:getPos())
+world.getRedstonePower(player:getPos())
 ```
 
 ---
 
-### `getSkyLightLevel(Vector3)` {#getSkyLightLevel}
+### `getSkyLightLevel(Vector3)` \{#getSkyLightLevel}
 
 Gets the sky light level of the block at the given position
 
 **Example**:
 
 ```lua
-world:getSkyLightLevel(player:getPos())
+world.getSkyLightLevel(player:getPos())
 ```
 
 ---
 
-### `getBlockLightLevel(Vector3)` {#getBlockLightLevel}
+### `getBlockLightLevel(Vector3)` \{#getBlockLightLevel}
 
 Gets the block light level of the block at the given position
 
 **Example**:
 
 ```lua
-world:getBlockLightLevel(player:getPos())
+world.getBlockLightLevel(player:getPos())
 ```
 
 ---
 
-### `getLightLevel(Vector3)` {#getLightLevel}
+### `getLightLevel(Vector3)` \{#getLightLevel}
 
 Gets the overall light level of the block at the given position
 
 **Example**:
 
 ```lua
-world:getLightLevel(player:getPos())
+world.getLightLevel(player:getPos())
 ```
 
 ---
 
-### `isOpenSky(Vector3)` {#isOpenSky}
+### `isOpenSky(Vector3)` \{#isOpenSky}
 
 Gets whether or not the sky is open at the given position
 
 **Example**:
 
 ```lua
-world:isOpenSky(player:getPos())
+world.isOpenSky(player:getPos())
 ```
 
 ---
 
-### `getRainGradient(delta)` {#getRainGradient}
+### `getRainGradient(delta)` \{#getRainGradient}
 
 Gets the current rain gradient in the world, interpolated from the previous tick to the current one
 
@@ -205,48 +218,48 @@ The default value of delta is 1, which is the current tick
 **Example**:
 
 ```lua
-world:getRainGradient()
+world.getRainGradient()
 ```
 
 ---
 
-### `isThundering()` {#isThundering}
+### `isThundering()` \{#isThundering}
 
 Gets whether or not there is currently thunder/lightning happening in the world
 
 **Example**:
 
 ```lua
-world:isThundering()
+world.isThundering()
 ```
 
 ---
 
-### `getBuildHeight()` {#getBuildHeight}
+### `getBuildHeight()` \{#getBuildHeight}
 
 Returns the minimum and maximum build height of the world, as varargs
 
 **Example**:
 
 ```lua
-world:getBuildHeight()
+world.getBuildHeight()
 ```
 
 ---
 
-### `getSpawnPoint()` {#getSpawnPoint}
+### `getSpawnPoint()` \{#getSpawnPoint}
 
 Returns a vector with the coordinates of the world spawn
 
 **Example**:
 
 ```lua
-world:getSpawnPoint()
+world.getSpawnPoint()
 ```
 
 ---
 
-### `getBlocks(Vector3,Vector3)` {#getBlocks}
+### `getBlocks(Vector3,Vector3)` \{#getBlocks}
 
 Gets a list of all BlockStates in the specified area
 
@@ -254,7 +267,7 @@ The maximum area size is 8 x 8 x 8
 
 ---
 
-### `newItem(string,integer,integer)` {#newItem}
+### `newItem(string,integer,integer)` \{#newItem}
 
 Parses and create a new ItemStack from the given string
 
@@ -265,12 +278,12 @@ Note: This doesn't create an item in the world, if you want to make a fake item 
 **Example**:
 
 ```lua
-world:newItem("grass_block", 64, 5)
+world.newItem("grass_block", 64, 5)
 ```
 
 ---
 
-### `newBlock(string,Vector3)` {#newBlock}
+### `newBlock(string,Vector3)` \{#newBlock}
 
 Parses and create a new BlockState from the given string
 
@@ -281,12 +294,12 @@ Note: This doesn't create a block in the world, if you want to make a fake block
 **Example**:
 
 ```lua
-world:newBlock("grass_block", player:getPos())
+world.newBlock("grass_block", player:getPos())
 ```
 
 ---
 
-### `avatarVars()` {#avatarVars}
+### `avatarVars()` \{#avatarVars}
 
 Returns a table containing variables stored from all loaded Avatars "avatar:store()" function
 The table will be indexed by the avatar's owner UUID
@@ -294,5 +307,5 @@ The table will be indexed by the avatar's owner UUID
 **Example**:
 
 ```lua
-world:avatarVars()
+world.avatarVars()
 ```

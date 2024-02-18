@@ -1,4 +1,7 @@
-name: Deploy to Cloudflare Pages
+# Clones the repository which then begins with building the environment,
+# Once built, It deploys the built wiki.
+
+name: Deploy Wiki
 
 on:
   push:
@@ -6,24 +9,17 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup and Build
+        uses: ./.github/actions/setup-env
         with:
-          node-version: 18.x
-          cache: "npm"
+          build: true
 
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
+      - name: Deploy built wiki
         uses: cloudflare/pages-action@v1
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}

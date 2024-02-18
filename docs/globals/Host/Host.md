@@ -4,7 +4,7 @@ Functions in the host API aren't synced, meaning to be useful in multiplayer the
 
 ---
 
-### `isHost()` {#isHost}
+### `isHost()` \{#isHost}
 
 Returns true if this instance of the script is running on host
 
@@ -20,7 +20,7 @@ host:isHost()
 
 ---
 
-### `isJumping()` {#isJumping}
+### `isJumping()` \{#isJumping}
 
 Checks if the jump key is being pressed.
 
@@ -32,7 +32,7 @@ host:isJumping()
 
 ---
 
-### `isFlying()` {#isFlying}
+### `isFlying()` \{#isFlying}
 
 Checks if the player is currently creative flying
 
@@ -44,7 +44,7 @@ host:isFlying()
 
 ---
 
-### `isContainerOpen()` {#isContainerOpen}
+### `isContainerOpen()` \{#isContainerOpen}
 
 Checks if the host has a container screen opened
 
@@ -56,7 +56,7 @@ host:isContainerOpen()
 
 ---
 
-### `getAir()` {#getAir}
+### `getAir()` \{#getAir}
 
 Gets the remaining amount of air of the player. From 300 to -19, whenever you take damage from drowning it sets back to 0. Water breathing freezes the value when underwater. Respiration slows down how quickly the number goes down.
 
@@ -68,7 +68,7 @@ host:getAir()
 
 ---
 
-### `getSlot(number or string)` {#getSlot}
+### `getSlot(number or string)` \{#getSlot}
 
 Gets an ItemStack for the item in the given slot
 
@@ -84,7 +84,7 @@ host:getSlot(0)
 
 ---
 
-### `setSlot(slot, item)` {#setSlot}
+### `setSlot(slot, item)` \{#setSlot}
 
 Sets a slot with an ItemStack
 
@@ -103,7 +103,7 @@ host:setSlot(0, "apple")
 
 ---
 
-### `getScreenSlot(slot)` {#getScreenSlot}
+### `getScreenSlot(slot)` \{#getScreenSlot}
 
 Gets the item in a screen slot
 
@@ -119,7 +119,7 @@ host:getScreenSlot(0)
 
 ---
 
-### `getScreenSlotCount()` {#getScreenSlotCount}
+### `getScreenSlotCount()` \{#getScreenSlotCount}
 
 Gets the number of slots in the screen the player is currently in
 
@@ -133,7 +133,7 @@ host:getScreenSlotCount()
 
 ---
 
-### `getScreen()` {#getScreen}
+### `getScreen()` \{#getScreen}
 
 Gets the class name of the screen the player is currently on. Class names are slightly obfuscated by Minecraft's code and will return a string ending in numbers that are the class' id. A list of class ids can be found in [GS' VSCode docs](https://github.com/GrandpaScout/FiguraRewriteVSDocs), or you can use a log to get the name of the screen you're accessing.
 
@@ -147,7 +147,7 @@ host:getScreen()
 
 ---
 
-### `getStatusEffects()` {#getStatusEffects}
+### `getStatusEffects()` \{#getStatusEffects}
 
 Returns a table of all of the player's status effects
 
@@ -163,7 +163,7 @@ end
 
 ---
 
-### `getAttackCharge()` {#getAttackCharge}
+### `getAttackCharge()` \{#getAttackCharge}
 
 Returns a fraction (0 to 1) of the charge of the player attack
 
@@ -177,7 +177,7 @@ host:getAttackCharge()
 
 ---
 
-### `getReachDistance()` {#getReachDistance}
+### `getReachDistance()` \{#getReachDistance}
 
 Returns the current reach distance of the player
 
@@ -189,7 +189,7 @@ host:getReachDistance()
 
 ---
 
-### `getPickBlock()` {#getPickBlock}
+### `getPickBlock()` \{#getPickBlock}
 
 Returns the current targeted block set by the client
 
@@ -205,7 +205,7 @@ host:getPickBlock()
 
 ---
 
-### `getPickEntity()` {#getPickEntity}
+### `getPickEntity()` \{#getPickEntity}
 
 Returns the current targeted entity set by the client
 
@@ -223,7 +223,7 @@ host:getPickEntity()
 
 ---
 
-### `isChatOpen()` {#isChatOpen}
+### `isChatOpen()` \{#isChatOpen}
 
 Checks if the host has the chat screen opened
 
@@ -235,7 +235,7 @@ host:isChatOpen()
 
 ---
 
-### `sendChatCommand(string)` {#sendChatCommand}
+### `sendChatCommand(string)` \{#sendChatCommand}
 
 Sends the given command in the chat
 
@@ -251,7 +251,7 @@ host:sendChatCommand("kill @a")
 
 ---
 
-### `sendChatMessage(string)` {#sendChatMessage}
+### `sendChatMessage(string)` \{#sendChatMessage}
 
 Sends the given message in the chat
 
@@ -267,7 +267,7 @@ host:sendChatMessage("Hello World")
 
 ---
 
-### `setChatMessage(number, string, Vector3)` {#setChatMessage}
+### `setChatMessage(number, string, Vector3)` \{#setChatMessage}
 
 Modifies a chat message with the given text
 
@@ -285,7 +285,7 @@ host:setChatMessage(1, "Hi?", vec(1, 0, 0))
 
 ---
 
-### `getChatMessage(number)` {#getChatMessage}
+### `getChatMessage(number)` \{#getChatMessage}
 
 Returns a table with information about a chat message
 
@@ -299,7 +299,7 @@ host:getChatMessage(1)
 
 ---
 
-### `appendChatHistory(string)` {#appendChatHistory}
+### `appendChatHistory(string)` \{#appendChatHistory}
 
 Appends the message on the recent chat history
 
@@ -311,7 +311,7 @@ host:appendChatHistory("Hello World")
 
 ---
 
-### `setChatText(string)` {#setChatText}
+### `setChatText(string)` \{#setChatText}
 
 Sets the text currently being typed in the chat window to the given string
 
@@ -327,7 +327,7 @@ host:setChatText("Hello World")
 
 ---
 
-### `getChatText()` {#getChatText}
+### `getChatText()` \{#getChatText}
 
 Gets the text that is currently being typed into the chat window
 
@@ -339,7 +339,7 @@ host:getChatText() == "Hello World"
 
 ---
 
-### `setChatColor(Vector3)` {#setChatColor}
+### `setChatColor(Vector3)` \{#setChatColor}
 
 Sets the color of the text that is currently being typed into the chat window
 
@@ -351,7 +351,7 @@ host:setChatColor(0, 0, 1)
 
 ---
 
-### `getChatColor()` {#getChatColor}
+### `getChatColor()` \{#getChatColor}
 
 Gets the chat window text color
 
@@ -363,7 +363,7 @@ host:getChatColor()
 
 ---
 
-### `isChatVerified()` {#isChatVerified}
+### `isChatVerified()` \{#isChatVerified}
 
 Presumably gets if the messages being sent are verified by the Minecraft server (speculation)
 
@@ -379,7 +379,7 @@ host:isChatVerified()
 
 ---
 
-### `swingArm(boolean)` {#swingArm}
+### `swingArm(boolean)` \{#swingArm}
 
 Animates swinging the player's arm
 
@@ -393,7 +393,7 @@ host:swingArm()
 
 ---
 
-### `setTitle(string)` {#setTitle}
+### `setTitle(string)` \{#setTitle}
 
 Sets the current title to the given text
 
@@ -407,7 +407,7 @@ host:setTitle("Hello World")
 
 ---
 
-### `setSubtitle(string)` {#setSubtitle}
+### `setSubtitle(string)` \{#setSubtitle}
 
 Sets the current subtitle to the given text
 The text is given as json
@@ -420,7 +420,7 @@ host:setSubtitle("Hello World")
 
 ---
 
-### `setActionbar(string, boolean)` {#setActionbar}
+### `setActionbar(string, boolean)` \{#setActionbar}
 
 Sets the action bar message to the given text
 
@@ -434,7 +434,7 @@ host:setActionbar("Hello World")
 
 ---
 
-### `setTitleTimes(Vector3)` {#setTitleTimes}
+### `setTitleTimes(Vector3)` \{#setTitleTimes}
 
 Sets the duration of the title on the screen, also its fade-in and fade-out durations.
 
@@ -448,7 +448,7 @@ host:setTitleTimes(5, 5, 5)
 
 ---
 
-### `clearTitle()` {#clearTitle}
+### `clearTitle()` \{#clearTitle}
 
 Clears the current title from the GUI
 
@@ -460,7 +460,7 @@ host:clearTitle()
 
 ---
 
-### `setUnlockCursor(boolean)` {#setUnlockCursor}
+### `setUnlockCursor(boolean)` \{#setUnlockCursor}
 
 Toggles locking of your cursor, letting you move it freely on the screen instead of it controlling your player's rotation
 
@@ -472,7 +472,7 @@ host:setUnlockCursor(true)
 
 ---
 
-### `isCursorUnlocked()` {#isCursorUnlocked}
+### `isCursorUnlocked()` \{#isCursorUnlocked}
 
 Checks if the cursor is currently unlocked
 
@@ -486,7 +486,7 @@ host:isCursorUnlocked()
 
 ---
 
-### `screenshot()` {#screenshot}
+### `screenshot()` \{#screenshot}
 
 Takes a screenshot from the current screen and returns a Texture of it
 
@@ -498,7 +498,7 @@ host:screenshot()
 
 ---
 
-### `setClipboard(string)` {#setClipboard}
+### `setClipboard(string)` \{#setClipboard}
 
 Sets the clipboard text
 
@@ -510,7 +510,7 @@ host:setClipboard("Hello World")
 
 ---
 
-### `getClipboard()` {#getClipboard}
+### `getClipboard()` \{#getClipboard}
 
 Gets the text from the clipboard
 
@@ -522,7 +522,7 @@ host:getClipboard()
 
 ---
 
-### `isAvatarUploaded()` {#isAvatarUploaded}
+### `isAvatarUploaded()` \{#isAvatarUploaded}
 
 Checks if this avatar is currently uploaded
 

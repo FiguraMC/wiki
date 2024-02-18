@@ -2,7 +2,7 @@ The global instance of the MatricesAPI and its subtypes
 
 ## Matrix2
 
-### `mat2()` {#mat2}
+### `mat2()` \{#mat2}
 
 Creates a Matrix2 using the given parameters as columns
 
@@ -16,7 +16,7 @@ matrices.mat2()
 
 ---
 
-### `rotation2(number)` {#rotation2}
+### `rotation2(number)` \{#rotation2}
 
 Creates a new Matrix2 that rotates by the specified angle
 
@@ -30,7 +30,7 @@ matrices.rotation2(90)
 
 ---
 
-### `scale2(Vector2)` {#scale2}
+### `scale2(Vector2)` \{#scale2}
 
 Creates a new Matrix2 that scales by the specified factors
 
@@ -42,7 +42,7 @@ matrices.scale2(2, 2)
 
 ## Matrix3
 
-### `mat3()` {#mat3}
+### `mat3()` \{#mat3}
 
 Creates a Matrix3 using the given parameters as columns
 
@@ -56,7 +56,7 @@ matrices.mat3()
 
 ---
 
-### `rotation3(Vector3)` {#rotation3}
+### `rotation3(Vector3)` \{#rotation3}
 
 Creates a new Matrix3 that rotates by the specified angles
 
@@ -70,7 +70,7 @@ matrices.rotation3(90, 90, 90)
 
 ---
 
-### `xRotation3(number)` {#xRotation3}
+### `xRotation3(number)` \{#xRotation3}
 
 Creates a new Matrix3 that rotates by the specified angle around the X axis
 
@@ -84,7 +84,7 @@ matrices.xRotation3(90)
 
 ---
 
-### `yRotation3(number)` {#yRotation3}
+### `yRotation3(number)` \{#yRotation3}
 
 Creates a new Matrix3 that rotates by the specified angle around the Y axis
 
@@ -98,7 +98,7 @@ matrices.yRotation3(90)
 
 ---
 
-### `zRotation3(number)` {#zRotation3}
+### `zRotation3(number)` \{#zRotation3}
 
 Creates a new Matrix3 that rotates by the specified angle around the Z axis
 
@@ -112,7 +112,7 @@ matrices.zRotation3(90)
 
 ---
 
-### `translate3(Vector2)` {#translate3}
+### `translate3(Vector2)` \{#translate3}
 
 Creates a new Matrix3 that translates by the specified offset
 
@@ -124,7 +124,7 @@ matrices.translate3(90, 90)
 
 ---
 
-### `scale3(Vector3)` {#scale3}
+### `scale3(Vector3)` \{#scale3}
 
 Creates a new Matrix3 that scales by the specified factors
 
@@ -136,7 +136,7 @@ matrices.scale3(2, 2, 2)
 
 ## Matrix4
 
-### `mat4()` {#mat4}
+### `mat4()` \{#mat4}
 
 Creates a Matrix4 using the given parameters as columns
 
@@ -150,7 +150,7 @@ matrices.mat4()
 
 ---
 
-### `rotation4(Vector3)` {#rotation4}
+### `rotation4(Vector3)` \{#rotation4}
 
 Creates a new Matrix4 that rotates by the specified angles
 
@@ -164,7 +164,7 @@ matrices.rotation4(90, 90, 90)
 
 ---
 
-### `xRotation4(number)` {#xRotation4}
+### `xRotation4(number)` \{#xRotation4}
 
 Creates a new Matrix4 that rotates by the specified angle around the X axis
 
@@ -178,7 +178,7 @@ matrices.xRotation4(90)
 
 ---
 
-### `yRotation4(number)` {#yRotation4}
+### `yRotation4(number)` \{#yRotation4}
 
 Creates a new Matrix4 that rotates by the specified angle around the Y axis
 
@@ -192,7 +192,7 @@ matrices.yRotation4(90)
 
 ---
 
-### `zRotation4(number)` {#zRotation4}
+### `zRotation4(number)` \{#zRotation4}
 
 Creates a new Matrix4 that rotates by the specified angle around the Z axis
 
@@ -206,7 +206,7 @@ matrices.zRotation4(90)
 
 ---
 
-### `translate4(Vector3)` {#translate4}
+### `translate4(Vector3)` \{#translate4}
 
 Creates a new Matrix4 that translates by the specified offset
 
@@ -218,7 +218,7 @@ matrices.translate4(90, 90, 90)
 
 ---
 
-### `scale4(Vector3)` {#scale4}
+### `scale4(Vector3)` \{#scale4}
 
 Creates a new Matrix4 that scales by the specified factors
 
