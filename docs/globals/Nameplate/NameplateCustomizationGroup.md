@@ -1,6 +1,6 @@
 Nameplate customization that applies to every nameplate type
 
-### setText(string) \{#setText}
+### `setText(string)` {#setText}
 
 **Example**:
 

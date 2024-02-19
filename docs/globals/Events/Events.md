@@ -321,6 +321,7 @@ Called on every one of your items that is being rendered
 -   `ItemStack` - The item
 -   `string` - The rendering mode.
 -   `Vector3` - Position of the item.
+-   `Vector3` - Rotation of the item.
 -   `Vector3` - Scale of the item.
 -   `boolean` - If the item is being rendered from the left hand.
 

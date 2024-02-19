@@ -1,6 +1,6 @@
 Nameplate customization that applies to Chat (the nameplate attached to your chat messages) and List (the nameplate in the tab list)
 
-### setText(string) \{#setText}
+### `setText(string)` {#setText}
 
 **Example**:
 
@@ -10,7 +10,7 @@ nameplate.Chat:setText("Herobrine")
 
 ---
 
-### getText() \{#getText}
+### `getText()` {#getText}
 
 **Example**:
 

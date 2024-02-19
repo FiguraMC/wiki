@@ -334,7 +334,7 @@ Gets the text that is currently being typed into the chat window
 **Example**:
 
 ```lua
-host:getChatText("Hello World")
+host:getChatText() == "Hello World"
 ```
 
 ---

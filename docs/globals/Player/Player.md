@@ -334,7 +334,7 @@ Gets the current food level of the player, from 0 to 20
 **Example**:
 
 ```lua
-player:getfood()
+player:getFood()
 ```
 
 ---
