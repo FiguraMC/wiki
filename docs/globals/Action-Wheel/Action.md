@@ -34,12 +34,12 @@ Sets the function that is executed when the left mouse button is clicked. Figura
 
 <!-- prettier-ignore -->
 ```lua
-myPage:newAction()
--- highlight-start
-    :setOnLeftClick(function()
-        print('I left clicked this button!')
-    end)
--- highlight-end
+function pings.lefty()
+    print('I left clicked this button!')
+end
+local myAction = myPage:newAction()
+-- highlight-next-line
+    :setOnLeftClick(pings.lefty)
 ```
 
 ---
@@ -76,12 +76,12 @@ Sets the function that is executed when the right mouse button is clicked. Figur
 
 <!-- prettier-ignore -->
 ```lua
-myPage:newAction()
--- highlight-start
-    :setOnRightClick(function()
-        print('I right clicked this button!')
-    end)
--- highlight-end
+function pings.righty()
+    print('I right clicked this button!')
+end
+local myAction = myPage:newAction()
+-- highlight-next-line
+    :setOnRightClick(pings.righty)
 ```
 
 ---
@@ -122,7 +122,7 @@ function pings.setVisible(state)
     models:setVisible(state)
 end
 
-myPage:newAction()
+local myAction = myPage:newAction()
     :title("disabled")
     :toggleTitle("enabled")
     :item("red_wool")
@@ -172,14 +172,18 @@ Unlike Toggle which gets executed when the Action is toggled on or off, `UnToggl
 
 <!-- prettier-ignore -->
 ```lua
-myPage:newAction()
-    :setOnToggle(function(bool)
-        print('This is always true: ', .. bool)
-    end)
+function pings.toggley(bool)
+    print('This is always true: ', .. bool)
+end
+
+function pings.untoggley(bool)
+    print('This is always false: ' .. bool)
+end
+
+local myAction = myPage:newAction()
+    :setOnToggle(pings.toggley)
 -- highlight-start
-    :setOnUntoggle(function(bool)
-        print('This is always false: ' .. bool)
-    end)
+    :setOnUntoggle(pings.untoggley)
 -- highlight-end
 ```
 
@@ -220,11 +224,15 @@ This will execute when the mouse wheel scrolls while hovering over the Action. T
 ```lua
 local current = 0
 
-myPage:newAction()
+function pings.scrolling(dir)
+    print("Scrolled in this direction: " .. dir)
+end
+
+local myAction = myPage:newAction()
     :title('Current: ', current)
 -- highlight-start
     :setOnScroll(function(dir, self)
-        print("Scrolled in this direction: " .. dir)
+        pings.scrolling(dir)
         current = current + dir
         self:title('Current: ', current)
     end)
@@ -272,7 +280,7 @@ Sets the title of the Action.
 ```lua
 local myPage = action_wheel:new_page()
 local myAction = myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setTitle('Click me!')
 ```
 
@@ -323,7 +331,7 @@ Sets an item to display on the Acton.
 ```lua
 local myPage = action_wheel:new_page()
 local myAction = myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setItem('minecraft:stone')
 ```
 
@@ -351,7 +359,7 @@ Sets the color of the Action. Takes a `Vector3` of rgb values or a number per va
 ```lua
 local myPage = action_wheel:new_page()
 local myAction = myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
@@ -407,12 +415,12 @@ Sets the texture of the Action. All parameters other than `Texture` are optional
 <!-- prettier-ignore -->
 ```lua
 -- basic
-myPage:newAction()
+local myAction = myPage:newAction()
 -- highlight-next-line
     :setTexture(textures['myTexture'])
 
 -- advanced
-myPage:newAction()
+local myAction = myPage:newAction()
 -- highlight-next-line
     :setTexture(textures['myTexture'], 16, 32, nil, nil, 2)
 
@@ -442,7 +450,7 @@ Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb v
 ```lua
 local myPage = action_wheel:new_page()
 local myAction = myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setHoverColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
@@ -499,12 +507,12 @@ Sets the texture of the Action when it's hovered. All parameters other than `Tex
 ```lua
 -- basic
 local myAction = myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setHoverTexture(textures['myTexture'])
 
 -- advanced
 local myAction = myPage:newAction()
-// highlight-next-line
+-- highlight-next-line
     :setHoverTexture(textures['myTexture'], 16, 32, nil, nil, 2)
 
 ```
@@ -563,10 +571,10 @@ Gets the Action's title when toggled.
 ```lua
 local myPage = action_wheel:new_page()
 local myAction = myPage:newAction()
-// highlight-next-line
+    -- highlight-next-line
     :setToggleTitle('Stand')
 
--- highlight-next-line
+    -- highlight-next-line
 print(myAction:getToggleTitle())
 ```
 
@@ -765,249 +773,3 @@ end
 ```
 
 ---
-
-For this entire page assume:
-
-```lua
-local myPage = action_wheel:newPage()
-action_wheel:setPage(myPage)
-```
-
-## Action Events
-
-Technically they are "callbacks" and not "events" as you can only assign a single function, but eh.
-It's common practice to pass pings to these functions since interacting with the action_wheel is not sync'd between clients. Checkout the [`setOnToggle`](#setOnToggle) function to see an example.
-
----
-
-### `leftClick` {#leftClick}
-
-The field that holds the callback for when the left mouse button is clicked on the Action. The type of this field is <code>fun(action: [Action](./Action))</code>. This type will be referred to as `LeftFunction` elsewhere in the wiki.
-
-**Parameters**
-
-| Name   | Type                            | Description                           |
-| ------ | ------------------------------- | ------------------------------------- |
-| action | <code>[Action](./Action)</code> | The action the callback was called by |
-
----
-
-### <code>setOnLeftClick(leftFunction: [LeftFunction](#leftClick)): [Action](./Action)</code> {#setOnLeftClick}
-
-Sets the function that is executed when the left mouse button is clicked. Figura passes the Action itself as the first parameter.
-
-**Parameters**
-
-| Name         | Type                                              | Description                                           |
-| ------------ | ------------------------------------------------- | ----------------------------------------------------- |
-| leftFunction | <code>[LeftFuncton](./Action#LeftFunction)</code> | The function that runs when you left click the Action |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-function pings.example()
-    print('I left clicked this button!')
-end
-local myAction = myPage:newAction()
-// highlight-start
-    :setOnLeftClick(pings.example)
-// highlight-end
-```
-
----
-
-### `rightClick` {#rightClick}
-
-The field that holds the callback for when the right mouse button is clicked on the Action. The type of this field is <code>fun(action: [Action](./Action))</code>. This type will be referred to as `RightFunction` elsewhere in the wiki.
-
-**Parameters**
-
-| Name   | Type                            | Description                           |
-| ------ | ------------------------------- | ------------------------------------- |
-| action | <code>[Action](./Action)</code> | The action the callback was called by |
-
----
-
-### <code>setOnRightClick(rightFunction: [RightFunction](#rightClick)): [Action](./Action)</code> {#setOnRightClick}
-
-Sets the function that is executed when the right mouse button is clicked. Figura passes the Action itself as the first parameter.
-
-**Parameters**
-
-| Name          | Type                                                | Description                                            |
-| ------------- | --------------------------------------------------- | ------------------------------------------------------ |
-| rightFunction | <code>[RightFuncton](./Action#RightFunction)</code> | The function that runs when you right click the Action |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-function pings.example()
-    print('I right clicked this button!')
-end
-
-local myAction = myPage:newAction()
-// highlight-start
-    :setOnRightClick(pings.example)
-// highlight-end
-```
-
----
-
-### `toggle` {#toggle}
-
-The field that holds the callback for when the Action is toggled. The type of this field is <code>fun(state: boolean, action: [Action](./Action))</code>. This type will be referred to as `ToggleFunction` elsewhere in the wiki.
-
-**Parameters**
-
-| Name   | Type                            | Description                              |
-| ------ | ------------------------------- | ---------------------------------------- |
-| state  | boolean                         | Whether the action was toggled on or off |
-| action | <code>[Action](./Action)</code> | The action the callback was called by    |
-
----
-
-### <code>setOnToggle(toggleFunction: [ToggleFunction](#ToggleFunction)): [Action](./Action)</code> {#setOnToggle}
-
-When the Action is assigned a function to the <code>toggle</code> field, it becomes a Toggle Action. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter, and the Action itself as the second.
-
-**Parameters**
-
-| Name           | Type                                           | Description                                       |
-| -------------- | ---------------------------------------------- | ------------------------------------------------- |
-| toggleFunction | <code>[ToggleFunction](#ToggleFunction)</code> | The function that runs when you toggle the Action |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-function pings.example(state)
-    models:setVisible(state)
-end
-
-local myAction = myPage:newAction()
-    :title("disabled")
-    :toggleTitle("enabled")
-    :item("red_wool")
-    :toggleItem("green_wool")
-    // highlight-next-line
-    :setOnToggle(pings.example)
-```
-
----
-
-### `Untoggle`
-
-The field that holds the callback for when the Action is untoggled. The type of this field is <code>fun(state: boolean, action: [Action](./Action))</code>. This type will be referred to as `UntoggleFunction` elsewhere in the wiki.
-
-**Parameters**
-
-| Name   | Type                            | Description                                                                |
-| ------ | ------------------------------- | -------------------------------------------------------------------------- |
-| state  | boolean                         | Whether the action was toggled on or off. In this case, it is always false |
-| action | <code>[Action](./Action)</code> | The action the callback was called by                                      |
-
----
-
-### <code>setOnUntoggle(untoggleFunction: [UntoggleFunction](#Untoggle)): [Action](./Action)</code> {#setOnUnToggle}
-
-Unlike Toggle which gets executed when the Action is toggled on or off, `UnToggle` only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second.
-
-:::info
-
-`setOnUntoggle` is redundant because [`setOnToggle`](#setOnToggle) will also work when the action is untoggled if there is no `OnUntoggle` function set.
-
-:::
-
-**Parameters**
-
-| Name           | Type                                       | Description                                         |
-| -------------- | ------------------------------------------ | --------------------------------------------------- |
-| toggleFunction | <code>[UntoggleFunction](#Untoggle)</code> | The function that runs when you untoggle the Action |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-function pings.toggleexample(bool)
-    print('This is always true: ', .. bool)
-end
-
-function pings.unexample(bool)
-    print('This is always false: ' .. bool)
-end
-local myAction = myPage:newAction()
-    :setOnToggle(fpings.toggleexample)
-// highlight-start
-    :setOnUntoggle(pings.unexample)
-// highlight-end
-```
-
----
-
-### `scroll`
-
-The field that holds the callback for when the Action is scrolled. The type of this field is <code>fun(dir: number, action: [Action](./Action))</code>. This type will be referred to as `ScrollFunction` elsewhere in the wiki.
-
-**Parameters**
-
-| Name   | Type                            | Description                                                                     |
-| ------ | ------------------------------- | ------------------------------------------------------------------------------- |
-| dir    | number                          | The direction the scrollwheel was moved. Positive for up and negative for down. |
-| action | <code>[Action](./Action)</code> | The action the callback was called by                                           |
-
----
-
-### <code>setOnScroll(onScroll: [ScrollFunction](#scroll)): [Action](./Action)</code> {#setOnScroll}
-
-This will execute when the mouse wheel scrolls while hovering over the Action. The first parameter is the direction the mouse scrolled (1 for scroll up, -1 for scroll down. Can be more than 1 for non-standard mouse wheels). The second paremeter is the Action itself.
-
-**Parameters**
-
-| Name           | Type                                   | Description                                          |
-| -------------- | -------------------------------------- | ---------------------------------------------------- |
-| toggleFunction | <code>[ScrollFunction](#scroll)</code> | The function that runs when you scroll on the Action |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
-```lua
-function pings.example(dir)
-    print("Scrolled in this direction: " .. dir)
-end
-local myAction = myPage:newAction()
-// highlight-start
-    :setOnScroll(pings.example)
-// highlight-end
-```

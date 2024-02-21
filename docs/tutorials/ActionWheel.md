@@ -81,7 +81,7 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    -- Pass in the ping function itself into <code>onLeftClick</code>
+    -- Pass in the ping function itself into onLeftClick
     :onLeftClick(pings.actionClicked)
 ```
 
@@ -139,21 +139,25 @@ local action = mainPage:newAction()
 
 This is an exmaple of the onToggle function, which swaps between two states
 
+<!-- prettier-ignore -->
 ```lua
 function pings.toggling(state)
     models:setVisible(state)
 end
 
-local toggleaction =
-    myPage:newAction():title("disabled"):toggleTitle("enabled"):item("red_wool"):toggleItem("green_wool"):setOnToggle(
-        pings.toggling
-    )
+local toggleaction = myPage:newAction()
+    :title("disabled")
+    :toggleTitle("enabled")
+    :item("red_wool")
+    :toggleItem("green_wool")
+    :setOnToggle(pings.toggling)
 ```
 
 ### Multiple Actions Example
 
 When working with multiple actions, it's important to give the actions and pings unique names
 
+<!-- prettier-ignore -->
 ```lua
 local mainPage = action_wheel:newPage()
 action_wheel:setPage(mainPage)
@@ -162,43 +166,63 @@ function pings.actionClicked() -- this ping is named actionClicked
     print("Hello World!")
 end
 
-local action = mainPage:newAction():title("My Action"):item("minecraft:stick"):hoverColor(1, 0, 1):onLeftClick( -- this action is saved to action
-    pings.actionClicked
-) -- this calls the ping named actionClicked
-function pings.toggling(
-state -- this ping is named toggling. it's important that all pings have unique names
-)
+local action = mainPage:newAction()
+    -- this action is saved to action
+    :title("My Action")
+    :item("minecraft:stick")
+    :hoverColor(1, 0, 1)
+    :onLeftClick(pings.actionClicked)
+    -- this calls the ping named actionClicked
+
+
+function pings.toggling(state)
+    -- this ping is named toggling. it's important that all pings have unique names
     models:setVisible(state)
 end
 
-local toggleaction = myPage:newAction():title("disabled"):toggleTitle("enabled"):item("red_wool"):toggleItem( -- this action is saved to toggleaction. it's important that actions are saved to unique variables
-    "green_wool"
-):setOnToggle(pings.toggling) -- this calls the ping named toggling
+local toggleaction = myPage:newAction()
+    -- this action is saved to toggleaction. it's important that actions are saved to unique variables
+    :title("disabled")
+    :toggleTitle("enabled")
+    :item("red_wool")
+    :toggleItem("green_wool")
+    :setOnToggle(pings.toggling) 
+    -- this calls the ping named toggling
 ```
 
 ### Multiple Pages Example
 
+<!-- prettier-ignore -->
 ```lua
 local mainPage = action_wheel:newPage()
 local secondPage = action_wheel:newPage() -- make sure you save the pages to unique variables
 action_wheel:setPage(mainPage) -- this is setting the page you'll see when you first open the wheel to mainPage
-local toSecond = mainPage:newAction():title("Change To Second Page"):item("item_frame"):onLeftClick(function()
+local toSecond = mainPage:newAction()
+    :title("Change To Second Page")
+    :item("item_frame")
+    :onLeftClick(function()
     -- this is a new action on mainPage. its purpose will be to swap to secondPage
     -- this doesn't need to be pinged
     log("Swapped to the second page")
     action_wheel:setPage(secondPage)
 end)
 
-local toMain = secondPage:newAction():title("Change To Main Page"):item("glow_item_frame"):onLeftClick(function()
+local toMain = secondPage:newAction()
+    :title("Change To Main Page")
+    :item("glow_item_frame")
+    :onLeftClick(function()
     -- this is a new action on secondPage. its purpose will be to swap to mainPage
     log("Swapped to the main page")
     action_wheel:setPage(mainPage)
-end)
+    end)
 
-local newAction = secondPage:newAction():title("Hello"):item("zombie_head"):onLeftClick(function()
+local newAction = secondPage:newAction()
+    :title("Hello")
+    :item("zombie_head")
+    :onLeftClick(function()
     -- this is a second action on the second page just to show it can be done
     log("Hello World")
-end)
+    end)
 ```
 
 ## Further Reading
