@@ -17,8 +17,8 @@ This allows Pages to be modular and easily reorganized if needed. More important
 --ActionWheel.lua
 -- This file controls the root Page. All Pages are 'children' of this Page.
 local mainpage = action_wheel:newPage()
--- <code>setAction</code> is used to add an Action that already exists to this Page
--- You need to specify the slot the Action wil go into, but <code>-1</code> can be used to put it in the next available slot.
+-- setAction is used to add an Action that already exists to this Page
+-- You need to specify the slot the Action wil go into, but -1 can be used to put it in the next available slot.
 mainpage:setAction(-1, require("Page1"))
 mainpage:setAction(-1, require("Page2"))
 action_wheel:setPage(mainpage)
@@ -44,9 +44,9 @@ page:newAction()
         action_wheel:setPage(prevPage)
     end)
 
--- <code>Page:newAction</code> automatically adds the Action to the Page.
--- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
--- This is the Action that will be returned by <code>require</code> and will be used to navigate to this file's Page
+-- Page:newAction automatically adds the Action to the Page.
+-- This is unwanted, so action_wheel:newAction() is used so just make an Action.
+-- This is the Action that will be returned by require and will be used to navigate to this file's Page
 return action_wheel:newAction()
     :title("Page1")
     :onLeftClick(function()
@@ -60,7 +60,7 @@ return action_wheel:newAction()
 <!-- prettier-ignore -->
 ```lua
 --Page2.lua
--- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are <code>local</code>.
+-- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are local.
 local page = action_wheel:newPage()
 page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
@@ -119,5 +119,5 @@ mainpage:newAction()
     :title("Enable Jetpack")
     :toggleTitle("Disable Jetpack")
     :onToggle(pings.setJetpack) -- use the ping for the action toggle, as that is still needs to be pinged
-    :toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
+    :toggled(jetpackEnabled) -- the toggled function sets the internal state of the Toggle Action. It *does not* call toggle or untoggle.
 ```

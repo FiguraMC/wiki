@@ -244,6 +244,44 @@ This ParentType renders the left held item at the ModelPart's pivot point.
 
 ---
 
+### `RightParrotPivot` \{#RightParrotPivot}
+
+-   #### `RIGHT_PARROT_PIVOT` \{#RIGHT_PARROT_PIVOT}
+
+This ParentType renders the entity riding on your right shoulder at the ModelPart's pivot point. I say entity, but that entity will always be a parrot.
+
+---
+
+### `LeftParrotPivot` \{#LeftParrotPivot}
+
+-   #### `LEFT_PARROT_PIVOT` \{#LEFT_PARROT_PIVOT}
+
+This ParentType renders the entity riding on your left shoulder at the ModelPart's pivot point. I say entity, but that entity will always be a parrot.
+
+---
+
+### `RightSpyglassPivot` \{#RightSpyglassPivot}
+
+-   #### `RIGHT_SPYGLASS_PIVOT` \{#RIGHT_SPYGLASS_PIVOT}
+
+This ParentType renders a spyglass at this ModelPart's pivot point when you are using a spyglass in the RightHand.
+
+---
+
+### `LeftSpyglassPivot` \{#LeftSpyglassPivot}
+
+-   #### `LEFT_SPYGLASS_PIVOT` \{#LEFT_SPYGLASS_PIVOT}
+
+This ParentType renders a spyglass at this ModelPart's pivot point when you are using a spyglass in the LeftHand.
+
+---
+
+## Armor Pivot Types
+
+Armor Pivot ParentTypes move the location of specific Vanilla Parts to the pivot point of the ModelPart. If multiple of the same Pivot ParentType are in a bbmodel, multiple of them are rendered. These ParentTypes will only render their Vanilla Part if the part in the <code>vanilla_model</code> global is visible.
+
+---
+
 ### `HelmetPivot` \{#HelmetPivot}
 
 -   #### `HELMET_PIVOT` \{#HELMET_PIVOT}
@@ -252,7 +290,7 @@ This ParentType renders the helmet at the ModelPart's pivot point. For rendering
 
 ---
 
-### `ChestplatePivot`
+### `ChestplatePivot` \{#ChestplatePivot}
 
 -   #### `CHESTPLATE_PIVOT`
 
@@ -260,7 +298,7 @@ This ParentType renders the chestplate at the ModelPart's pivot point.
 
 ---
 
-### `LeftShoulderPivot`
+### `LeftShoulderPivot` \{#LeftShoulderPivot}
 
 -   #### `LEFT_SHOULDER_PIVOT`
 
@@ -268,7 +306,7 @@ This ParentType renders the left shoulder of the chestplate at the ModelPart's p
 
 ---
 
-### `RightShoulderPivot`
+### `RightShoulderPivot` \{#RightShoulderPivot}
 
 -   #### `RIGHT_SHOULDER_PIVOT`
 
@@ -276,7 +314,7 @@ This ParentType renders the right shoulder of the chestplate at the ModelPart's 
 
 ---
 
-### `LeggingsPivot`
+### `LeggingsPivot` \{#LeggingsPivot}
 
 -   #### `LEGGINGS_PIVOT`
 
@@ -300,7 +338,7 @@ This ParentType renders the right legging at the ModelPart's pivot point.
 
 ---
 
-### `LeftBootPivot`
+### `LeftBootPivot` \{#LeftBootPivot}
 
 -   #### `LEFT_BOOT_PIVOT`
 
@@ -308,27 +346,11 @@ This ParentType renders the left boot at the ModelPart's pivot point.
 
 ---
 
-### `RightBootPivot`
+### `RightBootPivot` \{#RightBootPivot}
 
 -   #### `RIGHT_BOOT_PIVOT`
 
 This ParentType renders the right boot at the ModelPart's pivot point.
-
----
-
-### `RightSpyglassPivot` \{#RightSpyglassPivot}
-
--   #### `RIGHT_SPYGLASS_PIVOT` \{#RIGHT_SPYGLASS_PIVOT}
-
-This ParentType renders a spyglass at this ModelPart's pivot point when you are using a spyglass in the RightHand.
-
----
-
-### `LeftSpyglassPivot` \{#LeftSpyglassPivot}
-
--   #### `LEFT_SPYGLASS_PIVOT` \{#LEFT_SPYGLASS_PIVOT}
-
-This ParentType renders a spyglass at this ModelPart's pivot point when you are using a spyglass in the LeftHand.
 
 ---
 
@@ -339,17 +361,3 @@ This ParentType renders a spyglass at this ModelPart's pivot point when you are 
 This ParentType renders the item that is currently in the Helmet slot. This is for stull like pumpkins, banners, bones. For rendering the vanilla helmet in a different location see see [`HelmetPivot`](#HelmetPivot).
 
 ---
-
-### `RightParrotPivot` \{#RightParrotPivot}
-
--   #### `RIGHT_PARROT_PIVOT` \{#RIGHT_PARROT_PIVOT}
-
-This ParentType renders the entity riding on your right shoulder at the ModelPart's pivot point. I say entity, but that entity will always be a parrot.
-
----
-
-### `LeftParrotPivot` \{#LeftParrotPivot}
-
--   #### `LEFT_PARROT_PIVOT` \{#LEFT_PARROT_PIVOT}
-
-This ParentType renders the entity riding on your left shoulder at the ModelPart's pivot point. I say entity, but that entity will always be a parrot.
