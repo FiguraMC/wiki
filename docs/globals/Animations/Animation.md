@@ -107,6 +107,8 @@ myAnim:restart()
 
 ### <code>setPlaying()</code> \{#setPlaying}
 
+**Aliases:** `playing()`
+
 A function that merges "play" and "stop" together
 
 Takes a boolean parameter, where if true, the animation will play, and when false, the animation will stop
@@ -124,7 +126,7 @@ setPlaying()
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setPlaying(bool)
@@ -243,6 +245,8 @@ myAnim:getPlayState()
 
 ### <code>setSpeed()</code> \{#setSpeed}
 
+**Aliases:** `speed()`
+
 Sets the animation's playback speed
 
 Negative numbers can be used for an inverted animation
@@ -294,6 +298,8 @@ myAnim:getSpeed()
 
 ### <code>setLength()</code> \{#setLength}
 
+**Aliases:** `length()`
+
 Set the animation's length, in seconds
 
 ```lua
@@ -340,6 +346,8 @@ myAnim:getLength()
 ---
 
 ### <code>setPriority()</code> \{#setPriority}
+
+**Aliases:** `priority()`
 
 Sets the animation's priority
 
@@ -392,6 +400,8 @@ myAnim:getPriority()
 
 ### <code>setTime()</code> \{#setTime}
 
+**Aliases:** `time()`
+
 Sets the animation's playback current time, in seconds
 
 ```lua
@@ -438,6 +448,8 @@ myAnim:getTime()
 ---
 
 ### <code>setOffset()</code> \{#setOffset}
+
+**Aliases:** `offset()`
 
 Sets how much time to skip for the animation, in seconds
 
@@ -487,6 +499,8 @@ myAnim:getOffset()
 ---
 
 ### <code>setLoop()</code> \{#setLoop}
+
+**Aliases:** `loop()`
 
 Sets the animation's [loop mode](/enums/Loop-Modes)
 
@@ -584,6 +598,8 @@ myAnim:getBlend()
 
 ### <code>setStartDelay()</code> \{#setStartDelay}
 
+**Aliases:** `startDelay()`
+
 Set how much time to wait before this animation is initialized, in seconds
 
 Note that while it is waiting, the animation is considered being played
@@ -632,6 +648,8 @@ myAnim:getStartDelay()
 ---
 
 ### <code>setLoopDelay()</code> \{#setLoopDelay}
+
+**Aliases:** `loopDelay()`
 
 Set how much time to wait in between the loops of this animation, in seconds
 
@@ -682,6 +700,8 @@ myAnim:getLoopDelay()
 
 ### <code>setOverride()</code> \{#setOverride}
 
+**Aliases:** `override()`
+
 Set if this animation should override all of its parts vanilla transforms
 
 Equivalent of calling "overrideRot", "overridePos" and "overrideScale" altogether
@@ -709,6 +729,8 @@ myAnim:setOverride(true)
 ---
 
 ### <code>setOverrideRot()</code> \{#setOverrideRot}
+
+**Aliases:** `overrideRot()`
 
 Set if this animation should override its parts vanilla rotation
 
@@ -757,6 +779,8 @@ myAnim:getOverrideRot()
 
 ### <code>setOverridePos()</code> \{#setOverridePos}
 
+**Aliases:** `overridePos()`
+
 Set if this animation should override its parts vanilla position
 
 ```lua
@@ -803,6 +827,8 @@ myAnim:getOverridePos()
 ---
 
 ### <code>setOverrideScale()</code> \{#setOverrideScale}
+
+**Aliases:** `overrideScale()`
 
 Set if this animation should override its parts vanilla scale
 
