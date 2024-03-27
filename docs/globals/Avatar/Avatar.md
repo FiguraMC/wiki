@@ -1,82 +1,212 @@
-The global instance of AvatarAPI
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+A global API containing functions to interact with your avatar's metadata, and also to get information about the current script environment
 
 ## Metadata
 
-### `getName()` \{#getName}
+### <code>getName()</code> \{#getName}
 
 Gets the name string of this avatar
 
-**Example**:
+```lua
+getName()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getName()
+--todo
 ```
 
 ---
 
-### `getAuthors()` \{#getAuthors}
+### <code>getAuthors()</code> \{#getAuthors}
 
 Gets the authors string of this avatar
 
-**Example**:
+```lua
+getAuthors()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getAuthors()
+--todo
 ```
 
 ---
 
-### `getVersion()` \{#getVersion}
+### <code>getVersion()</code> \{#getVersion}
 
 Gets the version string of this avatar
 
-**Example**:
+```lua
+getVersion()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getVersion()
+--todo
 ```
 
 ---
 
-### `hasTexture()` \{#hasTexture}
+### <code>hasTexture()</code> \{#hasTexture}
 
 Gets whether or not this avatar has a texture
 
-**Example**:
+```lua
+hasTexture()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:hasTexture()
+--todo
 ```
 
 ---
 
-### `setColor(Vector3)` \{#setColor}
+### <code>setColor()</code> \{#setColor}
 
-Sets the current color string of your avatar, used as your avatar theme
+**Aliases:** `color()`
 
-Can be given a rgb as Vector3 or three numbers, it expects numbers 0-1
+Sets the current color string of your avatar, used as your avatar theme, if the user has a special badge, they can pass in the badge's name to set the color for it.
 
-**Example**:
+The color is a value between 0 and 1. Standard RGB values can be divided by 255 to get a number the function can use.
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-avatar:setColor(50 / 255, 200 / 255, 200 / 255)
+setColor(color)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|--------------------------------------------------|-------------|---------|
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The r,g,b values as a single value | `vec(1,1,1)` |
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------|-------------|
+| <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setColor(r, g, b)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| r | <code>[Number](#)</code> | Red color value | 1 |
+| g | <code>[Number](#)</code> | Green color value | Value of `r` |
+| b | <code>[Number](#)</code> | Blue color value | Value of `r` |
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------|-------------|
+| <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+setColor(color, badgeName)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-----------|--------------------------------------------------|-------------|---------|
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The r,g,b values as a single value | `vec(1,1,1)` |
+| badgeName | <code>[String](#)</code> | Badge name | `nil` |
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------|-------------|
+| <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
+
+    </TabItem>
+    <TabItem value="overload-4" label="Overload 4">
+
+```lua
+setColor(r, g, b, badgeName)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-----------|--------------------------|-------------|---------|
+| r | <code>[Number](#)</code> | Red color value | 1 |
+| g | <code>[Number](#)</code> | Green color value | Value of `r` |
+| b | <code>[Number](#)</code> | Blue color value | Value of `r` |
+| badgeName | <code>[String](#)</code> | Bagde name | `nil` |
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------|-------------|
+| <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+avatar:setColor(50 / 255, 0 / 255, 64 / 255)
 ```
 
 ---
 
-### `getColor()` \{#getColor}
+### <code>getColor()</code> \{#getColor}
 
 Gets the current color string of your avatar, used as your avatar theme
 
-**Example**:
+```lua
+getColor()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getColor()
+--todo
 ```
+
+---
 
 ## Misc
 
-### `store(string,any)` \{#store}
+### <code>store()</code> \{#store}
 
 Store the given key-value pair inside your current avatar's metadata
 
@@ -84,427 +214,850 @@ Someone else can get this information from a different script with the avatarVar
 
 The key must be a string
 
-**Example**:
+```lua
+store(key, value)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|---------------------------|-------------|---------|
+| key | <code>[String](#)</code> | - | - |
+| value | <code>[AnyType](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------|-------------|
+| <code>[AvatarAPI](/globals/Avatar)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:store("storing", true)
+--todo
 ```
 
 ---
 
-### `getSize()` \{#getSize}
+### <code>getSize()</code> \{#getSize}
 
 Gets the file size of this avatar in bytes
 
-**Example**:
+```lua
+getSize()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getSize()
+--todo
 ```
 
 ---
 
-### `getEntityName()` \{#getEntityName}
+### <code>getEntityName()</code> \{#getEntityName}
 
 Attempts to get the entity name of this avatar, defaulting to the avatar name
 
-**Example**:
+```lua
+getEntityName()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getEntityName()
+--todo
 ```
 
 ---
 
-### `getUUID()` \{#getUUID}
+### <code>getUUID()</code> \{#getUUID}
 
 Returns the UUID of the owner of this avatar
 
-**Example**:
-
 ```lua
-avatar:getUUID()
+getUUID()
 ```
 
-### `getNBT()` \{#getNBT}
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getNBT()</code> \{#getNBT}
 
 Gets the NBT data this avatar is stored as
 
-**Example**:
-
 ```lua
-avatar:getNBT()
+getNBT()
 ```
 
-### `hasScriptError()` \{#hasScriptError}
+**Returns:**
+| Type | Description |
+|-------------------------|-------------|
+| <code>[Table](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getBadges()</code> \{#getBadges}
+
+**Aliases:** `badges()`
+
+Gets the user's badges in a string.
+
+```lua
+getBadges()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>hasScriptError()</code> \{#hasScriptError}
 
 Gets whether this script currently has stopped due to an error (kinda useless lol)
 
-**Example**:
+```lua
+hasScriptError()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:hasScriptError()
+--todo
 ```
 
 ---
 
 ## Permissions
 
-### `getPermissionLevel()` \{#getPermissionLevel}
+### <code>getPermissionLevel()</code> \{#getPermissionLevel}
 
-Returns this avatar current permission level
-
-**Example**:
+Returns this avatar's current permission level
 
 ```lua
-avatar:getPermissionLevel()
+getPermissionLevel()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getComplexity()` \{#getComplexity}
+### <code>getComplexity()</code> \{#getComplexity}
 
 Gets the current complexity of this avatar
 
-**Example**:
+```lua
+getComplexity()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getComplexity()
+--todo
 ```
 
 ---
 
-### `getMaxComplexity()` \{#getMaxComplexity}
+### <code>getVolume()</code> \{#getVolume}
 
-Gets the maximum allowed model complexity (number of faces) as permitted by the viewer
-
-**Example**:
+figura.docs.avatar.get_volume
 
 ```lua
-avatar:getMaxComplexity()
+getVolume()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getInitCount()` \{#getInitCount}
-
-Gets the number of initialization instructions of this avatar
-
-**Example**:
-
-```lua
-avatar:getInitCount()
-```
-
----
-
-### `getMaxInitCount()` \{#getMaxInitCount}
-
-Gets the maximum allowed instructions during initialization as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxInitCount()
-```
-
----
-
-### `getEntityInitCount()` \{#getEntityInitCount}
-
-Gets the number of events.ENTITY_INIT instructions of this avatar
-
-**Example**:
-
-```lua
-avatar:getEntityInitCount()
-```
-
----
-
-### `getTickCount()` \{#getTickCount}
-
-Gets the number of events.TICK instructions of this avatar last tick
-
-**Example**:
-
-```lua
-avatar:getTickCount()
-```
-
----
-
-### `getMaxTickCount()` \{#getMaxTickCount}
-
-Gets the maximum allowed instructions in events.TICK as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxTickCount()
-```
-
----
-
-### `getWorldTickCount()` \{#getWorldTickCount}
-
-Gets the number of events.WORLD_TICK instructions of this avatar last tick
-
-**Example**:
-
-```lua
-avatar:getWorldTickCount()
-```
-
----
-
-### `getMaxWorldTickCount()` \{#getMaxWorldTickCount}
-
-Gets the maximum allowed instructions in events.WORLD_TICK as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxWorldTickCount()
-```
-
----
-
-### `getRenderCount()` \{#getRenderCount}
-
-Gets the number of events.RENDER and events.POST_RENDER instructions of this avatar last frame
-
-**Example**:
-
-```lua
-avatar:getRenderCount()
-```
-
----
-
-### `getMaxRenderCount()` \{#getMaxRenderCount}
-
-Gets the maximum allowed instructions in events.RENDER and Events.POST_RENDER as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxRenderCount()
-```
-
----
-
-### `getWorldRenderCount()` \{#getWorldRenderCount}
-
-Gets the number of events.WORLD_RENDER and events.POST_WORLD_RENDER instructions of this avatar last frame
-**Example**:
-
-```lua
-avatar:getWorldRenderCount()
-```
-
----
-
-### `getMaxWorldRenderCount()` \{#getMaxWorldRenderCount}
-
-Gets the maximum allowed instructions in events.WORLD_RENDER and events.POST_WORLD_RENDER as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxWorldRenderCount()
-```
-
----
-
-### `getRemainingSounds()` \{#getRemainingSounds}
-
-Gets the remaining amount of sound this avatar can play
-
-**Example**:
-
-```lua
-avatar:getRemainingSounds()
-```
-
----
-
-### `getMaxSounds()` \{#getMaxSounds}
-
-Gets the maximum allowed number of sounds as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxSounds()
-```
-
----
-
-### `getAnimationCount()` \{#getAnimationCount}
-
-Gets the number of Lua instructions used within animations
-
-**Example**:
-
-```lua
-avatar:getAnimationCount()
-```
-
----
-
-### `getMaxAnimationCount()` \{#getMaxAnimationCount}
-
-Gets the maximum allowed Lua instructions in animations as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxAnimationCount()
-```
-
----
-
-### `getAnimationComplexity()` \{#getAnimationComplexity}
-
-Gets the current animation complexity of this avatar
-
-**Example**:
-
-```lua
-avatar:getAnimationComplexity()
-```
-
----
-
-### `getMaxAnimationComplexity()` \{#getMaxAnimationComplexity}
-
-Gets the maximum allowed animation complexity (number of playing channels) as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxAnimationComplexity()
-```
-
----
-
-### `getMaxTextureSize()` \{#getMaxTextureSize}
-
-Gets the max dimensions of custom textures that this avatar can create
-
-**Example**:
-
-```lua
-avatar:getMaxTextureSize()
-```
-
----
-
-### `getRemainingParticles()` \{#getRemainingParticles}
-
-Gets the remaining amount of particles this avatar can summon
-
-**Example**:
-
-```lua
-avatar:getRemainingParticles()
-```
-
----
-
-### `getMaxParticles()` \{#getMaxParticles}
-
-Gets the maximum allowed number of particles as permitted by the viewer
-
-**Example**:
-
-```lua
-avatar:getMaxParticles()
-```
-
----
-
-### `getCurrentInstructions()` \{#getCurrentInstructions}
+### <code>getCurrentInstructions()</code> \{#getCurrentInstructions}
 
 Gets the current number of instructions that have been executed by your avatar
 
 Resets to 0 at the beginning of certain events
 
-**Example**:
+```lua
+getCurrentInstructions()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:getCurrentInstructions()
+--todo
 ```
 
 ---
 
-### `canEditVanillaModel()` \{#canEditVanillaModel}
+### <code>getInitCount()</code> \{#getInitCount}
+
+Gets the number of initialization instructions of this avatar
+
+```lua
+getInitCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getEntityInitCount()</code> \{#getEntityInitCount}
+
+Gets the number of events.ENTITY_INIT instructions of this avatar
+
+```lua
+getEntityInitCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxInitCount()</code> \{#getMaxInitCount}
+
+Gets the maximum allowed instructions during initialization as permitted by the viewer
+
+```lua
+getMaxInitCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getTickCount()</code> \{#getTickCount}
+
+Gets the number of events.TICK instructions of this avatar last tick
+
+```lua
+getTickCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxTickCount()</code> \{#getMaxTickCount}
+
+Gets the maximum allowed instructions in events.TICK as permitted by the viewer
+
+```lua
+getMaxTickCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getRenderCount()</code> \{#getRenderCount}
+
+Gets the number of events.RENDER and events.POST_RENDER instructions of this avatar's last frame
+
+```lua
+getRenderCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxRenderCount()</code> \{#getMaxRenderCount}
+
+Gets the maximum allowed instructions in events.RENDER and Events.POST_RENDER as permitted by the viewer
+
+```lua
+getMaxRenderCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getWorldTickCount()</code> \{#getWorldTickCount}
+
+Gets the number of events.WORLD_TICK instructions of this avatar's last tick
+
+```lua
+getWorldTickCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxWorldTickCount()</code> \{#getMaxWorldTickCount}
+
+Gets the maximum allowed instructions in events.WORLD_TICK as permitted by the viewer
+
+```lua
+getMaxWorldTickCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getWorldRenderCount()</code> \{#getWorldRenderCount}
+
+Gets the number of events.WORLD_RENDER and events.POST_WORLD_RENDER instructions of this avatar's last frame
+
+```lua
+getWorldRenderCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxWorldRenderCount()</code> \{#getMaxWorldRenderCount}
+
+Gets the maximum allowed instructions in events.WORLD_RENDER and events.POST_WORLD_RENDER as permitted by the viewer
+
+```lua
+getMaxWorldRenderCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxComplexity()</code> \{#getMaxComplexity}
+
+Gets the maximum allowed model complexity (number of faces) as permitted by the viewer
+
+```lua
+getMaxComplexity()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getRemainingParticles()</code> \{#getRemainingParticles}
+
+Gets the remaining amount of particles this avatar can summon
+
+```lua
+getRemainingParticles()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxParticles()</code> \{#getMaxParticles}
+
+Gets the maximum allowed number of particles as permitted by the viewer
+
+```lua
+getMaxParticles()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getRemainingSounds()</code> \{#getRemainingSounds}
+
+Gets the remaining amount of sound this avatar can play
+
+```lua
+getRemainingSounds()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxSounds()</code> \{#getMaxSounds}
+
+Gets the maximum allowed number of sounds as permitted by the viewer
+
+```lua
+getMaxSounds()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getAnimationComplexity()</code> \{#getAnimationComplexity}
+
+Gets the current animation complexity of this avatar
+
+```lua
+getAnimationComplexity()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxAnimationComplexity()</code> \{#getMaxAnimationComplexity}
+
+Gets the maximum allowed animation complexity (number of playing channels) as permitted by the viewer
+
+```lua
+getMaxAnimationComplexity()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getAnimationCount()</code> \{#getAnimationCount}
+
+Gets the number of Lua instructions used within animations
+
+```lua
+getAnimationCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxAnimationCount()</code> \{#getMaxAnimationCount}
+
+Gets the maximum allowed Lua instructions in animations as permitted by the viewer
+
+```lua
+getMaxAnimationCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getBuffersCount()</code> \{#getBuffersCount}
+
+Returns count of buffers open by this avatar
+
+```lua
+getBuffersCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxBuffersCount()</code> \{#getMaxBuffersCount}
+
+Returns maximum allowed count of buffers can be open by this avatar
+
+```lua
+getMaxBuffersCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxTextureSize()</code> \{#getMaxTextureSize}
+
+Gets the max dimensions of custom textures that this avatar can create
+
+```lua
+getMaxTextureSize()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxBufferSize()</code> \{#getMaxBufferSize}
+
+Gets the max byte buffer size that this avatar can have
+
+```lua
+getMaxBufferSize()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>canEditVanillaModel()</code> \{#canEditVanillaModel}
 
 Gets whether or not the viewer allows your avatar to edit the vanilla models
 
-**Example**:
+```lua
+canEditVanillaModel()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:canEditVanillaModel()
+--todo
 ```
 
 ---
 
-### `canRenderOffscreen()` \{#canRenderOffscreen}
-
-Gets whether or not the viewer allows you to render the avatar off-screen
-
-**Example**:
-
-```lua
-avatar:canRenderOffscreen()
-```
-
----
-
-### `canHaveCustomSkull()` \{#canHaveCustomSkull}
-
-Gets whether or not your avatar is allowed to have custom player skull
-
-**Example**:
-
-```lua
-avatar:canHaveCustomSkull()
-```
-
----
-
-### `canUseCustomSounds()` \{#canUseCustomSounds}
-
-Gets whether or not the viewer allows your avatar to play custom sounds
-
-**Example**:
-
-```lua
-avatar:canUseCustomSounds()
-```
-
----
-
-### `canEditNameplate()` \{#canEditNameplate}
+### <code>canEditNameplate()</code> \{#canEditNameplate}
 
 Gets whether or not the viewer allows your avatar to edit your nameplate
 
-**Example**:
+```lua
+canEditNameplate()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-avatar:canEditNameplate()
+--todo
 ```
 
 ---
 
-### `getVolume()` \{#getVolume}
+### <code>canRenderOffscreen()</code> \{#canRenderOffscreen}
 
-Gets the maximum allowed volume of this avatar as permitted by the viewer
-
-**Example**:
+Gets whether or not the viewer allows you to render the avatar off-screen
 
 ```lua
-avatar:getVolume()
+canRenderOffscreen()
 ```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>canUseCustomSounds()</code> \{#canUseCustomSounds}
+
+Gets whether or not the viewer allows your avatar to play custom sounds
+
+```lua
+canUseCustomSounds()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>canHaveCustomSkull()</code> \{#canHaveCustomSkull}
+
+Gets whether or not your avatar is allowed to have custom player skull
+
+```lua
+canHaveCustomSkull()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---

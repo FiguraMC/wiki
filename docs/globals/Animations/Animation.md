@@ -135,7 +135,7 @@ setPlaying(bool)
 **Parameters:**
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
-| bool | <code>[Boolean](#)</code> | True or false value that dictates if the animation will play or stop | False |
+| bool | <code>[Boolean](#)</code> | True or false value that dictates if the animation will play or stop | `false` |
 
 **Returns:**
 | Type | Description |
@@ -260,7 +260,7 @@ setSpeed(speed)
 **Parameters:**
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
-| speed | <code>[Number](#)</code> | Sets the animation's speed | 1 |
+| speed | <code>[Number](#)</code> | Sets the animation's speed | `1` |
 
 **Returns:**
 | Type | Description |
@@ -309,7 +309,7 @@ setLength(length)
 **Parameters:**
 | Name | Type | Description | Default |
 |--------|--------------------------|-------------|---------|
-| length | <code>[Number](#)</code> | The length of time, in seconds | 0 |
+| length | <code>[Number](#)</code> | The length of time, in seconds | `0` |
 
 **Returns:**
 | Type | Description |
@@ -362,7 +362,7 @@ setPriority(priority)
 **Parameters:**
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
-| priority | <code>[Integer](#)</code> | The priority of the animation, as a whole number | 0 |
+| priority | <code>[Integer](#)</code> | The priority of the animation, as a whole number | `0` |
 
 **Returns:**
 | Type | Description |
@@ -411,7 +411,7 @@ setTime(time)
 **Parameters:**
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
-| time | <code>[Number](#)</code> | The time to set the animation to, in seconds | 0 |
+| time | <code>[Number](#)</code> | The time to set the animation to, in seconds | `0` |
 
 **Returns:**
 | Type | Description |
@@ -462,7 +462,7 @@ setOffset(offset)
 **Parameters:**
 | Name | Type | Description | Default |
 |--------|--------------------------|-------------|---------|
-| offset | <code>[Number](#)</code> | Time in seconds to skip for each loop | 0 |
+| offset | <code>[Number](#)</code> | Time in seconds to skip for each loop | `0` |
 
 **Returns:**
 | Type | Description |
@@ -560,7 +560,7 @@ setBlend(blend)
 **Parameters:**
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
-| blend | <code>[Number](#)</code> | Strength of the blend factor between 0 and 1 | 1 |
+| blend | <code>[Number](#)</code> | Strength of the blend factor between 0 and 1 | `1` |
 
 **Returns:**
 | Type | Description |
@@ -611,7 +611,7 @@ setStartDelay(delay)
 **Parameters:**
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
-| delay | <code>[Number](#)</code> | The time in seconds to set the delay to | 0 |
+| delay | <code>[Number](#)</code> | The time in seconds to set the delay to | `0` |
 
 **Returns:**
 | Type | Description |
@@ -660,7 +660,7 @@ setLoopDelay(delay)
 **Parameters:**
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
-| delay | <code>[Number](#)</code> | The time in seconds to set the delay to | 0 |
+| delay | <code>[Number](#)</code> | The time in seconds to set the delay to | `0` |
 
 **Returns:**
 | Type | Description |
@@ -713,7 +713,7 @@ setOverride(override)
 **Parameters:**
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override all transformations | false |
+| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override all transformations | `false` |
 
 **Returns:**
 | Type | Description |
@@ -741,7 +741,7 @@ setOverrideRot(override)
 **Parameters:**
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override rotation | false |
+| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override rotation | `false` |
 
 **Returns:**
 | Type | Description |
@@ -790,7 +790,7 @@ setOverridePos(override)
 **Parameters:**
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override position | false |
+| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override position | `false` |
 
 **Returns:**
 | Type | Description |
@@ -839,7 +839,7 @@ setOverrideScale(override)
 **Parameters:**
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override scale | false |
+| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override scale | `false` |
 
 **Returns:**
 | Type | Description |
@@ -911,7 +911,7 @@ newCode(time, code)
 **Parameters:**
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
-| time | <code>[Number](#)</code> | The time in seconds to add the code to | 0 |
+| time | <code>[Number](#)</code> | The time in seconds to add the code to | `0` |
 | code | <code>[String](#)</code> | The code to run at that time | Required |
 
 **Returns:**
