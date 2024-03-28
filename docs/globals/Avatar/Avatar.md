@@ -1,6 +1,10 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+:::danger
+This page is a WIP.
+:::
+
 A global API containing functions to interact with your avatar's metadata, and also to get information about the current script environment
 
 ## Metadata

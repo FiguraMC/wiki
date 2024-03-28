@@ -1,12 +1,19 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # Action Wheel
 
-The global instance of the ActionWheelAPI and its subtypes
+:::danger
+This page is a WIP.
+:::
+
+A global API which is used for customizing your player's Action Wheel
 
 ## Page
 
-For more on pages go to [Page](./action-wheel/Page)
+For more on pages go to [Page](./Page.md)
 
-### `newPage(string)` \{#newPage}
+### <code>newPage()</code> \{#newPage}
 
 Creates a new Page for the action wheel
 
@@ -14,155 +21,356 @@ A Title can be given to store this page internally
 
 If no Title is given, the Page will just be returned from this function
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-local myPage = action_wheel:newPage()
+newPage()
+```
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------------|-------------|
+| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+newPage(title)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|--------------------------|-------------|---------|
+| title | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------------|-------------|
+| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setPage()` \{#setPage}
+### <code>setPage()</code> \{#setPage}
 
 Sets the Page of the action wheel to the given Title or Page
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-action_wheel:setPage(myPage)
+setPage(pageTitle)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-----------|--------------------------|-------------|---------|
+| pageTitle | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|------------------------------------------------------|---------------------------|
+| <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPage(page)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|-------------------------------------------------|-------------|---------|
+| page | <code>[Page](/globals/Action-Wheel/Page)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|------------------------------------------------------|---------------------------|
+| <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getPage(string)` \{#getPage}
+### <code>getPage()</code> \{#getPage}
 
-Sets the Page of the action wheel to the given Title or Page
+Returns a stored Page by the given title
 
-**Example**:
+If no title is given, returns a table with all registered Pages
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-action_wheel:newPage("myPage")
--- highlight-next-line
-action_wheel:getPage("myPage")
--- because getPage needs a string you can only use getPage on pages with titles
+getPage()
+```
+
+**Returns:**
+| Type | Description |
+|-------------------------|-------------|
+| <code>[Table](#)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getPage(pageTitle)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-----------|--------------------------|-------------|---------|
+| pageTitle | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------------|-------------|
+| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getCurrentPage()` \{#getCurrentPage}
+### <code>getCurrentPage()</code> \{#getCurrentPage}
 
 Returns the current set Page from the Action Wheel, or NIL if no Page has been set
 
-**Example**:
+```lua
+getCurrentPage()
+```
+
+**Returns:**
+| Type | Description |
+|-------------------------------------------------|-------------|
+| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+
+**Example:**
 
 ```lua
-action_wheel:getCurrentPage()
+--todo
 ```
+
+---
 
 ## Action
 
-For more information on actions see [Action](./action-wheel/Action)
+For more on pages go to [Action](./Action.md)
 
-### `newAction()` \{#newAction}
+### <code>newAction()</code> \{#newAction}
 
-Creates a new Action that is not automatically asigned to a Page
-
-**Example**:
+Creates a new Action that is not automatically assigned to a Page
 
 ```lua
-local myAction = action_wheel:newAction()
+newAction()
+```
+
+**Returns:**
+| Type | Description |
+|-----------------------------------------------------|-------------|
+| <code>[Action](/globals/Action-Wheel/Action)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getSelectedAction()` \{#getSelectedAction}
+### <code>getSelectedAction()</code> \{#getSelectedAction}
 
 Returns the Action that is currently selected in the Action Wheel
 
-**Example**:
+```lua
+getSelectedAction()
+```
+
+**Returns:**
+| Type | Description |
+|-----------------------------------------------------|-------------|
+| <code>[Action](/globals/Action-Wheel/Action)</code> | - |
+
+**Example:**
 
 ```lua
-action_wheel:getSelectedAction()
+--todo
 ```
 
 ---
 
-### `getSelected()` \{#getSelected}
+### <code>getSelected()</code> \{#getSelected}
 
 Returns the index of the currently selected action
 
-**Example**:
-
 ```lua
-action_wheel:getSelected()
+getSelected()
 ```
 
-## Wheel
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
 
-### `isEnabled()` \{#isEnabled}
-
-Returns if the Action Wheel is being currently rendered or not
-
-**Example**:
+**Example:**
 
 ```lua
-action_wheel:isEnabled()
+--todo
 ```
 
 ---
 
-### `execute(int,bool)` \{#execute}
+## Wheel
 
-Executes the action of the given index, only if the action wheel is open
+### <code>execute()</code> \{#execute}
+
+Executes the action of the given index
 
 If the index is null, it will execute the last selected action
 
 A second parameter can be given to specify if it should be executed the left or right action
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-action_wheel:execute(1, false)
+execute()
+```
+
+**Returns:**
+| Type | Description |
+|------------------------------------------------------|---------------------------|
+| <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+execute(index)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|---------------------------|-------------|---------|
+| index | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|------------------------------------------------------|---------------------------|
+| <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+execute(index, rightClick)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------------|---------------------------|-------------|---------|
+| index | <code>[Integer](#)</code> | - | - |
+| rightClick | <code>[Boolean](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|------------------------------------------------------|---------------------------|
+| <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `leftClick` \{#leftClick}
+### <code>isEnabled()</code> \{#isEnabled}
 
-Function that is executed when the left mouse button is clicked, only if the action wheel is open
-
-**Example**:
+Returns if the Action Wheel is being currently rendered or not
 
 ```lua
-function action_wheel.leftClick()
-    log("Left click")
-end
+isEnabled()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `rightClick` \{#rightClick}
+## Fields
 
-Function that is executed when the right mouse button is clicked, only if the action wheel is open
+### <code>leftClick</code> \{#leftClick}
 
-**Example**:
+Function that is executed when the left mouse button is clicked
+
+**Example:**
 
 ```lua
-function action_wheel.rightClick()
-    log("Right click")
-end
+--todo
 ```
 
 ---
 
-### `scroll` \{#scroll}
+### <code>rightClick</code> \{#rightClick}
 
-Function that is executed when the mouse is scrolled, only if the action wheel is open
+Function that is executed when the right mouse button is clicked
 
-**Example**:
+**Example:**
 
 ```lua
-function action_wheel.scroll()
-    log("Scrolled")
-end
+--todo
 ```
+
+---
+
+### <code>scroll</code> \{#scroll}
+
+Function that is executed when the mouse is scrolled
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
