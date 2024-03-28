@@ -1,141 +1,286 @@
-Contains functions which Figura adds to the default Lua "math" library table. These are accessed via the `math` global.
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-## Math Functions
+:::danger
+This page is a WIP.
+:::
 
----
+Contains functions which Figura adds to the default Lua "math" library table
 
-### `map(number, number, number, number, number)` \{#map}
+## Methods
 
-Maps the given value from one range to another
+### <code>clamp()</code> \{#clamp}
 
-For example, if you have a value of 20 in the range 0-200, and you want to map it to the range 100-200, the result will be 110
-
-**Example**
+Clamps the given value between min and max
 
 ```lua
-math.map(20, 0, 200, 100, 200) -- returns 110
+clamp(value, min, max)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|--------------------------|-------------|---------|
+| value | <code>[Number](#)</code> | - | - |
+| min | <code>[Number](#)</code> | - | - |
+| max | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `round(number)` \{#round}
+### <code>lerp()</code> \{#lerp}
 
-Rounds the given number to the nearest whole integer
+Linearly interpolates from its first argument to its second argument, with the third argument as the parameter
 
-**Example**
+Works on both regular numbers, vectors of the same type, and matrices of the same type
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-math.round(21.74) -- returns 22
+lerp(a, b, t)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| a | <code>[Number](#)</code> | - | - |
+| b | <code>[Number](#)</code> | - | - |
+| t | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+lerp(a, b, t)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| a | <code>[Vector](#)</code> | - | - |
+| b | <code>[Vector](#)</code> | - | - |
+| t | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Vector](#)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+lerp(a, b, t)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| a | <code>[Matrix](#)</code> | - | - |
+| b | <code>[Matrix](#)</code> | - | - |
+| t | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Matrix](#)</code> | - |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `sign(number)` \{#sign}
-
-Returns the sign of the given number
-
-Returns 1 if the number is positive, -1 if it's negative, and 0 if it's 0
-
-**Example**
-
-```lua
-math.sign(124) -- returns 1
-math.sign(-12) -- returns -1
-math.sign(0) -- returns 0
-```
-
----
-
-### `lerpAngle(number, number, number)` \{#lerpAngle}
+### <code>lerpAngle()</code> \{#lerpAngle}
 
 Similar to the default lerp function, but numbers are limited to the range of 0-360
 
 Lerp is done towards the shortest angle
 
-For example, a lerp of 340 and 20, with factor of 0.75, will return 10
-
-**Example**
+For example, a lerp of 340 and 20, with a factor of 0.75, will return 10
 
 ```lua
-math.lerpAngle(340, 20, 0.75) -- returns 10
+lerpAngle(a, b, t)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| a | <code>[Number](#)</code> | - | - |
+| b | <code>[Number](#)</code> | - | - |
+| t | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `shortAngle(number, number)` \{#shortAngle}
+### <code>map()</code> \{#map}
+
+Maps the given value from one range to another
+
+For example, if you have a value of 20 in the range 0-200, and you want to map it to the range 100-200, the result will be 110
+
+```lua
+map(value, oldMin, oldMax, newMin, newMax)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|--------|--------------------------|-------------|---------|
+| value | <code>[Number](#)</code> | - | - |
+| oldMin | <code>[Number](#)</code> | - | - |
+| oldMax | <code>[Number](#)</code> | - | - |
+| newMin | <code>[Number](#)</code> | - | - |
+| newMax | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>round()</code> \{#round}
+
+Rounds the given number to the nearest whole integer
+
+```lua
+round(value)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|--------------------------|-------------|---------|
+| value | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>shortAngle()</code> \{#shortAngle}
 
 Returns the shortest angle between two angles
 
 For example, if you have an angle of 350 degrees and you want to get the shortest angle between it and 0 degrees, the result will be 10 degrees
 
-**Example**
+```lua
+shortAngle(from, to)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| from | <code>[Number](#)</code> | - | - |
+| to | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
 
 ```lua
-math.shortAngle(350, 0) -- returns 10
+--todo
 ```
 
 ---
 
-### `clamp(number, number, number)` \{#clamp}
+### <code>sign()</code> \{#sign}
 
-Clamps the given value between min and max
+Returns the sign of the given number
 
-**Example**
+Returns 1 if the number is positive, -1 if it's negative, and 0 if it's 0
 
 ```lua
-math.clamp(58, 0, 50) -- returns 50
-math.clamp(-12, 0, 50) -- returns 0
-math.clamp(26, 0, 50) -- returns 26
+sign(value)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|--------------------------|-------------|---------|
+| value | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `lerp(a, b, number)` \{#lerp}
+## Fields
 
-Linearly interpolates from its first argument to its second argument, with the third argument as the parameter
-
-Works on both regular numbers, vectors of the same type and matrices of the same type
-
-**Example**
-
-```lua
-local rot = 0
-local _rot = 0
-
-function events.tick()
-    _rot = rot
-    rot = rot + 1
-end
-
-function events.render(delta)
-    math.lerp(_rot, rot, delta)
-end
-```
-
----
-
-## Numbers
-
----
-
-### `playerScale` \{#playerScale}
+### <code>playerScale</code> \{#playerScale}
 
 The constant of the player scaling related to the world
 
-**Example**
+**Example:**
 
 ```lua
-math.playerScale
+--todo
 ```
 
 ---
 
-### `worldScale` \{#worldScale}
+### <code>worldScale</code> \{#worldScale}
 
 The constant of the world scaling related with the player
 
-**Example**
+**Example:**
 
 ```lua
-math.worldScale
+--todo
 ```
+
+---

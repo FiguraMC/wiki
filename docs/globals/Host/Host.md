@@ -1,90 +1,128 @@
-The host API is accessed through the <code>host</code> global. Like so: <code>host:isFlying()</code>
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-Functions in the host API aren't synced, meaning to be useful in multiplayer their information will need to be synced via [pings](../tutorials/Pings).
+:::danger
+This page is a WIP.
+:::
+
+A global API dedicated to specifically the host of the avatar
+
+For other viewers, these do nothing
+
+Functions in the host API aren't synced, meaning to be useful in multiplayer their information will need to be synced via [pings](../tutorials/Pings)
 
 ---
 
-### `isHost()` \{#isHost}
+### <code>isHost()</code> \{#isHost}
 
 Returns true if this instance of the script is running on host
 
-**Example**:
+```lua
+isHost()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:isHost()
+--todo
 ```
 
 ---
 
 ## Player Data
 
----
-
-### `isJumping()` \{#isJumping}
-
-Checks if the jump key is being pressed.
-
-**Example**:
-
-```lua
-host:isJumping()
-```
-
----
-
-### `isFlying()` \{#isFlying}
-
-Checks if the player is currently creative flying
-
-**Example**:
-
-```lua
-host:isFlying()
-```
-
----
-
-### `isContainerOpen()` \{#isContainerOpen}
+### <code>isContainerOpen()</code> \{#isContainerOpen}
 
 Checks if the host has a container screen opened
 
-**Example**:
+```lua
+isContainerOpen()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:isContainerOpen()
+--todo
 ```
 
 ---
 
-### `getAir()` \{#getAir}
+### <code>isFlying()</code> \{#isFlying}
 
-Gets the remaining amount of air of the player. From 300 to -19, whenever you take damage from drowning it sets back to 0. Water breathing freezes the value when underwater. Respiration slows down how quickly the number goes down.
-
-**Example**:
+Checks if the player is currently flying
 
 ```lua
-host:getAir()
+isFlying()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getSlot(number or string)` \{#getSlot}
+### <code>isJumping()</code> \{#isJumping}
 
-Gets an ItemStack for the item in the given slot
+Checks if the player is jumping
 
-The slot is either their numerical id (0 indexed) or the slot string, as used in the /item command
-
-For the numerical id, 0-8 are the hotbar, 9-35 are the rest of the inventory starting from the top left slot, 99 is the offhand, and 100-103 are the armor slots from the boots to the helmet. <code>player:getItem()</code> is a better alternative for getting equipment slots.
-
-**Example**:
+Note this is only true during the first tick the player started jumping
 
 ```lua
-host:getSlot(0)
+isJumping()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setSlot(slot, item)` \{#setSlot}
+### <code>getAir()</code> \{#getAir}
+
+Gets the remaining amount of air of the player
+
+```lua
+getAir()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setSlot()</code> \{#setSlot}
 
 Sets a slot with an ItemStack
 
@@ -94,16 +132,141 @@ Slot -1 uses the first available slot
 
 Only runs for creative mode
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-host:setSlot(0, "apple")
--- setSlot also accepts an ItemStack retrieved from an actual item or world:newItem()
+setSlot(slot)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| slot | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setSlot(slot)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|---------------------------|-------------|---------|
+| slot | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+setSlot(slot, item)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| slot | <code>[String](#)</code> | - | - |
+| item | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-4" label="Overload 4">
+
+```lua
+setSlot(slot, item)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|----------------------------------------------------|-------------|---------|
+| slot | <code>[Integer](#)</code> | - | - |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getScreenSlot(slot)` \{#getScreenSlot}
+### <code>getSlot()</code> \{#getSlot}
+
+Gets an ItemStack for the item in the given slot
+
+The slot is either their numerical id (0 indexed) or the slot string, as used in the /item command
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getSlot(slot)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| slot | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|----------------------------------------------------|-------------|
+| <code>[ItemStack](/globals/World/ItemStack)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getSlot(slot)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|---------------------------|-------------|---------|
+| slot | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|----------------------------------------------------|-------------|
+| <code>[ItemStack](/globals/World/ItemStack)</code> | - |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getScreenSlot()</code> \{#getScreenSlot}
 
 Gets the item in a screen slot
 
@@ -111,163 +274,381 @@ The slot is either their numerical id (0 indexed) or the slot string, as used in
 
 If the player is not currently in a screen, the screen has no slots, or the slot index is greater than the maximum, returns nil
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-host:getScreenSlot(0)
+getScreenSlot(slot)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| slot | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|----------------------------------------------------|-------------|
+| <code>[ItemStack](/globals/World/ItemStack)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getScreenSlot(slot)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|---------------------------|-------------|---------|
+| slot | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|----------------------------------------------------|-------------|
+| <code>[ItemStack](/globals/World/ItemStack)</code> | - |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getScreenSlotCount()` \{#getScreenSlotCount}
+### <code>getScreenSlotCount()</code> \{#getScreenSlotCount}
 
 Gets the number of slots in the screen the player is currently in
 
 If the player is not currently in a screen or the screen has no slots, returns nil
 
-**Example**:
+```lua
+getScreenSlotCount()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:getScreenSlotCount()
+--todo
 ```
 
 ---
 
-### `getScreen()` \{#getScreen}
+### <code>getScreen()</code> \{#getScreen}
 
-Gets the class name of the screen the player is currently on. Class names are slightly obfuscated by Minecraft's code and will return a string ending in numbers that are the class' id. A list of class ids can be found in [GS' VSCode docs](https://github.com/GrandpaScout/FiguraRewriteVSDocs), or you can use a log to get the name of the screen you're accessing.
+Gets the class name of the screen the player is currently on
 
 If the player is not currently in a screen, returns nil
 
-**Example**:
+```lua
+getScreen()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:getScreen()
+--todo
 ```
 
 ---
 
-### `getStatusEffects()` \{#getStatusEffects}
+### <code>getStatusEffects()</code> \{#getStatusEffects}
 
 Returns a table of all of the player's status effects
 
-The table contains sub-tables, each of which contains the name, amplifier, duration, and particle visibility of each status effect. To access a sub table index the effect table with the sub-table's name. Re the example below: <code>effect.name</code>
-
-**Example**:
+The table contains sub-tables, each of which contains the name, amplifier, duration, and particle visibility of each status effect
 
 ```lua
-for _, effect in pairs(host:getStatusEffects()) do
-    logTable(effect)
-end
+getStatusEffects()
+```
+
+**Returns:**
+| Type | Description |
+|-------------------------|-------------|
+| <code>[Table](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getAttackCharge()` \{#getAttackCharge}
+### <code>getAttackCharge()</code> \{#getAttackCharge}
 
 Returns a fraction (0 to 1) of the charge of the player attack
 
-If less than 1, every attack will result result in a weak attack
-
-**Example**:
+If less than 1, every attack will result in a weak attack
 
 ```lua
-host:getAttackCharge()
+getAttackCharge()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getReachDistance()` \{#getReachDistance}
+### <code>getReachDistance()</code> \{#getReachDistance}
 
 Returns the current reach distance of the player
 
-**Example**:
+```lua
+getReachDistance()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:getReachDistance()
+--todo
 ```
 
 ---
 
-### `getPickBlock()` \{#getPickBlock}
+### <code>getPickBlock()</code> \{#getPickBlock}
 
 Returns the current targeted block set by the client
 
-Returns a vararg of the block, the hit position and the block face the hit collided
-
-[player:getTargetedBlock()](../globals/Player#getTargetedBlock) can be used as a synced alternative to this function.
-
-**Example**:
+Returns the block, the hit position, and the targeted block face as three separate values
 
 ```lua
-host:getPickBlock()
+getPickBlock()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Varargs](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getPickEntity()` \{#getPickEntity}
+### <code>getPickEntity()</code> \{#getPickEntity}
 
-Returns the current targeted entity set by the client
-
-[player:getTargetedEntity()](../globals/Player#getTargetedEntity) can be used as a synced alternative to this function.
-
-**Example**:
+Returns the currently targeted entity set by the client
 
 ```lua
-host:getPickEntity()
+getPickEntity()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------------------------------|-------------|
+| <code>[EntityAPI](/globals/Player/Entity)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
 ## Chat
 
----
-
-### `isChatOpen()` \{#isChatOpen}
+### <code>isChatOpen()</code> \{#isChatOpen}
 
 Checks if the host has the chat screen opened
 
-**Example**:
+```lua
+isChatOpen()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:isChatOpen()
+--todo
 ```
 
 ---
 
-### `sendChatCommand(string)` \{#sendChatCommand}
+### <code>isChatVerified()</code> \{#isChatVerified}
+
+figura.docs.host.is_chat_verified
+
+```lua
+isChatVerified()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>sendChatCommand()</code> \{#sendChatCommand}
 
 Sends the given command in the chat
 
-:::caution
-In order to you this function you must turn the `Chat Messages` setting on in Figura's settings
-:::
+```lua
+sendChatCommand(command)
+```
 
-**Example**:
+**Parameters:**
+| Name | Type | Description | Default |
+|---------|--------------------------|-------------|---------|
+| command | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
-host:sendChatCommand("kill @a")
+--todo
 ```
 
 ---
 
-### `sendChatMessage(string)` \{#sendChatMessage}
+### <code>sendChatMessage()</code> \{#sendChatMessage}
 
 Sends the given message in the chat
 
-:::caution
-In order to you this function you must turn the `Chat Messages` setting on in Figura's settings
-:::
+```lua
+sendChatMessage(message)
+```
 
-**Example**:
+**Parameters:**
+| Name | Type | Description | Default |
+|---------|--------------------------|-------------|---------|
+| message | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
-host:sendChatMessage("Hello World")
+--todo
 ```
 
 ---
 
-### `setChatMessage(number, string, Vector3)` \{#setChatMessage}
+### <code>setChatColor()</code> \{#setChatColor}
+
+**Aliases:** `chatColor()`
+
+Sets the color of the text that is currently being typed into the chat window
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setChatColor(color)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|--------------------------------------------------|-------------|---------|
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setChatColor(r, g, b)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| r | <code>[Number](#)</code> | - | - |
+| g | <code>[Number](#)</code> | - | - |
+| b | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getChatColor()</code> \{#getChatColor}
+
+Gets the chat window text color
+
+```lua
+getChatColor()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setChatMessage()</code> \{#setChatMessage}
 
 Modifies a chat message with the given text
 
@@ -275,259 +656,569 @@ Takes an index, were 1 means the last message on chat
 
 Setting the message to nil will effectively remove it from the chat
 
-The third arg is the background color of the message
-
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-host:setChatMessage(1, "Hi?", vec(1, 0, 0))
+setChatMessage(index)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|---------------------------|-------------|---------|
+| index | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setChatMessage(index, newMessage)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------------|---------------------------|-------------|---------|
+| index | <code>[Integer](#)</code> | - | - |
+| newMessage | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+setChatMessage(index, newMessage, backgroundColor)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-----------------|--------------------------------------------------|-------------|---------|
+| index | <code>[Integer](#)</code> | - | - |
+| newMessage | <code>[String](#)</code> | - | - |
+| backgroundColor | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getChatMessage(number)` \{#getChatMessage}
+### <code>getChatMessage()</code> \{#getChatMessage}
 
 Returns a table with information about a chat message
 
-Takes an index, were 1 means the last message on chat
-
-**Example**:
+Takes an index, where 1 means the last message on chat
 
 ```lua
-host:getChatMessage(1)
+getChatMessage(index)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|---------------------------|-------------|---------|
+| index | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|-------------------------|-------------|
+| <code>[Table](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `appendChatHistory(string)` \{#appendChatHistory}
+### <code>setChatText()</code> \{#setChatText}
 
-Appends the message on the recent chat history
-
-**Example**:
-
-```lua
-host:appendChatHistory("Hello World")
-```
-
----
-
-### `setChatText(string)` \{#setChatText}
+**Aliases:** `chatText()`
 
 Sets the text currently being typed in the chat window to the given string
 
-:::caution
-In order to use this function you must turn the `Chat Messages` setting on in Figura's settings
-:::
+```lua
+setChatText(text)
+```
 
-**Example**:
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| text | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
-host:setChatText("Hello World")
+--todo
 ```
 
 ---
 
-### `getChatText()` \{#getChatText}
+### <code>getChatText()</code> \{#getChatText}
 
 Gets the text that is currently being typed into the chat window
 
-**Example**:
+```lua
+getChatText()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:getChatText() == "Hello World"
+--todo
 ```
 
 ---
 
-### `setChatColor(Vector3)` \{#setChatColor}
+### <code>appendChatHistory()</code> \{#appendChatHistory}
 
-Sets the color of the text that is currently being typed into the chat window
-
-**Example**:
+Appends the message on the recent chat history
 
 ```lua
-host:setChatColor(0, 0, 1)
+appendChatHistory(message)
 ```
 
----
+**Parameters:**
+| Name | Type | Description | Default |
+|---------|--------------------------|-------------|---------|
+| message | <code>[String](#)</code> | - | - |
 
-### `getChatColor()` \{#getChatColor}
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-Gets the chat window text color
-
-**Example**:
-
-```lua
-host:getChatColor()
-```
-
----
-
-### `isChatVerified()` \{#isChatVerified}
-
-Presumably gets if the messages being sent are verified by the Minecraft server (speculation)
-
-**Example**:
+**Example:**
 
 ```lua
-host:isChatVerified()
+--todo
 ```
 
 ---
 
 ## Other
 
----
+### <code>setActionbar()</code> \{#setActionbar}
 
-### `swingArm(boolean)` \{#swingArm}
+**Aliases:** `actionbar()`
 
-Animates swinging the player's arm
+Sets the action bar message to the given text
 
-If the boolean is true, then the offhand is the one that swings
+The boolean parameter defaults to false
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-host:swingArm()
+setActionbar(text)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| text | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setActionbar(text, animated)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|----------|---------------------------|-------------|---------|
+| text | <code>[String](#)</code> | - | - |
+| animated | <code>[Boolean](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setTitle(string)` \{#setTitle}
+### <code>setClipboard()</code> \{#setClipboard}
+
+**Aliases:** `clipboard()`
+
+Sets the clipboard text
+
+```lua
+setClipboard(text)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| text | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getClipboard()</code> \{#getClipboard}
+
+Gets the text from the clipboard
+
+```lua
+getClipboard()
+```
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setSubtitle()</code> \{#setSubtitle}
+
+**Aliases:** `subtitle()`
+
+Sets the current subtitle to the given text
+
+The text is given as a JSON string
+
+```lua
+setSubtitle(text)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| text | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setTitle()</code> \{#setTitle}
+
+**Aliases:** `title()`
 
 Sets the current title to the given text
 
 The text is given as json
 
-**Example**:
+```lua
+setTitle(text)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| text | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
-host:setTitle("Hello World")
+--todo
 ```
 
 ---
 
-### `setSubtitle(string)` \{#setSubtitle}
+### <code>setTitleTimes()</code> \{#setTitleTimes}
 
-Sets the current subtitle to the given text
-The text is given as json
+**Aliases:** `titleTimes()`
 
-**Example**:
+Sets the duration of the title on the screen, also its fade-in and fade-out durations
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-host:setSubtitle("Hello World")
+setTitleTimes(timesData)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-----------|--------------------------------------------------|-------------|---------|
+| timesData | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setTitleTimes(fadeInTime, stayTime, fadeOutTime)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------------|---------------------------|-------------|---------|
+| fadeInTime | <code>[Integer](#)</code> | - | - |
+| stayTime | <code>[Integer](#)</code> | - | - |
+| fadeOutTime | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setActionbar(string, boolean)` \{#setActionbar}
-
-Sets the action bar message to the given text
-
-The boolean parameter defaults to false and sets if the text will be animated
-
-**Example**:
-
-```lua
-host:setActionbar("Hello World")
-```
-
----
-
-### `setTitleTimes(Vector3)` \{#setTitleTimes}
-
-Sets the duration of the title on the screen, also its fade-in and fade-out durations.
-
-The inputs for the Vector3 are ordered like-so: (fadeInTime, stayTime, fadeOutTime)
-
-**Example**:
-
-```lua
-host:setTitleTimes(5, 5, 5)
-```
-
----
-
-### `clearTitle()` \{#clearTitle}
-
-Clears the current title from the GUI
-
-**Example**:
-
-```lua
-host:clearTitle()
-```
-
----
-
-### `setUnlockCursor(boolean)` \{#setUnlockCursor}
+### <code>setUnlockCursor()</code> \{#setUnlockCursor}
 
 Toggles locking of your cursor, letting you move it freely on the screen instead of it controlling your player's rotation
 
-**Example**:
+```lua
+setUnlockCursor(boolean)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|---------|---------------------------|-------------|---------|
+| boolean | <code>[Boolean](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
-host:setUnlockCursor(true)
+--todo
 ```
 
 ---
 
-### `isCursorUnlocked()` \{#isCursorUnlocked}
+### <code>clearTitle()</code> \{#clearTitle}
 
-Checks if the cursor is currently unlocked
-
-Only responds to your own changes in script, not anything done by Minecraft
-
-**Example**:
+Clears the current title from the GUI
 
 ```lua
-host:isCursorUnlocked()
+clearTitle()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `screenshot()` \{#screenshot}
-
-Takes a screenshot from the current screen and returns a Texture of it
-
-**Example**:
-
-```lua
-host:screenshot()
-```
-
----
-
-### `setClipboard(string)` \{#setClipboard}
-
-Sets the clipboard text
-
-**Example**:
-
-```lua
-host:setClipboard("Hello World")
-```
-
----
-
-### `getClipboard()` \{#getClipboard}
-
-Gets the text from the clipboard
-
-**Example**:
-
-```lua
-host:getClipboard()
-```
-
----
-
-### `isAvatarUploaded()` \{#isAvatarUploaded}
+### <code>isAvatarUploaded()</code> \{#isAvatarUploaded}
 
 Checks if this avatar is currently uploaded
 
-**Example**:
+```lua
+isAvatarUploaded()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
 
 ```lua
-host:isAvatarUploaded()
+--todo
 ```
+
+---
+
+### <code>isCursorUnlocked()</code> \{#isCursorUnlocked}
+
+Checks if the cursor is currently unlocked
+
+Only responds to your own changes in your script, not anything done by Minecraft itself
+
+```lua
+isCursorUnlocked()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>screenshot()</code> \{#screenshot}
+
+Takes a screenshot from the current screen and returns a Texture of it
+
+```lua
+screenshot(name)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| name | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|-------------|
+| <code>[Texture](/globals/Textures/Texture)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>swingArm()</code> \{#swingArm}
+
+Animates swinging the player's arm
+
+If the boolean is true, then the offhand is the one that swings
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+swingArm()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+swingArm(offhand)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|---------|---------------------------|-------------|---------|
+| offhand | <code>[Boolean](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------|---------------------------|
+| <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Fields
+
+### <code>unlockCursor</code> \{#unlockCursor}
+
+Setting this value to true will unlock your cursor, letting you move it freely on the screen instead of it controlling your player's rotation
+
+**Example:**
+
+```lua
+--todo
+```
+
+---

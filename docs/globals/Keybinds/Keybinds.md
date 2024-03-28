@@ -1,8 +1,15 @@
-The global instance of the KeybindAPI and its subtypes
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
----
+:::danger
+This page is a WIP.
+:::
 
-### `newKeybind(string,string,bool)` \{#newKeybind}
+A global API containing a function to create new Keybind instances
+
+### <code>newKeybind()</code> \{#newKeybind}
+
+**Aliases:** `of()`
 
 Creates and returns a new Keybind
 
@@ -14,48 +21,143 @@ The boolean gui indicates whether the keybind should always work, or if it shoul
 
 Check the docs enum command for all key names
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
+newKeybind(name)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| name | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|-------------|
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+newKeybind(name, key)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| name | <code>[String](#)</code> | - | - |
+| key | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|-------------|
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3" default>
+
+```lua
+newKeybind(name, key, gui)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|---------------------------|-------------|---------|
+| name | <code>[String](#)</code> | - | - |
+| key | <code>[String](#)</code> | - | - |
+| gui | <code>[Boolean](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|-------------|
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getVanillaKey(string)` \{#getVanillaKey}
+### <code>getVanillaKey()</code> \{#getVanillaKey}
 
 Gets the id of the key bound to the given action, as a string
 
 Check the docs enum command for all key names and vanilla actions
 
-**Example**:
+```lua
+getVanillaKey(id)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| id | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | - |
+
+**Example:**
 
 ```lua
-local myKey = keybinds:newKeybind("Name", keybinds:getVanillaKey("key.attack"), false)
+--todo
 ```
 
 ---
 
-### `fromVanilla(string)` \{#fromVanilla}
+### <code>fromVanilla()</code> \{#fromVanilla}
 
 Creates a new Keybind based from a vanilla key
 
-**Example**:
+```lua
+fromVanilla(id)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| id | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|-------------|
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+
+**Example:**
 
 ```lua
-local myKey = keybinds:fromVanilla("key.attack")
+--todo
 ```
 
 ---
 
-### `getKeybinds()` \{#getKeybinds}
+### <code>getKeybinds()</code> \{#getKeybinds}
 
 Returns a table with all registered keybinds
 
-**Example**:
+```lua
+getKeybinds()
+```
+
+**Returns:**
+| Type | Description |
+|-------------------------|-------------|
+| <code>[Table](#)</code> | - |
+
+**Example:**
 
 ```lua
-keybinds:getKeybinds()
+--todo
 ```
 
 ---

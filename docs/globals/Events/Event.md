@@ -1,8 +1,15 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+:::danger
+This page is a WIP.
+:::
+
 A hook for a certain event in Minecraft
 
 You may register functions to one, and those functions will be called when the event occurs
 
-### `register(fn,string)` \{#register}
+### <code>register()</code> \{#register}
 
 Register a function on this event
 
@@ -10,48 +17,148 @@ Functions are run in registration order
 
 An optional string argument can be given, grouping functions under that name, for an easier management later on
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-events.TICK:register(function() end, "Name")
+register(func)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|----------------------------|-------------|---------|
+| func | <code>[Function](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------|---------------------------|
+| <code>[Event](/globals/Events/Event)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+register(func, name)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|----------------------------|-------------|---------|
+| func | <code>[Function](#)</code> | - | - |
+| name | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------|---------------------------|
+| <code>[Event](/globals/Events/Event)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `clear()` \{#clear}
+### <code>clear()</code> \{#clear}
 
 Clears the given event of all its functions
 
-**Example**:
+```lua
+clear()
+```
+
+**Returns:**
+| Type | Description |
+|-----------------------|-------------|
+| <code>[nil](#)</code> | - |
+
+**Example:**
 
 ```lua
-events.TICK:clear()
+--todo
 ```
 
 ---
 
-### `remove(string or fn)` \{#remove}
+### <code>remove()</code> \{#remove}
 
-Removes either a function from this event, or when given a string, remove all functions registred under that name
+Removes either a function from this event or when given a string, remove all functions registered under that name
 
 Returns the number of functions that were removed
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-events.TICK:remove("Name")
+remove(name)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| name | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+remove(function)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|----------|----------------------------|-------------|---------|
+| function | <code>[Function](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getRegisteredCount(string)` \{#getRegisteredCount}
+### <code>getRegisteredCount()</code> \{#getRegisteredCount}
 
-Returns a number of how many functions is registered by this name
-
-**Example**:
+Returns the number of functions that are registered with the given name
 
 ```lua
-events.TICK:getRegisteredCount("Name")
+getRegisteredCount(name)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| name | <code>[String](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
