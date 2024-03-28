@@ -1,14 +1,27 @@
 import styles from "@site/src/components/InteractiveImage/Button.module.css";
 import InteractiveImageContext from "@site/src/contexts/InteractiveImageContext";
-import React, { CSSProperties, FC, PropsWithChildren, useContext, useMemo, useState } from "react";
+import React, { CSSProperties, FC, PropsWithChildren, useContext, useMemo, useState, useEffect } from "react";
 
 export type InteractiveImageButtonType = PropsWithChildren<{
   id: string;
   style?: CSSProperties;
+  left: number;
+  top: number;
+  width: number;
+  height: number;
   pulse?: boolean;
 }>;
 
-const InteractiveImageButton: FC<InteractiveImageButtonType> = ({ id, style, pulse, children }) => {
+const InteractiveImageButton: FC<InteractiveImageButtonType> = ({
+  id,
+  style,
+  left,
+  top,
+  width,
+  height,
+  pulse,
+  children,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const { selected, setSelected } = useContext(InteractiveImageContext);
 
@@ -16,13 +29,24 @@ const InteractiveImageButton: FC<InteractiveImageButtonType> = ({ id, style, pul
 
   const buttonStyle = useMemo<CSSProperties>(
     () => ({
-      ...style,
+      left,
+      top,
+      width,
+      height,
       position: "absolute",
+      cursor: "pointer",
       background: "#fff",
       opacity: isSelected || isHovered ? 0.3 : 0.0,
     }),
-    [style, isSelected, isHovered],
+    [isSelected, isHovered],
   );
+
+  useEffect(() => {
+    document
+      .getAnimations()
+      .filter((a) => a.animationName === styles["pulse"])
+      .forEach((a) => (a.startTime = 0));
+  }, [isHovered]);
 
   return (
     <>
@@ -33,7 +57,7 @@ const InteractiveImageButton: FC<InteractiveImageButtonType> = ({ id, style, pul
         onMouseLeave={() => setIsHovered(false)}
         style={buttonStyle}
       />
-      {isSelected && children}
+      {isSelected && <div style={style}>{children}</div>}
     </>
   );
 };
