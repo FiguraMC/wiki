@@ -1,3 +1,10 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+:::danger
+This page is a WIP.
+:::
+
 A proxy for a Minecraft biome
 
 Instances are obtained through the WorldAPI
@@ -12,188 +19,346 @@ local biome = world.getBiome(player:getPos())
 
 ---
 
-### `getPos()` \{#getPos}
+### <code>getDownfall()</code> \{#getDownfall}
+
+Gets this biome's humidity
+
+```lua
+getDownfall()
+```
+
+**Returns:**
+| Type                     | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getFogColor()</code> \{#getFogColor}
+
+Gets this biome's fog color as an RGB vector
+
+```lua
+getFogColor()
+```
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getFoliageColor()</code> \{#getFoliageColor}
+
+Gets this biome's foliage color as an RGB vector
+
+```lua
+getFoliageColor()
+```
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getGrassColor()</code> \{#getGrassColor}
+
+Gets this biome's grass color as an RGB vector
+
+```lua
+getGrassColor()
+```
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setPos()</code> \{#setPos}
+
+**Aliases:** `pos()`
+
+Sets the saved position for this Biome's proxy
+
+The saved position is used in Biome functions that require a position
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPos(pos)
+```
+
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                                       | Description               |
+|--------------------------------------------|---------------------------|
+| <code>[Biome](/globals/World/Biome)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                       | Description               |
+|--------------------------------------------|---------------------------|
+| <code>[Biome](/globals/World/Biome)</code> | Returns self for chaining |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getPos()</code> \{#getPos}
 
 Returns the saved position for this Biome's proxy
 
 The saved position is used in Biome functions that require a position
 
-**Example**:
+```lua
+getPos()
+```
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
-biome:getPos()
+--todo
 ```
 
 ---
 
-### `setPos(Vector3)` \{#setPos}
-
-Returns the saved position for this Biome's proxy
-
-The saved position is used in Biome functions that require a position
-
-**Example**:
-
-```lua
-biome:setPos(player:getPos())
-```
-
----
-
-### `getTags()` \{#getTags}
-
-Gets the worldgen related tags from this Biome
-
-**Example**:
-
-```lua
-biome:getTags()
-```
-
----
-
-### `getTemperature()` \{#getTemperature}
-
-Gets the temperature of this biome
-
-**Example**:
-
-```lua
-biome:getTemperature()
-```
-
----
-
-### `getWaterColor()` \{#getWaterColor}
-
-Gets this biome's water color as a RGB vector
-
-**Example**:
-
-```lua
-biome:getWaterColor()
-```
-
----
-
-### `getWaterFogColor()` \{#getWaterFogColor}
-
-Gets this biome's water fog color as a RGB vector
-
-**Example**:
-
-```lua
-biome:getWaterFogColor()
-```
-
----
-
-### `isHot()` \{#isHot}
-
-Checks if this biome is hot
-
-**Example**:
-
-```lua
-biome:isHot()
-```
-
----
-
-### `isCold()` \{#isCold}
-
-Checks if this biome is cold
-
-**Example**:
-
-```lua
-biome:isCold()
-```
-
----
-
-### `getPrecipitation()` \{#getPrecipitation}
+### <code>getPrecipitation()</code> \{#getPrecipitation}
 
 Gets the rain type of this biome
 
 The type can be "NONE", "RAIN" or "SNOW"
 
-**Example**:
+```lua
+getPrecipitation()
+```
+
+**Returns:**
+| Type                     | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
-biome:getPrecipitation()
+--todo
 ```
 
 ---
 
-### `getDownfall()` \{#getDownfall}
+### <code>getSkyColor()</code> \{#getSkyColor}
 
-Gets this biome's humidity
-
-**Example**:
+Gets this biome's sky color as an RGB vector
 
 ```lua
-biome:getDownfall()
+getSkyColor()
+```
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getSkyColor()` \{#getSkyColor}
+### <code>getTags()</code> \{#getTags}
 
-Gets this biome's sky color as a RGB vector
-
-**Example**:
+Gets the worldgen related tags from this Biome
 
 ```lua
-biome:getSkyColor()
+getTags()
+```
+
+**Returns:**
+| Type                    | Description |
+|-------------------------|-------------|
+| <code>[Table](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getFogColor()` \{#getFogColor}
+### <code>getTemperature()</code> \{#getTemperature}
 
-Gets this biome's fog color as a RGB vector
-
-**Example**:
+Gets the temperature of this biome
 
 ```lua
-biome:getFogColor()
+getTemperature()
+```
+
+**Returns:**
+| Type                     | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getGrassColor()` \{#getGrassColor}
+### <code>getWaterColor()</code> \{#getWaterColor}
 
-Gets this biome's grass color as a RGB vector
-
-**Example**:
+Gets this biome's water color as an RGB vector
 
 ```lua
-biome:getGrassColor()
+getWaterColor()
+```
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getFoliageColor()` \{#getFoliageColor}
+### <code>getWaterFogColor()</code> \{#getWaterFogColor}
 
-Gets this biome's foliage color as a RGB vector
-
-**Example**:
+Gets this biome's water fog color as an RGB vector
 
 ```lua
-biome:getFoliageColor()
+getWaterFogColor()
+```
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `id` \{#id}
+### <code>isCold()</code> \{#isCold}
+
+Checks if this biome is cold
+
+```lua
+isCold()
+```
+
+**Returns:**
+| Type                      | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isHot()</code> \{#isHot}
+
+Checks if this biome is hot
+
+```lua
+isHot()
+```
+
+**Returns:**
+| Type                      | Description |
+|---------------------------|-------------|
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>id</code> \{#id}
 
 The id of this biome
 
-**Example**:
+**Example:**
 
 ```lua
-biome.id
+--todo
 ```
 
 ---
