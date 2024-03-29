@@ -55,7 +55,7 @@ The saved position is used in BlockState functions that require a position
 **Example**:
 
 ```lua
-block:getID()
+block:getPos()
 ```
 
 ---

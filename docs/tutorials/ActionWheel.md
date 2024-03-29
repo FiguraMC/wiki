@@ -2,6 +2,8 @@
 title: Action Wheel
 ---
 
+If you're just here to copy-paste something without the tutorial go [here](./ActionWheel/#here-is-the-full-copy-paste-for-an-example-action-wheel)
+
 The Action Wheel is a gui element provided by Figura that allows for adding highly customizable Actions that can provide additional functionality to your avatar.
 
 The Action Wheel operates on Pages. Only a single Page can be active at a time.<br/>
@@ -11,7 +13,7 @@ The docs page for the [Action Wheel](../globals/action-wheel) has more examples 
 
 ## Example Action Wheel
 
-First step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.
+The first step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.
 
 ```lua
 local mainPage = action_wheel:newPage()
@@ -117,7 +119,7 @@ mainPage:newAction()
     -- Do not do use this code. It will not work.
 ```
 
-Here is the full copy paste for an example Action Wheel
+#### Here is the full copy paste for an example Action Wheel
 
 <!-- prettier-ignore -->
 ```lua
@@ -137,7 +139,7 @@ local action = mainPage:newAction()
 
 ### Toggle Example
 
-This is an exmaple of the onToggle function, which swaps between two states
+This is an exmaple of the onToggle function, which swaps between two states. It does not work on its own as it doesn't have a page.
 
 <!-- prettier-ignore -->
 ```lua
@@ -145,7 +147,7 @@ function pings.toggling(state)
     models:setVisible(state)
 end
 
-local toggleaction = myPage:newAction()
+local toggleaction = mainPage:newAction() -- If you're getting an error here it's probably because you didn't make the page
     :title("disabled")
     :toggleTitle("enabled")
     :item("red_wool")
@@ -180,7 +182,7 @@ function pings.toggling(state)
     models:setVisible(state)
 end
 
-local toggleaction = myPage:newAction()
+local toggleaction = mainPage:newAction()
     -- this action is saved to toggleaction. it's important that actions are saved to unique variables
     :title("disabled")
     :toggleTitle("enabled")
@@ -232,3 +234,7 @@ Go [here](../globals/Action-Wheel/Action.md) for more information on Actions. Go
 ## Advanced Action Wheel
 
 Go [here](../tutorials/ActionWheel-Advanced) for an advanced action wheel tutorial.
+
+#### For when you want to skip the tutorials altogether
+
+If you scrolled to the bottom of the page just to copy-paste something without the tutorial go [here](./ActionWheel/#here-is-the-full-copy-paste-for-an-example-action-wheel)

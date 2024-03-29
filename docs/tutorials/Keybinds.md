@@ -14,7 +14,7 @@ local exampleKey = keybinds:newKeybind("Keybind Name", "key.keyboard.h")
 
 At this point, the keybind will show up in the avatar's keybind list- accessible via the Figura menu- with the name Keybind Name and assigned to the letter H. But pressing H won't do anything yet.
 
-More keybinds ids can be found in the Keybinds: Enums page
+More keybinds ids can be found in the [KeybindsList](../enums/Keybinds-List.md) page
 
 There are multiple ways to detect keybinds, but the most common is through <code>press</code> and <code>release</code> as they are easiest to ping. If you're not familiar with pings see [Pings](./Pings).
 
@@ -100,4 +100,4 @@ If you want to detect a vanilla action like attacking or walking forwards but wa
 local exampleKey = keybinds:newKeybind("Keybind Name", keybinds:getVanillaKey("key.forward"))
 ```
 
-This will now detect the forward key regardless of what it's bound to. <code>getVanillaKey()</code> is going to need a key id from a specific list of ids that all correspond to a vanilla keybind. They can be found in the keyIDs enum.
+This will now detect the forward key regardless of what it's bound to. <code>getVanillaKey()</code> is going to need a key id from a specific list of ids that all correspond to a vanilla keybind. They can be found in the [keyIDs](../enums/KeyIDs.md) enum.

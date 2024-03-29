@@ -1,5 +1,7 @@
 import Emoji from '@site/src/components/Emoji';
 
+# ParentTypes
+
 ParentTypes are applied to ModelParts to apply specific transformations, or change how the ModelPart behaves.
 
 ## Applying ParentTypes via BlockBench
