@@ -38,7 +38,7 @@ Ex: If your file is <code>horn.ogg</code> then your playSound line would look li
 sounds:playSound("horn", player:getPos())
 ```
 
-Minecraft will only play specific sound files, namely sounds that are .ogg files. Here's an [online OGG converter](https://audio.online-convert.com/convert-to-ogg). You will want to change the audio channels setting to <code>mono</code> and the audio codec to <code>Vorbis</code> because Minecraft likes the Vorbic codec.
+Minecraft will only play specific sound files, namely sounds that are .ogg files. Here's an [online OGG converter](https://audio.online-convert.com/convert-to-ogg). You will want to change the audio channels setting to <code>mono</code> and the audio codec to <code>Vorbis</code>.
 
 If your custom sound is stored in a subfolder in the avatar, the subfolder name gets added onto the sound name like this:
 
@@ -67,10 +67,10 @@ local wDeath = sounds["entity.wither.death"]
 Now you have the wither death sound available for your use wherever within that local scope.
 
 ```lua
-wDeath:play()
+wDeath:play():loop(true)
 ```
 
-Will play the sound, but without a position it will be at (0,0,0) in the world.
+Will play the sound and make it loop, but without a position it will be at (0,0,0) in the world.
 
 ```lua
 function events.tick()
@@ -82,7 +82,7 @@ Full example:
 
 ```lua
 local wDeath = sounds["entity.wither.death"]
-wDeath:play()
+wDeath:play():loop(true)
 function events.tick()
     wDeath:pos(player:getPos())
 end

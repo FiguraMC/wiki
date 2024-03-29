@@ -6,7 +6,7 @@ In order to play an animation you need to index the animation through the Blockb
 
 Let's say we have a Blockbench model named <code>example</code>
 
-<img src={require("@site/static/img/animation/exampleBbmodel.png").default} width="100"></img>
+<img src={require("@site/static/img/animation/exampleBbmodel.png").default} width="200"></img>
 
 and an animation named <code>idle</code>
 
@@ -20,7 +20,7 @@ animations.example.idle:play()
 
 <code>animations</code> stores all the animation data for every Blockbench model.<br/>
 
-The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code> (if your Blockbench model is in a subfolder, that will need to be included as well, but you can find more information about that in ModelPart Indexing)
+The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code> (if your Blockbench model is in a subfolder, that will need to be included as well like <code>animations["subfolder.example"].idle</code>)
 
 And the last is always the animation name, in this case <code>idle</code>.
 
