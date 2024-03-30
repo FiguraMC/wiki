@@ -28,9 +28,9 @@ getDownfall()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[Number](#)</code> | -           |
+| <code>[Number](#)</code> | - |
 
 **Example:**
 
@@ -49,9 +49,9 @@ getFogColor()
 ```
 
 **Returns:**
-| Type                                             | Description |
+| Type | Description |
 |--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
 
 **Example:**
 
@@ -70,9 +70,9 @@ getFoliageColor()
 ```
 
 **Returns:**
-| Type                                             | Description |
+| Type | Description |
 |--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
 
 **Example:**
 
@@ -91,9 +91,9 @@ getGrassColor()
 ```
 
 **Returns:**
-| Type                                             | Description |
+| Type | Description |
 |--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
 
 **Example:**
 
@@ -119,12 +119,12 @@ setPos(pos)
 ```
 
 **Parameters:**
-| Name | Type                                             | Description | Default |
+| Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
-| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
-| Type                                       | Description               |
+| Type | Description |
 |--------------------------------------------|---------------------------|
 | <code>[Biome](/globals/World/Biome)</code> | Returns self for chaining |
 
@@ -136,18 +136,19 @@ setPos(x, y, z)
 ```
 
 **Parameters:**
-| Name | Type                     | Description | Default |
+| Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| x | <code>[Number](#)</code> | - | - |
+| y | <code>[Number](#)</code> | - | - |
+| z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
-| Type                                       | Description               |
+| Type | Description |
 |--------------------------------------------|---------------------------|
 | <code>[Biome](/globals/World/Biome)</code> | Returns self for chaining |
 
     </TabItem>
+
 </Tabs>
 
 **Example:**
@@ -169,9 +170,9 @@ getPos()
 ```
 
 **Returns:**
-| Type                                             | Description |
+| Type | Description |
 |--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
 
 **Example:**
 
@@ -192,9 +193,9 @@ getPrecipitation()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[String](#)</code> | -           |
+| <code>[String](#)</code> | - |
 
 **Example:**
 
@@ -213,9 +214,9 @@ getSkyColor()
 ```
 
 **Returns:**
-| Type                                             | Description |
+| Type | Description |
 |--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
 
 **Example:**
 
@@ -234,9 +235,9 @@ getTags()
 ```
 
 **Returns:**
-| Type                    | Description |
+| Type | Description |
 |-------------------------|-------------|
-| <code>[Table](#)</code> | -           |
+| <code>[Table](#)</code> | - |
 
 **Example:**
 
@@ -255,9 +256,9 @@ getTemperature()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[Number](#)</code> | -           |
+| <code>[Number](#)</code> | - |
 
 **Example:**
 
@@ -276,9 +277,9 @@ getWaterColor()
 ```
 
 **Returns:**
-| Type                                             | Description |
+| Type | Description |
 |--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
 
 **Example:**
 
@@ -297,9 +298,9 @@ getWaterFogColor()
 ```
 
 **Returns:**
-| Type                                             | Description |
+| Type | Description |
 |--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
 
 **Example:**
 
@@ -318,9 +319,9 @@ isCold()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -339,9 +340,9 @@ isHot()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 

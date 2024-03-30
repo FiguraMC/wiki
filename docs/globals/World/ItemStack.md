@@ -23,9 +23,9 @@ getBlockstate()
 ```
 
 **Returns:**
-| Type                                                 | Description |
+| Type | Description |
 |------------------------------------------------------|-------------|
-| <code>[BlockState](/globals/World/BlockState)</code> | -           |
+| <code>[BlockState](/globals/World/BlockState)</code> | - |
 
 **Example:**
 
@@ -44,9 +44,9 @@ getCount()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Integer](#)</code> | -           |
+| <code>[Integer](#)</code> | - |
 
 **Example:**
 
@@ -67,9 +67,9 @@ getDamage()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Integer](#)</code> | -           |
+| <code>[Integer](#)</code> | - |
 
 **Example:**
 
@@ -88,9 +88,9 @@ getEquipmentSlot()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[String](#)</code> | -           |
+| <code>[String](#)</code> | - |
 
 **Example:**
 
@@ -109,9 +109,9 @@ getID()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[String](#)</code> | -           |
+| <code>[String](#)</code> | - |
 
 **Example:**
 
@@ -130,9 +130,9 @@ getMaxCount()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Integer](#)</code> | -           |
+| <code>[Integer](#)</code> | - |
 
 **Example:**
 
@@ -151,9 +151,9 @@ getMaxDamage()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Integer](#)</code> | -           |
+| <code>[Integer](#)</code> | - |
 
 **Example:**
 
@@ -172,9 +172,9 @@ getName()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[String](#)</code> | -           |
+| <code>[String](#)</code> | - |
 
 **Example:**
 
@@ -193,9 +193,9 @@ getPopTime()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Integer](#)</code> | -           |
+| <code>[Integer](#)</code> | - |
 
 **Example:**
 
@@ -216,9 +216,9 @@ getRarity()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[String](#)</code> | -           |
+| <code>[String](#)</code> | - |
 
 **Example:**
 
@@ -237,9 +237,9 @@ getRepairCost()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Integer](#)</code> | -           |
+| <code>[Integer](#)</code> | - |
 
 **Example:**
 
@@ -258,9 +258,9 @@ getTag()
 ```
 
 **Returns:**
-| Type                    | Description |
+| Type | Description |
 |-------------------------|-------------|
-| <code>[Table](#)</code> | -           |
+| <code>[Table](#)</code> | - |
 
 **Example:**
 
@@ -279,9 +279,9 @@ getTags()
 ```
 
 **Returns:**
-| Type                    | Description |
+| Type | Description |
 |-------------------------|-------------|
-| <code>[Table](#)</code> | -           |
+| <code>[Table](#)</code> | - |
 
 **Example:**
 
@@ -300,9 +300,9 @@ getUseAction()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[String](#)</code> | -           |
+| <code>[String](#)</code> | - |
 
 **Example:**
 
@@ -325,9 +325,9 @@ getUseDuration()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Integer](#)</code> | -           |
+| <code>[Integer](#)</code> | - |
 
 **Example:**
 
@@ -346,7 +346,7 @@ copy()
 ```
 
 **Returns:**
-| Type                                               | Description               |
+| Type | Description |
 |----------------------------------------------------|---------------------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | Returns self for chaining |
 
@@ -367,9 +367,9 @@ hasGlint()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -388,9 +388,9 @@ isArmor()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -409,9 +409,9 @@ isBlockItem()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -430,9 +430,9 @@ isDamageable()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -451,9 +451,9 @@ isEnchantable()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -472,9 +472,9 @@ isFood()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -493,9 +493,9 @@ isStackable()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -514,9 +514,9 @@ isTool()
 ```
 
 **Returns:**
-| Type                      | Description |
+| Type | Description |
 |---------------------------|-------------|
-| <code>[Boolean](#)</code> | -           |
+| <code>[Boolean](#)</code> | - |
 
 **Example:**
 
@@ -535,9 +535,9 @@ toStackString()
 ```
 
 **Returns:**
-| Type                     | Description |
+| Type | Description |
 |--------------------------|-------------|
-| <code>[String](#)</code> | -           |
+| <code>[String](#)</code> | - |
 
 **Example:**
 
