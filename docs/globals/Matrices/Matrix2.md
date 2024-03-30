@@ -7,89 +7,9 @@ This page is a WIP.
 
 A matrix with 2 rows and 2 columns
 
-### <code>set()</code> \{#set}
-
-Sets this matrix to have the same values as the matrix passed in
-
-Returns self for chaining
-
-```lua
-set(other)
-```
-
-**Parameters:**
-| Name | Type | Description | Default |
-|-------|---------------------------------------------------|-------------|---------|
-| other | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - | - |
-
-**Returns:**
-| Type | Description |
-|---------------------------------------------------|---------------------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
-
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
-### <code>getColumn()</code> \{#getColumn}
-
-Gets the given column of this matrix, as a vector
-
-Indexing starts at 1, as usual
-
-```lua
-getColumn(col)
-```
-
-**Parameters:**
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| col | <code>[Integer](#)</code> | - | - |
-
-**Returns:**
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getRow()</code> \{#getRow}
-
-Gets the given row of this matrix, as a vector
-
-Indexing starts at 1, as usual
-
-```lua
-getRow(row)
-```
-
-**Parameters:**
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| row | <code>[Integer](#)</code> | - | - |
-
-**Returns:**
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
-
-**Example:**
-
-```lua
---todo
-```
-
----
+## Math
 
 ### <code>add()</code> \{#add}
 
@@ -119,88 +39,20 @@ add(other)
 
 ---
 
-### <code>apply()</code> \{#apply}
+### <code>sub()</code> \{#sub}
 
-Treats the given values as a vector, augments this vector with a 1, multiplies it against the matrix, and returns a deaugmented vector of the first values
+Subtracts the other matrix from this one
+
+Returns self for chaining
 
 ```lua
-apply(x)
+sub(other)
 ```
 
 **Parameters:**
 | Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-
-**Returns:**
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>applyDir()</code> \{#applyDir}
-
-Treats the given values as a vector, augments this vector with a 0, multiplies it against the matrix, and returns a deaugmented vector of the first values
-
-```lua
-applyDir(x)
-```
-
-**Parameters:**
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-
-**Returns:**
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>augmented()</code> \{#augmented}
-
-Augments this matrix, adding an additional row and column
-
-Puts a 1 along the diagonal in the new spot, and the rest are zero
-
-```lua
-augmented()
-```
-
-**Returns:**
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>copy()</code> \{#copy}
-
-Creates and returns a new copy of this matrix
-
-```lua
-copy()
-```
+|-------|---------------------------------------------------|-------------|---------|
+| other | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - | - |
 
 **Returns:**
 | Type | Description |
@@ -308,29 +160,6 @@ multiply(other)
 
 ---
 
-### <code>reset()</code> \{#reset}
-
-Resets this matrix back to the identity matrix
-
-Returns self for chaining
-
-```lua
-reset()
-```
-
-**Returns:**
-| Type | Description |
-|---------------------------------------------------|---------------------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
 ### <code>rightMultiply()</code> \{#rightMultiply}
 
 Multiplies this matrix by the other matrix, with the other matrix on the right
@@ -350,6 +179,118 @@ rightMultiply(other)
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Accessors
+
+### <code>getColumn()</code> \{#getColumn}
+
+Gets the given column of this matrix, as a vector
+
+Indexing starts at 1, as usual
+
+```lua
+getColumn(col)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|---------------------------|-------------|---------|
+| col | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getRow()</code> \{#getRow}
+
+Gets the given row of this matrix, as a vector
+
+Indexing starts at 1, as usual
+
+```lua
+getRow(row)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|---------------------------|-------------|---------|
+| row | <code>[Integer](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Transformation
+
+### <code>apply()</code> \{#apply}
+
+Treats the given values as a vector, augments this vector with a 1, multiplies it against the matrix, and returns a deaugmented vector of the first values
+
+```lua
+apply(x)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| x | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>applyDir()</code> \{#applyDir}
+
+Treats the given values as a vector, augments this vector with a 0, multiplies it against the matrix, and returns a deaugmented vector of the first values
+
+```lua
+applyDir(x)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|------|--------------------------|-------------|---------|
+| x | <code>[Number](#)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|--------------------------|-------------|
+| <code>[Number](#)</code> | - |
 
 **Example:**
 
@@ -442,34 +383,6 @@ scale(x, y)
 
 ---
 
-### <code>sub()</code> \{#sub}
-
-Subtracts the other matrix from this one
-
-Returns self for chaining
-
-```lua
-sub(other)
-```
-
-**Parameters:**
-| Name | Type | Description | Default |
-|-------|---------------------------------------------------|-------------|---------|
-| other | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - | - |
-
-**Returns:**
-| Type | Description |
-|---------------------------------------------------|---------------------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
 ### <code>transpose()</code> \{#transpose}
 
 Transposes this matrix, changing the values inside
@@ -503,6 +416,103 @@ Transposing means to swap the rows and the columns
 
 ```lua
 transposed()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|---------------------------|
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Utility
+
+### <code>set()</code> \{#set}
+
+Sets this matrix to have the same values as the matrix passed in
+
+Returns self for chaining
+
+```lua
+set(other)
+```
+
+**Parameters:**
+| Name | Type | Description | Default |
+|-------|---------------------------------------------------|-------------|---------|
+| other | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - | - |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|---------------------------|
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>augmented()</code> \{#augmented}
+
+Augments this matrix, adding an additional row and column
+
+Puts a 1 along the diagonal in the new spot, and the rest are zero
+
+```lua
+augmented()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|-------------|
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>copy()</code> \{#copy}
+
+Creates and returns a new copy of this matrix
+
+```lua
+copy()
+```
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|---------------------------|
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>reset()</code> \{#reset}
+
+Resets this matrix back to the identity matrix
+
+Returns self for chaining
+
+```lua
+reset()
 ```
 
 **Returns:**
