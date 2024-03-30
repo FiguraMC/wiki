@@ -26,6 +26,7 @@ play()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -47,6 +48,7 @@ stop()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -68,6 +70,7 @@ pause()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -93,6 +96,7 @@ restart()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -121,6 +125,7 @@ setPlaying()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -133,11 +138,13 @@ setPlaying(bool)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | bool | <code>[Boolean](#)</code> | True or false value that dictates if the animation will play or stop | `false` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -166,6 +173,7 @@ isPlaying()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns true if the animation is playing, and false if it isn't |
@@ -187,6 +195,7 @@ isStopped()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns true if the animation is stopped, and false if it isn't |
@@ -208,6 +217,7 @@ isPaused()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns true if the animation is paused, and false if it isn't |
@@ -229,6 +239,7 @@ getPlayState()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | Returns the [PlayState](/enums/PlayStates) |
@@ -258,11 +269,13 @@ setSpeed(speed)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | speed | <code>[Number](#)</code> | Sets the animation's speed | `1` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -284,6 +297,7 @@ getSpeed()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | The animation's speed as a number |
@@ -307,11 +321,13 @@ setLength(length)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------|--------------------------|-------------|---------|
 | length | <code>[Number](#)</code> | The length of time, in seconds | `0` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -333,6 +349,7 @@ getLength()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | Returns the animation's length, in seconds |
@@ -360,11 +377,13 @@ setPriority(priority)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | priority | <code>[Integer](#)</code> | The priority of the animation, as a whole number | `0` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -386,6 +405,7 @@ getPriority()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | Returns the animation's priority number |
@@ -409,11 +429,13 @@ setTime(time)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | time | <code>[Number](#)</code> | The time to set the animation to, in seconds | `0` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -435,6 +457,7 @@ getTime()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | Returns the playback time of the animation |
@@ -460,11 +483,13 @@ setOffset(offset)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------|--------------------------|-------------|---------|
 | offset | <code>[Number](#)</code> | Time in seconds to skip for each loop | `0` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -486,6 +511,7 @@ getOffset()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | The time that is skipped every loop, in seconds |
@@ -509,11 +535,13 @@ setLoop(loop)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | loop | <code>[String](#)</code> | Sets the [LoopMode](/enums/Loop-Modes) | Required |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -535,6 +563,7 @@ getLoop()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | Returns the [LoopMode](/enums/Loop-Modes) |
@@ -558,11 +587,13 @@ setBlend(blend)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | blend | <code>[Number](#)</code> | Strength of the blend factor between 0 and 1 | `1` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -584,6 +615,7 @@ getBlend()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | Gets the strength of the blend factor between 0 and 1 |
@@ -609,11 +641,13 @@ setStartDelay(delay)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | delay | <code>[Number](#)</code> | The time in seconds to set the delay to | `0` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -635,6 +669,7 @@ getStartDelay()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | The time in seconds that it's being delayed |
@@ -658,11 +693,13 @@ setLoopDelay(delay)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | delay | <code>[Number](#)</code> | The time in seconds to set the delay to | `0` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -684,6 +721,7 @@ getLoopDelay()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | The time in seconds that it's being delayed |
@@ -711,11 +749,13 @@ setOverride(override)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override all transformations | `false` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -739,11 +779,13 @@ setOverrideRot(override)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override rotation | `false` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -765,6 +807,7 @@ getOverrideRot()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns if it should be overriding rotation |
@@ -788,11 +831,13 @@ setOverridePos(override)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override position | `false` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -814,6 +859,7 @@ getOverridePos()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns if it should be overriding position |
@@ -837,11 +883,13 @@ setOverrideScale(override)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override scale | `false` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
@@ -863,6 +911,7 @@ getOverrideScale()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns if it should be overriding scale |
@@ -886,6 +935,7 @@ getName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | Returns the animation's name |
@@ -909,12 +959,14 @@ newCode(time, code)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | time | <code>[Number](#)</code> | The time in seconds to add the code to | `0` |
 | code | <code>[String](#)</code> | The code to run at that time | Required |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------------|-------------|
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |

@@ -22,11 +22,13 @@ add(other)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------------------------------|-------------|---------|
 | other | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -50,11 +52,13 @@ sub(other)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------------------------------|-------------|---------|
 | other | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -76,6 +80,7 @@ det()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -99,6 +104,7 @@ invert()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -120,6 +126,7 @@ inverted()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -143,11 +150,13 @@ multiply(other)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------------------------------|-------------|---------|
 | other | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -171,11 +180,13 @@ rightMultiply(other)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------------------------------|-------------|---------|
 | other | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -201,11 +212,13 @@ getColumn(col)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | col | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -229,11 +242,13 @@ getRow(row)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | row | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -260,11 +275,13 @@ apply(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -277,12 +294,14 @@ apply(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -311,11 +330,13 @@ applyDir(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -328,12 +349,14 @@ applyDir(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -366,11 +389,13 @@ rotate(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -383,6 +408,7 @@ rotate(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -390,6 +416,7 @@ rotate(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -417,11 +444,13 @@ rotateX(degrees)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|--------------------------|-------------|---------|
 | degrees | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -445,11 +474,13 @@ rotateY(degrees)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|--------------------------|-------------|---------|
 | degrees | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -473,11 +504,13 @@ rotateZ(degrees)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|--------------------------|-------------|---------|
 | degrees | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -504,11 +537,13 @@ scale(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -521,6 +556,7 @@ scale(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -528,6 +564,7 @@ scale(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -558,11 +595,13 @@ translate(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -575,12 +614,14 @@ translate(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -610,6 +651,7 @@ transpose()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -633,6 +675,7 @@ transposed()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -658,11 +701,13 @@ set(other)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------------------------------|-------------|---------|
 | other | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -686,6 +731,7 @@ augmented()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -707,6 +753,7 @@ copy()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
@@ -728,6 +775,7 @@ deaugmented()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
@@ -751,6 +799,7 @@ reset()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |

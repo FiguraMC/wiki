@@ -23,6 +23,7 @@ getBlockstate()
 ```
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | - |
@@ -44,6 +45,7 @@ getCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -67,6 +69,7 @@ getDamage()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -88,6 +91,7 @@ getEquipmentSlot()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -109,6 +113,7 @@ getID()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -130,6 +135,7 @@ getMaxCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -151,6 +157,7 @@ getMaxDamage()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -172,6 +179,7 @@ getName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -193,6 +201,7 @@ getPopTime()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -216,6 +225,7 @@ getRarity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -237,6 +247,7 @@ getRepairCost()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -258,6 +269,7 @@ getTag()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -279,6 +291,7 @@ getTags()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -300,6 +313,7 @@ getUseAction()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -325,6 +339,7 @@ getUseDuration()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -346,6 +361,7 @@ copy()
 ```
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|---------------------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | Returns self for chaining |
@@ -367,6 +383,7 @@ hasGlint()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -388,6 +405,7 @@ isArmor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -409,6 +427,7 @@ isBlockItem()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -430,6 +449,7 @@ isDamageable()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -451,6 +471,7 @@ isEnchantable()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -472,6 +493,7 @@ isFood()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -493,6 +515,7 @@ isStackable()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -514,6 +537,7 @@ isTool()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -535,6 +559,7 @@ toStackString()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |

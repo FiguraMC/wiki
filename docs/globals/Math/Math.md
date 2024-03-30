@@ -18,6 +18,7 @@ clamp(value, min, max)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | value | <code>[Number](#)</code> | - | - |
@@ -25,6 +26,7 @@ clamp(value, min, max)
 | max | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -51,6 +53,7 @@ lerp(a, b, t)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | a | <code>[Number](#)</code> | - | - |
@@ -58,6 +61,7 @@ lerp(a, b, t)
 | t | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -70,6 +74,7 @@ lerp(a, b, t)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | a | <code>[Vector](#)</code> | - | - |
@@ -77,6 +82,7 @@ lerp(a, b, t)
 | t | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Vector](#)</code> | - |
@@ -89,6 +95,7 @@ lerp(a, b, t)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | a | <code>[Matrix](#)</code> | - | - |
@@ -96,6 +103,7 @@ lerp(a, b, t)
 | t | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Matrix](#)</code> | - |
@@ -125,6 +133,7 @@ lerpAngle(a, b, t)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | a | <code>[Number](#)</code> | - | - |
@@ -132,6 +141,7 @@ lerpAngle(a, b, t)
 | t | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -155,6 +165,7 @@ map(value, oldMin, oldMax, newMin, newMax)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------|--------------------------|-------------|---------|
 | value | <code>[Number](#)</code> | - | - |
@@ -164,6 +175,7 @@ map(value, oldMin, oldMax, newMin, newMax)
 | newMax | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -185,11 +197,13 @@ round(value)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | value | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -213,12 +227,14 @@ shortAngle(from, to)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | from | <code>[Number](#)</code> | - | - |
 | to | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -242,11 +258,13 @@ sign(value)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | value | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |

@@ -37,6 +37,7 @@ exists()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -61,11 +62,13 @@ getBiome(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-----------------------------------------------|----------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | The position in the world to get the biome of | Required |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------|-----------------------------|
 | <code>[Biome](/globals/World/Biome)</code> | Biome of the given position |
@@ -78,6 +81,7 @@ getBiome(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------------------------------------------------|----------|
 | x | <code>[Number](#)</code> | The x world position in the world to get the biome of | Required |
@@ -85,6 +89,7 @@ getBiome(x, y, z)
 | z | <code>[Number](#)</code> | The z world position in the world to get the biome of | Required |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------|-----------------------------|
 | <code>[Biome](/globals/World/Biome)</code> | Biome of the given position |
@@ -110,6 +115,7 @@ getBuildHeight()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Varargs](#)</code> | - |
@@ -131,6 +137,7 @@ getDimension()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -157,12 +164,14 @@ getHeight(pos, heightmap)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 | heightmap | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -175,6 +184,7 @@ getHeight(x, z, heightmap)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -182,6 +192,7 @@ getHeight(x, z, heightmap)
 | heightmap | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -207,6 +218,7 @@ getSpawnPoint()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -231,11 +243,13 @@ isChunkLoaded(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -248,6 +262,7 @@ isChunkLoaded(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -255,6 +270,7 @@ isChunkLoaded(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -283,11 +299,13 @@ isOpenSky(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -300,6 +318,7 @@ isOpenSky(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -307,6 +326,7 @@ isOpenSky(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -339,11 +359,13 @@ getBlockState(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-----------------------------------------------------------------|----------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | The position of a block in the world to get the `BlockState` of | Required |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|------------------------------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | `BlockState` of the given position |
@@ -356,6 +378,7 @@ getBlockState(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------------------------------------------------------------|----------|
 | x | <code>[Number](#)</code> | The x position of a block in the world to get the `BlockState` of | Required |
@@ -363,6 +386,7 @@ getBlockState(x, y, z)
 | z | <code>[Number](#)</code> | The z position of a block in the world to get the `BlockState` of | Required |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|------------------------------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | `BlockState` of the given position |
@@ -393,12 +417,14 @@ getBlocks(min, max)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | min | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 | max | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -411,6 +437,7 @@ getBlocks(minX, minY, minZ, max)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | minX | <code>[Number](#)</code> | - | - |
@@ -419,6 +446,7 @@ getBlocks(minX, minY, minZ, max)
 | max | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -431,6 +459,7 @@ getBlocks(min, maxX, maxY, maxZ)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | min | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
@@ -439,6 +468,7 @@ getBlocks(min, maxX, maxY, maxZ)
 | maxZ | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -451,6 +481,7 @@ getBlocks(minX, minY, minZ, maxX, maxY, maxZ)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | minX | <code>[Number](#)</code> | - | - |
@@ -461,6 +492,7 @@ getBlocks(minX, minY, minZ, maxX, maxY, maxZ)
 | maxZ | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -495,11 +527,13 @@ newBlock(block)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | block | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | - |
@@ -512,12 +546,14 @@ newBlock(block, pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | block | <code>[String](#)</code> | - | - |
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | - |
@@ -530,6 +566,7 @@ newBlock(block, x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | block | <code>[String](#)</code> | - | - |
@@ -538,6 +575,7 @@ newBlock(block, x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | - |
@@ -568,11 +606,13 @@ newItem(item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | item | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -585,12 +625,14 @@ newItem(item, count)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | item | <code>[String](#)</code> | - | - |
 | count | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -603,6 +645,7 @@ newItem(item, count, damage)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------|---------------------------|-------------|---------|
 | item | <code>[String](#)</code> | - | - |
@@ -610,6 +653,7 @@ newItem(item, count, damage)
 | damage | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -639,6 +683,7 @@ avatarVars()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -660,11 +705,13 @@ getEntity(UUID)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | UUID | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[EntityAPI](/globals/Player/Entity)</code> | - |
@@ -688,6 +735,7 @@ getPlayers()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -718,6 +766,7 @@ getDay()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -730,11 +779,13 @@ getDay(delta)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | delta | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -767,6 +818,7 @@ getDayTime()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -779,11 +831,13 @@ getDayTime(delta)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | delta | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -809,6 +863,7 @@ getMoonPhase()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -837,6 +892,7 @@ getTime()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -849,11 +905,13 @@ getTime(delta)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | delta | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -886,6 +944,7 @@ getTimeOfDay()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -898,11 +957,13 @@ getTimeOfDay(delta)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | delta | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -934,11 +995,13 @@ getBlockLightLevel(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-----------------------------------------------------------|----------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | The position in the world to get the block light level of | Required |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|------------------------|
 | <code>[Integer](#)</code> | The light level (0-15) |
@@ -951,6 +1014,7 @@ getBlockLightLevel(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------------------------------------------------------|----------|
 | x | <code>[Number](#)</code> | The x position in the world to get the block light level of | Required |
@@ -958,6 +1022,7 @@ getBlockLightLevel(x, y, z)
 | z | <code>[Number](#)</code> | The z position in the world to get the block light level of | Required |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|------------------------|
 | <code>[Integer](#)</code> | The light level (0-15) |
@@ -986,11 +1051,13 @@ getLightLevel(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1003,6 +1070,7 @@ getLightLevel(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -1010,6 +1078,7 @@ getLightLevel(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1038,11 +1107,13 @@ getSkyLightLevel(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1055,6 +1126,7 @@ getSkyLightLevel(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -1062,6 +1134,7 @@ getSkyLightLevel(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1094,6 +1167,7 @@ getRainGradient()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -1106,11 +1180,13 @@ getRainGradient(delta)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | delta | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -1136,6 +1212,7 @@ isThundering()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -1162,11 +1239,13 @@ getRedstonePower(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1179,6 +1258,7 @@ getRedstonePower(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -1186,6 +1266,7 @@ getRedstonePower(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1214,11 +1295,13 @@ getStrongRedstonePower(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1231,6 +1314,7 @@ getStrongRedstonePower(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -1238,6 +1322,7 @@ getStrongRedstonePower(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |

@@ -28,6 +28,7 @@ getBlastResistance()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -51,6 +52,7 @@ getCollisionShape()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -72,6 +74,7 @@ getComparatorOutput()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -95,6 +98,7 @@ getEntityData()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -116,6 +120,7 @@ getFluidTags()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -139,6 +144,7 @@ getFriction()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -160,6 +166,7 @@ getHardness()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -181,6 +188,7 @@ getID()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -204,6 +212,7 @@ getJumpVelocityMultiplier()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -225,6 +234,7 @@ getLuminance()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -246,6 +256,7 @@ getMapColor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -267,6 +278,7 @@ getOpacity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -290,6 +302,7 @@ getOutlineShape()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -318,11 +331,13 @@ setPos(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|---------------------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | Returns self for chaining |
@@ -335,6 +350,7 @@ setPos(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -342,6 +358,7 @@ setPos(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|---------------------------|
 | <code>[BlockState](/globals/World/BlockState)</code> | Returns self for chaining |
@@ -369,6 +386,7 @@ getPos()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -390,6 +408,7 @@ getProperties()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -413,6 +432,7 @@ getSounds()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -434,6 +454,7 @@ getTags()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -459,6 +480,7 @@ getTextures()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -482,6 +504,7 @@ getVelocityMultiplier()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -505,6 +528,7 @@ asItem()
 ```
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -526,6 +550,7 @@ emitsRedstonePower()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -547,6 +572,7 @@ hasBlockEntity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -568,6 +594,7 @@ hasCollision()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -589,6 +616,7 @@ hasEmissiveLighting()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -610,6 +638,7 @@ isAir()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -631,6 +660,7 @@ isFullCube()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -652,6 +682,7 @@ isOpaque()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -673,6 +704,7 @@ isSolidBlock()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -694,6 +726,7 @@ isTranslucent()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -715,6 +748,7 @@ toStateString()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |

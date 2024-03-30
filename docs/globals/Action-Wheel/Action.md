@@ -26,11 +26,13 @@ setOnLeftClick(leftFunction)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------------|----------------------------|-------------|---------|
 | leftFunction | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -58,11 +60,13 @@ setOnRightClick(rightFunction)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------------|----------------------------|-------------|---------|
 | rightFunction | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -92,11 +96,13 @@ setOnToggle(leftFunction)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------------|----------------------------|-------------|---------|
 | leftFunction | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -126,11 +132,13 @@ setOnUntoggle(rightFunction)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------------|----------------------------|-------------|---------|
 | rightFunction | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -160,11 +168,13 @@ setOnScroll(scrollFunction)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------------|----------------------------|-------------|---------|
 | scrollFunction | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -193,11 +203,13 @@ setColor(color)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -210,6 +222,7 @@ setColor(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | - | - |
@@ -217,6 +230,7 @@ setColor(r, g, b)
 | b | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -242,6 +256,7 @@ getColor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -268,11 +283,13 @@ setHoverColor(color)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -285,6 +302,7 @@ setHoverColor(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | - | - |
@@ -292,6 +310,7 @@ setHoverColor(r, g, b)
 | b | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -317,6 +336,7 @@ getHoverColor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -343,11 +363,13 @@ setHoverItem(item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|----------------------------------------------------|-------------|---------|
 | item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -360,11 +382,13 @@ setHoverItem(item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | item | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -399,11 +423,13 @@ setHoverTexture(texture)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -416,6 +442,7 @@ setHoverTexture(texture, u, v)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -423,6 +450,7 @@ setHoverTexture(texture, u, v)
 | v | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -435,6 +463,7 @@ setHoverTexture(texture, u, v, width, height)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -444,6 +473,7 @@ setHoverTexture(texture, u, v, width, height)
 | height | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -456,6 +486,7 @@ setHoverTexture(texture, u, v, width, height, scale)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -466,6 +497,7 @@ setHoverTexture(texture, u, v, width, height, scale)
 | scale | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -496,11 +528,13 @@ setItem(item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|----------------------------------------------------|-------------|---------|
 | item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -513,11 +547,13 @@ setItem(item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | item | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -552,11 +588,13 @@ setTexture(texture)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -569,6 +607,7 @@ setTexture(texture, u, v)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -576,6 +615,7 @@ setTexture(texture, u, v)
 | v | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -588,6 +628,7 @@ setTexture(texture, u, v, width, height)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -597,6 +638,7 @@ setTexture(texture, u, v, width, height)
 | height | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -609,6 +651,7 @@ setTexture(texture, u, v, width, height, scale)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -619,6 +662,7 @@ setTexture(texture, u, v, width, height, scale)
 | scale | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -649,6 +693,7 @@ setTitle()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -661,11 +706,13 @@ setTitle(title)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | title | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -691,6 +738,7 @@ getTitle()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -719,11 +767,13 @@ setToggleColor(color)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -736,6 +786,7 @@ setToggleColor(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | - | - |
@@ -743,6 +794,7 @@ setToggleColor(r, g, b)
 | b | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -768,6 +820,7 @@ getToggleColor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -794,11 +847,13 @@ setToggleItem(item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|----------------------------------------------------|-------------|---------|
 | item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -811,11 +866,13 @@ setToggleItem(item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | item | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -850,11 +907,13 @@ setToggleTexture(texture)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -867,6 +926,7 @@ setToggleTexture(texture, u, v)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -874,6 +934,7 @@ setToggleTexture(texture, u, v)
 | v | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -886,6 +947,7 @@ setToggleTexture(texture, u, v, width, height)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -895,6 +957,7 @@ setToggleTexture(texture, u, v, width, height)
 | height | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -907,6 +970,7 @@ setToggleTexture(texture, u, v, width, height, scale)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------------------------------|-------------|---------|
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
@@ -917,6 +981,7 @@ setToggleTexture(texture, u, v, width, height, scale)
 | scale | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -944,11 +1009,13 @@ setToggleTitle(title)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | title | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -970,6 +1037,7 @@ getToggleTitle()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -993,11 +1061,13 @@ setToggled(bool)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | bool | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|---------------------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
@@ -1019,6 +1089,7 @@ isToggled()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |

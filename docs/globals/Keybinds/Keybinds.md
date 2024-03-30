@@ -29,11 +29,13 @@ newKeybind(name)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
@@ -46,12 +48,14 @@ newKeybind(name, key)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | - | - |
 | key | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
@@ -64,6 +68,7 @@ newKeybind(name, key, gui)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | name | <code>[String](#)</code> | - | - |
@@ -71,6 +76,7 @@ newKeybind(name, key, gui)
 | gui | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
@@ -98,11 +104,13 @@ getVanillaKey(id)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | id | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -124,11 +132,13 @@ fromVanilla(id)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | id | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
@@ -150,6 +160,7 @@ getKeybinds()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |

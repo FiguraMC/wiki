@@ -18,6 +18,7 @@ getName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -39,6 +40,7 @@ getAuthors()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -60,6 +62,7 @@ getVersion()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -81,6 +84,7 @@ hasTexture()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -109,11 +113,13 @@ setColor(color)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The r,g,b values as a single value | `vec(1,1,1)` |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------|-------------|
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
@@ -126,6 +132,7 @@ setColor(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | Red color value | 1 |
@@ -133,6 +140,7 @@ setColor(r, g, b)
 | b | <code>[Number](#)</code> | Blue color value | Value of `r` |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------|-------------|
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
@@ -145,12 +153,14 @@ setColor(color, badgeName)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------|--------------------------------------------------|-------------|---------|
 | color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The r,g,b values as a single value | `vec(1,1,1)` |
 | badgeName | <code>[String](#)</code> | Badge name | `nil` |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------|-------------|
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
@@ -163,6 +173,7 @@ setColor(r, g, b, badgeName)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | Red color value | 1 |
@@ -171,6 +182,7 @@ setColor(r, g, b, badgeName)
 | badgeName | <code>[String](#)</code> | Bagde name | `nil` |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------|-------------|
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
@@ -196,6 +208,7 @@ getColor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -223,12 +236,14 @@ store(key, value)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | key | <code>[String](#)</code> | - | - |
 | value | <code>[AnyType](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------|-------------|
 | <code>[AvatarAPI](/globals/Avatar)</code> | - |
@@ -250,6 +265,7 @@ getSize()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -271,6 +287,7 @@ getEntityName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -292,6 +309,7 @@ getUUID()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -313,6 +331,7 @@ getNBT()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -336,6 +355,7 @@ getBadges()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -357,6 +377,7 @@ hasScriptError()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -380,6 +401,7 @@ getPermissionLevel()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -401,6 +423,7 @@ getComplexity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -422,6 +445,7 @@ getVolume()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -445,6 +469,7 @@ getCurrentInstructions()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -466,6 +491,7 @@ getInitCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -487,6 +513,7 @@ getEntityInitCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -508,6 +535,7 @@ getMaxInitCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -529,6 +557,7 @@ getTickCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -550,6 +579,7 @@ getMaxTickCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -571,6 +601,7 @@ getRenderCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -592,6 +623,7 @@ getMaxRenderCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -613,6 +645,7 @@ getWorldTickCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -634,6 +667,7 @@ getMaxWorldTickCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -655,6 +689,7 @@ getWorldRenderCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -676,6 +711,7 @@ getMaxWorldRenderCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -697,6 +733,7 @@ getMaxComplexity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -718,6 +755,7 @@ getRemainingParticles()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -739,6 +777,7 @@ getMaxParticles()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -760,6 +799,7 @@ getRemainingSounds()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -781,6 +821,7 @@ getMaxSounds()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -802,6 +843,7 @@ getAnimationComplexity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -823,6 +865,7 @@ getMaxAnimationComplexity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -844,6 +887,7 @@ getAnimationCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -865,6 +909,7 @@ getMaxAnimationCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -886,6 +931,7 @@ getBuffersCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -907,6 +953,7 @@ getMaxBuffersCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -928,6 +975,7 @@ getMaxTextureSize()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -949,6 +997,7 @@ getMaxBufferSize()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -970,6 +1019,7 @@ canEditVanillaModel()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -991,6 +1041,7 @@ canEditNameplate()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -1012,6 +1063,7 @@ canRenderOffscreen()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -1033,6 +1085,7 @@ canUseCustomSounds()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -1054,6 +1107,7 @@ canHaveCustomSkull()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |

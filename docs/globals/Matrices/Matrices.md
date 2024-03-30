@@ -25,6 +25,7 @@ mat2()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
@@ -37,12 +38,14 @@ mat2(col1, col2)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | col1 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 | col2 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
@@ -70,11 +73,13 @@ rotation2(angle)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
@@ -99,11 +104,13 @@ scale2(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
@@ -116,12 +123,14 @@ scale2(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
@@ -154,6 +163,7 @@ mat3()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -166,6 +176,7 @@ mat3(col1, col2, col3)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | col1 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
@@ -173,6 +184,7 @@ mat3(col1, col2, col3)
 | col3 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -203,11 +215,13 @@ rotation3(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -220,6 +234,7 @@ rotation3(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -227,6 +242,7 @@ rotation3(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -255,11 +271,13 @@ scale3(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -272,6 +290,7 @@ scale3(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -279,6 +298,7 @@ scale3(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -307,11 +327,13 @@ translate3(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -324,12 +346,14 @@ translate3(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -357,11 +381,13 @@ xRotation3(angle)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -385,11 +411,13 @@ yRotation3(angle)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -413,11 +441,13 @@ zRotation3(angle)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
@@ -446,6 +476,7 @@ mat4()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -458,6 +489,7 @@ mat4(col1, col2, col3, col4)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | col1 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - | - |
@@ -466,6 +498,7 @@ mat4(col1, col2, col3, col4)
 | col4 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -496,11 +529,13 @@ rotation4(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -513,6 +548,7 @@ rotation4(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -520,6 +556,7 @@ rotation4(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -548,11 +585,13 @@ scale4(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -565,6 +604,7 @@ scale4(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -572,6 +612,7 @@ scale4(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -600,11 +641,13 @@ translate4(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -617,6 +660,7 @@ translate4(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -624,6 +668,7 @@ translate4(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -651,11 +696,13 @@ xRotation4(angle)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -679,11 +726,13 @@ yRotation4(angle)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
@@ -707,11 +756,13 @@ zRotation4(angle)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |

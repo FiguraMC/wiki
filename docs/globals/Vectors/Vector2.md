@@ -31,11 +31,13 @@ add(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -48,12 +50,14 @@ add(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -82,11 +86,13 @@ div(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -99,12 +105,14 @@ div(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -133,11 +141,13 @@ mul(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -150,12 +160,14 @@ mul(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -184,11 +196,13 @@ sub(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -201,12 +215,14 @@ sub(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -232,6 +248,7 @@ ceil()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -257,12 +274,14 @@ clampLength(minLength, maxLength)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------|--------------------------|-------------|---------|
 | minLength | <code>[Number](#)</code> | - | - |
 | maxLength | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -286,12 +305,14 @@ clamped(minLength, maxLength)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------|--------------------------|-------------|---------|
 | minLength | <code>[Number](#)</code> | - | - |
 | maxLength | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -313,11 +334,13 @@ dot(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -339,6 +362,7 @@ floor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -360,6 +384,7 @@ length()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -383,6 +408,7 @@ lengthSquared()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -406,11 +432,13 @@ scale(factor)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------|--------------------------|-------------|---------|
 | factor | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -434,6 +462,7 @@ normalize()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -455,6 +484,7 @@ normalized()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -476,11 +506,13 @@ offset(factor)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------|--------------------------|-------------|---------|
 | factor | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -505,11 +537,13 @@ reduce(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -522,12 +556,14 @@ reduce(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -553,11 +589,13 @@ transform(mat)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------------------------------|-------------|---------|
 | mat | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -588,11 +626,13 @@ set(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -605,12 +645,14 @@ set(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -640,11 +682,13 @@ applyFunc(func)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|----------------------------|-------------|---------|
 | func | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -673,6 +717,7 @@ augmented()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -685,11 +730,13 @@ augmented(value)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | value | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -715,6 +762,7 @@ copy()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -736,6 +784,7 @@ reset()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -757,6 +806,7 @@ unpack()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Varargs](#)</code> | - |
@@ -780,6 +830,7 @@ toDeg()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
@@ -801,6 +852,7 @@ toRad()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|---------------------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |

@@ -16,6 +16,7 @@ getTitle()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -44,6 +45,7 @@ newAction()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|-------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | - |
@@ -56,11 +58,13 @@ newAction(index)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | index | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|-------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | - |
@@ -86,11 +90,13 @@ getAction(index)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | index | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-----------------------------------------------------|-------------|
 | <code>[Action](/globals/Action-Wheel/Action)</code> | - |
@@ -119,6 +125,7 @@ getActions()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[AnyType](#)</code> | - |
@@ -131,11 +138,13 @@ getActions(shift)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | shift | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[AnyType](#)</code> | - |
@@ -165,12 +174,14 @@ setAction(index, action)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------|-----------------------------------------------------|-------------|---------|
 | index | <code>[Integer](#)</code> | - | - |
 | action | <code>[Action](/globals/Action-Wheel/Action)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------------|---------------------------|
 | <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
@@ -194,11 +205,13 @@ setKeepSlots(bool)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | bool | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------------|---------------------------|
 | <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
@@ -224,11 +237,13 @@ setSlotsShift(shift)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | shift | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------------|---------------------------|
 | <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
@@ -252,6 +267,7 @@ getSlotsShift()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -273,6 +289,7 @@ shouldKeepSlots()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |

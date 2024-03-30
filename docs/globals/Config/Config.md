@@ -20,11 +20,13 @@ setName(name)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------|---------------------------|
 | <code>[ConfigAPI](/globals/Config)</code> | Returns self for chaining |
@@ -46,6 +48,7 @@ getName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -72,6 +75,7 @@ load()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -84,11 +88,13 @@ load(key)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | key | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[AnyType](#)</code> | - |
@@ -116,12 +122,14 @@ save(key, value)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | key | <code>[String](#)</code> | - | - |
 | value | <code>[AnyType](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------|---------------------------|
 | <code>[ConfigAPI](/globals/Config)</code> | Returns self for chaining |

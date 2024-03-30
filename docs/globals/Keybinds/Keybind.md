@@ -33,11 +33,13 @@ setOnPress(function)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|----------------------------|-------------|---------|
 | function | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
@@ -69,11 +71,13 @@ setOnRelease(function)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|----------------------------|-------------|---------|
 | function | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
@@ -95,6 +99,7 @@ isPressed()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -120,11 +125,13 @@ setEnabled(bool)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | bool | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
@@ -148,11 +155,13 @@ setGUI(bool)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | bool | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
@@ -174,6 +183,7 @@ getID()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -197,11 +207,13 @@ setKey(key)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | key | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|---------------------------|
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
@@ -223,6 +235,7 @@ getKey()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -244,6 +257,7 @@ getKeyName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -265,6 +279,7 @@ getName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -286,6 +301,7 @@ isDefault()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -307,6 +323,7 @@ isEnabled()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -328,6 +345,7 @@ isGuiEnabled()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |

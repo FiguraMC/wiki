@@ -12,6 +12,7 @@ stopAll()
 ```
 
 **Returns**
+
 | Type | Description |
 | - | - |
 | <code>[AnimationAPI](/globals/Animations)</code> | Returns self for chaining |
@@ -33,6 +34,7 @@ getPlaying()
 ```
 
 **Returns**
+
 | Type | Description |
 | - | - |
 | <code>[Table](/tutorials/Tables)</code> | A list of the currently playing animations |
@@ -54,6 +56,7 @@ getAnimations()
 ```
 
 **Returns**
+
 | Type | Description |
 | - | - |
 | <code>[Table](/tutorials/Tables)</code> | A list of all animations in all models |

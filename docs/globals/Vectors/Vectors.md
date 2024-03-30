@@ -29,12 +29,14 @@ vec(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -47,6 +49,7 @@ vec(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -54,6 +57,7 @@ vec(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -66,6 +70,7 @@ vec(x, y, z, w)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -74,6 +79,7 @@ vec(x, y, z, w)
 | w | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
@@ -101,12 +107,14 @@ vec2(x, y)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
 | y | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -130,6 +138,7 @@ vec3(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -137,6 +146,7 @@ vec3(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -160,6 +170,7 @@ vec4(x, y, z, w)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -168,6 +179,7 @@ vec4(x, y, z, w)
 | w | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
@@ -193,11 +205,13 @@ hexToRGB(hex)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | hex | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -222,11 +236,13 @@ hsvToRGB(hsv)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | hsv | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -239,6 +255,7 @@ hsvToRGB(h, s, v)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | h | <code>[Number](#)</code> | - | - |
@@ -246,6 +263,7 @@ hsvToRGB(h, s, v)
 | v | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -271,11 +289,13 @@ intToRGB(color)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | color | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -300,11 +320,13 @@ rgbToHSV(rgb)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | rgb | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -317,6 +339,7 @@ rgbToHSV(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | - | - |
@@ -324,6 +347,7 @@ rgbToHSV(r, g, b)
 | b | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -354,11 +378,13 @@ rgbToHex(rgb)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | rgb | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -371,6 +397,7 @@ rgbToHex(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | - | - |
@@ -378,6 +405,7 @@ rgbToHex(r, g, b)
 | b | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -406,11 +434,13 @@ rgbToInt(rgb)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | rgb | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -423,6 +453,7 @@ rgbToInt(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | - | - |
@@ -430,6 +461,7 @@ rgbToInt(r, g, b)
 | b | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -458,11 +490,13 @@ angleToDir(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -475,12 +509,14 @@ angleToDir(pitch, yaw)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | pitch | <code>[Number](#)</code> | - | - |
 | yaw | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -509,6 +545,7 @@ rotateAroundAxis(angle, vec, axis)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
@@ -516,6 +553,7 @@ rotateAroundAxis(angle, vec, axis)
 | axis | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -528,6 +566,7 @@ rotateAroundAxis(angle, x, y, z, axis)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
@@ -537,6 +576,7 @@ rotateAroundAxis(angle, x, y, z, axis)
 | axis | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -549,6 +589,7 @@ rotateAroundAxis(angle, vec, axisX, axisY, axisZ)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
@@ -558,6 +599,7 @@ rotateAroundAxis(angle, vec, axisX, axisY, axisZ)
 | axisZ | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -570,6 +612,7 @@ rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | angle | <code>[Number](#)</code> | - | - |
@@ -581,6 +624,7 @@ rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
 | axisZ | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -609,11 +653,13 @@ toCameraSpace(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -626,6 +672,7 @@ toCameraSpace(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -633,6 +680,7 @@ toCameraSpace(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -661,11 +709,13 @@ worldToScreenSpace(vec)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
@@ -678,6 +728,7 @@ worldToScreenSpace(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | - |
@@ -685,6 +736,7 @@ worldToScreenSpace(x, y, z)
 | z | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - |

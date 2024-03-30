@@ -25,11 +25,13 @@ register(func)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|----------------------------|-------------|---------|
 | func | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------|---------------------------|
 | <code>[Event](/globals/Events/Event)</code> | Returns self for chaining |
@@ -42,12 +44,14 @@ register(func, name)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|----------------------------|-------------|---------|
 | func | <code>[Function](#)</code> | - | - |
 | name | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------|---------------------------|
 | <code>[Event](/globals/Events/Event)</code> | Returns self for chaining |
@@ -73,6 +77,7 @@ clear()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-----------------------|-------------|
 | <code>[nil](#)</code> | - |
@@ -99,11 +104,13 @@ remove(name)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -116,11 +123,13 @@ remove(function)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|----------------------------|-------------|---------|
 | function | <code>[Function](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -146,11 +155,13 @@ getRegisteredCount(name)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |

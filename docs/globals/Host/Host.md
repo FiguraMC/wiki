@@ -22,6 +22,7 @@ isHost()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -45,6 +46,7 @@ isContainerOpen()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -66,6 +68,7 @@ isFlying()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -89,6 +92,7 @@ isJumping()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -110,6 +114,7 @@ getAir()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -140,11 +145,13 @@ setSlot(slot)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | slot | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -157,11 +164,13 @@ setSlot(slot)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | slot | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -174,12 +183,14 @@ setSlot(slot, item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | slot | <code>[String](#)</code> | - | - |
 | item | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -192,12 +203,14 @@ setSlot(slot, item)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|----------------------------------------------------|-------------|---------|
 | slot | <code>[Integer](#)</code> | - | - |
 | item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -228,11 +241,13 @@ getSlot(slot)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | slot | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -245,11 +260,13 @@ getSlot(slot)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | slot | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -282,11 +299,13 @@ getScreenSlot(slot)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | slot | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -299,11 +318,13 @@ getScreenSlot(slot)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | slot | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |----------------------------------------------------|-------------|
 | <code>[ItemStack](/globals/World/ItemStack)</code> | - |
@@ -331,6 +352,7 @@ getScreenSlotCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -354,6 +376,7 @@ getScreen()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -377,6 +400,7 @@ getStatusEffects()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -400,6 +424,7 @@ getAttackCharge()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -421,6 +446,7 @@ getReachDistance()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -444,6 +470,7 @@ getPickBlock()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Varargs](#)</code> | - |
@@ -465,6 +492,7 @@ getPickEntity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[EntityAPI](/globals/Player/Entity)</code> | - |
@@ -488,6 +516,7 @@ isChatOpen()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -509,6 +538,7 @@ isChatVerified()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -530,11 +560,13 @@ sendChatCommand(command)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|--------------------------|-------------|---------|
 | command | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -556,11 +588,13 @@ sendChatMessage(message)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|--------------------------|-------------|---------|
 | message | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -587,11 +621,13 @@ setChatColor(color)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------------------------------|-------------|---------|
 | color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -604,6 +640,7 @@ setChatColor(r, g, b)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | - | - |
@@ -611,6 +648,7 @@ setChatColor(r, g, b)
 | b | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -636,6 +674,7 @@ getChatColor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -664,11 +703,13 @@ setChatMessage(index)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | index | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -681,12 +722,14 @@ setChatMessage(index, newMessage)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------------|---------------------------|-------------|---------|
 | index | <code>[Integer](#)</code> | - | - |
 | newMessage | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -699,6 +742,7 @@ setChatMessage(index, newMessage, backgroundColor)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------------|--------------------------------------------------|-------------|---------|
 | index | <code>[Integer](#)</code> | - | - |
@@ -706,6 +750,7 @@ setChatMessage(index, newMessage, backgroundColor)
 | backgroundColor | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -733,11 +778,13 @@ getChatMessage(index)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|---------------------------|-------------|---------|
 | index | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -761,11 +808,13 @@ setChatText(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -787,6 +836,7 @@ getChatText()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -808,11 +858,13 @@ appendChatHistory(message)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|--------------------------|-------------|---------|
 | message | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -843,11 +895,13 @@ setActionbar(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -860,12 +914,14 @@ setActionbar(text, animated)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 | animated | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -893,11 +949,13 @@ setClipboard(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -919,6 +977,7 @@ getClipboard()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -944,11 +1003,13 @@ setSubtitle(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -974,11 +1035,13 @@ setTitle(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -1005,11 +1068,13 @@ setTitleTimes(timesData)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-----------|--------------------------------------------------|-------------|---------|
 | timesData | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -1022,6 +1087,7 @@ setTitleTimes(fadeInTime, stayTime, fadeOutTime)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------------|---------------------------|-------------|---------|
 | fadeInTime | <code>[Integer](#)</code> | - | - |
@@ -1029,6 +1095,7 @@ setTitleTimes(fadeInTime, stayTime, fadeOutTime)
 | fadeOutTime | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -1054,11 +1121,13 @@ setUnlockCursor(boolean)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------|-------------|---------|
 | boolean | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -1080,6 +1149,7 @@ clearTitle()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -1101,6 +1171,7 @@ isAvatarUploaded()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -1124,6 +1195,7 @@ isCursorUnlocked()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -1145,11 +1217,13 @@ screenshot(name)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------------------|-------------|
 | <code>[Texture](/globals/Textures/Texture)</code> | - |
@@ -1176,6 +1250,7 @@ swingArm()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
@@ -1188,11 +1263,13 @@ swingArm(offhand)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------|-------------|---------|
 | offhand | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------------------|---------------------------|
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |

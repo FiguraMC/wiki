@@ -23,12 +23,14 @@ newParticle(name, pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | The position in the world the particle will spawn in at | Required |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
@@ -41,6 +43,7 @@ newParticle(name, pos, vel)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
@@ -48,6 +51,7 @@ newParticle(name, pos, vel)
 | vel | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | The particle's original velocity |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
@@ -60,6 +64,7 @@ newParticle(name, posX, posY, posZ)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
@@ -68,6 +73,7 @@ newParticle(name, posX, posY, posZ)
 | posZ | <code>[Number](#)</code> | The z position in the world the particle will spawn in at | `0` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
@@ -80,6 +86,7 @@ newParticle(name, pos, velX, velY, velZ)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
@@ -89,6 +96,7 @@ newParticle(name, pos, velX, velY, velZ)
 | velZ | <code>[Number](#)</code> | - | The particle's original z velocity |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
@@ -101,6 +109,7 @@ newParticle(name, posX, posY, posZ, vel)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
@@ -110,6 +119,7 @@ newParticle(name, posX, posY, posZ, vel)
 | vel | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | The particle's original velocity |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
@@ -122,6 +132,7 @@ newParticle(name, posX, posY, posZ, velX, velY, velZ)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
@@ -133,6 +144,7 @@ newParticle(name, posX, posY, posZ, velX, velY, velZ)
 | velZ | <code>[Number](#)</code> | - | The particle's original z velocity |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
@@ -161,6 +173,7 @@ removeParticles()
 ```
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------|-------------|
 | <code>[ParticleAPI](/globals/Particles)</code> | Returns the particle api for chaining |
@@ -182,11 +195,13 @@ isPresent(id)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | id | <code>[String](#)</code> | The particle name | `nil` |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns true or false value depending on if the particle is registered |

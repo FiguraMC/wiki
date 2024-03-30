@@ -24,6 +24,7 @@ spawn()
 ```
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Spawns the particle in the world |
@@ -52,11 +53,13 @@ setPos(pos)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | pos | <code>[Vector3](/globals/Vectors/Vector3)</code> | Sets the position of the particle in the world | `vec(0,0,0)` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -69,6 +72,7 @@ setPos(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | Sets the x position of the particle in the world | `0` |
@@ -76,6 +80,7 @@ setPos(x, y, z)
 | z | <code>[Number](#)</code> | Sets the x position of the particle in the world | `0` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -104,6 +109,7 @@ getPos()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Gets the position the particle is at |
@@ -134,11 +140,13 @@ setColor(rgb)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | rgb | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB color applied to the particle | `vec(1,1,1)` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -151,11 +159,13 @@ setColor(rgba)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------------------------------|-------------|---------|
 | rgba | <code>[Vector4](/globals/Vectors/Vector4)</code> | The RGBA color applied to the particle | `vec(1,1,1,1)` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -168,6 +178,7 @@ setColor(r, g, b, a)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | r | <code>[Number](#)</code> | The R tint applied to the particle | `1` |
@@ -176,6 +187,7 @@ setColor(r, g, b, a)
 | a | <code>[Number](#)</code> | The A tint applied to the particle | `1` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -201,6 +213,7 @@ getColor()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | Gets the RGBA color applied to the particle by [setColor](./Particle#setColor) |
@@ -224,11 +237,13 @@ setScale(scale)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | scale | <code>[Number](#)</code> | Sets the scale of both axes of the particle | 1 |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -252,6 +267,7 @@ getScale()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | Gets the scale of the particle |
@@ -280,11 +296,13 @@ setVelocity(velocity)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|--------------------------------------------------|-------------|---------|
 | velocity | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | The default velocity of the particle |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -297,6 +315,7 @@ setVelocity(x, y, z)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | x | <code>[Number](#)</code> | - | The default x velocity of the particle |
@@ -304,6 +323,7 @@ setVelocity(x, y, z)
 | z | <code>[Number](#)</code> | - | The default z velocity of the particle |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -329,6 +349,7 @@ getVelocity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Gets the velocity of the |
@@ -352,11 +373,13 @@ setLifetime(lifetime)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | lifetime | <code>[Integer](#)</code> | How long the particle will stay in the world in ticks | The default lifetime of the particle |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -378,6 +401,7 @@ getLifetime()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | Gets how long the particle will stay in the world in ticks |
@@ -401,11 +425,13 @@ setPower(power)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | power | <code>[Number](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -427,6 +453,7 @@ getPower()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | Gets the power of the particle |
@@ -450,11 +477,13 @@ setGravity(gravity)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|--------------------------|-------------|---------|
 | gravity | <code>[Number](#)</code> | Sets the strength of the particle's gravity | `1` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -476,6 +505,7 @@ getGravity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | Gets the strength of the particle's gravity |
@@ -499,11 +529,13 @@ setPhysics(physics)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |---------|---------------------------|-------------|---------|
 | physics | <code>[Boolean](#)</code> | Boolean that turns physics on if true, and turns physics off if false | `true` |
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -525,6 +557,7 @@ hasPhysics()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Gets if this particle has physics |
@@ -546,6 +579,7 @@ remove()
 ```
 
 **Returns:**
+
 | Type | Description |
 |------------------------------------------------------|-------------|
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
@@ -567,6 +601,7 @@ isAlive()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | Returns if the particle is alive |

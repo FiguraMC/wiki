@@ -18,6 +18,7 @@ getViewer()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[ViewerAPI](/globals/Player/Viewer)</code> | - |
@@ -41,6 +42,7 @@ getVersion()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -62,6 +64,7 @@ getVersionName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -83,6 +86,7 @@ getJavaVersion()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -104,6 +108,7 @@ isSnapshot()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -125,6 +130,7 @@ getFiguraVersion()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -146,12 +152,14 @@ compareVersions(version1, version2)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|--------------------------|-------------|---------|
 | version1 | <code>[String](#)</code> | - | - |
 | version2 | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -173,11 +181,13 @@ isModLoaded(modID)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |-------|--------------------------|-------------|---------|
 | modID | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -199,6 +209,7 @@ hasShaderPackMod()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -220,6 +231,7 @@ hasShaderPack()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -241,6 +253,7 @@ getShaderPackName()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -262,6 +275,7 @@ getClientBrand()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -285,6 +299,7 @@ getServerBrand()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -308,6 +323,7 @@ getCameraPos()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -329,6 +345,7 @@ getCameraRot()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -350,6 +367,7 @@ getCameraDir()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
@@ -371,6 +389,7 @@ getCameraEntity()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[EntityAPI](/globals/Player/Entity)</code> | - |
@@ -392,6 +411,7 @@ getFOV()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -413,6 +433,7 @@ getWindowSize()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -434,6 +455,7 @@ getScaledWindowSize()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -457,6 +479,7 @@ getGuiScale()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -478,6 +501,7 @@ getMousePos()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -501,6 +525,7 @@ isPaused()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -522,6 +547,7 @@ isHudEnabled()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -543,6 +569,7 @@ isDebugOverlayEnabled()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -564,6 +591,7 @@ getActiveResourcePacks()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -585,11 +613,13 @@ hasResource(path)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | path | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -611,6 +641,7 @@ getActiveLang()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -632,6 +663,7 @@ isWindowFocused()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Boolean](#)</code> | - |
@@ -655,6 +687,7 @@ getCurrentEffect()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -678,6 +711,7 @@ getEntityCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -701,6 +735,7 @@ getEntityStatistics()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -722,6 +757,7 @@ getServerData()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -743,6 +779,7 @@ getDate()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -764,6 +801,7 @@ getSystemTime()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -787,6 +825,7 @@ getFPS()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -810,6 +849,7 @@ getFPSString()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -833,6 +873,7 @@ getFrameTime()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[Number](#)</code> | - |
@@ -856,6 +897,7 @@ getSoundStatistics()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -877,6 +919,7 @@ getMaxMemory()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -898,6 +941,7 @@ getAllocatedMemory()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -919,6 +963,7 @@ getUsedMemory()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -942,6 +987,7 @@ getChunkStatistics()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -963,6 +1009,7 @@ getParticleCount()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -986,6 +1033,7 @@ getActionbar()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------|-------------|
 | <code>[net.minecraft.class_2561](#)</code> | - |
@@ -1009,11 +1057,13 @@ getAtlas(path)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | path | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------------------------------------------|-------------|
 | <code>[TextureAtlas](/globals/Textures/TextureAtlas)</code> | - |
@@ -1035,11 +1085,13 @@ getEnum(enumName)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|--------------------------|-------------|---------|
 | enumName | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -1063,11 +1115,13 @@ getRegistry(registryName)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |--------------|--------------------------|-------------|---------|
 | registryName | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -1089,6 +1143,7 @@ getScoreboard()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -1110,6 +1165,7 @@ getSubtitle()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------|-------------|
 | <code>[net.minecraft.class_2561](#)</code> | - |
@@ -1131,6 +1187,7 @@ getTabList()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -1155,11 +1212,13 @@ getTextDimensions(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -1172,6 +1231,7 @@ getTextDimensions(text, maxWidth, wrap)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |----------|---------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
@@ -1179,6 +1239,7 @@ getTextDimensions(text, maxWidth, wrap)
 | wrap | <code>[Boolean](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------------|-------------|
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
@@ -1204,11 +1265,13 @@ getTextHeight(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1232,11 +1295,13 @@ getTextWidth(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Integer](#)</code> | - |
@@ -1258,6 +1323,7 @@ getTitle()
 ```
 
 **Returns:**
+
 | Type | Description |
 |--------------------------------------------|-------------|
 | <code>[net.minecraft.class_2561](#)</code> | - |
@@ -1286,11 +1352,13 @@ getTranslatedString(text)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -1303,12 +1371,14 @@ getTranslatedString(text, args)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | text | <code>[String](#)</code> | - | - |
 | args | <code>[AnyType](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -1334,6 +1404,7 @@ generateUUID()
 ```
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Varargs](#)</code> | - |
@@ -1355,6 +1426,7 @@ intUUIDToString(a, b, c, d)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|---------------------------|-------------|---------|
 | a | <code>[Integer](#)</code> | - | - |
@@ -1363,6 +1435,7 @@ intUUIDToString(a, b, c, d)
 | d | <code>[Integer](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |--------------------------|-------------|
 | <code>[String](#)</code> | - |
@@ -1384,6 +1457,7 @@ listAtlases()
 ```
 
 **Returns:**
+
 | Type | Description |
 |-------------------------|-------------|
 | <code>[Table](#)</code> | - |
@@ -1405,11 +1479,13 @@ uuidToIntArray(uuid)
 ```
 
 **Parameters:**
+
 | Name | Type | Description | Default |
 |------|--------------------------|-------------|---------|
 | uuid | <code>[String](#)</code> | - | - |
 
 **Returns:**
+
 | Type | Description |
 |---------------------------|-------------|
 | <code>[Varargs](#)</code> | - |
