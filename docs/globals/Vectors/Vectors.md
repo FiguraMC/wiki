@@ -1,167 +1,693 @@
-The global instance of the VectorsAPI and its subtypes
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-## Vector Creation
+:::danger
+This page is a WIP.
+:::
 
-### `vec()` \{#vec}
+A global API which provides functions dedicated to creating and otherwise manipulating vectors
 
-Creates and returns a vector of the appropriate size to hold the arguments passed in
-
-For example, if you call vec(3, 4, 0, 2), then the function will return a Vector4 containing those values
-
-There is a global alias "vec" for this function, meaning the "vectors." can be omitted
+Accessed using the name `vectors`
 
 ---
 
-### `vec2(number,number)` \{#vec2}
+## Vector Creation
+
+### <code>vec()</code> \{#vec}
+
+Creates and returns a vector of the appropriate size to hold the arguments passed in
+
+For example; if you call vec(3, 4, 0, 2), then the function will return a Vector4 containing those values
+
+There is a global alias "vec" for this function, meaning the "vectors." can be omitted
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+vec(x, y)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+vec(x, y, z)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+vec(x, y, z, w)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+| w    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>vec2()</code> \{#vec2}
 
 Creates and returns a Vector2 with the given values
 
 Nil values become zero
 
-**Example**:
+```lua
+vec2(x, y)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
-vectors.vec2(90, 90)
+--todo
 ```
 
 ---
 
-### `vec3(number,number,number)` \{#vec3}
+### <code>vec3()</code> \{#vec3}
 
 Creates and returns a Vector3 with the given values
 
 Nil values become zero
 
-**Example**:
+```lua
+vec3(x, y, z)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
-vectors.vec3(90, 90, 90)
+--todo
 ```
 
 ---
 
-### `vec4(number,number,number,number)` \{#vec4}
+### <code>vec4()</code> \{#vec4}
 
-Creates and returns a Vector3 with the given values
+Creates and returns a Vector4 with the given values
 
 Nil values become zero
 
-**Example**:
+```lua
+vec4(x, y, z, w)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+| w    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+**Example:**
 
 ```lua
-vectors.vec4(90, 90, 90, 90)
+--todo
 ```
 
 ## Colors
 
-### `rgbToInt(Vector3)` \{#rgbToInt}
+### <code>hexToRGB()</code> \{#hexToRGB}
 
-Converts the given color from RGB format to Integer format
+Parses a Hex string color into an RGB format vector
 
-**Example**:
+The hex "#" is optional, and it can have any length, however only the first 6 hex digits are evaluated, short hex (length 3) is also supported
+
+For example, "#42" is the same as "420000", and "F0B" is the same as "FF00BB"
 
 ```lua
-vectors.rgbToInt(50, 50, 50)
+hexToRGB(hex)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| hex  | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `rgbToHex(Vector3)` \{#rgbToHex}
+### <code>hsvToRGB()</code> \{#hsvToRGB}
+
+Converts the given color from HSV format to RGB format
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+hsvToRGB(hsv)
+```
+
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| hsv  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+hsvToRGB(h, s, v)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| h    | <code>[Number](#)</code> | -           | -       |
+| s    | <code>[Number](#)</code> | -           | -       |
+| v    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>intToRGB()</code> \{#intToRGB}
+
+Converts the given color from Integer format to RGB format
+
+```lua
+intToRGB(color)
+```
+
+**Parameters:**
+| Name  | Type                      | Description | Default |
+|-------|---------------------------|-------------|---------|
+| color | <code>[Integer](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>rgbToHSV()</code> \{#rgbToHSV}
+
+Converts the given color from RGB format to HSV format
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+rgbToHSV(rgb)
+```
+
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+rgbToHSV(r, g, b)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>rgbToHex()</code> \{#rgbToHex}
 
 Converts the given color from RGB format to Hex format
 
 The "#" is not included on the return value
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vectors.rgbToHex(81, 68, 66)
+rgbToHex(rgb)
+```
+
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                     | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+rgbToHex(r, g, b)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                     | Description |
+|--------------------------|-------------|
+| <code>[String](#)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `rgbToHSV(Vector3)` \{#rgbToHSV}
+### <code>rgbToInt()</code> \{#rgbToInt}
 
-Converts the given color from HSV format to RGB format
+Converts the given color from RGB format to Integer format
 
-**Example**:
-
-```lua
-vectors.rgbToHSV(81, 68, 66)
-```
-
----
-
-### `intToRGB(int)` \{#intToRGB}
-
-Converts the given color from Integer format to RGB format
-
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vectors.intToRGB(838860750)
+rgbToInt(rgb)
 ```
 
----
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
-### `hexToRGB(string)` \{#hexToRGB}
+**Returns:**
+| Type                      | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | -           |
 
-Parses a Hex string color into a RGB format vector
-
-The hex "#" is optional, and it can have any length, however only the first 6 hex digits are evaluated, short hex (length 3) is also supported
-
-For example, "#42" is the same as "420000", and "F0B" is the same as "FF00BB"
-
-**Example**:
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
 
 ```lua
-vectors.hexToRGB(#5bbcf4)
+rgbToInt(r, g, b)
 ```
 
----
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
 
-### `hsvToRGB(Vector3)` \{#hsvToRGB}
+**Returns:**
+| Type                      | Description |
+|---------------------------|-------------|
+| <code>[Integer](#)</code> | -           |
 
-Converts the given color from HSV format to RGB format
+    </TabItem>
+</Tabs>
 
-**Example**:
+**Example:**
 
 ```lua
-vectors.hsvToRGB(181, 68, 66)
+--todo
 ```
 
-## Other
+## Misc
 
-### `rotateAroundAxis(number,Vector3,Vector3)` \{#rotateAroundAxis}
-
-Parses a Hex string color into a RGB format vector
-
-The hex "#" is optional, and it can have any length, however only the first 6 hex digits are evaluated, short hex (length 3) is also supported
-
-For example, "#42" is the same as "420000", and "F0B" is the same as "FF00BB"
-
----
-
-### `worldToScreenSpace(Vector3)` \{#worldToScreenSpace}
-
-Converts a position in the world into a position relative to the viewer's screen
-
----
-
-### `toCameraSpace(Vector3)` \{#toCameraSpace}
-
-Converts a position in the world into a position relative to the viewer's camera
-
----
-
-### `angleToDir(Vector2)` \{#angleToDir}
+### <code>angleToDir()</code> \{#angleToDir}
 
 Converts a pitch/yaw angle (in degrees) into a direction vector
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vectors.angleToDir(90, 70)
+angleToDir(vec)
+```
+
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| vec  | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+angleToDir(pitch, yaw)
+```
+
+**Parameters:**
+| Name  | Type                     | Description | Default |
+|-------|--------------------------|-------------|---------|
+| pitch | <code>[Number](#)</code> | -           | -       |
+| yaw   | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>rotateAroundAxis()</code> \{#rotateAroundAxis}
+
+Rotates a vector relative to a rotation vector
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+rotateAroundAxis(angle, vec, axis)
+```
+
+**Parameters:**
+| Name  | Type                                             | Description | Default |
+|-------|--------------------------------------------------|-------------|---------|
+| angle | <code>[Number](#)</code>                         | -           | -       |
+| vec   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| axis  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+rotateAroundAxis(angle, x, y, z, axis)
+```
+
+**Parameters:**
+| Name  | Type                                             | Description | Default |
+|-------|--------------------------------------------------|-------------|---------|
+| angle | <code>[Number](#)</code>                         | -           | -       |
+| x     | <code>[Number](#)</code>                         | -           | -       |
+| y     | <code>[Number](#)</code>                         | -           | -       |
+| z     | <code>[Number](#)</code>                         | -           | -       |
+| axis  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+rotateAroundAxis(angle, vec, axisX, axisY, axisZ)
+```
+
+**Parameters:**
+| Name  | Type                                             | Description | Default |
+|-------|--------------------------------------------------|-------------|---------|
+| angle | <code>[Number](#)</code>                         | -           | -       |
+| vec   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| axisX | <code>[Number](#)</code>                         | -           | -       |
+| axisY | <code>[Number](#)</code>                         | -           | -       |
+| axisZ | <code>[Number](#)</code>                         | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-4" label="Overload 4">
+
+```lua
+rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
+```
+
+**Parameters:**
+| Name  | Type                     | Description | Default |
+|-------|--------------------------|-------------|---------|
+| angle | <code>[Number](#)</code> | -           | -       |
+| x     | <code>[Number](#)</code> | -           | -       |
+| y     | <code>[Number](#)</code> | -           | -       |
+| z     | <code>[Number](#)</code> | -           | -       |
+| axisX | <code>[Number](#)</code> | -           | -       |
+| axisY | <code>[Number](#)</code> | -           | -       |
+| axisZ | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>toCameraSpace()</code> \{#toCameraSpace}
+
+Converts a position in the world into a position relative to the viewer's camera
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+toCameraSpace(vec)
+```
+
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+toCameraSpace(x, y, z)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>worldToScreenSpace()</code> \{#worldToScreenSpace}
+
+Converts a position in the world into a position relative to the viewer's screen
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+worldToScreenSpace(vec)
+```
+
+**Parameters:**
+| Name | Type                                             | Description | Default |
+|------|--------------------------------------------------|-------------|---------|
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+worldToScreenSpace(x, y, z)
+```
+
+**Parameters:**
+| Name | Type                     | Description | Default |
+|------|--------------------------|-------------|---------|
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+| Type                                             | Description |
+|--------------------------------------------------|-------------|
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+    </TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
