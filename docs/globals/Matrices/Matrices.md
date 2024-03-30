@@ -26,9 +26,9 @@ mat2()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -39,16 +39,16 @@ mat2(col1, col2)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| col1 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
-| col2 | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| col1 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+| col2 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
     </TabItem>
 
@@ -74,15 +74,15 @@ rotation2(angle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
 **Example:**
 
@@ -105,15 +105,15 @@ scale2(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -124,16 +124,16 @@ scale2(x, y)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
     </TabItem>
 
@@ -164,9 +164,9 @@ mat3()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -177,17 +177,17 @@ mat3(col1, col2, col3)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| col1 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
-| col2 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
-| col3 | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| col1 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| col2 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| col3 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
 
@@ -216,15 +216,15 @@ rotation3(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -235,17 +235,17 @@ rotation3(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
 
@@ -272,15 +272,15 @@ scale3(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -291,17 +291,17 @@ scale3(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
 
@@ -328,15 +328,15 @@ translate3(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -347,16 +347,16 @@ translate3(x, y)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
     </TabItem>
 
@@ -382,15 +382,15 @@ xRotation3(angle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
 **Example:**
 
@@ -412,15 +412,15 @@ yRotation3(angle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
 **Example:**
 
@@ -442,15 +442,15 @@ zRotation3(angle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
 **Example:**
 
@@ -477,9 +477,9 @@ mat4()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -490,18 +490,18 @@ mat4(col1, col2, col3, col4)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| col1 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - | - |
-| col2 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - | - |
-| col3 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - | - |
-| col4 | <code>[Vector4](/globals/Vectors/Vector4)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| col1 | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
+| col2 | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
+| col3 | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
+| col4 | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
 
@@ -530,15 +530,15 @@ rotation4(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -549,17 +549,17 @@ rotation4(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
 
@@ -586,15 +586,15 @@ scale4(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -605,17 +605,17 @@ scale4(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
 
@@ -642,15 +642,15 @@ translate4(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -661,17 +661,17 @@ translate4(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
     </TabItem>
 
@@ -697,15 +697,15 @@ xRotation4(angle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
 **Example:**
 
@@ -727,15 +727,15 @@ yRotation4(angle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
 **Example:**
 
@@ -757,15 +757,15 @@ zRotation4(angle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
 **Example:**
 

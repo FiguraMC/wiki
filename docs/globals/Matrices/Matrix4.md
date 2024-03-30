@@ -23,14 +23,14 @@ add(other)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------------------------------|-------------|---------|
-| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - | - |
+| Name  | Type                                              | Description | Default |
+| ----- | ------------------------------------------------- | ----------- | ------- |
+| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -53,14 +53,14 @@ sub(other)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------------------------------|-------------|---------|
-| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - | - |
+| Name  | Type                                              | Description | Default |
+| ----- | ------------------------------------------------- | ----------- | ------- |
+| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -81,9 +81,9 @@ det()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -105,8 +105,8 @@ invert()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -127,8 +127,8 @@ inverted()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -151,14 +151,14 @@ multiply(other)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------------------------------|-------------|---------|
-| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - | - |
+| Name  | Type                                              | Description | Default |
+| ----- | ------------------------------------------------- | ----------- | ------- |
+| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -181,14 +181,14 @@ rightMultiply(other)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------------------------------|-------------|---------|
-| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - | - |
+| Name  | Type                                              | Description | Default |
+| ----- | ------------------------------------------------- | ----------- | ------- |
+| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -213,15 +213,15 @@ getColumn(col)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| col | <code>[Integer](#)</code> | - | - |
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| col  | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
 **Example:**
 
@@ -243,15 +243,15 @@ getRow(row)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| row | <code>[Integer](#)</code> | - | - |
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| row  | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
 **Example:**
 
@@ -276,15 +276,15 @@ apply(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -295,17 +295,17 @@ apply(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
 
@@ -332,15 +332,15 @@ applyDir(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -351,17 +351,17 @@ applyDir(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
 
@@ -392,14 +392,14 @@ rotate(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
     </TabItem>
@@ -411,16 +411,16 @@ rotate(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
     </TabItem>
@@ -447,14 +447,14 @@ rotateX(degrees)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|--------------------------|-------------|---------|
-| degrees | <code>[Number](#)</code> | - | - |
+| Name    | Type                     | Description | Default |
+| ------- | ------------------------ | ----------- | ------- |
+| degrees | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -477,14 +477,14 @@ rotateY(degrees)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|--------------------------|-------------|---------|
-| degrees | <code>[Number](#)</code> | - | - |
+| Name    | Type                     | Description | Default |
+| ------- | ------------------------ | ----------- | ------- |
+| degrees | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -507,14 +507,14 @@ rotateZ(degrees)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|--------------------------|-------------|---------|
-| degrees | <code>[Number](#)</code> | - | - |
+| Name    | Type                     | Description | Default |
+| ------- | ------------------------ | ----------- | ------- |
+| degrees | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -540,14 +540,14 @@ scale(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
     </TabItem>
@@ -559,16 +559,16 @@ scale(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
     </TabItem>
@@ -598,14 +598,14 @@ translate(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
     </TabItem>
@@ -617,16 +617,16 @@ translate(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
     </TabItem>
@@ -655,8 +655,8 @@ transpose()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -679,8 +679,8 @@ transposed()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -705,14 +705,14 @@ set(other)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------------------------------|-------------|---------|
-| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | - | - |
+| Name  | Type                                              | Description | Default |
+| ----- | ------------------------------------------------- | ----------- | ------- |
+| other | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -733,8 +733,8 @@ copy()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**
@@ -755,9 +755,9 @@ deaugmented()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
 **Example:**
 
@@ -779,8 +779,8 @@ reset()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | Returns self for chaining |
 
 **Example:**

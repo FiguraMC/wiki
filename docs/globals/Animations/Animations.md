@@ -13,8 +13,8 @@ stopAll()
 
 **Returns**
 
-| Type | Description |
-| - | - |
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[AnimationAPI](/globals/Animations)</code> | Returns self for chaining |
 
 **Example**
@@ -35,8 +35,8 @@ getPlaying()
 
 **Returns**
 
-| Type | Description |
-| - | - |
+| Type                                    | Description                                |
+| --------------------------------------- | ------------------------------------------ |
 | <code>[Table](/tutorials/Tables)</code> | A list of the currently playing animations |
 
 **Example**
@@ -57,8 +57,8 @@ getAnimations()
 
 **Returns**
 
-| Type | Description |
-| - | - |
+| Type                                    | Description                            |
+| --------------------------------------- | -------------------------------------- |
 | <code>[Table](/tutorials/Tables)</code> | A list of all animations in all models |
 
 **Example**

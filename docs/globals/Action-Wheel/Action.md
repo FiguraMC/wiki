@@ -27,14 +27,14 @@ setOnLeftClick(leftFunction)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|--------------|----------------------------|-------------|---------|
-| leftFunction | <code>[Function](#)</code> | - | - |
+| Name         | Type                       | Description | Default |
+| ------------ | -------------------------- | ----------- | ------- |
+| leftFunction | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 **Example:**
@@ -61,14 +61,14 @@ setOnRightClick(rightFunction)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------------|----------------------------|-------------|---------|
-| rightFunction | <code>[Function](#)</code> | - | - |
+| Name          | Type                       | Description | Default |
+| ------------- | -------------------------- | ----------- | ------- |
+| rightFunction | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 **Example:**
@@ -97,14 +97,14 @@ setOnToggle(leftFunction)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|--------------|----------------------------|-------------|---------|
-| leftFunction | <code>[Function](#)</code> | - | - |
+| Name         | Type                       | Description | Default |
+| ------------ | -------------------------- | ----------- | ------- |
+| leftFunction | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 **Example:**
@@ -133,14 +133,14 @@ setOnUntoggle(rightFunction)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------------|----------------------------|-------------|---------|
-| rightFunction | <code>[Function](#)</code> | - | - |
+| Name          | Type                       | Description | Default |
+| ------------- | -------------------------- | ----------- | ------- |
+| rightFunction | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 **Example:**
@@ -169,14 +169,14 @@ setOnScroll(scrollFunction)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|----------------|----------------------------|-------------|---------|
-| scrollFunction | <code>[Function](#)</code> | - | - |
+| Name           | Type                       | Description | Default |
+| -------------- | -------------------------- | ----------- | ------- |
+| scrollFunction | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 **Example:**
@@ -204,14 +204,14 @@ setColor(color)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -223,16 +223,16 @@ setColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| r | <code>[Number](#)</code> | - | - |
-| g | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -257,9 +257,9 @@ getColor()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
 **Example:**
 
@@ -284,14 +284,14 @@ setHoverColor(color)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -303,16 +303,16 @@ setHoverColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| r | <code>[Number](#)</code> | - | - |
-| g | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -337,9 +337,9 @@ getHoverColor()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
 **Example:**
 
@@ -364,14 +364,14 @@ setHoverItem(item)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|----------------------------------------------------|-------------|---------|
-| item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
+| Name | Type                                               | Description | Default |
+| ---- | -------------------------------------------------- | ----------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -383,14 +383,14 @@ setHoverItem(item)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| item | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| item | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -424,14 +424,14 @@ setHoverTexture(texture)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -443,16 +443,16 @@ setHoverTexture(texture, u, v)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -464,18 +464,18 @@ setHoverTexture(texture, u, v, width, height)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
-| width | <code>[Integer](#)</code> | - | - |
-| height | <code>[Integer](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
+| width   | <code>[Integer](#)</code>                         | -           | -       |
+| height  | <code>[Integer](#)</code>                         | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -487,19 +487,19 @@ setHoverTexture(texture, u, v, width, height, scale)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
-| width | <code>[Integer](#)</code> | - | - |
-| height | <code>[Integer](#)</code> | - | - |
-| scale | <code>[Number](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
+| width   | <code>[Integer](#)</code>                         | -           | -       |
+| height  | <code>[Integer](#)</code>                         | -           | -       |
+| scale   | <code>[Number](#)</code>                          | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -529,14 +529,14 @@ setItem(item)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|----------------------------------------------------|-------------|---------|
-| item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
+| Name | Type                                               | Description | Default |
+| ---- | -------------------------------------------------- | ----------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -548,14 +548,14 @@ setItem(item)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| item | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| item | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -589,14 +589,14 @@ setTexture(texture)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -608,16 +608,16 @@ setTexture(texture, u, v)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -629,18 +629,18 @@ setTexture(texture, u, v, width, height)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
-| width | <code>[Integer](#)</code> | - | - |
-| height | <code>[Integer](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
+| width   | <code>[Integer](#)</code>                         | -           | -       |
+| height  | <code>[Integer](#)</code>                         | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -652,19 +652,19 @@ setTexture(texture, u, v, width, height, scale)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
-| width | <code>[Integer](#)</code> | - | - |
-| height | <code>[Integer](#)</code> | - | - |
-| scale | <code>[Number](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
+| width   | <code>[Integer](#)</code>                         | -           | -       |
+| height  | <code>[Integer](#)</code>                         | -           | -       |
+| scale   | <code>[Number](#)</code>                          | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -694,8 +694,8 @@ setTitle()
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -707,14 +707,14 @@ setTitle(title)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| title | <code>[String](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| title | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -739,9 +739,9 @@ getTitle()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -768,14 +768,14 @@ setToggleColor(color)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -787,16 +787,16 @@ setToggleColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| r | <code>[Number](#)</code> | - | - |
-| g | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -821,9 +821,9 @@ getToggleColor()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
 **Example:**
 
@@ -848,14 +848,14 @@ setToggleItem(item)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|----------------------------------------------------|-------------|---------|
-| item | <code>[ItemStack](/globals/World/ItemStack)</code> | - | - |
+| Name | Type                                               | Description | Default |
+| ---- | -------------------------------------------------- | ----------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -867,14 +867,14 @@ setToggleItem(item)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| item | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| item | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -908,14 +908,14 @@ setToggleTexture(texture)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -927,16 +927,16 @@ setToggleTexture(texture, u, v)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -948,18 +948,18 @@ setToggleTexture(texture, u, v, width, height)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
-| width | <code>[Integer](#)</code> | - | - |
-| height | <code>[Integer](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
+| width   | <code>[Integer](#)</code>                         | -           | -       |
+| height  | <code>[Integer](#)</code>                         | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -971,19 +971,19 @@ setToggleTexture(texture, u, v, width, height, scale)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|---------|---------------------------------------------------|-------------|---------|
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | - | - |
-| u | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
-| width | <code>[Integer](#)</code> | - | - |
-| height | <code>[Integer](#)</code> | - | - |
-| scale | <code>[Number](#)</code> | - | - |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| u       | <code>[Number](#)</code>                          | -           | -       |
+| v       | <code>[Number](#)</code>                          | -           | -       |
+| width   | <code>[Integer](#)</code>                         | -           | -       |
+| height  | <code>[Integer](#)</code>                         | -           | -       |
+| scale   | <code>[Number](#)</code>                          | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
@@ -1010,14 +1010,14 @@ setToggleTitle(title)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| title | <code>[String](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| title | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 **Example:**
@@ -1038,9 +1038,9 @@ getToggleTitle()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -1062,14 +1062,14 @@ setToggled(bool)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| bool | <code>[Boolean](#)</code> | - | - |
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|---------------------------|
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 **Example:**
@@ -1090,9 +1090,9 @@ isToggled()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Boolean](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 

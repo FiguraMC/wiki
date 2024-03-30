@@ -17,9 +17,9 @@ getTitle()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -46,9 +46,9 @@ newAction()
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|-------------|
-| <code>[Action](/globals/Action-Wheel/Action)</code> | - |
+| Type                                                | Description |
+| --------------------------------------------------- | ----------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -59,15 +59,15 @@ newAction(index)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------|-------------|---------|
-| index | <code>[Integer](#)</code> | - | - |
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| index | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|-------------|
-| <code>[Action](/globals/Action-Wheel/Action)</code> | - |
+| Type                                                | Description |
+| --------------------------------------------------- | ----------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
 
     </TabItem>
 
@@ -91,15 +91,15 @@ getAction(index)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------|-------------|---------|
-| index | <code>[Integer](#)</code> | - | - |
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| index | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|-------------|
-| <code>[Action](/globals/Action-Wheel/Action)</code> | - |
+| Type                                                | Description |
+| --------------------------------------------------- | ----------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
 
 **Example:**
 
@@ -126,9 +126,9 @@ getActions()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[AnyType](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -139,15 +139,15 @@ getActions(shift)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------|-------------|---------|
-| shift | <code>[Integer](#)</code> | - | - |
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| shift | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[AnyType](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
 
     </TabItem>
 
@@ -175,15 +175,15 @@ setAction(index, action)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|--------|-----------------------------------------------------|-------------|---------|
-| index | <code>[Integer](#)</code> | - | - |
-| action | <code>[Action](/globals/Action-Wheel/Action)</code> | - | - |
+| Name   | Type                                                | Description | Default |
+| ------ | --------------------------------------------------- | ----------- | ------- |
+| index  | <code>[Integer](#)</code>                           | -           | -       |
+| action | <code>[Action](/globals/Action-Wheel/Action)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------------|---------------------------|
+| Type                                            | Description               |
+| ----------------------------------------------- | ------------------------- |
 | <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
 
 **Example:**
@@ -206,14 +206,14 @@ setKeepSlots(bool)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| bool | <code>[Boolean](#)</code> | - | - |
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------------|---------------------------|
+| Type                                            | Description               |
+| ----------------------------------------------- | ------------------------- |
 | <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
 
 **Example:**
@@ -238,14 +238,14 @@ setSlotsShift(shift)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------|-------------|---------|
-| shift | <code>[Integer](#)</code> | - | - |
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| shift | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------------|---------------------------|
+| Type                                            | Description               |
+| ----------------------------------------------- | ------------------------- |
 | <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
 
 **Example:**
@@ -268,9 +268,9 @@ getSlotsShift()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Integer](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
 
 **Example:**
 
@@ -290,9 +290,9 @@ shouldKeepSlots()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Boolean](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 

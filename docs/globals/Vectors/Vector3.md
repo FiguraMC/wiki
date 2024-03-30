@@ -32,14 +32,14 @@ add(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -51,16 +51,16 @@ add(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -88,14 +88,14 @@ div(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -107,16 +107,16 @@ div(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -144,14 +144,14 @@ mul(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -163,16 +163,16 @@ mul(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -200,14 +200,14 @@ sub(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -219,16 +219,16 @@ sub(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -253,8 +253,8 @@ ceil()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -279,15 +279,15 @@ clampLength(minLength, maxLength)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-----------|--------------------------|-------------|---------|
-| minLength | <code>[Number](#)</code> | - | - |
-| maxLength | <code>[Number](#)</code> | - | - |
+| Name      | Type                     | Description | Default |
+| --------- | ------------------------ | ----------- | ------- |
+| minLength | <code>[Number](#)</code> | -           | -       |
+| maxLength | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -310,15 +310,15 @@ clamped(minLength, maxLength)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-----------|--------------------------|-------------|---------|
-| minLength | <code>[Number](#)</code> | - | - |
-| maxLength | <code>[Number](#)</code> | - | - |
+| Name      | Type                     | Description | Default |
+| --------- | ------------------------ | ----------- | ------- |
+| minLength | <code>[Number](#)</code> | -           | -       |
+| maxLength | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -341,14 +341,14 @@ cross(other)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| other | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| other | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -369,14 +369,14 @@ crossed(other)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| other | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| other | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -397,15 +397,15 @@ dot(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -425,8 +425,8 @@ floor()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -447,9 +447,9 @@ length()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -471,9 +471,9 @@ lengthSquared()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -495,14 +495,14 @@ scale(factor)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|--------|--------------------------|-------------|---------|
-| factor | <code>[Number](#)</code> | - | - |
+| Name   | Type                     | Description | Default |
+| ------ | ------------------------ | ----------- | ------- |
+| factor | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -525,8 +525,8 @@ normalize()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -547,8 +547,8 @@ normalized()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -569,14 +569,14 @@ offset(factor)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|--------|--------------------------|-------------|---------|
-| factor | <code>[Number](#)</code> | - | - |
+| Name   | Type                     | Description | Default |
+| ------ | ------------------------ | ----------- | ------- |
+| factor | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -600,14 +600,14 @@ reduce(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -619,16 +619,16 @@ reduce(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -653,14 +653,14 @@ transform(mat)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------------------------------|-------------|---------|
-| mat | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | - | - |
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| mat  | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -690,14 +690,14 @@ set(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -709,16 +709,16 @@ set(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
     </TabItem>
@@ -747,14 +747,14 @@ applyFunc(func)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|----------------------------|-------------|---------|
-| func | <code>[Function](#)</code> | - | - |
+| Name | Type                       | Description | Default |
+| ---- | -------------------------- | ----------- | ------- |
+| func | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -782,9 +782,9 @@ augmented()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -795,15 +795,15 @@ augmented(value)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| value | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| value | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
     </TabItem>
 
@@ -827,8 +827,8 @@ copy()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -849,8 +849,8 @@ reset()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -871,9 +871,9 @@ unpack()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Varargs](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Varargs](#)</code> | -           |
 
 **Example:**
 
@@ -895,8 +895,8 @@ toDeg()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**
@@ -917,8 +917,8 @@ toRad()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|---------------------------|
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
 
 **Example:**

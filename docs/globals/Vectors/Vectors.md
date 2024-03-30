@@ -30,16 +30,16 @@ vec(x, y)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -50,17 +50,17 @@ vec(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -71,18 +71,18 @@ vec(x, y, z, w)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
-| w | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+| w    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
     </TabItem>
 
@@ -108,16 +108,16 @@ vec2(x, y)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector2](/globals/Vectors/Vector2)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
 **Example:**
 
@@ -139,17 +139,17 @@ vec3(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
 **Example:**
 
@@ -171,18 +171,18 @@ vec4(x, y, z, w)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
-| w | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+| w    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
 **Example:**
 
@@ -206,15 +206,15 @@ hexToRGB(hex)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| hex | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| hex  | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
 **Example:**
 
@@ -237,15 +237,15 @@ hsvToRGB(hsv)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| hsv | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| hsv  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -256,17 +256,17 @@ hsvToRGB(h, s, v)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| h | <code>[Number](#)</code> | - | - |
-| s | <code>[Number](#)</code> | - | - |
-| v | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| h    | <code>[Number](#)</code> | -           | -       |
+| s    | <code>[Number](#)</code> | -           | -       |
+| v    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
 
@@ -290,15 +290,15 @@ intToRGB(color)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------|-------------|---------|
-| color | <code>[Integer](#)</code> | - | - |
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| color | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
 **Example:**
 
@@ -321,15 +321,15 @@ rgbToHSV(rgb)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| rgb | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -340,17 +340,17 @@ rgbToHSV(r, g, b)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| r | <code>[Number](#)</code> | - | - |
-| g | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
 
@@ -379,15 +379,15 @@ rgbToHex(rgb)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| rgb | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -398,17 +398,17 @@ rgbToHex(r, g, b)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| r | <code>[Number](#)</code> | - | - |
-| g | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
     </TabItem>
 
@@ -435,15 +435,15 @@ rgbToInt(rgb)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| rgb | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Integer](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -454,17 +454,17 @@ rgbToInt(r, g, b)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| r | <code>[Number](#)</code> | - | - |
-| g | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Integer](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
 
     </TabItem>
 
@@ -491,15 +491,15 @@ angleToDir(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector2](/globals/Vectors/Vector2)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -510,16 +510,16 @@ angleToDir(pitch, yaw)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| pitch | <code>[Number](#)</code> | - | - |
-| yaw | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| pitch | <code>[Number](#)</code> | -           | -       |
+| yaw   | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
 
@@ -546,17 +546,17 @@ rotateAroundAxis(angle, vec, axis)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
-| axis | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code>                         | -           | -       |
+| vec   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| axis  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -567,19 +567,19 @@ rotateAroundAxis(angle, x, y, z, axis)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
-| axis | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code>                         | -           | -       |
+| x     | <code>[Number](#)</code>                         | -           | -       |
+| y     | <code>[Number](#)</code>                         | -           | -       |
+| z     | <code>[Number](#)</code>                         | -           | -       |
+| axis  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -590,19 +590,19 @@ rotateAroundAxis(angle, vec, axisX, axisY, axisZ)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
-| axisX | <code>[Number](#)</code> | - | - |
-| axisY | <code>[Number](#)</code> | - | - |
-| axisZ | <code>[Number](#)</code> | - | - |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code>                         | -           | -       |
+| vec   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| axisX | <code>[Number](#)</code>                         | -           | -       |
+| axisY | <code>[Number](#)</code>                         | -           | -       |
+| axisZ | <code>[Number](#)</code>                         | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -613,21 +613,21 @@ rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| angle | <code>[Number](#)</code> | - | - |
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
-| axisX | <code>[Number](#)</code> | - | - |
-| axisY | <code>[Number](#)</code> | - | - |
-| axisZ | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| angle | <code>[Number](#)</code> | -           | -       |
+| x     | <code>[Number](#)</code> | -           | -       |
+| y     | <code>[Number](#)</code> | -           | -       |
+| z     | <code>[Number](#)</code> | -           | -       |
+| axisX | <code>[Number](#)</code> | -           | -       |
+| axisY | <code>[Number](#)</code> | -           | -       |
+| axisZ | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
 
@@ -654,15 +654,15 @@ toCameraSpace(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -673,17 +673,17 @@ toCameraSpace(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
     </TabItem>
 
@@ -710,15 +710,15 @@ worldToScreenSpace(vec)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
-| vec | <code>[Vector3](/globals/Vectors/Vector3)</code> | - | - |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -729,17 +729,17 @@ worldToScreenSpace(x, y, z)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| x | <code>[Number](#)</code> | - | - |
-| y | <code>[Number](#)</code> | - | - |
-| z | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------------------------------|-------------|
-| <code>[Vector4](/globals/Vectors/Vector4)</code> | - |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
     </TabItem>
 

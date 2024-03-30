@@ -34,14 +34,14 @@ setOnPress(function)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|----------|----------------------------|-------------|---------|
-| function | <code>[Function](#)</code> | - | - |
+| Name     | Type                       | Description | Default |
+| -------- | -------------------------- | ----------- | ------- |
+| function | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
 
 **Example:**
@@ -72,14 +72,14 @@ setOnRelease(function)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|----------|----------------------------|-------------|---------|
-| function | <code>[Function](#)</code> | - | - |
+| Name     | Type                       | Description | Default |
+| -------- | -------------------------- | ----------- | ------- |
+| function | <code>[Function](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
 
 **Example:**
@@ -100,9 +100,9 @@ isPressed()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Boolean](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 
@@ -126,14 +126,14 @@ setEnabled(bool)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| bool | <code>[Boolean](#)</code> | - | - |
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
 
 **Example:**
@@ -156,14 +156,14 @@ setGUI(bool)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| bool | <code>[Boolean](#)</code> | - | - |
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
 
 **Example:**
@@ -184,9 +184,9 @@ getID()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Integer](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
 
 **Example:**
 
@@ -208,14 +208,14 @@ setKey(key)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| key | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| key  | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|---------------------------|
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
 
 **Example:**
@@ -236,9 +236,9 @@ getKey()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -258,9 +258,9 @@ getKeyName()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -280,9 +280,9 @@ getName()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -302,9 +302,9 @@ isDefault()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Boolean](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 
@@ -324,9 +324,9 @@ isEnabled()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Boolean](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 
@@ -346,9 +346,9 @@ isGuiEnabled()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Boolean](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 

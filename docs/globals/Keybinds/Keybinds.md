@@ -30,15 +30,15 @@ newKeybind(name)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| name | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| name | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -49,16 +49,16 @@ newKeybind(name, key)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| name | <code>[String](#)</code> | - | - |
-| key | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| name | <code>[String](#)</code> | -           | -       |
+| key  | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3" default>
@@ -69,17 +69,17 @@ newKeybind(name, key, gui)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|---------------------------|-------------|---------|
-| name | <code>[String](#)</code> | - | - |
-| key | <code>[String](#)</code> | - | - |
-| gui | <code>[Boolean](#)</code> | - | - |
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| name | <code>[String](#)</code>  | -           | -       |
+| key  | <code>[String](#)</code>  | -           | -       |
+| gui  | <code>[Boolean](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
 
     </TabItem>
 
@@ -105,15 +105,15 @@ getVanillaKey(id)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| id | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| id   | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -133,15 +133,15 @@ fromVanilla(id)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| id | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| id   | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------------------------------|-------------|
-| <code>[Keybind](/globals/Keybinds/Keybind)</code> | - |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
 
 **Example:**
 
@@ -161,9 +161,9 @@ getKeybinds()
 
 **Returns:**
 
-| Type | Description |
-|-------------------------|-------------|
-| <code>[Table](#)</code> | - |
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
 
 **Example:**
 

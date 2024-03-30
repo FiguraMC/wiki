@@ -30,9 +30,9 @@ newPage()
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------------|-------------|
-| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -43,15 +43,15 @@ newPage(title)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| title | <code>[String](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| title | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------------|-------------|
-| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
 
     </TabItem>
 
@@ -78,14 +78,14 @@ setPage(pageTitle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-----------|--------------------------|-------------|---------|
-| pageTitle | <code>[String](#)</code> | - | - |
+| Name      | Type                     | Description | Default |
+| --------- | ------------------------ | ----------- | ------- |
+| pageTitle | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|------------------------------------------------------|---------------------------|
+| Type                                                 | Description               |
+| ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
     </TabItem>
@@ -97,14 +97,14 @@ setPage(page)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|-------------------------------------------------|-------------|---------|
-| page | <code>[Page](/globals/Action-Wheel/Page)</code> | - | - |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| page | <code>[Page](/globals/Action-Wheel/Page)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|------------------------------------------------------|---------------------------|
+| Type                                                 | Description               |
+| ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
     </TabItem>
@@ -134,9 +134,9 @@ getPage()
 
 **Returns:**
 
-| Type | Description |
-|-------------------------|-------------|
-| <code>[Table](#)</code> | - |
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -147,15 +147,15 @@ getPage(pageTitle)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-----------|--------------------------|-------------|---------|
-| pageTitle | <code>[String](#)</code> | - | - |
+| Name      | Type                     | Description | Default |
+| --------- | ------------------------ | ----------- | ------- |
+| pageTitle | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------------|-------------|
-| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
 
     </TabItem>
 
@@ -179,9 +179,9 @@ getCurrentPage()
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------------|-------------|
-| <code>[Page](/globals/Action-Wheel/Page)</code> | - |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
 
 **Example:**
 
@@ -205,9 +205,9 @@ newAction()
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|-------------|
-| <code>[Action](/globals/Action-Wheel/Action)</code> | - |
+| Type                                                | Description |
+| --------------------------------------------------- | ----------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
 
 **Example:**
 
@@ -227,9 +227,9 @@ getSelectedAction()
 
 **Returns:**
 
-| Type | Description |
-|-----------------------------------------------------|-------------|
-| <code>[Action](/globals/Action-Wheel/Action)</code> | - |
+| Type                                                | Description |
+| --------------------------------------------------- | ----------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
 
 **Example:**
 
@@ -249,9 +249,9 @@ getSelected()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Integer](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
 
 **Example:**
 
@@ -280,8 +280,8 @@ execute()
 
 **Returns:**
 
-| Type | Description |
-|------------------------------------------------------|---------------------------|
+| Type                                                 | Description               |
+| ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
     </TabItem>
@@ -293,14 +293,14 @@ execute(index)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------|-------------|---------|
-| index | <code>[Integer](#)</code> | - | - |
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| index | <code>[Integer](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|------------------------------------------------------|---------------------------|
+| Type                                                 | Description               |
+| ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
     </TabItem>
@@ -312,15 +312,15 @@ execute(index, rightClick)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------------|---------------------------|-------------|---------|
-| index | <code>[Integer](#)</code> | - | - |
-| rightClick | <code>[Boolean](#)</code> | - | - |
+| Name       | Type                      | Description | Default |
+| ---------- | ------------------------- | ----------- | ------- |
+| index      | <code>[Integer](#)</code> | -           | -       |
+| rightClick | <code>[Boolean](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|------------------------------------------------------|---------------------------|
+| Type                                                 | Description               |
+| ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
     </TabItem>
@@ -345,9 +345,9 @@ isEnabled()
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[Boolean](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 

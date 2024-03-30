@@ -19,17 +19,17 @@ clamp(value, min, max)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| value | <code>[Number](#)</code> | - | - |
-| min | <code>[Number](#)</code> | - | - |
-| max | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| value | <code>[Number](#)</code> | -           | -       |
+| min   | <code>[Number](#)</code> | -           | -       |
+| max   | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -54,17 +54,17 @@ lerp(a, b, t)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| a | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
-| t | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| a    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
+| t    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -75,17 +75,17 @@ lerp(a, b, t)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| a | <code>[Vector](#)</code> | - | - |
-| b | <code>[Vector](#)</code> | - | - |
-| t | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| a    | <code>[Vector](#)</code> | -           | -       |
+| b    | <code>[Vector](#)</code> | -           | -       |
+| t    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Vector](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Vector](#)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -96,17 +96,17 @@ lerp(a, b, t)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| a | <code>[Matrix](#)</code> | - | - |
-| b | <code>[Matrix](#)</code> | - | - |
-| t | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| a    | <code>[Matrix](#)</code> | -           | -       |
+| b    | <code>[Matrix](#)</code> | -           | -       |
+| t    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Matrix](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Matrix](#)</code> | -           |
 
     </TabItem>
 
@@ -134,17 +134,17 @@ lerpAngle(a, b, t)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| a | <code>[Number](#)</code> | - | - |
-| b | <code>[Number](#)</code> | - | - |
-| t | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| a    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
+| t    | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -166,19 +166,19 @@ map(value, oldMin, oldMax, newMin, newMax)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|--------|--------------------------|-------------|---------|
-| value | <code>[Number](#)</code> | - | - |
-| oldMin | <code>[Number](#)</code> | - | - |
-| oldMax | <code>[Number](#)</code> | - | - |
-| newMin | <code>[Number](#)</code> | - | - |
-| newMax | <code>[Number](#)</code> | - | - |
+| Name   | Type                     | Description | Default |
+| ------ | ------------------------ | ----------- | ------- |
+| value  | <code>[Number](#)</code> | -           | -       |
+| oldMin | <code>[Number](#)</code> | -           | -       |
+| oldMax | <code>[Number](#)</code> | -           | -       |
+| newMin | <code>[Number](#)</code> | -           | -       |
+| newMax | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -198,15 +198,15 @@ round(value)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| value | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| value | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -228,16 +228,16 @@ shortAngle(from, to)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| from | <code>[Number](#)</code> | - | - |
-| to | <code>[Number](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| from | <code>[Number](#)</code> | -           | -       |
+| to   | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 
@@ -259,15 +259,15 @@ sign(value)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|--------------------------|-------------|---------|
-| value | <code>[Number](#)</code> | - | - |
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| value | <code>[Number](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[Number](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
 
 **Example:**
 

@@ -21,14 +21,14 @@ setName(name)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| name | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| name | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------|---------------------------|
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
 | <code>[ConfigAPI](/globals/Config)</code> | Returns self for chaining |
 
 **Example:**
@@ -49,9 +49,9 @@ getName()
 
 **Returns:**
 
-| Type | Description |
-|--------------------------|-------------|
-| <code>[String](#)</code> | - |
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -76,9 +76,9 @@ load()
 
 **Returns:**
 
-| Type | Description |
-|-------------------------|-------------|
-| <code>[Table](#)</code> | - |
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -89,15 +89,15 @@ load(key)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|------|--------------------------|-------------|---------|
-| key | <code>[String](#)</code> | - | - |
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| key  | <code>[String](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|---------------------------|-------------|
-| <code>[AnyType](#)</code> | - |
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
 
     </TabItem>
 
@@ -123,15 +123,15 @@ save(key, value)
 
 **Parameters:**
 
-| Name | Type | Description | Default |
-|-------|---------------------------|-------------|---------|
-| key | <code>[String](#)</code> | - | - |
-| value | <code>[AnyType](#)</code> | - | - |
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| key   | <code>[String](#)</code>  | -           | -       |
+| value | <code>[AnyType](#)</code> | -           | -       |
 
 **Returns:**
 
-| Type | Description |
-|-------------------------------------------|---------------------------|
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
 | <code>[ConfigAPI](/globals/Config)</code> | Returns self for chaining |
 
 **Example:**
