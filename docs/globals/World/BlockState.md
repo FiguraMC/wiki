@@ -19,12 +19,62 @@ local block = world.getBlockState(player:getPos():sub(0, 0.5, 0))
 
 ---
 
-### <code>getBlastResistance()</code> \{#getBlastResistance}
+## Redstone Properties
 
-Gets the blast resistance of this BlockState
+### <code>getComparatorOutput()</code> \{#getComparatorOutput}
+
+Gets the amount of signal strength a comparator would get from this BlockState
 
 ```lua
-getBlastResistance()
+getComparatorOutput()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>emitsRedstonePower()</code> \{#emitsRedstonePower}
+
+Gets whether or not this BlockState emits redstone power
+
+```lua
+emitsRedstonePower()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Player Effects
+
+### <code>getJumpVelocityMultiplier()</code> \{#getJumpVelocityMultiplier}
+
+Gets the jump velocity multiplier of this BlockState
+
+(Literally just honey blocks in vanilla)
+
+```lua
+getJumpVelocityMultiplier()
 ```
 
 **Returns:**
@@ -40,6 +90,32 @@ getBlastResistance()
 ```
 
 ---
+
+### <code>getVelocityMultiplier()</code> \{#getVelocityMultiplier}
+
+Gets the velocity multiplier of this BlockState
+
+(Only Soul sand, honey blocks in vanilla)
+
+```lua
+getVelocityMultiplier()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Shape
 
 ### <code>getCollisionShape()</code> \{#getCollisionShape}
 
@@ -65,36 +141,14 @@ getCollisionShape()
 
 ---
 
-### <code>getComparatorOutput()</code> \{#getComparatorOutput}
+### <code>getOutlineShape()</code> \{#getOutlineShape}
 
-Gets the amount of signal strength a comparator would get from this BlockState
+Returns a table representing the bounding boxes of the outline shape
 
-```lua
-getComparatorOutput()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
-
-**Example:**
+The table a list of every shape, containing two Vector3, where the first vector is one corner of the box and the other vector is the other corner
 
 ```lua
---todo
-```
-
----
-
-### <code>getEntityData()</code> \{#getEntityData}
-
-Returns the nbt of the Block Entity associated with this BlockState, at its position, as a table
-
-Since the mod is only on client side, this NBT might not actually contain the real nbt, which is stored server-side
-
-```lua
-getEntityData()
+getOutlineShape()
 ```
 
 **Returns:**
@@ -111,119 +165,7 @@ getEntityData()
 
 ---
 
-### <code>getFluidTags()</code> \{#getFluidTags}
-
-Returns a table containing all the fluid tags of this block, as strings
-
-```lua
-getFluidTags()
-```
-
-**Returns:**
-
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getFriction()</code> \{#getFriction}
-
-Gets the friction of this BlockState
-
-(Slime blocks and ice in vanilla)
-
-```lua
-getFriction()
-```
-
-**Returns:**
-
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getHardness()</code> \{#getHardness}
-
-Gets the hardness of the BlockState
-
-```lua
-getHardness()
-```
-
-**Returns:**
-
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getID()</code> \{#getID}
-
-Returns this BlockState identifier
-
-```lua
-getID()
-```
-
-**Returns:**
-
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getJumpVelocityMultiplier()</code> \{#getJumpVelocityMultiplier}
-
-Gets the jump velocity multiplier of this BlockState
-
-(Literally just honey blocks in vanilla)
-
-```lua
-getJumpVelocityMultiplier()
-```
-
-**Returns:**
-
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
+## Visual Properties
 
 ### <code>getLuminance()</code> \{#getLuminance}
 
@@ -291,14 +233,16 @@ getOpacity()
 
 ---
 
-### <code>getOutlineShape()</code> \{#getOutlineShape}
+### <code>getTextures()</code> \{#getTextures}
 
-Returns a table representing the bounding boxes of the outline shape
+Returns a List of this BlockState's textures
 
-The table a list of every shape, containing two Vector3, where the first vector is one corner of the box and the other vector is the other corner
+The keys represents the Culling Direction, while the values is another table with all texture paths (string)
+
+Note this only works for normal blocks, special blocks (water, beds, …) will return an empty table
 
 ```lua
-getOutlineShape()
+getTextures()
 ```
 
 **Returns:**
@@ -306,6 +250,300 @@ getOutlineShape()
 | Type                    | Description |
 | ----------------------- | ----------- |
 | <code>[Table](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>hasEmissiveLighting()</code> \{#hasEmissiveLighting}
+
+Gets whether or not the BlockState uses emissive lighting
+
+```lua
+hasEmissiveLighting()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Physical Properties
+
+### <code>getBlastResistance()</code> \{#getBlastResistance}
+
+Gets the blast resistance of this BlockState
+
+```lua
+getBlastResistance()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getFriction()</code> \{#getFriction}
+
+Gets the friction of this BlockState
+
+(Slime blocks and ice in vanilla)
+
+```lua
+getFriction()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getHardness()</code> \{#getHardness}
+
+Gets the hardness of the BlockState
+
+```lua
+getHardness()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>hasCollision()</code> \{#hasCollision}
+
+Returns true if this block has collision
+
+```lua
+hasCollision()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isAir()</code> \{#isAir}
+
+Checks if this block is air
+
+```lua
+isAir()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isFullCube()</code> \{#isFullCube}
+
+Gets whether or not the BlockState has a full cube as its collision hitbox
+
+```lua
+isFullCube()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isOpaque()</code> \{#isOpaque}
+
+Gets whether or not this BlockState is opaque
+
+```lua
+isOpaque()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isSolidBlock()</code> \{#isSolidBlock}
+
+Gets whether or not the BlockState is considered a "solid" block by Minecraft
+
+```lua
+isSolidBlock()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isTranslucent()</code> \{#isTranslucent}
+
+Gets whether or not the BlockState would propagate sky light downwards
+
+```lua
+isTranslucent()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Misc
+
+### <code>getEntityData()</code> \{#getEntityData}
+
+Returns the nbt of the Block Entity associated with this BlockState, at its position, as a table
+
+Since the mod is only on client side, this NBT might not actually contain the real nbt, which is stored server-side
+
+```lua
+getEntityData()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getFluidTags()</code> \{#getFluidTags}
+
+Returns a table containing all the fluid tags of this block, as strings
+
+```lua
+getFluidTags()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getID()</code> \{#getID}
+
+Returns this BlockState identifier
+
+```lua
+getID()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -467,56 +705,6 @@ getTags()
 
 ---
 
-### <code>getTextures()</code> \{#getTextures}
-
-Returns a List of this BlockState's textures
-
-The keys represents the Culling Direction, while the values is another table with all texture paths (string)
-
-Note this only works for normal blocks, special blocks (water, beds, …) will return an empty table
-
-```lua
-getTextures()
-```
-
-**Returns:**
-
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getVelocityMultiplier()</code> \{#getVelocityMultiplier}
-
-Gets the velocity multiplier of this BlockState
-
-(Only Soul sand, honey blocks in vanilla)
-
-```lua
-getVelocityMultiplier()
-```
-
-**Returns:**
-
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
 ### <code>asItem()</code> \{#asItem}
 
 Returns an ItemStack representing this block in item form, whatever Minecraft deems that to be
@@ -541,188 +729,12 @@ asItem()
 
 ---
 
-### <code>emitsRedstonePower()</code> \{#emitsRedstonePower}
-
-Gets whether or not this BlockState emits redstone power
-
-```lua
-emitsRedstonePower()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
 ### <code>hasBlockEntity()</code> \{#hasBlockEntity}
 
 Gets whether or not this BlockState has an associated block entity
 
 ```lua
 hasBlockEntity()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>hasCollision()</code> \{#hasCollision}
-
-Returns true if this block has collision
-
-```lua
-hasCollision()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>hasEmissiveLighting()</code> \{#hasEmissiveLighting}
-
-Gets whether or not the BlockState uses emissive lighting
-
-```lua
-hasEmissiveLighting()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>isAir()</code> \{#isAir}
-
-Checks if this block is air
-
-```lua
-isAir()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>isFullCube()</code> \{#isFullCube}
-
-Gets whether or not the BlockState has a full cube as its collision hitbox
-
-```lua
-isFullCube()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>isOpaque()</code> \{#isOpaque}
-
-Gets whether or not this BlockState is opaque
-
-```lua
-isOpaque()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>isSolidBlock()</code> \{#isSolidBlock}
-
-Gets whether or not the BlockState is considered a "solid" block by Minecraft
-
-```lua
-isSolidBlock()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>isTranslucent()</code> \{#isTranslucent}
-
-Gets whether or not the BlockState would propagate sky light downwards
-
-```lua
-isTranslucent()
 ```
 
 **Returns:**
@@ -760,6 +772,8 @@ toStateString()
 ```
 
 ---
+
+## Fields
 
 ### <code>id</code> \{#id}
 

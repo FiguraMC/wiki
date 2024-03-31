@@ -12,29 +12,7 @@ local item = player:getHeldItem()
 
 ---
 
-### <code>getBlockstate()</code> \{#getBlockstate}
-
-Returns the blockstate representation of this item stack
-
-If this item has no block representation, returns nil
-
-```lua
-getBlockstate()
-```
-
-**Returns:**
-
-| Type                                                 | Description |
-| ---------------------------------------------------- | ----------- |
-| <code>[BlockState](/globals/World/BlockState)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
+## General
 
 ### <code>getCount()</code> \{#getCount}
 
@@ -49,52 +27,6 @@ getCount()
 | Type                      | Description |
 | ------------------------- | ----------- |
 | <code>[Integer](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getDamage()</code> \{#getDamage}
-
-Gets the damage value of the item in this stack
-
-Works on things like tools, or other things with a durability bar
-
-```lua
-getDamage()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getEquipmentSlot()</code> \{#getEquipmentSlot}
-
-Returns the slot name of where this item is used
-
-```lua
-getEquipmentSlot()
-```
-
-**Returns:**
-
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
 
 **Example:**
 
@@ -132,28 +64,6 @@ Gets the maximum stack size of this item
 
 ```lua
 getMaxCount()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getMaxDamage()</code> \{#getMaxDamage}
-
-Gets the maximum durability of this item stack
-
-```lua
-getMaxDamage()
 ```
 
 **Returns:**
@@ -229,28 +139,6 @@ getRarity()
 | Type                     | Description |
 | ------------------------ | ----------- |
 | <code>[String](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>getRepairCost()</code> \{#getRepairCost}
-
-Gets the repair cost modifier, in an anvil, for this item stack
-
-```lua
-getRepairCost()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
 
 **Example:**
 
@@ -396,12 +284,12 @@ hasGlint()
 
 ---
 
-### <code>isArmor()</code> \{#isArmor}
+### <code>isFood()</code> \{#isFood}
 
-Checks if this item is Armor
+Returns true if this item is edible
 
 ```lua
-isArmor()
+isFood()
 ```
 
 **Returns:**
@@ -418,12 +306,148 @@ isArmor()
 
 ---
 
-### <code>isBlockItem()</code> \{#isBlockItem}
+### <code>isStackable()</code> \{#isStackable}
 
-Returns true if this item represents a block
+Returns true if the item is stackable
 
 ```lua
-isBlockItem()
+isStackable()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>toStackString()</code> \{#toStackString}
+
+Converts this ItemStack to a string, as you'd see in a command
+
+```lua
+toStackString()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+## Equipment/Tools
+
+### <code>getDamage()</code> \{#getDamage}
+
+Gets the damage value of the item in this stack
+
+Works on things like tools, or other things with a durability bar
+
+```lua
+getDamage()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getEquipmentSlot()</code> \{#getEquipmentSlot}
+
+Returns the slot name of where this item is used
+
+```lua
+getEquipmentSlot()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getMaxDamage()</code> \{#getMaxDamage}
+
+Gets the maximum durability of this item stack
+
+```lua
+getMaxDamage()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getRepairCost()</code> \{#getRepairCost}
+
+Gets the repair cost modifier, in an anvil, for this item stack
+
+```lua
+getRepairCost()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isArmor()</code> \{#isArmor}
+
+Checks if this item is Armor
+
+```lua
+isArmor()
 ```
 
 **Returns:**
@@ -484,50 +508,6 @@ isEnchantable()
 
 ---
 
-### <code>isFood()</code> \{#isFood}
-
-Returns true if this item is edible
-
-```lua
-isFood()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
-### <code>isStackable()</code> \{#isStackable}
-
-Returns true if the item is stackable
-
-```lua
-isStackable()
-```
-
-**Returns:**
-
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
-
----
-
 ### <code>isTool()</code> \{#isTool}
 
 Check if this item is a Tool (Axe, Shovel, Pickaxe, …)
@@ -550,19 +530,45 @@ isTool()
 
 ---
 
-### <code>toStackString()</code> \{#toStackString}
+## Block Items
 
-Converts this ItemStack to a string, as you'd see in a command
+### <code>getBlockstate()</code> \{#getBlockstate}
+
+Returns the blockstate representation of this item stack
+
+If this item has no block representation, returns nil
 
 ```lua
-toStackString()
+getBlockstate()
 ```
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                                 | Description |
+| ---------------------------------------------------- | ----------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>isBlockItem()</code> \{#isBlockItem}
+
+Returns true if this item represents a block
+
+```lua
+isBlockItem()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
 
 **Example:**
 
