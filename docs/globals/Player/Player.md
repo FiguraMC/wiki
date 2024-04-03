@@ -1,12 +1,25 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 The player API inherits functions from the [living entity API](../globals/Player/LivingEntity)
 
-The player API is accessed through the <code>player</code> global. Like so: <code>player:isGliding()</code>
+The player API is accessed through the `player` global. Like so: `player:isGliding()`
+
+:::danger
+This page is a WIP.
+:::
 
 Player information that isn't synced between clients is kept in the host API. Examples of unsynced data are: Creative flying, status effects, and remaining air amount.
 
-**_Note:_** There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event. If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the <code>entity_init</code> event.
+:::note
 
-For most other circumstances you will want the <code>tick</code> event, as checks like <code>player:isGliding()</code> will be updated once a game tick inside that event. (There are 20 ticks in a second, and this is how often Minecraft updates information- some player functions work better in a tick event for this reason).
+There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event, like [`tick`](globals/Events#TICK). If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the [`entity_init`](globals/Events#TICK) event.
+
+:::
 
 All provided examples assume you're using a tick event.
 
@@ -31,9 +44,7 @@ player:isGliding() -- will error
 
 ## Player Transformations
 
----
-
-### `getPos()` \{#getPos}
+### <code>getPos()</code> \{#getPos}
 
 Gets the position of the entity in the world
 
@@ -41,7 +52,43 @@ If delta is passed in, then it will be used to linearly interpolate the position
 
 The default value of delta is 1
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getPos(delta)
+```
+
+**Parameters:**
+
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| delta | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 player:getPos()
@@ -49,7 +96,7 @@ player:getPos()
 
 ---
 
-### `getRot()` \{#getRot}
+### <code>getRot()</code> \{#getRot}
 
 Gets the rotation of the entity in degrees
 
@@ -57,7 +104,43 @@ If delta is passed in, then it will be used to linearly interpolate the rotation
 
 The default value of delta is 1
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getRot(delta)
+```
+
+**Parameters:**
+
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| delta | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 player:getRot()
@@ -65,7 +148,7 @@ player:getRot()
 
 ---
 
-### `getBodyYaw()` \{#getBodyYaw}
+### <code>getBodyYaw()</code> \{#getBodyYaw}
 
 Gets the yaw of this entity's body in degrees
 
@@ -73,7 +156,43 @@ If delta is passed in, then it will be used to linearly interpolate the rotation
 
 The default value of delta is 1
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getBodyYaw()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getBodyYaw(delta)
+```
+
+**Parameters:**
+
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| delta | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 player:getBodyYaw()
@@ -81,13 +200,23 @@ player:getBodyYaw()
 
 ---
 
-### `getLookDir()` \{#getLookDir}
+### <code>getLookDir()</code> \{#getLookDir}
 
 Returns a unit vector pointing in the direction that this entity is looking
 
 See the blue line in the F3+B screen for an example
 
-**Example**:
+```lua
+getLookDir()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getLookDir()
@@ -95,29 +224,47 @@ player:getLookDir()
 
 ---
 
-### `getVelocity()` \{#getVelocity}
+### <code>getVelocity()</code> \{#getVelocity}
 
 Gets the current velocity of this entity in world coordinates, calculated as its position this tick minus its position last tick
 
-**Example**:
+```lua
+getVelocity()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getVelocity()
 ```
 
-Gets the current velocity of this entity in world coordinates, calculated as its position this tick minus its position last tick
+---
 
 ## Player Actions
 
----
-
-### `getPose()` \{#getPose}
+### <code>getPose()</code> \{#getPose}
 
 Returns the current pose of the player
 
-For players this can be one of: "STANDING", "FALL_FLYING", "SLEEPING", "SWIMMING", "SPIN_ATTACK", or "CROUCHING"
+This can be one of: "STANDING", "FALL_FLYING", "SLEEPING", "SWIMMING", "SPIN_ATTACK", "CROUCHING", "LONG_JUMPING", or "DYING"
 
-**Example**:
+```lua
+getPose()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getPose() == "CROUCHING"
@@ -125,11 +272,21 @@ player:getPose() == "CROUCHING"
 
 ---
 
-### `isCrouching()` \{#isCrouching}
+### <code>isCrouching()</code> \{#isCrouching}
 
 Returns true if this entity is visually sneaking
 
-**Example**:
+```lua
+isCrouching()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isCrouching()
@@ -137,23 +294,56 @@ player:isCrouching()
 
 ---
 
-### `isGliding()` \{#isGliding}
+### <code>isGliding()</code> \{#isGliding}
 
 Returns if this entity is gliding with an elytra
 
-**Example**:
+```lua
+isGliding()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
-player:isGliding()
+-- error-next-line
+player:isGliding() -- will error
+function events.entity_init()
+    player:isGliding() -- will not error, but will only play once
+end
+
+-- error-next-line
+player:isGliding() -- will error
+function events.tick()
+    player:isGliding() -- won't error, and will update once a tick
+end
+
+-- error-next-line
+player:isGliding() -- will error
 ```
 
 ---
 
-### `isFishing()` \{#isFishing}
+### <code>isFishing()</code> \{#isFishing}
 
 Returns if the player is currently fishing
 
-**Example**:
+```lua
+isFishing()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isFishing()
@@ -161,11 +351,21 @@ player:isFishing()
 
 ---
 
-### `isBlocking()` \{#isBlocking}
+### <code>isBlocking()</code> \{#isBlocking}
 
 Return if this entity is blocking with a shield
 
-**Example**:
+```lua
+isBlocking()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isBlocking()
@@ -173,11 +373,21 @@ player:isBlocking()
 
 ---
 
-### `isVisuallySwimming()` \{#isVisuallySwimming}
+### <code>isVisuallySwimming()</code> \{#isVisuallySwimming}
 
-Returns if this entity have the swimming pose
+Returns if this entity has the swimming pose
 
-**Example**:
+```lua
+isVisuallySwimming()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isVisuallySwimming()
@@ -185,11 +395,21 @@ player:isVisuallySwimming()
 
 ---
 
-### `isClimbing()` \{#isClimbing}
+### <code>isClimbing()</code> \{#isClimbing}
 
 Returns true if the entity is currently using a climbable block, like a ladder or vine
 
-**Example**:
+```lua
+isClimbing()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isClimbing()
@@ -197,11 +417,21 @@ player:isClimbing()
 
 ---
 
-### `isSneaking()` \{#isSneaking}
+### <code>isSneaking()</code> \{#isSneaking}
 
 Returns true if this entity is logically sneaking (can't fall from blocks edges, can't see nameplate behind walls, etc)
 
-**Example**:
+```lua
+isSneaking()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isSneaking()
@@ -209,11 +439,21 @@ player:isSneaking()
 
 ---
 
-### `isSprinting()` \{#isSprinting}
+### <code>isSprinting()</code> \{#isSprinting}
 
 Returns true if this entity is currently sprinting
 
-**Example**:
+```lua
+isSprinting()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isSprinting()
@@ -221,29 +461,47 @@ player:isSprinting()
 
 ---
 
-### `riptideSpinning()` \{#riptideSpinning}
+### <code>riptideSpinning()</code> \{#riptideSpinning}
 
 Returns if this entity is riptide spinning
 
-**Example**:
+```lua
+riptideSpinning()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:riptideSpinning()
 ```
 
-Returns if this entity is riptide spinning
+---
 
 ## Player Data
 
----
-
-### `isLoaded()` \{#isLoaded}
+### <code>isLoaded()</code> \{#isLoaded}
 
 Checks if this entity object is still being updated and loaded
 
-A non loaded entity would be someone who is in another dimension or out of the render distance for example
+A non-loaded entity would be someone or something which is in another dimension or out of the render distance for example
 
-**Example**:
+```lua
+isLoaded()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isLoaded()
@@ -251,13 +509,23 @@ player:isLoaded()
 
 ---
 
-### `getNbt()` \{#getNbt}
+### <code>getNbt()</code> \{#getNbt}
 
 Gets a table containing the NBT of this entity
 
-Please note that not all values in the entity's NBT may be synced, as some are handled only on server side
+Please note that not all values in the entity's NBT may be synced, as some are handled only on the server side
 
-**Example**:
+```lua
+getNbt()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getNbt()
@@ -265,11 +533,21 @@ player:getNbt()
 
 ---
 
-### `getChargedAttackDelay()` \{#getChargedAttackDelay}
+### <code>getChargedAttackDelay()</code> \{#getChargedAttackDelay}
 
 Returns the delay (in ticks) of charged attacks
 
-**Example**:
+```lua
+getChargedAttackDelay()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getChargedAttackDelay()
@@ -277,11 +555,21 @@ player:getChargedAttackDelay()
 
 ---
 
-### `getExperienceProgress()` \{#getExperienceProgress}
+### <code>getExperienceProgress()</code> \{#getExperienceProgress}
 
 Gets the progress of the way towards the player's next level, as a value from 0 to 1
 
-**Example**:
+```lua
+getExperienceProgress()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getExperienceProgress()
@@ -289,11 +577,21 @@ player:getExperienceProgress()
 
 ---
 
-### `getExperienceLevel()` \{#getExperienceLevel}
+### <code>getExperienceLevel()</code> \{#getExperienceLevel}
 
 Gets the player's current level
 
-**Example**:
+```lua
+getExperienceLevel()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getExperienceLevel()
@@ -301,11 +599,47 @@ player:getExperienceLevel()
 
 ---
 
-### `getShoulderEntity()` \{#getShoulderEntity}
+### <code>getShoulderEntity()</code> \{#getShoulderEntity}
 
 Returns a table of the nbt of this entity left or right shoulder entity
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getShoulderEntity()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getShoulderEntity(right)
+```
+
+**Parameters:**
+
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| right | <code>[Boolean](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 player:getShoulderEntity()
@@ -313,13 +647,23 @@ player:getShoulderEntity()
 
 ---
 
-### `getTeamInfo()` \{#getTeamInfo}
+### <code>getTeamInfo()</code> \{#getTeamInfo}
 
 Returns a table with information about the team of this player
 
-Returns nil if the player doesnt have a team
+Returns nil if the player doesn't have a team
 
-**Example**:
+```lua
+getTeamInfo()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getTeamInfo()
@@ -327,11 +671,21 @@ player:getTeamInfo()
 
 ---
 
-### `getFood()` \{#getFood}
+### <code>getFood()</code> \{#getFood}
 
 Gets the current food level of the player, from 0 to 20
 
-**Example**:
+```lua
+getFood()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getFood()
@@ -339,13 +693,23 @@ player:getFood()
 
 ---
 
-### `getGamemode()` \{#getGamemode}
+### <code>getGamemode()</code> \{#getGamemode}
 
 Returns "SURVIVAL", "CREATIVE", "ADVENTURE", or "SPECTATOR" depending on the player's gamemode
 
 If the gamemode is unknown, returns nil
 
-**Example**:
+```lua
+getGamemode()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getGamemode()
@@ -353,11 +717,21 @@ player:getGamemode()
 
 ---
 
-### `getSaturation()` \{#getSaturation}
+### <code>getSaturation()</code> \{#getSaturation}
 
 Gets the current saturation level of the player
 
-**Example**:
+```lua
+getSaturation()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getSaturation()
@@ -365,11 +739,21 @@ player:getSaturation()
 
 ---
 
-### `getExhaustion()` \{#getExhaustion}
+### <code>getExhaustion()</code> \{#getExhaustion}
 
 Gets the current exhaustion level of the player
 
-**Example**:
+```lua
+getExhaustion()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getExhaustion()
@@ -377,11 +761,21 @@ player:getExhaustion()
 
 ---
 
-### `getAbsorptionAmount()` \{#getAbsorptionAmount}
+### <code>getAbsorptionAmount()</code> \{#getAbsorptionAmount}
 
 Returns the amount of this entity's absorption (yellow hearts)
 
-**Example**:
+```lua
+getAbsorptionAmount()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getAbsorptionAmount()
@@ -389,11 +783,21 @@ player:getAbsorptionAmount()
 
 ---
 
-### `getArmor()` \{#getArmor}
+### <code>getArmor()</code> \{#getArmor}
 
 Returns the amount of armor points this entity has
 
-**Example**:
+```lua
+getArmor()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getArmor()
@@ -401,11 +805,21 @@ player:getArmor()
 
 ---
 
-### `getMaxHealth()` \{#getMaxHealth}
+### <code>getMaxHealth()</code> \{#getMaxHealth}
 
 Returns the maximum amount of health this entity can have
 
-**Example**:
+```lua
+getMaxHealth()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getMaxHealth()
@@ -413,11 +827,21 @@ player:getMaxHealth()
 
 ---
 
-### `getHealth()` \{#getHealth}
+### <code>getHealth()</code> \{#getHealth}
 
 Returns the amount of health this entity has remaining
 
-**Example**:
+```lua
+getHealth()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getHealth()
@@ -425,11 +849,21 @@ player:getHealth()
 
 ---
 
-### `getDeathTime()` \{#getDeathTime}
+### <code>getDeathTime()</code> \{#getDeathTime}
 
 Returns the number of ticks this entity has been dead for
 
-**Example**:
+```lua
+getDeathTime()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getDeathTime()
@@ -437,11 +871,21 @@ player:getDeathTime()
 
 ---
 
-### `getStingerCount()` \{#getStingerCount}
+### <code>getStingerCount()</code> \{#getStingerCount}
 
 Returns the number of bee stingers sticking out of this entity
 
-**Example**:
+```lua
+getStingerCount()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getStingercount()
@@ -449,11 +893,21 @@ player:getStingercount()
 
 ---
 
-### `getArrowCount()` \{#getArrowCount}
+### <code>getArrowCount()</code> \{#getArrowCount}
 
 Returns the number of arrows sticking out of this entity
 
-**Example**:
+```lua
+getArrowCount()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getArrowCount()
@@ -461,13 +915,23 @@ player:getArrowCount()
 
 ---
 
-### `getEntityCategory()` \{#getEntityCategory}
+### <code>getEntityCategory()</code> \{#getEntityCategory}
 
 Returns the category of this entity
 
 The categories are: "ARTHROPOD", "UNDEAD", "WATER", "ILLAGER" and by default, "UNDEFINED"
 
-**Example**:
+```lua
+getEntityCategory()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getEntityCategory() == "UNDEAD"
@@ -475,11 +939,21 @@ player:getEntityCategory() == "UNDEAD"
 
 ---
 
-### `isSensitiveToWater()` \{#isSensitiveToWater}
+### <code>isSensitiveToWater()</code> \{#isSensitiveToWater}
 
 Returns if this entity takes damage to water
 
-**Example**:
+```lua
+isSensitiveToWater()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isSensitiveToWater()
@@ -487,13 +961,23 @@ player:isSensitiveToWater()
 
 ---
 
-### `getName()` \{#getName}
+### <code>getName()</code> \{#getName}
 
 Gets the name of this entity, if it has a custom name
 
 If it doesn't, returns a translated form of getType()
 
-**Example**:
+```lua
+getName()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getName()
@@ -501,11 +985,21 @@ player:getName()
 
 ---
 
-### `isAlive()` \{#isAlive}
+### <code>isAlive()</code> \{#isAlive}
 
 Returns whether this entity is alive or not
 
-**Example**:
+```lua
+isAlive()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isAlive()
@@ -513,24 +1007,45 @@ player:isAlive()
 
 ---
 
-### `getType()` \{#getType}
+### <code>getType()</code> \{#getType}
 
 Gets the Minecraft identifier of this entity
 
 For instance, "minecraft:pig"
-**Example**:
 
 ```lua
-player:getType() == "minecraft:player"
+getType()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
+
+```lua
+player:getName()
 ```
 
 ---
 
-### `getControlledVehicle()` \{#getControlledVehicle}
+### <code>getControlledVehicle()</code> \{#getControlledVehicle}
 
 Return the vehicle that this entity is controlling
 
-**Example**:
+```lua
+getControlledVehicle()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[EntityAPI](/globals/Player/Entity)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getControlledVehicle()
@@ -538,11 +1053,21 @@ player:getControlledVehicle()
 
 ---
 
-### `getControllingPassenger()` \{#getControllingPassenger}
+### <code>getControllingPassenger()</code> \{#getControllingPassenger}
 
 Returns the entity that is controlling this entity
 
-**Example**:
+```lua
+getControllingPassenger()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[EntityAPI](/globals/Player/Entity)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getControllingPassenger()
@@ -550,11 +1075,21 @@ player:getControllingPassenger()
 
 ---
 
-### `getPassengers()` \{#getPassengers}
+### <code>getPassengers()</code> \{#getPassengers}
 
-Returns a List of entities of all passengers this entity have
+Returns a List of entities of all passengers this entity has
 
-**Example**:
+```lua
+getPassengers()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getPassengers()
@@ -562,11 +1097,21 @@ player:getPassengers()
 
 ---
 
-### `getFrozenTicks()` \{#getFrozenTicks}
+### <code>getFrozenTicks()</code> \{#getFrozenTicks}
 
 Gets the number of ticks this entity has been freezing in powder snow for
 
-**Example**:
+```lua
+getFrozenTicks()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getFrozenTicks()
@@ -574,11 +1119,21 @@ player:getFrozenTicks()
 
 ---
 
-### `getMaxAir()` \{#getMaxAir}
+### <code>getMaxAir()</code> \{#getMaxAir}
 
 Gets the maximum amount of air this entity can have
 
-**Example**:
+```lua
+getMaxAir()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getMaxAir()
@@ -586,11 +1141,21 @@ player:getMaxAir()
 
 ---
 
-### `getDimensionName()` \{#getDimensionName}
+### <code>getDimensionName()</code> \{#getDimensionName}
 
 Gets the Minecraft identifier of the dimension this entity is in
 
-**Example**:
+```lua
+getDimensionName()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getDimensionName()
@@ -598,11 +1163,21 @@ player:getDimensionName()
 
 ---
 
-### `isUnderwater()` \{#isUnderwater}
+### <code>isUnderwater()</code> \{#isUnderwater}
 
 Returns true if this entity's eyes are touching water
 
-**Example**:
+```lua
+isUnderwater()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isUnderwater()
@@ -610,11 +1185,21 @@ player:isUnderwater()
 
 ---
 
-### `isInWater()` \{#isInWater}
+### <code>isInWater()</code> \{#isInWater}
 
 Returns true if this entity is currently in a water block, including waterlogging
 
-**Example**:
+```lua
+isInWater()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isInWater()
@@ -622,11 +1207,21 @@ player:isInWater()
 
 ---
 
-### `isInRain()` \{#isInRain}
+### <code>isInRain()</code> \{#isInRain}
 
 Returns true if this entity is currently standing in rain
 
-**Example**:
+```lua
+isInRain()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isInRain()
@@ -634,13 +1229,23 @@ player:isInRain()
 
 ---
 
-### `isWet()` \{#isWet}
+### <code>isWet()</code> \{#isWet}
 
 Returns true in any of three conditions: if the entity is in water, if the entity is in rain, or if the entity is in a bubble column
 
 Otherwise, returns false
 
-**Example**:
+```lua
+isWet()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isWet()
@@ -648,11 +1253,21 @@ player:isWet()
 
 ---
 
-### `isInLava()` \{#isInLava}
+### <code>isInLava()</code> \{#isInLava}
 
 Returns true if this entity is currently in lava
 
-**Example**:
+```lua
+isInLava()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isInLava()
@@ -660,11 +1275,21 @@ player:isInLava()
 
 ---
 
-### `isOnFire()` \{#isOnFire}
+### <code>isOnFire()</code> \{#isOnFire}
 
 Returns true if this entity is currently on fire
 
-**Example**:
+```lua
+isOnFire()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isOnFire()
@@ -672,11 +1297,21 @@ player:isOnFire()
 
 ---
 
-### `isInvisible()` \{#isInvisible}
+### <code>isInvisible()</code> \{#isInvisible}
 
 Returns true if this entity is invisible, for one reason or another
 
-**Example**:
+```lua
+isInvisible()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isInvisible()
@@ -684,27 +1319,50 @@ player:isInvisible()
 
 ---
 
-### `getVehicle()` \{#getVehicle}
+### <code>getVehicle()</code> \{#getVehicle}
 
 Returns a proxy for the entity that this player is currently riding
 
 If the player isn't riding anything, returns nil
 
-**Example** combined with getType and with a nil check, the first <code>player:getVehicle()</code> is preventing a nil value from being check by <code>getType()</code> after the and:
+```lua
+getVehicle()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[EntityAPI](/globals/Player/Entity)</code> | -           |
+
+**Example:**
 
 ```lua
-if player:getVehicle() and player:getVehicle():getType() == "minecraft:pig" then
+-- highlight-next-line
+local vehicle = player:getVehicle()
+-- We make sure `vehicle` isn't nil so we can safely call `getType()`
+if vehicle and vehicle:getType() == "minecraft:pig" then
     log("You're riding a pig")
 end
 ```
 
 ---
 
-### `isSilent()` \{#isSilent}
+### <code>isSilent()</code> \{#isSilent}
 
 Returns true if this entity is silent
 
-**Example**:
+```lua
+isSilent()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isSilent()
@@ -712,11 +1370,21 @@ player:isSilent()
 
 ---
 
-### `isGlowing()` \{#isGlowing}
+### <code>isGlowing()</code> \{#isGlowing}
 
 Returns true if this entity is currently glowing
 
-**Example**:
+```lua
+isGlowing()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isGlowing()
@@ -724,17 +1392,25 @@ player:isGlowing()
 
 ---
 
-### `getBoundingBox()` \{#getBoundingBox}
+### <code>getBoundingBox()</code> \{#getBoundingBox}
 
 Returns the size of this entity's bounding box as a Vector3
-
----
 
 \{x, y, z} are the width, height, and width
 
 Minecraft entity hitboxes always have square bases
 
-**Example**:
+```lua
+getBoundingBox()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getBoundingBox()
@@ -742,29 +1418,52 @@ player:getBoundingBox()
 
 ---
 
-### `isOnGround()` \{#isOnGround}
+### <code>isOnGround()</code> \{#isOnGround}
 
 Returns whether or not this entity is currently on the ground
 
 :::caution
-Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. One workaround is to check the blockstate of the block directly underneath the player like so: <code>world.getBlockState(player:getPos():add(0,-0.1,0)):isSolidBlock()</code>
+
+Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. See the example for a workaround.
+
 :::
 
-**Example**:
+```lua
+isOnGround()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
-player:isOnGround()
+-- check the blockstate of the block directly underneath the player
+world.getBlockState(player:getPos():add(0, -0.1, 0)):isSolidBlock()
 ```
 
 ---
 
-### `getEyeY()` \{#getEyeY}
+### <code>getEyeY()</code> \{#getEyeY}
 
 Returns the Y level of this entity's eyes
 
 Not to be confused with getEyeHeight, this function also takes the entity itself's Y position into account
 
-**Example**:
+```lua
+getEyeY()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getEyeY()
@@ -772,34 +1471,71 @@ player:getEyeY()
 
 ---
 
-### `getEyeHeight()` \{#getEyeHeight}
+### <code>getEyeHeight()</code> \{#getEyeHeight}
 
 Returns the current eye height of this entity
 
-**Example**:
+```lua
+getEyeHeight()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
-player:getEyeHeight()
+player:getEyeY()
 ```
 
 ---
 
-### `getTargetedEntity(distance : number?) : Entity, Vector3` \{#getTargetedEntity}
+### <code>getTargetedEntity()</code> \{#getTargetedEntity}
 
-Used to access the entity you are looking at.
+Returns a proxy for your currently targeted Entity
 
-#### Parameters
+This Entity appears on the F3 screen
 
-| Name     | Type   | Description                                                           |
-| -------- | ------ | --------------------------------------------------------------------- |
-| distance | number | How far in blocks to check for an entity. Default and maximum are 20. |
+Maximum and Default distance is 20, Minimum is 0
 
-#### Returns
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
-| Name   | Type                         | Description                                  |
-| ------ | ---------------------------- | -------------------------------------------- |
-| entity | [Entity](./Player/Entity)    | A reference to the targeted entity           |
-| pos    | [Vector3](./Vectors/Vector3) | The world coordinates of the targeted entity |
+```lua
+getTargetedEntity()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Varargs](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getTargetedEntity(distance)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| distance | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Varargs](#)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
 
 **Example:**
 
@@ -812,17 +1548,71 @@ end
 
 ---
 
-### `getTargetedBlock(bool, number)` \{#getTargetedBlock}
+### <code>getTargetedBlock()</code> \{#getTargetedBlock}
 
 Returns a proxy for your currently targeted BlockState
 
 This BlockState appears on the F3 screen
 
-The bool is for ignoring liquids and the number is the distance in blocks to check
+The maximum (and default) distance is 20, minimum is -20
 
-Maximum and Default distance is 20, Minimum is -20
+Returns the block, the hit position, and the targeted block face as three separate values
 
-Returns a vararg of the block, the hit position and the block face the hit collided
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getTargetedBlock()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Varargs](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getTargetedBlock(ignoreLiquids)
+```
+
+**Parameters:**
+
+| Name          | Type                      | Description | Default |
+| ------------- | ------------------------- | ----------- | ------- |
+| ignoreLiquids | <code>[Boolean](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Varargs](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+getTargetedBlock(ignoreLiquids, distance)
+```
+
+**Parameters:**
+
+| Name          | Type                      | Description | Default |
+| ------------- | ------------------------- | ----------- | ------- |
+| ignoreLiquids | <code>[Boolean](#)</code> | -           | -       |
+| distance      | <code>[Number](#)</code>  | -           | -       |
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Varargs](#)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
 
 **Example:**
 
@@ -834,11 +1624,21 @@ end
 
 ---
 
-### `hasInventory()` \{#hasInventory}
+### <code>hasInventory()</code> \{#hasInventory}
 
-Checks if the entity has an inventory (Horses, Camels, Llamas, ...)
+Checks if the entity has an inventory (Horses, Camels, LLamas, …)
 
-**Example**:
+```lua
+hasInventory()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:hasInventory()
@@ -846,11 +1646,21 @@ player:hasInventory()
 
 ---
 
-### `hasContainer()` \{#hasContainer}
+### <code>hasContainer()</code> \{#hasContainer}
 
-Checks if the entity has a container (Chest Boats, Minecarts with Chests, ...)
+Checks if the entity has a container (Chest Boats, Minecarts with Chests, …)
 
-**Example**:
+```lua
+hasContainer()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:hasContainer()
@@ -858,11 +1668,21 @@ player:hasContainer()
 
 ---
 
-### `isLiving()` \{#isLiving}
+### <code>isLiving()</code> \{#isLiving}
 
 Gets if this entity is a Living Entity
 
-**Example**:
+```lua
+isLiving()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isLiving()
@@ -870,11 +1690,21 @@ player:isLiving()
 
 ---
 
-### `isPlayer()` \{#isPlayer}
+### <code>isPlayer()</code> \{#isPlayer}
 
 Gets if this entity is a Player Entity
 
-**Example**:
+```lua
+isPlayer()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isPlayer()
@@ -882,27 +1712,47 @@ player:isPlayer()
 
 ---
 
-### `getPermissionLevel()` \{#getPermissionLevel}
+### <code>getPermissionLevel()</code> \{#getPermissionLevel}
 
 Returns the permission level number of this entity
 
 Server Operators, by default, have the permission level of 4
 
-**Example**:
+```lua
+getPermissionLevel()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getPermissionLevel()
 ```
 
-## Vanilla Settings
-
 ---
 
-### `getModelType()` \{#getModelType}
+## Vanilla Settings
+
+### <code>getModelType()</code> \{#getModelType}
 
 Returns "SLIM" or "DEFAULT", depending on the player's model type
 
-**Example**:
+```lua
+getModelType()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getModelType() == "DEFAULT"
@@ -910,11 +1760,21 @@ player:getModelType() == "DEFAULT"
 
 ---
 
-### `hasCape()` \{#hasCape}
+### <code>hasCape()</code> \{#hasCape}
 
 Returns whether the player has a cape loaded
 
-**Example**:
+```lua
+hasCape()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:hasCape()
@@ -922,11 +1782,21 @@ player:hasCape()
 
 ---
 
-### `hasSkin()` \{#hasSkin}
+### <code>hasSkin()</code> \{#hasSkin}
 
 Returns whether the player has a custom skin loaded
 
-**Example**:
+```lua
+hasSkin()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:hasSkin()
@@ -934,29 +1804,59 @@ player:hasSkin()
 
 ---
 
-### `isSkinLayerVisible(string)` \{#isSkinLayerVisible}
+### <code>isSkinLayerVisible()</code> \{#isSkinLayerVisible}
 
 Returns whether the specified skin layer, from the Skin Customizations settings, is currently visible
 
-[Parts list](../enums/PlayerModelParts)
+```lua
+isSkinLayerVisible(part)
+```
 
-**Example**:
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| part | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isSkinLayerVisible("HAT")
 ```
 
-## Item Functions
-
 ---
 
-### `getItem(integer)` \{#getItem}
+## Item Functions
+
+### <code>getItem()</code> \{#getItem}
 
 Gets an ItemStack for the item in the given slot
 
 For the player, slots are indexed with 1 as the main hand, 2 as the off hand, and 3,4,5,6 as the 4 armor slots from the boots to the helmet
 
 If an invalid slot number is given, this will return nil
+
+```lua
+getItem(index)
+```
+
+**Parameters:**
+
+| Name  | Type                      | Description | Default |
+| ----- | ------------------------- | ----------- | ------- |
+| index | <code>[Integer](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                               | Description |
+| -------------------------------------------------- | ----------- |
+| <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
 **Example:**
 
@@ -968,13 +1868,49 @@ end
 
 ---
 
-### `getHeldItem(bool)` \{#getHeldItem}
+### <code>getHeldItem()</code> \{#getHeldItem}
 
 Returns an ItemStack representing the item in this entity's main hand
 
 If true is passed in for "offhand", then it will instead look at the item in the entity's offhand
 
 If the entity isn't holding an item in that hand, returns air
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getHeldItem()
+```
+
+**Returns:**
+
+| Type                                               | Description |
+| -------------------------------------------------- | ----------- |
+| <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getHeldItem(offhand)
+```
+
+**Parameters:**
+
+| Name    | Type                      | Description | Default |
+| ------- | ------------------------- | ----------- | ------- |
+| offhand | <code>[Boolean](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                               | Description |
+| -------------------------------------------------- | ----------- |
+| <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
 
 **Example:**
 
@@ -989,11 +1925,21 @@ end
 
 ---
 
-### `isUsingItem()` \{#isUsingItem}
+### <code>isUsingItem()</code> \{#isUsingItem}
 
 Returns true if the entity is currently using an item
 
-**Example**:
+```lua
+isUsingItem()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isUsingItem()
@@ -1001,13 +1947,23 @@ player:isUsingItem()
 
 ---
 
-### `getActiveItem()` \{#getActiveItem}
+### <code>getActiveItem()</code> \{#getActiveItem}
 
 Returns an ItemStack representing the item the entity is currently using
 
 If they're not using any item, returns air
 
-**Example**:
+```lua
+getActiveItem()
+```
+
+**Returns:**
+
+| Type                                               | Description |
+| -------------------------------------------------- | ----------- |
+| <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getActiveItem()
@@ -1015,25 +1971,76 @@ player:getActiveItem()
 
 ---
 
-### `getActiveItemTime()` \{#getActiveItemTime}
+### <code>getActiveItemTime()</code> \{#getActiveItemTime}
 
 Returns the ticks this entity's active item has been used for
 
-**Example**:
+```lua
+getActiveItemTime()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getActiveItemTime()
 ```
 
-## Hand Functions
+---
+
+### <code>getCooldownPercent()</code> \{#getCooldownPercent}
+
+Returns the whether a given ItemStack has an active cool down as a percent from 0.0 to 1.0
+
+If it has none, it returns 0.0
+
+Takes two parameters stack, and delta, delta offsets the cooldown's tick count by it, used for smoother animation.
+
+```lua
+getCooldownPercent(stack, delta)
+```
+
+**Parameters:**
+
+| Name  | Type                                               | Description | Default |
+| ----- | -------------------------------------------------- | ----------- | ------- |
+| stack | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
+| delta | <code>[Number](#)</code>                           | -           | -       |
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
 
 ---
 
-### `isLeftHanded()` \{#isLeftHanded}
+### <code>isLeftHanded()</code> \{#isLeftHanded}
 
 Returns true if the entity's main hand is its left
 
-**Example**:
+```lua
+isLeftHanded()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isLeftHanded()
@@ -1041,11 +2048,21 @@ player:isLeftHanded()
 
 ---
 
-### `isSwingingArm()` \{#isSwingingArm}
+### <code>isSwingingArm()</code> \{#isSwingingArm}
 
 Returns true if the entity is currently swinging its arm
 
-**Example**:
+```lua
+isSwingingArm()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:isSwingingArm()
@@ -1053,11 +2070,21 @@ player:isSwingingArm()
 
 ---
 
-### `getSwingDuration()` \{#getSwingDuration}
+### <code>getSwingDuration()</code> \{#getSwingDuration}
 
 Returns the number of ticks this entity will have while swinging its arms
 
-**Example**:
+```lua
+getSwingDuration()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getSwingDuration()
@@ -1065,11 +2092,21 @@ player:getSwingDuration()
 
 ---
 
-### `getSwingTime()` \{#getSwingTime}
+### <code>getSwingTime()</code> \{#getSwingTime}
 
 Returns the number of ticks this entity has the arm swinging
 
-**Example**:
+```lua
+getSwingTime()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Integer](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getSwingTime()
@@ -1077,11 +2114,21 @@ player:getSwingTime()
 
 ---
 
-### `getActiveHand()` \{#getActiveHand}
+### <code>getActiveHand()</code> \{#getActiveHand}
 
 Returns "OFF_HAND" or "MAIN_HAND", depending on which hand this entity uses an item with
 
-**Example**:
+```lua
+getActiveHand()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getActiveHand() == "MAIN_HAND"
@@ -1089,37 +2136,45 @@ player:getActiveHand() == "MAIN_HAND"
 
 ---
 
-### `getSwingArm()` \{#getSwingArm}
+### <code>getSwingArm()</code> \{#getSwingArm}
 
 Returns "OFF_HAND" or "MAIN_HAND", based on the arm this entity is currently swinging
 
-**Example**:
+```lua
+getSwingArm()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getSwingArm() == "OFF_HAND"
 ```
 
+---
+
 ## Miscellaneous
 
----
-
-### `getIPAddress()` \{#getIPAddress}
-
-Returns this player's IP address
-
-**Example**:
-
-```lua
-player:getIPAddress()
-```
-
----
-
-### `getUUID()` \{#getUUID}
+### <code>getUUID()</code> \{#getUUID}
 
 Gets the UUID of the proxied entity
 
-**Example**:
+```lua
+getUUID()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:getUUID()
@@ -1127,24 +2182,72 @@ player:getUUID()
 
 ---
 
-### `hasAvatar()` \{#hasAvatar}
+### <code>getVariable()</code> \{#getVariable}
+
+Gets the value of a variable this entity stored in themselves using the Avatar API's store() function
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getVariable()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getVariable(key)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| key  | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+player:getVariable()
+```
+
+---
+
+### <code>hasAvatar()</code> \{#hasAvatar}
 
 Returns true if Figura has an avatar loaded for this entity
 
-**Example**:
+```lua
+hasAvatar()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 player:hasAvatar()
 ```
 
 ---
-
-### `getVariable()` \{#getVariable}
-
-Gets the value of a variable this entity stored in themselves using the Avatar api's store() function
-
-**Example**:
-
-```lua
-player:getVariable()
-```
