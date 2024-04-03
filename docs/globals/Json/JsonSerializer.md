@@ -1,0 +1,57 @@
+An object that is made for serializing and deserializing JSON strings with specific settings
+
+### <code>deserialize()</code> \{#deserialize}
+
+Serializes provided JSON string to a lua value
+
+```lua
+deserialize(str)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| str  | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>serialize()</code> \{#serialize}
+
+Serializes provided value to a JSON string
+
+```lua
+serialize(val)
+```
+
+**Parameters:**
+
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| val  | <code>[AnyType](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---

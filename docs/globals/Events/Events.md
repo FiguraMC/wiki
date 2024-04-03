@@ -1,8 +1,12 @@
+---
+sidebar_position: 1
+---
+
+A global API that contains all of the figura Events
+
 :::danger
 This page is a WIP.
 :::
-
-A global API that contains all of the figura Events
 
 Accessed using the name "events"
 

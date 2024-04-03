@@ -1,11 +1,15 @@
+---
+sidebar_position: 1
+---
+
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
+
+A global API dedicated to reading information from the Minecraft world.
 
 :::danger
 This page is a WIP.
 :::
-
-A global API dedicated to reading information from the Minecraft world.
 
 The world API is accessed through the <code>world</code> global. Like so: <code>world.getTime()</code>.
 

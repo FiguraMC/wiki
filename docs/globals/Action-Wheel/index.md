@@ -1,13 +1,17 @@
+---
+sidebar_position: 1
+---
+
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 # Action Wheel
 
+A global API which is used for customizing your player's Action Wheel
+
 :::danger
 This page is a WIP.
 :::
-
-A global API which is used for customizing your player's Action Wheel
 
 ## Page
 

@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A proxy for a Minecraft biome
+
 :::danger
 This page is a WIP.
 :::
-
-A proxy for a Minecraft biome
 
 Instances are obtained through the WorldAPI
 

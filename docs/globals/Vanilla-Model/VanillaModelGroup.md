@@ -1,155 +1,470 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Represents a group of model parts in a vanilla model
+
+:::danger
+This page is a WIP.
+:::
 
 Used for easy reference of normal parts
 
 All changes also applies to all children parts
 
----
+### <code>setOffsetRot()</code> \{#setOffsetRot}
 
-### `setVisible(bool)` \{#setVisible}
+**Aliases:** `offsetRot()`
 
-Sets this part and its children to be visible or invisible
+Offsets this part and its children's rotation, adding on top of the vanilla values
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vanilla_model.ALL:setVisible(false)
+setOffsetRot(offsetRot)
+```
+
+**Parameters:**
+
+| Name      | Type                                             | Description | Default |
+| --------- | ------------------------------------------------ | ----------- | ------- |
+| offsetRot | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOffsetRot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getVisible()` \{#getVisible}
+### <code>getOffsetRot()</code> \{#getOffsetRot}
 
-Gets whether you have set this part to be visible or invisible
-
-**Example**:
+Gets this part's rotation offset
 
 ```lua
-vanilla_model.ALL:getVisible()
+getOffsetRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setRot(Vector3)` \{#setRot}
+### <code>setOffsetScale()</code> \{#setOffsetScale}
 
-Set this part and its children's rotation
+**Aliases:** `offsetScale()`
 
-**Example**:
+Offsets this part and its children's scale, multiplying with the vanilla values
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vanilla_model.ALL:setRot(0, 90, 0)
+setOffsetScale(offsetScale)
+```
+
+**Parameters:**
+
+| Name        | Type                                             | Description | Default |
+| ----------- | ------------------------------------------------ | ----------- | ------- |
+| offsetScale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOffsetScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getRot()` \{#getgetRotPos}
+### <code>getOffsetScale()</code> \{#getOffsetScale}
 
-Get this part's set rotation
-
-Returns the value set by the "set" function
-
-**Example**:
+Gets this part's scale offset
 
 ```lua
-vanilla_model.ALL:getRot()
+getOffsetScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setPos(Vector3)` \{#setPos}
+### <code>setPos()</code> \{#setPos}
+
+**Aliases:** `pos()`
 
 Set this part and its children's position, preserving the previous values
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vanilla_model.ALL:setPos(0, 10, 0)
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getPos()` \{#getPos}
+### <code>getPos()</code> \{#getPos}
 
 Get this part's set position
 
 Returns the value set by the "set" function
 
-**Example**:
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
-vanilla_model.ALL:getPos()
+--todo
 ```
 
 ---
 
-### `setScale(Vector3)` \{#setScale}
+### <code>setRot()</code> \{#setRot}
+
+**Aliases:** `rot()`
+
+Set this part and its children's rotation
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setRot(rot)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rot  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setRot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getRot()</code> \{#getRot}
+
+Get this part's set rotation
+
+Returns the value set by the "set" function
+
+```lua
+getRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setScale()</code> \{#setScale}
+
+**Aliases:** `scale()`
 
 Set this part and its children's scale
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vanilla_model.ALL:setScale(2, 2, 2)
+setScale(scale)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| scale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getScale()` \{#getScale}
+### <code>getScale()</code> \{#getScale}
 
 Get this part's set scale
 
 Returns the value set by the "set" function
 
-**Example**:
+```lua
+getScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
-vanilla_model.ALL:getScale()
+--todo
 ```
 
 ---
 
-### `setOffsetRot(Vector3)` \{#setOffsetRot}
+### <code>setVisible()</code> \{#setVisible}
 
-Offsets this part and its children's rotation, adding on top of the vanilla values
+**Aliases:** `visible()`
 
-**Example**:
+Sets this part and its children to be visible or invisible
 
 ```lua
-vanilla_model.ALL:setOffsetRot(0, 90, 0)
+setVisible(visible)
+```
+
+**Parameters:**
+
+| Name    | Type                      | Description | Default |
+| ------- | ------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getOffsetRot()` \{#getOffsetRot}
+### <code>getVisible()</code> \{#getVisible}
 
-Gets this part's rotation offset
-
-**Example**:
+Gets whether you have set this part to be visible or invisible
 
 ```lua
-vanilla_model.ALL:getOffsetRot()
+getVisible()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
-
-### `setOffsetScale(Vector3)` \{#setOffsetScale}
-
-Offsets this part and its children's scale, multiplying with the vanilla values
-
-**Example**:
-
-```lua
-vanilla_model.ALL:setOffsetScale(2, 2, 2)
-```
-
----
-
-### `getOffsetScale()` \{#getOffsetScale}
-
-Gets this part's scale offset
-
-**Example**:
-
-```lua
-vanilla_model.ALL:getOffsetScale()
-```

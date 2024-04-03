@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A global API which provides functions dedicated to creating and otherwise manipulating matrices
+
 :::danger
 This page is a WIP.
 :::
-
-A global API which provides functions dedicated to creating and otherwise manipulating matrices
 
 Accessed using the name "matrices"
 

@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A proxy for a block state from Minecraft
+
 :::danger
 This page is a WIP.
 :::
-
-A proxy for a block state from Minecraft
 
 Instances are obtained through the WorldAPI
 

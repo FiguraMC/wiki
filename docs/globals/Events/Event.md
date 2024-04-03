@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A hook for a certain event in Minecraft
+
 :::danger
 This page is a WIP.
 :::
-
-A hook for a certain event in Minecraft
 
 You may register functions to one, and those functions will be called when the event occurs
 

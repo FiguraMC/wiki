@@ -1,6 +1,10 @@
-The global instance of the NameplateAPI and its subtypes
+---
+sidebar_position: 1
+---
 
-### `Chat`
+A global API which is used for customizing your player's nameplate in chat, above your head, and in the tab list
+
+### <code>CHAT</code> \{#CHAT}
 
 A customization for your nameplate in the chat
 
@@ -8,7 +12,7 @@ See [NameplateCustomization](../globals/Nameplate/NameplateCustomization) for `C
 
 ---
 
-### `Entity`
+### <code>ENTITY</code> \{#ENTITY}
 
 A customization for your nameplate above your head
 
@@ -16,7 +20,7 @@ See [EntityNameplateCustomization](../globals/Nameplate/EntityNameplateCustomiza
 
 ---
 
-### `List`
+### <code>LIST</code> \{#LIST}
 
 A customization for your nameplate in the tab list
 
@@ -24,9 +28,9 @@ See [NameplateCustomization](../globals/Nameplate/NameplateCustomization) for `L
 
 ---
 
-### `All`
+### <code>ALL</code> \{#ALL}
 
-A group that manage all your nameplate customizations at once
+A group that manages all your nameplate customizations at once
 
 See [NameplateCustomizationGroup](../globals/Nameplate/NameplateCustomizationGroup) for `All` functions
 

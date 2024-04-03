@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 The global instance of the Avatar Models and its subtypes
 
 ## Transformations

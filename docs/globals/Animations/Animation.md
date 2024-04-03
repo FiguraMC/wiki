@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-A Blockbench animation
+Methods for specific Blockbench animations
 
 For all examples on this page assume
 

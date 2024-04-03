@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A matrix with 4 rows and 4 columns
+
 :::danger
 This page is a WIP.
 :::
-
-A matrix with 4 rows and 4 columns
 
 ---
 

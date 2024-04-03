@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A global API containing a function to create new Keybind instances
+
 :::danger
 This page is a WIP.
 :::
-
-A global API containing a function to create new Keybind instances
 
 ### <code>newKeybind()</code> \{#newKeybind}
 

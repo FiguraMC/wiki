@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A vector that holds 3 numbers
+
 :::danger
 This page is a WIP.
 :::
-
-A vector that holds 3 numbers
 
 Can be created using functions in the "vectors" api
 

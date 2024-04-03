@@ -1,4 +1,11 @@
-A task for rendering a Block from [newBlock](.#newBlock)
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+A task for rendering a Block from [newBlock](./#newBlock)
+
+:::danger
+This page is a WIP.
+:::
 
 For this entire page assume:
 
@@ -8,258 +15,694 @@ local myBlock = models:newBlock("myCoolBlocksName")
 
 ---
 
-### <code>setBlock(block: [BlockState](../World/BlockState)): [BlockTask](./BlockTask)</code> \{#setBlock}
+## Block Task
+
+### <code>setBlock()</code> \{#setBlock}
+
+**Aliases:** `block()`
 
 Sets the Block for this task render
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myBlock:setBlock("mycelium")
+setBlock(block)
+```
+
+**Parameters:**
+
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| block | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[BlockTask](/globals/Models/BlockTask)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setBlock(block)
+```
+
+**Parameters:**
+
+| Name  | Type                                                 | Description | Default |
+| ----- | ---------------------------------------------------- | ----------- | ------- |
+| block | <code>[BlockState](/globals/World/BlockState)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[BlockTask](/globals/Models/BlockTask)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>remove(): [BlockTask](./BlockTask)</code> \{#remove}
+## Render Task
 
-Removes this block task from the parent model part
+### <code>setLight()</code> \{#setLight}
 
-**Example**:
-
-```lua
-myBlock:remove()
-```
-
----
-
-### <code>getName(): string</code> \{#getName}
-
-Get this task's name
-
-**Example**:
-
-```lua
-myBlock:getName()
-```
-
----
-
-### <code>setVisible(state: boolean): [BlockTask](./BlockTask)</code> \{#setVisible}
-
-Sets whether or not this task should be rendered
-
-**Example**:
-
-```lua
-local myPage = action_wheel.newPage()
-myPage:newAction():setOnToggle(function(state)
-    myBlock:setVisible(state)
-end)
-```
-
----
-
-### <code>isVisible(): boolean</code> \{#isVisible}
-
-Checks if this task is visible
-
-**Example**:
-
-```lua
-if myBlock:isVisible() then
-    -- do something
-end
-```
-
----
-
-### <code>setLight(blockLight: number?, skyLight: number?): [BlockTask](./BlockTask)</code> \{#setLight}
+**Aliases:** `light()`
 
 Sets the light override value of this task
+
 Values are given from 0 to 15, indicating the block light and sky light levels you want to use
+
 Passing nil will reset the lighting override for this task
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-local blockLight = world.getLightLevel(player:getPos())
-local skyLight = world.getSkyLightLevel(player:getPos())
-myBlock:setLight(blockLight, skyLight)
+setLight(light)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| light | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setLight(blockLight, skyLight)
+```
+
+**Parameters:**
+
+| Name       | Type                      | Description | Default |
+| ---------- | ------------------------- | ----------- | ------- |
+| blockLight | <code>[Integer](#)</code> | -           | -       |
+| skyLight   | <code>[Integer](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>getLight(): [Vector2](../Vectors/Vector2)</code> \{#getLight}
+### <code>getLight()</code> \{#getLight}
 
 Returns the light override value of this task
 
-**Example**:
+```lua
+getLight()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
-myBlock:getLight()
+--todo
 ```
 
 ---
 
-### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [BlockTask](./BlockTask)</code> \{#setOverlay}
+### <code>setMatrix()</code> \{#setMatrix}
+
+**Aliases:** `matrix()`
+
+Sets the given matrix as the position matrix for this render task
+
+The normal matrix is automatically calculated as the inverse transpose of this matrix
+
+Calling this DOES NOT CHANGE the values of position, rot, or scale in the render task
+
+If you call setPos() or a similar function, the effects of setMatrix() will be overwritten
+
+```lua
+setMatrix(matrix)
+```
+
+**Parameters:**
+
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| matrix | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getName()</code> \{#getName}
+
+Get this task's name
+
+```lua
+getName()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getNormalMatrix()</code> \{#getNormalMatrix}
+
+Recalculates the normal matrix for this render task, based on its current position, rotation, scale, and pivot, then returns this matrix
+
+```lua
+getNormalMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getNormalMatrixRaw()</code> \{#getNormalMatrixRaw}
+
+Returns the normal matrix for this render task
+
+The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
+
+```lua
+getNormalMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setOverlay()</code> \{#setOverlay}
+
+**Aliases:** `overlay()`
 
 Sets the overlay override value of this task
+
 Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
+
 Passing nil will reset the overlay override for this task
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-local hurt = player:getNbt.HurtTime > 0
-myBlock:setOverlay(hurt and 0 or nil, 1)
+setOverlay(overlay)
+```
+
+**Parameters:**
+
+| Name    | Type                                             | Description | Default |
+| ------- | ------------------------------------------------ | ----------- | ------- |
+| overlay | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOverlay(whiteOverlay, hurtOverlay)
+```
+
+**Parameters:**
+
+| Name         | Type                      | Description | Default |
+| ------------ | ------------------------- | ----------- | ------- |
+| whiteOverlay | <code>[Integer](#)</code> | -           | -       |
+| hurtOverlay  | <code>[Integer](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>getOverlay(): [Vector2](../Vectors/Vector2)</code> \{#getOverlay}
+### <code>getOverlay()</code> \{#getOverlay}
 
 Returns the overlay override value of this task
 
-**Example**:
+```lua
+getOverlay()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
-myBlock:getOverlay()
+--todo
 ```
 
 ---
 
-### <code>setPos(pos: [Vector3](../Vectors/Vector3)): [BlockTask](./BlockTask)</code> \{#setPos}
+### <code>setPos()</code> \{#setPos}
 
-Sets the position of the task, relative with its attached part
+**Aliases:** `pos()`
+
+Sets the position of the task, relative to its attached part
+
 Uses model coordinates
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myBlock:setPos(0, 16, 0)
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>getPos(): [Vector3](../Vectors/Vector3)</code> \{#getPos}
+### <code>getPos()</code> \{#getPos}
 
 Gets this task position
 
-**Example**:
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
-myBlock:getPos()
+--todo
 ```
 
 ---
 
-### <code>setRot(rot: [Vector3](../Vectors/Vector3)): [BlockTask](./BlockTask)</code> \{#setRot}
+### <code>getPositionMatrix()</code> \{#getPositionMatrix}
 
-Sets the rotation of the task, relative with its attached part
-
-**Example**:
+Recalculates the matrix for this render task, based on its current position, rotation, scale, and pivot, then returns this matrix
 
 ```lua
-myBlock:setRot(0, 45, 22.5)
+getPositionMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>getRot(): [Vector3](../Vectors/Vector3)</code> \{#getRot}
+### <code>getPositionMatrixRaw()</code> \{#getPositionMatrixRaw}
+
+Returns the position matrix for this render task
+
+The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
+
+```lua
+getPositionMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>setRot()</code> \{#setRot}
+
+**Aliases:** `rot()`
+
+Sets the rotation of the task, relative to its attached part
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setRot(rot)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rot  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setRot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>getRot()</code> \{#getRot}
 
 Gets this task rotation
 
-**Example**:
+```lua
+getRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
-myBlock:getRot()
+--todo
 ```
 
 ---
 
-### <code>setScale(scale: [Vector3](../Vectors/Vector3)): [BlockTask](./BlockTask)</code> \{#setScale}
+### <code>setScale()</code> \{#setScale}
 
-Sets the scale of the task, relative with its attached part
+**Aliases:** `scale()`
 
-**Example**:
+Sets the scale of the task, relative to its attached part
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myBlock:setScale(0.4, 0.4, 0.4) -- myBlock:setScale(0.4) also works
+setScale(scale)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| scale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>getScale(): [BlockTask](./BlockTask)</code> \{#getScale}
+### <code>getScale()</code> \{#getScale}
 
 Gets this task scale
 
-**Example**:
+```lua
+getScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
-myBlock:getScale()
+--todo
 ```
 
 ---
 
-### <code>setMatrix(matrix: [Matrix4](../Matrices/Matrix4)): [BlockTask](./BlockTask)</code> \{#setMatrix}
+### <code>setVisible()</code> \{#setVisible}
 
-Sets the given matrix as the position matrix for this block task
-The normal matrix is automatically calculated as the inverse transpose of this matrix
-Calling this DOES NOT CHANGE the values of position, rot, or scale in the block task
-If you call setPos() or a similar function, the effects of setMatrix() will be overwritten
+**Aliases:** `visible()`
 
-**Example**:
+Sets whether or not this task should be rendered
 
 ```lua
-myBlock:setMatrix(matrices.mat4())
+setVisible(visible)
+```
+
+**Parameters:**
+
+| Name    | Type                      | Description | Default |
+| ------- | ------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>getPositionMatrix(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrix}
+### <code>isVisible()</code> \{#isVisible}
 
-Recalculates the matrix for this block task, based on its current position, rotation, scale, and pivot, then returns this matrix
-
-**Example**:
+Checks if this task is visible
 
 ```lua
-myBlock:getPositionMatrix()
+isVisible()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### <code>getPositionMatrixRaw(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrixRaw}
+### <code>remove()</code> \{#remove}
 
-Returns the position matrix for this block task
-The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
-
-**Example**:
+Removes this render task from the parent model part
 
 ```lua
-myBlock:getPositionMatrixRaw()
+remove()
+```
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
-
-### <code>getNormalMatrix(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrix}
-
-Recalculates the normal matrix for this block task, based on its current position, rotation, scale, and pivot, then returns this matrix
-
-**Example**:
-
-```lua
-myBlock:getNormalMatrix()
-```
-
----
-
-### <code>getNormalMatrixRaw(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrixRaw}
-
-Returns the normal matrix for this block task
-The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
-
-**Example**:
-
-```lua
-myBlock:getNormalMatrixRaw()
-```

@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A matrix with 3 rows and 3 columns
+
 :::danger
 This page is a WIP.
 :::
-
-A matrix with 3 rows and 3 columns
 
 ---
 

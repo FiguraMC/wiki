@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+An action in the Figura Action Wheel
+
 :::danger
 This page is a WIP.
 :::
-
-An action in the Figura Action Wheel
 
 Actions are either interacted by clicking and scrolling, which also being able to be toggleable
 

@@ -1,8 +1,8 @@
+A proxy for an item stack from Minecraft
+
 :::danger
 This page is a WIP.
 :::
-
-A proxy for an item stack from Minecraft
 
 For all exmaples on this page assume:
 

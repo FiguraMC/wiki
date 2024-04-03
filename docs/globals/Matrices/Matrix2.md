@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A matrix with 2 rows and 2 columns
+
 :::danger
 This page is a WIP.
 :::
-
-A matrix with 2 rows and 2 columns
 
 ---
 

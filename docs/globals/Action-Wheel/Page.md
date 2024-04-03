@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+An Action Wheel container which is used to store up to 8 actions
+
 :::danger
 This page is a WIP.
 :::
-
-An Action Wheel container which is used to store up to 8 actions
 
 ### <code>getTitle()</code> \{#getTitle}
 

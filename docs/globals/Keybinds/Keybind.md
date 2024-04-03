@@ -1,10 +1,10 @@
+Represents a key binding for your script
+
 :::danger
 This page is a WIP.
 :::
 
-Represents a key binding for your script
-
-Instances are obtained using the KeybindAPI's create() function
+Instances are obtained using the KeybindAPI's newKeybind() function
 
 For this entire page assuming:
 

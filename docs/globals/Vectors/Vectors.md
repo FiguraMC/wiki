@@ -1,11 +1,15 @@
+---
+sidebar_position: 1
+---
+
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
+
+A global API which provides functions dedicated to creating and otherwise manipulating vectors
 
 :::danger
 This page is a WIP.
 :::
-
-A global API which provides functions dedicated to creating and otherwise manipulating vectors
 
 Accessed using the name `vectors`
 

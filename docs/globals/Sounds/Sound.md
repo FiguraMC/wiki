@@ -1,209 +1,456 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Represents a sound that can be played
+
+:::danger
+This page is a WIP.
+:::
 
 Obtained by indexing the SoundAPI
 
 Exists as an object-oriented alternative to sounds:playSound()
 
-For the purposes of the examples assume:
+## Playing
+
+### <code>play()</code> \{#play}
+
+Plays this sound, or resume a paused sound
 
 ```lua
-local mySound = sounds["entity.bat.ambient"]
+play()
+```
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `stop()` \{#stop}
+### <code>stop()</code> \{#stop}
 
-Stops the sound
-
-**Example**:
+Stops the playback of this sound
 
 ```lua
-mySound:stop()
+stop()
+```
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `play()` \{#play}
+### <code>pause()</code> \{#pause}
 
-Plays the sound
-
-**Example**:
+Pauses the current playback of this sound
 
 ```lua
-mySound:play()
+pause()
+```
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `pause()` \{#pause}
+### <code>isPlaying()</code> \{#isPlaying}
 
-Pauses the sound
-
-**Example**:
+Checks if this sound is being played
 
 ```lua
-mySound:pause()
+isPlaying()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setPos(Vector3)` \{#setPos}
+### <code>isLooping()</code> \{#isLooping}
 
-Sets the position of the sound
-
-**Example**:
+Checks if this sound is looping
 
 ```lua
-mySound:setPos(player:getPos())
+isLooping()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getPos()` \{#getPos}
+## Sound Properties
 
-Gets the position of the sound as set by <code>setPos</code>
+### <code>setPos()</code> \{#setPos}
 
-**Example**:
+**Aliases:** `pos()`
+
+Sets the position of this sound
+
+Position is given in world coordinates
+
+Default 0
+
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-mySound:getPos()
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `isPlaying()` \{#isPlaying}
+### <code>getPos()</code> \{#getPos}
 
-Gets if the sound is playing, but this is an unreliable function. A workaround is to stop the sound before you play it (even if it isn't playing) so you can reset the playing state.
-
-:::caution
-
-This function is unreliable and may not work as intended. A usable workaround is to stop the sound before you play it (even if it isn't playing) so you can reset the playing state.
-
-:::
-
-**Example**:
+Get this sound position
 
 ```lua
-mySound:isPlaying()
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setVolume(number)` \{#setVolume}
+### <code>setAttenuation()</code> \{#setAttenuation}
 
-Sets the volume of the sound
+**Aliases:** `attenuation()`
 
-**Example**:
+Sets the attenuation of this sound
+
+Default 1
 
 ```lua
-mySound:setVolume(5)
+setAttenuation(attenuation)
+```
+
+**Parameters:**
+
+| Name        | Type                     | Description | Default |
+| ----------- | ------------------------ | ----------- | ------- |
+| attenuation | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getVolume()` \{#getVolume}
+### <code>getAttenuation()</code> \{#getAttenuation}
 
-Gets the volume of the sound
-
-**Example**:
+Gets this sound attenuation
 
 ```lua
-mySound:getVolume()
+getAttenuation()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setPitch(number)` \{#setPitch}
+### <code>setLoop()</code> \{#setLoop}
 
-Sets the pitch of the sound
+**Aliases:** `loop()`
 
-**Example**:
+Toggles if this sound should loop
+
+Default false
 
 ```lua
-mySound:setPitch(5)
+setLoop(loop)
+```
+
+**Parameters:**
+
+| Name | Type                      | Description | Default |
+| ---- | ------------------------- | ----------- | ------- |
+| loop | <code>[Boolean](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getPitch()` \{#getPitch}
+### <code>setPitch()</code> \{#setPitch}
 
-Gets the pitch of the sound
+**Aliases:** `pitch()`
 
-**Example**:
+Sets the pitch of this sound
+
+Default 1
 
 ```lua
-mySound:getPitch()
+setPitch(pitch)
+```
+
+**Parameters:**
+
+| Name  | Type                     | Description | Default |
+| ----- | ------------------------ | ----------- | ------- |
+| pitch | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setLoop(bool)` \{#setLoop}
+### <code>getPitch()</code> \{#getPitch}
 
-Sets if the sound will loop or not
-
-**Example**:
+Gets this sound pitch
 
 ```lua
-mySound:setLoop(true)
+getPitch()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `isLooping()` \{#isLooping}
+### <code>setSubtitle()</code> \{#setSubtitle}
 
-Gets if the sound is set to loop or not
+**Aliases:** `subtitle()`
 
-**Example**:
+Sets the subtitle text of this sound
 
 ```lua
-mySound:isLooping()
+setSubtitle(subtitle)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| subtitle | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setAttenuation(number)` \{#setAttenuation}
+### <code>getSubtitle()</code> \{#getSubtitle}
 
-Sets the attenuation of the sound
-
-**Example**:
+Gets the subtitle text from this sound
 
 ```lua
-mySound:setAttenuation(5)
+getSubtitle()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `getAttenuation()` \{#getAttenuation}
+### <code>setVolume()</code> \{#setVolume}
 
-Gets the attenuation of the sound
+**Aliases:** `volume()`
 
-**Example**:
+Sets the volume of this sound
+
+Default 1
 
 ```lua
-mySound:getAttenuation()
+setVolume(volume)
+```
+
+**Parameters:**
+
+| Name   | Type                     | Description | Default |
+| ------ | ------------------------ | ----------- | ------- |
+| volume | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                  | Description               |
+| ------------------------------------- | ------------------------- |
+| <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
 
-### `setSubtitle(string)` \{#setSubtitle}
+### <code>getVolume()</code> \{#getVolume}
 
-Sets the subtitle (the name that Minecraft's subtitle function will call the sound)
-
-**Example**:
+Gets this sound volume
 
 ```lua
-mySound:setSubtitle("Bat ecolocates")
+getVolume()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
-
-### `getSubtitle()` \{#getSubtitle}
-
-Gets the subtitle
-
-**Example**:
-
-```lua
-mySound:getSubtitle()
-```
