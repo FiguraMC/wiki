@@ -37,7 +37,7 @@ getPlaying()
 
 | Type                                    | Description                                |
 | --------------------------------------- | ------------------------------------------ |
-| <code>[Table](/tutorials/Tables)</code> | A list of the currently playing animations |
+| <code>[Table](/tutorials/types/Tables)</code> | A list of the currently playing animations |
 
 **Example**
 
@@ -59,7 +59,7 @@ getAnimations()
 
 | Type                                    | Description                            |
 | --------------------------------------- | -------------------------------------- |
-| <code>[Table](/tutorials/Tables)</code> | A list of all animations in all models |
+| <code>[Table](/tutorials/types/Tables)</code> | A list of all animations in all models |
 
 **Example**
 

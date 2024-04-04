@@ -6,7 +6,7 @@ This page describes the process to access any ModelPart from the global ModelPar
 
 # Getting a ModelPart
 
-A property of all ModelParts is that you can get a child ModelPart of a parent ModelPart by [indexing](../tutorials/Tables#generic-indexing) the parent with the child's name.<br/>
+A property of all ModelParts is that you can get a child ModelPart of a parent ModelPart by [indexing](/tutorials/types/Tables#generic-indexing) the parent with the child's name.<br/>
 <code>models</code> itself is a ModelPart. All bbmodel files in the avatar act as child ModelParts to <code>models</code>.<br/>
 Everything in the root of a Blockbench project is a child of the bbmodel ModelPart.<br/>
 After that, parenting follows the parent structure as defined in the Blockbench OUTLINER.<br/>
