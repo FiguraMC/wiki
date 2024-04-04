@@ -2,17 +2,46 @@
 sidebar_position: 1
 ---
 
-The global instance of the Avatar Models and its subtypes
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+Represents a node in the model tree, basically a group/cube/mesh in Blockbench
+
+Each bbmodel file is itself a ModelPart, and all of your models are contained in a global ModelPart called `models`
+
+:::danger
+This page is a WIP.
+:::
+
+---
 
 ## Transformations
 
-### <code>setVisible(bool)</code> \{#setVisible}
+### <code>setVisible()</code> \{#setVisible}
+
+**Aliases:** `visible()`
 
 Sets this part to be visible or invisible
 
 The default value is nil, meaning the part copies its visibility from its parent part
 
-**Example**:
+```lua
+setVisible(visible)
+```
+
+**Parameters:**
+
+| Name    | Type                      | Description | Default |
+| ------- | ------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:setVisible(false)
@@ -26,7 +55,17 @@ Gets whether or not this model part is visible
 
 The default value is nil, meaning it copies the visibility of its parent part during rendering
 
-**Example**:
+```lua
+getVisible()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getVisible()
@@ -34,7 +73,9 @@ models:getVisible()
 
 ---
 
-### <code>setRot(Vector3)</code> \{#setRot}
+### <code>setRot()</code> \{#setRot}
+
+**Aliases:** `rot()`
 
 Sets the absolute rotation for this part
 
@@ -44,7 +85,51 @@ Angles are given in degrees
 
 For relative rotation values, check out the "offset" rot functions
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setRot(rot)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rot  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setRot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setRot(0, 90, 0)
@@ -54,11 +139,21 @@ models:setRot(0, 90, 0)
 
 ### <code>getRot()</code> \{#getRot}
 
-Gets the rotation of the model part, including its rotation in blockbench
+Gets the rotation of the model part, including its rotation in Blockbench
 
 For relative rotation values, check out the "offset" rot functions
 
-**Example**:
+```lua
+getRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:setRot()
@@ -66,13 +161,59 @@ models:setRot()
 
 ---
 
-### <code>setPos(Vector3)</code> \{#setPos}
+### <code>setPos()</code> \{#setPos}
 
-Sets the position offset for this part from its blockbench position
+**Aliases:** `pos()`
+
+Sets the position offset for this part from its Blockbench position
 
 Nil values for position are assumed to be 0
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setPos(0, 5, 0)
@@ -82,11 +223,21 @@ models:setPos(0, 5, 0)
 
 ### <code>getPos()</code> \{#getPos}
 
-Gets the position of the model part, as an offset from its position in blockbench
+Gets the position of the model part, as an offset from its position in Blockbench
 
-Only changes from {0,0,0} when you call setPos()
+Only changes from \{0,0,0} when you call setPos()
 
-**Example**:
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getPos()
@@ -94,13 +245,59 @@ models:getPos()
 
 ---
 
-### <code>setScale(Vector3)</code> \{#setScale}
+### <code>setScale()</code> \{#setScale}
+
+**Aliases:** `scale()`
 
 Sets the scale factor for this part
 
 Nil values for scale are assumed to be 1
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setScale(scale)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| scale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setScale(2, 2, 2)
@@ -110,11 +307,21 @@ models:setScale(2, 2, 2)
 
 ### <code>getScale()</code> \{#getScale}
 
-Gets the scale of the model part, as a multiple of its blockbench size
+Gets the scale of the model part, as a multiple of its Blockbench size
 
-Only changes from {1,1,1} when you call setScale()
+Only changes from \{1,1,1} when you call setScale()
 
-**Example**:
+```lua
+getScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getScale()
@@ -122,7 +329,9 @@ models:getScale()
 
 ---
 
-### <code>setPivot(Vector3)</code> \{#setPivot}
+### <code>setPivot()</code> \{#setPivot}
+
+**Aliases:** `pivot()`
 
 Sets the absolute pivot for this part
 
@@ -130,7 +339,51 @@ Nil values are assumed to be 0
 
 For relative pivot offsets, check out the "offset" pivot functions
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPivot(pivot)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| pivot | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPivot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setPivot(0, 5, 0)
@@ -140,11 +393,21 @@ models:setPivot(0, 5, 0)
 
 ### <code>getPivot()</code> \{#getPivot}
 
-Gets the pivot point of the model part, including its pivot in blockbench
+Gets the pivot point of the model part, including its pivot in Blockbench
 
 For relative values, check out the "offset" pivot functions
 
-**Example**:
+```lua
+getPivot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getPivot()
@@ -152,9 +415,11 @@ models:getPivot()
 
 ---
 
-### <code>setOffsetRot(Vector3)</code> \{#setOffsetRot}
+### <code>setOffsetRot()</code> \{#setOffsetRot}
 
-Sets the offset rotation for this part
+**Aliases:** `offsetRot()`
+
+Sets the rotation offset for this part
 
 Nil values for rotation are assumed to be 0
 
@@ -162,7 +427,51 @@ Angles are given in degrees
 
 For absolute rotation values, check out the non-offset rot functions
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setOffsetRot(offsetRot)
+```
+
+**Parameters:**
+
+| Name      | Type                                             | Description | Default |
+| --------- | ------------------------------------------------ | ----------- | ------- |
+| offsetRot | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOffsetRot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setOffsetRot(0, 90, 0)
@@ -172,11 +481,21 @@ models:setOffsetRot(0, 90, 0)
 
 ### <code>getOffsetRot()</code> \{#getOffsetRot}
 
-Gets the offset rotation of the model part, offset from its rotation in blockbench
+Gets the rotation offset of the model part, offset from its rotation in Blockbench
 
 For absolute rotation values, check out the non-offset rot functions
 
-**Example**:
+```lua
+getOffsetRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getOffsetRot()
@@ -184,15 +503,61 @@ models:getOffsetRot()
 
 ---
 
-### <code>setOffsetScale(Vector3)</code> \{#setOffsetScale}
+### <code>setOffsetScale()</code> \{#setOffsetScale}
 
-Sets the offset scale for this part
+**Aliases:** `offsetScale()`
+
+Sets the scale offset for this part
 
 Nil values are assumed to be 1
 
 For absolute scale values, check out the non-offset rot functions
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setOffsetScale(offsetScale)
+```
+
+**Parameters:**
+
+| Name        | Type                                             | Description | Default |
+| ----------- | ------------------------------------------------ | ----------- | ------- |
+| offsetScale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOffsetScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setOffsetScale(2, 2, 2)
@@ -202,11 +567,21 @@ models:setOffsetScale(2, 2, 2)
 
 ### <code>getOffsetScale()</code> \{#getOffsetScale}
 
-Gets the offset scale of the model part, offset from its default scale
+Gets the scale offset of the model part, offset from its default scale
 
 For absolute scale values, check out the non-offset rot functions
 
-**Example**:
+```lua
+getOffsetScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getOffsetScale()
@@ -214,15 +589,61 @@ models:getOffsetScale()
 
 ---
 
-### <code>setOffsetPivot(Vector3)</code> \{#setOffsetPivot}
+### <code>setOffsetPivot()</code> \{#setOffsetPivot}
 
-Sets the offset pivot point for this part
+**Aliases:** `offsetPivot()`
+
+Sets the pivot offset point for this part (multiplicative)
 
 Nil values are assumed to be 0
 
 For absolute pivot point values, check out the non-offset pivot functions
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setOffsetPivot(offsetPivot)
+```
+
+**Parameters:**
+
+| Name        | Type                                             | Description | Default |
+| ----------- | ------------------------------------------------ | ----------- | ------- |
+| offsetPivot | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOffsetPivot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| x    | <code>[Number](#)</code> | -           | -       |
+| y    | <code>[Number](#)</code> | -           | -       |
+| z    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setOffsetPivot(0, 5, 0)
@@ -232,11 +653,21 @@ models:setOffsetPivot(0, 5, 0)
 
 ### <code>getOffsetPivot()</code> \{#getOffsetPivot}
 
-Gets the offset pivot of the model part, offset from its pivot in blockbench
+Gets the pivot offset of the model part, offset from its pivot in Blockbench
 
 For absolute pivot point values, check out the non-offset pivot functions
 
-**Example**:
+```lua
+getOffsetPivot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getOffsetPivot()
@@ -244,7 +675,9 @@ models:getOffsetPivot()
 
 ---
 
-### <code>setMatrix(Matrix4)</code> \{#setMatrix}
+### <code>setMatrix()</code> \{#setMatrix}
+
+**Aliases:** `matrix()`
 
 Sets the given matrix as the position matrix for this model part
 
@@ -254,7 +687,23 @@ Calling this DOES NOT CHANGE the values of position, rot, or scale in the model 
 
 If you call setPos() or a similar function, the effects of setMatrix() will be overwritten
 
-**Example**:
+```lua
+setMatrix(matrix)
+```
+
+**Parameters:**
+
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| matrix | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:setMatrix(matrices.mat4())
@@ -266,7 +715,17 @@ models:setMatrix(matrices.mat4())
 
 Recalculates the matrix for this model part, based on its current position, rotation, scale, and pivot, then returns this matrix
 
-**Example**:
+```lua
+getPositionMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getPositionMatrix()
@@ -280,7 +739,17 @@ Returns the position matrix for this model part
 
 The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
 
-**Example**:
+```lua
+getPositionMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getPositionMatrixRaw()
@@ -292,7 +761,17 @@ models:getPositionMatrixRaw()
 
 Recalculates the normal matrix for this model part, based on its current position, rotation, scale, and pivot, then returns this matrix
 
-**Example**:
+```lua
+getNormalMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getNormalMatrix()
@@ -306,7 +785,17 @@ Returns the normal matrix for this model part
 
 The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
 
-**Example**:
+```lua
+getNormalMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getNormalMatrixRaw()
@@ -316,11 +805,21 @@ models:getNormalMatrixRaw()
 
 ## Part Information
 
-### `getName()` \{#getName}
+### <code>getName()</code> \{#getName}
 
 The name of this model part
 
-**Example**
+```lua
+getName()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getName()
@@ -328,10 +827,21 @@ models:getName()
 
 ---
 
-### `getType()` \{#getType}
+### <code>getType()</code> \{#getType}
 
 Returns whether this part is a "GROUP", a "CUBE", or a "MESH"
-**Example**
+
+```lua
+getType()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getType()
@@ -343,7 +853,17 @@ models:getType()
 
 Gets the true rotation of this model part, which is a sum of the rotation, the offset rotation and the animation position
 
-**Example**:
+```lua
+getTrueRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getTrueRot()
@@ -355,7 +875,17 @@ models:getTrueRot()
 
 Gets the true position of this model part, which is a sum of the position and the animation position
 
-**Example**:
+```lua
+getTruePos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getTruePos()
@@ -367,7 +897,17 @@ models:getTruePos()
 
 Gets the true scale of this model part, which is a sum of the scale, the offset scale and the animation scale
 
-**Example**:
+```lua
+getTrueScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getTrueScale()
@@ -379,7 +919,17 @@ models:getTrueScale()
 
 Gets the true pivot of this model part, which is a sum of the pivot and the offset pivot
 
-**Example**:
+```lua
+getTruePivot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getTruePivot()
@@ -397,9 +947,19 @@ In RENDER it will be 1 frame behind the part's visual position for that frame
 
 Also, if the model is not rendered in-world, the part's matrix will not be updated
 
-Paperdoll rendering and other UI rendering will not affect this matrix
+Paperdoll rendering and other UI renderings will not affect this matrix
 
-**Example**:
+```lua
+partToWorldMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
 
 ```lua
 models:partToWorldMatrix():apply()
@@ -409,7 +969,9 @@ models:partToWorldMatrix():apply()
 
 ## Rendering
 
-### <code>setPrimaryRenderType(string)</code> \{#setPrimaryRenderType}
+### <code>setPrimaryRenderType()</code> \{#setPrimaryRenderType}
+
+**Aliases:** `primaryRenderType()`
 
 Sets the current primary render type of this model part
 
@@ -417,7 +979,23 @@ Nil by default, meaning the part copies the primary render type of its parent du
 
 Check the docs enum command for all render types
 
-**Example**:
+```lua
+setPrimaryRenderType(renderType)
+```
+
+**Parameters:**
+
+| Name       | Type                     | Description | Default |
+| ---------- | ------------------------ | ----------- | ------- |
+| renderType | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:setPrimaryRenderType("END_PORTAL")
@@ -431,7 +1009,17 @@ Gets the current primary render type of this model part
 
 Nil by default, meaning the part copies the primary render type of its parent
 
-**Example**:
+```lua
+getPrimaryRenderType()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getPrimaryRenderType() == "TRANSLUCENT_CULL"
@@ -439,7 +1027,9 @@ models:getPrimaryRenderType() == "TRANSLUCENT_CULL"
 
 ---
 
-### <code>setSecondaryRenderType(string)</code> \{#setSecondaryRenderType}
+### <code>setSecondaryRenderType()</code> \{#setSecondaryRenderType}
+
+**Aliases:** `secondaryRenderType()`
 
 Sets the current secondary render type of this model part
 
@@ -447,7 +1037,23 @@ Nil by default, meaning the part copies the secondary render type of its parent 
 
 Check the docs enum command for all render types
 
-**Example**:
+```lua
+setSecondaryRenderType(renderType)
+```
+
+**Parameters:**
+
+| Name       | Type                     | Description | Default |
+| ---------- | ------------------------ | ----------- | ------- |
+| renderType | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:setSecondaryRenderType("GLINT")
@@ -461,7 +1067,17 @@ Gets the current secondary render type of this model part
 
 Nil by default, meaning the part copies the secondary render type of its parent
 
-**Example**:
+```lua
+getSecondaryRenderType()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getSecondaryRenderType() == "LINES"
@@ -469,7 +1085,9 @@ models:getSecondaryRenderType() == "LINES"
 
 ---
 
-### <code>setOpacity(Number)</code> \{#setOpacity}
+### <code>setOpacity()</code> \{#setOpacity}
+
+**Aliases:** `opacity()`
 
 Sets the opacity multiplier of this part
 
@@ -477,7 +1095,23 @@ Note that opacity settings will only take effect if the part has a suitable Rend
 
 Check out modelPart.setPrimaryRenderType() for how to do this
 
-**Example**:
+```lua
+setOpacity(opacity)
+```
+
+**Parameters:**
+
+| Name    | Type                     | Description | Default |
+| ------- | ------------------------ | ----------- | ------- |
+| opacity | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:setOpacity(0.5)
@@ -493,7 +1127,17 @@ Note that opacity settings will only take effect if the part has a suitable Rend
 
 Check out modelPart.setPrimaryRenderType() for how to do this
 
-**Example**:
+```lua
+getOpacity()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[Number](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getOpacity()
@@ -503,13 +1147,58 @@ models:getOpacity()
 
 ### <code>setLight()</code> \{#setLight}
 
+**Aliases:** `light()`
+
 Sets the light level to be used when rendering this part
 
 Values you give are 0 to 15, indicating the block light and sky light levels you want to use
 
 Passing nil will reset the lighting override for this part
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setLight(light)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| light | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setLight(blockLight, skyLight)
+```
+
+**Parameters:**
+
+| Name       | Type                      | Description | Default |
+| ---------- | ------------------------- | ----------- | ------- |
+| blockLight | <code>[Integer](#)</code> | -           | -       |
+| skyLight   | <code>[Integer](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 -- Example for mimicking vanilla lighting
@@ -526,7 +1215,17 @@ Gets the light level you set earlier to this part
 
 Does not interact with Minecraft's lighting system, only retrieving values you set earlier with setLight()
 
-**Example**:
+```lua
+getLight()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getOpacity()
@@ -536,13 +1235,58 @@ models:getOpacity()
 
 ### <code>setOverlay()</code> \{#setOverlay}
 
+**Aliases:** `overlay()`
+
 Sets the overlay color to be used when rendering this part
 
 Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
 
 Passing nil will reset the overlay override for this part
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setOverlay(overlay)
+```
+
+**Parameters:**
+
+| Name    | Type                                             | Description | Default |
+| ------- | ------------------------------------------------ | ----------- | ------- |
+| overlay | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOverlay(whiteOverlay, hurtOverlay)
+```
+
+**Parameters:**
+
+| Name         | Type                      | Description | Default |
+| ------------ | ------------------------- | ----------- | ------- |
+| whiteOverlay | <code>[Integer](#)</code> | -           | -       |
+| hurtOverlay  | <code>[Integer](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 -- Example for a hurt overlay
@@ -558,7 +1302,17 @@ Gets the overlay color you set earlier to this part
 
 Does not interact with Minecraft's overlay system, only retrieving values you set earlier with setOverlay()
 
-**Example**:
+```lua
+getOverlay()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getOverlay()
@@ -566,13 +1320,59 @@ models:getOverlay()
 
 ---
 
-### <code>setColor(Vector3)</code> \{#setColor}
+### <code>setColor()</code> \{#setColor}
+
+**Aliases:** `color()`
 
 Sets the color multiplier for this part for primary and secondary colors
 
 Values are RGB from 0 to 1
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setColor(color)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setColor(0 / 255, 0 / 255, 255 / 255)
@@ -586,7 +1386,17 @@ Returns the average set color from this part, as adding the primary color with t
 
 Values are RGB from 0 to 1
 
-**Example**:
+```lua
+getColor()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getColor()
@@ -594,13 +1404,59 @@ models:getColor()
 
 ---
 
-### <code>setPrimaryColor(Vector3)</code> \{#setPrimaryColor}
+### <code>setPrimaryColor()</code> \{#setPrimaryColor}
+
+**Aliases:** `primaryColor()`
 
 Sets the primary color multiplier for this part
 
 Values are RGB from 0 to 1
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPrimaryColor(color)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPrimaryColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setPrimaryColor(0 / 255, 0 / 255, 255 / 255)
@@ -614,7 +1470,17 @@ Gets the primary color multiplier of this part
 
 Values are RGB from 0 to 1
 
-**Example**:
+```lua
+getPrimaryColor()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getPrimaryColor()
@@ -622,13 +1488,59 @@ models:getPrimaryColor()
 
 ---
 
-### <code>setSecondaryColor(Vector3)</code> \{#setSecondaryColor}
+### <code>setSecondaryColor()</code> \{#setSecondaryColor}
+
+**Aliases:** `secondaryColor()`
 
 Sets the secondary color multiplier for this part
 
 Values are RGB from 0 to 1
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setSecondaryColor(color)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setSecondaryColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| r    | <code>[Number](#)</code> | -           | -       |
+| g    | <code>[Number](#)</code> | -           | -       |
+| b    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setSecondaryColor(0 / 255, 0 / 255, 255 / 255)
@@ -642,7 +1554,17 @@ Gets the secondary color multiplier of this part
 
 Values are RGB from 0 to 1
 
-**Example**:
+```lua
+getSecondaryColor()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getSecondaryColor()
@@ -650,29 +1572,89 @@ models:getSecondaryColor()
 
 ---
 
-### <code>setPreRender(fun)</code> \{#setPreRender}
+### <code>setPreRender()</code> \{#setPreRender}
 
 Sets a function to run before this part starts being rendered
 
-### <code>setMidRender(fun)</code> \{#setMidRender}
+```lua
+setPreRender(function)
+```
+
+**Parameters:**
+
+| Name     | Type                       | Description | Default |
+| -------- | -------------------------- | ----------- | ------- |
+| function | <code>[Function](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+models:getAnimRot()
+```
+
+---
+
+### <code>setMidRender()</code> \{#setMidRender}
 
 Sets a function to run during the middle of this part's rendering, after its matrices are calculated
 
-### <code>setPostRender(fun)</code> \{#setPostRender}
+```lua
+setMidRender(function)
+```
 
-Sets a function to run after this part and its children is rendered
+**Parameters:**
 
-### <code>preRender</code> \{#preRender}
+| Name     | Type                       | Description | Default |
+| -------- | -------------------------- | ----------- | ------- |
+| function | <code>[Function](#)</code> | -           | -       |
 
-Function to run before this part starts being rendered
+**Returns:**
 
-### <code>midRender</code> \{#midRender}
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-Function to run during the middle of this part's rendering, after its matrices are calculated
+**Example:**
 
-### <code>postRender</code> \{#postRender}
+```lua
+models:getAnimRot()
+```
 
-Function to run after this part and its children is rendered
+---
+
+### <code>setPostRender()</code> \{#setPostRender}
+
+Sets a function to run after this part and its children are rendered
+
+```lua
+setPostRender(function)
+```
+
+**Parameters:**
+
+| Name     | Type                       | Description | Default |
+| -------- | -------------------------- | ----------- | ------- |
+| function | <code>[Function](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+models:getAnimRot()
+```
+
+---
 
 ## Animations
 
@@ -680,7 +1662,17 @@ Function to run after this part and its children is rendered
 
 Gets the rotation offset provided by the currently active animation of this model part
 
-**Example**:
+```lua
+getAnimRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getAnimRot()
@@ -692,7 +1684,17 @@ models:getAnimRot()
 
 Gets the position offset provided by the currently active animation of this model part
 
-**Example**:
+```lua
+getAnimPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getAnimPos()
@@ -704,7 +1706,17 @@ models:getAnimPos()
 
 Gets the scale multiplier provided by the currently active animation of this model part
 
-**Example**:
+```lua
+getAnimScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getAnimScale()
@@ -716,7 +1728,17 @@ models:getAnimScale()
 
 Returns if this part vanilla rotation is being overridden by an animation
 
-**Example**:
+```lua
+overrideVanillaRot()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:overrideVanillaRot()
@@ -728,7 +1750,17 @@ models:overrideVanillaRot()
 
 Returns if this part vanilla position is being overridden by an animation
 
-**Example**:
+```lua
+overrideVanillaPos()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:overrideVanillaPos()
@@ -740,7 +1772,17 @@ models:overrideVanillaPos()
 
 Returns if this part vanilla scale is being overridden by an animation
 
-**Example**:
+```lua
+overrideVanillaScale()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:overrideVanillaScale()
@@ -750,17 +1792,82 @@ models:overrideVanillaScale()
 
 ## Texturing
 
-### <code>setPrimaryTexture(string)</code> \{#setPrimaryTexture}
+### <code>setPrimaryTexture()</code> \{#setPrimaryTexture}
+
+**Aliases:** `primaryTexture()`
 
 Sets the primary texture override of this part
 
-Check the TextureType types in the enums
+Check the TextureType types in the list docs
 
 If using "resource", the second parameter should indicate the path to the Minecraft texture you want to use
 
 If using "custom", the second parameter should indicate a texture object
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPrimaryTexture(textureType)
+```
+
+**Parameters:**
+
+| Name        | Type                     | Description | Default |
+| ----------- | ------------------------ | ----------- | ------- |
+| textureType | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPrimaryTexture(resource, path)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| resource | <code>[String](#)</code> | -           | -       |
+| path     | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+setPrimaryTexture(custom, texture)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| custom  | <code>[String](#)</code>                          | -           | -       |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 -- Vanilla Skin
@@ -779,7 +1886,17 @@ Gets the primary texture of this part
 
 Returns two values, first being the override type, second being the value, if any.
 
-**Example**:
+```lua
+getPrimaryTexture()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Varargs](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getPrimaryTexture()
@@ -787,21 +1904,33 @@ models:getPrimaryTexture()
 
 ---
 
-<!-- ### <code>getPrimaryDefinedTextures()</code> \{#getPrimaryDefinedTextures}
+### <code>getPrimaryDefinedTextures()</code> \{#getPrimaryDefinedTextures}
 
 Gets the primary textures of this part
 
 Returns a table of each texture for the specified face.
 
-**Example**:
+```lua
+getPrimaryDefinedTextures()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
+
+**Example:**
 
 ```lua
 
 ```
 
---- -->
+---
 
-### <code>setSecondaryTexture(string)</code> \{#setSecondaryTexture}
+### <code>setSecondaryTexture()</code> \{#setSecondaryTexture}
+
+**Aliases:** `secondaryTexture()`
 
 Sets the secondary texture override of this part
 
@@ -811,7 +1940,70 @@ If using "resource", the second parameter should indicate the path to the Minecr
 
 If using "custom", the second parameter should indicate a texture object
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setSecondaryTexture(textureType)
+```
+
+**Parameters:**
+
+| Name        | Type                     | Description | Default |
+| ----------- | ------------------------ | ----------- | ------- |
+| textureType | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setSecondaryTexture(resource, path)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| resource | <code>[String](#)</code> | -           | -       |
+| path     | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+setSecondaryTexture(custom, texture)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| custom  | <code>[String](#)</code>                          | -           | -       |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 -- Vanilla Skin
@@ -830,7 +2022,17 @@ Gets the secondary texture of this part
 
 Returns two values, first being the override type, second being the value, if any.
 
-**Example**:
+```lua
+getSecondaryTexture()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getSecondaryTexture()
@@ -838,31 +2040,47 @@ models:getSecondaryTexture()
 
 ---
 
-<!--### <code>getSecondaryDefinedTextures()</code> \{#getSecondaryDefinedTextures}
+### <code>getSecondaryDefinedTextures()</code> \{#getSecondaryDefinedTextures}
 
 Gets the secondary textures of this part
 
 Returns a table of each texture for the specified face.
 
-**Example**:
+```lua
+getSecondaryDefinedTextures()
+```
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[AnyType](#)</code> | -           |
+
+**Example:**
 
 ```lua
 
 ```
 
---- -->
+---
 
 ### <code>getTextures()</code> \{#getTextures}
 
 Returns a table with all textures used by this part
 
-Do not include children textures, so groups usually will return an empty table
+Does not include children textures, so groups usually will return an empty table
 
-:::caution
-This function is currently bugged, but it is mainly useless anyway
-:::
+```lua
+getTextures()
+```
 
-**Example**:
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getTextures()
@@ -876,7 +2094,17 @@ Gets the width, height of this part's texture in pixels
 
 Throws an error if this part has multiple different-sized textures on it, or if the part is a Group
 
-**Example**:
+```lua
+getTextureSize()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getTextureSize()
@@ -884,15 +2112,60 @@ models:getTextureSize()
 
 ---
 
-### <code>setUV(Vector2)</code> \{#setUV}
+### <code>setUV()</code> \{#setUV}
+
+**Aliases:** `uv()`
 
 Sets the UV of this part
 
 This function is normalized, meaning it works with values 0 to 1
 
-If you say setUV(0.5, 0.25), for example, it will scroll by half of your texture width to the right, and one fourth of the texture width downwards
+If you say setUV(0.5, 0.25), for example, it will scroll by half of your texture width to the right, and one-fourth of the texture width downwards
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setUV(uv)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| uv   | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setUV(u, v)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| u    | <code>[Number](#)</code> | -           | -       |
+| v    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setUV(0.5, 0.5)
@@ -906,7 +2179,17 @@ Gets the UV of this part
 
 This function is normalized, meaning it will return values between 0 to 1
 
-**Example**:
+```lua
+getUV()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getUV()
@@ -914,7 +2197,9 @@ models:getUV()
 
 ---
 
-### <code>setUVPixels(Vector2)</code> \{#setUVPixels}
+### <code>setUVPixels()</code> \{#setUVPixels}
+
+**Aliases:** `uvPixels()`
 
 Sets the UV of this part in pixels
 
@@ -924,7 +2209,50 @@ Errors if the part has multiple different-sized textures
 
 If this part is a Group, it will attempt to setUVPixels on its children
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+setUVPixels(uv)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| uv   | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+setUVPixels(u, v)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| u    | <code>[Number](#)</code> | -           | -       |
+| v    | <code>[Number](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:setUVPixels(16.16)
@@ -940,7 +2268,17 @@ Automatically multiplies the result by getTextureSize()
 
 Errors if the part has multiple different-sized textures of if the part is a Group
 
-**Example**:
+```lua
+getUVPixels()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getUVPixels()
@@ -948,15 +2286,33 @@ models:getUVPixels()
 
 ---
 
-### <code>setUVMatrix(Matrix3)</code> \{#setUVMatrix}
+### <code>setUVMatrix()</code> \{#setUVMatrix}
+
+**Aliases:** `uvMatrix()`
 
 Sets the UV matrix of this part
 
 This matrix is applied to all UV points during the transform, with the UVs treated as homogeneous vectors
 
-setUV() and setUVPixels() are actually just simpler ways of setting this matrix
+setUV() and setUVPixels() are just simpler ways of setting this matrix
 
-**Example**:
+```lua
+setUVMatrix(matrix)
+```
+
+**Parameters:**
+
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| matrix | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:setUVMatrix(matrices.mat3())
@@ -968,7 +2324,17 @@ models:setUVMatrix(matrices.mat3())
 
 Gets the UV matrix of this part
 
-**Example**:
+```lua
+getUVMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getUVMatrix()
@@ -978,13 +2344,27 @@ models:getUVMatrix()
 
 ## Render Tasks
 
-### <code>newText(string)</code> \{#newText}
+### <code>newText()</code> \{#newText}
 
-Adds a new Text Render Task on this part with the given name
+Adds a new Text Render Task on this part
 
-The name is not visible in-game, set the text using `setText`
+```lua
+newText(taskName)
+```
 
-**Example**:
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| taskName | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | -           |
+
+**Example:**
 
 ```lua
 models:newText("Example")
@@ -992,11 +2372,55 @@ models:newText("Example")
 
 ---
 
-### <code>newItem(string)</code> \{#newItem}
+### <code>newEntity()</code> \{#newEntity}
 
-Adds a new Item Render Task on this part with the given name
+Adds a new Entity Render Task on this part
 
-**Example**:
+```lua
+newEntity(taskName)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| taskName | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[EntityTask](/globals/Models/EntityTask)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>newItem()</code> \{#newItem}
+
+Adds a new Item Render Task on this part
+
+```lua
+newItem(taskName)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| taskName | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[ItemTask](/globals/Models/ItemTask)</code> | -           |
+
+**Example:**
 
 ```lua
 models:newItem("Example")
@@ -1004,11 +2428,27 @@ models:newItem("Example")
 
 ---
 
-### <code>newBlock(string)</code> \{#newBlock}
+### <code>newBlock()</code> \{#newBlock}
 
-Adds a new Block Render Task on this part with the given name
+Adds a new Block Render Task on this part
 
-**Example**:
+```lua
+newBlock(taskName)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| taskName | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                | Description |
+| --------------------------------------------------- | ----------- |
+| <code>[BlockTask](/globals/Models/BlockTask)</code> | -           |
+
+**Example:**
 
 ```lua
 models:newBlock("Example")
@@ -1016,11 +2456,27 @@ models:newBlock("Example")
 
 ---
 
-### <code>newSprite(string)</code> \{#newSprite}
+### <code>newSprite()</code> \{#newSprite}
 
-Adds a new Sprite Render Task on this part with the given name
+Adds a new Sprite Render Task on this part
 
-**Example**:
+```lua
+newSprite(taskName)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| taskName | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | -           |
+
+**Example:**
 
 ```lua
 models:newSprite("Example")
@@ -1028,19 +2484,77 @@ models:newSprite("Example")
 
 ---
 
-### <code>newTask(renderTask)</code> \{#newTask}
+### <code>addTask()</code> \{#addTask}
 
-Adds the given Render Task on this part, effectively duplicating it
+Adds the given Render Task on this part
+
+```lua
+addTask(renderTask)
+```
+
+**Parameters:**
+
+| Name       | Type                                                  | Description | Default |
+| ---------- | ----------------------------------------------------- | ----------- | ------- |
+| renderTask | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+--todo
+```
 
 ---
 
-### <code>getTask(string?)</code> \{#getTask}
+### <code>getTask()</code> \{#getTask}
 
 Gets the Render Task with the given name from this part
 
 Returns a table with all tasks if a name is not given
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+getTask()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getTask(taskName)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| taskName | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:getTask()
@@ -1048,13 +2562,68 @@ models:getTask()
 
 ---
 
-### <code>removeTask(string?)</code> \{#removeTask}
+### <code>removeTask()</code> \{#removeTask}
 
 Removes the Task with the given name from this part
 
 Removes ALL tasks if a name is not given
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+removeTask()
+```
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+removeTask(taskName)
+```
+
+**Parameters:**
+
+| Name     | Type                     | Description | Default |
+| -------- | ------------------------ | ----------- | ------- |
+| taskName | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-3" label="Overload 3">
+
+```lua
+removeTask(renderTask)
+```
+
+**Parameters:**
+
+| Name       | Type                                                  | Description | Default |
+| ---------- | ----------------------------------------------------- | ----------- | ------- |
+| renderTask | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 models:removeTask()
@@ -1066,11 +2635,29 @@ models:removeTask()
 
 ### <code>setParentType()</code> \{#setParentType}
 
+**Aliases:** `parentType()`
+
 Sets the parent type of the part
 
-See the ParentType parts in the enums for legal types
+See the ParentType parts in the list docs for legal types
 
-**Example**:
+```lua
+setParentType(parentType)
+```
+
+**Parameters:**
+
+| Name       | Type                     | Description | Default |
+| ---------- | ------------------------ | ----------- | ------- |
+| parentType | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:setParentType("Head")
@@ -1082,7 +2669,17 @@ models:setParentType("Head")
 
 Returns the current parent type of the part
 
-**Example**:
+```lua
+getParentType()
+```
+
+**Returns:**
+
+| Type                     | Description |
+| ------------------------ | ----------- |
+| <code>[String](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getParentType()
@@ -1090,13 +2687,29 @@ models:getParentType()
 
 ---
 
-### <code>getVertices(string)</code> \{#getVertices}
+### <code>getVertices()</code> \{#getVertices}
 
 Return a table with all vertices from the given texture id
 
-Returns nil if no vertices was found
+Returns nil if no vertices were found
 
-**Example**:
+```lua
+getVertices(textureID)
+```
+
+**Parameters:**
+
+| Name      | Type                     | Description | Default |
+| --------- | ------------------------ | ----------- | ------- |
+| textureID | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getVertices("myTexture")
@@ -1106,9 +2719,19 @@ models:getVertices("myTexture")
 
 ### <code>getAllVertices()</code> \{#getAllVertices}
 
-Return a table of all texture ids and its vertices
+Return a table of all texture ids and their vertices
 
-**Example**:
+```lua
+getAllVertices()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getAllVertices()
@@ -1116,16 +2739,48 @@ models:getAllVertices()
 
 ---
 
-### `getParent()` \{#getParent}
+### <code>getParent()</code> \{#getParent}
 
 Gets the parent part of this part
 
 If this part has no parent, returns nil
 
-**Example**
+```lua
+getParent()
+```
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
-models:getParent()
+models:getParentType()
+```
+
+---
+
+### <code>remove()</code> \{#remove}
+
+Removes this part from the parent model part
+
+```lua
+remove()
+```
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+--todo
 ```
 
 ---
@@ -1134,7 +2789,17 @@ models:getParent()
 
 Gets the children of this part, stored in a table
 
-**Example**:
+```lua
+getChildren()
+```
+
+**Returns:**
+
+| Type                    | Description |
+| ----------------------- | ----------- |
+| <code>[Table](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:getChildren()
@@ -1142,11 +2807,27 @@ models:getChildren()
 
 ---
 
-### <code>isChildOf(ModelPart)</code> \{#isChildOf}
+### <code>isChildOf()</code> \{#isChildOf}
 
 Checks if this part is a child of the given part
 
-**Example**:
+```lua
+isChildOf(part)
+```
+
+**Parameters:**
+
+| Name | Type                                      | Description | Default |
+| ---- | ----------------------------------------- | ----------- | ------- |
+| part | <code>[ModelPart](/globals/Models)</code> | -           | -       |
+
+**Returns:**
+
+| Type                      | Description |
+| ------------------------- | ----------- |
+| <code>[Boolean](#)</code> | -           |
+
+**Example:**
 
 ```lua
 models:isChildOf(models)
@@ -1154,11 +2835,27 @@ models:isChildOf(models)
 
 ---
 
-### <code>moveTo(ModelPart)</code> \{#moveTo}
+### <code>moveTo()</code> \{#moveTo}
 
 Moves this part to be a child of the given part
 
-**Example**:
+```lua
+moveTo(part)
+```
+
+**Parameters:**
+
+| Name | Type                                      | Description | Default |
+| ---- | ----------------------------------------- | ----------- | ------- |
+| part | <code>[ModelPart](/globals/Models)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 -- error-next-line
@@ -1168,11 +2865,27 @@ models:moveTo(models)
 
 ---
 
-### <code>addChild(ModelPart)</code> \{#addChild}
+### <code>addChild()</code> \{#addChild}
 
 Adds the given part into this part's children list
 
-**Example**:
+```lua
+addChild(part)
+```
+
+**Parameters:**
+
+| Name | Type                                      | Description | Default |
+| ---- | ----------------------------------------- | ----------- | ------- |
+| part | <code>[ModelPart](/globals/Models)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 -- error-next-line
@@ -1182,11 +2895,27 @@ models:addChild(models)
 
 ---
 
-### <code>removeChild(ModelPart)</code> \{#removeChild}
+### <code>removeChild()</code> \{#removeChild}
 
 Removes the given part from this part's children list
 
-**Example**:
+```lua
+removeChild(part)
+```
+
+**Parameters:**
+
+| Name | Type                                      | Description | Default |
+| ---- | ----------------------------------------- | ----------- | ------- |
+| part | <code>[ModelPart](/globals/Models)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 -- error-next-line
@@ -1196,13 +2925,29 @@ models:removeChild(models)
 
 ---
 
-### <code>copy(string)</code> \{#copy}
+### <code>copy()</code> \{#copy}
 
 Returns a copy of this part, with all customizations and vertices copied
 
 Children parts are passed as reference, in a new list
 
-**Example**:
+```lua
+copy(name)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| name | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 models:copy("Example")
@@ -1210,13 +2955,56 @@ models:copy("Example")
 
 ---
 
-### <code>newPart(string,string?)</code> \{#newPart}
+### <code>newPart()</code> \{#newPart}
 
 Creates a new, empty, group model part as a child of this part, at the same pivot point
 
-Takes two arguments, the new part's name and optionally its parent type
+Takes two arguments, the new part's name, and optionally its parent type
 
-**Example**:
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
+```lua
+newPart(name)
+```
+
+**Parameters:**
+
+| Name | Type                     | Description | Default |
+| ---- | ------------------------ | ----------- | ------- |
+| name | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+newPart(name, parentType)
+```
+
+**Parameters:**
+
+| Name       | Type                     | Description | Default |
+| ---------- | ------------------------ | ----------- | ------- |
+| name       | <code>[String](#)</code> | -           | -       |
+| parentType | <code>[String](#)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+    </TabItem>
+
+</Tabs>
+
+**Example:**
 
 ```lua
 -- Example with same parent type
@@ -1224,3 +3012,43 @@ models:newPart("Example")
 -- Example with different parent type
 models:newPart("Example", "Head")
 ```
+
+---
+
+## Fields
+
+### <code>preRender</code> \{#preRender}
+
+Function to run before this part starts being rendered
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>midRender</code> \{#midRender}
+
+Function to run during the middle of this part's rendering, after its matrices are calculated
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
+
+### <code>postRender</code> \{#postRender}
+
+Function to run after this part and its children are rendered
+
+**Example:**
+
+```lua
+--todo
+```
+
+---
