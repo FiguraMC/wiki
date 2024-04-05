@@ -666,7 +666,7 @@ readUShortLE()
 
 ### <code>write()</code> \{#write}
 
-figura.docs.buffer.write_byte
+Writes one byte to this buffer
 
 ```lua
 write(val)

@@ -237,7 +237,9 @@ getSpawnPoint()
 
 ### <code>isChunkLoaded()</code> \{#isChunkLoaded}
 
-figura.docs.world.is_chunk_loaded
+Checks if the position has a chunk loaded
+
+If you need to access the block, it's usually more efficient to use `getBlockState()`
 
 <Tabs>
     <TabItem value="overload-1" label="Overload 1">

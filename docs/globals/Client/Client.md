@@ -1078,7 +1078,9 @@ getAtlas(path)
 
 ### <code>getEnum()</code> \{#getEnum}
 
-figura.docs.client.getEnum
+Return an array containing the entries in the given enum
+
+Enums can be found in /figura docs enums
 
 ```lua
 getEnum(enumName)

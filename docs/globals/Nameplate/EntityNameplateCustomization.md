@@ -93,7 +93,7 @@ setOutline(outline)
 
 ### <code>hasOutline()</code> \{#hasOutline}
 
-figura.docs.nameplate_entity.has_outline
+Gets whether or not the nameplate should have an outline
 
 ```lua
 hasOutline()

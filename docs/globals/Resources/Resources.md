@@ -1,4 +1,4 @@
-figura.docs.resources
+The global instance of ResourcesAPI
 
 ### <code>get()</code> \{#get}
 

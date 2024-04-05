@@ -5,7 +5,7 @@ A builder for HTTP request
 
 ### <code>getBody()</code> \{#getBody}
 
-figura.docs.http_request_builder.get_data
+Returns body of this request
 
 <Tabs>
     <TabItem value="overload-1" label="Overload 1">
