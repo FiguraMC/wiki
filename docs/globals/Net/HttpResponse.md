@@ -1,5 +1,9 @@
 Object that contains HTTP response
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>getData()</code> \{#getData}
 
 Returns input stream with response data

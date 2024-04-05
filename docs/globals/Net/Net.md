@@ -4,6 +4,10 @@ sidebar_position: 1
 
 A global API that contains networking related features
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>isLinkAllowed()</code> \{#isLinkAllowed}
 
 Checks if specified link allowed for usage in networking api

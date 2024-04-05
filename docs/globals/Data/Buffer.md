@@ -3,6 +3,10 @@ import TabItem from '@theme/TabItem'
 
 A byte buffer object
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>getLength()</code> \{#getLength}
 
 Returns length of this buffer

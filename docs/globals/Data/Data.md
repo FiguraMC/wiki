@@ -7,6 +7,10 @@ import TabItem from '@theme/TabItem'
 
 A global API that provides functions to work with data related features
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>createBuffer()</code> \{#createBuffer}
 
 Creates an empty buffer

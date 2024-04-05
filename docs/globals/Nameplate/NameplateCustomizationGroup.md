@@ -23,7 +23,7 @@ setText(text)
 **Example:**
 
 ```lua
---todo
+nameplate.All:setText('[{"color":"red","text":"Me"},{"text":"!","color":"#09ff71"}]')
 ```
 
 ---

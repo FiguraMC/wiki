@@ -3,6 +3,10 @@ import TabItem from '@theme/TabItem'
 
 A builder for HTTP request
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>getBody()</code> \{#getBody}
 
 Returns body of this request

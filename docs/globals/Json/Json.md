@@ -4,6 +4,10 @@ sidebar_position: 1
 
 A global API that contains features to work with JSON
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>isSerializable()</code> \{#isSerializable}
 
 Checks if specified value can be serialized

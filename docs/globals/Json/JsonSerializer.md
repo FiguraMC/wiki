@@ -1,5 +1,9 @@
 An object that is made for serializing and deserializing JSON strings with specific settings
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>deserialize()</code> \{#deserialize}
 
 Serializes provided JSON string to a lua value

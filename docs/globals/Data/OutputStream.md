@@ -1,5 +1,9 @@
 An output data stream
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>close()</code> \{#close}
 
 Closes this output stream.

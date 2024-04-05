@@ -1,5 +1,9 @@
 JSON object, basically a table but more restricted to match JSON objects
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>get()</code> \{#get}
 
 Returns value bound to specified key. Consider using containsKey before, as object can contain nil values unlike regular table

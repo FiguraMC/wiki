@@ -1,6 +1,10 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+:::danger
+This page is a WIP.
+:::
+
 # Misc Globals
 
 Documentation for the various things Figura adds to the global lua state

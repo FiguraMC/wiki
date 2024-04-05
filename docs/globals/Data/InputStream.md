@@ -1,5 +1,9 @@
 An input data stream
 
+:::danger
+This page is a WIP.
+:::
+
 ### <code>available()</code> \{#available}
 
 Returns amount of bytes available
