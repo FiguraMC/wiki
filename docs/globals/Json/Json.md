@@ -14,15 +14,15 @@ isSerializable(val)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| val  | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| val  | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -42,9 +42,9 @@ newArray()
 
 **Returns:**
 
-| Type                        | Description |
-| --------------------------- | ----------- |
-| <code>[JsonArray](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[JsonArray](/globals/Json/JsonArray)</code> | -           |
 
 **Example:**
 
@@ -64,9 +64,9 @@ newBuilder()
 
 **Returns:**
 
-| Type                          | Description |
-| ----------------------------- | ----------- |
-| <code>[JsonBuilder](#)</code> | -           |
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[JsonBuilder](/globals/Json/JsonBuilder)</code> | -           |
 
 **Example:**
 
@@ -86,9 +86,9 @@ newObject()
 
 **Returns:**
 
-| Type                         | Description |
-| ---------------------------- | ----------- |
-| <code>[JsonObject](#)</code> | -           |
+| Type                                                | Description |
+| --------------------------------------------------- | ----------- |
+| <code>[JsonObject](/globals/Json/JsonObject)</code> | -           |
 
 **Example:**
 

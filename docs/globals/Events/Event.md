@@ -26,9 +26,9 @@ register(func)
 
 **Parameters:**
 
-| Name | Type                       | Description | Default |
-| ---- | -------------------------- | ----------- | ------- |
-| func | <code>[Function](#)</code> | -           | -       |
+| Name | Type                                                | Description | Default |
+| ---- | --------------------------------------------------- | ----------- | ------- |
+| func | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
@@ -45,10 +45,10 @@ register(func, name)
 
 **Parameters:**
 
-| Name | Type                       | Description | Default |
-| ---- | -------------------------- | ----------- | ------- |
-| func | <code>[Function](#)</code> | -           | -       |
-| name | <code>[String](#)</code>   | -           | -       |
+| Name | Type                                                | Description | Default |
+| ---- | --------------------------------------------------- | ----------- | ------- |
+| func | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+| name | <code>[String](/tutorials/types/Strings)</code>     | -           | -       |
 
 **Returns:**
 
@@ -78,9 +78,9 @@ clear()
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 
@@ -105,15 +105,15 @@ remove(name)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| name | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -124,15 +124,15 @@ remove(function)
 
 **Parameters:**
 
-| Name     | Type                       | Description | Default |
-| -------- | -------------------------- | ----------- | ------- |
-| function | <code>[Function](#)</code> | -           | -       |
+| Name     | Type                                                | Description | Default |
+| -------- | --------------------------------------------------- | ----------- | ------- |
+| function | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -156,15 +156,15 @@ getRegisteredCount(name)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| name | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 

@@ -34,10 +34,10 @@ vec(x, y)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -54,11 +54,11 @@ vec(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -75,12 +75,12 @@ vec(x, y, z, w)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
-| w    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| w    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -112,10 +112,10 @@ vec2(x, y)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -143,11 +143,11 @@ vec3(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -175,12 +175,12 @@ vec4(x, y, z, w)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
-| w    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| w    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -210,9 +210,9 @@ hexToRGB(hex)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| hex  | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| hex  | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -260,11 +260,11 @@ hsvToRGB(h, s, v)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| h    | <code>[Number](#)</code> | -           | -       |
-| s    | <code>[Number](#)</code> | -           | -       |
-| v    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| h    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| s    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| v    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -294,9 +294,9 @@ intToRGB(color)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| color | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -344,11 +344,11 @@ rgbToHSV(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -389,9 +389,9 @@ rgbToHex(rgb)
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -402,17 +402,17 @@ rgbToHex(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
 
@@ -445,9 +445,9 @@ rgbToInt(rgb)
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -458,17 +458,17 @@ rgbToInt(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -514,10 +514,10 @@ angleToDir(pitch, yaw)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| pitch | <code>[Number](#)</code> | -           | -       |
-| yaw   | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| pitch | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| yaw   | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -552,7 +552,7 @@ rotateAroundAxis(angle, vec, axis)
 
 | Name  | Type                                             | Description | Default |
 | ----- | ------------------------------------------------ | ----------- | ------- |
-| angle | <code>[Number](#)</code>                         | -           | -       |
+| angle | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 | vec   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 | axis  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
@@ -573,10 +573,10 @@ rotateAroundAxis(angle, x, y, z, axis)
 
 | Name  | Type                                             | Description | Default |
 | ----- | ------------------------------------------------ | ----------- | ------- |
-| angle | <code>[Number](#)</code>                         | -           | -       |
-| x     | <code>[Number](#)</code>                         | -           | -       |
-| y     | <code>[Number](#)</code>                         | -           | -       |
-| z     | <code>[Number](#)</code>                         | -           | -       |
+| angle | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| x     | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| y     | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| z     | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 | axis  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
@@ -596,11 +596,11 @@ rotateAroundAxis(angle, vec, axisX, axisY, axisZ)
 
 | Name  | Type                                             | Description | Default |
 | ----- | ------------------------------------------------ | ----------- | ------- |
-| angle | <code>[Number](#)</code>                         | -           | -       |
+| angle | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 | vec   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| axisX | <code>[Number](#)</code>                         | -           | -       |
-| axisY | <code>[Number](#)</code>                         | -           | -       |
-| axisZ | <code>[Number](#)</code>                         | -           | -       |
+| axisX | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| axisY | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| axisZ | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
@@ -617,15 +617,15 @@ rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| angle | <code>[Number](#)</code> | -           | -       |
-| x     | <code>[Number](#)</code> | -           | -       |
-| y     | <code>[Number](#)</code> | -           | -       |
-| z     | <code>[Number](#)</code> | -           | -       |
-| axisX | <code>[Number](#)</code> | -           | -       |
-| axisY | <code>[Number](#)</code> | -           | -       |
-| axisZ | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| angle | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| x     | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y     | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z     | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| axisX | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| axisY | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| axisZ | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -677,11 +677,11 @@ toCameraSpace(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -733,11 +733,11 @@ worldToScreenSpace(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 

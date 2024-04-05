@@ -19,9 +19,9 @@ getName()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -41,9 +41,9 @@ getAuthors()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -63,9 +63,9 @@ getVersion()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -85,9 +85,9 @@ hasTexture()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -133,11 +133,11 @@ setColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description       | Default      |
-| ---- | ------------------------ | ----------------- | ------------ |
-| r    | <code>[Number](#)</code> | Red color value   | 1            |
-| g    | <code>[Number](#)</code> | Green color value | Value of `r` |
-| b    | <code>[Number](#)</code> | Blue color value  | Value of `r` |
+| Name | Type                                            | Description       | Default      |
+| ---- | ----------------------------------------------- | ----------------- | ------------ |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | Red color value   | 1            |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | Green color value | Value of `r` |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | Blue color value  | Value of `r` |
 
 **Returns:**
 
@@ -157,7 +157,7 @@ setColor(color, badgeName)
 | Name      | Type                                             | Description                        | Default      |
 | --------- | ------------------------------------------------ | ---------------------------------- | ------------ |
 | color     | <code>[Vector3](/globals/Vectors/Vector3)</code> | The r,g,b values as a single value | `vec(1,1,1)` |
-| badgeName | <code>[String](#)</code>                         | Badge name                         | `nil`        |
+| badgeName | <code>[String](/tutorials/types/Strings)</code>  | Badge name                         | `nil`        |
 
 **Returns:**
 
@@ -174,12 +174,12 @@ setColor(r, g, b, badgeName)
 
 **Parameters:**
 
-| Name      | Type                     | Description       | Default      |
-| --------- | ------------------------ | ----------------- | ------------ |
-| r         | <code>[Number](#)</code> | Red color value   | 1            |
-| g         | <code>[Number](#)</code> | Green color value | Value of `r` |
-| b         | <code>[Number](#)</code> | Blue color value  | Value of `r` |
-| badgeName | <code>[String](#)</code> | Bagde name        | `nil`        |
+| Name      | Type                                            | Description       | Default      |
+| --------- | ----------------------------------------------- | ----------------- | ------------ |
+| r         | <code>[Number](/tutorials/types/Numbers)</code> | Red color value   | 1            |
+| g         | <code>[Number](/tutorials/types/Numbers)</code> | Green color value | Value of `r` |
+| b         | <code>[Number](/tutorials/types/Numbers)</code> | Blue color value  | Value of `r` |
+| badgeName | <code>[String](/tutorials/types/Strings)</code> | Bagde name        | `nil`        |
 
 **Returns:**
 
@@ -209,9 +209,9 @@ getColor()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -237,10 +237,10 @@ store(key, value)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| key   | <code>[String](#)</code>  | -           | -       |
-| value | <code>[AnyType](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| key   | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| value | <code>AnyType</code>                            | -           | -       |
 
 **Returns:**
 
@@ -266,9 +266,9 @@ getSize()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -288,9 +288,9 @@ getEntityName()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -310,9 +310,9 @@ getUUID()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -332,9 +332,9 @@ getNBT()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -356,9 +356,9 @@ getBadges()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -378,9 +378,9 @@ hasScriptError()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -402,9 +402,9 @@ getPermissionLevel()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -424,9 +424,9 @@ getComplexity()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -446,9 +446,9 @@ getVolume()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -470,9 +470,9 @@ getCurrentInstructions()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -492,9 +492,9 @@ getInitCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -514,9 +514,9 @@ getEntityInitCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -536,9 +536,9 @@ getMaxInitCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -558,9 +558,9 @@ getTickCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -580,9 +580,9 @@ getMaxTickCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -602,9 +602,9 @@ getRenderCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -624,9 +624,9 @@ getMaxRenderCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -646,9 +646,9 @@ getWorldTickCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -668,9 +668,9 @@ getMaxWorldTickCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -690,9 +690,9 @@ getWorldRenderCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -712,9 +712,9 @@ getMaxWorldRenderCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -734,9 +734,9 @@ getMaxComplexity()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -756,9 +756,9 @@ getRemainingParticles()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -778,9 +778,9 @@ getMaxParticles()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -800,9 +800,9 @@ getRemainingSounds()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -822,9 +822,9 @@ getMaxSounds()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -844,9 +844,9 @@ getAnimationComplexity()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -866,9 +866,9 @@ getMaxAnimationComplexity()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -888,9 +888,9 @@ getAnimationCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -910,9 +910,9 @@ getMaxAnimationCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -932,9 +932,9 @@ getBuffersCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -954,9 +954,9 @@ getMaxBuffersCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -976,9 +976,9 @@ getMaxTextureSize()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -998,9 +998,9 @@ getMaxBufferSize()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -1020,9 +1020,9 @@ canEditVanillaModel()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1042,9 +1042,9 @@ canEditNameplate()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1064,9 +1064,9 @@ canRenderOffscreen()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1086,9 +1086,9 @@ canUseCustomSounds()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1108,9 +1108,9 @@ canHaveCustomSkull()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

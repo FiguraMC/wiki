@@ -199,11 +199,11 @@ setCameraPivot(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -281,11 +281,11 @@ setCameraPos(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -367,11 +367,11 @@ setCameraRot(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -455,11 +455,11 @@ setOffsetCameraPivot(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -519,11 +519,11 @@ setOffsetCameraRot(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -555,9 +555,9 @@ isFirstPerson()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -577,9 +577,9 @@ isCameraBackwards()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -648,12 +648,12 @@ setBlockOutlineColor(r, g, b, a)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
-| a    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -731,10 +731,10 @@ setCrosshairOffset(x, y)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| x    | <code>[Integer](#)</code> | -           | -       |
-| y    | <code>[Integer](#)</code> | -           | -       |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| x    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -810,11 +810,11 @@ setEyeOffset(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -888,9 +888,9 @@ setFOV(fov)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| fov  | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| fov  | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -920,9 +920,9 @@ getFOV()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -942,9 +942,9 @@ setForcePaperdoll(forcePaperdoll)
 
 **Parameters:**
 
-| Name           | Type                      | Description | Default |
-| -------------- | ------------------------- | ----------- | ------- |
-| forcePaperdoll | <code>[Boolean](#)</code> | -           | -       |
+| Name           | Type                                              | Description | Default |
+| -------------- | ------------------------------------------------- | ----------- | ------- |
+| forcePaperdoll | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -994,11 +994,11 @@ setOutlineColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1054,9 +1054,9 @@ setPostEffect(effect)
 
 **Parameters:**
 
-| Name   | Type                     | Description | Default |
-| ------ | ------------------------ | ----------- | ------- |
-| effect | <code>[String](#)</code> | -           | -       |
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| effect | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -1090,9 +1090,9 @@ setPrimaryFireTexture(id)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| id   | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -1118,9 +1118,9 @@ getPrimaryFireTexture()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -1140,9 +1140,9 @@ setRenderCrosshair(renderCrosshair)
 
 **Parameters:**
 
-| Name            | Type                      | Description | Default |
-| --------------- | ------------------------- | ----------- | ------- |
-| renderCrosshair | <code>[Boolean](#)</code> | -           | -       |
+| Name            | Type                                              | Description | Default |
+| --------------- | ------------------------------------------------- | ----------- | ------- |
+| renderCrosshair | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1168,9 +1168,9 @@ setRenderFire(renderFire)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| renderFire | <code>[Boolean](#)</code> | -           | -       |
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| renderFire | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1196,9 +1196,9 @@ setRenderHUD(renderHUD)
 
 **Parameters:**
 
-| Name      | Type                      | Description | Default |
-| --------- | ------------------------- | ----------- | ------- |
-| renderHUD | <code>[Boolean](#)</code> | -           | -       |
+| Name      | Type                                              | Description | Default |
+| --------- | ------------------------------------------------- | ----------- | ------- |
+| renderHUD | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1226,9 +1226,9 @@ setRenderLeftArm(bool)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| bool | <code>[Boolean](#)</code> | -           | -       |
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1254,9 +1254,9 @@ getRenderLeftArm()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1278,9 +1278,9 @@ setRenderRightArm(bool)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| bool | <code>[Boolean](#)</code> | -           | -       |
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1306,9 +1306,9 @@ getRenderRightArm()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1328,9 +1328,9 @@ setRenderVehicle(renderVehicle)
 
 **Parameters:**
 
-| Name          | Type                      | Description | Default |
-| ------------- | ------------------------- | ----------- | ------- |
-| renderVehicle | <code>[Boolean](#)</code> | -           | -       |
+| Name          | Type                                              | Description | Default |
+| ------------- | ------------------------------------------------- | ----------- | ------- |
+| renderVehicle | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1360,9 +1360,9 @@ setRootRotationAllowed(bool)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| bool | <code>[Boolean](#)</code> | -           | -       |
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1388,9 +1388,9 @@ getRootRotationAllowed()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1418,9 +1418,9 @@ setSecondaryFireTexture(id)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| id   | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -1446,9 +1446,9 @@ getSecondaryFireTexture()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -1490,9 +1490,9 @@ setShadowRadius(radius)
 
 **Parameters:**
 
-| Name   | Type                     | Description | Default |
-| ------ | ------------------------ | ----------- | ------- |
-| radius | <code>[Number](#)</code> | -           | -       |
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| radius | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1522,9 +1522,9 @@ getShadowRadius()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -1546,9 +1546,9 @@ setUpsideDown(upsideDown)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| upsideDown | <code>[Boolean](#)</code> | -           | -       |
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| upsideDown | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1574,9 +1574,9 @@ isUpsideDown()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1596,9 +1596,9 @@ shouldForcePaperdoll()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1618,9 +1618,9 @@ shouldRenderCrosshair()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1640,9 +1640,9 @@ shouldRenderFire()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1662,9 +1662,9 @@ shouldRenderHUD()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1684,9 +1684,9 @@ shouldRenderVehicle()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

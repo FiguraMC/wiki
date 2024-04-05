@@ -73,11 +73,11 @@ setPos(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description                                       | Default |
-| ---- | ------------------------ | ------------------------------------------------- | ------- |
-| x    | <code>[Number](#)</code> | Sets the x position of the particle in the world  | `0`     |
-| y    | <code>[Number](#)</code> | TSets the y position of the particle in the world | `0`     |
-| z    | <code>[Number](#)</code> | Sets the x position of the particle in the world  | `0`     |
+| Name | Type                                            | Description                                       | Default |
+| ---- | ----------------------------------------------- | ------------------------------------------------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | Sets the x position of the particle in the world  | `0`     |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | TSets the y position of the particle in the world | `0`     |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | Sets the x position of the particle in the world  | `0`     |
 
 **Returns:**
 
@@ -179,12 +179,12 @@ setColor(r, g, b, a)
 
 **Parameters:**
 
-| Name | Type                     | Description                        | Default |
-| ---- | ------------------------ | ---------------------------------- | ------- |
-| r    | <code>[Number](#)</code> | The R tint applied to the particle | `1`     |
-| g    | <code>[Number](#)</code> | The G tint applied to the particle | `1`     |
-| b    | <code>[Number](#)</code> | The B tint applied to the particle | `1`     |
-| a    | <code>[Number](#)</code> | The A tint applied to the particle | `1`     |
+| Name | Type                                            | Description                        | Default |
+| ---- | ----------------------------------------------- | ---------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The R tint applied to the particle | `1`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The G tint applied to the particle | `1`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The B tint applied to the particle | `1`     |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | The A tint applied to the particle | `1`     |
 
 **Returns:**
 
@@ -238,9 +238,9 @@ setScale(scale)
 
 **Parameters:**
 
-| Name  | Type                     | Description                                 | Default |
-| ----- | ------------------------ | ------------------------------------------- | ------- |
-| scale | <code>[Number](#)</code> | Sets the scale of both axes of the particle | 1       |
+| Name  | Type                                            | Description                                 | Default |
+| ----- | ----------------------------------------------- | ------------------------------------------- | ------- |
+| scale | <code>[Number](/tutorials/types/Numbers)</code> | Sets the scale of both axes of the particle | 1       |
 
 **Returns:**
 
@@ -268,9 +268,9 @@ getScale()
 
 **Returns:**
 
-| Type                     | Description                    |
-| ------------------------ | ------------------------------ |
-| <code>[Number](#)</code> | Gets the scale of the particle |
+| Type                                            | Description                    |
+| ----------------------------------------------- | ------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the scale of the particle |
 
 **Example:**
 
@@ -316,11 +316,11 @@ setVelocity(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default                                |
-| ---- | ------------------------ | ----------- | -------------------------------------- |
-| x    | <code>[Number](#)</code> | -           | The default x velocity of the particle |
-| y    | <code>[Number](#)</code> | -           | The default y velocity of the particle |
-| z    | <code>[Number](#)</code> | -           | The default z velocity of the particle |
+| Name | Type                                            | Description | Default                                |
+| ---- | ----------------------------------------------- | ----------- | -------------------------------------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | The default x velocity of the particle |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | The default y velocity of the particle |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | The default z velocity of the particle |
 
 **Returns:**
 
@@ -374,9 +374,9 @@ setLifetime(lifetime)
 
 **Parameters:**
 
-| Name     | Type                      | Description                                           | Default                              |
-| -------- | ------------------------- | ----------------------------------------------------- | ------------------------------------ |
-| lifetime | <code>[Integer](#)</code> | How long the particle will stay in the world in ticks | The default lifetime of the particle |
+| Name     | Type                                             | Description                                           | Default                              |
+| -------- | ------------------------------------------------ | ----------------------------------------------------- | ------------------------------------ |
+| lifetime | <code>[Integer](/tutorials/types/Numbers)</code> | How long the particle will stay in the world in ticks | The default lifetime of the particle |
 
 **Returns:**
 
@@ -402,9 +402,9 @@ getLifetime()
 
 **Returns:**
 
-| Type                      | Description                                                |
-| ------------------------- | ---------------------------------------------------------- |
-| <code>[Integer](#)</code> | Gets how long the particle will stay in the world in ticks |
+| Type                                             | Description                                                |
+| ------------------------------------------------ | ---------------------------------------------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Gets how long the particle will stay in the world in ticks |
 
 **Example:**
 
@@ -426,9 +426,9 @@ setPower(power)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| power | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| power | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -454,9 +454,9 @@ getPower()
 
 **Returns:**
 
-| Type                     | Description                    |
-| ------------------------ | ------------------------------ |
-| <code>[Number](#)</code> | Gets the power of the particle |
+| Type                                            | Description                    |
+| ----------------------------------------------- | ------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the power of the particle |
 
 **Example:**
 
@@ -478,9 +478,9 @@ setGravity(gravity)
 
 **Parameters:**
 
-| Name    | Type                     | Description                                 | Default |
-| ------- | ------------------------ | ------------------------------------------- | ------- |
-| gravity | <code>[Number](#)</code> | Sets the strength of the particle's gravity | `1`     |
+| Name    | Type                                            | Description                                 | Default |
+| ------- | ----------------------------------------------- | ------------------------------------------- | ------- |
+| gravity | <code>[Number](/tutorials/types/Numbers)</code> | Sets the strength of the particle's gravity | `1`     |
 
 **Returns:**
 
@@ -506,9 +506,9 @@ getGravity()
 
 **Returns:**
 
-| Type                     | Description                                 |
-| ------------------------ | ------------------------------------------- |
-| <code>[Number](#)</code> | Gets the strength of the particle's gravity |
+| Type                                            | Description                                 |
+| ----------------------------------------------- | ------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the strength of the particle's gravity |
 
 **Example:**
 
@@ -530,9 +530,9 @@ setPhysics(physics)
 
 **Parameters:**
 
-| Name    | Type                      | Description                                                           | Default |
-| ------- | ------------------------- | --------------------------------------------------------------------- | ------- |
-| physics | <code>[Boolean](#)</code> | Boolean that turns physics on if true, and turns physics off if false | `true`  |
+| Name    | Type                                              | Description                                                           | Default |
+| ------- | ------------------------------------------------- | --------------------------------------------------------------------- | ------- |
+| physics | <code>[Boolean](/tutorials/types/Booleans)</code> | Boolean that turns physics on if true, and turns physics off if false | `true`  |
 
 **Returns:**
 
@@ -558,9 +558,9 @@ hasPhysics()
 
 **Returns:**
 
-| Type                      | Description                       |
-| ------------------------- | --------------------------------- |
-| <code>[Boolean](#)</code> | Gets if this particle has physics |
+| Type                                              | Description                       |
+| ------------------------------------------------- | --------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Gets if this particle has physics |
 
 **Example:**
 
@@ -602,9 +602,9 @@ isAlive()
 
 **Returns:**
 
-| Type                      | Description                      |
-| ------------------------- | -------------------------------- |
-| <code>[Boolean](#)</code> | Returns if the particle is alive |
+| Type                                              | Description                      |
+| ------------------------------------------------- | -------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if the particle is alive |
 
 **Example:**
 

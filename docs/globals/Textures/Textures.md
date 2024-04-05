@@ -17,9 +17,9 @@ get(name)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| name | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -47,9 +47,9 @@ getTextures()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -73,7 +73,7 @@ copy(name, texture)
 
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
-| name    | <code>[String](#)</code>                          | -           | -       |
+| name    | <code>[String](/tutorials/types/Strings)</code>   | -           | -       |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
 
 **Returns:**
@@ -100,10 +100,10 @@ fromVanilla(name, path)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| name | <code>[String](#)</code> | -           | -       |
-| path | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| path | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -131,11 +131,11 @@ newTexture(name, width, height)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| name   | <code>[String](#)</code>  | -           | -       |
-| width  | <code>[Integer](#)</code> | -           | -       |
-| height | <code>[Integer](#)</code> | -           | -       |
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| name   | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -164,10 +164,10 @@ read(name, base64Text)
 
 **Parameters:**
 
-| Name       | Type                     | Description | Default |
-| ---------- | ------------------------ | ----------- | ------- |
-| name       | <code>[String](#)</code> | -           | -       |
-| base64Text | <code>[String](#)</code> | -           | -       |
+| Name       | Type                                            | Description | Default |
+| ---------- | ----------------------------------------------- | ----------- | ------- |
+| name       | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| base64Text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -184,10 +184,10 @@ read(name, byteArray)
 
 **Parameters:**
 
-| Name      | Type                     | Description | Default |
-| --------- | ------------------------ | ----------- | ------- |
-| name      | <code>[String](#)</code> | -           | -       |
-| byteArray | <code>[Table](#)</code>  | -           | -       |
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| name      | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| byteArray | <code>[Table](/tutorials/types/Tables)</code>   | -           | -       |
 
 **Returns:**
 

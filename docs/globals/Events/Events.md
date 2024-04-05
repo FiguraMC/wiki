@@ -26,9 +26,9 @@ getEvents()
 
 **Returns:**
 
-| Type                    | Description                 |
-| ----------------------- | --------------------------- |
-| <code>[Table](#)</code> | Returns all the event types |
+| Type                                          | Description                 |
+| --------------------------------------------- | --------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code> | Returns all the event types |
 
 **Example:**
 

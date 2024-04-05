@@ -24,9 +24,9 @@ getCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -46,9 +46,9 @@ getID()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -68,9 +68,9 @@ getMaxCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -90,9 +90,9 @@ getName()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -112,9 +112,9 @@ getPopTime()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -136,9 +136,9 @@ getRarity()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -158,9 +158,9 @@ getTag()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -180,9 +180,9 @@ getTags()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -202,9 +202,9 @@ getUseAction()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -228,9 +228,9 @@ getUseDuration()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -272,9 +272,9 @@ hasGlint()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -294,9 +294,9 @@ isFood()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -316,9 +316,9 @@ isStackable()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -338,9 +338,9 @@ toStackString()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -364,9 +364,9 @@ getDamage()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -386,9 +386,9 @@ getEquipmentSlot()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -408,9 +408,9 @@ getMaxDamage()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -430,9 +430,9 @@ getRepairCost()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -452,9 +452,9 @@ isArmor()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -474,9 +474,9 @@ isDamageable()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -496,9 +496,9 @@ isEnchantable()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -518,9 +518,9 @@ isTool()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -566,9 +566,9 @@ isBlockItem()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

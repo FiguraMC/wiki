@@ -27,9 +27,9 @@ setOnLeftClick(leftFunction)
 
 **Parameters:**
 
-| Name         | Type                       | Description | Default |
-| ------------ | -------------------------- | ----------- | ------- |
-| leftFunction | <code>[Function](#)</code> | -           | -       |
+| Name         | Type                                                | Description | Default |
+| ------------ | --------------------------------------------------- | ----------- | ------- |
+| leftFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
@@ -61,9 +61,9 @@ setOnRightClick(rightFunction)
 
 **Parameters:**
 
-| Name          | Type                       | Description | Default |
-| ------------- | -------------------------- | ----------- | ------- |
-| rightFunction | <code>[Function](#)</code> | -           | -       |
+| Name          | Type                                                | Description | Default |
+| ------------- | --------------------------------------------------- | ----------- | ------- |
+| rightFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
@@ -97,9 +97,9 @@ setOnToggle(leftFunction)
 
 **Parameters:**
 
-| Name         | Type                       | Description | Default |
-| ------------ | -------------------------- | ----------- | ------- |
-| leftFunction | <code>[Function](#)</code> | -           | -       |
+| Name         | Type                                                | Description | Default |
+| ------------ | --------------------------------------------------- | ----------- | ------- |
+| leftFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
@@ -133,9 +133,9 @@ setOnUntoggle(rightFunction)
 
 **Parameters:**
 
-| Name          | Type                       | Description | Default |
-| ------------- | -------------------------- | ----------- | ------- |
-| rightFunction | <code>[Function](#)</code> | -           | -       |
+| Name          | Type                                                | Description | Default |
+| ------------- | --------------------------------------------------- | ----------- | ------- |
+| rightFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
@@ -169,9 +169,9 @@ setOnScroll(scrollFunction)
 
 **Parameters:**
 
-| Name           | Type                       | Description | Default |
-| -------------- | -------------------------- | ----------- | ------- |
-| scrollFunction | <code>[Function](#)</code> | -           | -       |
+| Name           | Type                                                | Description | Default |
+| -------------- | --------------------------------------------------- | ----------- | ------- |
+| scrollFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
@@ -223,11 +223,11 @@ setColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -303,11 +303,11 @@ setHoverColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -383,9 +383,9 @@ setHoverItem(item)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| item | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -446,8 +446,8 @@ setHoverTexture(texture, u, v)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
 
 **Returns:**
 
@@ -467,10 +467,10 @@ setHoverTexture(texture, u, v, width, height)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
-| width   | <code>[Integer](#)</code>                         | -           | -       |
-| height  | <code>[Integer](#)</code>                         | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
@@ -490,11 +490,11 @@ setHoverTexture(texture, u, v, width, height, scale)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
-| width   | <code>[Integer](#)</code>                         | -           | -       |
-| height  | <code>[Integer](#)</code>                         | -           | -       |
-| scale   | <code>[Number](#)</code>                          | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
 
 **Returns:**
 
@@ -548,9 +548,9 @@ setItem(item)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| item | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -611,8 +611,8 @@ setTexture(texture, u, v)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
 
 **Returns:**
 
@@ -632,10 +632,10 @@ setTexture(texture, u, v, width, height)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
-| width   | <code>[Integer](#)</code>                         | -           | -       |
-| height  | <code>[Integer](#)</code>                         | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
@@ -655,11 +655,11 @@ setTexture(texture, u, v, width, height, scale)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
-| width   | <code>[Integer](#)</code>                         | -           | -       |
-| height  | <code>[Integer](#)</code>                         | -           | -       |
-| scale   | <code>[Number](#)</code>                          | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
 
 **Returns:**
 
@@ -707,9 +707,9 @@ setTitle(title)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| title | <code>[String](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -739,9 +739,9 @@ getTitle()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -787,11 +787,11 @@ setToggleColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -867,9 +867,9 @@ setToggleItem(item)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| item | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -930,8 +930,8 @@ setToggleTexture(texture, u, v)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
 
 **Returns:**
 
@@ -951,10 +951,10 @@ setToggleTexture(texture, u, v, width, height)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
-| width   | <code>[Integer](#)</code>                         | -           | -       |
-| height  | <code>[Integer](#)</code>                         | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
@@ -974,11 +974,11 @@ setToggleTexture(texture, u, v, width, height, scale)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](#)</code>                          | -           | -       |
-| v       | <code>[Number](#)</code>                          | -           | -       |
-| width   | <code>[Integer](#)</code>                         | -           | -       |
-| height  | <code>[Integer](#)</code>                         | -           | -       |
-| scale   | <code>[Number](#)</code>                          | -           | -       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
 
 **Returns:**
 
@@ -1010,9 +1010,9 @@ setToggleTitle(title)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| title | <code>[String](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -1038,9 +1038,9 @@ getToggleTitle()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -1062,9 +1062,9 @@ setToggled(bool)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| bool | <code>[Boolean](#)</code> | -           | -       |
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1090,9 +1090,9 @@ isToggled()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

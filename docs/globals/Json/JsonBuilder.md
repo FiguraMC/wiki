@@ -10,9 +10,9 @@ build()
 
 **Returns:**
 
-| Type                             | Description |
-| -------------------------------- | ----------- |
-| <code>[JsonSerializer](#)</code> | -           |
+| Type                                                        | Description |
+| ----------------------------------------------------------- | ----------- |
+| <code>[JsonSerializer](/globals/Json/JsonSerializer)</code> | -           |
 
 **Example:**
 

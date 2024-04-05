@@ -42,9 +42,9 @@ exists()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -86,11 +86,11 @@ getBiome(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description                                           | Default  |
-| ---- | ------------------------ | ----------------------------------------------------- | -------- |
-| x    | <code>[Number](#)</code> | The x world position in the world to get the biome of | Required |
-| y    | <code>[Number](#)</code> | The y world position in the world to get the biome of | Required |
-| z    | <code>[Number](#)</code> | The z world position in the world to get the biome of | Required |
+| Name | Type                                            | Description                                           | Default  |
+| ---- | ----------------------------------------------- | ----------------------------------------------------- | -------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | The x world position in the world to get the biome of | Required |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | The y world position in the world to get the biome of | Required |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | The z world position in the world to get the biome of | Required |
 
 **Returns:**
 
@@ -120,9 +120,9 @@ getBuildHeight()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
 **Example:**
 
@@ -142,9 +142,9 @@ getDimension()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -172,13 +172,13 @@ getHeight(pos, heightmap)
 | Name      | Type                                             | Description | Default |
 | --------- | ------------------------------------------------ | ----------- | ------- |
 | pos       | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
-| heightmap | <code>[String](#)</code>                         | -           | -       |
+| heightmap | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -189,17 +189,17 @@ getHeight(x, z, heightmap)
 
 **Parameters:**
 
-| Name      | Type                     | Description | Default |
-| --------- | ------------------------ | ----------- | ------- |
-| x         | <code>[Number](#)</code> | -           | -       |
-| z         | <code>[Number](#)</code> | -           | -       |
-| heightmap | <code>[String](#)</code> | -           | -       |
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| x         | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z         | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| heightmap | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -254,9 +254,9 @@ isChunkLoaded(pos)
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -267,17 +267,17 @@ isChunkLoaded(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
     </TabItem>
 
@@ -310,9 +310,9 @@ isOpenSky(pos)
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -323,17 +323,17 @@ isOpenSky(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
     </TabItem>
 
@@ -383,11 +383,11 @@ getBlockState(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description                                                       | Default  |
-| ---- | ------------------------ | ----------------------------------------------------------------- | -------- |
-| x    | <code>[Number](#)</code> | The x position of a block in the world to get the `BlockState` of | Required |
-| y    | <code>[Number](#)</code> | The y position of a block in the world to get the `BlockState` of | Required |
-| z    | <code>[Number](#)</code> | The z position of a block in the world to get the `BlockState` of | Required |
+| Name | Type                                            | Description                                                       | Default  |
+| ---- | ----------------------------------------------- | ----------------------------------------------------------------- | -------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | The x position of a block in the world to get the `BlockState` of | Required |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | The y position of a block in the world to get the `BlockState` of | Required |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | The z position of a block in the world to get the `BlockState` of | Required |
 
 **Returns:**
 
@@ -429,9 +429,9 @@ getBlocks(min, max)
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -444,16 +444,16 @@ getBlocks(minX, minY, minZ, max)
 
 | Name | Type                                             | Description | Default |
 | ---- | ------------------------------------------------ | ----------- | ------- |
-| minX | <code>[Number](#)</code>                         | -           | -       |
-| minY | <code>[Number](#)</code>                         | -           | -       |
-| minZ | <code>[Number](#)</code>                         | -           | -       |
+| minX | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| minY | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| minZ | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 | max  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -467,15 +467,15 @@ getBlocks(min, maxX, maxY, maxZ)
 | Name | Type                                             | Description | Default |
 | ---- | ------------------------------------------------ | ----------- | ------- |
 | min  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| maxX | <code>[Number](#)</code>                         | -           | -       |
-| maxY | <code>[Number](#)</code>                         | -           | -       |
-| maxZ | <code>[Number](#)</code>                         | -           | -       |
+| maxX | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| maxY | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| maxZ | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -486,20 +486,20 @@ getBlocks(minX, minY, minZ, maxX, maxY, maxZ)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| minX | <code>[Number](#)</code> | -           | -       |
-| minY | <code>[Number](#)</code> | -           | -       |
-| minZ | <code>[Number](#)</code> | -           | -       |
-| maxX | <code>[Number](#)</code> | -           | -       |
-| maxY | <code>[Number](#)</code> | -           | -       |
-| maxZ | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| minX | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| minY | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| minZ | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxX | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxY | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxZ | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
 
@@ -532,9 +532,9 @@ newBlock(block)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| block | <code>[String](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| block | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -553,7 +553,7 @@ newBlock(block, pos)
 
 | Name  | Type                                             | Description | Default |
 | ----- | ------------------------------------------------ | ----------- | ------- |
-| block | <code>[String](#)</code>                         | -           | -       |
+| block | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 | pos   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
@@ -571,12 +571,12 @@ newBlock(block, x, y, z)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| block | <code>[String](#)</code> | -           | -       |
-| x     | <code>[Number](#)</code> | -           | -       |
-| y     | <code>[Number](#)</code> | -           | -       |
-| z     | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| block | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| x     | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y     | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z     | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -611,9 +611,9 @@ newItem(item)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| item | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -630,10 +630,10 @@ newItem(item, count)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| item  | <code>[String](#)</code>  | -           | -       |
-| count | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| item  | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| count | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -650,11 +650,11 @@ newItem(item, count, damage)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| item   | <code>[String](#)</code>  | -           | -       |
-| count  | <code>[Integer](#)</code> | -           | -       |
-| damage | <code>[Integer](#)</code> | -           | -       |
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| item   | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| count  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| damage | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -688,9 +688,9 @@ avatarVars()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -710,9 +710,9 @@ getEntity(UUID)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| UUID | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| UUID | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -740,9 +740,9 @@ getPlayers()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -771,9 +771,9 @@ getDay()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -784,15 +784,15 @@ getDay(delta)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| delta | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| delta | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -823,9 +823,9 @@ getDayTime()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -836,15 +836,15 @@ getDayTime(delta)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| delta | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| delta | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -868,9 +868,9 @@ getMoonPhase()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -897,9 +897,9 @@ getTime()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -910,15 +910,15 @@ getTime(delta)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| delta | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| delta | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -949,9 +949,9 @@ getTimeOfDay()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -962,15 +962,15 @@ getTimeOfDay(delta)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| delta | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| delta | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -1006,9 +1006,9 @@ getBlockLightLevel(pos)
 
 **Returns:**
 
-| Type                      | Description            |
-| ------------------------- | ---------------------- |
-| <code>[Integer](#)</code> | The light level (0-15) |
+| Type                                             | Description            |
+| ------------------------------------------------ | ---------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | The light level (0-15) |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -1019,17 +1019,17 @@ getBlockLightLevel(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description                                                 | Default  |
-| ---- | ------------------------ | ----------------------------------------------------------- | -------- |
-| x    | <code>[Number](#)</code> | The x position in the world to get the block light level of | Required |
-| y    | <code>[Number](#)</code> | The y position in the world to get the block light level of | Required |
-| z    | <code>[Number](#)</code> | The z position in the world to get the block light level of | Required |
+| Name | Type                                            | Description                                                 | Default  |
+| ---- | ----------------------------------------------- | ----------------------------------------------------------- | -------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | The x position in the world to get the block light level of | Required |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | The y position in the world to get the block light level of | Required |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | The z position in the world to get the block light level of | Required |
 
 **Returns:**
 
-| Type                      | Description            |
-| ------------------------- | ---------------------- |
-| <code>[Integer](#)</code> | The light level (0-15) |
+| Type                                             | Description            |
+| ------------------------------------------------ | ---------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | The light level (0-15) |
 
     </TabItem>
 
@@ -1062,9 +1062,9 @@ getLightLevel(pos)
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -1075,17 +1075,17 @@ getLightLevel(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -1118,9 +1118,9 @@ getSkyLightLevel(pos)
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -1131,17 +1131,17 @@ getSkyLightLevel(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -1172,9 +1172,9 @@ getRainGradient()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -1185,15 +1185,15 @@ getRainGradient(delta)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| delta | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| delta | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -1217,9 +1217,9 @@ isThundering()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1250,9 +1250,9 @@ getRedstonePower(pos)
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -1263,17 +1263,17 @@ getRedstonePower(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 
@@ -1306,9 +1306,9 @@ getStrongRedstonePower(pos)
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -1319,17 +1319,17 @@ getStrongRedstonePower(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
     </TabItem>
 

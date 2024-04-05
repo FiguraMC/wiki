@@ -23,9 +23,9 @@ isHost()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -47,9 +47,9 @@ isContainerOpen()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -69,9 +69,9 @@ isFlying()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -93,9 +93,9 @@ isJumping()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -115,9 +115,9 @@ getAir()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -146,9 +146,9 @@ setSlot(slot)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| slot | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| slot | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -165,9 +165,9 @@ setSlot(slot)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| slot | <code>[Integer](#)</code> | -           | -       |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| slot | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -184,10 +184,10 @@ setSlot(slot, item)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| slot | <code>[String](#)</code> | -           | -       |
-| item | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| slot | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -206,7 +206,7 @@ setSlot(slot, item)
 
 | Name | Type                                               | Description | Default |
 | ---- | -------------------------------------------------- | ----------- | ------- |
-| slot | <code>[Integer](#)</code>                          | -           | -       |
+| slot | <code>[Integer](/tutorials/types/Numbers)</code>   | -           | -       |
 | item | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
 
 **Returns:**
@@ -242,9 +242,9 @@ getSlot(slot)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| slot | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| slot | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -261,9 +261,9 @@ getSlot(slot)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| slot | <code>[Integer](#)</code> | -           | -       |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| slot | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -300,9 +300,9 @@ getScreenSlot(slot)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| slot | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| slot | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -319,9 +319,9 @@ getScreenSlot(slot)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| slot | <code>[Integer](#)</code> | -           | -       |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| slot | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -353,9 +353,9 @@ getScreenSlotCount()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -377,9 +377,9 @@ getScreen()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -401,9 +401,9 @@ getStatusEffects()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -425,9 +425,9 @@ getAttackCharge()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -447,9 +447,9 @@ getReachDistance()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -471,9 +471,9 @@ getPickBlock()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
 **Example:**
 
@@ -517,9 +517,9 @@ isChatOpen()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -539,9 +539,9 @@ isChatVerified()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -561,9 +561,9 @@ sendChatCommand(command)
 
 **Parameters:**
 
-| Name    | Type                     | Description | Default |
-| ------- | ------------------------ | ----------- | ------- |
-| command | <code>[String](#)</code> | -           | -       |
+| Name    | Type                                            | Description | Default |
+| ------- | ----------------------------------------------- | ----------- | ------- |
+| command | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -589,9 +589,9 @@ sendChatMessage(message)
 
 **Parameters:**
 
-| Name    | Type                     | Description | Default |
-| ------- | ------------------------ | ----------- | ------- |
-| message | <code>[String](#)</code> | -           | -       |
+| Name    | Type                                            | Description | Default |
+| ------- | ----------------------------------------------- | ----------- | ------- |
+| message | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -641,11 +641,11 @@ setChatColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -675,9 +675,9 @@ getChatColor()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -704,9 +704,9 @@ setChatMessage(index)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| index | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -723,10 +723,10 @@ setChatMessage(index, newMessage)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| index      | <code>[Integer](#)</code> | -           | -       |
-| newMessage | <code>[String](#)</code>  | -           | -       |
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| index      | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| newMessage | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 
 **Returns:**
 
@@ -745,8 +745,8 @@ setChatMessage(index, newMessage, backgroundColor)
 
 | Name            | Type                                             | Description | Default |
 | --------------- | ------------------------------------------------ | ----------- | ------- |
-| index           | <code>[Integer](#)</code>                        | -           | -       |
-| newMessage      | <code>[String](#)</code>                         | -           | -       |
+| index           | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| newMessage      | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 | backgroundColor | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
@@ -779,15 +779,15 @@ getChatMessage(index)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| index | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -809,9 +809,9 @@ setChatText(text)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| text | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -837,9 +837,9 @@ getChatText()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -859,9 +859,9 @@ appendChatHistory(message)
 
 **Parameters:**
 
-| Name    | Type                     | Description | Default |
-| ------- | ------------------------ | ----------- | ------- |
-| message | <code>[String](#)</code> | -           | -       |
+| Name    | Type                                            | Description | Default |
+| ------- | ----------------------------------------------- | ----------- | ------- |
+| message | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -896,9 +896,9 @@ setActionbar(text)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| text | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -915,10 +915,10 @@ setActionbar(text, animated)
 
 **Parameters:**
 
-| Name     | Type                      | Description | Default |
-| -------- | ------------------------- | ----------- | ------- |
-| text     | <code>[String](#)</code>  | -           | -       |
-| animated | <code>[Boolean](#)</code> | -           | -       |
+| Name     | Type                                              | Description | Default |
+| -------- | ------------------------------------------------- | ----------- | ------- |
+| text     | <code>[String](/tutorials/types/Strings)</code>   | -           | -       |
+| animated | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -950,9 +950,9 @@ setClipboard(text)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| text | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -978,9 +978,9 @@ getClipboard()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -1004,9 +1004,9 @@ setSubtitle(text)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| text | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -1036,9 +1036,9 @@ setTitle(text)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| text | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -1088,11 +1088,11 @@ setTitleTimes(fadeInTime, stayTime, fadeOutTime)
 
 **Parameters:**
 
-| Name        | Type                      | Description | Default |
-| ----------- | ------------------------- | ----------- | ------- |
-| fadeInTime  | <code>[Integer](#)</code> | -           | -       |
-| stayTime    | <code>[Integer](#)</code> | -           | -       |
-| fadeOutTime | <code>[Integer](#)</code> | -           | -       |
+| Name        | Type                                             | Description | Default |
+| ----------- | ------------------------------------------------ | ----------- | ------- |
+| fadeInTime  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| stayTime    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| fadeOutTime | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1122,9 +1122,9 @@ setUnlockCursor(boolean)
 
 **Parameters:**
 
-| Name    | Type                      | Description | Default |
-| ------- | ------------------------- | ----------- | ------- |
-| boolean | <code>[Boolean](#)</code> | -           | -       |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| boolean | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1172,9 +1172,9 @@ isAvatarUploaded()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1196,9 +1196,9 @@ isCursorUnlocked()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -1218,9 +1218,9 @@ screenshot(name)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| name | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -1264,9 +1264,9 @@ swingArm(offhand)
 
 **Parameters:**
 
-| Name    | Type                      | Description | Default |
-| ------- | ------------------------- | ----------- | ------- |
-| offhand | <code>[Boolean](#)</code> | -           | -       |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| offhand | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 

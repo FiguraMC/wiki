@@ -39,9 +39,9 @@ getName()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -61,9 +61,9 @@ getPath()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -90,8 +90,8 @@ setPixel(x, y, rgb)
 
 | Name | Type                                             | Description | Default |
 | ---- | ------------------------------------------------ | ----------- | ------- |
-| x    | <code>[Integer](#)</code>                        | -           | -       |
-| y    | <code>[Integer](#)</code>                        | -           | -       |
+| x    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 | rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
@@ -111,8 +111,8 @@ setPixel(x, y, rgba)
 
 | Name | Type                                             | Description | Default |
 | ---- | ------------------------------------------------ | ----------- | ------- |
-| x    | <code>[Integer](#)</code>                        | -           | -       |
-| y    | <code>[Integer](#)</code>                        | -           | -       |
+| x    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 | rgba | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
 
 **Returns:**
@@ -130,14 +130,14 @@ setPixel(x, y, r, g, b, a)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| x    | <code>[Integer](#)</code> | -           | -       |
-| y    | <code>[Integer](#)</code> | -           | -       |
-| r    | <code>[Number](#)</code>  | -           | -       |
-| g    | <code>[Number](#)</code>  | -           | -       |
-| b    | <code>[Number](#)</code>  | -           | -       |
-| a    | <code>[Number](#)</code>  | -           | -       |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| x    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| r    | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| a    | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
@@ -167,10 +167,10 @@ getPixel(x, y)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| x    | <code>[Integer](#)</code> | -           | -       |
-| y    | <code>[Integer](#)</code> | -           | -       |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| x    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -198,13 +198,13 @@ applyFunc(x, y, width, height, func)
 
 **Parameters:**
 
-| Name   | Type                       | Description | Default |
-| ------ | -------------------------- | ----------- | ------- |
-| x      | <code>[Integer](#)</code>  | -           | -       |
-| y      | <code>[Integer](#)</code>  | -           | -       |
-| width  | <code>[Integer](#)</code>  | -           | -       |
-| height | <code>[Integer](#)</code>  | -           | -       |
-| func   | <code>[Function](#)</code> | -           | -       |
+| Name   | Type                                                | Description | Default |
+| ------ | --------------------------------------------------- | ----------- | ------- |
+| x      | <code>[Integer](/tutorials/types/Numbers)</code>    | -           | -       |
+| y      | <code>[Integer](/tutorials/types/Numbers)</code>    | -           | -       |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code>    | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code>    | -           | -       |
+| func   | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
@@ -234,12 +234,12 @@ applyMatrix(x, y, width, height, matrix, clip)
 
 | Name   | Type                                              | Description | Default |
 | ------ | ------------------------------------------------- | ----------- | ------- |
-| x      | <code>[Integer](#)</code>                         | -           | -       |
-| y      | <code>[Integer](#)</code>                         | -           | -       |
-| width  | <code>[Integer](#)</code>                         | -           | -       |
-| height | <code>[Integer](#)</code>                         | -           | -       |
+| x      | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| y      | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
 | matrix | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
-| clip   | <code>[Boolean](#)</code>                         | -           | -       |
+| clip   | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -270,10 +270,10 @@ fill(x, y, width, height, rgb)
 
 | Name   | Type                                             | Description | Default |
 | ------ | ------------------------------------------------ | ----------- | ------- |
-| x      | <code>[Integer](#)</code>                        | -           | -       |
-| y      | <code>[Integer](#)</code>                        | -           | -       |
-| width  | <code>[Integer](#)</code>                        | -           | -       |
-| height | <code>[Integer](#)</code>                        | -           | -       |
+| x      | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y      | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 | rgb    | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
@@ -293,10 +293,10 @@ fill(x, y, width, height, rgba)
 
 | Name   | Type                                             | Description | Default |
 | ------ | ------------------------------------------------ | ----------- | ------- |
-| x      | <code>[Integer](#)</code>                        | -           | -       |
-| y      | <code>[Integer](#)</code>                        | -           | -       |
-| width  | <code>[Integer](#)</code>                        | -           | -       |
-| height | <code>[Integer](#)</code>                        | -           | -       |
+| x      | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y      | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 | rgba   | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
 
 **Returns:**
@@ -314,16 +314,16 @@ fill(x, y, width, height, r, g, b, a)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| x      | <code>[Integer](#)</code> | -           | -       |
-| y      | <code>[Integer](#)</code> | -           | -       |
-| width  | <code>[Integer](#)</code> | -           | -       |
-| height | <code>[Integer](#)</code> | -           | -       |
-| r      | <code>[Number](#)</code>  | -           | -       |
-| g      | <code>[Number](#)</code>  | -           | -       |
-| b      | <code>[Number](#)</code>  | -           | -       |
-| a      | <code>[Number](#)</code>  | -           | -       |
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| x      | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| y      | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| r      | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| g      | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| b      | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| a      | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
@@ -375,9 +375,9 @@ save()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 

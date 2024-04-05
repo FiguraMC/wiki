@@ -32,9 +32,9 @@ setItem(item)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| item | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -85,9 +85,9 @@ setDisplayMode(displayMode)
 
 **Parameters:**
 
-| Name        | Type                     | Description | Default |
-| ----------- | ------------------------ | ----------- | ------- |
-| displayMode | <code>[String](#)</code> | -           | -       |
+| Name        | Type                                            | Description | Default |
+| ----------- | ----------------------------------------------- | ----------- | ------- |
+| displayMode | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -113,9 +113,9 @@ getDisplayMode()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -165,10 +165,10 @@ setLight(blockLight, skyLight)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| blockLight | <code>[Integer](#)</code> | -           | -       |
-| skyLight   | <code>[Integer](#)</code> | -           | -       |
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| blockLight | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| skyLight   | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -256,9 +256,9 @@ getName()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -352,10 +352,10 @@ setOverlay(whiteOverlay, hurtOverlay)
 
 **Parameters:**
 
-| Name         | Type                      | Description | Default |
-| ------------ | ------------------------- | ----------- | ------- |
-| whiteOverlay | <code>[Integer](#)</code> | -           | -       |
-| hurtOverlay  | <code>[Integer](#)</code> | -           | -       |
+| Name         | Type                                             | Description | Default |
+| ------------ | ------------------------------------------------ | ----------- | ------- |
+| whiteOverlay | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| hurtOverlay  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -433,11 +433,11 @@ setPos(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -559,11 +559,11 @@ setRot(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -639,11 +639,11 @@ setScale(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -697,9 +697,9 @@ setVisible(visible)
 
 **Parameters:**
 
-| Name    | Type                      | Description | Default |
-| ------- | ------------------------- | ----------- | ------- |
-| visible | <code>[Boolean](#)</code> | -           | -       |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -725,9 +725,9 @@ isVisible()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

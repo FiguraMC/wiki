@@ -10,15 +10,15 @@ deserialize(str)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| str  | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| str  | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[AnyType](#)</code> | -           |
+| Type                 | Description |
+| -------------------- | ----------- |
+| <code>AnyType</code> | -           |
 
 **Example:**
 
@@ -38,15 +38,15 @@ serialize(val)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| val  | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| val  | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 

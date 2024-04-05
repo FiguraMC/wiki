@@ -10,9 +10,9 @@ close()
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 
@@ -32,9 +32,9 @@ flush()
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 
@@ -54,15 +54,15 @@ write(b)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| b    | <code>[Integer](#)</code> | -           | -       |
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| b    | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 

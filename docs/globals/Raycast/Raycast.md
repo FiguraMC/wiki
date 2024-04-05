@@ -30,13 +30,13 @@ aabb(startpos, endpos, aabbs)
 | ----- | ------------------------------------------------ | ----------- | ------- |
 | start | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 | end   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| aabbs | <code>[Table](#)</code>                          | -           | -       |
+| aabbs | <code>[Table](/tutorials/types/Tables)</code>    | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -49,17 +49,17 @@ aabb(startX, startY, startZ, endpos, aabbs)
 
 | Name   | Type                                             | Description | Default |
 | ------ | ------------------------------------------------ | ----------- | ------- |
-| startX | <code>[Number](#)</code>                         | -           | -       |
-| startY | <code>[Number](#)</code>                         | -           | -       |
-| startZ | <code>[Number](#)</code>                         | -           | -       |
+| startX | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| startY | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| startZ | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 | end    | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| aabbs  | <code>[Table](#)</code>                          | -           | -       |
+| aabbs  | <code>[Table](/tutorials/types/Tables)</code>    | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -73,16 +73,16 @@ aabb(startpos, endX, endY, endZ, aabbs)
 | Name  | Type                                             | Description | Default |
 | ----- | ------------------------------------------------ | ----------- | ------- |
 | start | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| endX  | <code>[Number](#)</code>                         | -           | -       |
-| endY  | <code>[Number](#)</code>                         | -           | -       |
-| endZ  | <code>[Number](#)</code>                         | -           | -       |
-| aabbs | <code>[Table](#)</code>                          | -           | -       |
+| endX  | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| endY  | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| endZ  | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| aabbs | <code>[Table](/tutorials/types/Tables)</code>    | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -93,21 +93,21 @@ aabb(startX, startY, startZ, endX, endY, endZ, aabbs)
 
 **Parameters:**
 
-| Name   | Type                     | Description | Default |
-| ------ | ------------------------ | ----------- | ------- |
-| startX | <code>[Number](#)</code> | -           | -       |
-| startY | <code>[Number](#)</code> | -           | -       |
-| startZ | <code>[Number](#)</code> | -           | -       |
-| endX   | <code>[Number](#)</code> | -           | -       |
-| endY   | <code>[Number](#)</code> | -           | -       |
-| endZ   | <code>[Number](#)</code> | -           | -       |
-| aabbs  | <code>[Table](#)</code>  | -           | -       |
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| startX | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| startY | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| startZ | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| endX   | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| endY   | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| endZ   | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| aabbs  | <code>[Table](/tutorials/types/Tables)</code>   | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
 
@@ -146,14 +146,14 @@ block(startpos, endpos, blockCastType, fluidCastType)
 | ------------- | ------------------------------------------------ | ----------- | ------- |
 | start         | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 | end           | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| blockCastType | <code>[String](#)</code>                         | -           | -       |
-| fluidCastType | <code>[String](#)</code>                         | -           | -       |
+| blockCastType | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| fluidCastType | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -166,18 +166,18 @@ block(startX, startY, startZ, endpos, blockCastType, fluidCastType)
 
 | Name          | Type                                             | Description | Default |
 | ------------- | ------------------------------------------------ | ----------- | ------- |
-| startX        | <code>[Number](#)</code>                         | -           | -       |
-| startY        | <code>[Number](#)</code>                         | -           | -       |
-| startZ        | <code>[Number](#)</code>                         | -           | -       |
+| startX        | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| startY        | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| startZ        | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
 | end           | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| blockCastType | <code>[String](#)</code>                         | -           | -       |
-| fluidCastType | <code>[String](#)</code>                         | -           | -       |
+| blockCastType | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| fluidCastType | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -191,17 +191,17 @@ block(startpos, endX, endY, endZ, blockCastType, fluidCastType)
 | Name          | Type                                             | Description | Default |
 | ------------- | ------------------------------------------------ | ----------- | ------- |
 | start         | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| endX          | <code>[Number](#)</code>                         | -           | -       |
-| endY          | <code>[Number](#)</code>                         | -           | -       |
-| endZ          | <code>[Number](#)</code>                         | -           | -       |
-| blockCastType | <code>[String](#)</code>                         | -           | -       |
-| fluidCastType | <code>[String](#)</code>                         | -           | -       |
+| endX          | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| endY          | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| endZ          | <code>[Number](/tutorials/types/Numbers)</code>  | -           | -       |
+| blockCastType | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| fluidCastType | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -212,22 +212,22 @@ block(startX, startY, startZ, endX, endY, endZ, blockCastType, fluidCastType)
 
 **Parameters:**
 
-| Name          | Type                     | Description | Default |
-| ------------- | ------------------------ | ----------- | ------- |
-| startX        | <code>[Number](#)</code> | -           | -       |
-| startY        | <code>[Number](#)</code> | -           | -       |
-| startZ        | <code>[Number](#)</code> | -           | -       |
-| endX          | <code>[Number](#)</code> | -           | -       |
-| endY          | <code>[Number](#)</code> | -           | -       |
-| endZ          | <code>[Number](#)</code> | -           | -       |
-| blockCastType | <code>[String](#)</code> | -           | -       |
-| fluidCastType | <code>[String](#)</code> | -           | -       |
+| Name          | Type                                            | Description | Default |
+| ------------- | ----------------------------------------------- | ----------- | ------- |
+| startX        | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| startY        | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| startZ        | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| endX          | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| endY          | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| endZ          | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| blockCastType | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| fluidCastType | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
 
@@ -264,17 +264,17 @@ entity(startpos, endpos, predicate)
 
 **Parameters:**
 
-| Name      | Type                                             | Description | Default |
-| --------- | ------------------------------------------------ | ----------- | ------- |
-| start     | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| end       | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| predicate | <code>[Function](#)</code>                       | -           | -       |
+| Name      | Type                                                | Description | Default |
+| --------- | --------------------------------------------------- | ----------- | ------- |
+| start     | <code>[Vector3](/globals/Vectors/Vector3)</code>    | -           | -       |
+| end       | <code>[Vector3](/globals/Vectors/Vector3)</code>    | -           | -       |
+| predicate | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -285,19 +285,19 @@ entity(startX, startY, startZ, endpos, predicate)
 
 **Parameters:**
 
-| Name      | Type                                             | Description | Default |
-| --------- | ------------------------------------------------ | ----------- | ------- |
-| startX    | <code>[Number](#)</code>                         | -           | -       |
-| startY    | <code>[Number](#)</code>                         | -           | -       |
-| startZ    | <code>[Number](#)</code>                         | -           | -       |
-| end       | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| predicate | <code>[Function](#)</code>                       | -           | -       |
+| Name      | Type                                                | Description | Default |
+| --------- | --------------------------------------------------- | ----------- | ------- |
+| startX    | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| startY    | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| startZ    | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| end       | <code>[Vector3](/globals/Vectors/Vector3)</code>    | -           | -       |
+| predicate | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -308,19 +308,19 @@ entity(startpos, endX, endY, endZ, predicate)
 
 **Parameters:**
 
-| Name      | Type                                             | Description | Default |
-| --------- | ------------------------------------------------ | ----------- | ------- |
-| start     | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| endX      | <code>[Number](#)</code>                         | -           | -       |
-| endY      | <code>[Number](#)</code>                         | -           | -       |
-| endZ      | <code>[Number](#)</code>                         | -           | -       |
-| predicate | <code>[Function](#)</code>                       | -           | -       |
+| Name      | Type                                                | Description | Default |
+| --------- | --------------------------------------------------- | ----------- | ------- |
+| start     | <code>[Vector3](/globals/Vectors/Vector3)</code>    | -           | -       |
+| endX      | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| endY      | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| endZ      | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| predicate | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -331,21 +331,21 @@ entity(startX, startY, startZ, endX, endY, endZ, predicate)
 
 **Parameters:**
 
-| Name      | Type                       | Description | Default |
-| --------- | -------------------------- | ----------- | ------- |
-| startX    | <code>[Number](#)</code>   | -           | -       |
-| startY    | <code>[Number](#)</code>   | -           | -       |
-| startZ    | <code>[Number](#)</code>   | -           | -       |
-| endX      | <code>[Number](#)</code>   | -           | -       |
-| endY      | <code>[Number](#)</code>   | -           | -       |
-| endZ      | <code>[Number](#)</code>   | -           | -       |
-| predicate | <code>[Function](#)</code> | -           | -       |
+| Name      | Type                                                | Description | Default |
+| --------- | --------------------------------------------------- | ----------- | ------- |
+| startX    | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| startY    | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| startZ    | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| endX      | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| endY      | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| endZ      | <code>[Number](/tutorials/types/Numbers)</code>     | -           | -       |
+| predicate | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Varargs](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
 
     </TabItem>
 

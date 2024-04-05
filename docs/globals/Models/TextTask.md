@@ -29,9 +29,9 @@ setText(text)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| text | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -57,9 +57,9 @@ getText()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -85,9 +85,9 @@ setAlignment(alignment)
 
 **Parameters:**
 
-| Name      | Type                     | Description | Default |
-| --------- | ------------------------ | ----------- | ------- |
-| alignment | <code>[String](#)</code> | -           | -       |
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| alignment | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -115,9 +115,9 @@ getAlignment()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -141,9 +141,9 @@ setBackground(background)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| background | <code>[Boolean](#)</code> | -           | -       |
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| background | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -195,12 +195,12 @@ setBackgroundColor(r, g, b, a)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
-| a    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -254,9 +254,9 @@ setOpacity(opacity)
 
 **Parameters:**
 
-| Name    | Type                     | Description | Default |
-| ------- | ------------------------ | ----------- | ------- |
-| opacity | <code>[Number](#)</code> | -           | -       |
+| Name    | Type                                            | Description | Default |
+| ------- | ----------------------------------------------- | ----------- | ------- |
+| opacity | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -282,9 +282,9 @@ getOpacity()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Number](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -310,9 +310,9 @@ setOutline(outline)
 
 **Parameters:**
 
-| Name    | Type                      | Description | Default |
-| ------- | ------------------------- | ----------- | ------- |
-| outline | <code>[Boolean](#)</code> | -           | -       |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| outline | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -364,11 +364,11 @@ setOutlineColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -424,9 +424,9 @@ setSeeThrough(seeThrough)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| seeThrough | <code>[Boolean](#)</code> | -           | -       |
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| seeThrough | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -456,9 +456,9 @@ setShadow(shadow)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| shadow | <code>[Boolean](#)</code> | -           | -       |
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| shadow | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -490,9 +490,9 @@ setWidth(width)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| width | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| width | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -520,9 +520,9 @@ getWidth()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -544,9 +544,9 @@ setWrap(wrap)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| wrap | <code>[Boolean](#)</code> | -           | -       |
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| wrap | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -574,9 +574,9 @@ hasBackground()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -596,9 +596,9 @@ hasOutline()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -618,9 +618,9 @@ hasShadow()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -640,9 +640,9 @@ hasWrap()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -664,9 +664,9 @@ isSeeThrough()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -716,10 +716,10 @@ setLight(blockLight, skyLight)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| blockLight | <code>[Integer](#)</code> | -           | -       |
-| skyLight   | <code>[Integer](#)</code> | -           | -       |
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| blockLight | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| skyLight   | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -807,9 +807,9 @@ getName()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -903,10 +903,10 @@ setOverlay(whiteOverlay, hurtOverlay)
 
 **Parameters:**
 
-| Name         | Type                      | Description | Default |
-| ------------ | ------------------------- | ----------- | ------- |
-| whiteOverlay | <code>[Integer](#)</code> | -           | -       |
-| hurtOverlay  | <code>[Integer](#)</code> | -           | -       |
+| Name         | Type                                             | Description | Default |
+| ------------ | ------------------------------------------------ | ----------- | ------- |
+| whiteOverlay | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| hurtOverlay  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -984,11 +984,11 @@ setPos(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1110,11 +1110,11 @@ setRot(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1190,11 +1190,11 @@ setScale(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1248,9 +1248,9 @@ setVisible(visible)
 
 **Parameters:**
 
-| Name    | Type                      | Description | Default |
-| ------- | ------------------------- | ----------- | ------- |
-| visible | <code>[Boolean](#)</code> | -           | -       |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1276,9 +1276,9 @@ isVisible()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

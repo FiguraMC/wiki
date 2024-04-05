@@ -47,9 +47,9 @@ newPage(title)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| title | <code>[String](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -82,9 +82,9 @@ setPage(pageTitle)
 
 **Parameters:**
 
-| Name      | Type                     | Description | Default |
-| --------- | ------------------------ | ----------- | ------- |
-| pageTitle | <code>[String](#)</code> | -           | -       |
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| pageTitle | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -138,9 +138,9 @@ getPage()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -151,9 +151,9 @@ getPage(pageTitle)
 
 **Parameters:**
 
-| Name      | Type                     | Description | Default |
-| --------- | ------------------------ | ----------- | ------- |
-| pageTitle | <code>[String](#)</code> | -           | -       |
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| pageTitle | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -253,9 +253,9 @@ getSelected()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -297,9 +297,9 @@ execute(index)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| index | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -316,10 +316,10 @@ execute(index, rightClick)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| index      | <code>[Integer](#)</code> | -           | -       |
-| rightClick | <code>[Boolean](#)</code> | -           | -       |
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| index      | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| rightClick | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -349,9 +349,9 @@ isEnabled()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

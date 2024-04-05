@@ -10,9 +10,9 @@ getOrError()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[AnyType](#)</code> | -           |
+| Type                 | Description |
+| -------------------- | ----------- |
+| <code>AnyType</code> | -           |
 
 **Example:**
 
@@ -32,9 +32,9 @@ getValue()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[AnyType](#)</code> | -           |
+| Type                 | Description |
+| -------------------- | ----------- |
+| <code>AnyType</code> | -           |
 
 **Example:**
 
@@ -54,9 +54,9 @@ hasError()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -76,9 +76,9 @@ isDone()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -98,9 +98,9 @@ throwError()
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 

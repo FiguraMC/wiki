@@ -35,9 +35,9 @@ getHeaders()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -57,9 +57,9 @@ getMethod()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -79,9 +79,9 @@ getUri()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -104,15 +104,15 @@ body(data)
 
 **Parameters:**
 
-| Name | Type                          | Description | Default |
-| ---- | ----------------------------- | ----------- | ------- |
-| data | <code>[InputStream](#)</code> | -           | -       |
+| Name | Type                                                  | Description | Default |
+| ---- | ----------------------------------------------------- | ----------- | ------- |
+| data | <code>[InputStream](/globals/Data/InputStream)</code> | -           | -       |
 
 **Returns:**
 
-| Type                                 | Description               |
-| ------------------------------------ | ------------------------- |
-| <code>[HttpRequestBuilder](#)</code> | Returns self for chaining |
+| Type                                                               | Description               |
+| ------------------------------------------------------------------ | ------------------------- |
+| <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | Returns self for chaining |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -123,15 +123,15 @@ body(data)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| data | <code>[Buffer](#)</code> | -           | -       |
+| Name | Type                                        | Description | Default |
+| ---- | ------------------------------------------- | ----------- | ------- |
+| data | <code>[Buffer](/globals/Data/Buffer)</code> | -           | -       |
 
 **Returns:**
 
-| Type                                 | Description               |
-| ------------------------------------ | ------------------------- |
-| <code>[HttpRequestBuilder](#)</code> | Returns self for chaining |
+| Type                                                               | Description               |
+| ------------------------------------------------------------------ | ------------------------- |
+| <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | Returns self for chaining |
 
     </TabItem>
 
@@ -155,16 +155,16 @@ header(header, value)
 
 **Parameters:**
 
-| Name   | Type                     | Description | Default |
-| ------ | ------------------------ | ----------- | ------- |
-| header | <code>[String](#)</code> | -           | -       |
-| value  | <code>[String](#)</code> | -           | -       |
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| header | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| value  | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                                 | Description               |
-| ------------------------------------ | ------------------------- |
-| <code>[HttpRequestBuilder](#)</code> | Returns self for chaining |
+| Type                                                               | Description               |
+| ------------------------------------------------------------------ | ------------------------- |
+| <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | Returns self for chaining |
 
 **Example:**
 
@@ -184,15 +184,15 @@ method(method)
 
 **Parameters:**
 
-| Name   | Type                     | Description | Default |
-| ------ | ------------------------ | ----------- | ------- |
-| method | <code>[String](#)</code> | -           | -       |
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| method | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                                 | Description               |
-| ------------------------------------ | ------------------------- |
-| <code>[HttpRequestBuilder](#)</code> | Returns self for chaining |
+| Type                                                               | Description               |
+| ------------------------------------------------------------------ | ------------------------- |
+| <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | Returns self for chaining |
 
 **Example:**
 
@@ -212,9 +212,9 @@ send()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Future](#)</code> | -           |
+| Type                                        | Description |
+| ------------------------------------------- | ----------- |
+| <code>[Future](/globals/Data/Future)</code> | -           |
 
 **Example:**
 
@@ -234,15 +234,15 @@ uri(uri)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| uri  | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| uri  | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                                 | Description               |
-| ------------------------------------ | ------------------------- |
-| <code>[HttpRequestBuilder](#)</code> | Returns self for chaining |
+| Type                                                               | Description               |
+| ------------------------------------------------------------------ | ------------------------- |
+| <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | Returns self for chaining |
 
 **Example:**
 

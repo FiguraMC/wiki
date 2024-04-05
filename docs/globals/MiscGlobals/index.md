@@ -40,9 +40,9 @@ listFiles()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -53,15 +53,15 @@ listFiles(folder)
 
 **Parameters:**
 
-| Name   | Type                     | Description | Default |
-| ------ | ------------------------ | ----------- | ------- |
-| folder | <code>[String](#)</code> | -           | -       |
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| folder | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -72,16 +72,16 @@ listFiles(folder, subFolders)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| folder     | <code>[String](#)</code>  | -           | -       |
-| subFolders | <code>[Boolean](#)</code> | -           | -       |
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| folder     | <code>[String](/tutorials/types/Strings)</code>   | -           | -       |
+| subFolders | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
     </TabItem>
 
@@ -107,15 +107,15 @@ parseJson(jsonString)
 
 **Parameters:**
 
-| Name       | Type                     | Description | Default |
-| ---------- | ------------------------ | ----------- | ------- |
-| jsonString | <code>[String](#)</code> | -           | -       |
+| Name       | Type                                            | Description | Default |
+| ---------- | ----------------------------------------------- | ----------- | ------- |
+| jsonString | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[AnyType](#)</code> | -           |
+| Type                 | Description |
+| -------------------- | ----------- |
+| <code>AnyType</code> | -           |
 
 **Example:**
 
@@ -143,15 +143,15 @@ print(arg)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| arg  | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| arg  | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -179,15 +179,15 @@ printJson(json)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| json | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| json | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -222,15 +222,15 @@ printTable(table)
 
 **Parameters:**
 
-| Name  | Type                    | Description | Default |
-| ----- | ----------------------- | ----------- | ------- |
-| table | <code>[Table](#)</code> | -           | -       |
+| Name  | Type                                          | Description | Default |
+| ----- | --------------------------------------------- | ----------- | ------- |
+| table | <code>[Table](/tutorials/types/Tables)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -241,15 +241,15 @@ printTable(javaObject)
 
 **Parameters:**
 
-| Name       | Type                       | Description | Default |
-| ---------- | -------------------------- | ----------- | ------- |
-| javaObject | <code>[Userdata](#)</code> | -           | -       |
+| Name       | Type                  | Description | Default |
+| ---------- | --------------------- | ----------- | ------- |
+| javaObject | <code>Userdata</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -260,16 +260,16 @@ printTable(table, maxDepth)
 
 **Parameters:**
 
-| Name     | Type                      | Description | Default |
-| -------- | ------------------------- | ----------- | ------- |
-| table    | <code>[Table](#)</code>   | -           | -       |
-| maxDepth | <code>[Integer](#)</code> | -           | -       |
+| Name     | Type                                             | Description | Default |
+| -------- | ------------------------------------------------ | ----------- | ------- |
+| table    | <code>[Table](/tutorials/types/Tables)</code>    | -           | -       |
+| maxDepth | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -280,16 +280,16 @@ printTable(javaObject, maxDepth)
 
 **Parameters:**
 
-| Name       | Type                       | Description | Default |
-| ---------- | -------------------------- | ----------- | ------- |
-| javaObject | <code>[Userdata](#)</code> | -           | -       |
-| maxDepth   | <code>[Integer](#)</code>  | -           | -       |
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| javaObject | <code>Userdata</code>                            | -           | -       |
+| maxDepth   | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-5" label="Overload 5">
@@ -300,17 +300,17 @@ printTable(table, maxDepth, silent)
 
 **Parameters:**
 
-| Name     | Type                      | Description | Default |
-| -------- | ------------------------- | ----------- | ------- |
-| table    | <code>[Table](#)</code>   | -           | -       |
-| maxDepth | <code>[Integer](#)</code> | -           | -       |
-| silent   | <code>[Boolean](#)</code> | -           | -       |
+| Name     | Type                                              | Description | Default |
+| -------- | ------------------------------------------------- | ----------- | ------- |
+| table    | <code>[Table](/tutorials/types/Tables)</code>     | -           | -       |
+| maxDepth | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| silent   | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-6" label="Overload 6">
@@ -321,17 +321,17 @@ printTable(javaObject, maxDepth, silent)
 
 **Parameters:**
 
-| Name       | Type                       | Description | Default |
-| ---------- | -------------------------- | ----------- | ------- |
-| javaObject | <code>[Userdata](#)</code> | -           | -       |
-| maxDepth   | <code>[Integer](#)</code>  | -           | -       |
-| silent     | <code>[Boolean](#)</code>  | -           | -       |
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| javaObject | <code>Userdata</code>                             | -           | -       |
+| maxDepth   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| silent     | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
     </TabItem>
 
@@ -365,15 +365,15 @@ require(scriptName)
 
 **Parameters:**
 
-| Name       | Type                     | Description | Default |
-| ---------- | ------------------------ | ----------- | ------- |
-| scriptName | <code>[String](#)</code> | -           | -       |
+| Name       | Type                                            | Description | Default |
+| ---------- | ----------------------------------------------- | ----------- | ------- |
+| scriptName | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[AnyType](#)</code> | -           |
+| Type                 | Description |
+| -------------------- | ----------- |
+| <code>AnyType</code> | -           |
 
 **Example:**
 
@@ -397,15 +397,15 @@ toJson(value)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| value | <code>[AnyType](#)</code> | -           | -       |
+| Name  | Type                 | Description | Default |
+| ----- | -------------------- | ----------- | ------- |
+| value | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 

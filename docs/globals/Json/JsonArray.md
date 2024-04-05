@@ -10,16 +10,16 @@ set(index, elem)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| index | <code>[Integer](#)</code> | -           | -       |
-| elem  | <code>[AnyType](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| elem  | <code>AnyType</code>                             | -           | -       |
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 
@@ -39,15 +39,15 @@ get(index)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| index | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[AnyType](#)</code> | -           |
+| Type                 | Description |
+| -------------------- | ----------- |
+| <code>AnyType</code> | -           |
 
 **Example:**
 
@@ -67,15 +67,15 @@ add(elem)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| elem | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| elem | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -95,9 +95,9 @@ clear()
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 
@@ -117,15 +117,15 @@ contains(elem)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| elem | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| elem | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -145,15 +145,15 @@ indexOf(elem)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| elem | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| elem | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -173,16 +173,16 @@ insert(index, elem)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| index | <code>[Integer](#)</code> | -           | -       |
-| elem  | <code>[AnyType](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| elem  | <code>AnyType</code>                             | -           | -       |
 
 **Returns:**
 
-| Type                  | Description |
-| --------------------- | ----------- |
-| <code>[nil](#)</code> | -           |
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
 
 **Example:**
 
@@ -202,15 +202,15 @@ lastIndexOf(elem)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| elem | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| elem | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -230,15 +230,15 @@ remove(elem)
 
 **Parameters:**
 
-| Name | Type                      | Description | Default |
-| ---- | ------------------------- | ----------- | ------- |
-| elem | <code>[AnyType](#)</code> | -           | -       |
+| Name | Type                 | Description | Default |
+| ---- | -------------------- | ----------- | ------- |
+| elem | <code>AnyType</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 
@@ -258,15 +258,15 @@ removeAt(index)
 
 **Parameters:**
 
-| Name  | Type                      | Description | Default |
-| ----- | ------------------------- | ----------- | ------- |
-| index | <code>[Integer](#)</code> | -           | -       |
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[AnyType](#)</code> | -           |
+| Type                 | Description |
+| -------------------- | ----------- |
+| <code>AnyType</code> | -           |
 
 **Example:**
 
@@ -286,9 +286,9 @@ size()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 

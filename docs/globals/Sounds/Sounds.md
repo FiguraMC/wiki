@@ -30,7 +30,7 @@ playSound(sound, pos)
 
 | Name  | Type                                             | Description | Default |
 | ----- | ------------------------------------------------ | ----------- | ------- |
-| sound | <code>[String](#)</code>                         | -           | -       |
+| sound | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 | pos   | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
 **Returns:**
@@ -48,12 +48,12 @@ playSound(sound, posX, posY, posZ)
 
 **Parameters:**
 
-| Name  | Type                     | Description | Default |
-| ----- | ------------------------ | ----------- | ------- |
-| sound | <code>[String](#)</code> | -           | -       |
-| posX  | <code>[Number](#)</code> | -           | -       |
-| posY  | <code>[Number](#)</code> | -           | -       |
-| posZ  | <code>[Number](#)</code> | -           | -       |
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| sound | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| posX  | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| posY  | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| posZ  | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -70,13 +70,13 @@ playSound(sound, pos, volume, pitch, loop)
 
 **Parameters:**
 
-| Name   | Type                                             | Description | Default |
-| ------ | ------------------------------------------------ | ----------- | ------- |
-| sound  | <code>[String](#)</code>                         | -           | -       |
-| pos    | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
-| volume | <code>[Number](#)</code>                         | -           | -       |
-| pitch  | <code>[Number](#)</code>                         | -           | -       |
-| loop   | <code>[Boolean](#)</code>                        | -           | -       |
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| sound  | <code>[String](/tutorials/types/Strings)</code>   | -           | -       |
+| pos    | <code>[Vector3](/globals/Vectors/Vector3)</code>  | -           | -       |
+| volume | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| pitch  | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| loop   | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -93,15 +93,15 @@ playSound(sound, posX, posY, posZ, volume, pitch, loop)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| sound  | <code>[String](#)</code>  | -           | -       |
-| posX   | <code>[Number](#)</code>  | -           | -       |
-| posY   | <code>[Number](#)</code>  | -           | -       |
-| posZ   | <code>[Number](#)</code>  | -           | -       |
-| volume | <code>[Number](#)</code>  | -           | -       |
-| pitch  | <code>[Number](#)</code>  | -           | -       |
-| loop   | <code>[Boolean](#)</code> | -           | -       |
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| sound  | <code>[String](/tutorials/types/Strings)</code>   | -           | -       |
+| posX   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| posY   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| posZ   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| volume | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| pitch  | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| loop   | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -149,9 +149,9 @@ stopSound(id)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| id   | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -186,10 +186,10 @@ newSound(name, byteArray)
 
 **Parameters:**
 
-| Name      | Type                     | Description | Default |
-| --------- | ------------------------ | ----------- | ------- |
-| name      | <code>[String](#)</code> | -           | -       |
-| byteArray | <code>[Table](#)</code>  | -           | -       |
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| name      | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| byteArray | <code>[Table](/tutorials/types/Tables)</code>   | -           | -       |
 
 **Returns:**
 
@@ -206,10 +206,10 @@ newSound(name, base64Text)
 
 **Parameters:**
 
-| Name       | Type                     | Description | Default |
-| ---------- | ------------------------ | ----------- | ------- |
-| name       | <code>[String](#)</code> | -           | -       |
-| base64Text | <code>[String](#)</code> | -           | -       |
+| Name       | Type                                            | Description | Default |
+| ---------- | ----------------------------------------------- | ----------- | ------- |
+| name       | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| base64Text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -239,9 +239,9 @@ getCustomSounds()
 
 **Returns:**
 
-| Type                            | Description |
-| ------------------------------- | ----------- |
-| <code>[java.util.Set](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -261,15 +261,15 @@ isPresent(id)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| id   | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

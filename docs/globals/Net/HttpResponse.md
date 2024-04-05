@@ -10,9 +10,9 @@ getData()
 
 **Returns:**
 
-| Type                          | Description |
-| ----------------------------- | ----------- |
-| <code>[InputStream](#)</code> | -           |
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[InputStream](/globals/Data/InputStream)</code> | -           |
 
 **Example:**
 
@@ -32,9 +32,9 @@ getHeaders()
 
 **Returns:**
 
-| Type                                                       | Description |
-| ---------------------------------------------------------- | ----------- |
-| <code>[org.figuramc.figura.lua.ReadOnlyLuaTable](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -54,9 +54,9 @@ getResponseCode()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Integer](#)</code> | -           |
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 

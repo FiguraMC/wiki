@@ -139,9 +139,9 @@ setPlaying(bool)
 
 **Parameters:**
 
-| Name | Type                      | Description                                                          | Default |
-| ---- | ------------------------- | -------------------------------------------------------------------- | ------- |
-| bool | <code>[Boolean](#)</code> | True or false value that dictates if the animation will play or stop | `false` |
+| Name | Type                                              | Description                                                          | Default |
+| ---- | ------------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false value that dictates if the animation will play or stop | `false` |
 
 **Returns:**
 
@@ -174,9 +174,9 @@ isPlaying()
 
 **Returns:**
 
-| Type                      | Description                                                     |
-| ------------------------- | --------------------------------------------------------------- |
-| <code>[Boolean](#)</code> | Returns true if the animation is playing, and false if it isn't |
+| Type                                              | Description                                                     |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns true if the animation is playing, and false if it isn't |
 
 **Example:**
 
@@ -196,9 +196,9 @@ isStopped()
 
 **Returns:**
 
-| Type                      | Description                                                     |
-| ------------------------- | --------------------------------------------------------------- |
-| <code>[Boolean](#)</code> | Returns true if the animation is stopped, and false if it isn't |
+| Type                                              | Description                                                     |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns true if the animation is stopped, and false if it isn't |
 
 **Example:**
 
@@ -218,9 +218,9 @@ isPaused()
 
 **Returns:**
 
-| Type                      | Description                                                    |
-| ------------------------- | -------------------------------------------------------------- |
-| <code>[Boolean](#)</code> | Returns true if the animation is paused, and false if it isn't |
+| Type                                              | Description                                                    |
+| ------------------------------------------------- | -------------------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns true if the animation is paused, and false if it isn't |
 
 **Example:**
 
@@ -240,9 +240,9 @@ getPlayState()
 
 **Returns:**
 
-| Type                     | Description                                |
-| ------------------------ | ------------------------------------------ |
-| <code>[String](#)</code> | Returns the [PlayState](/enums/PlayStates) |
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[String](/tutorials/types/Strings)</code> | Returns the [PlayState](/enums/PlayStates) |
 
 **Example:**
 
@@ -270,9 +270,9 @@ setSpeed(speed)
 
 **Parameters:**
 
-| Name  | Type                     | Description                | Default |
-| ----- | ------------------------ | -------------------------- | ------- |
-| speed | <code>[Number](#)</code> | Sets the animation's speed | `1`     |
+| Name  | Type                                            | Description                | Default |
+| ----- | ----------------------------------------------- | -------------------------- | ------- |
+| speed | <code>[Number](/tutorials/types/Numbers)</code> | Sets the animation's speed | `1`     |
 
 **Returns:**
 
@@ -298,9 +298,9 @@ getSpeed()
 
 **Returns:**
 
-| Type                     | Description                       |
-| ------------------------ | --------------------------------- |
-| <code>[Number](#)</code> | The animation's speed as a number |
+| Type                                            | Description                       |
+| ----------------------------------------------- | --------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The animation's speed as a number |
 
 **Example:**
 
@@ -322,9 +322,9 @@ setLength(length)
 
 **Parameters:**
 
-| Name   | Type                     | Description                    | Default |
-| ------ | ------------------------ | ------------------------------ | ------- |
-| length | <code>[Number](#)</code> | The length of time, in seconds | `0`     |
+| Name   | Type                                            | Description                    | Default |
+| ------ | ----------------------------------------------- | ------------------------------ | ------- |
+| length | <code>[Number](/tutorials/types/Numbers)</code> | The length of time, in seconds | `0`     |
 
 **Returns:**
 
@@ -350,9 +350,9 @@ getLength()
 
 **Returns:**
 
-| Type                     | Description                                |
-| ------------------------ | ------------------------------------------ |
-| <code>[Number](#)</code> | Returns the animation's length, in seconds |
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Returns the animation's length, in seconds |
 
 **Example:**
 
@@ -378,9 +378,9 @@ setPriority(priority)
 
 **Parameters:**
 
-| Name     | Type                      | Description                                      | Default |
-| -------- | ------------------------- | ------------------------------------------------ | ------- |
-| priority | <code>[Integer](#)</code> | The priority of the animation, as a whole number | `0`     |
+| Name     | Type                                             | Description                                      | Default |
+| -------- | ------------------------------------------------ | ------------------------------------------------ | ------- |
+| priority | <code>[Integer](/tutorials/types/Numbers)</code> | The priority of the animation, as a whole number | `0`     |
 
 **Returns:**
 
@@ -406,9 +406,9 @@ getPriority()
 
 **Returns:**
 
-| Type                      | Description                             |
-| ------------------------- | --------------------------------------- |
-| <code>[Integer](#)</code> | Returns the animation's priority number |
+| Type                                             | Description                             |
+| ------------------------------------------------ | --------------------------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Returns the animation's priority number |
 
 **Example:**
 
@@ -430,9 +430,9 @@ setTime(time)
 
 **Parameters:**
 
-| Name | Type                     | Description                                  | Default |
-| ---- | ------------------------ | -------------------------------------------- | ------- |
-| time | <code>[Number](#)</code> | The time to set the animation to, in seconds | `0`     |
+| Name | Type                                            | Description                                  | Default |
+| ---- | ----------------------------------------------- | -------------------------------------------- | ------- |
+| time | <code>[Number](/tutorials/types/Numbers)</code> | The time to set the animation to, in seconds | `0`     |
 
 **Returns:**
 
@@ -458,9 +458,9 @@ getTime()
 
 **Returns:**
 
-| Type                     | Description                                |
-| ------------------------ | ------------------------------------------ |
-| <code>[Number](#)</code> | Returns the playback time of the animation |
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Returns the playback time of the animation |
 
 **Example:**
 
@@ -484,9 +484,9 @@ setOffset(offset)
 
 **Parameters:**
 
-| Name   | Type                     | Description                           | Default |
-| ------ | ------------------------ | ------------------------------------- | ------- |
-| offset | <code>[Number](#)</code> | Time in seconds to skip for each loop | `0`     |
+| Name   | Type                                            | Description                           | Default |
+| ------ | ----------------------------------------------- | ------------------------------------- | ------- |
+| offset | <code>[Number](/tutorials/types/Numbers)</code> | Time in seconds to skip for each loop | `0`     |
 
 **Returns:**
 
@@ -512,9 +512,9 @@ getOffset()
 
 **Returns:**
 
-| Type                     | Description                                     |
-| ------------------------ | ----------------------------------------------- |
-| <code>[Number](#)</code> | The time that is skipped every loop, in seconds |
+| Type                                            | Description                                     |
+| ----------------------------------------------- | ----------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The time that is skipped every loop, in seconds |
 
 **Example:**
 
@@ -536,9 +536,9 @@ setLoop(loop)
 
 **Parameters:**
 
-| Name | Type                     | Description                            | Default  |
-| ---- | ------------------------ | -------------------------------------- | -------- |
-| loop | <code>[String](#)</code> | Sets the [LoopMode](/enums/Loop-Modes) | Required |
+| Name | Type                                            | Description                            | Default  |
+| ---- | ----------------------------------------------- | -------------------------------------- | -------- |
+| loop | <code>[String](/tutorials/types/Strings)</code> | Sets the [LoopMode](/enums/Loop-Modes) | Required |
 
 **Returns:**
 
@@ -564,9 +564,9 @@ getLoop()
 
 **Returns:**
 
-| Type                     | Description                               |
-| ------------------------ | ----------------------------------------- |
-| <code>[String](#)</code> | Returns the [LoopMode](/enums/Loop-Modes) |
+| Type                                            | Description                               |
+| ----------------------------------------------- | ----------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | Returns the [LoopMode](/enums/Loop-Modes) |
 
 **Example:**
 
@@ -588,9 +588,9 @@ setBlend(blend)
 
 **Parameters:**
 
-| Name  | Type                     | Description                                  | Default |
-| ----- | ------------------------ | -------------------------------------------- | ------- |
-| blend | <code>[Number](#)</code> | Strength of the blend factor between 0 and 1 | `1`     |
+| Name  | Type                                            | Description                                  | Default |
+| ----- | ----------------------------------------------- | -------------------------------------------- | ------- |
+| blend | <code>[Number](/tutorials/types/Numbers)</code> | Strength of the blend factor between 0 and 1 | `1`     |
 
 **Returns:**
 
@@ -616,9 +616,9 @@ getBlend()
 
 **Returns:**
 
-| Type                     | Description                                           |
-| ------------------------ | ----------------------------------------------------- |
-| <code>[Number](#)</code> | Gets the strength of the blend factor between 0 and 1 |
+| Type                                            | Description                                           |
+| ----------------------------------------------- | ----------------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the strength of the blend factor between 0 and 1 |
 
 **Example:**
 
@@ -642,9 +642,9 @@ setStartDelay(delay)
 
 **Parameters:**
 
-| Name  | Type                     | Description                             | Default |
-| ----- | ------------------------ | --------------------------------------- | ------- |
-| delay | <code>[Number](#)</code> | The time in seconds to set the delay to | `0`     |
+| Name  | Type                                            | Description                             | Default |
+| ----- | ----------------------------------------------- | --------------------------------------- | ------- |
+| delay | <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds to set the delay to | `0`     |
 
 **Returns:**
 
@@ -670,9 +670,9 @@ getStartDelay()
 
 **Returns:**
 
-| Type                     | Description                                 |
-| ------------------------ | ------------------------------------------- |
-| <code>[Number](#)</code> | The time in seconds that it's being delayed |
+| Type                                            | Description                                 |
+| ----------------------------------------------- | ------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds that it's being delayed |
 
 **Example:**
 
@@ -694,9 +694,9 @@ setLoopDelay(delay)
 
 **Parameters:**
 
-| Name  | Type                     | Description                             | Default |
-| ----- | ------------------------ | --------------------------------------- | ------- |
-| delay | <code>[Number](#)</code> | The time in seconds to set the delay to | `0`     |
+| Name  | Type                                            | Description                             | Default |
+| ----- | ----------------------------------------------- | --------------------------------------- | ------- |
+| delay | <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds to set the delay to | `0`     |
 
 **Returns:**
 
@@ -722,9 +722,9 @@ getLoopDelay()
 
 **Returns:**
 
-| Type                     | Description                                 |
-| ------------------------ | ------------------------------------------- |
-| <code>[Number](#)</code> | The time in seconds that it's being delayed |
+| Type                                            | Description                                 |
+| ----------------------------------------------- | ------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds that it's being delayed |
 
 **Example:**
 
@@ -750,9 +750,9 @@ setOverride(override)
 
 **Parameters:**
 
-| Name     | Type                      | Description                                                          | Default |
-| -------- | ------------------------- | -------------------------------------------------------------------- | ------- |
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override all transformations | `false` |
+| Name     | Type                                              | Description                                                          | Default |
+| -------- | ------------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override all transformations | `false` |
 
 **Returns:**
 
@@ -780,9 +780,9 @@ setOverrideRot(override)
 
 **Parameters:**
 
-| Name     | Type                      | Description                                               | Default |
-| -------- | ------------------------- | --------------------------------------------------------- | ------- |
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override rotation | `false` |
+| Name     | Type                                              | Description                                               | Default |
+| -------- | ------------------------------------------------- | --------------------------------------------------------- | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override rotation | `false` |
 
 **Returns:**
 
@@ -808,9 +808,9 @@ getOverrideRot()
 
 **Returns:**
 
-| Type                      | Description                                 |
-| ------------------------- | ------------------------------------------- |
-| <code>[Boolean](#)</code> | Returns if it should be overriding rotation |
+| Type                                              | Description                                 |
+| ------------------------------------------------- | ------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if it should be overriding rotation |
 
 **Example:**
 
@@ -832,9 +832,9 @@ setOverridePos(override)
 
 **Parameters:**
 
-| Name     | Type                      | Description                                               | Default |
-| -------- | ------------------------- | --------------------------------------------------------- | ------- |
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override position | `false` |
+| Name     | Type                                              | Description                                               | Default |
+| -------- | ------------------------------------------------- | --------------------------------------------------------- | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override position | `false` |
 
 **Returns:**
 
@@ -860,9 +860,9 @@ getOverridePos()
 
 **Returns:**
 
-| Type                      | Description                                 |
-| ------------------------- | ------------------------------------------- |
-| <code>[Boolean](#)</code> | Returns if it should be overriding position |
+| Type                                              | Description                                 |
+| ------------------------------------------------- | ------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if it should be overriding position |
 
 **Example:**
 
@@ -884,9 +884,9 @@ setOverrideScale(override)
 
 **Parameters:**
 
-| Name     | Type                      | Description                                            | Default |
-| -------- | ------------------------- | ------------------------------------------------------ | ------- |
-| override | <code>[Boolean](#)</code> | True or false if it should or shouldn't override scale | `false` |
+| Name     | Type                                              | Description                                            | Default |
+| -------- | ------------------------------------------------- | ------------------------------------------------------ | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override scale | `false` |
 
 **Returns:**
 
@@ -912,9 +912,9 @@ getOverrideScale()
 
 **Returns:**
 
-| Type                      | Description                              |
-| ------------------------- | ---------------------------------------- |
-| <code>[Boolean](#)</code> | Returns if it should be overriding scale |
+| Type                                              | Description                              |
+| ------------------------------------------------- | ---------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if it should be overriding scale |
 
 **Example:**
 
@@ -936,9 +936,9 @@ getName()
 
 **Returns:**
 
-| Type                     | Description                  |
-| ------------------------ | ---------------------------- |
-| <code>[String](#)</code> | Returns the animation's name |
+| Type                                            | Description                  |
+| ----------------------------------------------- | ---------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | Returns the animation's name |
 
 **Example:**
 
@@ -960,10 +960,10 @@ newCode(time, code)
 
 **Parameters:**
 
-| Name | Type                     | Description                            | Default  |
-| ---- | ------------------------ | -------------------------------------- | -------- |
-| time | <code>[Number](#)</code> | The time in seconds to add the code to | `0`      |
-| code | <code>[String](#)</code> | The code to run at that time           | Required |
+| Name | Type                                            | Description                            | Default  |
+| ---- | ----------------------------------------------- | -------------------------------------- | -------- |
+| time | <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds to add the code to | `0`      |
+| code | <code>[String](/tutorials/types/Strings)</code> | The code to run at that time           | Required |
 
 **Returns:**
 

@@ -36,11 +36,11 @@ setTexture(textureLocation, width, height)
 
 **Parameters:**
 
-| Name            | Type                      | Description | Default |
-| --------------- | ------------------------- | ----------- | ------- |
-| textureLocation | <code>[String](#)</code>  | -           | -       |
-| width           | <code>[Integer](#)</code> | -           | -       |
-| height          | <code>[Integer](#)</code> | -           | -       |
+| Name            | Type                                             | Description | Default |
+| --------------- | ------------------------------------------------ | ----------- | ------- |
+| textureLocation | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| width           | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height          | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -79,8 +79,8 @@ setTexture(texture, width, height)
 | Name    | Type                                              | Description | Default |
 | ------- | ------------------------------------------------- | ----------- | ------- |
 | texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| width   | <code>[Integer](#)</code>                         | -           | -       |
-| height  | <code>[Integer](#)</code>                         | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
 
 **Returns:**
 
@@ -99,7 +99,7 @@ setTexture(textureLocation, dimensions)
 
 | Name            | Type                                             | Description | Default |
 | --------------- | ------------------------------------------------ | ----------- | ------- |
-| textureLocation | <code>[String](#)</code>                         | -           | -       |
+| textureLocation | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
 | dimensions      | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
 
 **Returns:**
@@ -150,9 +150,9 @@ getTexture()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -219,12 +219,12 @@ setColor(r, g, b, a)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| r    | <code>[Number](#)</code> | -           | -       |
-| g    | <code>[Number](#)</code> | -           | -       |
-| b    | <code>[Number](#)</code> | -           | -       |
-| a    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -302,10 +302,10 @@ setDimensions(width, height)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| width  | <code>[Integer](#)</code> | -           | -       |
-| height | <code>[Integer](#)</code> | -           | -       |
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -383,10 +383,10 @@ setRegion(width, height)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| width  | <code>[Integer](#)</code> | -           | -       |
-| height | <code>[Integer](#)</code> | -           | -       |
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -444,9 +444,9 @@ setRenderType(renderType)
 
 **Parameters:**
 
-| Name       | Type                     | Description | Default |
-| ---------- | ------------------------ | ----------- | ------- |
-| renderType | <code>[String](#)</code> | -           | -       |
+| Name       | Type                                            | Description | Default |
+| ---------- | ----------------------------------------------- | ----------- | ------- |
+| renderType | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
@@ -472,9 +472,9 @@ getRenderType()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -518,10 +518,10 @@ setSize(width, height)
 
 **Parameters:**
 
-| Name   | Type                      | Description | Default |
-| ------ | ------------------------- | ----------- | ------- |
-| width  | <code>[Integer](#)</code> | -           | -       |
-| height | <code>[Integer](#)</code> | -           | -       |
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -599,10 +599,10 @@ setUV(u, v)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| u    | <code>[Number](#)</code> | -           | -       |
-| v    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| u    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| v    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -678,10 +678,10 @@ setUVPixels(u, v)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| u    | <code>[Number](#)</code> | -           | -       |
-| v    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| u    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| v    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -735,9 +735,9 @@ getVertices()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 
@@ -787,10 +787,10 @@ setLight(blockLight, skyLight)
 
 **Parameters:**
 
-| Name       | Type                      | Description | Default |
-| ---------- | ------------------------- | ----------- | ------- |
-| blockLight | <code>[Integer](#)</code> | -           | -       |
-| skyLight   | <code>[Integer](#)</code> | -           | -       |
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| blockLight | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| skyLight   | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -878,9 +878,9 @@ getName()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[String](#)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
 
 **Example:**
 
@@ -974,10 +974,10 @@ setOverlay(whiteOverlay, hurtOverlay)
 
 **Parameters:**
 
-| Name         | Type                      | Description | Default |
-| ------------ | ------------------------- | ----------- | ------- |
-| whiteOverlay | <code>[Integer](#)</code> | -           | -       |
-| hurtOverlay  | <code>[Integer](#)</code> | -           | -       |
+| Name         | Type                                             | Description | Default |
+| ------------ | ------------------------------------------------ | ----------- | ------- |
+| whiteOverlay | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| hurtOverlay  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1055,11 +1055,11 @@ setPos(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1181,11 +1181,11 @@ setRot(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1261,11 +1261,11 @@ setScale(x, y, z)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| x    | <code>[Number](#)</code> | -           | -       |
-| y    | <code>[Number](#)</code> | -           | -       |
-| z    | <code>[Number](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
@@ -1319,9 +1319,9 @@ setVisible(visible)
 
 **Parameters:**
 
-| Name    | Type                      | Description | Default |
-| ------- | ------------------------- | ----------- | ------- |
-| visible | <code>[Boolean](#)</code> | -           | -       |
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
 **Returns:**
 
@@ -1347,9 +1347,9 @@ isVisible()
 
 **Returns:**
 
-| Type                      | Description |
-| ------------------------- | ----------- |
-| <code>[Boolean](#)</code> | -           |
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
 

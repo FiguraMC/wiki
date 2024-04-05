@@ -26,7 +26,7 @@ newParticle(name, pos)
 
 | Name | Type                                             | Description                                                                           | Default  |
 | ---- | ------------------------------------------------ | ------------------------------------------------------------------------------------- | -------- |
-| name | <code>[String](#)</code>                         | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
+| name | <code>[String](/tutorials/types/Strings)</code>  | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
 | pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | The position in the world the particle will spawn in at                               | Required |
 
 **Returns:**
@@ -46,7 +46,7 @@ newParticle(name, pos, vel)
 
 | Name | Type                                             | Description                                                                           | Default                          |
 | ---- | ------------------------------------------------ | ------------------------------------------------------------------------------------- | -------------------------------- |
-| name | <code>[String](#)</code>                         | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                         |
+| name | <code>[String](/tutorials/types/Strings)</code>  | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                         |
 | pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | The position in the world the particle will spawn in at                               | Required                         |
 | vel  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -                                                                                     | The particle's original velocity |
 
@@ -65,12 +65,12 @@ newParticle(name, posX, posY, posZ)
 
 **Parameters:**
 
-| Name | Type                     | Description                                                                           | Default  |
-| ---- | ------------------------ | ------------------------------------------------------------------------------------- | -------- |
-| name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
-| posX | <code>[Number](#)</code> | The x position in the world the particle will spawn in at                             | Required |
-| posY | <code>[Number](#)</code> | The y position in the world the particle will spawn in at                             | `0`      |
-| posZ | <code>[Number](#)</code> | The z position in the world the particle will spawn in at                             | `0`      |
+| Name | Type                                            | Description                                                                           | Default  |
+| ---- | ----------------------------------------------- | ------------------------------------------------------------------------------------- | -------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required |
+| posX | <code>[Number](/tutorials/types/Numbers)</code> | The x position in the world the particle will spawn in at                             | Required |
+| posY | <code>[Number](/tutorials/types/Numbers)</code> | The y position in the world the particle will spawn in at                             | `0`      |
+| posZ | <code>[Number](/tutorials/types/Numbers)</code> | The z position in the world the particle will spawn in at                             | `0`      |
 
 **Returns:**
 
@@ -89,11 +89,11 @@ newParticle(name, pos, velX, velY, velZ)
 
 | Name | Type                                             | Description                                                                           | Default                            |
 | ---- | ------------------------------------------------ | ------------------------------------------------------------------------------------- | ---------------------------------- |
-| name | <code>[String](#)</code>                         | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                           |
+| name | <code>[String](/tutorials/types/Strings)</code>  | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                           |
 | pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | The position in the world the particle will spawn in at                               | Required                           |
-| velX | <code>[Number](#)</code>                         | -                                                                                     | The particle's original x velocity |
-| velY | <code>[Number](#)</code>                         | -                                                                                     | The particle's original y velocity |
-| velZ | <code>[Number](#)</code>                         | -                                                                                     | The particle's original z velocity |
+| velX | <code>[Number](/tutorials/types/Numbers)</code>  | -                                                                                     | The particle's original x velocity |
+| velY | <code>[Number](/tutorials/types/Numbers)</code>  | -                                                                                     | The particle's original y velocity |
+| velZ | <code>[Number](/tutorials/types/Numbers)</code>  | -                                                                                     | The particle's original z velocity |
 
 **Returns:**
 
@@ -112,10 +112,10 @@ newParticle(name, posX, posY, posZ, vel)
 
 | Name | Type                                             | Description                                                                           | Default                          |
 | ---- | ------------------------------------------------ | ------------------------------------------------------------------------------------- | -------------------------------- |
-| name | <code>[String](#)</code>                         | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                         |
-| posX | <code>[Number](#)</code>                         | The x position in the world the particle will spawn in at                             | Required                         |
-| posY | <code>[Number](#)</code>                         | The y position in the world the particle will spawn in at                             | `0`                              |
-| posZ | <code>[Number](#)</code>                         | The z position in the world the particle will spawn in at                             | `0`                              |
+| name | <code>[String](/tutorials/types/Strings)</code>  | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                         |
+| posX | <code>[Number](/tutorials/types/Numbers)</code>  | The x position in the world the particle will spawn in at                             | Required                         |
+| posY | <code>[Number](/tutorials/types/Numbers)</code>  | The y position in the world the particle will spawn in at                             | `0`                              |
+| posZ | <code>[Number](/tutorials/types/Numbers)</code>  | The z position in the world the particle will spawn in at                             | `0`                              |
 | vel  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -                                                                                     | The particle's original velocity |
 
 **Returns:**
@@ -133,15 +133,15 @@ newParticle(name, posX, posY, posZ, velX, velY, velZ)
 
 **Parameters:**
 
-| Name | Type                     | Description                                                                           | Default                            |
-| ---- | ------------------------ | ------------------------------------------------------------------------------------- | ---------------------------------- |
-| name | <code>[String](#)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                           |
-| posX | <code>[Number](#)</code> | The x position in the world the particle will spawn in at                             | Required                           |
-| posY | <code>[Number](#)</code> | The y position in the world the particle will spawn in at                             | `0`                                |
-| posZ | <code>[Number](#)</code> | The z position in the world the particle will spawn in at                             | `0`                                |
-| velX | <code>[Number](#)</code> | -                                                                                     | The particle's original x velocity |
-| velY | <code>[Number](#)</code> | -                                                                                     | The particle's original y velocity |
-| velZ | <code>[Number](#)</code> | -                                                                                     | The particle's original z velocity |
+| Name | Type                                            | Description                                                                           | Default                            |
+| ---- | ----------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | The particle's [java edition id](<https://minecraft.wiki/w/Particles_(Java_Edition)>) | Required                           |
+| posX | <code>[Number](/tutorials/types/Numbers)</code> | The x position in the world the particle will spawn in at                             | Required                           |
+| posY | <code>[Number](/tutorials/types/Numbers)</code> | The y position in the world the particle will spawn in at                             | `0`                                |
+| posZ | <code>[Number](/tutorials/types/Numbers)</code> | The z position in the world the particle will spawn in at                             | `0`                                |
+| velX | <code>[Number](/tutorials/types/Numbers)</code> | -                                                                                     | The particle's original x velocity |
+| velY | <code>[Number](/tutorials/types/Numbers)</code> | -                                                                                     | The particle's original y velocity |
+| velZ | <code>[Number](/tutorials/types/Numbers)</code> | -                                                                                     | The particle's original z velocity |
 
 **Returns:**
 
@@ -196,15 +196,15 @@ isPresent(id)
 
 **Parameters:**
 
-| Name | Type                     | Description       | Default |
-| ---- | ------------------------ | ----------------- | ------- |
-| id   | <code>[String](#)</code> | The particle name | `nil`   |
+| Name | Type                                            | Description       | Default |
+| ---- | ----------------------------------------------- | ----------------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | The particle name | `nil`   |
 
 **Returns:**
 
-| Type                      | Description                                                            |
-| ------------------------- | ---------------------------------------------------------------------- |
-| <code>[Boolean](#)</code> | Returns true or false value depending on if the particle is registered |
+| Type                                              | Description                                                            |
+| ------------------------------------------------- | ---------------------------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns true or false value depending on if the particle is registered |
 
 **Example:**
 

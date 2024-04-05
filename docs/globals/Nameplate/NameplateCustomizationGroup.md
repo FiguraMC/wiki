@@ -10,9 +10,9 @@ setText(text)
 
 **Parameters:**
 
-| Name | Type                     | Description                       | Default |
-| ---- | ------------------------ | --------------------------------- | ------- |
-| text | <code>[String](#)</code> | The text to set your nameplate to | `nil`   |
+| Name | Type                                            | Description                       | Default |
+| ---- | ----------------------------------------------- | --------------------------------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | The text to set your nameplate to | `nil`   |
 
 **Returns:**
 

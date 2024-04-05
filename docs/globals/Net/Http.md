@@ -10,15 +10,15 @@ request(uri)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| uri  | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| uri  | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                                 | Description |
-| ------------------------------------ | ----------- |
-| <code>[HttpRequestBuilder](#)</code> | -           |
+| Type                                                               | Description |
+| ------------------------------------------------------------------ | ----------- |
+| <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | -           |
 
 **Example:**
 

@@ -10,15 +10,15 @@ get(path)
 
 **Parameters:**
 
-| Name | Type                     | Description | Default |
-| ---- | ------------------------ | ----------- | ------- |
-| path | <code>[String](#)</code> | -           | -       |
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| path | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
 
 **Returns:**
 
-| Type                          | Description |
-| ----------------------------- | ----------- |
-| <code>[InputStream](#)</code> | -           |
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[InputStream](/globals/Data/InputStream)</code> | -           |
 
 **Example:**
 
@@ -38,9 +38,9 @@ getPaths()
 
 **Returns:**
 
-| Type                    | Description |
-| ----------------------- | ----------- |
-| <code>[Table](#)</code> | -           |
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
 
 **Example:**
 

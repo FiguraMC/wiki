@@ -20,9 +20,9 @@ createBuffer()
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Buffer](#)</code> | -           |
+| Type                                        | Description |
+| ------------------------------------------- | ----------- |
+| <code>[Buffer](/globals/Data/Buffer)</code> | -           |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -33,15 +33,15 @@ createBuffer(capacity)
 
 **Parameters:**
 
-| Name     | Type                      | Description | Default |
-| -------- | ------------------------- | ----------- | ------- |
-| capacity | <code>[Integer](#)</code> | -           | -       |
+| Name     | Type                                             | Description | Default |
+| -------- | ------------------------------------------------ | ----------- | ------- |
+| capacity | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
 **Returns:**
 
-| Type                     | Description |
-| ------------------------ | ----------- |
-| <code>[Buffer](#)</code> | -           |
+| Type                                        | Description |
+| ------------------------------------------- | ----------- |
+| <code>[Buffer](/globals/Data/Buffer)</code> | -           |
 
     </TabItem>
 
