@@ -4,6 +4,8 @@ An output data stream
 This page is a WIP.
 :::
 
+---
+
 ### <code>close()</code> \{#close}
 
 Closes this output stream.

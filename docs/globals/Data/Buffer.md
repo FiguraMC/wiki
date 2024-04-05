@@ -7,6 +7,8 @@ A byte buffer object
 This page is a WIP.
 :::
 
+---
+
 ### <code>getLength()</code> \{#getLength}
 
 Returns length of this buffer

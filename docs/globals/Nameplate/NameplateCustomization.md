@@ -1,5 +1,7 @@
 A customization that can be applied to a nameplate
 
+---
+
 ### <code>setText()</code> \{#setText}
 
 The text to use in this nameplate

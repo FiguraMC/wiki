@@ -4,6 +4,8 @@ A global API that contains HTTP related features
 This page is a WIP.
 :::
 
+---
+
 ### <code>request()</code> \{#request}
 
 Creates request builder for specified URI

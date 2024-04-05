@@ -12,6 +12,8 @@ For this entire page assuming:
 local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
 ```
 
+---
+
 ## Press/Release
 
 ### <code>setOnPress()</code> \{#setOnPress}

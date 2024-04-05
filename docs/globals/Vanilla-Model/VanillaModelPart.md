@@ -9,6 +9,8 @@ This page is a WIP.
 
 Can be queried for vanilla transform values
 
+---
+
 ### <code>setOffsetRot()</code> \{#setOffsetRot}
 
 **Aliases:** `offsetRot()`

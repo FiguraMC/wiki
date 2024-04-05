@@ -4,6 +4,8 @@ A global API that contains features to work with files
 This page is a WIP.
 :::
 
+---
+
 ### <code>allowed()</code> \{#allowed}
 
 Checks if FileAPI can be used for this avatar

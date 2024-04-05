@@ -7,6 +7,8 @@ A global API which provides functions for raycasting
 This page is a WIP.
 :::
 
+---
+
 ### <code>aabb()</code> \{#aabb}
 
 Raycasts based on a start position, an end position, and an array of Axis Aligned Bounding Boxes defined by the player.

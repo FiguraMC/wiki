@@ -4,6 +4,8 @@ sidebar_position: 1
 
 A global API which is used for customizing your player's nameplate in chat, above your head, and in the tab list
 
+---
+
 ### <code>CHAT</code> \{#CHAT}
 
 A customization for your nameplate in the chat
@@ -33,6 +35,8 @@ See [NameplateCustomization](../globals/Nameplate/NameplateCustomization) for `L
 A group that manages all your nameplate customizations at once
 
 See [NameplateCustomizationGroup](../globals/Nameplate/NameplateCustomizationGroup) for `All` functions
+
+---
 
 ## Using JSON
 

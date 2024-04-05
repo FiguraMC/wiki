@@ -13,6 +13,8 @@ A global API which is used for customizing your player's Action Wheel
 This page is a WIP.
 :::
 
+---
+
 ## Page
 
 For more on pages go to [Page](./Page.md)

@@ -11,6 +11,8 @@ Used for easy reference of normal parts
 
 All changes also applies to all children parts
 
+---
+
 ### <code>setOffsetRot()</code> \{#setOffsetRot}
 
 **Aliases:** `offsetRot()`

@@ -7,6 +7,8 @@ A global API which allows for creating textures at runtime
 This page is a WIP.
 :::
 
+---
+
 ### <code>get()</code> \{#get}
 
 Gets a registered texture based on its name, or nil if no texture was found with that name

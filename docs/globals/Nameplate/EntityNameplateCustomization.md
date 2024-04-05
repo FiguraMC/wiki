@@ -7,6 +7,8 @@ This page is a WIP.
 
 A nameplate customization that is specialized for entities
 
+---
+
 ## Text
 
 ### <code>setText()</code> \{#setText}

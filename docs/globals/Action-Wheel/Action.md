@@ -9,6 +9,8 @@ This page is a WIP.
 
 Actions are either interacted by clicking and scrolling, which also being able to be toggleable
 
+---
+
 ## Action Events
 
 ### <code>setOnLeftClick()</code> \{#setOnLeftClick}

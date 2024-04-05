@@ -42,6 +42,8 @@ end
 player:isGliding() -- will error
 ```
 
+---
+
 ## Player Transformations
 
 ### <code>getPos()</code> \{#getPos}

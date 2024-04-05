@@ -4,6 +4,8 @@ A texture atlas object, with helper functions related to a texture atlas
 This page is a WIP.
 :::
 
+---
+
 ### <code>getHeight()</code> \{#getHeight}
 
 Returns the height of this atlas

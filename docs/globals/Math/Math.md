@@ -7,6 +7,8 @@ This page is a WIP.
 
 Contains functions which Figura adds to the default Lua "math" library table
 
+---
+
 ## Methods
 
 ### <code>clamp()</code> \{#clamp}

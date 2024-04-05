@@ -13,6 +13,8 @@ local myAnim = animations.myModel.myAnimation
 
 For an explanation on indexing animations, see the [Animations Tutorial](/tutorials/Animations)
 
+---
+
 ## Play/Stop \{#Play-Stop}
 
 ### <code>play()</code> \{#play}

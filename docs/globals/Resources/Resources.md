@@ -4,6 +4,8 @@ The global instance of ResourcesAPI
 This page is a WIP.
 :::
 
+---
+
 ### <code>get()</code> \{#get}
 
 Returns input stream with data for resource at specified path

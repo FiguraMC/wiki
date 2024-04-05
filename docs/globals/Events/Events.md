@@ -8,7 +8,9 @@ A global API that contains all of the figura Events
 This page is a WIP.
 :::
 
-Accessed using the name "events"
+Accessed using the name `events`
+
+---
 
 ### Init
 

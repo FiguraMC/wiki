@@ -10,6 +10,8 @@ Accessed using the global field `vanilla_model`
 This page is a WIP.
 :::
 
+---
+
 ## Groups
 
 Go [here](VanillaModelGroup) for functions that effect these parts

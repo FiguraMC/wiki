@@ -7,6 +7,8 @@ A vertex object
 This page is a WIP.
 :::
 
+---
+
 ### <code>setPos()</code> \{#setPos}
 
 **Aliases:** `pos()`

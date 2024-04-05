@@ -8,6 +8,8 @@ A global API that contains features to work with JSON
 This page is a WIP.
 :::
 
+---
+
 ### <code>isSerializable()</code> \{#isSerializable}
 
 Checks if specified value can be serialized

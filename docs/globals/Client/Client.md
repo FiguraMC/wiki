@@ -9,6 +9,8 @@ A global API used to interact with the current Minecraft client
 
 Most of its functions return things that can be found in the F3 menu
 
+---
+
 ### <code>getViewer()</code> \{#getViewer}
 
 Returns the player entity from the running client

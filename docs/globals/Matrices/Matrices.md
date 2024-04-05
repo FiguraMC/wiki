@@ -9,6 +9,8 @@ This page is a WIP.
 
 Accessed using the name "matrices"
 
+---
+
 ## Matrix2
 
 ### <code>mat2()</code> \{#mat2}

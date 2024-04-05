@@ -7,6 +7,8 @@ This page is a WIP.
 
 A global API providing functions that change the way Minecraft renders your player
 
+---
+
 ## Altering the Camera
 
 ### <code>setCameraMatrix()</code> \{#setCameraMatrix}

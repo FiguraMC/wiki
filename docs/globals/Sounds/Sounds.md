@@ -9,6 +9,8 @@ This page is a WIP.
 
 Accessed using the name "sounds"
 
+---
+
 ### <code>playSound()</code> \{#playSound}
 
 Plays the specified sound at the specified position with the given volume and pitch multipliers

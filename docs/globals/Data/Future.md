@@ -4,6 +4,8 @@ Object that contains result of operation that cant be finished immediately
 This page is a WIP.
 :::
 
+---
+
 ### <code>getOrError()</code> \{#getOrError}
 
 Throws error if it occurred while execution of this future, returns value otherwise

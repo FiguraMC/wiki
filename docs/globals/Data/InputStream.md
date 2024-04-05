@@ -4,6 +4,8 @@ An input data stream
 This page is a WIP.
 :::
 
+---
+
 ### <code>available()</code> \{#available}
 
 Returns amount of bytes available

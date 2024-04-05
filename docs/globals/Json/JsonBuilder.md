@@ -4,6 +4,8 @@ JSON serializer builder
 This page is a WIP.
 :::
 
+---
+
 ### <code>build()</code> \{#build}
 
 Builds serializer with current settings

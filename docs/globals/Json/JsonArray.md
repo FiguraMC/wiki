@@ -4,6 +4,8 @@ JSON Array, basically a table but more restricted to match JSON arrays
 This page is a WIP.
 :::
 
+---
+
 ### <code>set()</code> \{#set}
 
 Sets provided value to specified index in this array

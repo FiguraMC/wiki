@@ -7,6 +7,8 @@ An Action Wheel container which is used to store up to 8 actions
 This page is a WIP.
 :::
 
+---
+
 ### <code>getTitle()</code> \{#getTitle}
 
 Returns the title of this Page

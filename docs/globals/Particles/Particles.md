@@ -7,6 +7,8 @@ Particles instances are created when indexing their id
 
 Accessed using the name "particles"
 
+---
+
 ### <code>newParticle()</code> \{#newParticle}
 
 Creates a particle with the given name at the specified position, with the given velocity

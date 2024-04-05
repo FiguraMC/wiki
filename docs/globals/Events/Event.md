@@ -9,6 +9,8 @@ This page is a WIP.
 
 You may register functions to one, and those functions will be called when the event occurs
 
+---
+
 ### <code>register()</code> \{#register}
 
 Register a function on this event

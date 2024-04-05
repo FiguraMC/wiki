@@ -194,6 +194,8 @@ vec4(x, y, z, w)
 --todo
 ```
 
+---
+
 ## Colors
 
 ### <code>hexToRGB()</code> \{#hexToRGB}
@@ -479,6 +481,8 @@ rgbToInt(r, g, b)
 ```lua
 --todo
 ```
+
+---
 
 ## Misc
 

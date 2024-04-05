@@ -8,6 +8,8 @@ A global API that contains networking related features
 This page is a WIP.
 :::
 
+---
+
 ### <code>isLinkAllowed()</code> \{#isLinkAllowed}
 
 Checks if specified link allowed for usage in networking api

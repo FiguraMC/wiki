@@ -3,6 +3,8 @@ import TabItem from '@theme/TabItem'
 
 A global API used for control of Blockbench Animations
 
+---
+
 ### <code>stopAll()</code> \{#stopAll}
 
 Stops all playing (and paused) animations

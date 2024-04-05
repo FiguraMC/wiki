@@ -7,6 +7,8 @@ A global API containing a function to create new Keybind instances
 This page is a WIP.
 :::
 
+---
+
 ### <code>newKeybind()</code> \{#newKeybind}
 
 **Aliases:** `of()`

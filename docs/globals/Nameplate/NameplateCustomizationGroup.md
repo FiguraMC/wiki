@@ -1,5 +1,7 @@
 A customization that holds other nameplate customizations
 
+---
+
 ### <code>setText()</code> \{#setText}
 
 Sets the text for all its children customizations

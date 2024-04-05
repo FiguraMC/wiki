@@ -11,6 +11,8 @@ A global API that provides functions to work with data related features
 This page is a WIP.
 :::
 
+---
+
 ### <code>createBuffer()</code> \{#createBuffer}
 
 Creates an empty buffer

@@ -1,11 +1,13 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A global API used to save and load avatar data between game sessions
+
 :::danger
 This page is a WIP.
 :::
 
-A global API used to save and load avatar data between game sessions
+---
 
 ### <code>setName()</code> \{#setName}
 
