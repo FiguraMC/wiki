@@ -7,15 +7,35 @@ A builder for HTTP request
 
 figura.docs.http_request_builder.get_data
 
+<Tabs>
+    <TabItem value="overload-1" label="Overload 1">
+
 ```lua
 getBody()
 ```
 
 **Returns:**
 
-| Type                                | Description |
-| ----------------------------------- | ----------- |
-| <code>[java.util.Objects](#)</code> | -           |
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[InputStream](/globals/Data/InputStream)</code> | -           |
+
+    </TabItem>
+    <TabItem value="overload-2" label="Overload 2">
+
+```lua
+getBody()
+```
+
+**Returns:**
+
+| Type                                        | Description |
+| ------------------------------------------- | ----------- |
+| <code>[Buffer](/globals/Data/Buffer)</code> | -           |
+
+    </TabItem>
+
+</Tabs>
 
 **Example:**
 
