@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 A global API used to save and load avatar data between game sessions
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -36,7 +36,7 @@ setName(name)
 **Example:**
 
 ```lua
---todo
+config:setName("Something")
 ```
 
 ---
@@ -58,7 +58,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+config:getName()
 ```
 
 ---
@@ -108,7 +108,7 @@ load(key)
 **Example:**
 
 ```lua
---todo
+config:load("apple")
 ```
 
 ---
@@ -139,7 +139,7 @@ save(key, value)
 **Example:**
 
 ```lua
---todo
+config:save("apple", false)
 ```
 
 ---

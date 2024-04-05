@@ -18,7 +18,7 @@ Adds the other matrix to this one
 Returns self for chaining
 
 ```lua
-add(other)
+--todo
 ```
 
 **Parameters:**
@@ -88,7 +88,7 @@ det()
 **Example:**
 
 ```lua
---todo
+myMat:det()
 ```
 
 ---
@@ -112,7 +112,7 @@ invert()
 **Example:**
 
 ```lua
---todo
+myMat:invert()
 ```
 
 ---
@@ -134,7 +134,7 @@ inverted()
 **Example:**
 
 ```lua
---todo
+myMat:inverted()
 ```
 
 ---
@@ -226,7 +226,7 @@ getColumn(col)
 **Example:**
 
 ```lua
---todo
+myMat:getColumn(1)
 ```
 
 ---
@@ -256,7 +256,7 @@ getRow(row)
 **Example:**
 
 ```lua
---todo
+myMat:getRow(1)
 ```
 
 ---
@@ -314,7 +314,7 @@ apply(x, y, z)
 **Example:**
 
 ```lua
---todo
+myMat:apply()
 ```
 
 ---
@@ -370,7 +370,7 @@ applyDir(x, y, z)
 **Example:**
 
 ```lua
---todo
+myMat:applyDir()
 ```
 
 ---
@@ -430,7 +430,7 @@ rotate(x, y, z)
 **Example:**
 
 ```lua
---todo
+myMat:rotate(90, 90, 90)
 ```
 
 ---
@@ -460,7 +460,7 @@ rotateX(degrees)
 **Example:**
 
 ```lua
---todo
+myMat:rotateX(90)
 ```
 
 ---
@@ -490,7 +490,7 @@ rotateY(degrees)
 **Example:**
 
 ```lua
---todo
+myMat:rotateY(90)
 ```
 
 ---
@@ -520,7 +520,7 @@ rotateZ(degrees)
 **Example:**
 
 ```lua
---todo
+myMat:rotateZ(90)
 ```
 
 ---
@@ -578,7 +578,7 @@ scale(x, y, z)
 **Example:**
 
 ```lua
---todo
+myMat:scale(2, 2, 2)
 ```
 
 ---
@@ -636,7 +636,7 @@ translate(x, y, z)
 **Example:**
 
 ```lua
---todo
+myMat:translate(2, 2, 2)
 ```
 
 ---
@@ -662,7 +662,7 @@ transpose()
 **Example:**
 
 ```lua
---todo
+myMat:transpose()
 ```
 
 ---
@@ -686,7 +686,7 @@ transposed()
 **Example:**
 
 ```lua
---todo
+myMat:transposed()
 ```
 
 ---
@@ -718,7 +718,7 @@ set(other)
 **Example:**
 
 ```lua
---todo
+myMat:set()
 ```
 
 ---
@@ -740,7 +740,7 @@ copy()
 **Example:**
 
 ```lua
---todo
+myMat:copy()
 ```
 
 ---
@@ -762,7 +762,7 @@ deaugmented()
 **Example:**
 
 ```lua
---todo
+myMat:deaugmented()
 ```
 
 ---
@@ -786,7 +786,7 @@ reset()
 **Example:**
 
 ```lua
---todo
+myMat:reset()
 ```
 
 ---

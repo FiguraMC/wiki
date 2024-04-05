@@ -1,5 +1,8 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
+import Emoji from '@site/src/components/Emoji';
+import FileTreeRoot from '@site/src/components/FileTree/Root';
+import FileTreeNode from '@site/src/components/FileTree/Node';
 
 :::danger
 This page is a WIP.
@@ -379,10 +382,36 @@ require(scriptName)
 | -------------------- | ----------- |
 | <code>AnyType</code> | -           |
 
-**Example:**
+**Examples:**
+
+#### Script in root folder
+
+<FileTreeRoot>
+  <FileTreeNode label="MyCoolAvatar" icon="file/folder">
+    <FileTreeNode label="script" icon="file/lua"/>
+    <FileTreeNode label="JimmyAnims" icon="file/lua"/>
+  </FileTreeNode>
+</FileTreeRoot>
 
 ```lua
---todo
+-- script.lua
+require("JimmyAnims")
+```
+
+#### Script in another folder
+
+<FileTreeRoot>
+  <FileTreeNode label="MyCoolAvatar" icon="file/folder">
+    <FileTreeNode label="script" icon="file/lua"/>
+    <FileTreeNode label="MyFolder" icon="file/folder">
+      <FileTreeNode label="GSAnimBlend" icon="file/lua"/>
+    </FileTreeNode>
+  </FileTreeNode>
+</FileTreeRoot>
+
+```lua
+-- script.lua
+require("MyFolder.GSAnimBlend")
 ```
 
 ---

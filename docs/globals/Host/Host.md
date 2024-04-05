@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -30,7 +30,7 @@ isHost()
 **Example:**
 
 ```lua
---todo
+host:isHost()
 ```
 
 ---
@@ -54,7 +54,7 @@ isContainerOpen()
 **Example:**
 
 ```lua
---todo
+host:isContainerOpen()
 ```
 
 ---
@@ -76,7 +76,7 @@ isFlying()
 **Example:**
 
 ```lua
---todo
+host:isHost()
 ```
 
 ---
@@ -100,7 +100,7 @@ isJumping()
 **Example:**
 
 ```lua
---todo
+host:isJumping()
 ```
 
 ---
@@ -122,7 +122,7 @@ getAir()
 **Example:**
 
 ```lua
---todo
+host:getAir()
 ```
 
 ---
@@ -222,7 +222,8 @@ setSlot(slot, item)
 **Example:**
 
 ```lua
---todo
+host:setSlot(0, "apple")
+-- setSlot also accepts an ItemStack retrieved from an actual item or world:newItem()
 ```
 
 ---
@@ -278,7 +279,7 @@ getSlot(slot)
 **Example:**
 
 ```lua
---todo
+host:getSlot(0)
 ```
 
 ---
@@ -336,7 +337,7 @@ getScreenSlot(slot)
 **Example:**
 
 ```lua
---todo
+host:getScreenSlot(0)
 ```
 
 ---
@@ -360,7 +361,7 @@ getScreenSlotCount()
 **Example:**
 
 ```lua
---todo
+host:getScreenSlotCount()
 ```
 
 ---
@@ -384,7 +385,7 @@ getScreen()
 **Example:**
 
 ```lua
---todo
+host:getScreen()
 ```
 
 ---
@@ -408,7 +409,9 @@ getStatusEffects()
 **Example:**
 
 ```lua
---todo
+for _, effect in pairs(host:getStatusEffects()) do
+    logTable(effect)
+end
 ```
 
 ---
@@ -432,7 +435,7 @@ getAttackCharge()
 **Example:**
 
 ```lua
---todo
+host:getAttackCharge()
 ```
 
 ---
@@ -454,7 +457,7 @@ getReachDistance()
 **Example:**
 
 ```lua
---todo
+host:getReachDistance()
 ```
 
 ---
@@ -478,7 +481,7 @@ getPickBlock()
 **Example:**
 
 ```lua
---todo
+host:getPickBlock()
 ```
 
 ---
@@ -500,7 +503,7 @@ getPickEntity()
 **Example:**
 
 ```lua
---todo
+host:getPickEntity()
 ```
 
 ---
@@ -524,7 +527,7 @@ isChatOpen()
 **Example:**
 
 ```lua
---todo
+host:isChatOpen()
 ```
 
 ---
@@ -546,7 +549,7 @@ isChatVerified()
 **Example:**
 
 ```lua
---todo
+host:isChatVerified()
 ```
 
 ---
@@ -554,6 +557,10 @@ isChatVerified()
 ### <code>sendChatCommand()</code> \{#sendChatCommand}
 
 Sends the given command in the chat
+
+:::caution
+In order to use this function you must turn the `Chat Messages` setting on in Figura's settings
+:::
 
 ```lua
 sendChatCommand(command)
@@ -574,7 +581,7 @@ sendChatCommand(command)
 **Example:**
 
 ```lua
---todo
+host:sendChatCommand("kill @a")
 ```
 
 ---
@@ -582,6 +589,10 @@ sendChatCommand(command)
 ### <code>sendChatMessage()</code> \{#sendChatMessage}
 
 Sends the given message in the chat
+
+:::caution
+In order to you this function you must turn the `Chat Messages` setting on in Figura's settings
+:::
 
 ```lua
 sendChatMessage(message)
@@ -602,7 +613,7 @@ sendChatMessage(message)
 **Example:**
 
 ```lua
---todo
+host:sendChatMessage("Hello World")
 ```
 
 ---
@@ -660,7 +671,7 @@ setChatColor(r, g, b)
 **Example:**
 
 ```lua
---todo
+host:setChatColor(0, 0, 1)
 ```
 
 ---
@@ -682,7 +693,7 @@ getChatColor()
 **Example:**
 
 ```lua
---todo
+host:getChatColor()
 ```
 
 ---
@@ -762,7 +773,7 @@ setChatMessage(index, newMessage, backgroundColor)
 **Example:**
 
 ```lua
---todo
+host:setChatMessage(1, "Hi?", vec(1, 0, 0))
 ```
 
 ---
@@ -792,7 +803,7 @@ getChatMessage(index)
 **Example:**
 
 ```lua
---todo
+host:getChatMessage(1)
 ```
 
 ---
@@ -802,6 +813,10 @@ getChatMessage(index)
 **Aliases:** `chatText()`
 
 Sets the text currently being typed in the chat window to the given string
+
+:::caution
+In order to use this function you must turn the `Chat Messages` setting on in Figura's settings
+:::
 
 ```lua
 setChatText(text)
@@ -822,7 +837,7 @@ setChatText(text)
 **Example:**
 
 ```lua
---todo
+host:setChatText("Hello World")
 ```
 
 ---
@@ -844,7 +859,7 @@ getChatText()
 **Example:**
 
 ```lua
---todo
+host:getChatText() == "Hello World"
 ```
 
 ---
@@ -872,7 +887,7 @@ appendChatHistory(message)
 **Example:**
 
 ```lua
---todo
+host:appendChatHistory("Hello World")
 ```
 
 ---
@@ -933,7 +948,7 @@ setActionbar(text, animated)
 **Example:**
 
 ```lua
---todo
+host:setActionbar("Hello World")
 ```
 
 ---
@@ -963,7 +978,7 @@ setClipboard(text)
 **Example:**
 
 ```lua
---todo
+host:setClipboard("Hello World")
 ```
 
 ---
@@ -985,7 +1000,7 @@ getClipboard()
 **Example:**
 
 ```lua
---todo
+host:getClipboard()
 ```
 
 ---
@@ -1017,7 +1032,7 @@ setSubtitle(text)
 **Example:**
 
 ```lua
---todo
+host:setSubtitle("Hello World")
 ```
 
 ---
@@ -1049,7 +1064,7 @@ setTitle(text)
 **Example:**
 
 ```lua
---todo
+host:setTitle("Hello World")
 ```
 
 ---
@@ -1107,7 +1122,7 @@ setTitleTimes(fadeInTime, stayTime, fadeOutTime)
 **Example:**
 
 ```lua
---todo
+host:setTitleTimes(5, 5, 5)
 ```
 
 ---
@@ -1135,7 +1150,7 @@ setUnlockCursor(boolean)
 **Example:**
 
 ```lua
---todo
+host:setUnlockCursor(true)
 ```
 
 ---
@@ -1157,7 +1172,7 @@ clearTitle()
 **Example:**
 
 ```lua
---todo
+host:clearTitle()
 ```
 
 ---
@@ -1179,7 +1194,7 @@ isAvatarUploaded()
 **Example:**
 
 ```lua
---todo
+host:isAvatarUploaded()
 ```
 
 ---
@@ -1203,7 +1218,7 @@ isCursorUnlocked()
 **Example:**
 
 ```lua
---todo
+host:isCursorUnlocked()
 ```
 
 ---
@@ -1231,7 +1246,7 @@ screenshot(name)
 **Example:**
 
 ```lua
---todo
+host:screenshot()
 ```
 
 ---
@@ -1281,7 +1296,7 @@ swingArm(offhand)
 **Example:**
 
 ```lua
---todo
+host:swingArm()
 ```
 
 ---
@@ -1292,10 +1307,6 @@ swingArm(offhand)
 
 Setting this value to true will unlock your cursor, letting you move it freely on the screen instead of it controlling your player's rotation
 
-**Example:**
-
-```lua
---todo
-```
+See [`setUnlockCursor`](#setUnlockCursor) for an example of how to set it.
 
 ---

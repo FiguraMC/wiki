@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -28,7 +28,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+avatar:getName()
 ```
 
 ---
@@ -50,7 +50,7 @@ getAuthors()
 **Example:**
 
 ```lua
---todo
+avatar:getAuthors()
 ```
 
 ---
@@ -72,7 +72,7 @@ getVersion()
 **Example:**
 
 ```lua
---todo
+avatar:getVersion()
 ```
 
 ---
@@ -94,7 +94,7 @@ hasTexture()
 **Example:**
 
 ```lua
---todo
+avatar:hasTexture()
 ```
 
 ---
@@ -218,7 +218,7 @@ getColor()
 **Example:**
 
 ```lua
---todo
+avatar:setColor(50 / 255, 200 / 255, 200 / 255)
 ```
 
 ---
@@ -253,7 +253,7 @@ store(key, value)
 **Example:**
 
 ```lua
---todo
+avatar:store("storing", true)
 ```
 
 ---
@@ -275,7 +275,7 @@ getSize()
 **Example:**
 
 ```lua
---todo
+avatar:getSize()
 ```
 
 ---
@@ -297,7 +297,7 @@ getEntityName()
 **Example:**
 
 ```lua
---todo
+avatar:getEntityName()
 ```
 
 ---
@@ -319,7 +319,7 @@ getUUID()
 **Example:**
 
 ```lua
---todo
+avatar:getUUID()
 ```
 
 ---
@@ -341,7 +341,7 @@ getNBT()
 **Example:**
 
 ```lua
---todo
+avatar:getNBT()
 ```
 
 ---
@@ -365,7 +365,7 @@ getBadges()
 **Example:**
 
 ```lua
---todo
+avatar:getBadges()
 ```
 
 ---
@@ -387,7 +387,7 @@ hasScriptError()
 **Example:**
 
 ```lua
---todo
+avatar:hasScriptError()
 ```
 
 ---
@@ -411,7 +411,7 @@ getPermissionLevel()
 **Example:**
 
 ```lua
---todo
+avatar:getPermissionLevel()
 ```
 
 ---
@@ -433,7 +433,7 @@ getComplexity()
 **Example:**
 
 ```lua
---todo
+avatar:getComplexity()
 ```
 
 ---
@@ -455,7 +455,7 @@ getVolume()
 **Example:**
 
 ```lua
---todo
+avatar:getVolume()
 ```
 
 ---
@@ -479,7 +479,7 @@ getCurrentInstructions()
 **Example:**
 
 ```lua
---todo
+avatar:getCurrentInstructions()
 ```
 
 ---
@@ -501,7 +501,7 @@ getInitCount()
 **Example:**
 
 ```lua
---todo
+avatar:getInitCount()
 ```
 
 ---
@@ -523,7 +523,7 @@ getEntityInitCount()
 **Example:**
 
 ```lua
---todo
+avatar:getEntityInitCount()
 ```
 
 ---
@@ -545,7 +545,7 @@ getMaxInitCount()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxInitCount()
 ```
 
 ---
@@ -567,7 +567,7 @@ getTickCount()
 **Example:**
 
 ```lua
---todo
+avatar:getTickCount()
 ```
 
 ---
@@ -589,7 +589,7 @@ getMaxTickCount()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxTickCount()
 ```
 
 ---
@@ -611,7 +611,7 @@ getRenderCount()
 **Example:**
 
 ```lua
---todo
+avatar:getRenderCount()
 ```
 
 ---
@@ -633,7 +633,7 @@ getMaxRenderCount()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxRenderCount()
 ```
 
 ---
@@ -655,7 +655,7 @@ getWorldTickCount()
 **Example:**
 
 ```lua
---todo
+avatar:getWorldTickCount()
 ```
 
 ---
@@ -677,7 +677,7 @@ getMaxWorldTickCount()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxWorldTickCount()
 ```
 
 ---
@@ -699,7 +699,7 @@ getWorldRenderCount()
 **Example:**
 
 ```lua
---todo
+avatar:getWorldRenderCount()
 ```
 
 ---
@@ -721,7 +721,7 @@ getMaxWorldRenderCount()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxWorldRenderCount()
 ```
 
 ---
@@ -743,7 +743,7 @@ getMaxComplexity()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxComplexity()
 ```
 
 ---
@@ -765,7 +765,7 @@ getRemainingParticles()
 **Example:**
 
 ```lua
---todo
+avatar:getRemainingParticles()
 ```
 
 ---
@@ -787,7 +787,7 @@ getMaxParticles()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxParticles()
 ```
 
 ---
@@ -809,7 +809,7 @@ getRemainingSounds()
 **Example:**
 
 ```lua
---todo
+avatar:getRemainingSounds()
 ```
 
 ---
@@ -831,7 +831,7 @@ getMaxSounds()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxSounds()
 ```
 
 ---
@@ -853,7 +853,7 @@ getAnimationComplexity()
 **Example:**
 
 ```lua
---todo
+avatar:getAnimationComplexity()
 ```
 
 ---
@@ -875,7 +875,7 @@ getMaxAnimationComplexity()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxAnimationComplexity()
 ```
 
 ---
@@ -897,7 +897,7 @@ getAnimationCount()
 **Example:**
 
 ```lua
---todo
+avatar:getAnimationCount()
 ```
 
 ---
@@ -919,7 +919,7 @@ getMaxAnimationCount()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxAnimationCount()
 ```
 
 ---
@@ -941,7 +941,7 @@ getBuffersCount()
 **Example:**
 
 ```lua
---todo
+avatar:getBuffersCount()
 ```
 
 ---
@@ -963,7 +963,7 @@ getMaxBuffersCount()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxBuffersCount()
 ```
 
 ---
@@ -985,7 +985,7 @@ getMaxTextureSize()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxTextureSize()
 ```
 
 ---
@@ -1007,7 +1007,7 @@ getMaxBufferSize()
 **Example:**
 
 ```lua
---todo
+avatar:getMaxBuffersSize()
 ```
 
 ---
@@ -1029,7 +1029,7 @@ canEditVanillaModel()
 **Example:**
 
 ```lua
---todo
+avatar:canEditVanillaModel()
 ```
 
 ---
@@ -1051,7 +1051,7 @@ canEditNameplate()
 **Example:**
 
 ```lua
---todo
+avatar:canEditNameplate()
 ```
 
 ---
@@ -1073,7 +1073,7 @@ canRenderOffscreen()
 **Example:**
 
 ```lua
---todo
+avatar:canRenderOffscreen()
 ```
 
 ---
@@ -1095,7 +1095,7 @@ canUseCustomSounds()
 **Example:**
 
 ```lua
---todo
+avatar:canUseCustomSounds()
 ```
 
 ---
@@ -1117,7 +1117,7 @@ canHaveCustomSkull()
 **Example:**
 
 ```lua
---todo
+avatar:canHaveCustomSkull()
 ```
 
 ---

@@ -26,7 +26,7 @@ getTitle()
 **Example:**
 
 ```lua
---todo
+local myAction = myPage:newAction()
 ```
 
 ---
@@ -78,7 +78,7 @@ newAction(index)
 **Example:**
 
 ```lua
---todo
+local myAction = myPage:newAction()
 ```
 
 ---
@@ -106,7 +106,7 @@ getAction(index)
 **Example:**
 
 ```lua
---todo
+myPage:getAction(1)
 ```
 
 ---
@@ -158,7 +158,7 @@ getActions(shift)
 **Example:**
 
 ```lua
---todo
+myPage:getActions()
 ```
 
 ---
@@ -191,7 +191,8 @@ setAction(index, action)
 **Example:**
 
 ```lua
---todo
+local myAction = action_wheel:newAction()
+myPage:setAction(-1, myAction)
 ```
 
 ---
@@ -221,7 +222,7 @@ setKeepSlots(bool)
 **Example:**
 
 ```lua
---todo
+myPage:setKeepSlots(true)
 ```
 
 ---
@@ -253,7 +254,7 @@ setSlotsShift(shift)
 **Example:**
 
 ```lua
---todo
+myPage:setSlotsShift(1)
 ```
 
 ---
@@ -277,7 +278,7 @@ getSlotsShift()
 **Example:**
 
 ```lua
---todo
+myPage:getSlotsShift()
 ```
 
 ---
@@ -299,7 +300,7 @@ shouldKeepSlots()
 **Example:**
 
 ```lua
---todo
+myPage:shouldKeepSlots()
 ```
 
 ---
@@ -310,10 +311,6 @@ shouldKeepSlots()
 
 Whether or not this page's current slots should be reset when adding this page on the Action Wheel
 
-**Example:**
-
-```lua
---todo
-```
+See [`setKeepSlots`](#setKeepSlots) for an example of how to set it
 
 ---

@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 A global API containing a function to create new Keybind instances
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -90,7 +90,7 @@ newKeybind(name, key, gui)
 **Example:**
 
 ```lua
---todo
+local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
 ```
 
 ---
@@ -120,7 +120,7 @@ getVanillaKey(id)
 **Example:**
 
 ```lua
---todo
+local myKey = keybinds:newKeybind("Name", keybinds:getVanillaKey("key.attack"), false)
 ```
 
 ---
@@ -148,7 +148,7 @@ fromVanilla(id)
 **Example:**
 
 ```lua
---todo
+local myKey = keybinds:fromVanilla("key.attack")
 ```
 
 ---
@@ -170,7 +170,7 @@ getKeybinds()
 **Example:**
 
 ```lua
---todo
+keybinds:getKeybinds()
 ```
 
 ---

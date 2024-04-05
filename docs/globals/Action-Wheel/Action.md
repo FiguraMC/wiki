@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 An action in the Figura Action Wheel
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -42,7 +42,12 @@ setOnLeftClick(leftFunction)
 **Example:**
 
 ```lua
---todo
+function pings.lefty()
+    print("I left clicked this button!")
+end
+
+local myAction = myPage:newAction():setOnLeftClick(pings.lefty)
+-- highlight-next-line
 ```
 
 ---
@@ -76,7 +81,12 @@ setOnRightClick(rightFunction)
 **Example:**
 
 ```lua
---todo
+function pings.righty()
+    print("I right clicked this button!")
+end
+
+local myAction = myPage:newAction():setOnRightClick(pings.righty)
+-- highlight-next-line
 ```
 
 ---
@@ -112,7 +122,14 @@ setOnToggle(leftFunction)
 **Example:**
 
 ```lua
---todo
+function pings.setVisible(state)
+    models:setVisible(state)
+end
+
+local myAction = myPage:newAction():title("disabled"):toggleTitle("enabled"):item("red_wool"):toggleItem(
+    "green_wool"
+    -- highlight-next-line
+):setOnToggle(pings.setVisible)
 ```
 
 ---
@@ -148,7 +165,19 @@ setOnUntoggle(rightFunction)
 **Example:**
 
 ```lua
---todo
+function pings.toggley(bool)
+    print('This is always true: ', .. bool)
+end
+
+function pings.untoggley(bool)
+    print('This is always false: ' .. bool)
+end
+
+local myAction = myPage:newAction()
+    :setOnToggle(pings.toggley)
+-- highlight-start
+    :setOnUntoggle(pings.untoggley)
+-- highlight-end
 ```
 
 ---
@@ -184,7 +213,22 @@ setOnScroll(scrollFunction)
 **Example:**
 
 ```lua
---todo
+local current = 0
+
+function pings.scrolling(dir)
+    print("Scrolled in this direction: " .. dir)
+end
+
+local myAction = myPage:newAction():title(
+    "Current: ",
+    current
+    -- highlight-start
+):setOnScroll(function(dir, self)
+    pings.scrolling(dir)
+    current = current + dir
+    self:title("Current: ", current)
+end)
+-- highlight-end
 ```
 
 ---
@@ -244,7 +288,9 @@ setColor(r, g, b)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setColor(255 / 255, 192 / 155, 203 / 255)
+-- highlight-next-line
 ```
 
 ---
@@ -266,7 +312,11 @@ getColor()
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setColor(255 / 255, 192 / 155, 203 / 255)
+
+-- highlight-next-line
+print(myAction:getColor())
 ```
 
 ---
@@ -324,7 +374,9 @@ setHoverColor(r, g, b)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setHoverColor(255 / 255, 192 / 155, 203 / 255)
+-- highlight-next-line
 ```
 
 ---
@@ -346,7 +398,11 @@ getHoverColor()
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setHoverColor(255 / 255, 192 / 155, 203 / 255)
+
+-- highlight-next-line
+print(myAction:getHoverColor())
 ```
 
 ---
@@ -511,7 +567,13 @@ setHoverTexture(texture, u, v, width, height, scale)
 **Example:**
 
 ```lua
---todo
+-- basic
+local myAction = myPage:newAction():setHoverTexture(textures["myTexture"])
+-- highlight-next-line
+
+-- advanced
+local myAction = myPage:newAction():setHoverTexture(textures["myTexture"], 16, 32, nil, nil, 2)
+-- highlight-next-line
 ```
 
 ---
@@ -567,7 +629,9 @@ setItem(item)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setItem("minecraft:stone")
+-- highlight-next-line
 ```
 
 ---
@@ -676,7 +740,13 @@ setTexture(texture, u, v, width, height, scale)
 **Example:**
 
 ```lua
---todo
+-- basic
+local myAction = myPage:newAction():setTexture(textures["myTexture"])
+-- highlight-next-line
+
+-- advanced
+local myAction = myPage:newAction():setTexture(textures["myTexture"], 16, 32, nil, nil, 2)
+-- highlight-next-line
 ```
 
 ---
@@ -726,7 +796,9 @@ setTitle(title)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setTitle("Click me!")
+-- highlight-next-line
 ```
 
 ---
@@ -748,7 +820,10 @@ getTitle()
 **Example:**
 
 ```lua
---todo
+local myAction = myPage:newAction():setTitle("Click me!")
+
+-- highlight-next-line
+print(myAction:getTitle())
 ```
 
 ---
@@ -808,7 +883,13 @@ setToggleColor(r, g, b)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setColor(
+    255 / 255,
+    192 / 255,
+    203 / 255
+    -- highlight-next-line
+):setToggleColor(0, 128 / 255, 128 / 255)
 ```
 
 ---
@@ -830,7 +911,11 @@ getToggleColor()
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setToggleColor(255 / 255, 192 / 155, 203 / 255)
+
+-- highlight-next-line
+print(myAction:getToggleColor())
 ```
 
 ---
@@ -886,7 +971,11 @@ setToggleItem(item)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setTitle("Sit"):setItem("spruce_stairs"):setOnToggle(pings.sit):setToggleTitle(
+    "Stand"
+    -- highlight-next-line
+):setToggleItem("armor_stand")
 ```
 
 ---
@@ -995,7 +1084,22 @@ setToggleTexture(texture, u, v, width, height, scale)
 **Example:**
 
 ```lua
---todo
+-- basic
+local myAction = myPage:newAction():setTexture(
+    textures["myTexture"]
+    -- highlight-next-line
+):setToggleTexture(textures["myToggleTexture"])
+
+-- advanced
+local myAction = myPage:newAction():setTexture(
+    textures["myTexture"],
+    0,
+    32,
+    nil,
+    nil,
+    2
+    -- highlight-next-line
+):setToggleTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 ```
 
 ---
@@ -1025,7 +1129,11 @@ setToggleTitle(title)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setTitle("Sit"):setOnToggle(
+    pings.sit
+    -- highlight-next-line
+):setToggleTitle("Stand")
 ```
 
 ---
@@ -1047,7 +1155,12 @@ getToggleTitle()
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:new_page()
+local myAction = myPage:newAction():setToggleTitle("Stand")
+-- highlight-next-line
+
+-- highlight-next-line
+print(myAction:getToggleTitle())
 ```
 
 ---
@@ -1077,7 +1190,20 @@ setToggled(bool)
 **Example:**
 
 ```lua
---todo
+local myAction = myPage:newAction():setOnToggle(function(b)
+    print("Toggled: " .. b)
+end)
+
+local t = 0
+
+function events.tick()
+    if t % 20 == 0 then
+        local wasToggled = myAction:isToggled()
+        -- highlight-next-line
+        myAction:setToggled(not wasToggled)
+    end
+    t = t + 1
+end
 ```
 
 ---
@@ -1099,7 +1225,20 @@ isToggled()
 **Example:**
 
 ```lua
---todo
+local myAction = myPage:newAction():setOnToggle(function(b)
+    print("Toggled: " .. b)
+end)
+
+local t = 0
+
+function events.tick()
+    if t % 20 == 0 then
+        -- highlight-next-line
+        local wasToggled = myAction:isToggled()
+        myAction:setToggled(not wasToggled)
+    end
+    t = t + 1
+end
 ```
 
 ---
@@ -1114,11 +1253,7 @@ The function has one argument
 
 The first argument is this action itself
 
-**Example:**
-
-```lua
---todo
-```
+See [`onLeftClick`](#onLeftClick) to see how to set it
 
 ---
 
@@ -1130,11 +1265,7 @@ The function has one argument
 
 The first argument is this action itself
 
-**Example:**
-
-```lua
---todo
-```
+See [`onRightClick`](#onRightClick) to see how to set it
 
 ---
 
@@ -1148,11 +1279,7 @@ The first argument is toggle state of this action
 
 The second argument is this action itself
 
-**Example:**
-
-```lua
---todo
-```
+See [`setOnToggle`](#setOnToggle) to see how to set it
 
 ---
 
@@ -1166,11 +1293,7 @@ The first argument is toggle state of this action
 
 The second argument is this action itself
 
-**Example:**
-
-```lua
---todo
-```
+See [`setOnUntoggle`](#setOnUntoggle) to see how to set it
 
 ---
 
@@ -1184,10 +1307,6 @@ The first argument is mouse wheel direction
 
 The second argument is this action itself
 
-**Example:**
-
-```lua
---todo
-```
+See [`setOnScroll`](#setOnScroll) to see how to set it
 
 ---

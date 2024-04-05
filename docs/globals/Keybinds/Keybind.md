@@ -1,6 +1,6 @@
 Represents a key binding for your script
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -49,7 +49,9 @@ setOnPress(function)
 **Example:**
 
 ```lua
---todo
+myKey:setOnPress(function()
+    log("hi")
+end)
 ```
 
 ---
@@ -87,7 +89,9 @@ setOnRelease(function)
 **Example:**
 
 ```lua
---todo
+myKey:setOnRelease(function()
+    log("hi")
+end)
 ```
 
 ---
@@ -109,7 +113,7 @@ isPressed()
 **Example:**
 
 ```lua
---todo
+myKey:isPressed()
 ```
 
 ---
@@ -141,7 +145,7 @@ setEnabled(bool)
 **Example:**
 
 ```lua
---todo
+myKey:setEnabled(true)
 ```
 
 ---
@@ -171,7 +175,7 @@ setGUI(bool)
 **Example:**
 
 ```lua
---todo
+myKey:setGUI(true)
 ```
 
 ---
@@ -193,7 +197,7 @@ getID()
 **Example:**
 
 ```lua
---todo
+myKey:getID()
 ```
 
 ---
@@ -223,7 +227,7 @@ setKey(key)
 **Example:**
 
 ```lua
---todo
+myKey:setKey("key.keyboard.l")
 ```
 
 ---
@@ -245,7 +249,7 @@ getKey()
 **Example:**
 
 ```lua
---todo
+myKey:getKey()
 ```
 
 ---
@@ -267,7 +271,7 @@ getKeyName()
 **Example:**
 
 ```lua
---todo
+myKey:getKeyName()
 ```
 
 ---
@@ -289,7 +293,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+myKey:getName()
 ```
 
 ---
@@ -311,7 +315,7 @@ isDefault()
 **Example:**
 
 ```lua
---todo
+myKey:isDefault()
 ```
 
 ---
@@ -333,7 +337,7 @@ isEnabled()
 **Example:**
 
 ```lua
---todo
+myKey:isEnabled()
 ```
 
 ---
@@ -355,7 +359,7 @@ isGuiEnabled()
 **Example:**
 
 ```lua
---todo
+myKey:isGuiEnabled()
 ```
 
 ---
@@ -376,11 +380,7 @@ The second argument is this keybind itself
 
 If the return value is true then all vanilla keybinds using same key will be ignored
 
-**Example:**
-
-```lua
---todo
-```
+See [`setOnPress`](#setOnPress) for an example of how to set this field
 
 ---
 
@@ -398,10 +398,6 @@ The second argument is this keybind itself
 
 If the return value is true then all vanilla keybinds using same key will be ignored
 
-**Example:**
-
-```lua
---todo
-```
+See [`setOnRelease`](#setOnRelease) for an example of how to set this field
 
 ---

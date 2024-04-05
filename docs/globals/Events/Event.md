@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 A hook for a certain event in Minecraft
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -65,7 +65,7 @@ register(func, name)
 **Example:**
 
 ```lua
---todo
+events.TICK:register(function() end, "Name")
 ```
 
 ---
@@ -87,7 +87,7 @@ clear()
 **Example:**
 
 ```lua
---todo
+events.TICK:clear()
 ```
 
 ---
@@ -143,7 +143,7 @@ remove(function)
 **Example:**
 
 ```lua
---todo
+events.TICK:remove("Name")
 ```
 
 ---
@@ -171,7 +171,7 @@ getRegisteredCount(name)
 **Example:**
 
 ```lua
---todo
+events.TICK:getRegisteredCount("Name")
 ```
 
 ---

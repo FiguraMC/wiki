@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem'
 
 A global API which is used for customizing your player's Action Wheel
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -66,7 +66,7 @@ newPage(title)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel:newPage()
 ```
 
 ---
@@ -120,7 +120,7 @@ setPage(page)
 **Example:**
 
 ```lua
---todo
+action_wheel:setPage(myPage)
 ```
 
 ---
@@ -170,7 +170,10 @@ getPage(pageTitle)
 **Example:**
 
 ```lua
---todo
+action_wheel:newPage("myPage")
+-- highlight-next-line
+action_wheel:getPage("myPage")
+-- because getPage needs a string you can only use getPage on pages with titles
 ```
 
 ---
@@ -192,7 +195,7 @@ getCurrentPage()
 **Example:**
 
 ```lua
---todo
+action_wheel:getCurrentPage()
 ```
 
 ---
@@ -218,7 +221,7 @@ newAction()
 **Example:**
 
 ```lua
---todo
+local myAction = action_wheel:newAction()
 ```
 
 ---
@@ -240,7 +243,7 @@ getSelectedAction()
 **Example:**
 
 ```lua
---todo
+action_wheel:getSelectedAction()
 ```
 
 ---
@@ -262,7 +265,7 @@ getSelected()
 **Example:**
 
 ```lua
---todo
+action_wheel:getSelected()
 ```
 
 ---
@@ -336,7 +339,7 @@ execute(index, rightClick)
 **Example:**
 
 ```lua
---todo
+action_wheel:execute(1, false)
 ```
 
 ---
@@ -358,7 +361,7 @@ isEnabled()
 **Example:**
 
 ```lua
---todo
+action_wheel:isEnabled()
 ```
 
 ---
@@ -372,7 +375,9 @@ Function that is executed when the left mouse button is clicked
 **Example:**
 
 ```lua
---todo
+function action_wheel.leftClick()
+    log("Left click")
+end
 ```
 
 ---
@@ -384,7 +389,9 @@ Function that is executed when the right mouse button is clicked
 **Example:**
 
 ```lua
---todo
+function action_wheel.rightClick()
+    log("Right click")
+end
 ```
 
 ---
@@ -396,7 +403,9 @@ Function that is executed when the mouse is scrolled
 **Example:**
 
 ```lua
---todo
+function action_wheel.scroll()
+    log("Scrolled")
+end
 ```
 
 ---

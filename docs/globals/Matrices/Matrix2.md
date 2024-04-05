@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 A matrix with 2 rows and 2 columns
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -88,7 +88,7 @@ det()
 **Example:**
 
 ```lua
---todo
+myMat:det()
 ```
 
 ---
@@ -112,7 +112,7 @@ invert()
 **Example:**
 
 ```lua
---todo
+myMat:invert()
 ```
 
 ---
@@ -134,7 +134,7 @@ inverted()
 **Example:**
 
 ```lua
---todo
+myMat:inverted()
 ```
 
 ---
@@ -226,7 +226,7 @@ getColumn(col)
 **Example:**
 
 ```lua
---todo
+myMat:getColumn(1)
 ```
 
 ---
@@ -256,7 +256,7 @@ getRow(row)
 **Example:**
 
 ```lua
---todo
+myMat:getRow(1)
 ```
 
 ---
@@ -286,7 +286,7 @@ apply(x)
 **Example:**
 
 ```lua
---todo
+myMat:apply()
 ```
 
 ---
@@ -314,7 +314,7 @@ applyDir(x)
 **Example:**
 
 ```lua
---todo
+myMat:applyDir()
 ```
 
 ---
@@ -346,7 +346,7 @@ rotate(degrees)
 **Example:**
 
 ```lua
---todo
+myMat:rotate(90)
 ```
 
 ---
@@ -403,7 +403,7 @@ scale(x, y)
 **Example:**
 
 ```lua
---todo
+myMat:scale(2, 2)
 ```
 
 ---
@@ -429,7 +429,7 @@ transpose()
 **Example:**
 
 ```lua
---todo
+myMat:transpose()
 ```
 
 ---
@@ -453,7 +453,7 @@ transposed()
 **Example:**
 
 ```lua
---todo
+myMat:transposed()
 ```
 
 ---
@@ -485,7 +485,7 @@ set(other)
 **Example:**
 
 ```lua
---todo
+myMat:set()
 ```
 
 ---
@@ -509,7 +509,7 @@ augmented()
 **Example:**
 
 ```lua
---todo
+myMat:augmented()
 ```
 
 ---
@@ -531,7 +531,7 @@ copy()
 **Example:**
 
 ```lua
---todo
+myMat:copy()
 ```
 
 ---
@@ -555,7 +555,7 @@ reset()
 **Example:**
 
 ```lua
---todo
+myMat:reset()
 ```
 
 ---

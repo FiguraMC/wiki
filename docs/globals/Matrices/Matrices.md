@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 A global API which provides functions dedicated to creating and otherwise manipulating matrices
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -59,7 +59,7 @@ mat2(col1, col2)
 **Example:**
 
 ```lua
---todo
+matrices.mat2()
 ```
 
 ---
@@ -89,7 +89,7 @@ rotation2(angle)
 **Example:**
 
 ```lua
---todo
+matrices.rotation2(90)
 ```
 
 ---
@@ -144,7 +144,7 @@ scale2(x, y)
 **Example:**
 
 ```lua
---todo
+matrices.scale2(2, 2)
 ```
 
 ---
@@ -198,7 +198,7 @@ mat3(col1, col2, col3)
 **Example:**
 
 ```lua
---todo
+matrices.mat3()
 ```
 
 ---
@@ -256,7 +256,7 @@ rotation3(x, y, z)
 **Example:**
 
 ```lua
---todo
+matrices.rotation3(90, 90, 90)
 ```
 
 ---
@@ -312,7 +312,7 @@ scale3(x, y, z)
 **Example:**
 
 ```lua
---todo
+matrices.scale3(2, 2, 2)
 ```
 
 ---
@@ -367,7 +367,7 @@ translate3(x, y)
 **Example:**
 
 ```lua
---todo
+matrices.translate3(90, 90)
 ```
 
 ---
@@ -397,7 +397,7 @@ xRotation3(angle)
 **Example:**
 
 ```lua
---todo
+matrices.xRotation3(90)
 ```
 
 ---
@@ -427,7 +427,7 @@ yRotation3(angle)
 **Example:**
 
 ```lua
---todo
+matrices.yRotation3(90)
 ```
 
 ---
@@ -457,7 +457,7 @@ zRotation3(angle)
 **Example:**
 
 ```lua
---todo
+matrices.zRotation3(90)
 ```
 
 ---
@@ -512,7 +512,7 @@ mat4(col1, col2, col3, col4)
 **Example:**
 
 ```lua
---todo
+matrices.mat4()
 ```
 
 ---
@@ -570,7 +570,7 @@ rotation4(x, y, z)
 **Example:**
 
 ```lua
---todo
+matrices.rotation4(90, 90, 90)
 ```
 
 ---
@@ -626,7 +626,7 @@ scale4(x, y, z)
 **Example:**
 
 ```lua
---todo
+matrices.scale4(2, 2, 2)
 ```
 
 ---
@@ -682,7 +682,7 @@ translate4(x, y, z)
 **Example:**
 
 ```lua
---todo
+matrices.translate4(90, 90, 90)
 ```
 
 ---
@@ -712,7 +712,7 @@ xRotation4(angle)
 **Example:**
 
 ```lua
---todo
+matrices.xRotation4(90)
 ```
 
 ---
@@ -742,7 +742,7 @@ yRotation4(angle)
 **Example:**
 
 ```lua
---todo
+matrices.yRotation4(90)
 ```
 
 ---
@@ -772,7 +772,7 @@ zRotation4(angle)
 **Example:**
 
 ```lua
---todo
+matrices.zRotation4(90)
 ```
 
 ---

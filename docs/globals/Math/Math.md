@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-:::danger
+:::warning
 This page is a WIP.
 :::
 
@@ -36,7 +36,9 @@ clamp(value, min, max)
 **Example:**
 
 ```lua
---todo
+math.clamp(58, 0, 50) -- returns 50
+math.clamp(-12, 0, 50) -- returns 0
+math.clamp(26, 0, 50) -- returns 26
 ```
 
 ---
@@ -117,7 +119,18 @@ lerp(a, b, t)
 **Example:**
 
 ```lua
---todo
+local rot = 0
+local _rot = 0
+
+function events.tick()
+    _rot = rot
+    rot = rot + 1
+end
+
+function events.render(delta)
+    -- highlight-next-line
+    models.model:setRot(math.lerp(_rot, rot, delta))
+end
 ```
 
 ---
@@ -151,7 +164,7 @@ lerpAngle(a, b, t)
 **Example:**
 
 ```lua
---todo
+math.lerpAngle(340, 20, 0.75) -- returns 10
 ```
 
 ---
@@ -185,7 +198,7 @@ map(value, oldMin, oldMax, newMin, newMax)
 **Example:**
 
 ```lua
---todo
+math.map(20, 0, 200, 100, 200) -- returns 110
 ```
 
 ---
@@ -213,7 +226,7 @@ round(value)
 **Example:**
 
 ```lua
---todo
+math.round(21.74) -- returns 22
 ```
 
 ---
@@ -244,7 +257,7 @@ shortAngle(from, to)
 **Example:**
 
 ```lua
---todo
+math.shortAngle(350, 0) -- returns 10
 ```
 
 ---
@@ -274,7 +287,9 @@ sign(value)
 **Example:**
 
 ```lua
---todo
+math.sign(124) -- returns 1
+math.sign(-12) -- returns -1
+math.sign(0) -- returns 0
 ```
 
 ---
@@ -288,7 +303,7 @@ The constant of the player scaling related to the world
 **Example:**
 
 ```lua
---todo
+math.playerScale
 ```
 
 ---
@@ -300,7 +315,7 @@ The constant of the world scaling related with the player
 **Example:**
 
 ```lua
---todo
+math.worldScale
 ```
 
 ---
