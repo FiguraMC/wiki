@@ -4,11 +4,11 @@ import Emoji from '@site/src/components/Emoji';
 import FileTreeRoot from '@site/src/components/FileTree/Root';
 import FileTreeNode from '@site/src/components/FileTree/Node';
 
-:::danger
-This page is a WIP.
-:::
-
 # Misc Globals
+
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
 
 Documentation for the various things Figura adds to the global lua state
 

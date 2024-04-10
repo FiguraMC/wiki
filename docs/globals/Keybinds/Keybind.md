@@ -1,7 +1,7 @@
 Represents a key binding for your script
 
 :::warning
-This page is a WIP.
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 Instances are obtained using the KeybindAPI's newKeybind() function

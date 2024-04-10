@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-:::danger
-This page is a WIP.
-:::
-
 A nameplate customization that is specialized for entities
+
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
 
 ---
 

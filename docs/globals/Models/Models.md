@@ -9,8 +9,8 @@ Represents a node in the model tree, basically a group/cube/mesh in Blockbench
 
 Each bbmodel file is itself a ModelPart, and all of your models are contained in a global ModelPart called `models`
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 ---

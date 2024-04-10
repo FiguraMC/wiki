@@ -1,3 +1,5 @@
+The basics on how multiplayer works
+
 ## The Cloud
 
 The cloud (also referred to as the backend or the server) is where avatars are stored for use in multiplayer. You upload one avatar to the cloud, and that avatar is what other players see equipped to you. When you look at other players, if they uploaded an avatar to the cloud, that is the avatar you see.

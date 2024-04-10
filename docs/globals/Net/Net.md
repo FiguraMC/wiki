@@ -4,8 +4,8 @@ sidebar_position: 1
 
 A global API that contains networking related features
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 ---

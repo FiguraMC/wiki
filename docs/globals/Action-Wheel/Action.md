@@ -4,7 +4,7 @@ import TabItem from '@theme/TabItem'
 An action in the Figura Action Wheel
 
 :::warning
-This page is a WIP.
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 Actions are either interacted by clicking and scrolling, which also being able to be toggleable

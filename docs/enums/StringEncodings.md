@@ -1,7 +1,7 @@
 List of valid string encodings
 
-:::danger
-This page is a wip.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 Used within Buffers

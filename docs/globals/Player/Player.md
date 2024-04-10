@@ -9,8 +9,8 @@ The player API inherits functions from the [living entity API](../globals/Player
 
 The player API is accessed through the `player` global. Like so: `player:isGliding()`
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 Player information that isn't synced between clients is kept in the host API. Examples of unsynced data are: Creative flying, status effects, and remaining air amount.

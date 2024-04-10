@@ -3,8 +3,8 @@ import TabItem from '@theme/TabItem'
 
 A task for rendering an Entity from [newEntity](./#newEntity)
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 For this entire page assume:

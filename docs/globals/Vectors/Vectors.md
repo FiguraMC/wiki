@@ -7,8 +7,8 @@ import TabItem from '@theme/TabItem'
 
 A global API which provides functions dedicated to creating and otherwise manipulating vectors
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 Accessed using the name `vectors`

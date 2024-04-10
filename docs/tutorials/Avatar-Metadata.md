@@ -2,6 +2,8 @@ import Emoji from '@site/src/components/Emoji';
 import FileTreeRoot from '@site/src/components/FileTree/Root';
 import FileTreeNode from '@site/src/components/FileTree/Node';
 
+# Avatar Metadata
+
 <Emoji icon="file/json"/> <code>avatar.json</code> is the file that contains Avatar Metadata. It tells Figura specific information about the avatar.
 
 ## Json Basics

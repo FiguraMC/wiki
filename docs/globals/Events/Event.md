@@ -4,7 +4,7 @@ import TabItem from '@theme/TabItem'
 A hook for a certain event in Minecraft
 
 :::warning
-This page is a WIP.
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 You may register functions to one, and those functions will be called when the event occurs

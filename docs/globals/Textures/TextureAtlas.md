@@ -1,7 +1,7 @@
 A texture atlas object, with helper functions related to a texture atlas
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 ---

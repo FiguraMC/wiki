@@ -4,7 +4,7 @@ import TabItem from '@theme/TabItem'
 A matrix with 2 rows and 2 columns
 
 :::warning
-This page is a WIP.
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 ---

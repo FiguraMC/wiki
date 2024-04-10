@@ -7,8 +7,8 @@ import TabItem from '@theme/TabItem'
 
 A global API dedicated to reading information from the Minecraft world.
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 The world API is accessed through the <code>world</code> global. Like so: <code>world.getTime()</code>.

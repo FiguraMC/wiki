@@ -3,8 +3,8 @@ import TabItem from '@theme/TabItem'
 
 A vector that holds 4 numbers
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 Can be created using functions in the "vectors" api
 

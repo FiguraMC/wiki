@@ -3,8 +3,8 @@ import TabItem from '@theme/TabItem'
 
 Represents a group of model parts in a vanilla model
 
-:::danger
-This page is a WIP.
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
 Used for easy reference of normal parts
