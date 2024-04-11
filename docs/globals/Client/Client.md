@@ -1413,7 +1413,10 @@ generateUUID()
 
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 
@@ -1494,7 +1497,10 @@ uuidToIntArray(uuid)
 
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
 **Example:**
 

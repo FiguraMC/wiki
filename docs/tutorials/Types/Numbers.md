@@ -1,9 +1,3 @@
----
-unlisted: true
----
+A number is a Lua value that represents a real number.
 
-:::danger
-
-Sorry, we haven't made this tutorial yet!
-
-:::
+Although Lua doesn't have an integer type, some methods may ask for integers, this means they want a whole number.
