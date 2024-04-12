@@ -64,12 +64,6 @@ setLight(blockLight, skyLight)
 
 </Tabs>
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getLight()</code> \{#getLight}
@@ -85,12 +79,6 @@ getLight()
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -122,12 +110,6 @@ setMatrix(matrix)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getName()</code> \{#getName}
@@ -144,12 +126,6 @@ getName()
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getNormalMatrix()</code> \{#getNormalMatrix}
@@ -165,12 +141,6 @@ getNormalMatrix()
 | Type                                              | Description |
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -189,12 +159,6 @@ getNormalMatrixRaw()
 | Type                                              | Description |
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -251,12 +215,6 @@ setOverlay(whiteOverlay, hurtOverlay)
 
 </Tabs>
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getOverlay()</code> \{#getOverlay}
@@ -272,12 +230,6 @@ getOverlay()
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -333,12 +285,6 @@ setPos(x, y, z)
 
 </Tabs>
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getPos()</code> \{#getPos}
@@ -355,12 +301,6 @@ getPos()
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getPositionMatrix()</code> \{#getPositionMatrix}
@@ -376,12 +316,6 @@ getPositionMatrix()
 | Type                                              | Description |
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -400,12 +334,6 @@ getPositionMatrixRaw()
 | Type                                              | Description |
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -459,12 +387,6 @@ setRot(x, y, z)
 
 </Tabs>
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getRot()</code> \{#getRot}
@@ -480,12 +402,6 @@ getRot()
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -539,12 +455,6 @@ setScale(x, y, z)
 
 </Tabs>
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>getScale()</code> \{#getScale}
@@ -560,12 +470,6 @@ getScale()
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -591,12 +495,6 @@ setVisible(visible)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>isVisible()</code> \{#isVisible}
@@ -613,12 +511,6 @@ isVisible()
 | ------------------------------------------------- | ----------- |
 | <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>remove()</code> \{#remove}
@@ -634,11 +526,5 @@ remove()
 | Type                                                  | Description               |
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
-
-**Example:**
-
-```lua
---todo
-```
 
 ---

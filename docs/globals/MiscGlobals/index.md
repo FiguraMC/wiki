@@ -20,12 +20,6 @@ A table containing all the metatables for Figura's object types
 
 The metatables are editable
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>listFiles()</code> \{#listFiles}
@@ -97,7 +91,12 @@ listFiles(folder, subFolders)
 **Example:**
 
 ```lua
---todo
+-- Using autoscripts in avatar.json,
+-- you can prevent loading scripts by default and instead require them like so
+-- highlight-next-line
+for _, script in ipairs(listfiles("/scripts"), true) do
+    require(script)
+end
 ```
 
 ---
@@ -127,7 +126,12 @@ parseJson(jsonString)
 **Example:**
 
 ```lua
---todo
+function events.CHAT_RECEIVE_MESSAGE(msg, jsonStr)
+    -- highlight-next-line
+    local json = parseJson(jsonStr)
+    -- Gets the name of message sender
+    local sender = json.with[1].hoverEvent.contents.name.text
+end
 ```
 
 ---
@@ -163,7 +167,9 @@ print(arg)
 **Example:**
 
 ```lua
---todo
+print("hello, world!")
+
+print("Avatar:", avatar:getName())
 ```
 
 ---
@@ -198,8 +204,25 @@ printJson(json)
 
 **Example:**
 
+<!-- prettier-ignore -->
 ```lua
---todo
+local wikiAd = {
+    "",
+    { text = "Learn more about Figura " },
+    {
+        text = "here",
+        underlined = true,
+        color = "aqua",
+        clickEvent = {
+            action = "open_url",
+            value = "https://wiki.figuramc.org",
+        }
+    },
+    { text = ".\n" }
+}
+
+-- highlight-next-line
+printJson(toJson(wikiAd))
 ```
 
 ---
@@ -347,7 +370,7 @@ printTable(javaObject, maxDepth, silent)
 **Example:**
 
 ```lua
---todo
+printTable(textures:getTextures())
 ```
 
 ---
@@ -443,7 +466,13 @@ toJson(value)
 **Example:**
 
 ```lua
---todo
+nameplate.ALL:setText(
+-- highlight-next-line
+    toJson({
+        text = "Wiki",
+        color = "#99BBEE",
+    })
+)
 ```
 
 ---
@@ -459,7 +488,10 @@ When called on a table that has a metatable with a \_\_type key, returns the cor
 **Example:**
 
 ```lua
---todo
+type(2) -- number
+type("foo") -- string
+type(models) -- ModelPart
+type(setmetatable({}, { __type = "MyType" })) -- MyType
 ```
 
 ---

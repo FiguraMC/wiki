@@ -30,7 +30,7 @@ play()
 **Example:**
 
 ```lua
---todo
+mySound:play()
 ```
 
 ---
@@ -52,7 +52,7 @@ stop()
 **Example:**
 
 ```lua
---todo
+mySound:stop()
 ```
 
 ---
@@ -74,7 +74,7 @@ pause()
 **Example:**
 
 ```lua
---todo
+mySound:pause()
 ```
 
 ---
@@ -96,7 +96,7 @@ isPlaying()
 **Example:**
 
 ```lua
---todo
+mySound:isPlaying()
 ```
 
 ---
@@ -118,7 +118,7 @@ isLooping()
 **Example:**
 
 ```lua
---todo
+mySound:isLooping()
 ```
 
 ---
@@ -182,7 +182,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+mySound:setPos(player:getPos())
 ```
 
 ---
@@ -204,7 +204,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+mySound:getPos()
 ```
 
 ---
@@ -236,7 +236,7 @@ setAttenuation(attenuation)
 **Example:**
 
 ```lua
---todo
+mySound:setAttenuation(5)
 ```
 
 ---
@@ -258,7 +258,7 @@ getAttenuation()
 **Example:**
 
 ```lua
---todo
+mySound:getAttenuation()
 ```
 
 ---
@@ -290,7 +290,7 @@ setLoop(loop)
 **Example:**
 
 ```lua
---todo
+mySound:setLoop(true)
 ```
 
 ---
@@ -322,7 +322,7 @@ setPitch(pitch)
 **Example:**
 
 ```lua
---todo
+mySound:setPitch(5)
 ```
 
 ---
@@ -344,7 +344,7 @@ getPitch()
 **Example:**
 
 ```lua
---todo
+mySound:getPitch()
 ```
 
 ---
@@ -374,7 +374,7 @@ setSubtitle(subtitle)
 **Example:**
 
 ```lua
---todo
+mySound:setSubtitle("Bat ecolocates")
 ```
 
 ---
@@ -396,7 +396,7 @@ getSubtitle()
 **Example:**
 
 ```lua
---todo
+mySound:getSubtitle()
 ```
 
 ---
@@ -428,7 +428,7 @@ setVolume(volume)
 **Example:**
 
 ```lua
---todo
+mySound:setVolume(5)
 ```
 
 ---
@@ -450,7 +450,7 @@ getVolume()
 **Example:**
 
 ```lua
---todo
+mySound:getVolume()
 ```
 
 ---

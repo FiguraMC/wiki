@@ -14,6 +14,7 @@ This page is a WIP. It contains all the information in Figura's documentation bu
 The world API is accessed through the <code>world</code> global. Like so: <code>world.getTime()</code>.
 
 :::info
+
 The functions in the World API never receive `self` as a parameter. Because of this they should be called with a `.` instead of `:`
 
 ```lua
@@ -49,7 +50,7 @@ exists()
 **Example:**
 
 ```lua
---todo
+world.exists()
 ```
 
 ---
@@ -127,7 +128,7 @@ getBuildHeight()
 **Example:**
 
 ```lua
---todo
+world.getBiome(player:getPos())
 ```
 
 ---
@@ -149,7 +150,7 @@ getDimension()
 **Example:**
 
 ```lua
---todo
+world.getDimension()
 ```
 
 ---
@@ -208,7 +209,7 @@ getHeight(x, z, heightmap)
 **Example:**
 
 ```lua
---todo
+world.getHeight(player:getPos().xz)
 ```
 
 ---
@@ -230,7 +231,7 @@ getSpawnPoint()
 **Example:**
 
 ```lua
---todo
+world.getSpawnPoint()
 ```
 
 ---
@@ -288,7 +289,7 @@ isChunkLoaded(x, y, z)
 **Example:**
 
 ```lua
---todo
+world.isChunkLoaded(player:getPos())
 ```
 
 ---
@@ -344,7 +345,7 @@ isOpenSky(x, y, z)
 **Example:**
 
 ```lua
---todo
+world.isOpenSky(player:getPos())
 ```
 
 ---
@@ -593,7 +594,7 @@ newBlock(block, x, y, z)
 **Example:**
 
 ```lua
---todo
+world.getBlockState(player:getPos())
 ```
 
 ---
@@ -671,7 +672,7 @@ newItem(item, count, damage)
 **Example:**
 
 ```lua
---todo
+world.newItem("grass_block", 64, 5)
 ```
 
 ---
@@ -697,7 +698,7 @@ avatarVars()
 **Example:**
 
 ```lua
---todo
+world.avatarVars()
 ```
 
 ---
@@ -725,7 +726,7 @@ getEntity(UUID)
 **Example:**
 
 ```lua
---todo
+world.getEntity("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
 ```
 
 ---
@@ -749,7 +750,9 @@ getPlayers()
 **Example:**
 
 ```lua
---todo
+for _, players in pairs(world.getPlayers()) do
+    log(players)
+end
 ```
 
 ---
@@ -803,7 +806,7 @@ getDay(delta)
 **Example:**
 
 ```lua
---todo
+world.getDay()
 ```
 
 ---
@@ -855,7 +858,7 @@ getDayTime(delta)
 **Example:**
 
 ```lua
---todo
+world.getDayTime()
 ```
 
 ---
@@ -877,7 +880,7 @@ getMoonPhase()
 **Example:**
 
 ```lua
---todo
+world.getMoonPhase()
 ```
 
 ---
@@ -929,7 +932,7 @@ getTime(delta)
 **Example:**
 
 ```lua
---todo
+world.getTime()
 ```
 
 ---
@@ -981,7 +984,7 @@ getTimeOfDay(delta)
 **Example:**
 
 ```lua
---todo
+world.getTimeOfDay()
 ```
 
 ---
@@ -1096,7 +1099,7 @@ getLightLevel(x, y, z)
 **Example:**
 
 ```lua
---todo
+world.getBlockLightLevel(player:getPos())
 ```
 
 ---
@@ -1152,7 +1155,7 @@ getSkyLightLevel(x, y, z)
 **Example:**
 
 ```lua
---todo
+world.getSkyLightLevel(player:getPos())
 ```
 
 ---
@@ -1204,7 +1207,7 @@ getRainGradient(delta)
 **Example:**
 
 ```lua
---todo
+world.getRainGradient()
 ```
 
 ---
@@ -1226,7 +1229,7 @@ isThundering()
 **Example:**
 
 ```lua
---todo
+world.isThundering()
 ```
 
 ---
@@ -1284,7 +1287,7 @@ getRedstonePower(x, y, z)
 **Example:**
 
 ```lua
---todo
+world.getRedstonePower(player:getPos())
 ```
 
 ---
@@ -1340,7 +1343,7 @@ getStrongRedstonePower(x, y, z)
 **Example:**
 
 ```lua
---todo
+world.getStrongRedstonePower(player:getPos())
 ```
 
 ---

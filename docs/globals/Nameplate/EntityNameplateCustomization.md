@@ -34,7 +34,7 @@ setText(text)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setText("Hi")
 ```
 
 ---
@@ -56,7 +56,7 @@ getText()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:getText()
 ```
 
 ---
@@ -88,7 +88,7 @@ setOutline(outline)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setOutline(true)
 ```
 
 ---
@@ -110,7 +110,7 @@ hasOutline()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:hasOutline()
 ```
 
 ---
@@ -168,7 +168,7 @@ setOutlineColor(r, g, b)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setOutlineColor(100 / 255, 100 / 255, 100 / 255)
 ```
 
 ---
@@ -200,7 +200,7 @@ setShadow(shadow)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setShadow(true)
 ```
 
 ---
@@ -222,7 +222,7 @@ hasShadow()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:hasShadow()
 ```
 
 ---
@@ -285,7 +285,7 @@ setBackgroundColor(r, g, b, a)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setBackgroundColor(100 / 255, 100 / 255, 100 / 255)
 ```
 
 ---
@@ -307,7 +307,7 @@ getBackgroundColor()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:getBackgroundColor()
 ```
 
 ---
@@ -368,7 +368,7 @@ setLight(blockLight, skyLight)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setLight(15, 15)
 ```
 
 ---
@@ -390,7 +390,7 @@ getLight()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:getLight()
 ```
 
 ---
@@ -448,7 +448,7 @@ setPivot(x, y, z)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setPivot(0, 3, 0)
 ```
 
 ---
@@ -470,7 +470,7 @@ getPivot()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:getPivot()
 ```
 
 ---
@@ -528,7 +528,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setPos(0, 1, 0)
 ```
 
 ---
@@ -550,7 +550,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:getPos()
 ```
 
 ---
@@ -608,7 +608,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setScale(2, 2, 2)
 ```
 
 ---
@@ -630,7 +630,7 @@ getScale()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:getScale()
 ```
 
 ---
@@ -660,7 +660,7 @@ setVisible(visible)
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:setVisible(false)
 ```
 
 ---
@@ -682,7 +682,7 @@ isVisible()
 **Example:**
 
 ```lua
---todo
+nameplate.Entity:isVisible()
 ```
 
 ---

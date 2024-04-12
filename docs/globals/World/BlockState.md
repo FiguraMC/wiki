@@ -38,7 +38,7 @@ getComparatorOutput()
 **Example:**
 
 ```lua
---todo
+block:getComparatorOutput()
 ```
 
 ---
@@ -60,7 +60,7 @@ emitsRedstonePower()
 **Example:**
 
 ```lua
---todo
+block:emitsRedstonePower()
 ```
 
 ---
@@ -86,7 +86,7 @@ getJumpVelocityMultiplier()
 **Example:**
 
 ```lua
---todo
+block:getJumpVelocityMultiplier()
 ```
 
 ---
@@ -110,7 +110,7 @@ getVelocityMultiplier()
 **Example:**
 
 ```lua
---todo
+block:getVelocityMultiplier()
 ```
 
 ---
@@ -136,7 +136,7 @@ getCollisionShape()
 **Example:**
 
 ```lua
---todo
+block:getCollisionShape()
 ```
 
 ---
@@ -160,7 +160,7 @@ getOutlineShape()
 **Example:**
 
 ```lua
---todo
+block:getOutlineShape()
 ```
 
 ---
@@ -184,7 +184,7 @@ getLuminance()
 **Example:**
 
 ```lua
---todo
+block:getLuminance()
 ```
 
 ---
@@ -206,7 +206,7 @@ getMapColor()
 **Example:**
 
 ```lua
---todo
+block:getMapColor()
 ```
 
 ---
@@ -228,7 +228,7 @@ getOpacity()
 **Example:**
 
 ```lua
---todo
+block:getOpacity()
 ```
 
 ---
@@ -254,7 +254,7 @@ getTextures()
 **Example:**
 
 ```lua
---todo
+block:getTextures()
 ```
 
 ---
@@ -276,7 +276,7 @@ hasEmissiveLighting()
 **Example:**
 
 ```lua
---todo
+block:hasEmissiveLighting()
 ```
 
 ---
@@ -300,7 +300,7 @@ getBlastResistance()
 **Example:**
 
 ```lua
---todo
+block:getBlastResistance()
 ```
 
 ---
@@ -324,7 +324,7 @@ getFriction()
 **Example:**
 
 ```lua
---todo
+block:getFriction()
 ```
 
 ---
@@ -346,7 +346,7 @@ getHardness()
 **Example:**
 
 ```lua
---todo
+block:getHardness()
 ```
 
 ---
@@ -368,7 +368,7 @@ hasCollision()
 **Example:**
 
 ```lua
---todo
+block:hasCollision()
 ```
 
 ---
@@ -390,7 +390,7 @@ isAir()
 **Example:**
 
 ```lua
---todo
+block:isAir()
 ```
 
 ---
@@ -412,7 +412,7 @@ isFullCube()
 **Example:**
 
 ```lua
---todo
+block:isFullCube()
 ```
 
 ---
@@ -434,7 +434,7 @@ isOpaque()
 **Example:**
 
 ```lua
---todo
+block:isOpaque()
 ```
 
 ---
@@ -456,7 +456,7 @@ isSolidBlock()
 **Example:**
 
 ```lua
---todo
+block:isSolidBlock()
 ```
 
 ---
@@ -478,7 +478,7 @@ isTranslucent()
 **Example:**
 
 ```lua
---todo
+block:isTranslucent()
 ```
 
 ---
@@ -504,7 +504,7 @@ getEntityData()
 **Example:**
 
 ```lua
---todo
+block:getEntityData()
 ```
 
 ---
@@ -526,7 +526,7 @@ getFluidTags()
 **Example:**
 
 ```lua
---todo
+block:getFluidTags()
 ```
 
 ---
@@ -548,7 +548,7 @@ getID()
 **Example:**
 
 ```lua
---todo
+block:getID()
 ```
 
 ---
@@ -608,7 +608,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+block:setPos(player:getPos())
 ```
 
 ---
@@ -632,7 +632,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+block:getID()
 ```
 
 ---
@@ -654,7 +654,7 @@ getProperties()
 **Example:**
 
 ```lua
---todo
+block:getProperties()
 ```
 
 ---
@@ -678,7 +678,7 @@ getSounds()
 **Example:**
 
 ```lua
---todo
+block:getSounds()
 ```
 
 ---
@@ -700,7 +700,7 @@ getTags()
 **Example:**
 
 ```lua
---todo
+block:getTags()
 ```
 
 ---
@@ -724,7 +724,7 @@ asItem()
 **Example:**
 
 ```lua
---todo
+block:asItem()
 ```
 
 ---
@@ -746,7 +746,7 @@ hasBlockEntity()
 **Example:**
 
 ```lua
---todo
+block:hasBlockEntity()
 ```
 
 ---
@@ -768,7 +768,7 @@ toStateString()
 **Example:**
 
 ```lua
---todo
+block:toStateString()
 ```
 
 ---
@@ -782,7 +782,7 @@ The identifier of the block this BlockState comes from
 **Example:**
 
 ```lua
---todo
+block.id
 ```
 
 ---
@@ -796,7 +796,7 @@ If this BlockState has no properties, it is nil
 **Example:**
 
 ```lua
---todo
+block.properties
 ```
 
 ---

@@ -36,7 +36,7 @@ asEntity()
 **Example:**
 
 ```lua
---todo
+myEntity:asEntity():getBoundingBox()
 ```
 
 ---
@@ -91,7 +91,24 @@ setNbt(id, nbt)
 **Example:**
 
 ```lua
---todo
+myEntity:setNbt("minecraft:wolf", "{}")
+
+myEntity:setNbt(
+    toJson({
+        id = "minecraft:wolf",
+        Age = 1,
+        CollarColor = 9,
+        Sitting = true,
+        Owner = player:getUUID(),
+    })
+)
+
+myEntity:setNbt(
+    toJson({
+        id = "minecraft:zombie",
+        IsBaby = true,
+    })
+)
 ```
 
 ---
@@ -119,7 +136,7 @@ setHeadRotation(rotation)
 **Example:**
 
 ```lua
---todo
+myEntity:setHeadRotation(vec(-45, 0))
 ```
 
 ---
@@ -147,7 +164,18 @@ updateWalkingDistance(distance)
 **Example:**
 
 ```lua
---todo
+-- this example only works if the entity is moving
+-- at the same speed as the player
+local pos
+local lastPos
+
+function events.tick()
+    lastPos = pos or player:getPos()
+    pos = player:getPos()
+    local distance = (pos - lastPos).xz:length()
+    -- highlight-next-line
+    myEntity:updateWalkingDistance(distance)
+end
 ```
 
 ---
@@ -210,7 +238,9 @@ setLight(blockLight, skyLight)
 **Example:**
 
 ```lua
---todo
+local blockLight = world.getLightLevel(player:getPos())
+local skyLight = world.getSkyLightLevel(player:getPos())
+myEntity:setLight(blockLight, skyLight)
 ```
 
 ---
@@ -232,7 +262,7 @@ getLight()
 **Example:**
 
 ```lua
---todo
+myEntity:getLight()
 ```
 
 ---
@@ -268,7 +298,7 @@ setMatrix(matrix)
 **Example:**
 
 ```lua
---todo
+myEntity:setMatrix(matrices.mat4())
 ```
 
 ---
@@ -290,7 +320,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+myEntity:getName()
 ```
 
 ---
@@ -312,7 +342,7 @@ getNormalMatrix()
 **Example:**
 
 ```lua
---todo
+myEntity:getNormalMatrix()
 ```
 
 ---
@@ -336,7 +366,7 @@ getNormalMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myEntity:getNormalMatrixRaw()
 ```
 
 ---
@@ -397,7 +427,8 @@ setOverlay(whiteOverlay, hurtOverlay)
 **Example:**
 
 ```lua
---todo
+local hurt = player:getNbt.HurtTime > 0
+myEntity:setOverlay(hurt and 0 or nil, 1)
 ```
 
 ---
@@ -419,7 +450,7 @@ getOverlay()
 **Example:**
 
 ```lua
---todo
+myEntity:getOverlay()
 ```
 
 ---
@@ -479,7 +510,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+myEntity:setPos(0, 16, 0)
 ```
 
 ---
@@ -501,7 +532,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+myEntity:getPos()
 ```
 
 ---
@@ -523,7 +554,7 @@ getPositionMatrix()
 **Example:**
 
 ```lua
---todo
+myEntity:getPositionMatrix()
 ```
 
 ---
@@ -547,7 +578,7 @@ getPositionMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myEntity:getPositionMatrixRaw()
 ```
 
 ---
@@ -605,7 +636,7 @@ setRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+myEntity:setRot(0, 45, 22.5)
 ```
 
 ---
@@ -627,7 +658,7 @@ getRot()
 **Example:**
 
 ```lua
---todo
+myEntity:getRot()
 ```
 
 ---
@@ -685,7 +716,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+myEntity:setScale(0.4, 0.4, 0.4) -- myEntity:setScale(0.4) also works
 ```
 
 ---
@@ -707,7 +738,7 @@ getScale()
 **Example:**
 
 ```lua
---todo
+myEntity:getScale()
 ```
 
 ---
@@ -737,7 +768,10 @@ setVisible(visible)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel.newPage()
+myPage:newAction():setOnToggle(function(state)
+    myEntity:setVisible(state)
+end)
 ```
 
 ---
@@ -759,7 +793,9 @@ isVisible()
 **Example:**
 
 ```lua
---todo
+if myEntity:isVisible() then
+    -- do something
+end
 ```
 
 ---
@@ -781,7 +817,7 @@ remove()
 **Example:**
 
 ```lua
---todo
+myEntity:remove()
 ```
 
 ---

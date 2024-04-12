@@ -31,7 +31,7 @@ getCount()
 **Example:**
 
 ```lua
---todo
+item:getCount()
 ```
 
 ---
@@ -53,7 +53,7 @@ getID()
 **Example:**
 
 ```lua
---todo
+item:getID()
 ```
 
 ---
@@ -75,7 +75,7 @@ getMaxCount()
 **Example:**
 
 ```lua
---todo
+item:getMaxCount()
 ```
 
 ---
@@ -97,7 +97,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+item:getName()
 ```
 
 ---
@@ -119,7 +119,7 @@ getPopTime()
 **Example:**
 
 ```lua
---todo
+item:getPopTime()
 ```
 
 ---
@@ -143,7 +143,7 @@ getRarity()
 **Example:**
 
 ```lua
---todo
+item:getRarity()
 ```
 
 ---
@@ -165,7 +165,7 @@ getTag()
 **Example:**
 
 ```lua
---todo
+item:getTag()
 ```
 
 ---
@@ -187,7 +187,7 @@ getTags()
 **Example:**
 
 ```lua
---todo
+item:getTags()
 ```
 
 ---
@@ -209,7 +209,7 @@ getUseAction()
 **Example:**
 
 ```lua
---todo
+item:getUseAction()
 ```
 
 ---
@@ -235,7 +235,7 @@ getUseDuration()
 **Example:**
 
 ```lua
---todo
+item:getUseDuration()
 ```
 
 ---
@@ -257,7 +257,7 @@ copy()
 **Example:**
 
 ```lua
---todo
+item:copy()
 ```
 
 ---
@@ -279,7 +279,7 @@ hasGlint()
 **Example:**
 
 ```lua
---todo
+item:hasGlint()
 ```
 
 ---
@@ -301,7 +301,7 @@ isFood()
 **Example:**
 
 ```lua
---todo
+item:isFood()
 ```
 
 ---
@@ -323,7 +323,7 @@ isStackable()
 **Example:**
 
 ```lua
---todo
+item:isStackable()
 ```
 
 ---
@@ -345,7 +345,7 @@ toStackString()
 **Example:**
 
 ```lua
---todo
+item:toStackString()
 ```
 
 ---
@@ -371,7 +371,7 @@ getDamage()
 **Example:**
 
 ```lua
---todo
+item:getDamage()
 ```
 
 ---
@@ -393,7 +393,7 @@ getEquipmentSlot()
 **Example:**
 
 ```lua
---todo
+item:getEquipmentSlot()
 ```
 
 ---
@@ -415,7 +415,7 @@ getMaxDamage()
 **Example:**
 
 ```lua
---todo
+item:getMaxDamage()
 ```
 
 ---
@@ -437,7 +437,7 @@ getRepairCost()
 **Example:**
 
 ```lua
---todo
+item:getRepairCost()
 ```
 
 ---
@@ -459,7 +459,7 @@ isArmor()
 **Example:**
 
 ```lua
---todo
+item:isArmor()
 ```
 
 ---
@@ -481,7 +481,7 @@ isDamageable()
 **Example:**
 
 ```lua
---todo
+item:isDamageable()
 ```
 
 ---
@@ -503,7 +503,7 @@ isEnchantable()
 **Example:**
 
 ```lua
---todo
+item:isEnchantable()
 ```
 
 ---
@@ -525,7 +525,7 @@ isTool()
 **Example:**
 
 ```lua
---todo
+item:isTool()
 ```
 
 ---
@@ -551,7 +551,7 @@ getBlockstate()
 **Example:**
 
 ```lua
---todo
+item:getBlockstate()
 ```
 
 ---
@@ -573,7 +573,7 @@ isBlockItem()
 **Example:**
 
 ```lua
---todo
+item:isBlockItem()
 ```
 
 ---
@@ -587,7 +587,7 @@ Contains the id of the item this ItemStack refers to
 **Example:**
 
 ```lua
---todo
+item.id
 ```
 
 ---
@@ -601,7 +601,7 @@ If this ItemStack has nothing in its tag, it is nil
 **Example:**
 
 ```lua
---todo
+item.tag
 ```
 
 ---

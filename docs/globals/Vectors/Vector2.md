@@ -69,7 +69,7 @@ add(x, y)
 **Example:**
 
 ```lua
---todo
+vec2:add(2, 0.5)
 ```
 
 ---
@@ -124,7 +124,7 @@ div(x, y)
 **Example:**
 
 ```lua
---todo
+vec2:div(2, 3)
 ```
 
 ---
@@ -179,7 +179,7 @@ mul(x, y)
 **Example:**
 
 ```lua
---todo
+vec2:mul(2, 3)
 ```
 
 ---
@@ -234,7 +234,7 @@ sub(x, y)
 **Example:**
 
 ```lua
---todo
+vec2:sub(1, 0.5)
 ```
 
 ---
@@ -256,7 +256,7 @@ ceil()
 **Example:**
 
 ```lua
---todo
+vec2:ceil()
 ```
 
 ---
@@ -289,7 +289,7 @@ clampLength(minLength, maxLength)
 **Example:**
 
 ```lua
---todo
+vec2:clampLength(1, 5)
 ```
 
 ---
@@ -320,7 +320,7 @@ clamped(minLength, maxLength)
 **Example:**
 
 ```lua
---todo
+vec2:clamped(1, 3)
 ```
 
 ---
@@ -348,7 +348,7 @@ dot(vec)
 **Example:**
 
 ```lua
---todo
+vec2:dot(vec(2, 2))
 ```
 
 ---
@@ -370,7 +370,7 @@ floor()
 **Example:**
 
 ```lua
---todo
+vec2:floor()
 ```
 
 ---
@@ -392,7 +392,7 @@ length()
 **Example:**
 
 ```lua
---todo
+vec2:length()
 ```
 
 ---
@@ -416,7 +416,7 @@ lengthSquared()
 **Example:**
 
 ```lua
---todo
+vec2:lengthSquared()
 ```
 
 ---
@@ -446,7 +446,7 @@ scale(factor)
 **Example:**
 
 ```lua
---todo
+vec2:scale(2)
 ```
 
 ---
@@ -470,7 +470,7 @@ normalize()
 **Example:**
 
 ```lua
---todo
+vec2:normalize()
 ```
 
 ---
@@ -492,7 +492,7 @@ normalized()
 **Example:**
 
 ```lua
---todo
+vec2:normalized()
 ```
 
 ---
@@ -520,7 +520,7 @@ offset(factor)
 **Example:**
 
 ```lua
---todo
+vec2:offset(2)
 ```
 
 ---
@@ -575,7 +575,7 @@ reduce(x, y)
 **Example:**
 
 ```lua
---todo
+vec2:reduce(1, 0.5)
 ```
 
 ---
@@ -603,7 +603,7 @@ transform(mat)
 **Example:**
 
 ```lua
---todo
+vec2:transform(matrices.mat2())
 ```
 
 ---
@@ -664,7 +664,7 @@ set(x, y)
 **Example:**
 
 ```lua
---todo
+vec2:offset(2)
 ```
 
 ---
@@ -696,7 +696,12 @@ applyFunc(func)
 **Example:**
 
 ```lua
---todo
+-- Example 1:
+vec2:applyFunc(math.sqrt)
+-- Example 2:
+vec2:applyFunc(function(v)
+    return v + math.random() - 0.5
+end)
 ```
 
 ---
@@ -748,7 +753,7 @@ augmented(value)
 **Example:**
 
 ```lua
---todo
+vec2:augmented(4)
 ```
 
 ---
@@ -770,7 +775,7 @@ copy()
 **Example:**
 
 ```lua
---todo
+vec2:copy()
 ```
 
 ---
@@ -792,7 +797,7 @@ reset()
 **Example:**
 
 ```lua
---todo
+vec2:reset()
 ```
 
 ---
@@ -814,7 +819,7 @@ unpack()
 **Example:**
 
 ```lua
---todo
+vec2:unpack()
 ```
 
 ---
@@ -838,7 +843,7 @@ toDeg()
 **Example:**
 
 ```lua
---todo
+vec2:toDeg()
 ```
 
 ---
@@ -860,7 +865,7 @@ toRad()
 **Example:**
 
 ```lua
---todo
+vec2:toRad()
 ```
 
 ---
@@ -876,7 +881,9 @@ Can also be gotten with the indices "r" and [1]
 **Example:**
 
 ```lua
---todo
+vec2.x
+vec2.r
+vec2[1]
 ```
 
 ---
@@ -890,7 +897,9 @@ Can also be gotten with the indices "g" and [2]
 **Example:**
 
 ```lua
---todo
+vec2.y
+vec2.g
+vec2[2]
 ```
 
 ---

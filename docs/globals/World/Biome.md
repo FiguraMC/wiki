@@ -38,7 +38,7 @@ getDownfall()
 **Example:**
 
 ```lua
---todo
+biome:getDownfall()
 ```
 
 ---
@@ -62,7 +62,7 @@ getPrecipitation()
 **Example:**
 
 ```lua
---todo
+biome:getPrecipitation()
 ```
 
 ---
@@ -84,7 +84,7 @@ getTemperature()
 **Example:**
 
 ```lua
---todo
+biome:getTemperature()
 ```
 
 ---
@@ -106,7 +106,7 @@ isCold()
 **Example:**
 
 ```lua
---todo
+biome:isCold()
 ```
 
 ---
@@ -128,7 +128,7 @@ isHot()
 **Example:**
 
 ```lua
---todo
+biome:isHot()
 ```
 
 ---
@@ -152,7 +152,7 @@ getFogColor()
 **Example:**
 
 ```lua
---todo
+biome:getFogColor()
 ```
 
 ---
@@ -174,7 +174,7 @@ getFoliageColor()
 **Example:**
 
 ```lua
---todo
+biome:getFoliageColor()
 ```
 
 ---
@@ -196,7 +196,7 @@ getGrassColor()
 **Example:**
 
 ```lua
---todo
+biome:getGrassColor()
 ```
 
 ---
@@ -218,7 +218,7 @@ getSkyColor()
 **Example:**
 
 ```lua
---todo
+biome:getSkyColor()
 ```
 
 ---
@@ -240,7 +240,7 @@ getWaterColor()
 **Example:**
 
 ```lua
---todo
+biome:getWaterColor()
 ```
 
 ---
@@ -262,7 +262,7 @@ getWaterFogColor()
 **Example:**
 
 ```lua
---todo
+biome:getWaterFogColor()
 ```
 
 ---
@@ -324,7 +324,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+biome:setPos(player:getPos())
 ```
 
 ---
@@ -348,7 +348,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+biome:getPos()
 ```
 
 ---
@@ -370,7 +370,7 @@ getTags()
 **Example:**
 
 ```lua
---todo
+biome:getTags()
 ```
 
 ---
@@ -382,7 +382,7 @@ The id of this biome
 **Example:**
 
 ```lua
---todo
+biome.id
 ```
 
 ---

@@ -2023,7 +2023,22 @@ getCooldownPercent(stack, delta)
 **Example:**
 
 ```lua
---todo
+local function bar(percent)
+    local progress = math.ceil(percent * 20)
+    local remaining = 20 - progress
+    return string.rep("▆", progress) .. string.rep("▁", remaining)
+end
+
+function events.tick()
+    local heldItem = player:getHeldItem()
+    if heldItem:getID() ~= "minecraft:ender_pearl" then
+        host:setActionbar("")
+        return
+    end
+    -- highlight-next-line
+    local cooldown = player:getCooldownPercent(heldItem)
+    host:setActionbar(bar(1 - cooldown))
+end
 ```
 
 ---

@@ -2395,7 +2395,7 @@ newEntity(taskName)
 **Example:**
 
 ```lua
---todo
+models:newEntity("Example")
 ```
 
 ---
@@ -2507,7 +2507,10 @@ addTask(renderTask)
 **Example:**
 
 ```lua
---todo
+local myItem = models:newItem("foo")
+myItem:setItem("slime_ball")
+-- highlight-next-line
+models.model.root.Head:addTask(myItem)
 ```
 
 ---
@@ -2780,7 +2783,8 @@ remove()
 **Example:**
 
 ```lua
---todo
+-- halloween costume in one line!
+models.model.root.Head:remove()
 ```
 
 ---
@@ -3021,34 +3025,16 @@ models:newPart("Example", "Head")
 
 Function to run before this part starts being rendered
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>midRender</code> \{#midRender}
 
 Function to run during the middle of this part's rendering, after its matrices are calculated
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>postRender</code> \{#postRender}
 
 Function to run after this part and its children are rendered
-
-**Example:**
-
-```lua
---todo
-```
 
 ---

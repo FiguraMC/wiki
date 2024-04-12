@@ -135,7 +135,14 @@ setTexture(texture, dimensions)
 **Example:**
 
 ```lua
---todo
+-- using a resource location
+mySprite:setTexture("textures/item/turtle_egg.png", 16, 16)
+
+-- using a custom texture
+mySprite:setTexture(textures["myTexture"])
+
+-- using a custom texture with dimensions
+mySprite:setTexture(textures["myTexture"], 16, 16)
 ```
 
 ---
@@ -157,7 +164,7 @@ getTexture()
 **Example:**
 
 ```lua
---todo
+mySprite:getTexture()
 ```
 
 ---
@@ -239,7 +246,7 @@ setColor(r, g, b, a)
 **Example:**
 
 ```lua
---todo
+mySprite:setColor(world.getBiome():getWaterColor())
 ```
 
 ---
@@ -263,7 +270,7 @@ getColor()
 **Example:**
 
 ```lua
---todo
+mySprite:getColor()
 ```
 
 ---
@@ -320,7 +327,10 @@ setDimensions(width, height)
 **Example:**
 
 ```lua
---todo
+-- use the long water_flow texture then make it one block
+mySprite:setTexture("textures/block/water_flow.png", 16, 16)
+-- highlight-next-line
+mySprite:setDimensions(32, 1024)
 ```
 
 ---
@@ -342,7 +352,7 @@ getDimensions()
 **Example:**
 
 ```lua
---todo
+mySprite:getDimensions()
 ```
 
 ---
@@ -401,7 +411,7 @@ setRegion(width, height)
 **Example:**
 
 ```lua
---todo
+mySprite:setRegion(64, 64)
 ```
 
 ---
@@ -423,7 +433,7 @@ getRegion()
 **Example:**
 
 ```lua
---todo
+mySprite:getRegion()
 ```
 
 ---
@@ -457,7 +467,7 @@ setRenderType(renderType)
 **Example:**
 
 ```lua
---todo
+mySprite:setRenderType("CUTOUT")
 ```
 
 ---
@@ -479,7 +489,7 @@ getRenderType()
 **Example:**
 
 ```lua
---todo
+mySprite:getRenderType()
 ```
 
 ---
@@ -536,7 +546,9 @@ setSize(width, height)
 **Example:**
 
 ```lua
---todo
+-- make my small egg bigger
+mySprite:setTexture("textures/item/turtle_egg.png", 8, 8)
+mySprite:setSize(16, 16)
 ```
 
 ---
@@ -558,7 +570,7 @@ getSize()
 **Example:**
 
 ```lua
---todo
+mySprite:getSize()
 ```
 
 ---
@@ -617,7 +629,18 @@ setUV(u, v)
 **Example:**
 
 ```lua
---todo
+-- Let's make a sprite task of flowing water!
+mySprite:setTexture("textures/block/water_flow.png", 16, 16)
+mySprite:setDimensions(32, 1024)
+mySprite:setColor(world.getBiome():getWaterColor())
+
+local t = 0
+
+function events.tick()
+    -- highlight-next-line
+    mySprite:setUV(1, t / 32)
+    t = t + 1
+end
 ```
 
 ---
@@ -639,7 +662,7 @@ getUV()
 **Example:**
 
 ```lua
---todo
+mySprite:getUV()
 ```
 
 ---
@@ -696,7 +719,18 @@ setUVPixels(u, v)
 **Example:**
 
 ```lua
---todo
+-- Let's make a sprite task of flowing water!
+mySprite:setTexture("textures/block/water_flow.png", 16, 16)
+mySprite:setDimensions(32, 1024)
+mySprite:setColor(world.getBiome():getWaterColor())
+
+local t = 0
+
+function events.tick()
+    -- highlight-next-line
+    mySprite:setUVPixels(1, t)
+    t = t - 1
+end
 ```
 
 ---
@@ -718,7 +752,7 @@ getUVPixels()
 **Example:**
 
 ```lua
---todo
+mySprite:getUVPixels()
 ```
 
 ---
@@ -742,7 +776,7 @@ getVertices()
 **Example:**
 
 ```lua
---todo
+mySprite:getVertices()
 ```
 
 ---
@@ -805,7 +839,9 @@ setLight(blockLight, skyLight)
 **Example:**
 
 ```lua
---todo
+local blockLight = world.getLightLevel(player:getPos())
+local skyLight = world.getSkyLightLevel(player:getPos())
+mySprite:setLight(blockLight, skyLight)
 ```
 
 ---
@@ -827,7 +863,7 @@ getLight()
 **Example:**
 
 ```lua
---todo
+mySprite:getLight()
 ```
 
 ---
@@ -863,7 +899,7 @@ setMatrix(matrix)
 **Example:**
 
 ```lua
---todo
+mySprite:setMatrix(matrices.mat4())
 ```
 
 ---
@@ -885,7 +921,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+mySprite:getName()
 ```
 
 ---
@@ -907,7 +943,7 @@ getNormalMatrix()
 **Example:**
 
 ```lua
---todo
+mySprite:getNormalMatrix()
 ```
 
 ---
@@ -931,7 +967,7 @@ getNormalMatrixRaw()
 **Example:**
 
 ```lua
---todo
+mySprite:getNormalMatrixRaw()
 ```
 
 ---
@@ -992,7 +1028,8 @@ setOverlay(whiteOverlay, hurtOverlay)
 **Example:**
 
 ```lua
---todo
+local hurt = player:getNbt.HurtTime > 0
+mySprite:setOverlay(hurt and 0 or nil, 1)
 ```
 
 ---
@@ -1014,7 +1051,7 @@ getOverlay()
 **Example:**
 
 ```lua
---todo
+mySprite:getOverlay()
 ```
 
 ---
@@ -1074,7 +1111,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+mySprite:setPos(0, 16, 0)
 ```
 
 ---
@@ -1096,7 +1133,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+mySprite:getPos()
 ```
 
 ---
@@ -1118,7 +1155,7 @@ getPositionMatrix()
 **Example:**
 
 ```lua
---todo
+mySprite:getPositionMatrix()
 ```
 
 ---
@@ -1142,7 +1179,7 @@ getPositionMatrixRaw()
 **Example:**
 
 ```lua
---todo
+mySprite:getPositionMatrixRaw()
 ```
 
 ---
@@ -1200,7 +1237,7 @@ setRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+mySprite:setRot(0, 45, 22.5)
 ```
 
 ---
@@ -1222,7 +1259,7 @@ getRot()
 **Example:**
 
 ```lua
---todo
+mySprite:getRot()
 ```
 
 ---
@@ -1280,7 +1317,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+mySprite:setScale(0.4, 0.4, 0.4) -- mySprite:setScale(0.4) also works
 ```
 
 ---
@@ -1302,7 +1339,7 @@ getScale()
 **Example:**
 
 ```lua
---todo
+mySprite:getScale()
 ```
 
 ---
@@ -1332,7 +1369,10 @@ setVisible(visible)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel.newPage()
+myPage:newAction():setOnToggle(function(state)
+    mySprite:setVisible(state)
+end)
 ```
 
 ---
@@ -1354,7 +1394,9 @@ isVisible()
 **Example:**
 
 ```lua
---todo
+if mySprite:isVisible() then
+    -- do something
+end
 ```
 
 ---
@@ -1376,7 +1418,7 @@ remove()
 **Example:**
 
 ```lua
---todo
+mySprite:remove()
 ```
 
 ---

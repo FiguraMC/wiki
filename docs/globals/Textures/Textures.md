@@ -32,7 +32,7 @@ get(name)
 **Example:**
 
 ```lua
---todo
+textures:get("Name")
 ```
 
 ---
@@ -56,7 +56,7 @@ getTextures()
 **Example:**
 
 ```lua
---todo
+textures:getTextures()
 ```
 
 ---
@@ -87,7 +87,7 @@ copy(name, texture)
 **Example:**
 
 ```lua
---todo
+textures:copy("Name", textures["myTexture"])
 ```
 
 ---
@@ -116,7 +116,7 @@ fromVanilla(name, path)
 **Example:**
 
 ```lua
---todo
+textures:fromVanilla("Name", "textures/item/apple.png")
 ```
 
 ---
@@ -148,7 +148,7 @@ newTexture(name, width, height)
 **Example:**
 
 ```lua
---todo
+textures:newTexture("Name", 64, 64)
 ```
 
 ---

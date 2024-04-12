@@ -11,7 +11,7 @@ Can be created using functions in the "vectors" api
 For this entire page assume:
 
 ```lua
-local vec2 = vec(2, 5)
+local vec4 = vec(2, 5, 4, 96)
 ```
 
 ---
@@ -70,7 +70,7 @@ add(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vec4:add(2, 0.5, 4, 5)
 ```
 
 ---
@@ -127,7 +127,7 @@ div(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vec4:div(2, 3, 2, 3)
 ```
 
 ---
@@ -184,7 +184,7 @@ mul(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vec4:mul(2, 3, 2, 3)
 ```
 
 ---
@@ -241,7 +241,7 @@ sub(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vec4:sub(1, 0.5, 1, 0.5)
 ```
 
 ---
@@ -263,7 +263,7 @@ ceil()
 **Example:**
 
 ```lua
---todo
+vec4:ceil()
 ```
 
 ---
@@ -296,7 +296,7 @@ clampLength(minLength, maxLength)
 **Example:**
 
 ```lua
---todo
+vec4:clampLength(1, 5)
 ```
 
 ---
@@ -327,7 +327,7 @@ clamped(minLength, maxLength)
 **Example:**
 
 ```lua
---todo
+vec4:clamped(1, 3)
 ```
 
 ---
@@ -355,7 +355,7 @@ dot(vec)
 **Example:**
 
 ```lua
---todo
+vec4:dot(vec(2, 2, 3, 5))
 ```
 
 ---
@@ -377,7 +377,7 @@ floor()
 **Example:**
 
 ```lua
---todo
+vec4:floor()
 ```
 
 ---
@@ -399,7 +399,7 @@ length()
 **Example:**
 
 ```lua
---todo
+vec4:length()
 ```
 
 ---
@@ -423,7 +423,7 @@ lengthSquared()
 **Example:**
 
 ```lua
---todo
+vec4:lengthSquared()
 ```
 
 ---
@@ -453,7 +453,7 @@ scale(factor)
 **Example:**
 
 ```lua
---todo
+vec4:scale(2)
 ```
 
 ---
@@ -477,7 +477,7 @@ normalize()
 **Example:**
 
 ```lua
---todo
+vec4:normalize()
 ```
 
 ---
@@ -499,7 +499,7 @@ normalized()
 **Example:**
 
 ```lua
---todo
+vec4:normalized()
 ```
 
 ---
@@ -527,7 +527,7 @@ offset(factor)
 **Example:**
 
 ```lua
---todo
+vec4:offset(2)
 ```
 
 ---
@@ -584,7 +584,7 @@ reduce(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vec4:reduce(1, 0.5, 2, 3)
 ```
 
 ---
@@ -612,7 +612,7 @@ transform(mat)
 **Example:**
 
 ```lua
---todo
+vec4:transform(matrices.mat4())
 ```
 
 ---
@@ -675,7 +675,7 @@ set(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vec4:set(1, 2, 3, 4)
 ```
 
 ---
@@ -707,7 +707,12 @@ applyFunc(func)
 **Example:**
 
 ```lua
---todo
+-- Example 1:
+vec4:applyFunc(math.sqrt)
+-- Example 2:
+vec4:applyFunc(function(v)
+    return v + math.random() - 0.5
+end)
 ```
 
 ---
@@ -729,7 +734,7 @@ copy()
 **Example:**
 
 ```lua
---todo
+vec4:copy()
 ```
 
 ---
@@ -751,7 +756,7 @@ reset()
 **Example:**
 
 ```lua
---todo
+vec4:reset()
 ```
 
 ---
@@ -773,7 +778,7 @@ unpack()
 **Example:**
 
 ```lua
---todo
+vec4:unpack()
 ```
 
 ---
@@ -797,7 +802,7 @@ toDeg()
 **Example:**
 
 ```lua
---todo
+vec4:toDeg()
 ```
 
 ---
@@ -819,7 +824,7 @@ toRad()
 **Example:**
 
 ```lua
---todo
+vec4:toRad()
 ```
 
 ---
@@ -835,7 +840,9 @@ Can also be gotten with the indices "r" and [1]
 **Example:**
 
 ```lua
---todo
+vec4.x
+vec4.r
+vec4[1]
 ```
 
 ---
@@ -849,7 +856,9 @@ Can also be gotten with the indices "g" and [2]
 **Example:**
 
 ```lua
---todo
+vec4.y
+vec4.g
+vec4[2]
 ```
 
 ---
@@ -863,7 +872,9 @@ Can also be gotten with the indices "b" and [3]
 **Example:**
 
 ```lua
---todo
+vec4.z
+vec4.b
+vec4[3]
 ```
 
 ---
@@ -877,7 +888,9 @@ Can also be gotten with the indices "a" and [4]
 **Example:**
 
 ```lua
---todo
+vec4.w
+vec4.a
+vec4[4]
 ```
 
 ---

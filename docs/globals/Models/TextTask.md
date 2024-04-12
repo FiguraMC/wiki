@@ -42,7 +42,7 @@ setText(text)
 **Example:**
 
 ```lua
---todo
+myText:setText("Hi mom!")
 ```
 
 ---
@@ -64,7 +64,7 @@ getText()
 **Example:**
 
 ```lua
---todo
+myText:getText()
 ```
 
 ---
@@ -98,7 +98,7 @@ setAlignment(alignment)
 **Example:**
 
 ```lua
---todo
+myText:setAlignment("CENTER")
 ```
 
 ---
@@ -122,7 +122,7 @@ getAlignment()
 **Example:**
 
 ```lua
---todo
+myText:getAlignment()
 ```
 
 ---
@@ -154,7 +154,7 @@ setBackground(background)
 **Example:**
 
 ```lua
---todo
+myText:setBackground(true)
 ```
 
 ---
@@ -215,7 +215,7 @@ setBackgroundColor(r, g, b, a)
 **Example:**
 
 ```lua
---todo
+myText:setBackgroundColor(63 / 255, 255 / 255, 192 / 255, 203 / 255)
 ```
 
 ---
@@ -237,7 +237,7 @@ getBackgroundColor()
 **Example:**
 
 ```lua
---todo
+myText:getBackgroundColor()
 ```
 
 ---
@@ -267,7 +267,7 @@ setOpacity(opacity)
 **Example:**
 
 ```lua
---todo
+myText:setOpacity(0.5)
 ```
 
 ---
@@ -289,7 +289,7 @@ getOpacity()
 **Example:**
 
 ```lua
---todo
+myText:getOpacity()
 ```
 
 ---
@@ -323,7 +323,7 @@ setOutline(outline)
 **Example:**
 
 ```lua
---todo
+myText:setOutline(true)
 ```
 
 ---
@@ -383,7 +383,9 @@ setOutlineColor(r, g, b)
 **Example:**
 
 ```lua
---todo
+myText:setOutline(true)
+-- highlight-next-line
+myText:setOutlineColor(255 / 255, 192 / 255, 203 / 255)
 ```
 
 ---
@@ -405,7 +407,7 @@ getOutlineColor()
 **Example:**
 
 ```lua
---todo
+myText:getOutlineColor()
 ```
 
 ---
@@ -437,7 +439,7 @@ setSeeThrough(seeThrough)
 **Example:**
 
 ```lua
---todo
+myText:setSeeThrough(true)
 ```
 
 ---
@@ -469,7 +471,7 @@ setShadow(shadow)
 **Example:**
 
 ```lua
---todo
+myText:setShadow(true)
 ```
 
 ---
@@ -503,7 +505,7 @@ setWidth(width)
 **Example:**
 
 ```lua
---todo
+myText:setWidth(1)
 ```
 
 ---
@@ -527,7 +529,7 @@ getWidth()
 **Example:**
 
 ```lua
---todo
+myText:getWidth()
 ```
 
 ---
@@ -557,7 +559,7 @@ setWrap(wrap)
 **Example:**
 
 ```lua
---todo
+myText:setWrap(true)
 ```
 
 ---
@@ -581,7 +583,7 @@ hasBackground()
 **Example:**
 
 ```lua
---todo
+myText:hasBackground()
 ```
 
 ---
@@ -603,7 +605,7 @@ hasOutline()
 **Example:**
 
 ```lua
---todo
+myText:hasOutline()
 ```
 
 ---
@@ -625,7 +627,7 @@ hasShadow()
 **Example:**
 
 ```lua
---todo
+myText:hasShadow()
 ```
 
 ---
@@ -647,7 +649,7 @@ hasWrap()
 **Example:**
 
 ```lua
---todo
+myText:hasWrap()
 ```
 
 ---
@@ -671,7 +673,7 @@ isSeeThrough()
 **Example:**
 
 ```lua
---todo
+myText:isSeeThrough()
 ```
 
 ---
@@ -734,7 +736,9 @@ setLight(blockLight, skyLight)
 **Example:**
 
 ```lua
---todo
+local blockLight = world.getLightLevel(player:getPos())
+local skyLight = world.getSkyLightLevel(player:getPos())
+myBlock:setLight(blockLight, skyLight)
 ```
 
 ---
@@ -756,7 +760,7 @@ getLight()
 **Example:**
 
 ```lua
---todo
+myBlock:getLight()
 ```
 
 ---
@@ -792,7 +796,7 @@ setMatrix(matrix)
 **Example:**
 
 ```lua
---todo
+myBlock:setMatrix(matrices.mat4())
 ```
 
 ---
@@ -814,7 +818,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+myBlock:getName()
 ```
 
 ---
@@ -836,7 +840,7 @@ getNormalMatrix()
 **Example:**
 
 ```lua
---todo
+myBlock:getNormalMatrix()
 ```
 
 ---
@@ -860,7 +864,7 @@ getNormalMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myBlock:getNormalMatrixRaw()
 ```
 
 ---
@@ -921,7 +925,8 @@ setOverlay(whiteOverlay, hurtOverlay)
 **Example:**
 
 ```lua
---todo
+local hurt = player:getNbt.HurtTime > 0
+myBlock:setOverlay(hurt and 0 or nil, 1)
 ```
 
 ---
@@ -943,7 +948,7 @@ getOverlay()
 **Example:**
 
 ```lua
---todo
+myBlock:getOverlay()
 ```
 
 ---
@@ -1003,7 +1008,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+myBlock:setPos(0, 16, 0)
 ```
 
 ---
@@ -1025,7 +1030,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+myBlock:getPos()
 ```
 
 ---
@@ -1047,7 +1052,7 @@ getPositionMatrix()
 **Example:**
 
 ```lua
---todo
+myBlock:getPositionMatrix()
 ```
 
 ---
@@ -1071,7 +1076,7 @@ getPositionMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myBlock:getPositionMatrixRaw()
 ```
 
 ---
@@ -1129,7 +1134,7 @@ setRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+myBlock:setRot(0, 45, 22.5)
 ```
 
 ---
@@ -1151,7 +1156,7 @@ getRot()
 **Example:**
 
 ```lua
---todo
+myBlock:getRot()
 ```
 
 ---
@@ -1209,7 +1214,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+myBlock:setScale(0.4, 0.4, 0.4) -- myBlock:setScale(0.4) also works
 ```
 
 ---
@@ -1231,7 +1236,7 @@ getScale()
 **Example:**
 
 ```lua
---todo
+myBlock:getScale()
 ```
 
 ---
@@ -1261,7 +1266,10 @@ setVisible(visible)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel.newPage()
+myPage:newAction():setOnToggle(function(state)
+    myBlock:setVisible(state)
+end)
 ```
 
 ---
@@ -1283,7 +1291,9 @@ isVisible()
 **Example:**
 
 ```lua
---todo
+if myBlock:isVisible() then
+    -- do something
+end
 ```
 
 ---
@@ -1305,7 +1315,7 @@ remove()
 **Example:**
 
 ```lua
---todo
+myBlock:remove()
 ```
 
 ---

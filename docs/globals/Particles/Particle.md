@@ -439,7 +439,7 @@ setPower(power)
 **Example:**
 
 ```lua
---todo
+myParticle:setPower(2)
 ```
 
 ---
@@ -491,7 +491,7 @@ setGravity(gravity)
 **Example:**
 
 ```lua
---todo
+myParticle:setGravity(5)
 ```
 
 ---

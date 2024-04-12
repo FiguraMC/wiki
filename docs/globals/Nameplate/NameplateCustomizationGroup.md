@@ -24,8 +24,14 @@ setText(text)
 
 **Example:**
 
+<!-- prettier-ignore -->
 ```lua
-nameplate.All:setText('[{"color":"red","text":"Me"},{"text":"!","color":"#09ff71"}]')
+nameplate.All:setText(
+   toJson({
+       { text = 'Me', color = 'red' },
+       { text = '!', color = '#09FF71' }
+   })
+)
 ```
 
 ---

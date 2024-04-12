@@ -13,6 +13,20 @@ This page is a WIP. It contains all the information in Figura's documentation bu
 
 Accessed using the name `vectors`
 
+:::info
+
+The functions in the Vector API never receive `self` as a parameter. Because of this they should be called with a `.` instead of `:`
+
+```lua
+-- error-next-line
+vectors:worldToScreenSpace(vec(1, 2, 3))
+
+-- highlight-next-line
+vectors.worldToScreenSpace(vec(1, 2, 3))
+```
+
+:::
+
 ---
 
 ## Vector Creation
@@ -95,7 +109,7 @@ vec(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vectors.vec(90, 90, 90)
 ```
 
 ---
@@ -126,7 +140,7 @@ vec2(x, y)
 **Example:**
 
 ```lua
---todo
+vectors.vec2(90, 90)
 ```
 
 ---
@@ -158,7 +172,7 @@ vec3(x, y, z)
 **Example:**
 
 ```lua
---todo
+vectors.vec3(90, 90, 90)
 ```
 
 ---
@@ -191,7 +205,7 @@ vec4(x, y, z, w)
 **Example:**
 
 ```lua
---todo
+vectors.vec4(90, 90, 90, 90)
 ```
 
 ---
@@ -225,7 +239,8 @@ hexToRGB(hex)
 **Example:**
 
 ```lua
---todo
+vectors.hexToRGB("#5bbcf4")
+vectors.hexToRGB("SOFT_BLUE")
 ```
 
 ---
@@ -281,7 +296,7 @@ hsvToRGB(h, s, v)
 **Example:**
 
 ```lua
---todo
+vectors.hsvToRGB(181, 68, 66)
 ```
 
 ---
@@ -309,7 +324,7 @@ intToRGB(color)
 **Example:**
 
 ```lua
---todo
+vectors.intToRGB(838860750)
 ```
 
 ---
@@ -365,7 +380,7 @@ rgbToHSV(r, g, b)
 **Example:**
 
 ```lua
---todo
+vectors.rgbToHSV(81, 68, 66)
 ```
 
 ---
@@ -423,7 +438,7 @@ rgbToHex(r, g, b)
 **Example:**
 
 ```lua
---todo
+vectors.rgbToHex(81, 68, 66)
 ```
 
 ---
@@ -479,7 +494,7 @@ rgbToInt(r, g, b)
 **Example:**
 
 ```lua
---todo
+vectors.rgbToInt(50, 50, 50)
 ```
 
 ---
@@ -536,7 +551,7 @@ angleToDir(pitch, yaw)
 **Example:**
 
 ```lua
---todo
+vectors.angleToDir(90, 70)
 ```
 
 ---
@@ -644,7 +659,7 @@ rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
 **Example:**
 
 ```lua
---todo
+vectors.rotateAroundAxis(180, vec(1, 2, 3), vec(0, 1, 0))
 ```
 
 ---
@@ -700,7 +715,7 @@ toCameraSpace(x, y, z)
 **Example:**
 
 ```lua
---todo
+vectors.toCameraSpace(vec(1, 2, 3))
 ```
 
 ---
@@ -756,7 +771,7 @@ worldToScreenSpace(x, y, z)
 **Example:**
 
 ```lua
---todo
+vectors.worldToScreenSpace(vec(1, 2, 3))
 ```
 
 ---

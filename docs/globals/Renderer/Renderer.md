@@ -36,7 +36,19 @@ setCameraMatrix(matrix)
 **Example:**
 
 ```lua
---todo
+-- I hope you don't get dizzy
+local t = 1
+
+function events.tick()
+    t = t + 1
+end
+
+function events.render(delta)
+    local theta = 2 * math.pi * ((t + delta) / 20)
+    local rotMat = matrices.mat4():rotateY(math.deg(theta))
+    -- highlight-next-line
+    renderer:setCameraMatrix(rotMat)
+end
 ```
 
 ---
@@ -58,7 +70,7 @@ getCameraMatrix()
 **Example:**
 
 ```lua
---todo
+renderer:getCameraMatrix()
 ```
 
 ---
@@ -88,7 +100,18 @@ setCameraNormal(matrix)
 **Example:**
 
 ```lua
---todo
+local t = 0
+local flipped = false
+
+function events.tick()
+    if t % 20 == 0 then
+        flipped = not flipped
+    end
+    local rotMat = matrices.mat3():rotateY(flipped and 180 or 0)
+    -- highlight-next-line
+    renderer:setCameraNormal(rotMat)
+    t = t + 1
+end
 ```
 
 ---
@@ -110,7 +133,7 @@ getCameraNormal()
 **Example:**
 
 ```lua
---todo
+renderer:getCameraNormal()
 ```
 
 ---
@@ -132,7 +155,7 @@ getCameraOffsetPivot()
 **Example:**
 
 ```lua
---todo
+renderer:getCameraOffsetPivot()
 ```
 
 ---
@@ -154,7 +177,7 @@ getCameraOffsetRot()
 **Example:**
 
 ```lua
---todo
+renderer:getCameraOffsetRot()
 ```
 
 ---
@@ -220,7 +243,8 @@ setCameraPivot(x, y, z)
 **Example:**
 
 ```lua
---todo
+-- I wonder what's going on at spawn
+renderer:setCameraPivot(0, 100, 0)
 ```
 
 ---
@@ -242,7 +266,7 @@ getCameraPivot()
 **Example:**
 
 ```lua
---todo
+renderer:getCameraPivot()
 ```
 
 ---
@@ -302,7 +326,7 @@ setCameraPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+renderer:setCameraPos(0, 2, 0)
 ```
 
 ---
@@ -324,7 +348,7 @@ getCameraPos()
 **Example:**
 
 ```lua
---todo
+renderer:getCameraPos()
 ```
 
 ---
@@ -388,7 +412,7 @@ setCameraRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+renderer:setCameraRot(0, 90, 0)
 ```
 
 ---
@@ -410,7 +434,7 @@ getCameraRot()
 **Example:**
 
 ```lua
---todo
+renderer:getCameraRot()
 ```
 
 ---
@@ -476,7 +500,7 @@ setOffsetCameraPivot(x, y, z)
 **Example:**
 
 ```lua
---todo
+renderer:setOffsetCameraPivot(0, 2, 0)
 ```
 
 ---
@@ -540,7 +564,7 @@ setOffsetCameraRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+renderer:setOffsetCameraRot(0, 90, 0)
 ```
 
 ---
@@ -564,7 +588,7 @@ isFirstPerson()
 **Example:**
 
 ```lua
---todo
+renderer:isFirstPerson()
 ```
 
 ---
@@ -586,7 +610,7 @@ isCameraBackwards()
 **Example:**
 
 ```lua
---todo
+renderer:isCameraBackwards()
 ```
 
 ---
@@ -670,7 +694,7 @@ setBlockOutlineColor(r, g, b, a)
 **Example:**
 
 ```lua
---todo
+renderer:setBlockOutlineColor(0, 0, 1, 0.4)
 ```
 
 ---
@@ -694,7 +718,7 @@ getBlockOutlineColor()
 **Example:**
 
 ```lua
---todo
+renderer:getBlockOutlineColor()
 ```
 
 ---
@@ -751,7 +775,7 @@ setCrosshairOffset(x, y)
 **Example:**
 
 ```lua
---todo
+renderer:setCrosshairOffset(20, 20)
 ```
 
 ---
@@ -773,7 +797,7 @@ getCrosshairOffset()
 **Example:**
 
 ```lua
---todo
+renderer:getCrosshairOffset()
 ```
 
 ---
@@ -831,7 +855,7 @@ setEyeOffset(x, y, z)
 **Example:**
 
 ```lua
---todo
+renderer:setEyeOffset(0, 2, 0)
 ```
 
 ---
@@ -855,7 +879,7 @@ getEyeOffset()
 **Example:**
 
 ```lua
---todo
+renderer:getEyeOffset()
 ```
 
 ---
@@ -907,7 +931,7 @@ setFOV(fov)
 **Example:**
 
 ```lua
---todo
+renderer:setFOV(2)
 ```
 
 ---
@@ -929,7 +953,7 @@ getFOV()
 **Example:**
 
 ```lua
---todo
+renderer:getFOV()
 ```
 
 ---
@@ -957,7 +981,7 @@ setForcePaperdoll(forcePaperdoll)
 **Example:**
 
 ```lua
---todo
+renderer:setForcePaperdoll(true)
 ```
 
 ---
@@ -1015,7 +1039,7 @@ setOutlineColor(r, g, b)
 **Example:**
 
 ```lua
---todo
+renderer:setOutlineColor(0, 0, 1)
 ```
 
 ---
@@ -1037,7 +1061,7 @@ getOutlineColor()
 **Example:**
 
 ```lua
---todo
+renderer:getOutlineColor()
 ```
 
 ---
@@ -1069,7 +1093,7 @@ setPostEffect(effect)
 **Example:**
 
 ```lua
---todo
+renderer:setPostEffect("invert")
 ```
 
 ---
@@ -1105,7 +1129,7 @@ setPrimaryFireTexture(id)
 **Example:**
 
 ```lua
---todo
+renderer:setPrimaryFireTexture("textures/block/soul_fire_0")
 ```
 
 ---
@@ -1127,7 +1151,7 @@ getPrimaryFireTexture()
 **Example:**
 
 ```lua
---todo
+renderer:getPrimaryFireTexture()
 ```
 
 ---
@@ -1155,7 +1179,7 @@ setRenderCrosshair(renderCrosshair)
 **Example:**
 
 ```lua
---todo
+renderer:setRenderCrosshair(false)
 ```
 
 ---
@@ -1183,7 +1207,7 @@ setRenderFire(renderFire)
 **Example:**
 
 ```lua
---todo
+renderer:setRenderFire(false)
 ```
 
 ---
@@ -1211,7 +1235,7 @@ setRenderHUD(renderHUD)
 **Example:**
 
 ```lua
---todo
+renderer:setRenderHUD(false)
 ```
 
 ---
@@ -1241,7 +1265,7 @@ setRenderLeftArm(bool)
 **Example:**
 
 ```lua
---todo
+renderer:setRenderLeftArm(true)
 ```
 
 ---
@@ -1263,7 +1287,7 @@ getRenderLeftArm()
 **Example:**
 
 ```lua
---todo
+renderer:getRenderLeftArm()
 ```
 
 ---
@@ -1293,7 +1317,7 @@ setRenderRightArm(bool)
 **Example:**
 
 ```lua
---todo
+renderer:setRenderRightArm(true)
 ```
 
 ---
@@ -1315,7 +1339,7 @@ getRenderRightArm()
 **Example:**
 
 ```lua
---todo
+renderer:getRenderRightArm()
 ```
 
 ---
@@ -1343,7 +1367,7 @@ setRenderVehicle(renderVehicle)
 **Example:**
 
 ```lua
---todo
+renderer:setRenderVehicle(false)
 ```
 
 ---
@@ -1375,7 +1399,7 @@ setRootRotationAllowed(bool)
 **Example:**
 
 ```lua
---todo
+renderer:setRootRotationAllowed(true)
 ```
 
 ---
@@ -1397,7 +1421,7 @@ getRootRotationAllowed()
 **Example:**
 
 ```lua
---todo
+renderer:getRootRotationAllowed()
 ```
 
 ---
@@ -1433,7 +1457,7 @@ setSecondaryFireTexture(id)
 **Example:**
 
 ```lua
---todo
+renderer:setSecondaryFireTexture("textures/block/soul_fire_1")
 ```
 
 ---
@@ -1455,7 +1479,7 @@ getSecondaryFireTexture()
 **Example:**
 
 ```lua
---todo
+renderer:getSecondaryFireTexture()
 ```
 
 ---
@@ -1509,7 +1533,7 @@ setShadowRadius(radius)
 **Example:**
 
 ```lua
---todo
+renderer:setShadowRadius(12)
 ```
 
 ---
@@ -1531,7 +1555,7 @@ getShadowRadius()
 **Example:**
 
 ```lua
---todo
+renderer:getShadowRadius()
 ```
 
 ---
@@ -1561,7 +1585,7 @@ setUpsideDown(upsideDown)
 **Example:**
 
 ```lua
---todo
+renderer:setUpsideDown(true)
 ```
 
 ---
@@ -1583,7 +1607,7 @@ isUpsideDown()
 **Example:**
 
 ```lua
---todo
+renderer:isUpsideDown()
 ```
 
 ---
@@ -1605,7 +1629,7 @@ shouldForcePaperdoll()
 **Example:**
 
 ```lua
---todo
+renderer:shouldForcePaperdoll()
 ```
 
 ---
@@ -1627,7 +1651,7 @@ shouldRenderCrosshair()
 **Example:**
 
 ```lua
---todo
+renderer:shouldRenderCrosshair()
 ```
 
 ---
@@ -1649,7 +1673,7 @@ shouldRenderFire()
 **Example:**
 
 ```lua
---todo
+renderer:shouldRenderFire()
 ```
 
 ---
@@ -1671,7 +1695,7 @@ shouldRenderHUD()
 **Example:**
 
 ```lua
---todo
+renderer:shouldRenderHUD()
 ```
 
 ---
@@ -1693,7 +1717,7 @@ shouldRenderVehicle()
 **Example:**
 
 ```lua
---todo
+renderer:shouldRenderVehicle()
 ```
 
 ---
@@ -1706,12 +1730,6 @@ Whether or not you should visually have the fire effect while on fire
 
 True by default
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>renderVehicle</code> \{#renderVehicle}
@@ -1720,12 +1738,6 @@ Whether or not your vehicle (boat, minecart, horse, whatever) will be rendered
 
 True by default
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>renderCrosshair</code> \{#renderCrosshair}
@@ -1733,12 +1745,6 @@ True by default
 Toggles whether or not your crosshair should render
 
 True by default
-
-**Example:**
-
-```lua
---todo
-```
 
 ---
 
@@ -1750,12 +1756,6 @@ If the paperdoll is disabled, or set to always render, nothing will change
 
 False by default
 
-**Example:**
-
-```lua
---todo
-```
-
 ---
 
 ### <code>renderHUD</code> \{#renderHUD}
@@ -1763,11 +1763,5 @@ False by default
 Toggles whether or not the vanilla HUD should be rendered
 
 Hands and the Figura HUD are not included
-
-**Example:**
-
-```lua
---todo
-```
 
 ---

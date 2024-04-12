@@ -118,7 +118,9 @@ aabb(startX, startY, startZ, endX, endY, endZ, aabbs)
 **Example:**
 
 ```lua
---todo
+local eyePos = player:getPos() + vec(0, player:getEyeHeight(), 0)
+local eyeEnd = eyePos + (player:getLookDir() * 20)
+local aabb, hitPos, side, aabbHitIndex = raycast:aabb(eyePos, eyeEnd, { { vec(0, 0, 0), vec(1, 1, 1) } })
 ```
 
 ---
@@ -238,7 +240,9 @@ block(startX, startY, startZ, endX, endY, endZ, blockCastType, fluidCastType)
 **Example:**
 
 ```lua
---todo
+local eyePos = player:getPos() + vec(0, player:getEyeHeight(), 0)
+local eyeEnd = eyePos + (player:getLookDir() * 20)
+local block, hitPos, side = raycast:block(eyePos, eyeEnd)
 ```
 
 ---

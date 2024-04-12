@@ -68,7 +68,7 @@ setBlock(block)
 **Example:**
 
 ```lua
---todo
+myBlock:setBlock("mycelium")
 ```
 
 ---
@@ -131,7 +131,10 @@ setLight(blockLight, skyLight)
 **Example:**
 
 ```lua
---todo
+local blockLight = world.getLightLevel(player:getPos())
+local skyLight = world.getSkyLightLevel(player:getPos())
+-- highlight-next-line
+myBlock:setLight(blockLight, skyLight)
 ```
 
 ---
@@ -153,7 +156,7 @@ getLight()
 **Example:**
 
 ```lua
---todo
+myBlock:getLight()
 ```
 
 ---
@@ -189,7 +192,7 @@ setMatrix(matrix)
 **Example:**
 
 ```lua
---todo
+myBlock:setMatrix(matrices.mat4())
 ```
 
 ---
@@ -211,7 +214,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+myBlock:getName()
 ```
 
 ---
@@ -233,7 +236,7 @@ getNormalMatrix()
 **Example:**
 
 ```lua
---todo
+myBlock:getNormalMatrix()
 ```
 
 ---
@@ -257,7 +260,7 @@ getNormalMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myBlock:getNormalMatrixRaw()
 ```
 
 ---
@@ -318,7 +321,8 @@ setOverlay(whiteOverlay, hurtOverlay)
 **Example:**
 
 ```lua
---todo
+local hurt = player:getNbt.HurtTime > 0
+myBlock:setOverlay(hurt and 0 or nil, 1)
 ```
 
 ---
@@ -340,7 +344,7 @@ getOverlay()
 **Example:**
 
 ```lua
---todo
+myBlock:getOverlay()
 ```
 
 ---
@@ -400,7 +404,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+myBlock:setPos(0, 16, 0)
 ```
 
 ---
@@ -422,7 +426,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+myBlock:getPos()
 ```
 
 ---
@@ -444,7 +448,7 @@ getPositionMatrix()
 **Example:**
 
 ```lua
---todo
+myBlock:getPositionMatrix()
 ```
 
 ---
@@ -468,7 +472,7 @@ getPositionMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myBlock:getPositionMatrixRaw()
 ```
 
 ---
@@ -526,7 +530,7 @@ setRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+myBlock:setRot(0, 45, 22.5)
 ```
 
 ---
@@ -548,7 +552,7 @@ getRot()
 **Example:**
 
 ```lua
---todo
+myBlock:getRot()
 ```
 
 ---
@@ -606,7 +610,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+myBlock:setScale(0.4, 0.4, 0.4) -- myBlock:setScale(0.4) also works
 ```
 
 ---
@@ -628,7 +632,7 @@ getScale()
 **Example:**
 
 ```lua
---todo
+myBlock:getScale()
 ```
 
 ---
@@ -658,7 +662,10 @@ setVisible(visible)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel.newPage()
+myPage:newAction():setOnToggle(function(state)
+    myBlock:setVisible(state)
+end)
 ```
 
 ---
@@ -680,7 +687,9 @@ isVisible()
 **Example:**
 
 ```lua
---todo
+if myBlock:isVisible() then
+    -- do something
+end
 ```
 
 ---
@@ -702,7 +711,7 @@ remove()
 **Example:**
 
 ```lua
---todo
+myBlock:remove()
 ```
 
 ---

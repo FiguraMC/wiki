@@ -64,7 +64,7 @@ setOffsetRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:setOffsetRot(0, 90, 0)
 ```
 
 ---
@@ -86,7 +86,7 @@ getOffsetRot()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getOffsetRot()
 ```
 
 ---
@@ -144,7 +144,7 @@ setOffsetScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:setOffsetScale(2, 2, 2)
 ```
 
 ---
@@ -166,7 +166,7 @@ getOffsetScale()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getOffsetScale()
 ```
 
 ---
@@ -188,7 +188,7 @@ getOriginPos()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getOriginPos()
 ```
 
 ---
@@ -210,7 +210,7 @@ getOriginRot()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getOriginRot()
 ```
 
 ---
@@ -232,7 +232,7 @@ getOriginScale()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getOriginScale()
 ```
 
 ---
@@ -254,7 +254,7 @@ getOriginVisible()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getOriginVisible()
 ```
 
 ---
@@ -312,7 +312,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:setPos(0, 10, 0)
 ```
 
 ---
@@ -336,7 +336,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getPos()
 ```
 
 ---
@@ -394,7 +394,7 @@ setRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:setRot(0, 90, 0)
 ```
 
 ---
@@ -418,7 +418,7 @@ getRot()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getRot()
 ```
 
 ---
@@ -476,7 +476,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:setScale(2, 2, 2)
 ```
 
 ---
@@ -500,7 +500,7 @@ getScale()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getScale()
 ```
 
 ---
@@ -530,7 +530,7 @@ setVisible(visible)
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:setVisible(false)
 ```
 
 ---
@@ -552,7 +552,7 @@ getVisible()
 **Example:**
 
 ```lua
---todo
+vanilla_model.HEAD:getVisible()
 ```
 
 ---

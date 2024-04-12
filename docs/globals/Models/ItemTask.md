@@ -68,7 +68,7 @@ setItem(item)
 **Example:**
 
 ```lua
---todo
+myItem:setItem("slime_ball")
 ```
 
 ---
@@ -98,7 +98,7 @@ setDisplayMode(displayMode)
 **Example:**
 
 ```lua
---todo
+myItem:setDisplayMode("GROUND")
 ```
 
 ---
@@ -120,7 +120,7 @@ getDisplayMode()
 **Example:**
 
 ```lua
---todo
+myItem:getDisplayMode()
 ```
 
 ---
@@ -183,7 +183,9 @@ setLight(blockLight, skyLight)
 **Example:**
 
 ```lua
---todo
+local blockLight = world.getLightLevel(player:getPos())
+local skyLight = world.getSkyLightLevel(player:getPos())
+myItem:setLight(blockLight, skyLight)
 ```
 
 ---
@@ -205,7 +207,7 @@ getLight()
 **Example:**
 
 ```lua
---todo
+myItem:getLight()
 ```
 
 ---
@@ -241,7 +243,7 @@ setMatrix(matrix)
 **Example:**
 
 ```lua
---todo
+myItem:setMatrix(matrices.mat4())
 ```
 
 ---
@@ -263,7 +265,7 @@ getName()
 **Example:**
 
 ```lua
---todo
+myItem:getName()
 ```
 
 ---
@@ -285,7 +287,7 @@ getNormalMatrix()
 **Example:**
 
 ```lua
---todo
+myItem:getNormalMatrix()
 ```
 
 ---
@@ -309,7 +311,7 @@ getNormalMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myItem:getNormalMatrixRaw()
 ```
 
 ---
@@ -370,7 +372,8 @@ setOverlay(whiteOverlay, hurtOverlay)
 **Example:**
 
 ```lua
---todo
+local hurt = player:getNbt.HurtTime > 0
+myItem:setOverlay(hurt and 0 or nil, 1)
 ```
 
 ---
@@ -392,7 +395,7 @@ getOverlay()
 **Example:**
 
 ```lua
---todo
+myItem:getOverlay()
 ```
 
 ---
@@ -452,7 +455,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+myItem:setPos(0, 16, 0)
 ```
 
 ---
@@ -474,7 +477,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+myItem:getPos()
 ```
 
 ---
@@ -496,7 +499,7 @@ getPositionMatrix()
 **Example:**
 
 ```lua
---todo
+myItem:getPositionMatrix()
 ```
 
 ---
@@ -520,7 +523,7 @@ getPositionMatrixRaw()
 **Example:**
 
 ```lua
---todo
+myItem:getPositionMatrixRaw()
 ```
 
 ---
@@ -578,7 +581,7 @@ setRot(x, y, z)
 **Example:**
 
 ```lua
---todo
+myItem:setRot(0, 45, 22.5)
 ```
 
 ---
@@ -600,7 +603,7 @@ getRot()
 **Example:**
 
 ```lua
---todo
+myItem:getRot()
 ```
 
 ---
@@ -658,7 +661,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
---todo
+myItem:setScale(0.4, 0.4, 0.4) -- myItem:setScale(0.4) also works
 ```
 
 ---
@@ -680,7 +683,7 @@ getScale()
 **Example:**
 
 ```lua
---todo
+myItem:getScale()
 ```
 
 ---
@@ -710,7 +713,10 @@ setVisible(visible)
 **Example:**
 
 ```lua
---todo
+local myPage = action_wheel.newPage()
+myPage:newAction():setOnToggle(function(state)
+    myItem:setVisible(state)
+end)
 ```
 
 ---
@@ -732,7 +738,9 @@ isVisible()
 **Example:**
 
 ```lua
---todo
+if myItem:isVisible() then
+    -- do something
+end
 ```
 
 ---
@@ -754,7 +762,7 @@ remove()
 **Example:**
 
 ```lua
---todo
+myItem:remove()
 ```
 
 ---

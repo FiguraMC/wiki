@@ -70,7 +70,7 @@ add(x, y, z)
 **Example:**
 
 ```lua
---todo
+vec3:add(2, 0.5, 4)
 ```
 
 ---
@@ -126,7 +126,7 @@ div(x, y, z)
 **Example:**
 
 ```lua
---todo
+vec3:div(2, 3, 2)
 ```
 
 ---
@@ -182,7 +182,7 @@ mul(x, y, z)
 **Example:**
 
 ```lua
---todo
+vec3:mul(2, 3, 2)
 ```
 
 ---
@@ -238,7 +238,7 @@ sub(x, y, z)
 **Example:**
 
 ```lua
---todo
+vec3:sub(1, 0.5, 1)
 ```
 
 ---
@@ -260,7 +260,7 @@ ceil()
 **Example:**
 
 ```lua
---todo
+vec3:ceil()
 ```
 
 ---
@@ -293,7 +293,7 @@ clampLength(minLength, maxLength)
 **Example:**
 
 ```lua
---todo
+vec3:clampLength(1, 5)
 ```
 
 ---
@@ -324,7 +324,7 @@ clamped(minLength, maxLength)
 **Example:**
 
 ```lua
---todo
+vec3:clamped(1, 3)
 ```
 
 ---
@@ -354,7 +354,7 @@ cross(other)
 **Example:**
 
 ```lua
---todo
+vec3:cross(vec(2, 3, 5))
 ```
 
 ---
@@ -382,7 +382,7 @@ crossed(other)
 **Example:**
 
 ```lua
---todo
+vec3:crossed(vec(2, 5, 4))
 ```
 
 ---
@@ -410,7 +410,7 @@ dot(vec)
 **Example:**
 
 ```lua
---todo
+vec3:dot(vec(2, 2, 3))
 ```
 
 ---
@@ -432,7 +432,7 @@ floor()
 **Example:**
 
 ```lua
---todo
+vec3:floor()
 ```
 
 ---
@@ -454,7 +454,7 @@ length()
 **Example:**
 
 ```lua
---todo
+vec3:length()
 ```
 
 ---
@@ -478,7 +478,7 @@ lengthSquared()
 **Example:**
 
 ```lua
---todo
+vec3:lengthSquared()
 ```
 
 ---
@@ -508,7 +508,7 @@ scale(factor)
 **Example:**
 
 ```lua
---todo
+vec3:scale(2)
 ```
 
 ---
@@ -532,7 +532,7 @@ normalize()
 **Example:**
 
 ```lua
---todo
+vec3:normalize()
 ```
 
 ---
@@ -554,7 +554,7 @@ normalized()
 **Example:**
 
 ```lua
---todo
+vec3:normalized()
 ```
 
 ---
@@ -582,7 +582,7 @@ offset(factor)
 **Example:**
 
 ```lua
---todo
+vec3:offset(2)
 ```
 
 ---
@@ -638,7 +638,7 @@ reduce(x, y, z)
 **Example:**
 
 ```lua
---todo
+vec3:reduce(1, 0.5, 2)
 ```
 
 ---
@@ -666,7 +666,7 @@ transform(mat)
 **Example:**
 
 ```lua
---todo
+vec3:transform(matrices.mat3())
 ```
 
 ---
@@ -728,7 +728,7 @@ set(x, y, z)
 **Example:**
 
 ```lua
---todo
+vec3:set(1, 2, 3)
 ```
 
 ---
@@ -760,7 +760,12 @@ applyFunc(func)
 **Example:**
 
 ```lua
---todo
+-- Example 1:
+vec3:applyFunc(math.sqrt)
+-- Example 2:
+vec3:applyFunc(function(v)
+    return v + math.random() - 0.5
+end)
 ```
 
 ---
@@ -812,7 +817,7 @@ augmented(value)
 **Example:**
 
 ```lua
---todo
+vec3:augmented(4)
 ```
 
 ---
@@ -834,7 +839,7 @@ copy()
 **Example:**
 
 ```lua
---todo
+vec3:copy()
 ```
 
 ---
@@ -856,7 +861,7 @@ reset()
 **Example:**
 
 ```lua
---todo
+vec3:reset()
 ```
 
 ---
@@ -878,7 +883,7 @@ unpack()
 **Example:**
 
 ```lua
---todo
+vec3:unpack()
 ```
 
 ---
@@ -902,7 +907,7 @@ toDeg()
 **Example:**
 
 ```lua
---todo
+vec3:toDeg()
 ```
 
 ---
@@ -924,7 +929,7 @@ toRad()
 **Example:**
 
 ```lua
---todo
+vec3:toRad()
 ```
 
 ---
@@ -940,7 +945,9 @@ Can also be gotten with the indices "r" and [1]
 **Example:**
 
 ```lua
---todo
+vec3.x
+vec3.r
+vec3[1]
 ```
 
 ---
@@ -954,7 +961,9 @@ Can also be gotten with the indices "g" and [2]
 **Example:**
 
 ```lua
---todo
+vec3.y
+vec3.g
+vec3[2]
 ```
 
 ---
@@ -968,7 +977,9 @@ Can also be gotten with the indices "b" and [3]
 **Example:**
 
 ```lua
---todo
+vec3.z
+vec3.b
+vec3[3]
 ```
 
 ---
