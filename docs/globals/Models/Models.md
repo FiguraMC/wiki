@@ -1892,14 +1892,15 @@ getPrimaryTexture()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                                                                 | Description     |
+| ---------------------------------------------------------------------------------------------------- | --------------- |
+| <code>[TextureType](/enums/TextureTypes)</code>                                                      | Override type   |
+| <code>[String](/tutorials/types/Strings)</code> or <code>[Texture](/globals/Textures/Texture)</code> | Primary texture |
 
 **Example:**
 
 ```lua
-models:getPrimaryTexture()
+local texType, tex = models:getPrimaryTexture()
 ```
 
 ---
@@ -2028,14 +2029,15 @@ getSecondaryTexture()
 
 **Returns:**
 
-| Type                 | Description |
-| -------------------- | ----------- |
-| <code>AnyType</code> | -           |
+| Type                                                                                                 | Description       |
+| ---------------------------------------------------------------------------------------------------- | ----------------- |
+| <code>[TextureType](/enums/TextureTypes)</code>                                                      | Override type     |
+| <code>[String](/tutorials/types/Strings)</code> or <code>[Texture](/globals/Textures/Texture)</code> | Secondary texture |
 
 **Example:**
 
 ```lua
-models:getSecondaryTexture()
+local texType, tex = models:getSecondaryTexture()
 ```
 
 ---

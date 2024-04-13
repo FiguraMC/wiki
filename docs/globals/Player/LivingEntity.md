@@ -896,9 +896,11 @@ getTargetedBlock()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description         |
+| ---------------------------------------------------- | ------------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Targeted block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position        |
+| <code>[String](/tutorials/types/Strings)</code>      | Targeted block face |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -915,9 +917,11 @@ getTargetedBlock(ignoreLiquids)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description         |
+| ---------------------------------------------------- | ------------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Targeted block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position        |
+| <code>[String](/tutorials/types/Strings)</code>      | Targeted block face |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -935,9 +939,11 @@ getTargetedBlock(ignoreLiquids, distance)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description         |
+| ---------------------------------------------------- | ------------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Targeted block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position        |
+| <code>[String](/tutorials/types/Strings)</code>      | Targeted block face |
 
     </TabItem>
 
@@ -946,7 +952,8 @@ getTargetedBlock(ignoreLiquids, distance)
 **Example:**
 
 ```lua
-if thisEntity:getTargetedBlock(true, 4.5).id == "minecraft:grass_block" then
+local block, hitPos, side = thisEntity:getTargetedBlock(true, 4.5)
+if block.id == "minecraft:grass_block" then
     log("You're looking at grass")
 end
 ```
@@ -970,9 +977,10 @@ getTargetedEntity()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description     |
+| ------------------------------------------------ | --------------- |
+| <code>[Entity](/globals/Player/Entity)</code>    | Targeted entity |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position    |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -989,9 +997,10 @@ getTargetedEntity(distance)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description     |
+| ------------------------------------------------ | --------------- |
+| <code>[Entity](/globals/Player/Entity)</code>    | Targeted entity |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position    |
 
     </TabItem>
 
@@ -1000,7 +1009,7 @@ getTargetedEntity(distance)
 **Example:**
 
 ```lua
-thisEntity:getPos()
+local entity, hitPos = thisEntity:getTargetedEntity()
 ```
 
 ---

@@ -1413,10 +1413,10 @@ generateUUID()
 
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[1]     |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[2]     |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[3]     |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[4]     |
 
 **Example:**
 
@@ -1481,7 +1481,7 @@ client:listAtlases()
 
 ### <code>uuidToIntArray()</code> \{#uuidToIntArray}
 
-Converts a string UUID into its int array representation, returning a varargs of 4 ints
+Converts a string UUID into its int array representation, returning four seperate integers
 
 ```lua
 uuidToIntArray(uuid)
@@ -1497,15 +1497,15 @@ uuidToIntArray(uuid)
 
 | Type                                             | Description |
 | ------------------------------------------------ | ----------- |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[1]     |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[2]     |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[3]     |
+| <code>[Integer](/tutorials/types/Numbers)</code> | uuid[4]     |
 
 **Example:**
 
 ```lua
-client:uuidToIntArray("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
+local a, b, c, d = client:uuidToIntArray("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
 ```
 
 ---

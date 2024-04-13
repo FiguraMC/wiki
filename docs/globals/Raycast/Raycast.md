@@ -36,9 +36,12 @@ aabb(startpos, endpos, aabbs)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description                        |
+| ------------------------------------------------ | ---------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code>    | Hit AABB                           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit pos                            |
+| <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -59,9 +62,12 @@ aabb(startX, startY, startZ, endpos, aabbs)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description                        |
+| ------------------------------------------------ | ---------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code>    | Hit AABB                           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit pos                            |
+| <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -82,9 +88,12 @@ aabb(startpos, endX, endY, endZ, aabbs)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description                        |
+| ------------------------------------------------ | ---------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code>    | Hit AABB                           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit pos                            |
+| <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -107,9 +116,12 @@ aabb(startX, startY, startZ, endX, endY, endZ, aabbs)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description                        |
+| ------------------------------------------------ | ---------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code>    | Hit AABB                           |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit pos                            |
+| <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
     </TabItem>
 
@@ -155,9 +167,11 @@ block(startpos, endpos, blockCastType, fluidCastType)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description    |
+| ---------------------------------------------------- | -------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Hit block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
+| <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -179,9 +193,11 @@ block(startX, startY, startZ, endpos, blockCastType, fluidCastType)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description    |
+| ---------------------------------------------------- | -------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Hit block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
+| <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -203,9 +219,11 @@ block(startpos, endX, endY, endZ, blockCastType, fluidCastType)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description    |
+| ---------------------------------------------------- | -------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Hit block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
+| <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -229,9 +247,11 @@ block(startX, startY, startZ, endX, endY, endZ, blockCastType, fluidCastType)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description    |
+| ---------------------------------------------------- | -------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Hit block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
+| <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
     </TabItem>
 
@@ -278,9 +298,10 @@ entity(startpos, endpos, predicate)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description  |
+| ------------------------------------------------ | ------------ |
+| <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -301,9 +322,10 @@ entity(startX, startY, startZ, endpos, predicate)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description  |
+| ------------------------------------------------ | ------------ |
+| <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
     </TabItem>
     <TabItem value="overload-3" label="Overload 3">
@@ -324,9 +346,10 @@ entity(startpos, endX, endY, endZ, predicate)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description  |
+| ------------------------------------------------ | ------------ |
+| <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
     </TabItem>
     <TabItem value="overload-4" label="Overload 4">
@@ -349,9 +372,10 @@ entity(startX, startY, startZ, endX, endY, endZ, predicate)
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description  |
+| ------------------------------------------------ | ------------ |
+| <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
     </TabItem>
 
@@ -360,7 +384,9 @@ entity(startX, startY, startZ, endX, endY, endZ, predicate)
 **Example:**
 
 ```lua
---todo
+local eyePos = player:getPos() + vec(0, player:getEyeHeight(), 0)
+local eyeEnd = eyePos + (player:getLookDir() * 20)
+local entity, hitPos = raycast:entity(eyePos, eyeEnd)
 ```
 
 ---

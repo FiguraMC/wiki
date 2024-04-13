@@ -812,14 +812,15 @@ unpack()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | x value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | y value     |
 
 **Example:**
 
 ```lua
-vec2:unpack()
+local x, y = vec2:unpack()
 ```
 
 ---

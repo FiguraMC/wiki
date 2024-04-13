@@ -876,14 +876,16 @@ unpack()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | x value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | y value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | z value     |
 
 **Example:**
 
 ```lua
-vec3:unpack()
+local x, y, z = vec3:unpack()
 ```
 
 ---

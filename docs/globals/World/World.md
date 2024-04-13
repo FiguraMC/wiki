@@ -121,14 +121,15 @@ getBuildHeight()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                             | Description          |
+| ------------------------------------------------ | -------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Minimum build height |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Maximum build height |
 
 **Example:**
 
 ```lua
-world.getBiome(player:getPos())
+local min, max = world.getBiome(player:getPos())
 ```
 
 ---

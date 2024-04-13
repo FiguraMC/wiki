@@ -474,14 +474,16 @@ getPickBlock()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                                 | Description         |
+| ---------------------------------------------------- | ------------------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | Targeted block      |
+| <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position        |
+| <code>[String](/tutorials/types/Strings)</code>      | Targeted block face |
 
 **Example:**
 
 ```lua
-host:getPickBlock()
+local block, hitPos, side = host:getPickBlock()
 ```
 
 ---

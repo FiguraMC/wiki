@@ -771,14 +771,17 @@ unpack()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Varargs](/tutorials/types/Varargs)</code> | -           |
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | x value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | y value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | z value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | w value     |
 
 **Example:**
 
 ```lua
-vec4:unpack()
+local x, y, z, w = vec4:unpack()
 ```
 
 ---
