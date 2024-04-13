@@ -26,7 +26,7 @@ getTitle()
 **Example:**
 
 ```lua
-local myAction = myPage:newAction()
+myPage:getTitle()
 ```
 
 ---

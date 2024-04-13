@@ -440,7 +440,7 @@ getAbsorptionAmount()
 **Example:**
 
 ```lua
-local thisEntity = thisEntity:getTargetedEntity()
+thisEntity:getAbsorptionAmount()
 ```
 
 ---
@@ -644,7 +644,7 @@ getEyeHeight()
 **Example:**
 
 ```lua
-thisEntity:getEyeY()
+thisEntity:getEyeHeight()
 ```
 
 ---
@@ -872,7 +872,7 @@ getStingerCount()
 **Example:**
 
 ```lua
-thisEntity:getStingercount()
+thisEntity:getStingerCount()
 ```
 
 ---
@@ -1033,7 +1033,7 @@ getType()
 **Example:**
 
 ```lua
-thisEntity:getName()
+thisEntity:getType()
 ```
 
 ---

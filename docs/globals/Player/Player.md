@@ -890,7 +890,7 @@ getStingerCount()
 **Example:**
 
 ```lua
-player:getStingercount()
+player:getStingerCount()
 ```
 
 ---
@@ -1028,7 +1028,7 @@ getType()
 **Example:**
 
 ```lua
-player:getName()
+player:getType()
 ```
 
 ---
@@ -1426,7 +1426,14 @@ Returns whether or not this entity is currently on the ground
 
 :::caution
 
-Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block. See the example for a workaround.
+Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block.
+
+**Work Around:**
+
+```lua
+-- check the blockstate of the block directly underneath the player
+world.getBlockState(player:getPos():add(0, -0.1, 0)):isSolidBlock()
+```
 
 :::
 
@@ -1443,8 +1450,7 @@ isOnGround()
 **Example:**
 
 ```lua
--- check the blockstate of the block directly underneath the player
-world.getBlockState(player:getPos():add(0, -0.1, 0)):isSolidBlock()
+player:isOnGround()
 ```
 
 ---
@@ -1490,7 +1496,7 @@ getEyeHeight()
 **Example:**
 
 ```lua
-player:getEyeY()
+player:getEyeHeight()
 ```
 
 ---

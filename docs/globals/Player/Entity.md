@@ -278,7 +278,7 @@ getEyeHeight()
 **Example:**
 
 ```lua
-thisEntity:getEyeY()
+thisEntity:getEyeHeight()
 ```
 
 ---
@@ -625,7 +625,7 @@ getType()
 **Example:**
 
 ```lua
-thisEntity:getName()
+thisEntity:getType()
 ```
 
 ---

@@ -632,7 +632,7 @@ getPos()
 **Example:**
 
 ```lua
-block:getID()
+block:getPos()
 ```
 
 ---

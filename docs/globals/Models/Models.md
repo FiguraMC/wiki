@@ -156,7 +156,7 @@ getRot()
 **Example:**
 
 ```lua
-models:setRot()
+models:getRot()
 ```
 
 ---
@@ -1228,7 +1228,7 @@ getLight()
 **Example:**
 
 ```lua
-models:getOpacity()
+models:getLight()
 ```
 
 ---
@@ -1595,7 +1595,9 @@ setPreRender(function)
 **Example:**
 
 ```lua
-models:getAnimRot()
+models:setPreRender(function()
+    print("PreRender!")
+end)
 ```
 
 ---
@@ -1623,7 +1625,9 @@ setMidRender(function)
 **Example:**
 
 ```lua
-models:getAnimRot()
+models:setMidRender(function()
+    print("MidRender!")
+end)
 ```
 
 ---
@@ -1651,7 +1655,9 @@ setPostRender(function)
 **Example:**
 
 ```lua
-models:getAnimRot()
+models:setPostRender(function()
+    print("PostRender!")
+end)
 ```
 
 ---
@@ -1924,7 +1930,7 @@ getPrimaryDefinedTextures()
 **Example:**
 
 ```lua
-
+models:getPrimaryDefinedTextures()
 ```
 
 ---
@@ -2061,7 +2067,7 @@ getSecondaryDefinedTextures()
 **Example:**
 
 ```lua
-
+models:getSecondaryDefinedTextures()
 ```
 
 ---

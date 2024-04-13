@@ -387,7 +387,7 @@ setLifetime(lifetime)
 **Example:**
 
 ```lua
-myParticle:setLifeTime(100)
+myParticle:setLifetime(100)
 ```
 
 ---

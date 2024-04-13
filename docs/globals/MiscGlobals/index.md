@@ -94,7 +94,7 @@ listFiles(folder, subFolders)
 -- Using autoscripts in avatar.json,
 -- you can prevent loading scripts by default and instead require them like so
 -- highlight-next-line
-for _, script in ipairs(listfiles("/scripts"), true) do
+for _, script in ipairs(listFiles("/scripts"), true) do
     require(script)
 end
 ```

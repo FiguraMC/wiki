@@ -52,7 +52,7 @@ getVersion()
 **Example:**
 
 ```lua
-client:getVerison()
+client:getVersion()
 ```
 
 ---

@@ -76,7 +76,7 @@ isFlying()
 **Example:**
 
 ```lua
-host:isHost()
+host:isFlying()
 ```
 
 ---

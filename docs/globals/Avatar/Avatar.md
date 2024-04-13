@@ -218,7 +218,7 @@ getColor()
 **Example:**
 
 ```lua
-avatar:setColor(50 / 255, 200 / 255, 200 / 255)
+avatar:getColor()
 ```
 
 ---
@@ -1007,7 +1007,7 @@ getMaxBufferSize()
 **Example:**
 
 ```lua
-avatar:getMaxBuffersSize()
+avatar:getMaxBufferSize()
 ```
 
 ---

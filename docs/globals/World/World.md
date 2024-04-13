@@ -129,7 +129,7 @@ getBuildHeight()
 **Example:**
 
 ```lua
-local min, max = world.getBiome(player:getPos())
+local min, max = world.getBuildHeight()
 ```
 
 ---
@@ -595,7 +595,7 @@ newBlock(block, x, y, z)
 **Example:**
 
 ```lua
-world.getBlockState(player:getPos())
+world.newBlock("minecraft:dirt")
 ```
 
 ---
@@ -1100,7 +1100,7 @@ getLightLevel(x, y, z)
 **Example:**
 
 ```lua
-world.getBlockLightLevel(player:getPos())
+world.getLightLevel(player:getPos())
 ```
 
 ---
