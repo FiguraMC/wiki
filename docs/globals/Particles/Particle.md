@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Represents a particle that can be spawned and modified
 
 Obtained by indexing the ParticleAPI
@@ -12,11 +15,21 @@ myParticle = particles["explosion"]
 
 ---
 
-### `spawn()` \{#spawn}
+### <code>spawn()</code> \{#spawn}
 
-Spawns the particle with its current properties (set with the other functions)
+Spawns this particle with the current properties
 
-**Example**:
+```lua
+spawn()
+```
+
+**Returns:**
+
+| Type                                                 | Description                      |
+| ---------------------------------------------------- | -------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Spawns the particle in the world |
+
+**Example:**
 
 ```lua
 myParticle:spawn()
@@ -24,23 +37,83 @@ myParticle:spawn()
 
 ---
 
-### `setPos(Vector3)` \{#setPos}
+### <code>setPos()</code> \{#setPos}
 
-Sets the position of the particle
+**Aliases:** `pos()`
 
-**Example**:
+Sets this particle position
+
+The position is given in world coordinates
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description                                    | Default      |
+| ---- | ------------------------------------------------ | ---------------------------------------------- | ------------ |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | Sets the position of the particle in the world | `vec(0,0,0)` |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                       | Default |
+| ---- | ----------------------------------------------- | ------------------------------------------------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | Sets the x position of the particle in the world  | `0`     |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | TSets the y position of the particle in the world | `0`     |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | Sets the x position of the particle in the world  | `0`     |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+-- player position example
 myParticle:setPos(player:getPos())
+-- model part position example
+myParticle:setPos(modelpart:partToWorldMatrix():apply())
 ```
 
 ---
 
-### `getPos()` \{#getPos}
+### <code>getPos()</code> \{#getPos}
 
-Gets the position of the particle
+Gets this particle position
 
-**Example**:
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description                          |
+| ------------------------------------------------ | ------------------------------------ |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Gets the position the particle is at |
+
+**Example:**
 
 ```lua
 myParticle:getPos()
@@ -48,23 +121,102 @@ myParticle:getPos()
 
 ---
 
-### `setColor(Vector3 or Vector4)` \{#setColor}
+### <code>setColor()</code> \{#setColor}
 
-Sets the particle color, most particles don't support it. The alpha value can be excluded
+**Aliases:** `color()`
 
-**Example**:
+Sets this particle's color, values must be between 0 and 1
+
+Accepts an alpha value, but most particles do not support it
+
+Default RGBA of 1
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myParticle:setColor(0, 0, 1)
+setColor(rgb)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description                           | Default      |
+| ---- | ------------------------------------------------ | ------------------------------------- | ------------ |
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB color applied to the particle | `vec(1,1,1)` |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setColor(rgba)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description                            | Default        |
+| ---- | ------------------------------------------------ | -------------------------------------- | -------------- |
+| rgba | <code>[Vector4](/globals/Vectors/Vector4)</code> | The RGBA color applied to the particle | `vec(1,1,1,1)` |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
+
+```lua
+setColor(r, g, b, a)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                        | Default |
+| ---- | ----------------------------------------------- | ---------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The R tint applied to the particle | `1`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The G tint applied to the particle | `1`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The B tint applied to the particle | `1`     |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | The A tint applied to the particle | `1`     |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myParticle:setColor(1, 0, 1)
 ```
 
 ---
 
-### `getColor()` \{#getColor}
+### <code>getColor()</code> \{#getColor}
 
-Gets the color as set by setcolor
+Gets this particle color
 
-**Example**:
+```lua
+getColor()
+```
+
+**Returns:**
+
+| Type                                             | Description                                                                    |
+| ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | Gets the RGBA color applied to the particle by [setColor](./Particle#setColor) |
+
+**Example:**
 
 ```lua
 myParticle:getColor()
@@ -72,103 +224,274 @@ myParticle:getColor()
 
 ---
 
-### `setScale(Vector3)` \{#setScale}
+### <code>setScale()</code> \{#setScale}
 
-Sets the scale of the particle
+**Aliases:** `scale()`, `setSize()`, `size()`
 
-**Example**:
+Sets this particle scale
 
 ```lua
-myParticle:setScale(2, 2, 2)
+setScale(scale)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description                                 | Default |
+| ----- | ----------------------------------------------- | ------------------------------------------- | ------- |
+| scale | <code>[Number](/tutorials/types/Numbers)</code> | Sets the scale of both axes of the particle | 1       |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+**Example:**
+
+```lua
+myParticle:setScale(2)
 ```
 
 ---
 
-### `getScale()` \{#getScale}
+### <code>getScale()</code> \{#getScale}
 
-Gets the scale of the particle
+**Aliases:** `getSize()`
 
-**Example**:
+Gets this particle scale
+
+```lua
+getScale()
+```
+
+**Returns:**
+
+| Type                                            | Description                    |
+| ----------------------------------------------- | ------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the scale of the particle |
+
+**Example:**
 
 ```lua
 myParticle:getScale()
 ```
 
-### `setVelocity(Vector3)` \{#setVelocity}
+---
 
-Sets the velocity of the particle
+### <code>setVelocity()</code> \{#setVelocity}
 
-**Example**:
+**Aliases:** `velocity()`
+
+Sets the velocity of this particle
+
+The velocity is given in world coordinates
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myParticle:setVelocity(2, 2, 2)
+setVelocity(velocity)
+```
+
+**Parameters:**
+
+| Name     | Type                                             | Description | Default                              |
+| -------- | ------------------------------------------------ | ----------- | ------------------------------------ |
+| velocity | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | The default velocity of the particle |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setVelocity(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default                                |
+| ---- | ----------------------------------------------- | ----------- | -------------------------------------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | The default x velocity of the particle |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | The default y velocity of the particle |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | The default z velocity of the particle |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myParticle:setVelocity(0, 5, 0)
 ```
 
 ---
 
-### `getVelocity()` \{#getVelocity}
+### <code>getVelocity()</code> \{#getVelocity}
 
-Gets the velocity of the particle
+Gets the velocity of this particle
 
-**Example**:
+```lua
+getVelocity()
+```
+
+**Returns:**
+
+| Type                                             | Description              |
+| ------------------------------------------------ | ------------------------ |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Gets the velocity of the |
+
+**Example:**
 
 ```lua
 myParticle:getVelocity()
 ```
 
-### `setLifetime(integer)` \{#setLifetime}
+---
 
-Sets how long the particle should stay in the world. Particles with animations will animate in relation to their life left, so longer lives will make the animation play slower.
+### <code>setLifetime()</code> \{#setLifetime}
 
-**Example**:
+**Aliases:** `lifetime()`
+
+Sets this particle lifetime, which is how many ticks this particle should stay in the world
 
 ```lua
-myParticle:setLifetime(200)
+setLifetime(lifetime)
+```
+
+**Parameters:**
+
+| Name     | Type                                             | Description                                           | Default                              |
+| -------- | ------------------------------------------------ | ----------------------------------------------------- | ------------------------------------ |
+| lifetime | <code>[Integer](/tutorials/types/Numbers)</code> | How long the particle will stay in the world in ticks | The default lifetime of the particle |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+**Example:**
+
+```lua
+myParticle:setLifetime(100)
 ```
 
 ---
 
-### `getLifetime()` \{#getLifetime}
+### <code>getLifetime()</code> \{#getLifetime}
 
-Gets the lifetime
+Gets this particle current lifetime
 
-**Example**:
+```lua
+getLifetime()
+```
+
+**Returns:**
+
+| Type                                             | Description                                                |
+| ------------------------------------------------ | ---------------------------------------------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Gets how long the particle will stay in the world in ticks |
+
+**Example:**
 
 ```lua
 myParticle:getLifetime()
 ```
 
-### `setPower(number)` \{#setPower}
+---
+
+### <code>setPower()</code> \{#setPower}
+
+**Aliases:** `power()`
 
 Multiplies the particle's velocity every time it's run
 
-**Example**:
+```lua
+setPower(power)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| power | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+**Example:**
 
 ```lua
-myParticle:setPower(5)
+myParticle:setPower(2)
 ```
 
 ---
 
-### `getPower()` \{#getPower}
+### <code>getPower()</code> \{#getPower}
 
-Silly power
+Gets the last number passed into setPower, but not the total power of the particle
 
 :::caution
+
 getPower doesn't get the particle's actual power, but the number last passed into setPower
+
 :::
 
-**Example**:
+```lua
+getPower()
+```
+
+**Returns:**
+
+| Type                                            | Description                    |
+| ----------------------------------------------- | ------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the power of the particle |
+
+**Example:**
 
 ```lua
 myParticle:getPower()
 ```
 
-### `setGravity(number)` \{#setGravity}
+---
 
-Sets the strength of gravity
+### <code>setGravity()</code> \{#setGravity}
 
-**Example**:
+**Aliases:** `gravity()`
+
+Sets the strength of the particle's gravity
+
+```lua
+setGravity(gravity)
+```
+
+**Parameters:**
+
+| Name    | Type                                            | Description                                 | Default |
+| ------- | ----------------------------------------------- | ------------------------------------------- | ------- |
+| gravity | <code>[Number](/tutorials/types/Numbers)</code> | Sets the strength of the particle's gravity | `1`     |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+**Example:**
 
 ```lua
 myParticle:setGravity(5)
@@ -176,21 +499,51 @@ myParticle:setGravity(5)
 
 ---
 
-### `getGravity()` \{#getGravity}
+### <code>getGravity()</code> \{#getGravity}
 
-Gets the gravity value
+Gets this particle gravity
 
-**Example**:
+```lua
+getGravity()
+```
+
+**Returns:**
+
+| Type                                            | Description                                 |
+| ----------------------------------------------- | ------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the strength of the particle's gravity |
+
+**Example:**
 
 ```lua
 myParticle:getGravity()
 ```
 
-### `setPhysics(bool)` \{#setPhysics}
+---
 
-Sets if the particle will experience physics
+### <code>setPhysics()</code> \{#setPhysics}
 
-**Example**:
+**Aliases:** `physics()`
+
+Sets if this particle has physics
+
+```lua
+setPhysics(physics)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                                                           | Default |
+| ------- | ------------------------------------------------- | --------------------------------------------------------------------- | ------- |
+| physics | <code>[Boolean](/tutorials/types/Booleans)</code> | Boolean that turns physics on if true, and turns physics off if false | `true`  |
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+**Example:**
 
 ```lua
 myParticle:setPhysics(false)
@@ -198,46 +551,68 @@ myParticle:setPhysics(false)
 
 ---
 
-### `hasPhysics()` \{#hasPhysics}
+### <code>hasPhysics()</code> \{#hasPhysics}
 
-Gets if the particle has physics
+Gets if this particle has physics
 
-**Example**:
+```lua
+hasPhysics()
+```
+
+**Returns:**
+
+| Type                                              | Description                       |
+| ------------------------------------------------- | --------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Gets if this particle has physics |
+
+**Example:**
 
 ```lua
 myParticle:hasPhysics()
 ```
 
-### `setSize(number)` \{#setSize}
+---
 
-Sets the scale of the particle, identical to setScale
+### <code>remove()</code> \{#remove}
 
-**Example**:
+Removes this particle from the world
 
 ```lua
-myParticle:setSize(5)
+remove()
+```
+
+**Returns:**
+
+| Type                                                 | Description                       |
+| ---------------------------------------------------- | --------------------------------- |
+| <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
+
+**Example:**
+
+```lua
+myParticle:remove()
 ```
 
 ---
 
-### `getSize()` \{#getSize}
+### <code>isAlive()</code> \{#isAlive}
 
-Gets the size of the particle
-
-**Example**:
+Checks if this particle is not flagged for removal
 
 ```lua
-myParticle:getSize()
+isAlive()
 ```
 
----
+**Returns:**
 
-### `isAlive()` \{#isAlive}
+| Type                                              | Description                      |
+| ------------------------------------------------- | -------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if the particle is alive |
 
-Gets if the particle is still in the world
-
-**Example**:
+**Example:**
 
 ```lua
 myParticle:isAlive()
 ```
+
+---

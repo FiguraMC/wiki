@@ -1,8 +1,37 @@
-Nameplate customization that applies to Entity (the nameplate above your head)
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-### `setText(string)` {#setText}
+A nameplate customization that is specialized for entities
 
-Sets the text of the nameplate
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
+
+---
+
+## Text
+
+### <code>setText()</code> \{#setText}
+
+The text to use in this nameplate
+
+```lua
+setText(text)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                             | Description |
+| -------------------------------------------------------------------------------- | ----------- |
+| <code>[NameplateCustomization](/globals/Nameplate/NameplateCustomization)</code> | -           |
+
+**Example:**
 
 ```lua
 nameplate.Entity:setText("Hi")
@@ -10,9 +39,21 @@ nameplate.Entity:setText("Hi")
 
 ---
 
-### `getText()` {#getText}
+### <code>getText()</code> \{#getText}
 
-Gets the text of the nameplate as set by <code>setText</code>
+The text to use in this nameplate
+
+```lua
+getText()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 nameplate.Entity:getText()
@@ -20,109 +61,31 @@ nameplate.Entity:getText()
 
 ---
 
-### `setVisible(bool)` {#setVisible}
+### <code>setOutline()</code> \{#setOutline}
 
-Sets the visibility of the nameplate
+**Aliases:** `outline()`
 
-```lua
-nameplate.Entity:setVisible(false)
-```
+Sets whether or not the nameplate should have outline
 
----
-
-### `isVisible()` {#isVisible}
-
-Gets the visibility of the nameplate
+Incompatible with "shadow"
 
 ```lua
-nameplate.Entity:isVisible()
+setOutline(outline)
 ```
 
----
+**Parameters:**
 
-### `setPos(Vector3)` {#setPos}
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| outline | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
-Sets the position of the nameplate in blocks, this is an offset of the pivot location so 0,0,0 is the pivot's location
+**Returns:**
 
-```lua
-nameplate.Entity:setPos(0, 1, 0)
-```
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
----
-
-### `getPos()` {#getPos}
-
-Gets the position of the nameplate
-
-```lua
-nameplate.Entity:getPos()
-```
-
----
-
-### `setScale(Vector3)` {#setScale}
-
-Sets the scale of the nameplate
-
-```lua
-nameplate.Entity:setScale(2, 2, 2)
-```
-
----
-
-### `getScale()` {#getScale}
-
-Gets the scale of the nameplate
-
-```lua
-nameplate.Entity:getScale()
-```
-
----
-
-### `setPivot(Vector3)` {#setPivot}
-
-Sets the pivot of the nameplate
-
-```lua
-nameplate.Entity:setPivot(0, 3, 0)
-```
-
----
-
-### `getPivot()` {#getPivot}
-
-Gets the pivot of the nameplate
-
-```lua
-nameplate.Entity:getPivot()
-```
-
----
-
-### `setLight(Vector2)` {#setLight}
-
-Sets the brightness of the nameplate text, the first arg is blockLight and the second arg is skyLight
-
-```lua
-nameplate.Entity:setLight(15, 15)
-```
-
----
-
-### `getLight()` {#getLight}
-
-Gets the brightness of the nameplate text as set by <code>setLight</code>
-
-```lua
-nameplate.Entity:getLight()
-```
-
----
-
-### `setOutline(bool)` {#setOutline}
-
-Sets if the nameplate text should be outlined. Incompatible with <code>setShadow</code>
+**Example:**
 
 ```lua
 nameplate.Entity:setOutline(true)
@@ -130,9 +93,21 @@ nameplate.Entity:setOutline(true)
 
 ---
 
-### `hasOutline()` {#hasOutline}
+### <code>hasOutline()</code> \{#hasOutline}
 
-Gets if the nameplate has an outline
+Gets whether or not the nameplate should have an outline
+
+```lua
+hasOutline()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 nameplate.Entity:hasOutline()
@@ -140,9 +115,56 @@ nameplate.Entity:hasOutline()
 
 ---
 
-### `setOutlineColor(Vector3)` {#setOutlineColor}
+### <code>setOutlineColor()</code> \{#setOutlineColor}
 
-Sets the color used for the outline in rgb format and 0-1 ex: (100/255,100/255,100/255)
+**Aliases:** `outlineColor()`
+
+Sets the color used for the outline in the outline mode
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setOutlineColor(color)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOutlineColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 nameplate.Entity:setOutlineColor(100 / 255, 100 / 255, 100 / 255)
@@ -150,29 +172,31 @@ nameplate.Entity:setOutlineColor(100 / 255, 100 / 255, 100 / 255)
 
 ---
 
-### `setBackgroundColor(Vector4)` {#setBackgroundColor}
+### <code>setShadow()</code> \{#setShadow}
 
-Sets the color of the nameplate background, in rgba format and 0-1 ex: (100/255,100/255,100/255,100/255)
+**Aliases:** `shadow()`
 
-```lua
-nameplate.Entity:setBackgroundColor(100 / 255, 100 / 255, 100 / 255)
-```
+Sets whether or not the nameplate should have shadow
 
----
-
-### `getBackgroundColor()` {#getBackgroundColor}
-
-Gets the color of the nameplate background as set by <code>setBackgroundColor</code>
+Incompatible with "outline"
 
 ```lua
-nameplate.Entity:getBackgroundColor()
+setShadow(shadow)
 ```
 
----
+**Parameters:**
 
-### `setShadow(bool)` {#setShadow}
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| shadow | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
-Sets if the nameplate text has a shadow
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 nameplate.Entity:setShadow(true)
@@ -180,10 +204,479 @@ nameplate.Entity:setShadow(true)
 
 ---
 
-### `hasShadow()` {#hasShadow}
+### <code>hasShadow()</code> \{#hasShadow}
 
-Gets if the nameplate has a shadow
+Gets whether or not the nameplate should have shadow
+
+```lua
+hasShadow()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 nameplate.Entity:hasShadow()
 ```
+
+---
+
+## Nameplate Properties
+
+### <code>setBackgroundColor()</code> \{#setBackgroundColor}
+
+**Aliases:** `backgroundColor()`
+
+Sets the color of the nameplate background
+
+If the alpha value is not given, it will use the vanilla value (as in the accessibility settings)
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setBackgroundColor(rgba)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rgba | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setBackgroundColor(r, g, b, a)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+nameplate.Entity:setBackgroundColor(100 / 255, 100 / 255, 100 / 255)
+```
+
+---
+
+### <code>getBackgroundColor()</code> \{#getBackgroundColor}
+
+Gets the set color of the nameplate background
+
+```lua
+getBackgroundColor()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+**Example:**
+
+```lua
+nameplate.Entity:getBackgroundColor()
+```
+
+---
+
+### <code>setLight()</code> \{#setLight}
+
+**Aliases:** `light()`
+
+Sets the light override value
+
+Values are given from 0 to 15, indicating the block light and sky light levels you want to use
+
+Passing nil will reset the lighting override
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setLight(light)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| light | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setLight(blockLight, skyLight)
+```
+
+**Parameters:**
+
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| blockLight | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| skyLight   | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+nameplate.Entity:setLight(15, 15)
+```
+
+---
+
+### <code>getLight()</code> \{#getLight}
+
+Gets the lighting override value
+
+```lua
+getLight()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
+
+```lua
+nameplate.Entity:getLight()
+```
+
+---
+
+### <code>setPivot()</code> \{#setPivot}
+
+**Aliases:** `pivot()`
+
+Sets the pivot of the nameplate, in world coordinates
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPivot(pivot)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| pivot | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPivot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+nameplate.Entity:setPivot(0, 3, 0)
+```
+
+---
+
+### <code>getPivot()</code> \{#getPivot}
+
+Gets the pivot of the nameplate, in world coordinates
+
+```lua
+getPivot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+nameplate.Entity:getPivot()
+```
+
+---
+
+### <code>setPos()</code> \{#setPos}
+
+**Aliases:** `pos()`
+
+Sets the position offset of the nameplate, in world coordinates
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+nameplate.Entity:setPos(0, 1, 0)
+```
+
+---
+
+### <code>getPos()</code> \{#getPos}
+
+Gets the position offset of the nameplate, in world coordinates
+
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+nameplate.Entity:getPos()
+```
+
+---
+
+### <code>setScale()</code> \{#setScale}
+
+**Aliases:** `scale()`
+
+Sets the scale factor of the nameplate
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setScale(scale)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| scale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+nameplate.Entity:setScale(2, 2, 2)
+```
+
+---
+
+### <code>getScale()</code> \{#getScale}
+
+Gets scale factor of the nameplate
+
+```lua
+getScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+nameplate.Entity:getScale()
+```
+
+---
+
+### <code>setVisible()</code> \{#setVisible}
+
+**Aliases:** `visible()`
+
+Sets whether or not the nameplate should be rendered
+
+```lua
+setVisible(visible)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                                                         | Description               |
+| -------------------------------------------------------------------------------------------- | ------------------------- |
+| <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+nameplate.Entity:setVisible(false)
+```
+
+---
+
+### <code>isVisible()</code> \{#isVisible}
+
+Gets whether or not the nameplate should be rendered
+
+```lua
+isVisible()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+nameplate.Entity:isVisible()
+```
+
+---

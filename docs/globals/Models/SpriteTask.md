@@ -1,34 +1,137 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 A task for rendering a single Sprite from [newSprite](.#newSprite)
+
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
 
 For this entire page assume:
 
 ```lua
-local mySprite = models:newSprite("myCoolSpritesName")
+local mySprite = models:newSprite("myCoolSpriteName")
 ```
 
 ---
 
-### <code>setTexture(texture: [Texture](../Textures/Texture) | string, width: number?, height: number?): [SpriteTask](./SpriteTask)</code> \{#setTexture}
+## Sprite Task
+
+### <code>setTexture()</code> \{#setTexture}
+
+**Aliases:** `texture()`
 
 Sets this task's texture
-The texture dimensions, Width and Height, must be provided if the texture is a location
+
+The texture's width and height must be provided if the texture is a location
+
 For custom textures, the dimensions are optional
 
-**Parameters**
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-| Name    | Type                                        | Description                                                    |
-| ------- | ------------------------------------------- | -------------------------------------------------------------- |
-| texture | <code>[Texture](../Textures/Texture)</code> | Either a custom texture or a resource location.                |
-| width   | number?                                     | Width of the texture in pixels. Optional for custom textures.  |
-| height  | number?                                     | Height of the texture in pixels. Optional for custom textures. |
+```lua
+setTexture(textureLocation, width, height)
+```
 
-**Returns**
+**Parameters:**
 
-| Name       | Type                                    | Description                                                      |
-| ---------- | --------------------------------------- | ---------------------------------------------------------------- |
-| spriteTask | <code>[SpriteTask](./SpriteTask)</code> | The SpriteTask you called this function on to allow for chaining |
+| Name            | Type                                             | Description | Default |
+| --------------- | ------------------------------------------------ | ----------- | ------- |
+| textureLocation | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| width           | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height          | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
 
-**Example**:
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setTexture(texture)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
+
+```lua
+setTexture(texture, width, height)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
+
+```lua
+setTexture(textureLocation, dimensions)
+```
+
+**Parameters:**
+
+| Name            | Type                                             | Description | Default |
+| --------------- | ------------------------------------------------ | ----------- | ------- |
+| textureLocation | <code>[String](/tutorials/types/Strings)</code>  | -           | -       |
+| dimensions      | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-5" label="Overload 5">
+
+```lua
+setTexture(texture, dimensions)
+```
+
+**Parameters:**
+
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| texture    | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| dimensions | <code>[Vector2](/globals/Vectors/Vector2)</code>  | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 -- using a resource location
@@ -43,11 +146,21 @@ mySprite:setTexture(textures["myTexture"], 16, 16)
 
 ---
 
-### <code>getTexture(): [Texture](../Textures/Texture)</code> \{#getTexture}
+### <code>getTexture()</code> \{#getTexture}
 
 Returns this task's current texture
 
-**Example**:
+```lua
+getTexture()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 mySprite:getTexture()
@@ -55,11 +168,160 @@ mySprite:getTexture()
 
 ---
 
-### <code>setDimensions(dimensions: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setDimensions}
+### <code>setColor()</code> \{#setColor}
 
-Sets the texture dimensions, used in UV calculation. Accepts a `Vector2` of dimension values or a number per value.
+**Aliases:** `color()`
 
-**Example**:
+Sets a color multiplier for this sprite
+
+Values are RGBA from 0 to 1
+
+Default values are 1, alpha is optional
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setColor(rgb)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rgb  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setColor(rgba)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rgba | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
+
+```lua
+setColor(r, g, b, a)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+mySprite:setColor(world.getBiome():getWaterColor())
+```
+
+---
+
+### <code>getColor()</code> \{#getColor}
+
+Gets the current color multiplier of this sprite
+
+Values are RGBA from 0 to 1
+
+```lua
+getColor()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getColor()
+```
+
+---
+
+### <code>setDimensions()</code> \{#setDimensions}
+
+**Aliases:** `dimensions()`
+
+Sets the texture dimensions, used in UV calculation
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setDimensions(dimensions)
+```
+
+**Parameters:**
+
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| dimensions | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setDimensions(width, height)
+```
+
+**Parameters:**
+
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 -- use the long water_flow texture then make it one block
@@ -70,11 +332,21 @@ mySprite:setDimensions(32, 1024)
 
 ---
 
-### <code>getDimensions(): [Vector2](../Vectors/Vector2)</code> \{#getDimensions}
+### <code>getDimensions()</code> \{#getDimensions}
 
 Returns the texture dimensions, used in UV calculation
 
-**Example**:
+```lua
+getDimensions()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 mySprite:getDimensions()
@@ -82,11 +354,191 @@ mySprite:getDimensions()
 
 ---
 
-### <code>setSize(size: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setSize}
+### <code>setRegion()</code> \{#setRegion}
 
-Sets the width and height used to render this sprite. Accepts a `Vector2` of size values or a number per value.
+**Aliases:** `region()`
 
-**Example**:
+Sets the texture UV region
+
+Uses its dimensions to calculate the max UV
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setRegion(region)
+```
+
+**Parameters:**
+
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| region | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setRegion(width, height)
+```
+
+**Parameters:**
+
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+mySprite:setRegion(64, 64)
+```
+
+---
+
+### <code>getRegion()</code> \{#getRegion}
+
+Gets the texture UV region
+
+```lua
+getRegion()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getRegion()
+```
+
+---
+
+### <code>setRenderType()</code> \{#setRenderType}
+
+**Aliases:** `renderType()`
+
+Sets the current render type of this sprite
+
+TRANSLUCENT by default
+
+Check the docs enum command for all render types
+
+```lua
+setRenderType(renderType)
+```
+
+**Parameters:**
+
+| Name       | Type                                            | Description | Default |
+| ---------- | ----------------------------------------------- | ----------- | ------- |
+| renderType | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+mySprite:setRenderType("CUTOUT")
+```
+
+---
+
+### <code>getRenderType()</code> \{#getRenderType}
+
+Gets the name of the current render type for this sprite
+
+```lua
+getRenderType()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getRenderType()
+```
+
+---
+
+### <code>setSize()</code> \{#setSize}
+
+**Aliases:** `size()`
+
+Sets the width and height used to render this sprite
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setSize(size)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| size | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setSize(width, height)
+```
+
+**Parameters:**
+
+| Name   | Type                                             | Description | Default |
+| ------ | ------------------------------------------------ | ----------- | ------- |
+| width  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| height | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 -- make my small egg bigger
@@ -96,11 +548,21 @@ mySprite:setSize(16, 16)
 
 ---
 
-### <code>getSize(): [Vector2](../Vectors/Vector2)</code> \{#getSize}
+### <code>getSize()</code> \{#getSize}
 
 Returns the width and height used to render this sprite
 
-**Example**:
+```lua
+getSize()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 mySprite:getSize()
@@ -108,35 +570,57 @@ mySprite:getSize()
 
 ---
 
-### <code>setRegion(region: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setRegion}
+### <code>setUV()</code> \{#setUV}
 
-Sets the texture UV region. Accepts a `Vector2` of region values or a number per value. Uses its dimensions to calculate the max UV.
+**Aliases:** `uv()`
 
-**Example**:
+Sets this texture UV offset
 
-```lua
-mySprite:setRegion(64, 64)
-```
+The Region and Dimension are used to calculate the end UV
 
----
-
-### <code>getRegion(): [Vector2](../Vectors/Vector2)</code> \{#getRegion}
-
-Gets the texture UV region
-
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-mySprite:getRegion()
+setUV(uv)
 ```
 
----
+**Parameters:**
 
-### <code>setUV(uv: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setUV}
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| uv   | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
 
-Sets this texture UV offset. Accepts a `Vector2` of UV values or a number per value. The Region and Dimension are used to calculate the end UV.
+**Returns:**
 
-**Example**:
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setUV(u, v)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| u    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| v    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 -- Let's make a sprite task of flowing water!
@@ -155,11 +639,21 @@ end
 
 ---
 
-### <code>getUV(): [Vector2](../Vectors/Vector2)</code> \{#getUV}
+### <code>getUV()</code> \{#getUV}
 
 Gets this texture UV offset
 
-**Example**:
+```lua
+getUV()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 mySprite:getUV()
@@ -167,11 +661,55 @@ mySprite:getUV()
 
 ---
 
-### <code>setUVPixels(uv: [Vector2](../Vectors/Vector2)): [SpriteTask](./SpriteTask)</code> \{#setUVPixels}
+### <code>setUVPixels()</code> \{#setUVPixels}
 
-Set this texture UV offset, in pixels, based on the texture's dimension. Accepts a `Vector2` of UV values or a number per value.
+**Aliases:** `uvPixels()`
 
-**Example**:
+Set this texture UV offset, in pixels, based on the texture's dimension
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setUVPixels(uv)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| uv   | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setUVPixels(u, v)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| u    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| v    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description               |
+| ----------------------------------------------------- | ------------------------- |
+| <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 -- Let's make a sprite task of flowing water!
@@ -190,11 +728,21 @@ end
 
 ---
 
-### <code>getUVPixels(): [Vector2](../Vectors/Vector2)</code> \{#getUVPixels}
+### <code>getUVPixels()</code> \{#getUVPixels}
 
 Get this texture UV offset, in pixels, based on the texture's dimension
 
-**Example**:
+```lua
+getUVPixels()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
 
 ```lua
 mySprite:getUVPixels()
@@ -202,63 +750,23 @@ mySprite:getUVPixels()
 
 ---
 
-### <code>setColor(rgba: [Vector4](../Vectors/Vector4)): [SpriteTask](./SpriteTask)</code> \{#setColor}
-
-Sets a color multiplier for this sprite. Values are RGBA from 0 to 1. Default values are 1, alpha is optional. Takes a `Vector4` of rgba values or a number per value.
-
-**Example**:
-
-```lua
-mySprite:setColor(world.getBiome():getWaterColor())
-```
-
----
-
-### <code>getColor(): [Vector4](../Vectors/Vector4)</code> \{#getColor}
-
-Gets the current color multiplier of this sprite
-Values are RGBA from 0 to 1
-
-**Example**:
-
-```lua
-mySprite:getColor()
-```
-
----
-
-### <code>setRenderType(renderType: [RenderType](../../enums/RenderTypes)): [SpriteTask](./SpriteTask)</code> \{#setRenderType}
-
-Sets the current render type of this sprite
-TRANSLUCENT by default
-Check the docs enum command for all render types
-
-**Example**:
-
-```lua
-mySprite:setRenderType("CUTOUT")
-```
-
----
-
-### <code>getRenderType(): [RenderType](../../enums/RenderTypes)</code> \{#getRenderType}
-
-Gets the name of the current render type for this sprite
-
-**Example**:
-
-```lua
-mySprite:getRenderType()
-```
-
----
-
-### <code>getVertices(): [Vertex](./Vertex)[]</code> \{#getVertices}
+### <code>getVertices()</code> \{#getVertices}
 
 Returns a table with all 4 vertices of this sprite
+
 Changing the values through other functions will reset those vertices
 
-**Example**:
+```lua
+getVertices()
+```
+
+**Returns:**
+
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
+
+**Example:**
 
 ```lua
 mySprite:getVertices()
@@ -266,23 +774,143 @@ mySprite:getVertices()
 
 ---
 
-### <code>remove(): [SpriteTask](./SpriteTask)</code> \{#remove}
+## Render Task
 
-Removes this sprite task from the parent model part
+### <code>setLight()</code> \{#setLight}
 
-**Example**:
+**Aliases:** `light()`
+
+Sets the light override value of this task
+
+Values are given from 0 to 15, indicating the block light and sky light levels you want to use
+
+Passing nil will reset the lighting override for this task
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-mySprite:remove()
+setLight(light)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| light | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setLight(blockLight, skyLight)
+```
+
+**Parameters:**
+
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| blockLight | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| skyLight   | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+local blockLight = world.getLightLevel(player:getPos())
+local skyLight = world.getSkyLightLevel(player:getPos())
+mySprite:setLight(blockLight, skyLight)
 ```
 
 ---
 
-### <code>getName(): string</code> \{#getName}
+### <code>getLight()</code> \{#getLight}
+
+Returns the light override value of this task
+
+```lua
+getLight()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getLight()
+```
+
+---
+
+### <code>setMatrix()</code> \{#setMatrix}
+
+**Aliases:** `matrix()`
+
+Sets the given matrix as the position matrix for this render task
+
+The normal matrix is automatically calculated as the inverse transpose of this matrix
+
+Calling this DOES NOT CHANGE the values of position, rot, or scale in the render task
+
+If you call setPos() or a similar function, the effects of setMatrix() will be overwritten
+
+```lua
+setMatrix(matrix)
+```
+
+**Parameters:**
+
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| matrix | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:setMatrix(matrices.mat4())
+```
+
+---
+
+### <code>getName()</code> \{#getName}
 
 Get this task's name
 
-**Example**:
+```lua
+getName()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 mySprite:getName()
@@ -290,11 +918,443 @@ mySprite:getName()
 
 ---
 
-### <code>setVisible(state: boolean): [SpriteTask](./SpriteTask)</code> \{#setVisible}
+### <code>getNormalMatrix()</code> \{#getNormalMatrix}
+
+Recalculates the normal matrix for this render task, based on its current position, rotation, scale, and pivot, then returns this matrix
+
+```lua
+getNormalMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getNormalMatrix()
+```
+
+---
+
+### <code>getNormalMatrixRaw()</code> \{#getNormalMatrixRaw}
+
+Returns the normal matrix for this render task
+
+The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
+
+```lua
+getNormalMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getNormalMatrixRaw()
+```
+
+---
+
+### <code>setOverlay()</code> \{#setOverlay}
+
+**Aliases:** `overlay()`
+
+Sets the overlay override value of this task
+
+Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
+
+Passing nil will reset the overlay override for this task
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setOverlay(overlay)
+```
+
+**Parameters:**
+
+| Name    | Type                                             | Description | Default |
+| ------- | ------------------------------------------------ | ----------- | ------- |
+| overlay | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOverlay(whiteOverlay, hurtOverlay)
+```
+
+**Parameters:**
+
+| Name         | Type                                             | Description | Default |
+| ------------ | ------------------------------------------------ | ----------- | ------- |
+| whiteOverlay | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| hurtOverlay  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+local hurt = player:getNbt.HurtTime > 0
+mySprite:setOverlay(hurt and 0 or nil, 1)
+```
+
+---
+
+### <code>getOverlay()</code> \{#getOverlay}
+
+Returns the overlay override value of this task
+
+```lua
+getOverlay()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getOverlay()
+```
+
+---
+
+### <code>setPos()</code> \{#setPos}
+
+**Aliases:** `pos()`
+
+Sets the position of the task, relative to its attached part
+
+Uses model coordinates
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+mySprite:setPos(0, 16, 0)
+```
+
+---
+
+### <code>getPos()</code> \{#getPos}
+
+Gets this task position
+
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getPos()
+```
+
+---
+
+### <code>getPositionMatrix()</code> \{#getPositionMatrix}
+
+Recalculates the matrix for this render task, based on its current position, rotation, scale, and pivot, then returns this matrix
+
+```lua
+getPositionMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getPositionMatrix()
+```
+
+---
+
+### <code>getPositionMatrixRaw()</code> \{#getPositionMatrixRaw}
+
+Returns the position matrix for this render task
+
+The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
+
+```lua
+getPositionMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getPositionMatrixRaw()
+```
+
+---
+
+### <code>setRot()</code> \{#setRot}
+
+**Aliases:** `rot()`
+
+Sets the rotation of the task, relative to its attached part
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setRot(rot)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rot  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setRot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+mySprite:setRot(0, 45, 22.5)
+```
+
+---
+
+### <code>getRot()</code> \{#getRot}
+
+Gets this task rotation
+
+```lua
+getRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getRot()
+```
+
+---
+
+### <code>setScale()</code> \{#setScale}
+
+**Aliases:** `scale()`
+
+Sets the scale of the task, relative to its attached part
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setScale(scale)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| scale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+mySprite:setScale(0.4, 0.4, 0.4) -- mySprite:setScale(0.4) also works
+```
+
+---
+
+### <code>getScale()</code> \{#getScale}
+
+Gets this task scale
+
+```lua
+getScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:getScale()
+```
+
+---
+
+### <code>setVisible()</code> \{#setVisible}
+
+**Aliases:** `visible()`
 
 Sets whether or not this task should be rendered
 
-**Example**:
+```lua
+setVisible(visible)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
 
 ```lua
 local myPage = action_wheel.newPage()
@@ -305,11 +1365,21 @@ end)
 
 ---
 
-### <code>isVisible(): boolean</code> \{#isVisible}
+### <code>isVisible()</code> \{#isVisible}
 
 Checks if this task is visible
 
-**Example**:
+```lua
+isVisible()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 if mySprite:isVisible() then
@@ -319,193 +1389,24 @@ end
 
 ---
 
-### <code>setLight(blockLight: number?, skyLight: number?): [SpriteTask](./SpriteTask)</code> \{#setLight}
+### <code>remove()</code> \{#remove}
 
-Sets the light override value of this task
-Values are given from 0 to 15, indicating the block light and sky light levels you want to use
-Passing nil will reset the lighting override for this task
-
-**Example**:
+Removes this render task from the parent model part
 
 ```lua
-local blockLight = world.getLightLevel(player:getPos())
-local skyLight = world.getSkyLightLevel(player:getPos())
-mySprite:setLight(blockLight, skyLight)
+remove()
+```
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+mySprite:remove()
 ```
 
 ---
-
-### <code>getLight(): [Vector2](../Vectors/Vector2)</code> \{#getLight}
-
-Returns the light override value of this task
-
-**Example**:
-
-```lua
-mySprite:getLight()
-```
-
----
-
-### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [SpriteTask](./SpriteTask)</code> \{#setOverlay}
-
-Sets the overlay override value of this task
-Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
-Passing nil will reset the overlay override for this task
-
-**Example**:
-
-```lua
-local hurt = player:getNbt.HurtTime > 0
-mySprite:setOverlay(hurt and 0 or nil, 1)
-```
-
----
-
-### <code>getOverlay(): [Vector2](../Vectors/Vector2)</code> \{#getOverlay}
-
-Returns the overlay override value of this task
-
-**Example**:
-
-```lua
-mySprite:getOverlay()
-```
-
----
-
-### <code>setPos(pos: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> \{#setPos}
-
-Sets the position of the task, relative with its attached part
-Uses model coordinates
-
-**Example**:
-
-```lua
-mySprite:setPos(0, 16, 0)
-```
-
----
-
-### <code>getPos(): [Vector3](../Vectors/Vector3)</code> \{#getPos}
-
-Gets this task position
-
-**Example**:
-
-```lua
-mySprite:getPos()
-```
-
----
-
-### <code>setRot(rot: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> \{#setRot}
-
-Sets the rotation of the task, relative with its attached part
-
-**Example**:
-
-```lua
-mySprite:setRot(0, 45, 22.5)
-```
-
----
-
-### <code>getRot(): [Vector3](../Vectors/Vector3)</code> \{#getRot}
-
-Gets this task rotation
-
-**Example**:
-
-```lua
-mySprite:getRot()
-```
-
----
-
-### <code>setScale(scale: [Vector3](../Vectors/Vector3)): [SpriteTask](./SpriteTask)</code> \{#setScale}
-
-Sets the scale of the task, relative with its attached part
-
-**Example**:
-
-```lua
-mySprite:setScale(0.4, 0.4, 0.4) -- mySprite:setScale(0.4) also works
-```
-
----
-
-### <code>getScale(): [SpriteTask](./SpriteTask)</code> \{#getScale}
-
-Gets this task scale
-
-**Example**:
-
-```lua
-mySprite:getScale()
-```
-
----
-
-### <code>setMatrix(matrix: [Matrix4](../Matrices/Matrix4)): [SpriteTask](./SpriteTask)</code> \{#setMatrix}
-
-Sets the given matrix as the position matrix for this sprite task
-The normal matrix is automatically calculated as the inverse transpose of this matrix
-Calling this DOES NOT CHANGE the values of position, rot, or scale in the sprite task
-If you call setPos() or a similar function, the effects of setMatrix() will be overwritten
-
-**Example**:
-
-```lua
-mySprite:setMatrix(matrices.mat4())
-```
-
----
-
-### <code>getPositionMatrix(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrix}
-
-Recalculates the matrix for this sprite task, based on its current position, rotation, scale, and pivot, then returns this matrix
-
-**Example**:
-
-```lua
-mySprite:getPositionMatrix()
-```
-
----
-
-### <code>getPositionMatrixRaw(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrixRaw}
-
-Returns the position matrix for this sprite task
-The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
-
-**Example**:
-
-```lua
-mySprite:getPositionMatrixRaw()
-```
-
----
-
-### <code>getNormalMatrix(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrix}
-
-Recalculates the normal matrix for this sprite task, based on its current position, rotation, scale, and pivot, then returns this matrix
-
-**Example**:
-
-```lua
-mySprite:getNormalMatrix()
-```
-
----
-
-### <code>getNormalMatrixRaw(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrixRaw}
-
-Returns the normal matrix for this sprite task
-The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
-
-**Example**:
-
-```lua
-mySprite:getNormalMatrixRaw()
-```

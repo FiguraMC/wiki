@@ -1,3 +1,5 @@
+Playing sounds tutorial
+
 Using Figura you can play custom sounds and sounds from Minecraft itself.
 
 This article assumes you know to avoid calling the player in init.

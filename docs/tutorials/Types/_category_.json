@@ -1,0 +1,7 @@
+{
+  "label": "Types",
+  "link": {
+    "type": "generated-index",
+    "description": "Tutorials of the types native to Lua."
+  }
+}

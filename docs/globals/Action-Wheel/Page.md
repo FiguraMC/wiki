@@ -1,6 +1,9 @@
-An Action Wheel container which is used to store store and run actions, it can display up to 8 at a time
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-For every example in this page assume:
+An Action Wheel container which is used to store up to 8 actions
+
+For the entire page assume:
 
 ```lua
 local myPage = action_wheel:newPage()
@@ -8,27 +11,50 @@ local myPage = action_wheel:newPage()
 
 ---
 
-### `getTitle` \{#getTitle}
-
-Returns the title of this Page
-
-**Example**:
-
-```lua
-myPage:getTitle()
-```
-
 ## Action
 
-For more information on actions see [Action](Action)
-
-### `newAction(int)` \{#newAction}
+### <code>newAction()</code> \{#newAction}
 
 Adds a new Action on the selected Page's index
 
 If no index is given it is added in the first available index
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+newAction()
+```
+
+**Returns:**
+
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+newAction(index)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description                   | Default |
+| ----- | ------------------------------------------------ | ----------------------------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | The slot to set the action to | `nil`   |
+
+**Returns:**
+
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 local myAction = myPage:newAction()
@@ -36,11 +62,27 @@ local myAction = myPage:newAction()
 
 ---
 
-### `getAction(int)` \{#getAction}
+### <code>getAction()</code> \{#getAction}
 
 Gets an Action from the Page's given index
 
-**Example**:
+```lua
+getAction(index)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description                     | Default  |
+| ----- | ------------------------------------------------ | ------------------------------- | -------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | The slot to get the action from | Required |
+
+**Returns:**
+
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
+
+**Example:**
 
 ```lua
 myPage:getAction(1)
@@ -48,7 +90,7 @@ myPage:getAction(1)
 
 ---
 
-### `getActions(int)` \{#getActions}
+### <code>getActions()</code> \{#getActions}
 
 Gets a table of the Actions shifted by the given number
 
@@ -56,7 +98,42 @@ If no shift is specified, it returns all Actions from this page
 
 Note that the table is indexed as its slot number as key, so blank slots will result in nil values
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+getActions()
+```
+
+**Returns:**
+
+| Type                                          | Description                                   |
+| --------------------------------------------- | --------------------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code> | A table that contains all actions in the page |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+getActions(shift)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description                        | Default |
+| ----- | ------------------------------------------------ | ---------------------------------- | ------- |
+| shift | <code>[Integer](/tutorials/types/Numbers)</code> | The page shift to get actions from | `nil`   |
+
+**Returns:**
+
+| Type                                          | Description                                                      |
+| --------------------------------------------- | ---------------------------------------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code> | A table that contains all actions in the page's given slot shift |
+
+</TabItem>
+</Tabs>
+
+**Example (Overload 1):**
 
 ```lua
 myPage:getActions()
@@ -64,56 +141,63 @@ myPage:getActions()
 
 ---
 
-### `setAction(int,action)` \{#setAction}
+### <code>setAction()</code> \{#setAction}
+
+**Aliases:** `action()`
 
 Sets an Action in the Page's given index
 
 If index is -1, the action will be set in the latest empty index
 
-**Example**:
+```lua
+setAction(index, action)
+```
+
+**Parameters:**
+
+| Name   | Type                                                | Description                               | Default  |
+| ------ | --------------------------------------------------- | ----------------------------------------- | -------- |
+| index  | <code>[Integer](/tutorials/types/Numbers)</code>    | The slot on the page to set the action to | Required |
+| action | <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action                    | Required |
+
+**Returns:**
+
+| Type                                            | Description               |
+| ----------------------------------------------- | ------------------------- |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 local myAction = action_wheel:newAction()
 myPage:setAction(-1, myAction)
 ```
 
+---
+
 ## Slot
 
-### `setSlotsShift(int)` \{#setSlotsShift}
+### <code>setKeepSlots()</code> \{#setKeepSlots}
 
-Sets this page's current slots shift
-
-The value is the current shown slots, divided by 8, rounded up
-
-**Example**:
+Sets if this page's current slots should be reset when adding this page on the Action Wheel
 
 ```lua
-myPage:setSlotsShift(1)
+setKeepSlots(bool)
 ```
 
----
+**Parameters:**
 
-### `getSlotsShift()` \{#getSlotsShift}
+| Name | Type                                              | Description                                          | Default |
+| ---- | ------------------------------------------------- | ---------------------------------------------------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | If true the slots won't be reset, if false they will | `false` |
 
-Gets this page's current slots shift
+**Returns:**
 
-This value is the current shown slots, divided by 8, rounded up
+| Type                                            | Description               |
+| ----------------------------------------------- | ------------------------- |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
 
-**Example**:
-
-```lua
-myPage:getSlotsShift()
-```
-
----
-
-### `setKeepSlots(bool)` \{#setKeepSlots}
-
-Gets this page's current slots shift
-
-This value is the current shown slots, divided by 8, rounded up
-
-**Example**:
+**Example:**
 
 ```lua
 myPage:setKeepSlots(true)
@@ -121,16 +205,120 @@ myPage:setKeepSlots(true)
 
 ---
 
-### `shouldKeepSlots()` \{#shouldKeepSlots}
+### <code>shouldKeepSlots()</code> \{#shouldKeepSlots}
+
+Gets if this page's current slots should be reset when adding this page on the Action Wheel
+
+```lua
+shouldKeepSlots()
+```
+
+**Returns:**
+
+| Type                                              | Description                                          |
+| ------------------------------------------------- | ---------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | If true the slots won't be reset, if false they will |
+
+**Example:**
+
+```lua
+myPage:shouldKeepSlots(true)
+```
+
+---
+
+### <code>setSlotsShift()</code> \{#setSlotsShift}
+
+**Aliases:** `slotsShift()`
+
+Sets this page's current slots shift
+
+Slots 1-8 are shift 1, slots 9-16 are 2, etc
+
+```lua
+setSlotsShift(shift)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description                         | Default |
+| ----- | ------------------------------------------------ | ----------------------------------- | ------- |
+| shift | <code>[Integer](/tutorials/types/Numbers)</code> | The page shift that will be visible | `1`     |
+
+**Returns:**
+
+| Type                                            | Description               |
+| ----------------------------------------------- | ------------------------- |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myPage:setSlotsShift(1)
+```
+
+---
+
+### <code>getSlotsShift()</code> \{#getSlotsShift}
 
 Gets this page's current slots shift
 
-This value is the current shown slots, divided by 8, rounded up
-
-**Example**:
+Slots 1-8 are shift 1, slots 9-16 are 2, etc
 
 ```lua
-myPage:shouldKeepSlots()
+getSlotsShift()
+```
+
+**Returns:**
+
+| Type                                             | Description                    |
+| ------------------------------------------------ | ------------------------------ |
+| <code>[Integer](/tutorials/types/Numbers)</code> | The page shift that is visible |
+
+**Example:**
+
+```lua
+myPage:getSlotsShift()
+```
+
+---
+
+## Misc
+
+### <code>getTitle()</code> \{#getTitle}
+
+Returns the title of this Page
+
+```lua
+getTitle()
+```
+
+**Returns:**
+
+| Type                                            | Description                                   |
+| ----------------------------------------------- | --------------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | The name for the page that is used internally |
+
+**Example:**
+
+```lua
+myPage:getTitle()
+```
+
+---
+
+## Fields
+
+### <code>keepSlots</code> \{#keepSlots}
+
+Whether or not this page's current slots should be reset when adding this page on the Action Wheel
+
+See [`setKeepSlots`](#setKeepSlots) for an example of how to set it
+
+**Example:**
+
+```lua
+myPage.keepSlots = true
 ```
 
 ---

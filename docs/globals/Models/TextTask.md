@@ -1,18 +1,45 @@
-A task for rendering text from [newText](.#newText)
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+A task for rendering some text from [newText](.#newText)
+
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
 
 For this entire page assume:
 
 ```lua
-local myText = models:newText("myCoolTextsName")
+local myText = models:newText("myCoolTextName")
 ```
 
 ---
 
-### <code>setText(text: string): [TextTask](./TextTask)</code> \{#setText}
+## Text Task
+
+### <code>setText()</code> \{#setText}
+
+**Aliases:** `text()`
 
 Sets the Text for this task render
 
-**Example**:
+```lua
+setText(text)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 myText:setText("Hi mom!")
@@ -20,11 +47,21 @@ myText:setText("Hi mom!")
 
 ---
 
-### <code>getText(): string</code> \{#getText}
+### <code>getText()</code> \{#getText}
 
 Returns the Text from this task
 
-**Example**:
+```lua
+getText()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 myText:getText()
@@ -32,13 +69,33 @@ myText:getText()
 
 ---
 
-### <code>setAlignment(alignment: "LEFT" | "RIGHT" | "CENTER"): [TextTask](./TextTask)</code> \{#setAlignment}
+### <code>setAlignment()</code> \{#setAlignment}
+
+**Aliases:** `alignment()`
 
 Sets this Text alignment
+
 Can be either "LEFT", "RIGHT" or "CENTER"
+
 Default "LEFT"
 
-**Example**:
+```lua
+setAlignment(alignment)
+```
+
+**Parameters:**
+
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| alignment | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 myText:setAlignment("CENTER")
@@ -46,12 +103,23 @@ myText:setAlignment("CENTER")
 
 ---
 
-### <code>getAlignment(): "LEFT" | "RIGHT" | "CENTER"</code> \{#getAlignment}
+### <code>getAlignment()</code> \{#getAlignment}
 
 Returns this Text alignment
+
 Default "LEFT"
 
-**Example**:
+```lua
+getAlignment()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 myText:getAlignment()
@@ -59,38 +127,199 @@ myText:getAlignment()
 
 ---
 
-### <code>setShadow(shadow: boolean): [TextTask](./TextTask)</code> \{#setShadow}
+### <code>setBackground()</code> \{#setBackground}
 
-Sets if the Text should render with a drop shadow
-Not compatible with "Outline" mode
+**Aliases:** `background()`
 
-**Example**:
+Sets if this text should render its background
+
+Defaults to false
 
 ```lua
-myText:setShadow(true)
+setBackground(background)
+```
+
+**Parameters:**
+
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| background | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myText:setBackground(true)
 ```
 
 ---
 
-### <code>hasShadow(): boolean</code> \{#hasShadow}
+### <code>setBackgroundColor()</code> \{#setBackgroundColor}
 
-Checks if this task text has shadow
+**Aliases:** `backgroundColor()`
 
-**Example**:
+Sets the background color of this text
+
+If the alpha value is not given, it will use the vanilla value (as in the accessibility settings)
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myText:hasShadow()
+setBackgroundColor(rgba)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rgba | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setBackgroundColor(r, g, b, a)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| a    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myText:setBackgroundColor(63 / 255, 255 / 255, 192 / 255, 203 / 255)
 ```
 
 ---
 
-### <code>setOutline(outline: boolean): [TextTask](./TextTask)</code> \{#setOutline}
+### <code>getBackgroundColor()</code> \{#getBackgroundColor}
 
-Toggles if the Text should render with a outline
-Always renders at full bright
+Gets this text's background color
+
+```lua
+getBackgroundColor()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+**Example:**
+
+```lua
+myText:getBackgroundColor()
+```
+
+---
+
+### <code>setOpacity()</code> \{#setOpacity}
+
+**Aliases:** `opacity()`
+
+Sets the opacity of this text
+
+```lua
+setOpacity(opacity)
+```
+
+**Parameters:**
+
+| Name    | Type                                            | Description | Default |
+| ------- | ----------------------------------------------- | ----------- | ------- |
+| opacity | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myText:setOpacity(0.5)
+```
+
+---
+
+### <code>getOpacity()</code> \{#getOpacity}
+
+Gets the opacity of this text
+
+```lua
+getOpacity()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+myText:getOpacity()
+```
+
+---
+
+### <code>setOutline()</code> \{#setOutline}
+
+**Aliases:** `outline()`
+
+Toggles if the text should render with an outline
+
+The text will always render at full brightness if it is given an outline
+
 Not compatible with "Shadow" and "Emissive" modes
 
-**Example**:
+```lua
+setOutline(outline)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| outline | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 myText:setOutline(true)
@@ -98,23 +327,58 @@ myText:setOutline(true)
 
 ---
 
-### <code>hasOutline(): boolean</code> \{#hasOutline}
+### <code>setOutlineColor()</code> \{#setOutlineColor}
 
-Checks if this task text has outline
+**Aliases:** `outlineColor()`
 
-**Example**:
+Sets the outline color this Text should render
+
+Only compatible with "Outline" mode
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myText:hasOutline()
+setOutlineColor(color)
 ```
 
----
+**Parameters:**
 
-### <code>setOutlineColor(color: [Vector3](../Vectors/Vector3)): [TextTask](./TextTask)</code> \{#setOutlineColor}
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
-Sets the outline color this Text should render. Takes a `Vector3` of rgb values or a number per value. Only compatible with "Outline" mode.
+**Returns:**
 
-**Example**:
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOutlineColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 myText:setOutline(true)
@@ -124,11 +388,21 @@ myText:setOutlineColor(255 / 255, 192 / 255, 203 / 255)
 
 ---
 
-### <code>getOutlineColor(): [Vector3](../Vectors/Vector3)</code> \{#getOutlineColor}
+### <code>getOutlineColor()</code> \{#getOutlineColor}
 
 Gets this tasks text outline color
 
-**Example**:
+```lua
+getOutlineColor()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
 
 ```lua
 myText:getOutlineColor()
@@ -136,63 +410,31 @@ myText:getOutlineColor()
 
 ---
 
-### <code>setWidth(width: number): [TextTask](./TextTask)</code> \{#setWidth}
+### <code>setSeeThrough()</code> \{#setSeeThrough}
 
-Sets this Text max width, wrapping the text into multiple lines
-Width of 0 or less do not wraps the text
-Default 0
+**Aliases:** `seeThrough()`
 
-**Example**:
+Sets if this text can be seen behind walls
 
-```lua
-myText:setWidth(1)
-```
-
----
-
-### <code>getWidth(): number</code> \{#getWidth}
-
-Gets this Text max width
-Default 0
-
-**Example**:
+Defaults to false
 
 ```lua
-myText:getWidth()
+setSeeThrough(seeThrough)
 ```
 
----
+**Parameters:**
 
-### <code>setWrap(wrap: boolean): [TextTask](./TextTask)</code> \{#setWrap}
+| Name       | Type                                              | Description | Default |
+| ---------- | ------------------------------------------------- | ----------- | ------- |
+| seeThrough | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
 
-Sets if this Text should wrap lines
+**Returns:**
 
-**Example**:
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
 
-```lua
-myText:setWrap(true)
-```
-
----
-
-### <code>hasWrap(): boolean</code> \{#hasWrap}
-
-Check if this Text should wrap lines
-
-**Example**:
-
-```lua
-myText:hasWrap()
-```
-
----
-
-### <code>setSeeThrough(seeThrough: boolean): [TextTask](./TextTask)</code> \{#setSeeThrough}
-
-Sets if this Text can be seen behind walls
-Default false
-
-**Example**:
+**Example:**
 
 ```lua
 myText:setSeeThrough(true)
@@ -200,38 +442,143 @@ myText:setSeeThrough(true)
 
 ---
 
-### <code>isSeeThrough(): boolean</code> \{#isSeeThrough}
+### <code>setShadow()</code> \{#setShadow}
 
-Check if this Text can be seen behind walls
-Default false
+**Aliases:** `shadow()`
 
-**Example**:
+Toggles if the Text should render with a drop shadow
+
+Not compatible with "Outline" mode
 
 ```lua
-myText:isSeeThrough()
+setShadow(shadow)
+```
+
+**Parameters:**
+
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| shadow | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myText:setShadow(true)
 ```
 
 ---
 
-### <code>setBackground(background: boolean): [TextTask](./TextTask)</code> \{#setBackground}
+### <code>setWidth()</code> \{#setWidth}
 
-Sets if this Text should render its background
-Default false
+**Aliases:** `width()`
 
-**Example**:
+Sets this text's max width, wrapping the text into multiple lines
+
+A width of 0 or less does not wrap the text
+
+Defaults to 0
 
 ```lua
-myText:setBackground(true)
+setWidth(width)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| width | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myText:setWidth(1)
 ```
 
 ---
 
-### <code>hasBackground(): boolean</code> \{#hasBackground}
+### <code>getWidth()</code> \{#getWidth}
 
-Check if this Text should render its background
-Default false
+Gets this text's max width
 
-**Example**:
+Defaults to 0
+
+```lua
+getWidth()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+myText:getWidth()
+```
+
+---
+
+### <code>setWrap()</code> \{#setWrap}
+
+**Aliases:** `wrap()`
+
+Sets if this text should wrap lines
+
+```lua
+setWrap(wrap)
+```
+
+**Parameters:**
+
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| wrap | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[TextTask](/globals/Models/TextTask)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myText:setWrap(true)
+```
+
+---
+
+### <code>hasBackground()</code> \{#hasBackground}
+
+Check if this text should render its background
+
+Defaults to false
+
+```lua
+hasBackground()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 myText:hasBackground()
@@ -239,71 +586,233 @@ myText:hasBackground()
 
 ---
 
-### <code>setBackgroundColor(argb: [Vector4](../Vectors/Vector4)): [TextTask](./TextTask)</code> \{#setBackgroundColor}
+### <code>hasOutline()</code> \{#hasOutline}
 
-Sets the background colour of this Text. Takes a `Vector4` of argb values or a number per value. If the alpha value is not given, it will uses the vanilla value (as in the accessibility settings).
-
-**Example**:
+Checks if this task text has an outline
 
 ```lua
-myText:setBackgroundColor(63 / 255, 255 / 255, 192 / 255, 203 / 255)
+hasOutline()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+myText:hasOutline()
 ```
 
 ---
 
-### <code>getBackgroundColor(): [Vector4](../Vectors/Vector4)</code> \{#getBackgroundColor}
+### <code>hasShadow()</code> \{#hasShadow}
 
-Gets the this Text background color
-
-**Example**:
+Checks if this task text has shadow
 
 ```lua
-myText:getBackgroundColor()
+hasShadow()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+myText:hasShadow()
 ```
 
 ---
 
-### <code>setOpacity(opacity: number): [TextTask](./TextTask)</code> \{#setOpacity}
+### <code>hasWrap()</code> \{#hasWrap}
 
-Sets the opacity of this text
-
-**Example**:
+Check if this text should wrap lines
 
 ```lua
-myText:setOpacity(0.5)
+hasWrap()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+myText:hasWrap()
 ```
 
 ---
 
-### <code>getOpacity(): number</code> \{#getOpacity}
+### <code>isSeeThrough()</code> \{#isSeeThrough}
 
-Gets the opacity of this text
+Check if this text can be seen behind walls
 
-**Example**:
+Defaults to false
 
 ```lua
-myText:getOpacity()
+isSeeThrough()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+myText:isSeeThrough()
 ```
 
 ---
 
-### <code>remove(): [TextTask](./TextTask)</code> \{#remove}
+## Render Task
 
-Removes this text task from the parent model part
+### <code>setLight()</code> \{#setLight}
 
-**Example**:
+**Aliases:** `light()`
+
+Sets the light override value of this task
+
+Values are given from 0 to 15, indicating the block light and sky light levels you want to use
+
+Passing nil will reset the lighting override for this task
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myBlock:remove()
+setLight(light)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| light | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setLight(blockLight, skyLight)
+```
+
+**Parameters:**
+
+| Name       | Type                                             | Description | Default |
+| ---------- | ------------------------------------------------ | ----------- | ------- |
+| blockLight | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| skyLight   | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+local blockLight = world.getLightLevel(player:getPos())
+local skyLight = world.getSkyLightLevel(player:getPos())
+myBlock:setLight(blockLight, skyLight)
 ```
 
 ---
 
-### <code>getName(): string</code> \{#getName}
+### <code>getLight()</code> \{#getLight}
+
+Returns the light override value of this task
+
+```lua
+getLight()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getLight()
+```
+
+---
+
+### <code>setMatrix()</code> \{#setMatrix}
+
+**Aliases:** `matrix()`
+
+Sets the given matrix as the position matrix for this render task
+
+The normal matrix is automatically calculated as the inverse transpose of this matrix
+
+Calling this DOES NOT CHANGE the values of position, rot, or scale in the render task
+
+If you call setPos() or a similar function, the effects of setMatrix() will be overwritten
+
+```lua
+setMatrix(matrix)
+```
+
+**Parameters:**
+
+| Name   | Type                                              | Description | Default |
+| ------ | ------------------------------------------------- | ----------- | ------- |
+| matrix | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:setMatrix(matrices.mat4())
+```
+
+---
+
+### <code>getName()</code> \{#getName}
 
 Get this task's name
 
-**Example**:
+```lua
+getName()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 myBlock:getName()
@@ -311,11 +820,443 @@ myBlock:getName()
 
 ---
 
-### <code>setVisible(state: boolean): [TextTask](./TextTask)</code> \{#setVisible}
+### <code>getNormalMatrix()</code> \{#getNormalMatrix}
+
+Recalculates the normal matrix for this render task, based on its current position, rotation, scale, and pivot, then returns this matrix
+
+```lua
+getNormalMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getNormalMatrix()
+```
+
+---
+
+### <code>getNormalMatrixRaw()</code> \{#getNormalMatrixRaw}
+
+Returns the normal matrix for this render task
+
+The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
+
+```lua
+getNormalMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getNormalMatrixRaw()
+```
+
+---
+
+### <code>setOverlay()</code> \{#setOverlay}
+
+**Aliases:** `overlay()`
+
+Sets the overlay override value of this task
+
+Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
+
+Passing nil will reset the overlay override for this task
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setOverlay(overlay)
+```
+
+**Parameters:**
+
+| Name    | Type                                             | Description | Default |
+| ------- | ------------------------------------------------ | ----------- | ------- |
+| overlay | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setOverlay(whiteOverlay, hurtOverlay)
+```
+
+**Parameters:**
+
+| Name         | Type                                             | Description | Default |
+| ------------ | ------------------------------------------------ | ----------- | ------- |
+| whiteOverlay | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| hurtOverlay  | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+local hurt = player:getNbt.HurtTime > 0
+myBlock:setOverlay(hurt and 0 or nil, 1)
+```
+
+---
+
+### <code>getOverlay()</code> \{#getOverlay}
+
+Returns the overlay override value of this task
+
+```lua
+getOverlay()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getOverlay()
+```
+
+---
+
+### <code>setPos()</code> \{#setPos}
+
+**Aliases:** `pos()`
+
+Sets the position of the task, relative to its attached part
+
+Uses model coordinates
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setPos(pos)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| pos  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setPos(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myBlock:setPos(0, 16, 0)
+```
+
+---
+
+### <code>getPos()</code> \{#getPos}
+
+Gets this task position
+
+```lua
+getPos()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getPos()
+```
+
+---
+
+### <code>getPositionMatrix()</code> \{#getPositionMatrix}
+
+Recalculates the matrix for this render task, based on its current position, rotation, scale, and pivot, then returns this matrix
+
+```lua
+getPositionMatrix()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getPositionMatrix()
+```
+
+---
+
+### <code>getPositionMatrixRaw()</code> \{#getPositionMatrixRaw}
+
+Returns the position matrix for this render task
+
+The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
+
+```lua
+getPositionMatrixRaw()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getPositionMatrixRaw()
+```
+
+---
+
+### <code>setRot()</code> \{#setRot}
+
+**Aliases:** `rot()`
+
+Sets the rotation of the task, relative to its attached part
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setRot(rot)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| rot  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setRot(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myBlock:setRot(0, 45, 22.5)
+```
+
+---
+
+### <code>getRot()</code> \{#getRot}
+
+Gets this task rotation
+
+```lua
+getRot()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getRot()
+```
+
+---
+
+### <code>setScale()</code> \{#setScale}
+
+**Aliases:** `scale()`
+
+Sets the scale of the task, relative to its attached part
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setScale(scale)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| scale | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setScale(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myBlock:setScale(0.4, 0.4, 0.4) -- myBlock:setScale(0.4) also works
+```
+
+---
+
+### <code>getScale()</code> \{#getScale}
+
+Gets this task scale
+
+```lua
+getScale()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:getScale()
+```
+
+---
+
+### <code>setVisible()</code> \{#setVisible}
+
+**Aliases:** `visible()`
 
 Sets whether or not this task should be rendered
 
-**Example**:
+```lua
+setVisible(visible)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description | Default |
+| ------- | ------------------------------------------------- | ----------- | ------- |
+| visible | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
 
 ```lua
 local myPage = action_wheel.newPage()
@@ -326,11 +1267,21 @@ end)
 
 ---
 
-### <code>isVisible(): boolean</code> \{#isVisible}
+### <code>isVisible()</code> \{#isVisible}
 
 Checks if this task is visible
 
-**Example**:
+```lua
+isVisible()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 if myBlock:isVisible() then
@@ -340,193 +1291,24 @@ end
 
 ---
 
-### <code>setLight(blockLight: number?, skyLight: number?): [TextTask](./TextTask)</code> \{#setLight}
+### <code>remove()</code> \{#remove}
 
-Sets the light override value of this task
-Values are given from 0 to 15, indicating the block light and sky light levels you want to use
-Passing nil will reset the lighting override for this task
-
-**Example**:
+Removes this render task from the parent model part
 
 ```lua
-local blockLight = world.getLightLevel(player:getPos())
-local skyLight = world.getSkyLightLevel(player:getPos())
-myBlock:setLight(blockLight, skyLight)
+remove()
+```
+
+**Returns:**
+
+| Type                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
+
+**Example:**
+
+```lua
+myBlock:remove()
 ```
 
 ---
-
-### <code>getLight(): [Vector2](../Vectors/Vector2)</code> \{#getLight}
-
-Returns the light override value of this task
-
-**Example**:
-
-```lua
-myBlock:getLight()
-```
-
----
-
-### <code>setOverlay(whiteOverlay: number?, hurtOverlay: number?): [TextTask](./TextTask)</code> \{#setOverlay}
-
-Sets the overlay override value of this task
-Values you give are 0 to 15, indicating the white overlay and the damage overlay levels you want to use
-Passing nil will reset the overlay override for this task
-
-**Example**:
-
-```lua
-local hurt = player:getNbt.HurtTime > 0
-myBlock:setOverlay(hurt and 0 or nil, 1)
-```
-
----
-
-### <code>getOverlay(): [Vector2](../Vectors/Vector2)</code> \{#getOverlay}
-
-Returns the overlay override value of this task
-
-**Example**:
-
-```lua
-myBlock:getOverlay()
-```
-
----
-
-### <code>setPos(pos: [Vector3](../Vectors/Vector3)): [TextTask](./TextTask)</code> \{#setPos}
-
-Sets the position of the task, relative with its attached part
-Uses model coordinates
-
-**Example**:
-
-```lua
-myBlock:setPos(0, 16, 0)
-```
-
----
-
-### <code>getPos(): [Vector3](../Vectors/Vector3)</code> \{#getPos}
-
-Gets this task position
-
-**Example**:
-
-```lua
-myBlock:getPos()
-```
-
----
-
-### <code>setRot(rot: [Vector3](../Vectors/Vector3)): [TextTask](./TextTask)</code> \{#setRot}
-
-Sets the rotation of the task, relative with its attached part
-
-**Example**:
-
-```lua
-myBlock:setRot(0, 45, 22.5)
-```
-
----
-
-### <code>getRot(): [Vector3](../Vectors/Vector3)</code> \{#getRot}
-
-Gets this task rotation
-
-**Example**:
-
-```lua
-myBlock:getRot()
-```
-
----
-
-### <code>setScale(scale: [Vector3](../Vectors/Vector3)): [TextTask](./TextTask)</code> \{#setScale}
-
-Sets the scale of the task, relative with its attached part
-
-**Example**:
-
-```lua
-myBlock:setScale(0.4, 0.4, 0.4) -- myBlock:setScale(0.4) also works
-```
-
----
-
-### <code>getScale(): [TextTask](./TextTask)</code> \{#getScale}
-
-Gets this task scale
-
-**Example**:
-
-```lua
-myBlock:getScale()
-```
-
----
-
-### <code>setMatrix(matrix: [Matrix4](../Matrices/Matrix4)): [TextTask](./TextTask)</code> \{#setMatrix}
-
-Sets the given matrix as the position matrix for this text task
-The normal matrix is automatically calculated as the inverse transpose of this matrix
-Calling this DOES NOT CHANGE the values of position, rot, or scale in the text task
-If you call setPos() or a similar function, the effects of setMatrix() will be overwritten
-
-**Example**:
-
-```lua
-myBlock:setMatrix(matrices.mat4())
-```
-
----
-
-### <code>getPositionMatrix(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrix}
-
-Recalculates the matrix for this text task, based on its current position, rotation, scale, and pivot, then returns this matrix
-
-**Example**:
-
-```lua
-myBlock:getPositionMatrix()
-```
-
----
-
-### <code>getPositionMatrixRaw(): [Matrix4](../Matrices/Matrix4)</code> \{#getPositionMatrixRaw}
-
-Returns the position matrix for this text task
-The Raw version of the function is different in that it doesn't recalculate the matrix before getting it
-
-**Example**:
-
-```lua
-myBlock:getPositionMatrixRaw()
-```
-
----
-
-### <code>getNormalMatrix(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrix}
-
-Recalculates the normal matrix for this text task, based on its current position, rotation, scale, and pivot, then returns this matrix
-
-**Example**:
-
-```lua
-myBlock:getNormalMatrix()
-```
-
----
-
-### <code>getNormalMatrixRaw(): [Matrix3](../Matrices/Matrix3)</code> \{#getNormalMatrixRaw}
-
-Returns the normal matrix for this text task
-The Raw version of the function is different in that it doesn't recalculate the matrix before returning it
-
-**Example**:
-
-```lua
-myBlock:getNormalMatrixRaw()
-```

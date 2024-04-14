@@ -1,0 +1,10 @@
+{
+  "label": "Animations",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Animation API."
+  },
+  "customProps": {
+    "description": "A global API used for control of Blockbench Animations"
+  }
+}

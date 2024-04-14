@@ -1,19 +1,53 @@
-Nameplate customization that applies to Chat (the nameplate attached to your chat messages) and List (the nameplate in the tab list)
+A customization that can be applied to a nameplate
 
-### `setText(string)` {#setText}
+---
 
-**Example**:
+### <code>setText()</code> \{#setText}
+
+The text to use in this nameplate
 
 ```lua
-nameplate.Chat:setText("Herobrine")
+setText(text)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                       | Default |
+| ---- | ----------------------------------------------- | --------------------------------- | ------- |
+| text | <code>[String](/tutorials/types/Strings)</code> | The text to set your nameplate to | `nil`   |
+
+**Returns:**
+
+| Type                                                                             | Description               |
+| -------------------------------------------------------------------------------- | ------------------------- |
+| <code>[NameplateCustomization](/globals/Nameplate/NameplateCustomization)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+nameplate.ALL:setText("Steve")
 ```
 
 ---
 
-### `getText()` {#getText}
+### <code>getText()</code> \{#getText}
 
-**Example**:
+The text to use in this nameplate
 
 ```lua
-nameplate.List:getText()
+getText()
 ```
+
+**Returns:**
+
+| Type                                            | Description                                        |
+| ----------------------------------------------- | -------------------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | The string you set your nameplate to using setText |
+
+**Example:**
+
+```lua
+nameplate.ENTITY:getText()
+```
+
+---

@@ -1,3 +1,5 @@
+The basics on how multiplayer works
+
 ## The Cloud
 
 The cloud (also referred to as the backend or the server) is where avatars are stored for use in multiplayer. You upload one avatar to the cloud, and that avatar is what other players see equipped to you. When you look at other players, if they uploaded an avatar to the cloud, that is the avatar you see.
@@ -17,6 +19,8 @@ If your fourth part is a red X, you’re not connected to the cloud.
 ### How to connect to the cloud
 
 Figura will automatically attempt to connect you to the cloud when you join a server.
+
+If you're not connected there's a few options you can try.
 
 -   Check your internet connection
 -   Press the reload button, this will attempt to get information from the cloud and may connect you

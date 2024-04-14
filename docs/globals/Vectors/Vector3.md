@@ -1,4 +1,11 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 A vector that holds 3 numbers
+
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
 
 Can be created using functions in the "vectors" api
 
@@ -10,11 +17,56 @@ local vec3 = vec(2, 5, 3)
 
 ---
 
-### `add(Vector3)` {#add}
+## Math
+
+### <code>add()</code> \{#add}
 
 Adds the given vector or values to this one, and returns self for chaining
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+add(vec)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+add(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 vec3:add(2, 0.5, 4)
@@ -22,173 +74,164 @@ vec3:add(2, 0.5, 4)
 
 ---
 
-### `length()` {#length}
+### <code>div()</code> \{#div}
 
-Returns the length of this vector
+Divides this vector by the given vector or values, and returns self for chaining
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vec3:length()
+div(vec)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+div(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+vec3:div(2, 3, 2)
 ```
 
 ---
 
-### `floor()` {#floor}
+### <code>mul()</code> \{#mul}
 
-Returns a copy of this vector with its values rounded down
+Multiplies the given vector or values into this one, and returns self for chaining
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-vec3:floor()
+mul(vec)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+mul(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+vec3:mul(2, 3, 2)
 ```
 
 ---
 
-### `ceil()` {#ceil}
-
-Returns a copy of this vector with its values rounded up
-
-**Example**:
-
-```lua
-vec3:ceil()
-```
-
----
-
-### `scale(Number)` {#scale}
-
-Scales this vector by the given factor, and returns self for chaining
-
-**Example**:
-
-```lua
-vec3:scale(2)
-```
-
----
-
-### `offset(Number)` {#offset}
-
-Offsets this vector by the given factor, adding the factor to all components, and returns self for chaining
-
-**Example**:
-
-```lua
-vec3:offset(2)
-```
-
----
-
-### `transform(Matrix3)` {#transform}
-
-Transforms this vector by the given matrix, and returns self for chaining
-
-**Example**:
-
-```lua
-vec3:transform(matrices.mat3())
-```
-
----
-
-### `dot(Vector3)` {#dot}
-
-Returns the dot product of this vector with the other
-
-**Example**:
-
-```lua
-vec3:dot(vec(2, 2, 3))
-```
-
----
-
-### `set(Vector3)` {#set}
-
-Sets this vector to have the given values
-
-Nil values are treated as zero
-
-Returns self for chaining
-
-**Example**:
-
-```lua
-vec3:set(10, 3, 2)
-```
-
----
-
-### `copy()` {#copy}
-
-Creates and returns a copy of this vector
-
-**Example**:
-
-```lua
-vec3:copy()
-```
-
----
-
-### `normalize()` {#normalize}
-
-Modifies this vector so that its length is 1, unless its length was originally 0
-
-Returns self for chaining
-
-**Example**:
-
-```lua
-vec3:normalize()
-```
-
----
-
-### `reset()` {#reset}
-
-Resets this vector back to being all zeroes, and returns itself for chaining
-
-**Example**:
-
-```lua
-vec3:reset()
-```
-
----
-
-### `reduce(Vector3)` {#reduce}
-
-Reduces this vector modulo the given vector or values, and returns self for chaining
-
-**Example**:
-
-```lua
-vec3:reduce(1, 0.5, 2)
-```
-
----
-
-### `normalized()` {#normalized}
-
-Returns a copy of this vector with length 1, unless its length was originally 0
-
-**Example**:
-
-```lua
-vec3:normalized()
-```
-
----
-
-### `sub(Vector3)` {#sub}
+### <code>sub()</code> \{#sub}
 
 Subtracts the given vector or values from this one, and returns self for chaining
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+sub(vec)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+sub(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 vec3:sub(1, 0.5, 1)
@@ -196,31 +239,495 @@ vec3:sub(1, 0.5, 1)
 
 ---
 
-### `mul(Vector3)` {#mul}
+### <code>ceil()</code> \{#ceil}
 
-Multiplies the given vector or values into this one, and returns self for chaining
-
-**Example**:
+Returns a copy of this vector with its values rounded up
 
 ```lua
-vec3:mul(2, 3, 2)
+ceil()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:ceil()
 ```
 
 ---
 
-### `div(Vector3)` {#div}
+### <code>clampLength()</code> \{#clampLength}
 
-Divides this vector by the given vector or values, and returns self for chaining
+Modifies this vector so that its length is between minLength and maxLength
 
-**Example**:
+If the vector has length zero, it is unmodified
+
+Returns self for chaining
 
 ```lua
-vec3:mul(2, 3, 2)
+clampLength(minLength, maxLength)
+```
+
+**Parameters:**
+
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| minLength | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxLength | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:clampLength(1, 5)
 ```
 
 ---
 
-### `applyFunc(fun)` {#applyFunc}
+### <code>clamped()</code> \{#clamped}
+
+Returns a modified copy of this vector, with its length clamped from minLength to maxLength
+
+If the vector has length zero, then the copy does too
+
+```lua
+clamped(minLength, maxLength)
+```
+
+**Parameters:**
+
+| Name      | Type                                            | Description | Default |
+| --------- | ----------------------------------------------- | ----------- | ------- |
+| minLength | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxLength | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:clamped(1, 3)
+```
+
+---
+
+### <code>cross()</code> \{#cross}
+
+Sets this vector to the cross product of itself and the other vector
+
+Returns self for chaining
+
+```lua
+cross(other)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| other | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:cross(vec(2, 3, 5))
+```
+
+---
+
+### <code>crossed()</code> \{#crossed}
+
+Returns a new vector which is the cross product of this and the other one
+
+```lua
+crossed(other)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description | Default |
+| ----- | ------------------------------------------------ | ----------- | ------- |
+| other | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:crossed(vec(2, 5, 4))
+```
+
+---
+
+### <code>dot()</code> \{#dot}
+
+Returns the dot product of this vector with the other
+
+```lua
+dot(vec)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+vec3:dot(vec(2, 2, 3))
+```
+
+---
+
+### <code>floor()</code> \{#floor}
+
+Returns a copy of this vector with its values rounded down
+
+```lua
+floor()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:floor()
+```
+
+---
+
+### <code>length()</code> \{#length}
+
+Returns the length of this vector
+
+```lua
+length()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+vec3:length()
+```
+
+---
+
+### <code>lengthSquared()</code> \{#lengthSquared}
+
+Returns the length of this vector squared
+
+Suitable when you only care about relative lengths, because it avoids a square root
+
+```lua
+lengthSquared()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+vec3:lengthSquared()
+```
+
+---
+
+## Transformations
+
+### <code>scale()</code> \{#scale}
+
+Scales this vector by the given factor, and returns self for chaining
+
+```lua
+scale(factor)
+```
+
+**Parameters:**
+
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| factor | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:scale(2)
+```
+
+---
+
+### <code>normalize()</code> \{#normalize}
+
+Modifies this vector so that its length is 1 unless its length was originally 0
+
+Returns self for chaining
+
+```lua
+normalize()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:normalize()
+```
+
+---
+
+### <code>normalized()</code> \{#normalized}
+
+Returns a copy of this vector with length 1 unless its length was originally 0
+
+```lua
+normalized()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:normalized()
+```
+
+---
+
+### <code>offset()</code> \{#offset}
+
+Offsets this vector by the given factor, adding the factor to all components, and returns self for chaining
+
+```lua
+offset(factor)
+```
+
+**Parameters:**
+
+| Name   | Type                                            | Description | Default |
+| ------ | ----------------------------------------------- | ----------- | ------- |
+| factor | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:offset(2)
+```
+
+---
+
+### <code>reduce()</code> \{#reduce}
+
+Reduces this vector modulo the given vector or values, and returns self for chaining
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+reduce(vec)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+reduce(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+vec3:reduce(1, 0.5, 2)
+```
+
+---
+
+### <code>transform()</code> \{#transform}
+
+Transforms this vector by the given matrix, and returns self for chaining
+
+```lua
+transform(mat)
+```
+
+**Parameters:**
+
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| mat  | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:transform(matrices.mat3())
+```
+
+---
+
+## Utility
+
+### <code>set()</code> \{#set}
+
+Sets this vector to have the given values
+
+Nil values are treated as zero
+
+Returns self for chaining
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+set(vec)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| vec  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+set(x, y, z)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| x    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| y    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| z    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+vec3:set(1, 2, 3)
+```
+
+---
+
+### <code>applyFunc()</code> \{#applyFunc}
 
 Calls the given function on each element of this vector, and sets the values of the vector to the returns
 
@@ -228,7 +735,23 @@ The current index and its value is given as arguments of the function
 
 Returns self for chaining
 
-**Examples**:
+```lua
+applyFunc(func)
+```
+
+**Parameters:**
+
+| Name | Type                                                | Description | Default |
+| ---- | --------------------------------------------------- | ----------- | ------- |
+| func | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 -- Example 1:
@@ -241,47 +764,7 @@ end)
 
 ---
 
-### `toRad()` {#toRad}
-
-Returns a copy of this vector, in radians
-
-**Example**:
-
-```lua
-vec3:toRad()
-```
-
----
-
-### `toDeg()` {#toDeg}
-
-Returns a copy of this vector, in degrees
-
-**Example**:
-
-```lua
-vec3:toDeg()
-```
-
----
-
-### `clampLength(Number,Number)` {#clampLength}
-
-Modifies this vector so that its length is between minLength and maxLength
-
-If the vector has length zero, it is unmodified
-
-Returns self for chaining
-
-**Example**:
-
-```lua
-vec3:clampLength(1, 5)
-```
-
----
-
-### `augmented(Number)` {#augmented}
+### <code>augmented()</code> \{#augmented}
 
 Returns the augmented form of this vector
 
@@ -289,7 +772,42 @@ The augmented form is a Vector of the same length + 1
 
 The new axis will have the given value, or 1 when it is not specified
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+augmented()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+augmented(value)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description | Default |
+| ----- | ----------------------------------------------- | ----------- | ------- |
+| value | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 vec3:augmented(4)
@@ -297,108 +815,166 @@ vec3:augmented(4)
 
 ---
 
-### `crossed(Vector3)` {#crossed}
+### <code>copy()</code> \{#copy}
 
-Returns a new vector which is the cross product of this and the other one
-
-**Example**:
+Creates and returns a copy of this vector
 
 ```lua
-vec3:crossed(vec(2, 5, 4))
+copy()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:copy()
 ```
 
 ---
 
-### `unpack()` {#unpack}
+### <code>reset()</code> \{#reset}
 
-Returns each of this vector values as argument
-
-**Example**:
+Resets this vector back to being all zeroes, and returns itself for chaining
 
 ```lua
-vec3:unpack()
+reset()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:reset()
 ```
 
 ---
 
-### `clamped(Number,Number)` {#clamped}
+### <code>unpack()</code> \{#unpack}
 
-Returns a modified copy of this vector, with its length clamped from minLength to maxLength
-
-If the vector has length zero, then the copy does too
-
-**Example**:
+Returns this vector's values as separate numbers
 
 ```lua
-vec3:clamped(1, 3)
+unpack()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | x value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | y value     |
+| <code>[Number](/tutorials/types/Numbers)</code> | z value     |
+
+**Example:**
+
+```lua
+local x, y, z = vec3:unpack()
 ```
 
 ---
 
-### `lengthSquared()` {#lengthSquared}
+## Conversion
 
-Returns the length of this vector squared
+### <code>toDeg()</code> \{#toDeg}
 
-Suitable when you only care about relative lengths, because it avoids a square root
-
-**Example**:
+Returns a copy of this vector, in degrees
 
 ```lua
-vec3:lengthSquared()
+toDeg()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:toDeg()
 ```
 
 ---
 
-### `cross(Vector3)` {#cross}
+### <code>toRad()</code> \{#toRad}
 
-Sets this vector to the cross product of itself and the other vector
-
-Returns self for chaining
-
-**Example**:
+Returns a copy of this vector, in radians
 
 ```lua
-vec3:cross(vec(2, 3, 5))
+toRad()
+```
+
+**Returns:**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+vec3:toRad()
 ```
 
 ---
 
-### `x` {#x}
+## Fields
+
+### <code>x</code> \{#x}
 
 The first coordinate of this vector
 
 Can also be gotten with the indices "r" and [1]
 
-**Example**:
+**Example:**
 
 ```lua
 vec3.x
+vec3.r
+vec3[1]
 ```
 
 ---
 
-### `y` {#y}
+### <code>y</code> \{#y}
 
 The second coordinate of this vector
 
 Can also be gotten with the indices "g" and [2]
 
-**Example**:
+**Example:**
 
 ```lua
 vec3.y
+vec3.g
+vec3[2]
 ```
 
 ---
 
-### `z` {#z}
+### <code>z</code> \{#z}
 
 The third coordinate of this vector
 
 Can also be gotten with the indices "b" and [3]
 
-**Example**:
+**Example:**
 
 ```lua
 vec3.z
+vec3.b
+vec3[3]
 ```
+
+---

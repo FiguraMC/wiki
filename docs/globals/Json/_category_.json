@@ -1,0 +1,10 @@
+{
+  "label": "Json",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Json API."
+  },
+  "customProps": {
+    "description": "A global API that contains features to work with JSON"
+  }
+}

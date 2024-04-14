@@ -1,0 +1,10 @@
+{
+  "label": "Nameplate",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Nameplate API."
+  },
+  "customProps": {
+    "description": "A global API which is used for customizing your player's nameplate in chat, above your head, and in the tab list"
+  }
+}

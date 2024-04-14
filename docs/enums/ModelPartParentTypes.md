@@ -216,6 +216,14 @@ This ParentType replaces the model of arrows fired by you. The pivot point of th
 
 ---
 
+### `Trident` \{#Trident}
+
+-   #### `TRIDENT` \{#TRIDENT}
+
+This ParentType replaces the model of tridents thrown by you. The pivot point of the ModelPart that has this ParentType does not matter.<br/>
+
+---
+
 ### `Item` \{#Item}
 
 -   #### `ITEM` \{#ITEM}
@@ -243,6 +251,26 @@ This ParentType renders the right held item at the ModelPart's pivot point.
 -   #### `LEFT_ITEM_PIVOT` \{#LEFT_ITEM_PIVOT}
 
 This ParentType renders the left held item at the ModelPart's pivot point.
+
+---
+
+### `RightElytraPivot` \{#RightElytraPivot}
+
+-   #### `RIGHT_ELYTRA_PIVOT` \{#RIGHT_ELYTRA_PIVOT}
+-   #### `RightWingPivot` \{#RightWingPivot}
+-   #### `RIGHT_WING_PIVOT` \{#RIGHT_WING_PIVOT}
+
+This ParentType renders the right elytra wing at the ModelPart's pivot point.
+
+---
+
+### `LeftElytraPivot` \{#LeftElytraPivot}
+
+-   #### `LEFT_ELYTRA_PIVOT` \{#LEFT_ELYTRA_PIVOT}
+-   #### `LeftWingPivot` \{#LeftWingPivot}
+-   #### `LEFT_WING_PIVOT` \{#LEFT_WING_PIVOT}
+
+This ParentType renders the left elytra wing at the ModelPart's pivot point.
 
 ---
 
@@ -300,6 +328,14 @@ This ParentType renders the chestplate at the ModelPart's pivot point.
 
 ---
 
+### `ChestplateBodyPivot` \{#ChestplateBodyPivot}
+
+-   #### `CHESTPLATE_BODY_PIVOT`
+
+This ParentType renders the body of the chestplate at the ModelPart's pivot point.
+
+---
+
 ### `LeftShoulderPivot` \{#LeftShoulderPivot}
 
 -   #### `LEFT_SHOULDER_PIVOT`
@@ -313,6 +349,14 @@ This ParentType renders the left shoulder of the chestplate at the ModelPart's p
 -   #### `RIGHT_SHOULDER_PIVOT`
 
 This ParentType renders the right shoulder of the chestplate at the ModelPart's pivot point.
+
+---
+
+### `BeltPivot` \{#BeltPivot}
+
+-   #### `BELT_PIVOT`
+
+This ParentType renders the belt of the leggings at the ModelPart's pivot point.
 
 ---
 

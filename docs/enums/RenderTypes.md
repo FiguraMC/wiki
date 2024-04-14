@@ -12,23 +12,24 @@ models.myModel:setPrimaryRenderType("END_PORTAL")
 
 ## All Render Types
 
-| Render Type        | Description |
-| ------------------ | ----------- |
-| `NONE`             |             |
-| `CUTOUT`           |             |
-| `CUTOUT_CULL`      |             |
-| `TRANSLUCENT`      |             |
-| `TRANSLUCENT_CULL` |             |
-| `EMISSIVE`         |             |
-| `EMISSIVE_SOLID`   |             |
-| `EYES`             |             |
-| `END_PORTAL`       |             |
-| `END_GATEWAY`      |             |
-| `TEXTURED_PORTAL`  |             |
-| `GLINT`            |             |
-| `GLINT2`           |             |
-| `TEXTURED_GLINT`   |             |
-| `LINES`            |             |
-| `LINES_STRIP`      |             |
-| `SOLID`            |             |
-| `BLURRY`           |             |
+| Render Type             | Description |
+| ----------------------- | ----------- |
+| `NONE`                  | -           |
+| `CUTOUT`                | -           |
+| `CUTOUT_CULL`           | -           |
+| `TRANSLUCENT`           | -           |
+| `TRANSLUCENT_CULL`      | -           |
+| `EMISSIVE`              | -           |
+| `EMISSIVE_SOLID`        | -           |
+| `CUTOUT_EMISSIVE_SOLID` | -           |
+| `EYES`                  | -           |
+| `END_PORTAL`            | -           |
+| `END_GATEWAY`           | -           |
+| `TEXTURED_PORTAL`       | -           |
+| `GLINT`                 | -           |
+| `GLINT2`                | -           |
+| `TEXTURED_GLINT`        | -           |
+| `LINES`                 | -           |
+| `LINES_STRIP`           | -           |
+| `SOLID`                 | -           |
+| `BLURRY`                | -           |

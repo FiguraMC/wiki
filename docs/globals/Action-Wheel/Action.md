@@ -1,179 +1,182 @@
-An action in the [`Action Wheel`](.). Actions are either interacted with by clicking or scrolling. Actions can either run an action on interaction or when toggled.
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-For this entire page assume:
+An action in the Figura Action Wheel
+
+Actions are either interacted by clicking and scrolling, which also being able to be toggleable
+
+For the entire page assume:
 
 ```lua
 local myPage = action_wheel:newPage()
-action_wheel:setPage(myPage)
+local myAction = myPage:newAction()
 ```
+
+---
 
 ## Action Events
 
-Technically they are "callbacks" and not "events" as you can only assign a single function, but eh.
-It's common practice to pass pings to these functions since interacting with the action_wheel is not synced between clients. Checkout the [`setOnToggle`](#setOnToggle) function to see an example.
+### <code>setOnLeftClick()</code> \{#setOnLeftClick}
 
----
+**Aliases:** `onLeftClick()`
 
-### <code>setOnLeftClick(leftFunction: [LeftFunction](#leftClick)): [Action](./Action)</code> \{#setOnLeftClick}
+Sets the function that is executed when the left mouse button is clicked
 
-Sets the function that is executed when the left mouse button is clicked. Figura passes the Action itself as the first parameter.
+The function has one argument
 
-**Parameters**
+The first argument is this action itself
 
-| Name         | Type                                              | Description                                           |
-| ------------ | ------------------------------------------------- | ----------------------------------------------------- |
-| leftFunction | <code>[LeftFuncton](./Action#LeftFunction)</code> | The function that runs when you left click the Action |
+See the [action wheel tutorial](/tutorials/ActionWheel#here-is-the-full-copy-paste-for-an-example-action-wheel) for a full example.
 
-**Returns**
+```lua
+setOnLeftClick(leftFunction)
+```
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+**Parameters:**
 
-**Example**:
+| Name         | Type                                                | Description                                                   | Default  |
+| ------------ | --------------------------------------------------- | ------------------------------------------------------------- | -------- |
+| leftFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is left clicked | Required |
 
-<!-- prettier-ignore -->
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+**Example:**
+
 ```lua
 function pings.lefty()
-    print('I left clicked this button!')
+    print("I left clicked this button!")
 end
-local myAction = myPage:newAction()
+
 -- highlight-next-line
-    :setOnLeftClick(pings.lefty)
+myAction:setOnLeftClick(pings.lefty)
 ```
 
 ---
 
-### `leftClick` \{#leftClick}
+### <code>setOnRightClick()</code> \{#setOnRightClick}
 
-The field that holds the callback for when the left mouse button is clicked on the Action. The type of this field is <code>fun(action: [Action](./Action))</code>. This type will be referred to as `LeftFunction` elsewhere in the wiki.
+**Aliases:** `onRightClick()`
 
-**Parameters**
+Sets the function that is executed when the right mouse button is clicked
 
-| Name   | Type                            | Description                           |
-| ------ | ------------------------------- | ------------------------------------- |
-| action | <code>[Action](./Action)</code> | The action the callback was called by |
+The function has one argument
 
----
+The first argument is this action itself
 
-### <code>setOnRightClick(rightFunction: [RightFunction](#rightClick)): [Action](./Action)</code> \{#setOnRightClick}
+```lua
+setOnRightClick(rightFunction)
+```
 
-Sets the function that is executed when the right mouse button is clicked. Figura passes the Action itself as the first parameter.
+**Parameters:**
 
-**Parameters**
+| Name          | Type                                                | Description                                                    | Default  |
+| ------------- | --------------------------------------------------- | -------------------------------------------------------------- | -------- |
+| rightFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is right clicked | Required |
 
-| Name          | Type                                                | Description                                            |
-| ------------- | --------------------------------------------------- | ------------------------------------------------------ |
-| rightFunction | <code>[RightFuncton](./Action#RightFunction)</code> | The function that runs when you right click the Action |
+**Returns:**
 
-**Returns**
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+**Example:**
 
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
 function pings.righty()
-    print('I right clicked this button!')
+    print("I right clicked this button!")
 end
-local myAction = myPage:newAction()
+
 -- highlight-next-line
-    :setOnRightClick(pings.righty)
+myAction:setOnRightClick(pings.righty)
 ```
 
 ---
 
-### `rightClick` \{#rightClick}
+### <code>setOnToggle()</code> \{#setOnToggle}
 
-The field that holds the callback for when the right mouse button is clicked on the Action. The type of this field is <code>fun(action: [Action](./Action))</code>. This type will be referred to as `RightFunction` elsewhere in the wiki.
+**Aliases:** `onToggle()`
 
-**Parameters**
+Sets the function that is executed when the Action is toggled
 
-| Name   | Type                            | Description                           |
-| ------ | ------------------------------- | ------------------------------------- |
-| action | <code>[Action](./Action)</code> | The action the callback was called by |
+The function has two arguments
 
----
+The first argument is toggle state of this action
 
-### <code>setOnToggle(toggleFunction: [ToggleFunction](#ToggleFunction)): [Action](./Action)</code> \{#setOnToggle}
+The second argument is this action itself
 
-When the Action is assigned a function to the <code>toggle</code> field, it becomes a Toggle Action. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter, and the Action itself as the second.
+See the [action wheel tutorial](/tutorials/ActionWheel#toggle-example) for a full example.
 
-**Parameters**
+```lua
+setOnToggle(toggleFunction)
+```
 
-| Name           | Type                                           | Description                                       |
-| -------------- | ---------------------------------------------- | ------------------------------------------------- |
-| toggleFunction | <code>[ToggleFunction](#ToggleFunction)</code> | The function that runs when you toggle the Action |
+**Parameters:**
 
-**Returns**
+| Name           | Type                                                | Description                                              | Default  |
+| -------------- | --------------------------------------------------- | -------------------------------------------------------- | -------- |
+| toggleFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is toggled | Required |
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+**Returns:**
 
-**Example**:
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-<!-- prettier-ignore -->
+**Example:**
+
 ```lua
 function pings.setVisible(state)
-    models:setVisible(state)
+    models:setVisible(state) -- toggles the visibility of the entire avatar because state swaps between true and false every click
 end
 
-local myAction = myPage:newAction()
-    :title("disabled")
-    :toggleTitle("enabled")
-    :item("red_wool")
-    :toggleItem("green_wool")
-    -- highlight-next-line
-    :setOnToggle(pings.setVisible)
+myAction:setOnToggle(pings.setVisible)
 ```
 
 ---
 
-### `toggle` \{#toggle}
+### <code>setOnUntoggle()</code> \{#setOnUntoggle}
 
-The field that holds the callback for when the Action is toggled. The type of this field is <code>fun(state: boolean, action: [Action](./Action))</code>. This type will be referred to as `ToggleFunction` elsewhere in the wiki.
+**Aliases:** `onUntoggle()`
 
-**Parameters**
+:::warning
 
-| Name   | Type                            | Description                              |
-| ------ | ------------------------------- | ---------------------------------------- |
-| state  | boolean                         | Whether the action was toggled on or off |
-| action | <code>[Action](./Action)</code> | The action the callback was called by    |
-
----
-
-### <code>setOnUntoggle(untoggleFunction: [UntoggleFunction](#Untoggle)): [Action](./Action)</code> \{#setOnUnToggle}
-
-Unlike Toggle which gets executed when the Action is toggled on or off, `UnToggle` only gets executed when the Action is toggled off. Figura passes the Toggle Action's internal <code>state</code> variable as the first parameter (which is always false due to the nature of UnToggle), and the Action itself as the second.
-
-:::info
-
-`setOnUntoggle` is redundant because [`setOnToggle`](#setOnToggle) will also work when the action is untoggled if there is no `OnUntoggle` function set.
+This method is a noob trap, anything it can do [`setOnToggle`](#setOnToggle) does better because `setOnToggle` also runs its function when untoggled
 
 :::
 
-**Parameters**
+Sets the function that is executed when the Action is untoggled
 
-| Name           | Type                                       | Description                                         |
-| -------------- | ------------------------------------------ | --------------------------------------------------- |
-| toggleFunction | <code>[UntoggleFunction](#Untoggle)</code> | The function that runs when you untoggle the Action |
+The function has two arguments
 
-**Returns**
+The first argument is toggle state of this action
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+The second argument is this action itself
 
-**Example**:
+```lua
+setOnUntoggle(toggleFunction)
+```
 
-<!-- prettier-ignore -->
+**Parameters:**
+
+| Name           | Type                                                | Description                                                | Default  |
+| -------------- | --------------------------------------------------- | ---------------------------------------------------------- | -------- |
+| toggleFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is untoggled | Required |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+**Example:**
+
 ```lua
 function pings.toggley(bool)
-    print('This is always true: ', .. bool)
+    print('This is always true: ', .. bool) -- this is always true because setOnUnToggle changes the behavior of setOnToggle. Without setOnUnToggle this would swap between true and false
 end
 
 function pings.untoggley(bool)
@@ -189,586 +192,1078 @@ local myAction = myPage:newAction()
 
 ---
 
-### `Untoggle`
+### <code>setOnScroll()</code> \{#setOnScroll}
 
-The field that holds the callback for when the Action is untoggled. The type of this field is <code>fun(state: boolean, action: [Action](./Action))</code>. This type will be referred to as `UntoggleFunction` elsewhere in the wiki.
+**Aliases:** `onScroll()`
 
-**Parameters**
+Sets the function that is executed when the mouse is scrolled
 
-| Name   | Type                            | Description                                                                |
-| ------ | ------------------------------- | -------------------------------------------------------------------------- |
-| state  | boolean                         | Whether the action was toggled on or off. In this case, it is always false |
-| action | <code>[Action](./Action)</code> | The action the callback was called by                                      |
+The function has two arguments
 
----
+The first argument is mouse wheel direction
 
-### <code>setOnScroll(onScroll: [ScrollFunction](#scroll)): [Action](./Action)</code> \{#setOnScroll}
+The second argument is this action itself
 
-This will execute when the mouse wheel scrolls while hovering over the Action. The first parameter is the direction the mouse scrolled (1 for scroll up, -1 for scroll down. Can be more than 1 for non-standard mouse wheels). The second paremeter is the Action itself.
-
-**Parameters**
-
-| Name           | Type                                   | Description                                          |
-| -------------- | -------------------------------------- | ---------------------------------------------------- |
-| toggleFunction | <code>[ScrollFunction](#scroll)</code> | The function that runs when you scroll on the Action |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local current = 0
-
-function pings.scrolling(dir)
-    print("Scrolled in this direction: " .. dir)
-end
-
-local myAction = myPage:newAction()
-    :title('Current: ', current)
--- highlight-start
-    :setOnScroll(function(dir, self)
-        pings.scrolling(dir)
-        current = current + dir
-        self:title('Current: ', current)
-    end)
--- highlight-end
+setOnScroll(scrollFunction)
 ```
 
-### `scroll`
+**Parameters:**
 
-The field that holds the callback for when the Action is scrolled. The type of this field is <code>fun(dir: number, action: [Action](./Action))</code>. This type will be referred to as `ScrollFunction` elsewhere in the wiki.
+| Name           | Type                                                | Description                                                    | Default  |
+| -------------- | --------------------------------------------------- | -------------------------------------------------------------- | -------- |
+| scrollFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is scrolled over | Required |
 
-**Parameters**
+**Returns:**
 
-| Name   | Type                            | Description                                                                     |
-| ------ | ------------------------------- | ------------------------------------------------------------------------------- |
-| dir    | number                          | The direction the scrollwheel was moved. Positive for up and negative for down. |
-| action | <code>[Action](./Action)</code> | The action the callback was called by                                           |
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+function pings.scrolling(dir)
+    log(dir)
+    if dir > 0 then
+        log("Scrolled up")
+    else
+        log("Scrolled down")
+    end
+end
+
+-- highlight-start
+myAction:setOnScroll(pings.scrolling)
+-- highlight-end
+```
 
 ---
 
 ## Appearance
 
-Functions to modify how your Action looks.
+### <code>setColor()</code> \{#setColor}
 
----
+**Aliases:** `color()`
 
-### <code>setTitle(title: string): [Action](./Action)</code> \{#setTitle}
+Sets the background color of the Action
 
-Sets the title of the Action.
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Parameters**
-
-| Name  | Type     | Description                                            |
-| ----- | -------- | ------------------------------------------------------ |
-| title | `string` | The title that displays when you hover over the Action |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setTitle('Click me!')
+setColor(color)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description                                                      | Default      |
+| ----- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------ |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the background, with each value between 0 and 1 | `vec(0,0,0)` |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                        | Default |
+| ---- | ----------------------------------------------- | -------------------------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The red value of the background, between 0 and 1   | `0`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The green value of the background, between 0 and 1 | `0`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The blue value of the background, between 0 and 1  | `0`     |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example (Overload 2):**
+
+```lua
+myAction:setColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
 ---
 
-### <code>getTitle(): string</code> \{#getTitle}
+### <code>getColor()</code> \{#getColor}
 
-Gets the Action's title.
+Gets this Action's background color
 
-**Returns**
-
-| Name  | Type     | Description                |
-| ----- | -------- | -------------------------- |
-| title | `string` | The Action's current title |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myAction = myPage:newAction()
-    :setTitle('Click me!')
+getColor()
+```
 
--- highlight-next-line
-print(myAction:getTitle())
+**Returns:**
+
+| Type                                             | Description                              |
+| ------------------------------------------------ | ---------------------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB background color for this action |
+
+**Example:**
+
+```lua
+myAction:getColor()
 ```
 
 ---
 
-### <code>setItem(item: [ItemStack](../World/ItemStack)): [Action](./Action)</code> \{#setItem}
+### <code>setHoverColor()</code> \{#setHoverColor}
 
-Sets an item to display on the Acton.
+**Aliases:** `hoverColor()`
 
-**Parameters**
+Sets the background color of the Action when it is being hovered
 
-| Name | Type                                         | Description                          |
-| ---- | -------------------------------------------- | ------------------------------------ |
-| item | <code>[ItemStack](../World/ItemStack)</code> | The item to set the Action's icon to |
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setItem('minecraft:stone')
+setHoverColor(color)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description                                                      | Default      |
+| ----- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------ |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the background, with each value between 0 and 1 | `vec(0,0,0)` |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setHoverColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                        | Default |
+| ---- | ----------------------------------------------- | -------------------------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The red value of the background, between 0 and 1   | `0`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The green value of the background, between 0 and 1 | `0`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The blue value of the background, between 0 and 1  | `0`     |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myAction:setHoverColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
 ---
 
-### <code>setColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> \{#setColor}
+### <code>getHoverColor()</code> \{#getHoverColor}
 
-Sets the color of the Action. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
+Gets this Action's background hover color
 
-**Parameters**
-
-| Name  | Type                                       | Description            |
-| ----- | ------------------------------------------ | ---------------------- |
-| color | <code>[Vector3](../Vectors/Vector3)</code> | A vector of rgb values |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setColor(255 / 255, 192 / 155, 203 / 255)
+getHoverColor()
+```
+
+**Returns:**
+
+| Type                                             | Description                                    |
+| ------------------------------------------------ | ---------------------------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB background hover color for this action |
+
+**Example:**
+
+```lua
+myAction:getHoverColor()
 ```
 
 ---
 
-### <code>getColor(): [Vector3](../Vectors/Vector3)</code> \{#getColor}
+### <code>setHoverItem()</code> \{#setHoverItem}
 
-Gets the Action's color. Returns a `Vector3`.
+**Aliases:** `hoverItem()`
 
-**Returns**
+Sets the item of the Action when it is being hovered
 
-| Name  | Type                                       | Description            |
-| ----- | ------------------------------------------ | ---------------------- |
-| color | <code>[Vector3](../Vectors/Vector3)</code> | A vector of rgb values |
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setColor(255 / 255, 192 / 155, 203 / 255)
+setHoverItem(item)
+```
 
--- highlight-next-line
-print(myAction:getColor())
+**Parameters:**
+
+| Name | Type                                               | Description                         | Default |
+| ---- | -------------------------------------------------- | ----------------------------------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | The item that's shown in the action | `nil`   |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setHoverItem(item)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                        | Default           |
+| ---- | ----------------------------------------------- | ---------------------------------- | ----------------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | The item id for the item to be set | `"minecraft:air"` |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example (Overload 2):**
+
+```lua
+myAction:setHoverItem("diamond")
 ```
 
 ---
 
-### <code>setTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> \{#setTexture}
+### <code>setHoverTexture()</code> \{#setHoverTexture}
 
-Sets the texture of the Action. All parameters other than `Texture` are optional.
+**Aliases:** `hoverTexture()`
 
-**Parameters**
+Sets a Custom Texture to render while this Action is being hovered
 
-| Name    | Type                                        | Description                          | Default          |
-| ------- | ------------------------------------------- | ------------------------------------ | ---------------- |
-| texture | <code>[Texture](../textures/Texture)</code> | The item to set the Action's icon to |                  |
-| U       | `number`                                    | The U value of the UV                | 0                |
-| V       | `number`                                    | The V value of the UV                | 0                |
-| width   | `number`                                    | The width to set the texture to      | texture's width  |
-| height  | `number`                                    | The height to set the texture to     | texture's height |
-| scale   | `number`                                    | The scale to set the texture to      | 1                |
+All values are measured in pixels
 
-**Returns**
+Default UV is 0, 0, the default dimensions are the texture dimensions and the default scale of 1
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Example**:
+```lua
+setHoverTexture(texture)
+```
 
-<!-- prettier-ignore -->
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setHoverTexture(texture, u, v)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`      |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`      |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
+
+```lua
+setHoverTexture(texture, u, v, width, height)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
+
+```lua
+setHoverTexture(texture, u, v, width, height, scale)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | The scale of the texture               | `1`            |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
 ```lua
 -- basic
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setTexture(textures['myTexture'])
+myAction:setHoverTexture(textures["myTexture"])
 
 -- advanced
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setTexture(textures['myTexture'], 16, 32, nil, nil, 2)
-
+myAction:setHoverTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 ```
 
 ---
 
-### <code>setHoverColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> \{#setHoverColor}
+### <code>setItem()</code> \{#setItem}
 
-Sets the color of the Action when it's being hovered. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
+**Aliases:** `item()`
 
-**Parameters**
+Sets the item of the Action
 
-| Name  | Type                                       | Description            |
-| ----- | ------------------------------------------ | ---------------------- |
-| color | <code>[Vector3](../Vectors/Vector3)</code> | A vector of rgb values |
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setHoverColor(255 / 255, 192 / 155, 203 / 255)
+setItem(item)
 ```
 
----
+**Parameters:**
 
-### <code>getHoverColor(): [Vector3](../Vectors/Vector3)</code> \{#getHoverColor}
+| Name | Type                                               | Description                         | Default |
+| ---- | -------------------------------------------------- | ----------------------------------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | The item that's shown in the action | `nil`   |
 
-Gets the Action's hover color. Returns a `Vector3`.
+**Returns:**
 
-**Returns**
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-| Name  | Type                                       | Description            |
-| ----- | ------------------------------------------ | ---------------------- |
-| color | <code>[Vector3](../Vectors/Vector3)</code> | A vector of rgb values |
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setHoverColor(255 / 255, 192 / 155, 203 / 255)
+setItem(item)
+```
 
--- highlight-next-line
-print(myAction:getHoverColor())
+**Parameters:**
+
+| Name | Type                                            | Description                        | Default           |
+| ---- | ----------------------------------------------- | ---------------------------------- | ----------------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | The item id for the item to be set | `"minecraft:air"` |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example (Overload 2):**
+
+```lua
+myAction:setItem("minecraft:stone")
 ```
 
 ---
 
-### <code>setHoverTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> {#setHoverTexture}
+### <code>setTexture()</code> \{#setTexture}
 
-Sets the texture of the Action when it's hovered. All parameters other than `Texture` are optional.
+**Aliases:** `texture()`
 
-**Parameters**
+Sets a Custom Texture to render in this Action
 
-| Name    | Type                                        | Description                          | Default          |
-| ------- | ------------------------------------------- | ------------------------------------ | ---------------- |
-| texture | <code>[Texture](../textures/Texture)</code> | The item to set the Action's icon to |                  |
-| U       | `number`                                    | The U value of the UV                | 0                |
-| V       | `number`                                    | The V value of the UV                | 0                |
-| width   | `number`                                    | The width to set the texture to      | texture's width  |
-| height  | `number`                                    | The height to set the texture to     | texture's height |
-| scale   | `number`                                    | The scale to set the texture to      | 1                |
+All values are measured in pixels
 
-**Returns**
+Default UV is 0, 0, the default dimensions are the texture dimensions and the default scale of 1
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Example**:
+```lua
+setTexture(texture)
+```
 
-<!-- prettier-ignore -->
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+setTexture(texture, u, v)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`      |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`      |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
+
+```lua
+setTexture(texture, u, v, width, height)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
+
+```lua
+setTexture(texture, u, v, width, height, scale)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | The scale of the texture               | `1`            |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
 ```lua
 -- basic
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setHoverTexture(textures['myTexture'])
+myAction:setTexture(textures["myTexture"])
 
 -- advanced
-local myAction = myPage:newAction()
--- highlight-next-line
-    :setHoverTexture(textures['myTexture'], 16, 32, nil, nil, 2)
+myAction:setTexture(textures["myTexture"], 16, 32, nil, nil, 2)
+```
 
+---
+
+### <code>setTitle()</code> \{#setTitle}
+
+**Aliases:** `title()`
+
+Sets the title of the Action
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+setTitle()
+```
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setTitle(title)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description                                                    | Default |
+| ----- | ----------------------------------------------- | -------------------------------------------------------------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over | `nil`   |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example (Overload 2):**
+
+```lua
+myAction:setTitle("Click me!")
+```
+
+---
+
+### <code>getTitle()</code> \{#getTitle}
+
+Gets this Action title
+
+```lua
+getTitle()
+```
+
+**Returns:**
+
+| Type                                            | Description                                                    |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over |
+
+**Example:**
+
+```lua
+myAction:getTitle()
 ```
 
 ---
 
 ## Toggle Specific
 
-When the Action is assigned a function to the <code>[toggle](#setToggleTitle)</code> field, it becomes a Toggle Action. These functions apply to those Actions.
+### <code>setToggleColor()</code> \{#setToggleColor}
 
----
+**Aliases:** `toggleColor()`
 
-### <code>setToggleTitle(title: string): [Action](./Action)</code> \{#setToggleTitle}
+Sets the color of the Action when it is toggled
 
-Sets the title of the Action when toggled.
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Parameters**
-
-| Name  | Type     | Description                                                                |
-| ----- | -------- | -------------------------------------------------------------------------- |
-| title | `string` | The title that displays when you hover over the Action while it is toggled |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setTitle('Sit')
-    :setOnToggle(pings.sit)
--- highlight-next-line
-    :setToggleTitle('Stand')
+setToggleColor(color)
+```
+
+**Parameters:**
+
+| Name  | Type                                             | Description                                                             | Default     |
+| ----- | ------------------------------------------------ | ----------------------------------------------------------------------- | ----------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the toggle background, with each value between 0 and 1 | `vec(0,0,0) |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setToggleColor(r, g, b)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                               | Default |
+| ---- | ----------------------------------------------- | --------------------------------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The red value of the toggle background, between 0 and 1   | `0`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The green value of the toggle background, between 0 and 1 | `0`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The blue value of the toggle background, between 0 and 1  | `0`     |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
+```lua
+myAction:setToggleColor(0, 128 / 255, 128 / 255)
 ```
 
 ---
 
-### <code>getToggleTitle(): string</code> \{#getToggleTitle}
+### <code>getToggleColor()</code> \{#getToggleColor}
 
-Gets the Action's title when toggled.
+Gets this Action toggled color
 
-**Returns**
-
-| Name  | Type     | Description                              |
-| ----- | -------- | ---------------------------------------- |
-| title | `string` | The Action's current title while toggled |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    -- highlight-next-line
-    :setToggleTitle('Stand')
+getToggleColor()
+```
 
-    -- highlight-next-line
-print(myAction:getToggleTitle())
+**Returns:**
+
+| Type                                             | Description                                                             |
+| ------------------------------------------------ | ----------------------------------------------------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the toggle background, with each value between 0 and 1 |
+
+**Example:**
+
+```lua
+myAction:getToggleColor()
 ```
 
 ---
 
-### <code>setToggleItem(item: [ItemStack](../World/ItemStack)): [Action](./Action)</code> \{#setToggleItem}
+### <code>setToggleItem()</code> \{#setToggleItem}
 
-Sets an item to display on the Acton when toggled.
+**Aliases:** `toggleItem()`
 
-**Parameters**
+Sets the item of the Action when it is toggled
 
-| Name | Type                                         | Description                                        |
-| ---- | -------------------------------------------- | -------------------------------------------------- |
-| item | <code>[ItemStack](../World/ItemStack)</code> | The item to set the Action's icon to while toggled |
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setTitle('Sit')
-    :setItem('spruce_stairs')
-    :setOnToggle(pings.sit)
-    :setToggleTitle('Stand')
--- highlight-next-line
-    :setToggleItem('armor_stand')
+setToggleItem(item)
+```
+
+**Parameters:**
+
+| Name | Type                                               | Description                     | Default |
+| ---- | -------------------------------------------------- | ------------------------------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | The item to be set when toggled | `nil`   |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setToggleItem(item)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                     | Default           |
+| ---- | ----------------------------------------------- | ----------------------------------------------- | ----------------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | The item id for the item to be set when toggled | `"minecraft:air"` |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example (Overload 2):**
+
+```lua
+myAction:setToggleItem("armor_stand")
 ```
 
 ---
 
-### <code>setToggleColor(color: [Vector3](../Vectors/Vector3)): [Action](./Action)</code> \{#setToggleColor}
+### <code>setToggleTexture()</code> \{#setToggleTexture}
 
-Sets the color of the Action when toggled. Takes a `Vector3` of rgb values or a number per value. The rgb values are between 0 and 1.
+**Aliases:** `toggleTexture()`
 
-**Parameters**
+Sets a Custom Texture to render in this Action when it is toggled
 
-| Name  | Type                                       | Description            |
-| ----- | ------------------------------------------ | ---------------------- |
-| color | <code>[Vector3](../Vectors/Vector3)</code> | A vector of rgb values |
+All values are measured in pixels
 
-**Returns**
+Default UV is 0, 0, the default dimensions are the texture dimensions and the default scale of 1
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setColor(255 / 255, 192 / 255, 203 / 255)
--- highlight-next-line
-    :setToggleColor(0, 128 / 255, 128 / 255)
+setToggleTexture(texture)
 ```
 
----
+**Parameters:**
 
-### <code>getToggleColor(): [Vector3](../Vectors/Vector3)</code> \{#getToggleColor}
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
 
-Gets the Action's color when toggled. Returns a `Vector3`.
+**Returns:**
 
-**Returns**
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-| Name  | Type                                       | Description            |
-| ----- | ------------------------------------------ | ---------------------- |
-| color | <code>[Vector3](../Vectors/Vector3)</code> | A vector of rgb values |
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction()
-    :setToggleColor(255 / 255, 192 / 155, 203 / 255)
-
--- highlight-next-line
-print(myAction:getToggleColor())
+setToggleTexture(texture, u, v)
 ```
 
----
+**Parameters:**
 
-### <code>setToggleTexture(texture: [Texture](../textures/Texture), U: number?, V: number?, width: number?, height: number?, scale: number?): [Action](./Action)</code> \{#setToggleTexture}
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`      |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`      |
 
-Sets the texture of the Action when toggled. All parameters other than `Texture` are optional.
+**Returns:**
 
-**Parameters**
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-| Name    | Type                                        | Description                          | Default          |
-| ------- | ------------------------------------------- | ------------------------------------ | ---------------- |
-| texture | <code>[Texture](../textures/Texture)</code> | The item to set the Action's icon to |                  |
-| U       | `number`                                    | The U value of the UV                | 0                |
-| V       | `number`                                    | The V value of the UV                | 0                |
-| width   | `number`                                    | The width to set the texture to      | texture's width  |
-| height  | `number`                                    | The height to set the texture to     | texture's height |
-| scale   | `number`                                    | The scale to set the texture to      | 1                |
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
-**Returns**
+```lua
+setToggleTexture(texture, u, v, width, height)
+```
 
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
+**Parameters:**
 
-**Example**:
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
 
-<!-- prettier-ignore -->
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
+
+```lua
+setToggleTexture(texture, u, v, width, height, scale)
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | The scale of the texture               | `1`            |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example:**
+
 ```lua
 -- basic
-local myAction = myPage:newAction()
-    :setTexture(textures['myTexture'])
--- highlight-next-line
-    :setToggleTexture(textures['myToggleTexture'])
+myAction:setToggleTexture(textures["myToggleTexture"])
 
 -- advanced
-local myAction = myPage:newAction()
-    :setTexture(textures['myTexture'], 0, 32, nil, nil, 2)
--- highlight-next-line
-    :setToggleTexture(textures['myTexture'], 16, 32, nil, nil, 2)
-
+myAction:setToggleTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 ```
 
 ---
 
-### <code>setToggled(state: boolean): [Action](./Action)</code> \{#setToggled}
+### <code>setToggleTitle()</code> \{#setToggleTitle}
 
-Sets the toggle state of the Action.
+**Aliases:** `toggleTitle()`
 
-**Parameters**
+Sets the title of the Action when it is toggled
 
-| Name  | Type      | Description                             |
-| ----- | --------- | --------------------------------------- |
-| state | `boolean` | Changes the current state of the toggle |
-
-**Returns**
-
-| Name   | Type                            | Description                                                  |
-| ------ | ------------------------------- | ------------------------------------------------------------ |
-| action | <code>[Action](./Action)</code> | The Action you called this function on to allow for chaining |
-
-**Example**:
-
-<!-- prettier-ignore -->
 ```lua
-local myAction = myPage:newAction()
-    :setOnToggle(function(b) print('Toggled: ' .. b) end)
+setToggleTitle(title)
+```
 
-local t = 0
+**Parameters:**
 
-function events.tick()
-    if t % 20 == 0 then
-        local wasToggled = myAction:isToggled()
--- highlight-next-line
-        myAction:setToggled(not wasToggled)
-    end
-    t = t + 1
+| Name  | Type                                            | Description                                                    | Default |
+| ----- | ----------------------------------------------- | -------------------------------------------------------------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over | `nil`   |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myAction:setToggleTitle("Stand")
+```
+
+---
+
+### <code>getToggleTitle()</code> \{#getToggleTitle}
+
+Gets this Action toggled title
+
+```lua
+getToggleTitle()
+```
+
+**Returns:**
+
+| Type                                            | Description                                                    |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over |
+
+**Example:**
+
+```lua
+myAction:getToggleTitle()
+```
+
+---
+
+### <code>setToggled()</code> \{#setToggled}
+
+**Aliases:** `toggled()`
+
+Sets the toggle state of the Action
+
+```lua
+setToggled(bool)
+```
+
+**Parameters:**
+
+| Name | Type                                              | Description                                                | Default |
+| ---- | ------------------------------------------------- | ---------------------------------------------------------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | If true the toggle will be on, and if false it will be off | `false` |
+
+**Returns:**
+
+| Type                                                | Description               |
+| --------------------------------------------------- | ------------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myAction:setToggled(true)
+```
+
+---
+
+### <code>isToggled()</code> \{#isToggled}
+
+Checks if the Action is toggled or not
+
+```lua
+isToggled()
+```
+
+**Returns:**
+
+| Type                                              | Description                                      |
+| ------------------------------------------------- | ------------------------------------------------ |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | If true the toggle is on, and if false it is off |
+
+**Example:**
+
+```lua
+myAction:isToggled()
+```
+
+---
+
+## Fields
+
+### <code>leftClick</code> \{#leftClick}
+
+Function that is executed when the left mouse button is clicked
+
+The function has one argument
+
+The first argument is this action itself
+
+**Examples:**
+
+```lua
+-- pingless example
+function myAction.leftClick()
+    log("Left click")
+end
+```
+
+```lua
+-- pinged example
+function pings.example()
+    log("Left click")
+end
+
+myAction.leftClick = pings.example
+```
+
+---
+
+### <code>rightClick</code> \{#rightClick}
+
+Function that is executed when the right mouse button is clicked
+
+The function has one argument
+
+The first argument is this action itself
+
+**Example:**
+
+```lua
+function myAction.rightClick()
+    log("Right click")
 end
 ```
 
 ---
 
-### <code>isToggled(): boolean</code> \{#isToggled}
+### <code>toggle</code> \{#toggle}
 
-Checks if the action is toggled or not. Returns a `boolean`.
+Function that is executed when the Action is toggled
 
-**Returns**
+The function has two arguments
 
-| Name  | Type      | Description                          |
-| ----- | --------- | ------------------------------------ |
-| state | `boolean` | Whether or not the Action is toggled |
+The first argument is toggle state of this action
 
-**Example**:
+The second argument is this action itself
 
-<!-- prettier-ignore -->
+**Example:**
+
 ```lua
-local myAction = myPage:newAction()
-    :setOnToggle(function(b) print('Toggled: ' .. b) end)
+function myAction.toggle(bool)
+    log("The toggle is " .. tostring(bool))
+end
+```
 
-local t = 0
+---
 
-function events.tick()
-    if t % 20 == 0 then
--- highlight-next-line
-        local wasToggled = myAction:isToggled()
-        myAction:setToggled(not wasToggled)
+### <code>untoggle</code> \{#untoggle}
+
+Function that is executed when the Action is untoggled
+
+The function has two arguments
+
+The first argument is toggle state of this action
+
+The second argument is this action itself
+
+**Example:**
+
+```lua
+function myAction.untoggle(bool)
+    log("The toggle is " .. tostring(bool))
+end
+```
+
+---
+
+### <code>scroll</code> \{#scroll}
+
+Function that is executed when the mouse is scrolled
+
+The function has two arguments
+
+The first argument is mouse wheel direction
+
+The second argument is this action itself
+
+**Example:**
+
+```lua
+function myAction.scroll(dir)
+    log(dir)
+    if dir > 0 then
+        log("Scrolling up")
+    else
+        log("Scrolling down")
     end
-    t = t + 1
 end
 ```
 

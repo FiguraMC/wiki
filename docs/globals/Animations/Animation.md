@@ -1,4 +1,7 @@
-A Blockbench animation
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+Methods for specific Blockbench animations
 
 For all examples on this page assume
 
@@ -10,15 +13,27 @@ local myAnim = animations.myModel.myAnimation
 
 For an explanation on indexing animations, see the [Animations Tutorial](/tutorials/Animations)
 
+---
+
 ## Play/Stop \{#Play-Stop}
 
-### `play()` \{#play}
+### <code>play()</code> \{#play}
 
 Initializes the animation
 
 Resume the animation if it was paused
 
-**Example**:
+```lua
+play()
+```
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:play()
@@ -26,11 +41,21 @@ myAnim:play()
 
 ---
 
-### `stop()` \{#stop}
+### <code>stop()</code> \{#stop}
 
-Gets the animation's priority
+Stop the animation
 
-**Example**:
+```lua
+stop()
+```
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:stop()
@@ -38,11 +63,21 @@ myAnim:stop()
 
 ---
 
-### `pause()` \{#pause}
+### <code>pause()</code> \{#pause}
 
 Pause the animation's playback
 
-**Example**:
+```lua
+pause()
+```
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:pause()
@@ -50,15 +85,25 @@ myAnim:pause()
 
 ---
 
-### `restart()` \{#restart}
+### <code>restart()</code> \{#restart}
 
 Restarts the animation
 
 Plays the animation if it was stopped
 
-This behaviour can also be reproduced by stopping then playing the animation
+This behavior can also be reproduced by stopping then playing the animation
 
-**Example**:
+```lua
+restart()
+```
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:restart()
@@ -66,25 +111,75 @@ myAnim:restart()
 
 ---
 
-### `setPlaying(bool)` \{#setPlaying}
+### <code>setPlaying()</code> \{#setPlaying}
+
+**Aliases:** `playing()`
 
 A function that merges "play" and "stop" together
 
 Takes a boolean parameter, where if true, the animation will play, and when false, the animation will stop
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
-myAnim:setPlaying(player:getPose() == "CROUCHING")
+setPlaying()
+```
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
+
+```lua
+setPlaying(bool)
+```
+
+**Parameters:**
+
+| Name | Type                                              | Description                                                          | Default |
+| ---- | ------------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false value that dictates if the animation will play or stop | `false` |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+</TabItem>
+</Tabs>
+
+**Example (Overload 2):**
+
+```lua
+-- This example would be in a function like a tick event
+local crouching = player:getPose() == "CROUCHING"
+-- highlight-next-line
+myAnim:setPlaying(crouching)
 ```
 
 ---
 
-### `isPlaying()` \{#isPlaying}
+### <code>isPlaying()</code> \{#isPlaying}
 
-Get if the animation is playing
+Checks if the animation is playing
 
-**Example**:
+```lua
+isPlaying()
+```
+
+**Returns:**
+
+| Type                                              | Description                                                     |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns true if the animation is playing, and false if it isn't |
+
+**Example:**
 
 ```lua
 myAnim:isPlaying()
@@ -92,11 +187,21 @@ myAnim:isPlaying()
 
 ---
 
-### `isStopped()` \{#isStopped}
+### <code>isStopped()</code> \{#isStopped}
 
-Get if the animation is stopped
+Checks if the animation is stopped
 
-**Example**:
+```lua
+isStopped()
+```
+
+**Returns:**
+
+| Type                                              | Description                                                     |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns true if the animation is stopped, and false if it isn't |
+
+**Example:**
 
 ```lua
 myAnim:isStopped()
@@ -104,11 +209,21 @@ myAnim:isStopped()
 
 ---
 
-### `isPaused()` \{#isPaused}
+### <code>isPaused()</code> \{#isPaused}
 
-Gets if the animation is paused
+Checks if the animation is paused
 
-**Example**:
+```lua
+isPaused()
+```
+
+**Returns:**
+
+| Type                                              | Description                                                    |
+| ------------------------------------------------- | -------------------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns true if the animation is paused, and false if it isn't |
+
+**Example:**
 
 ```lua
 myAnim:isPaused()
@@ -116,224 +231,57 @@ myAnim:isPaused()
 
 ---
 
-### `getPlayState()` \{#getPlayState}
+### <code>getPlayState()</code> \{#getPlayState}
 
 Get the animation's playback state
 
-These will either be `"PLAYING"`, `"STOPPED"`, or `"PAUSED"`
+```lua
+getPlayState()
+```
 
-**Example**:
+**Returns:**
+
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[String](/tutorials/types/Strings)</code> | Returns the [PlayState](/enums/PlayStates) |
+
+**Example:**
 
 ```lua
-myAnim:getPlayState() == "PLAYING"
+myAnim:getPlayState()
 ```
+
+---
 
 ## Timing \{#Timing}
 
-### `setLength(number)` \{#setLength}
+### <code>setSpeed()</code> \{#setSpeed}
 
-Gets the animation's length
-
-**Example**:
-
-```lua
-myAnim:setLength(1)
-```
-
----
-
-### `getLength()` \{#getLength}
-
-Gets the animation's length
-
-**Example**:
-
-```lua
-myAnim:getLength()
-```
-
----
-
-### `setPriority(number)` \{#setPriority}
-
-Sets the animation's priority
-
-Instead of blending, low priority animations are overridden by high priority ones
-
-Default priority is 0
-
-**Example**:
-
-```lua
-myAnim:setPriority(1)
-```
-
----
-
-### `getPriority()` \{#getPriority}
-
-Gets the animation's priority
-
-**Example**:
-
-```lua
-myAnim:getPriority()
-```
-
----
-
-### `setOffset(number)` \{#setOffset}
-
-Sets how much time to skip for the animation
-
-The time is skipped on every loop
-
-**Example**:
-
-```lua
-myAnim:setOffset(1)
-```
-
----
-
-### `getOffset()` \{#getOffset}
-
-Gets the animation's offset time
-
-**Example**:
-
-```lua
-myAnim:getOffset()
-```
-
----
-
-### `setTime(number)` \{#setTime}
-
-Get the animation's playback current time
-**Example**:
-
-```lua
-myAnim:setTime(1)
-```
-
----
-
-### `getTime()` \{#getTime}
-
-Get the animation's playback current time
-**Example**:
-
-```lua
-myAnim:getTime()
-```
-
----
-
-### `setLoop(bool)` \{#setLoop}
-
-Sets the animation's loop mode
-
-**Example**:
-
-```lua
-myAnim:setLoop(true)
-```
-
----
-
-### `getLoop()` \{#getLoop}
-
-Gets the animation's loop mode
-**Example**:
-
-```lua
-myAnim:getLoop()
-```
-
----
-
-### `setBlend(number)` \{#setBlend}
-
-Sets the animation's keyframe blend factor
-
-**Example**:
-
-```lua
-myAnim:setBlend(.5)
-```
-
----
-
-### `getBlend()` \{#getBlend}
-
-Gets the animation's keyframe blend factor
-
-**Example**:
-
-```lua
-myAnim:getBlend()
-```
-
----
-
-### `setStartDelay(number)` \{#setStartDelay}
-
-Set how much time to wait before this animation is initialized
-
-Note that while it is waiting, the animation is considered being played
-
-**Example**:
-
-```lua
-myAnim:setStartDelay(1)
-```
-
----
-
-### `getStartDelay()` \{#getStartDelay}
-
-Gets the animation's start delay
-
-**Example**:
-
-```lua
-myAnim:getStartDelay()
-```
-
----
-
-### `setLoopDelay(number)` \{#setLoopDelay}
-
-Set how much time to wait in between the loops of this animation
-
-**Example**:
-
-```lua
-myAnim:setLoopDelay(1)
-```
-
----
-
-### `getLoopDelay()` \{#getLoopDelay}
-
-Gets the animation's loop delay
-
-**Example**:
-
-```lua
-myAnim:getLoopDelay()
-```
-
----
-
-### `setSpeed(number)` \{#setSpeed}
+**Aliases:** `speed()`
 
 Sets the animation's playback speed
 
 Negative numbers can be used for an inverted animation
 
-**Example**:
+Default speed is 1, 2 is twice the speed, and 0.5 is half the speed
+
+```lua
+setSpeed(speed)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description                | Default |
+| ----- | ----------------------------------------------- | -------------------------- | ------- |
+| speed | <code>[Number](/tutorials/types/Numbers)</code> | Sets the animation's speed | `1`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:setSpeed(2)
@@ -341,37 +289,509 @@ myAnim:setSpeed(2)
 
 ---
 
-### `getSpeed()` \{#getSpeed}
+### <code>getSpeed()</code> \{#getSpeed}
 
 Gets the animation's speed
 
-**Example**:
+```lua
+getSpeed()
+```
+
+**Returns:**
+
+| Type                                            | Description                       |
+| ----------------------------------------------- | --------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The animation's speed as a number |
+
+**Example:**
 
 ```lua
 myAnim:getSpeed()
 ```
 
+---
+
+### <code>setLength()</code> \{#setLength}
+
+**Aliases:** `length()`
+
+Set the animation's length, in seconds
+
+```lua
+setLength(length)
+```
+
+**Parameters:**
+
+| Name   | Type                                            | Description                    | Default |
+| ------ | ----------------------------------------------- | ------------------------------ | ------- |
+| length | <code>[Number](/tutorials/types/Numbers)</code> | The length of time, in seconds | `0`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setLength(2)
+```
+
+---
+
+### <code>getLength()</code> \{#getLength}
+
+Gets the animation's length, in seconds
+
+```lua
+getLength()
+```
+
+**Returns:**
+
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Returns the animation's length, in seconds |
+
+**Example:**
+
+```lua
+myAnim:getLength()
+```
+
+---
+
+### <code>setPriority()</code> \{#setPriority}
+
+**Aliases:** `priority()`
+
+Sets the animation's priority
+
+Instead of blending, low priority animations are overridden by high priority ones
+
+The default priority of animations is 0
+
+```lua
+setPriority(priority)
+```
+
+**Parameters:**
+
+| Name     | Type                                             | Description                                      | Default |
+| -------- | ------------------------------------------------ | ------------------------------------------------ | ------- |
+| priority | <code>[Integer](/tutorials/types/Numbers)</code> | The priority of the animation, as a whole number | `0`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setPriority(1)
+```
+
+---
+
+### <code>getPriority()</code> \{#getPriority}
+
+Gets the animation's priority
+
+```lua
+getPriority()
+```
+
+**Returns:**
+
+| Type                                             | Description                             |
+| ------------------------------------------------ | --------------------------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | Returns the animation's priority number |
+
+**Example:**
+
+```lua
+myAnim:getPriority()
+```
+
+---
+
+### <code>setTime()</code> \{#setTime}
+
+**Aliases:** `time()`
+
+Sets the animation's playback current time, in seconds
+
+```lua
+setTime(time)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                  | Default |
+| ---- | ----------------------------------------------- | -------------------------------------------- | ------- |
+| time | <code>[Number](/tutorials/types/Numbers)</code> | The time to set the animation to, in seconds | `0`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setTime(1.5)
+```
+
+---
+
+### <code>getTime()</code> \{#getTime}
+
+Get the animation's playback current time, in seconds
+
+```lua
+getTime()
+```
+
+**Returns:**
+
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Number](/tutorials/types/Numbers)</code> | Returns the playback time of the animation |
+
+**Example:**
+
+```lua
+myAnim:getTime()
+```
+
+---
+
+### <code>setOffset()</code> \{#setOffset}
+
+**Aliases:** `offset()`
+
+Sets how much time to skip for the animation, in seconds
+
+The time is skipped on every loop
+
+```lua
+setOffset(offset)
+```
+
+**Parameters:**
+
+| Name   | Type                                            | Description                           | Default |
+| ------ | ----------------------------------------------- | ------------------------------------- | ------- |
+| offset | <code>[Number](/tutorials/types/Numbers)</code> | Time in seconds to skip for each loop | `0`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setOffset(1.75)
+```
+
+---
+
+### <code>getOffset()</code> \{#getOffset}
+
+Gets the animation's offset time, in seconds
+
+```lua
+getOffset()
+```
+
+**Returns:**
+
+| Type                                            | Description                                     |
+| ----------------------------------------------- | ----------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The time that is skipped every loop, in seconds |
+
+**Example:**
+
+```lua
+myAnim:getOffset()
+```
+
+---
+
+### <code>setLoop()</code> \{#setLoop}
+
+**Aliases:** `loop()`
+
+Sets the animation's [loop mode](/enums/Loop-Modes)
+
+```lua
+setLoop(loop)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                            | Default  |
+| ---- | ----------------------------------------------- | -------------------------------------- | -------- |
+| loop | <code>[String](/tutorials/types/Strings)</code> | Sets the [LoopMode](/enums/Loop-Modes) | Required |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setLoop("ONCE")
+```
+
+---
+
+### <code>getLoop()</code> \{#getLoop}
+
+Gets the animation's loop mode
+
+```lua
+getLoop()
+```
+
+**Returns:**
+
+| Type                                            | Description                               |
+| ----------------------------------------------- | ----------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | Returns the [LoopMode](/enums/Loop-Modes) |
+
+**Example:**
+
+```lua
+myAnim:getLoop()
+```
+
+---
+
+### <code>setBlend()</code> \{#setBlend}
+
+**Aliases:** `blend()`
+
+Sets the animation's keyframe blend factor, which is the strength of the animation
+
+```lua
+setBlend(blend)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description                                  | Default |
+| ----- | ----------------------------------------------- | -------------------------------------------- | ------- |
+| blend | <code>[Number](/tutorials/types/Numbers)</code> | Strength of the blend factor between 0 and 1 | `1`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setBlend(.5)
+```
+
+---
+
+### <code>getBlend()</code> \{#getBlend}
+
+Gets the animation's keyframe blend factor, which is the strength of the animation
+
+```lua
+getBlend()
+```
+
+**Returns:**
+
+| Type                                            | Description                                           |
+| ----------------------------------------------- | ----------------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | Gets the strength of the blend factor between 0 and 1 |
+
+**Example:**
+
+```lua
+myAnim:getBlend()
+```
+
+---
+
+### <code>setStartDelay()</code> \{#setStartDelay}
+
+**Aliases:** `startDelay()`
+
+Set how much time to wait before this animation is initialized, in seconds
+
+Note that while it is waiting, the animation is considered being played
+
+```lua
+setStartDelay(delay)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description                             | Default |
+| ----- | ----------------------------------------------- | --------------------------------------- | ------- |
+| delay | <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds to set the delay to | `0`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setStartDelay(1)
+```
+
+---
+
+### <code>getStartDelay()</code> \{#getStartDelay}
+
+Gets the animation's start delay, in seconds
+
+```lua
+getStartDelay()
+```
+
+**Returns:**
+
+| Type                                            | Description                                 |
+| ----------------------------------------------- | ------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds that it's being delayed |
+
+**Example:**
+
+```lua
+myAnim:getStartDelay()
+```
+
+---
+
+### <code>setLoopDelay()</code> \{#setLoopDelay}
+
+**Aliases:** `loopDelay()`
+
+Set how much time to wait in between the loops of this animation, in seconds
+
+```lua
+setLoopDelay(delay)
+```
+
+**Parameters:**
+
+| Name  | Type                                            | Description                             | Default |
+| ----- | ----------------------------------------------- | --------------------------------------- | ------- |
+| delay | <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds to set the delay to | `0`     |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:setLoopDelay(1)
+```
+
+---
+
+### <code>getLoopDelay()</code> \{#getLoopDelay}
+
+Gets the animation's loop delay, in seconds
+
+```lua
+getLoopDelay()
+```
+
+**Returns:**
+
+| Type                                            | Description                                 |
+| ----------------------------------------------- | ------------------------------------------- |
+| <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds that it's being delayed |
+
+**Example:**
+
+```lua
+myAnim:getLoopDelay()
+```
+
+---
+
 ## Overriding \{#Overriding}
 
-### `setOverride(bool)` \{#setOverride}
+### <code>setOverride()</code> \{#setOverride}
+
+**Aliases:** `override()`
 
 Set if this animation should override all of its parts vanilla transforms
 
 Equivalent of calling "overrideRot", "overridePos" and "overrideScale" altogether
 
-**Example**:
+```lua
+setOverride(override)
+```
+
+**Parameters:**
+
+| Name     | Type                                              | Description                                                          | Default |
+| -------- | ------------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override all transformations | `false` |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
-myAnim:setOverride()
+myAnim:setOverride(true)
 ```
 
 ---
 
-### `setOverrideRot(bool)` \{#setOverrideRot}
+### <code>setOverrideRot()</code> \{#setOverrideRot}
+
+**Aliases:** `overrideRot()`
 
 Set if this animation should override its parts vanilla rotation
 
-**Example**:
+```lua
+setOverrideRot(override)
+```
+
+**Parameters:**
+
+| Name     | Type                                              | Description                                               | Default |
+| -------- | ------------------------------------------------- | --------------------------------------------------------- | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override rotation | `false` |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:setOverrideRot(true)
@@ -379,11 +799,21 @@ myAnim:setOverrideRot(true)
 
 ---
 
-### `getOverrideRot()` \{#getOverrideRot}
+### <code>getOverrideRot()</code> \{#getOverrideRot}
 
 Gets if this animation should override its parts vanilla rotation
 
-**Example**:
+```lua
+getOverrideRot()
+```
+
+**Returns:**
+
+| Type                                              | Description                                 |
+| ------------------------------------------------- | ------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if it should be overriding rotation |
+
+**Example:**
 
 ```lua
 myAnim:getOverrideRot()
@@ -391,11 +821,29 @@ myAnim:getOverrideRot()
 
 ---
 
-### `setOverridePos(bool)` \{#setOverridePos}
+### <code>setOverridePos()</code> \{#setOverridePos}
+
+**Aliases:** `overridePos()`
 
 Set if this animation should override its parts vanilla position
 
-**Example**:
+```lua
+setOverridePos(override)
+```
+
+**Parameters:**
+
+| Name     | Type                                              | Description                                               | Default |
+| -------- | ------------------------------------------------- | --------------------------------------------------------- | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override position | `false` |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:setOverridePos(true)
@@ -403,11 +851,21 @@ myAnim:setOverridePos(true)
 
 ---
 
-### `getOverridePos()` \{#getOverridePos}
+### <code>getOverridePos()</code> \{#getOverridePos}
 
 Gets if this animation should override its parts vanilla position
 
-**Example**:
+```lua
+getOverridePos()
+```
+
+**Returns:**
+
+| Type                                              | Description                                 |
+| ------------------------------------------------- | ------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if it should be overriding position |
+
+**Example:**
 
 ```lua
 myAnim:getOverridePos()
@@ -415,11 +873,29 @@ myAnim:getOverridePos()
 
 ---
 
-### `setOverrideScale(bool)` \{#setOverrideScale}
+### <code>setOverrideScale()</code> \{#setOverrideScale}
+
+**Aliases:** `overrideScale()`
 
 Set if this animation should override its parts vanilla scale
 
-**Example**:
+```lua
+setOverrideScale(override)
+```
+
+**Parameters:**
+
+| Name     | Type                                              | Description                                            | Default |
+| -------- | ------------------------------------------------- | ------------------------------------------------------ | ------- |
+| override | <code>[Boolean](/tutorials/types/Booleans)</code> | True or false if it should or shouldn't override scale | `false` |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
 
 ```lua
 myAnim:setOverrideScale(true)
@@ -427,23 +903,45 @@ myAnim:setOverrideScale(true)
 
 ---
 
-### `getOverrideScale()` \{#getOverrideScale}
+### <code>getOverrideScale()</code> \{#getOverrideScale}
 
 Gets if this animation should override its parts vanilla scale
 
-**Example**:
+```lua
+getOverrideScale()
+```
+
+**Returns:**
+
+| Type                                              | Description                              |
+| ------------------------------------------------- | ---------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | Returns if it should be overriding scale |
+
+**Example:**
 
 ```lua
 myAnim:getOverrideScale()
 ```
 
+---
+
 ## Misc \{#Misc}
 
-### `getName()` \{#getName}
+### <code>getName()</code> \{#getName}
 
 Returns this animation's name
 
-**Example**:
+```lua
+getName()
+```
+
+**Returns:**
+
+| Type                                            | Description                  |
+| ----------------------------------------------- | ---------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | Returns the animation's name |
+
+**Example:**
 
 ```lua
 myAnim:getName()
@@ -451,14 +949,47 @@ myAnim:getName()
 
 ---
 
-### `newCode(number,string)` \{#newCode}
+### <code>newCode()</code> \{#newCode}
 
 Adds a string to run in a determinant time
 
-If theres already code to run at that time, it is overridden
-
-**Example**:
+If there's already code to run at that time, it is overwritten
 
 ```lua
-myAnim:newCode(1, "log('hi')")
+newCode(time, code)
 ```
+
+**Parameters:**
+
+| Name | Type                                            | Description                            | Default  |
+| ---- | ----------------------------------------------- | -------------------------------------- | -------- |
+| time | <code>[Number](/tutorials/types/Numbers)</code> | The time in seconds to add the code to | `0`      |
+| code | <code>[String](/tutorials/types/Strings)</code> | The code to run at that time           | Required |
+
+**Returns:**
+
+| Type                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
+
+**Example:**
+
+```lua
+myAnim:newCode(0.5, "log('Hello World')")
+```
+
+---
+
+## Fields
+
+### <code>name</code> \{#name}
+
+This animation's name
+
+**Example:**
+
+```lua
+myAnim.name
+```
+
+---

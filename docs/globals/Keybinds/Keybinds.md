@@ -1,8 +1,17 @@
-The global instance of the KeybindAPI and its subtypes
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+A global API containing a function to create new Keybind instances
+
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
 
 ---
 
-### `newKeybind(string,string,bool)` \{#newKeybind}
+### <code>newKeybind()</code> \{#newKeybind}
+
+**Aliases:** `of()`
 
 Creates and returns a new Keybind
 
@@ -14,7 +23,70 @@ The boolean gui indicates whether the keybind should always work, or if it shoul
 
 Check the docs enum command for all key names
 
-**Example**:
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+newKeybind(name)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+newKeybind(name, key)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| key  | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3" default>
+
+```lua
+newKeybind(name, key, gui)
+```
+
+**Parameters:**
+
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| name | <code>[String](/tutorials/types/Strings)</code>   | -           | -       |
+| key  | <code>[String](/tutorials/types/Strings)</code>   | -           | -       |
+| gui  | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
+
+</TabItem>
+</Tabs>
+
+**Example:**
 
 ```lua
 local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
@@ -22,13 +94,29 @@ local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
 
 ---
 
-### `getVanillaKey(string)` \{#getVanillaKey}
+### <code>getVanillaKey()</code> \{#getVanillaKey}
 
 Gets the id of the key bound to the given action, as a string
 
 Check the docs enum command for all key names and vanilla actions
 
-**Example**:
+```lua
+getVanillaKey(id)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 local myKey = keybinds:newKeybind("Name", keybinds:getVanillaKey("key.attack"), false)
@@ -36,11 +124,27 @@ local myKey = keybinds:newKeybind("Name", keybinds:getVanillaKey("key.attack"), 
 
 ---
 
-### `fromVanilla(string)` \{#fromVanilla}
+### <code>fromVanilla()</code> \{#fromVanilla}
 
 Creates a new Keybind based from a vanilla key
 
-**Example**:
+```lua
+fromVanilla(id)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
+
+**Example:**
 
 ```lua
 local myKey = keybinds:fromVanilla("key.attack")
@@ -48,11 +152,21 @@ local myKey = keybinds:fromVanilla("key.attack")
 
 ---
 
-### `getKeybinds()` \{#getKeybinds}
+### <code>getKeybinds()</code> \{#getKeybinds}
 
 Returns a table with all registered keybinds
 
-**Example**:
+```lua
+getKeybinds()
+```
+
+**Returns:**
+
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
+
+**Example:**
 
 ```lua
 keybinds:getKeybinds()

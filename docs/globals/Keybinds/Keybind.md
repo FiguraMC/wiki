@@ -1,28 +1,52 @@
 Represents a key binding for your script
 
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
+
 Instances are obtained using the KeybindAPI's newKeybind() function
 
-For this entire page assume:
+For this entire page assuming:
 
 ```lua
 local myKey = keybinds:newKeybind("Name", "key.keyboard.h", false)
 ```
 
-## Press/Release \{#Press-Release}
+---
 
-### `setOnPress(fn)` \{#setOnPress}
+## Press/Release
+
+### <code>setOnPress()</code> \{#setOnPress}
+
+**Aliases:** `onPress()`
 
 Sets the function that is executed when this key is pressed
 
 The function has two arguments
 
-The first argument is a number, meaning the modifiers bitmask
+The first argument is a number containing a bitmask of the currently held modifier keys
 
 Shift = 1, Ctrl = 2, Alt = 4
 
 The second argument is this keybind itself
 
-**Example**:
+```lua
+setOnPress(function)
+```
+
+**Parameters:**
+
+| Name     | Type                                                | Description | Default |
+| -------- | --------------------------------------------------- | ----------- | ------- |
+| function | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 myKey:setOnPress(function()
@@ -32,19 +56,37 @@ end)
 
 ---
 
-### `setOnRelease(fn)` \{#setOnRelease}
+### <code>setOnRelease()</code> \{#setOnRelease}
+
+**Aliases:** `onRelease()`
 
 Sets the function that is executed when this key is released
 
 The function has two arguments
 
-The first argument is a number, meaning the modifiers bitmask
+The first argument is a number containing a bitmask of the currently held modifier keys
 
 Shift = 1, Ctrl = 2, Alt = 4
 
 The second argument is this keybind itself
 
-**Example**:
+```lua
+setOnRelease(function)
+```
+
+**Parameters:**
+
+| Name     | Type                                                | Description | Default |
+| -------- | --------------------------------------------------- | ----------- | ------- |
+| function | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 myKey:setOnRelease(function()
@@ -54,95 +96,53 @@ end)
 
 ---
 
-### `isPressed()` \{#isPressed}
+### <code>isPressed()</code> \{#isPressed}
 
 Gets whether this keybind is currently pressed down
 
-**Example**:
+```lua
+isPressed()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 myKey:isPressed()
 ```
 
-## Key Properites \{#Key-Properties}
-
-### `setKey(string)` \{#setKey}
-
-Sets the key for this keybind
-
-**Example**:
-
-```lua
-myKey:setKey("key.keyboard.l")
-```
-
 ---
 
-### `getKey()` \{#getKey}
+## Key Properties
 
-Gets the current key for this keybind
+### <code>setEnabled()</code> \{#setEnabled}
 
-**Example**:
-
-```lua
-myKey:getKey()
-```
-
----
-
-### `isDefault()` \{#isDefault}
-
-Checks whether this key is currently set to its default state (not been changed using the keybind menu)
-
-**Example**:
-
-```lua
-myKey:isDefault()
-```
-
----
-
-### `getName()` \{#getName}
-
-Gets the name of the keybind, which you set when you created the keybind
-
-**Example**:
-
-```lua
-myKey:getName()
-```
-
----
-
-### `getKeyName()` \{#getKeyName}
-
-Gets the name of the current key for this keybind
-
-**Example**:
-
-```lua
-myKey:getKeyName()
-```
-
----
-
-### `getID()` \{#getID}
-
-Returns the numeric ID of this keybind
-
-**Example**:
-
-```lua
-myKey:getID()
-```
-
----
-
-### `setEnabled(bool)` \{#setEnabled}
+**Aliases:** `enabled()`
 
 Toggles if this keybind should be processed or not
 
-**Example**:
+```lua
+setEnabled(bool)
+```
+
+**Parameters:**
+
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 myKey:setEnabled(true)
@@ -150,23 +150,29 @@ myKey:setEnabled(true)
 
 ---
 
-### `isEnabled()` \{#isEnabled}
+### <code>setGUI()</code> \{#setGUI}
 
-Returns if this keybind is enabled or not
-
-**Example**:
-
-```lua
-myKey:isEnabled()
-```
-
----
-
-### `setGUI(bool)` \{#setGUI}
+**Aliases:** `gui()`
 
 Set whenever or not this keybind should run when a GUI screen is open
 
-**Example**:
+```lua
+setGUI(bool)
+```
+
+**Parameters:**
+
+| Name | Type                                              | Description | Default |
+| ---- | ------------------------------------------------- | ----------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
+
+**Example:**
 
 ```lua
 myKey:setGUI(true)
@@ -174,12 +180,224 @@ myKey:setGUI(true)
 
 ---
 
-### `isGuiEnabled()` \{#isGuiEnabled}
+### <code>getID()</code> \{#getID}
+
+Returns the numeric ID of this keybind
+
+```lua
+getID()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+myKey:getID()
+```
+
+---
+
+### <code>setKey()</code> \{#setKey}
+
+**Aliases:** `key()`
+
+Sets the key for this keybind
+
+```lua
+setKey(key)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| key  | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type                                              | Description               |
+| ------------------------------------------------- | ------------------------- |
+| <code>[Keybind](/globals/Keybinds/Keybind)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+myKey:setKey("key.keyboard.l")
+```
+
+---
+
+### <code>getKey()</code> \{#getKey}
+
+Gets the current key for this keybind
+
+```lua
+getKey()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
+
+```lua
+myKey:getKey()
+```
+
+---
+
+### <code>getKeyName()</code> \{#getKeyName}
+
+Gets the name of the current key for this keybind
+
+```lua
+getKeyName()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
+
+```lua
+myKey:getKeyName()
+```
+
+---
+
+### <code>getName()</code> \{#getName}
+
+Gets the name of the keybind, which you set when you created the keybind
+
+```lua
+getName()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
+
+```lua
+myKey:getName()
+```
+
+---
+
+### <code>isDefault()</code> \{#isDefault}
+
+Checks whether this key is currently set to its default state (not been changed using the keybind menu)
+
+```lua
+isDefault()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+myKey:isDefault()
+```
+
+---
+
+### <code>isEnabled()</code> \{#isEnabled}
+
+Returns if this keybind is enabled or not
+
+```lua
+isEnabled()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+myKey:isEnabled()
+```
+
+---
+
+### <code>isGuiEnabled()</code> \{#isGuiEnabled}
 
 Returns if this keybind should work when a GUI screen (Chat, Inventory, etc) is open or not
 
-**Example**:
+```lua
+isGuiEnabled()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 myKey:isGuiEnabled()
 ```
+
+---
+
+## Fields
+
+### <code>press</code> \{#press}
+
+A function that runs when the key is pressed down
+
+The function has two arguments
+
+The first argument is a number containing a bitmask of the currently held modifier keys
+
+Shift = 1, Ctrl = 2, Alt = 4
+
+The second argument is this keybind itself
+
+If the return value is true then all vanilla keybinds using same key will be ignored
+
+See [`setOnPress`](#setOnPress) for an example of how to set this field
+
+---
+
+### <code>release</code> \{#release}
+
+A function that runs when the key is released
+
+The function has two arguments
+
+The first argument is a number containing a bitmask of the currently held modifier keys
+
+Shift = 1, Ctrl = 2, Alt = 4
+
+The second argument is this keybind itself
+
+If the return value is true then all vanilla keybinds using same key will be ignored
+
+See [`setOnRelease`](#setOnRelease) for an example of how to set this field
+
+---

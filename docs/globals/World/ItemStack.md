@@ -1,40 +1,34 @@
 A proxy for an item stack from Minecraft
 
+:::warning
+This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
+:::
+
 For all exmaples on this page assume:
 
 ```lua
 local item = player:getHeldItem()
 ```
 
-### `getName()` \{#getName}
-
-Gets the name of the item
-
-**Example**:
-
-```lua
-item:getName()
-```
-
 ---
 
-### `copy()` \{#copy}
+## General
 
-Returns a copy of this item stack
-
-**Example**:
-
-```lua
-item:copy()
-```
-
----
-
-### `getCount()` \{#getCount}
+### <code>getCount()</code> \{#getCount}
 
 Gets the number of items in this stack
 
-**Example**:
+```lua
+getCount()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
 
 ```lua
 item:getCount()
@@ -42,35 +36,21 @@ item:getCount()
 
 ---
 
-### `getTag()` \{#getTag}
-
-Gets a table of the NBT tags of this stack
-
-**Example**:
-
-```lua
-item:getTag()
-```
-
----
-
-### `getTags()` \{#getTags}
-
-Gets all the tags of this item as strings in a table
-
-**Example**:
-
-```lua
-item:getTags()
-```
-
----
-
-### `getID()` \{#getID}
+### <code>getID()</code> \{#getID}
 
 Gets the ID of this stack
 
-**Example**:
+```lua
+getID()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 item:getID()
@@ -78,49 +58,21 @@ item:getID()
 
 ---
 
-### `getDamage()` \{#getDamage}
-
-Gets the damage value of the item in this stack
-
-Works on things like tools, or other things with a durability bar
-
-**Example**:
-
-```lua
-item:getDamage()
-```
-
----
-
-### `isEnchantable()` \{#isEnchantable}
-
-Returns true if this item stack can be put in an enchanting table
-
-**Example**:
-
-```lua
-item:isEnchantable()
-```
-
----
-
-### `hasGlint()` \{#hasGlint}
-
-Returns true if this item glows with enchantment glint
-
-**Example**:
-
-```lua
-item:hasGlint()
-```
-
----
-
-### `getMaxCount()` \{#getMaxCount}
+### <code>getMaxCount()</code> \{#getMaxCount}
 
 Gets the maximum stack size of this item
 
-**Example**:
+```lua
+getMaxCount()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
 
 ```lua
 item:getMaxCount()
@@ -128,75 +80,43 @@ item:getMaxCount()
 
 ---
 
-### `getMaxDamage()` \{#getMaxDamage}
+### <code>getName()</code> \{#getName}
 
-Gets the maximum durability of this item stack
-
-**Example**:
+Gets the name of the item
 
 ```lua
-item:getMaxDamage()
+getName()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
+
+```lua
+item:getName()
 ```
 
 ---
 
-### `isDamageable()` \{#isDamageable}
-
-Returns true if this item stack has durability
-
-**Example**:
-
-```lua
-item:isDamageable()
-```
-
----
-
-### `isStackable()` \{#isStackable}
-
-Returns true if the item is stackable
-
-**Example**:
-
-```lua
-item:isStackable()
-```
-
----
-
-### `getUseDuration()` \{#getUseDuration}
-
-Gets the number of ticks needed to "use" this item
-
-Currently only has a use for food items
-
-Always 32 for food items except kelp, which is 16
-
-**Example**:
-
-```lua
-item:getUseDuration()
-```
-
----
-
-### `isFood()` \{#isFood}
-
-Returns true if this item is edible
-
-**Example**:
-
-```lua
-item:isFood()
-```
-
----
-
-### `getPopTime()` \{#getPopTime}
+### <code>getPopTime()</code> \{#getPopTime}
 
 Gets the item's animation bobbing time, in ticks. This value is used to move an item to the player when it is picked up
 
-**Example**:
+```lua
+getPopTime()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
 
 ```lua
 item:getPopTime()
@@ -204,37 +124,23 @@ item:getPopTime()
 
 ---
 
-### `getRepairCost()` \{#getRepairCost}
-
-Gets the repair cost modifier, in an anvil, for this item stack
-
-**Example**:
-
-```lua
-item:getRepairCost()
-```
-
----
-
-### `toStackString()` \{#toStackString}
-
-Converts this ItemStack to a string, like you'd see in a command
-
-**Example**:
-
-```lua
-item:toStackString()
-```
-
----
-
-### `getRarity()` \{#getRarity}
+### <code>getRarity()</code> \{#getRarity}
 
 Gets the rarity of this item stack
 
 COMMON = white, UNCOMMON = yellow, RARE = aqua, EPIC = light purple
 
-**Example**:
+```lua
+getRarity()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 item:getRarity()
@@ -242,11 +148,65 @@ item:getRarity()
 
 ---
 
-### `getUseAction()` \{#getUseAction}
+### <code>getTag()</code> \{#getTag}
+
+Gets a table of the NBT tags of this stack
+
+```lua
+getTag()
+```
+
+**Returns:**
+
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
+
+**Example:**
+
+```lua
+item:getTag()
+```
+
+---
+
+### <code>getTags()</code> \{#getTags}
+
+Gets all the tags of this item as strings in a table
+
+```lua
+getTags()
+```
+
+**Returns:**
+
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
+
+**Example:**
+
+```lua
+item:getTags()
+```
+
+---
+
+### <code>getUseAction()</code> \{#getUseAction}
 
 Returns the name of the animation that plays when using this item
 
-**Example**:
+```lua
+getUseAction()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 item:getUseAction()
@@ -254,49 +214,183 @@ item:getUseAction()
 
 ---
 
-### `isTool()` \{#isTool}
+### <code>getUseDuration()</code> \{#getUseDuration}
 
-Check if this item is a Tool (Axe, Shovel, Pickaxe, ...)
+Gets the number of ticks needed to "use" this item
 
-**Example**:
+Currently only has a use for food items
+
+Always 32 for food items except kelp, which is 16
 
 ```lua
-item:isTool()
+getUseDuration()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+item:getUseDuration()
 ```
 
 ---
 
-### `isBlockItem()` \{#isBlockItem}
+### <code>copy()</code> \{#copy}
 
-Returns true if this item represents a block
-
-**Example**:
+Returns a copy of this item stack
 
 ```lua
-item:isBlockItem()
+copy()
+```
+
+**Returns:**
+
+| Type                                               | Description               |
+| -------------------------------------------------- | ------------------------- |
+| <code>[ItemStack](/globals/World/ItemStack)</code> | Returns self for chaining |
+
+**Example:**
+
+```lua
+item:copy()
 ```
 
 ---
 
-### `getBlockstate()` \{#getBlockstate}
+### <code>hasGlint()</code> \{#hasGlint}
 
-Returns the blockstate representation of this item stack
-
-If this item has no block representation, returns nil
-
-**Example**:
+Returns true if this item glows with enchantment glint
 
 ```lua
-item:getBlockstate()
+hasGlint()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+item:hasGlint()
 ```
 
 ---
 
-### `getEquipmentSlot()` \{#getEquipmentSlot}
+### <code>isFood()</code> \{#isFood}
+
+Returns true if this item is edible
+
+```lua
+isFood()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+item:isFood()
+```
+
+---
+
+### <code>isStackable()</code> \{#isStackable}
+
+Returns true if the item is stackable
+
+```lua
+isStackable()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+item:isStackable()
+```
+
+---
+
+### <code>toStackString()</code> \{#toStackString}
+
+Converts this ItemStack to a string, as you'd see in a command
+
+```lua
+toStackString()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
+
+```lua
+item:toStackString()
+```
+
+---
+
+## Equipment/Tools
+
+### <code>getDamage()</code> \{#getDamage}
+
+Gets the damage value of the item in this stack
+
+Works on things like tools, or other things with a durability bar
+
+```lua
+getDamage()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+item:getDamage()
+```
+
+---
+
+### <code>getEquipmentSlot()</code> \{#getEquipmentSlot}
 
 Returns the slot name of where this item is used
 
-**Example**:
+```lua
+getEquipmentSlot()
+```
+
+**Returns:**
+
+| Type                                            | Description |
+| ----------------------------------------------- | ----------- |
+| <code>[String](/tutorials/types/Strings)</code> | -           |
+
+**Example:**
 
 ```lua
 item:getEquipmentSlot()
@@ -304,11 +398,65 @@ item:getEquipmentSlot()
 
 ---
 
-### `isArmor()` \{#isArmor}
+### <code>getMaxDamage()</code> \{#getMaxDamage}
 
-Checks if this item is a Armor
+Gets the maximum durability of this item stack
 
-**Example**:
+```lua
+getMaxDamage()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+item:getMaxDamage()
+```
+
+---
+
+### <code>getRepairCost()</code> \{#getRepairCost}
+
+Gets the repair cost modifier, in an anvil, for this item stack
+
+```lua
+getRepairCost()
+```
+
+**Returns:**
+
+| Type                                             | Description |
+| ------------------------------------------------ | ----------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+
+**Example:**
+
+```lua
+item:getRepairCost()
+```
+
+---
+
+### <code>isArmor()</code> \{#isArmor}
+
+Checks if this item is Armor
+
+```lua
+isArmor()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
 
 ```lua
 item:isArmor()
@@ -316,11 +464,127 @@ item:isArmor()
 
 ---
 
-### `id` \{#id}
+### <code>isDamageable()</code> \{#isDamageable}
+
+Returns true if this item stack has durability
+
+```lua
+isDamageable()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+item:isDamageable()
+```
+
+---
+
+### <code>isEnchantable()</code> \{#isEnchantable}
+
+Returns true if this item stack can be put in an enchanting table
+
+```lua
+isEnchantable()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+item:isEnchantable()
+```
+
+---
+
+### <code>isTool()</code> \{#isTool}
+
+Check if this item is a Tool (Axe, Shovel, Pickaxe, …)
+
+```lua
+isTool()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+item:isTool()
+```
+
+---
+
+## Block Items
+
+### <code>getBlockstate()</code> \{#getBlockstate}
+
+Returns the blockstate representation of this item stack
+
+If this item has no block representation, returns nil
+
+```lua
+getBlockstate()
+```
+
+**Returns:**
+
+| Type                                                 | Description |
+| ---------------------------------------------------- | ----------- |
+| <code>[BlockState](/globals/World/BlockState)</code> | -           |
+
+**Example:**
+
+```lua
+item:getBlockstate()
+```
+
+---
+
+### <code>isBlockItem()</code> \{#isBlockItem}
+
+Returns true if this item represents a block
+
+```lua
+isBlockItem()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+item:isBlockItem()
+```
+
+---
+
+## Fields
+
+### <code>id</code> \{#id}
 
 Contains the id of the item this ItemStack refers to
 
-**Example**:
+**Example:**
 
 ```lua
 item.id
@@ -328,13 +592,13 @@ item.id
 
 ---
 
-### `tag` \{#tag}
+### <code>tag</code> \{#tag}
 
 A table containing the NBT tag of this ItemStack
 
 If this ItemStack has nothing in its tag, it is nil
 
-**Example**:
+**Example:**
 
 ```lua
 item.tag

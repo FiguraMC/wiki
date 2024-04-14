@@ -2,6 +2,8 @@
 title: Action Wheel
 ---
 
+Tutorial for most things action wheel
+
 If you're just here to copy-paste something without the tutorial go [here](./ActionWheel/#here-is-the-full-copy-paste-for-an-example-action-wheel)
 
 The Action Wheel is a gui element provided by Figura that allows for adding highly customizable Actions that can provide additional functionality to your avatar.
@@ -229,7 +231,9 @@ local newAction = secondPage:newAction()
 
 ## Further Reading
 
-Go [here](../globals/Action-Wheel/Action.md) for more information on Actions. Go [here](../globals/Action-Wheel/Page.md) for more information on Pages.
+Go [here](../globals/Action-Wheel/Action.md) for more information on Actions.
+
+Go [here](../globals/Action-Wheel/Page.md) for more information on Pages.
 
 ## Advanced Action Wheel
 
