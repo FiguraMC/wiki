@@ -1,11 +1,21 @@
+---
+title: Action Wheel
+---
+
+Tutorial for most things action wheel
+
+If you're just here to copy-paste something without the tutorial go [here](./ActionWheel/#here-is-the-full-copy-paste-for-an-example-action-wheel)
+
 The Action Wheel is a gui element provided by Figura that allows for adding highly customizable Actions that can provide additional functionality to your avatar.
 
 The Action Wheel operates on Pages. Only a single Page can be active at a time.<br/>
 Pages contain Actions. A Page can have an unlimited amount of Actions, but the Action Wheel can only render 8 at a time. While a Page with more than 8 Actions is active, you can use the scroll wheel to move between the groups of 8 Actions within the Page.
 
+The docs page for the [Action Wheel](../globals/action-wheel) has more examples for specific action wheel functions
+
 ## Example Action Wheel
 
-First step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.
+The first step is to create the Page that will hold the Actions. This is done via the <code>newPage</code> function.
 
 ```lua
 local mainPage = action_wheel:newPage()
@@ -46,7 +56,7 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    -- the <code>onLeftClick</code> function just sets the Action's<code>leftClick</code> field
+    -- the onLeftClick function just sets the Action's leftClick field
     :onLeftClick(function()
         print("Hello World!")
     end)
@@ -75,7 +85,7 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    -- Pass in the ping function itself into <code>onLeftClick</code>
+    -- Pass in the ping function itself into onLeftClick
     :onLeftClick(pings.actionClicked)
 ```
 
@@ -93,7 +103,9 @@ local action = mainPage:newAction()
     :title("My Action")
     :item("minecraft:stick")
     :hoverColor(1, 0, 1)
-    :onLeftClick(end)
+    :onLeftClick(function()
+        pings.actionClicked(math.random())
+    end)
 ```
 
 What we are doing is wrapping the call to the ping function inside another function.
@@ -109,7 +121,7 @@ mainPage:newAction()
     -- Do not do use this code. It will not work.
 ```
 
-Here is the full copy paste for an example Action Wheel
+#### Here is the full copy paste for an example Action Wheel
 
 <!-- prettier-ignore -->
 ```lua
@@ -127,121 +139,106 @@ local action = mainPage:newAction()
     :onLeftClick(pings.actionClicked)
 ```
 
+### Toggle Example
+
+This is an exmaple of the onToggle function, which swaps between two states. It does not work on its own as it doesn't have a page.
+
+<!-- prettier-ignore -->
+```lua
+function pings.toggling(state)
+    models:setVisible(state)
+end
+
+local toggleaction = mainPage:newAction() -- If you're getting an error here it's probably because you didn't make the page
+    :title("disabled")
+    :toggleTitle("enabled")
+    :item("red_wool")
+    :toggleItem("green_wool")
+    :setOnToggle(pings.toggling)
+```
+
+### Multiple Actions Example
+
+When working with multiple actions, it's important to give the actions and pings unique names
+
+<!-- prettier-ignore -->
+```lua
+local mainPage = action_wheel:newPage()
+action_wheel:setPage(mainPage)
+
+function pings.actionClicked() -- this ping is named actionClicked
+    print("Hello World!")
+end
+
+local action = mainPage:newAction()
+    -- this action is saved to action
+    :title("My Action")
+    :item("minecraft:stick")
+    :hoverColor(1, 0, 1)
+    :onLeftClick(pings.actionClicked)
+    -- this calls the ping named actionClicked
+
+
+function pings.toggling(state)
+    -- this ping is named toggling. it's important that all pings have unique names
+    models:setVisible(state)
+end
+
+local toggleaction = mainPage:newAction()
+    -- this action is saved to toggleaction. it's important that actions are saved to unique variables
+    :title("disabled")
+    :toggleTitle("enabled")
+    :item("red_wool")
+    :toggleItem("green_wool")
+    :setOnToggle(pings.toggling) 
+    -- this calls the ping named toggling
+```
+
+### Multiple Pages Example
+
+<!-- prettier-ignore -->
+```lua
+local mainPage = action_wheel:newPage()
+local secondPage = action_wheel:newPage() -- make sure you save the pages to unique variables
+action_wheel:setPage(mainPage) -- this is setting the page you'll see when you first open the wheel to mainPage
+local toSecond = mainPage:newAction()
+    :title("Change To Second Page")
+    :item("item_frame")
+    :onLeftClick(function()
+    -- this is a new action on mainPage. its purpose will be to swap to secondPage
+    -- this doesn't need to be pinged
+    log("Swapped to the second page")
+    action_wheel:setPage(secondPage)
+end)
+
+local toMain = secondPage:newAction()
+    :title("Change To Main Page")
+    :item("glow_item_frame")
+    :onLeftClick(function()
+    -- this is a new action on secondPage. its purpose will be to swap to mainPage
+    log("Swapped to the main page")
+    action_wheel:setPage(mainPage)
+    end)
+
+local newAction = secondPage:newAction()
+    :title("Hello")
+    :item("zombie_head")
+    :onLeftClick(function()
+    -- this is a second action on the second page just to show it can be done
+    log("Hello World")
+    end)
+```
+
+## Further Reading
+
+Go [here](../globals/Action-Wheel/Action.md) for more information on Actions.
+
+Go [here](../globals/Action-Wheel/Page.md) for more information on Pages.
+
 ## Advanced Action Wheel
 
-### Multi Page Setup
+Go [here](../tutorials/ActionWheel-Advanced) for an advanced action wheel tutorial.
 
-Creating a network of Pages can be overwhelming. Lets try to rectify that.
+#### For when you want to skip the tutorials altogether
 
-This method for creating a Page Network divides the Pages into seperate, isolated files. These files return an Action that can be added to a different page. This Action will set the cuurrent page to the page in the file, but it first stores a reference to the Page it came from. That way when you want to go back to the previous page, its as simple as setting the current page to the stored Page.
-
-This allows Pages to be modular and easily reorganized if needed. More importantly, it can help make multiple pages less overwhelming.
-
-```lua
---ActionWheel.lua
--- This file controls the root Page. All Pages are 'children' of this Page.
-local mainpage = action_wheel:newPage()
--- <code>setAction</code> is used to add an Action that already exists to this Page
--- You need to specify the slot the Action wil go into, but <code>-1</code> can be used to put it in the next available slot.
-mainpage:setAction(-1, require("Page1"))
-mainpage:setAction(-1, require("Page2"))
-action_wheel:setPage(mainpage)
-```
-
-<!-- prettier-ignore -->
-```lua
---Page1.lua
--- Create the Page
-local page = action_wheel:newPage()
--- Define the Actions within the Page (These are dummy example Actions)
-page:newAction():title():color():onLeftClick()
-page:newAction():title():color():onLeftClick()
-page:newAction():title():color():onLeftClick()
-
--- This variable stores the Page to go back to when done with this Page
-local prevPage
--- This Action just sets the stored page as active
-page:newAction()
-    :title("GoBack")
-    :item("minecraft:barrier")
-    :onLeftClick(function()
-        action_wheel:setPage(prevPage)
-    end)
-
--- <code>Page:newAction</code> automatically adds the Action to the Page.
--- This is unwanted, so <code>action_wheel:newAction()</code> is used so just make an Action.
--- This is the Action that will be returned by <code>require</code> and will be used to navigate to this file's Page
-return action_wheel:newAction()
-    :title("Page1")
-    :onLeftClick(function()
-        -- store the current active page so that we can set it back as active later
-        prevPage = action_wheel:getCurrentPage()
-        -- set this file's page as active
-        action_wheel:setPage(page)
-    end)
-```
-
-<!-- prettier-ignore -->
-```lua
---Page2.lua
--- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are <code>local</code>.
-local page = action_wheel:newPage()
-page:newAction():title():color():onLeftClick()
-page:newAction():title():color():onLeftClick()
-page:newAction():title():color():onLeftClick()
-
-local prevPage
-page:newAction()
-    :title("GoBack")
-    :item("minecraft:barrier")
-    :onLeftClick(function()
-        action_wheel:setPage(prevPage)
-    end)
-
-return action_wheel:newAction()
-    :title("Page2")
-    :onLeftClick(function()
-        prevPage = action_wheel:getCurrentPage()
-        action_wheel:setPage(page)
-    end)
-```
-
-### Setting Default State of Toggle Action
-
-This primarily utilizes calling a ping function without the network code, which is explained [here](./Pings#ping-on-init)
-
-This example will correctly set the default visibility of a theoretical jetpack model
-
-<!-- prettier-ignore -->
-```lua
--- This variable's initial value will control the default state of the togglable thing.
-local jetpackEnabled = true
-local jetpackModel = models.model.Body.Jetpack -- reference a ModelPart for convinience
-local function setJetpack(bool)
-    jetpackEnabled = bool -- this will be a ping function, so we still need to set the client's variable for when it is used in the toggle.
-    jetpackModel:setVisible(bool)
-end
-pings.setJetpack = setJetpack -- we now have a normal function and a ping function that calls the normal function after network stuff
--- This event controls the particle effect of the jetpack
-function events.tick()
-    -- once every 4 ticks while the jetpack is visible
-    if jetpackEnabled and world.getTime() % 4 == 0 then
-        -- spawn particles relative to the model itself in the world
-        local partMatrix = jetpackModel:partToWorldMatrix()
-        particles:newParticle("minecraft:flame", partMatrix:apply(3, -6, 0))
-        particles:newParticle("minecraft:flame", partMatrix:apply(-3, -6, 0))
-    end
-end
-
--- Page boilerplate
-local mainpage = action_wheel:newAction()
-action_wheel:setPage(mainpage)
-
--- calling a ping in the script initialization is a bad idea, hence why the reference to the normal function is needed
-setJetpack(jetpackEnabled)
-mainpage:newAction()
-    :title("Enable Jetpack")
-    :toggleTitle("Disable Jetpack")
-    :onToggle(pings.setJetpack) -- use the ping for the action toggle, as that is still needs to be pinged
-    :toggled(jetpackEnabled) -- the <code>toggled</code> function sets the internal <code>state</code> of the Toggle Action. It *does not* call <code>toggle</code> or <code>untoggle</code>.
-```
+If you scrolled to the bottom of the page just to copy-paste something without the tutorial go [here](./ActionWheel/#here-is-the-full-copy-paste-for-an-example-action-wheel)

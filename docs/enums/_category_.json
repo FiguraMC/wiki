@@ -3,6 +3,6 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "All of Figura's enums."
+    "description": "All of Figura's enums, which are lists of strings that are used for methods or returned by them."
   }
 }

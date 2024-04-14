@@ -4,17 +4,21 @@ import FileTreeNode from '@site/src/components/FileTree/Node';
 
 # Custom Items
 
+Custom items tutorial
+
 Using Figura you can make custom items that are visible in first and third person.
 
 You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the item_render event combined.
 
 ## Item Keyword
 
-If you give a Blockbench group the Item keyword (by starting the group name with <code>Item</code>) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold.
+If you give a Blockbench group the Item keyword (by starting the group name with <code>Item</code>) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold. It has to be Item with a capital I.
+
+<img src={require("@site/static/img/items/good-keyword.png").default} width="400"></img>
 
 ## Item Render Event
 
-The item_render event runs once a frame for every item you're holding (so, a max of two) and do their own things in their version of the event.
+The item_render event runs once a frame for every item you're rendering and they do their own things in their own version of the event.
 
 In order to make the Item show up you must return it in the item_render event. This example assumes the bbmodel is named <code>model</code> and that the keyworded group is named Item. If you wish to test this change <code>model</code> to your bbmodel name and the Item group to your version.
 
@@ -27,6 +31,26 @@ end
 This will replace every single item you're holding with your custom item
 
 ## Replacing Specific Items
+
+Here's an exmaple for replacing a single item by id:
+
+```lua
+function events.item_render(item)
+    if item.id == "minecraft:crossbow" then
+        return models.model.ItemBow
+    end
+end
+```
+
+Here's an exmaple for replacing a single item by name:
+
+```lua
+function events.item_render(item)
+    if item:getName() == "Lightning" then
+        return models.model.ItemBow
+    end
+end
+```
 
 You can use the event's arguments to get different information from the item you're holding, and they are: the itemstack, rendering mode, position, rotation, scale, and if its in the left hand. [Possible item rendering modes.](../enums/ItemDisplayModes)
 
@@ -79,6 +103,8 @@ or
 </FileTreeRoot>
 
 because you can have more than one of these keywords. Do **not** nest Item keywords inside another. And, do **not** have more than one custom item per instance of the Item keyword.
+
+<img src={require("@site/static/img/items/bad-location.png").default} width="400"></img>
 
 You **could** put your Item group in another group but be careful, doing so makes it easier to cause unwanted behavior. For example, if you put it into RightArm or LeftArm it will be force unrendered, defeating the point of it.
 

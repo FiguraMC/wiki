@@ -14,7 +14,7 @@ const config = {
   url: "https://wiki.figuramc.org",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL_OVERRIDE ?? "/",
+  baseUrl: "/",
   trailingSlash: false,
 
   // GitHub pages deployment config.
@@ -54,6 +54,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         title: "Figura Wiki",
         logo: {
@@ -121,6 +126,18 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ["lua"],
+        magicComments: [
+          {
+            className: "code-block-highlighted-line",
+            line: "highlight-next-line",
+            block: { start: "highlight-start", end: "highlight-end" },
+          },
+          {
+            className: "code-block-error-line",
+            line: "error-next-line",
+            block: { start: "error-start", end: "error-end" },
+          },
+        ],
       },
     }),
   plugins: [
@@ -131,6 +148,23 @@ const config = {
       },
     ],
   ],
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve("swc-loader"),
+      options: {
+        jsc: {
+          parser: {
+            syntax: "typescript",
+            tsx: true,
+          },
+          target: "es2017",
+        },
+        module: {
+          type: isServer ? "commonjs" : "es6",
+        },
+      },
+    }),
+  },
 };
 
 module.exports = config;

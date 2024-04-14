@@ -1,0 +1,10 @@
+{
+  "label": "Player",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Player API."
+  },
+  "customProps": {
+    "description": "The global instance of the EntityAPI and its subtypes"
+  }
+}
