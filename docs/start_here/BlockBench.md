@@ -1,5 +1,7 @@
 import Emoji from '@site/src/components/Emoji';
 
+The basics on how Blockbench
+
 Proper tutorials for blockbench can be found online. This page just explains Figura specific stuff. This page assumes you are using the Desktop version of BlockBench, not the online app.<br/>
 
 ## Project Properties
@@ -35,7 +37,7 @@ If the name of a <Emoji icon="blockbench/group"/> group begins with a specific s
 
 ### <code>Blank</code> Texture
 
-ModelParts that use the BlockBench inbuilt <code>Blank</code> texture will not be loaded by Figura at all. If you want a Model to not have a texture and assign the texture via script, use the [<code>ignoredTextures</code> metadata customization](../tutorials/Avatar%20Metadata). The <code>Transparent</code> texture that can only be applied to individual faces in Per-face UV behave the same way. Figura will not load those faces.
+ModelParts that use the BlockBench inbuilt <code>Blank</code> texture will not be loaded by Figura at all. If you want a Model to not have a texture and assign the texture via script, use the [<code>ignoredTextures</code> metadata customization](../tutorials/Avatar-Metadata). The <code>Transparent</code> texture that can only be applied to individual faces in Per-face UV behave the same way. Figura will not load those faces.
 
 ### Meshes
 

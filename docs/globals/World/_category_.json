@@ -1,0 +1,10 @@
+{
+  "label": "World",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the World API."
+  },
+  "customProps": {
+    "description": "A global API dedicated to reading information from the Minecraft world."
+  }
+}

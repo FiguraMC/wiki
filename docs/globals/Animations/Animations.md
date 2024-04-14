@@ -1,25 +1,72 @@
-The global instance of the AnimationsAPI, accessed via the `animations` global.
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-## getPlaying
+A global API used for control of Blockbench Animations
 
-Return a table with all playing animations
+---
 
-```lua
-animations:getPlaying()
-```
-
-## stopAll
+### <code>stopAll()</code> \{#stopAll}
 
 Stops all playing (and paused) animations
+
+```lua
+stopAll()
+```
+
+**Returns**
+
+| Type                                             | Description               |
+| ------------------------------------------------ | ------------------------- |
+| <code>[AnimationAPI](/globals/Animations)</code> | Returns self for chaining |
+
+**Example**
 
 ```lua
 animations:stopAll()
 ```
 
-## getAnimations
+---
+
+### <code>getPlaying()</code> \{#getPlaying}
+
+Return a table with all playing animations
+
+```lua
+getPlaying()
+```
+
+**Returns**
+
+| Type                                          | Description                                |
+| --------------------------------------------- | ------------------------------------------ |
+| <code>[Table](/tutorials/types/Tables)</code> | A list of the currently playing animations |
+
+**Example**
+
+```lua
+logTable(animations:getPlaying())
+```
+
+---
+
+### <code>getAnimations()</code> \{#getAnimations}
 
 Returns a table with all animations
 
 ```lua
-animations:getAnimations()
+getAnimations()
 ```
+
+**Returns**
+
+| Type                                          | Description                            |
+| --------------------------------------------- | -------------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code> | A list of all animations in all models |
+
+**Example**
+
+```lua
+logTable(animations:getAnimations())
+```
+
+---

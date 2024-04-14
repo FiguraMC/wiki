@@ -1,3 +1,5 @@
+Tutorial for playing and troubleshooting Blockbench animations
+
 Figura can play animations from Blockbench using the Animation API.
 
 ## Playing an Animation
@@ -6,7 +8,7 @@ In order to play an animation you need to index the animation through the Blockb
 
 Let's say we have a Blockbench model named <code>example</code>
 
-<img src={require("@site/static/img/animation/exampleBbmodel.png").default} width="100"></img>
+<img src={require("@site/static/img/animation/exampleBbmodel.png").default} width="200"></img>
 
 and an animation named <code>idle</code>
 
@@ -20,7 +22,7 @@ animations.example.idle:play()
 
 <code>animations</code> stores all the animation data for every Blockbench model.<br/>
 
-The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code> (if your Blockbench model is in a subfolder, that will need to be included as well, but you can find more information about that in ModelPart Indexing)
+The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code> (if your Blockbench model is in a subfolder, that will need to be included as well like <code>animations["subfolder.example"].idle</code>)
 
 And the last is always the animation name, in this case <code>idle</code>.
 
@@ -30,7 +32,7 @@ If you're looking at your animation in Blockbench and there's two names, the sma
 
 <img src={require("@site/static/img/animation/exampleLie.png").default} width="400"></img>
 
-**You can't use the method above to play the animation if it looks like this iamge**
+**You can't use the method above to play the animation if it looks like this image**
 
 You have two options: Rename the animation, or deal with the long animation name
 
@@ -134,8 +136,8 @@ It only overrides while the animation is playing.
 
 ### Jimmy's Animation Handler
 
-If you have a lot of animations that need detections, Jimmy's Animation Handler can play your animations for you. [Find it here in the Discord](https://discord.com/channels/1129805506354085959/1143024882041503844)
+If you have a lot of animations that need detections, Jimmy's Animation Handler can play your animations for you. [Find it here on GitHub](https://github.com/JimmyHelp/JimmyAnims)
 
 ### GSAnimBlend
 
-If you want to smooth the transition between animations so it doesn't jump between them you can use GSAnimBlend. [Find it here in the Discord](https://discord.com/channels/1129805506354085959/1135537784543776829)
+If you want to smooth the transition between animations so it doesn't jump between them you can use GSAnimBlend. [Find it here on GitHub](https://github.com/GrandpaScout/GSAnimBlend)

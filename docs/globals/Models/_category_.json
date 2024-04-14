@@ -1,0 +1,10 @@
+{
+  "label": "Models",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Models API."
+  },
+  "customProps": {
+    "description": "The global instance of the Avatar Models and its subtypes"
+  }
+}

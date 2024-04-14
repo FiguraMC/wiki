@@ -10,12 +10,13 @@ const resolveFileTree = (children: React.ReactNode): Node[] => {
   const resolved = React.Children.map(children, (child): Node | null => {
     if (!React.isValidElement(child)) return null;
 
-    if (child.props.originalType === FileTreeNode) {
+    if (child.type === FileTreeNode) {
       const nodeProps = child.props as unknown as FileTreeNodeProps;
 
       return {
         icon: nodeProps.icon,
         label: nodeProps.label,
+        highlight: nodeProps.highlight,
         children: nodeProps.children ? resolveFileTree(nodeProps.children) : [],
       };
     } else {
@@ -42,12 +43,12 @@ const transposeJoiners = (matrix: Joiner[][]): Joiner[][] => {
   const rows = matrix.length;
   if (rows === 0) return matrix;
 
-  const cols = matrix[0].length;
+  const cols = matrix[0]!.length;
   const result: Joiner[][] = Array.from({ length: cols }, () => []);
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      result[j][i] = matrix[i][j];
+      result[j]![i] = matrix[i]![j]!;
     }
   }
 
@@ -63,6 +64,7 @@ const flattenFileTree = (tree: Node[], depth = 0) => {
     flattened.push({
       label: node.label,
       icon: node.icon,
+      highlight: node.highlight,
       depth,
       end: index === tree.length - 1,
     });
@@ -137,11 +139,15 @@ const FileTreeRoot: FC<PropsWithChildren> = ({ children }) => {
     <pre>
       {flattenedTree.map((node, index) => {
         return (
-          <div key={index} style={{ display: "flex", alignItems: "center" }}>
-            <div style={{ marginRight: "-0.15rem" }}>{node.start}</div>
+          <span
+            key={index}
+            style={{ display: "flex", alignItems: "center" }}
+            className={node.highlight ? "code-block-highlighted-line" : ""}
+          >
+            <span style={{ marginRight: "-0.15rem" }}>{node.start}</span>
             <Emoji icon={node.icon ?? "file/folder"} />
-            <div style={{ marginLeft: "0.25rem" }}>{node.label}</div>
-          </div>
+            <span style={{ marginLeft: "0.25rem" }}>{node.label}</span>
+          </span>
         );
       })}
     </pre>

@@ -1,3 +1,5 @@
+Spawning particles tutorial
+
 Using the particle API you can spawn particles from Minecraft. These work similarly to the <code>/particle</code> command in-game. For particles with special properties like dust, they are placed in the name.
 
 Most of the article assumes you know to avoid calling the player in init.
@@ -8,7 +10,7 @@ Most of the article assumes you know to avoid calling the player in init.
 particles:newParticle(particleID, position, velocity)
 ```
 
-If you're looking on the [Minecraft wiki](https://minecraft.wiki/w/Particles) then the particle id is the name under the 'Java Edition ID Name' column. Or, it's the same id used by the /particle command. If you're using Minecraft particles you can exclude the Minecraft "mod name".
+If you're looking at the [Minecraft wiki](https://minecraft.wiki/w/Particles) then the particle id is the name under the 'Java Edition ID Name' column. Or, it's the same id used by the /particle command. If you're using Minecraft particles you can exclude the Minecraft "mod name".
 
 ```lua
 particles:newParticle("minecraft:explosion", player:getPos())
@@ -52,4 +54,4 @@ It's in an entity_init event to protect from an entity init error
 
 ### Confetti by Manuel
 
-Spawns custom particles that you make in Blockbench. [Find here in the Discord.](https://discord.com/channels/1129805506354085959/1132326640718970990)
+Spawns custom particles that you make in Blockbench. [Find it here on GitHub](https://github.com/Manuel-3/figura-scripts/tree/main/src/confetti)

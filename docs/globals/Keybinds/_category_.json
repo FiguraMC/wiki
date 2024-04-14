@@ -1,0 +1,10 @@
+{
+  "label": "Keybinds",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Keybinds API."
+  },
+  "customProps": {
+    "description": "A global API containing a function to create new Keybind instances"
+  }
+}

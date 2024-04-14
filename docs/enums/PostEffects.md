@@ -1,49 +1,39 @@
-These are the Super Secret Settings screen effects. They can be applied to the avatar user's POV via <code>renderer:setPostEffect(string)</code>
+These are the Super Secret Settings screen effects. They can be applied to the avatar user's POV via <code>renderer:setPostEffect(string)</code>.
+For more information, consult the [wiki](https://minecraft.wiki/w/Shaders/Before_1.9).
 
-<code>creeper</code><br/>
+**Example**:
 
-<code>spider</code><br/>
+```lua
+renderer:setPostEffect("creeper")
+```
 
-<code>notch</code><br/>
+---
 
-<code>fxaa</code><br/>
+## All Post Effects
 
-<code>art</code><br/>
-
-<code>bumpy</code><br/>
-
-<code>blobs2</code><br/>
-
-<code>pencil</code><br/>
-
-<code>color_convolve</code><br/>
-
-<code>deconverge</code><br/>
-
-<code>flip</code><br/>
-
-<code>invert</code><br/>
-
-<code>ntsc</code><br/>
-
-<code>outline</code><br/>
-
-<code>phosphor</code><br/>
-
-<code>scan_pincushion</code><br/>
-
-<code>sobel</code><br/>
-
-<code>bits</code><br/>
-
-<code>desaturate</code><br/>
-
-<code>green</code><br/>
-
-<code>blur</code><br/>
-
-<code>wobble</code><br/>
-
-<code>blobs</code><br/>
-
-<code>antialias</code><br/>
+| effect          | description                                                                                                                                                                                                                                                                             |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| creeper         | Effect from spectating a creeper                                                                                                                                                                                                                                                        |
+| spider          | Effect from spectating a spider                                                                                                                                                                                                                                                         |
+| notch           | Uses 8-bit color with half the resolution, with a dithering effect. This is a reference to how many of Notch's other games use a similar overlay.                                                                                                                                       |
+| fxaa            | This shader adds a small amount of anti-aliasing (smoothing jagged edges), most visible in trees along the horizon.                                                                                                                                                                     |
+| art             | Pixels are blurred outward, causing moving objects to twinkle.                                                                                                                                                                                                                          |
+| bumpy           | Outlines color differences, and gives textures a 3D look. (More visible when viewing screenshot at full resolution.)                                                                                                                                                                    |
+| blobs2          | Similar to Art, but less graphically intensive.                                                                                                                                                                                                                                         |
+| pencil          | Meant to give the world a pencil-sketch appearance.                                                                                                                                                                                                                                     |
+| color_convolve  | Intensifies/adds more colors, adding vibrancy.                                                                                                                                                                                                                                          |
+| deconverge      | Offsets the red, green, and blue color channels.                                                                                                                                                                                                                                        |
+| flip            | Flips the player's view vertically.                                                                                                                                                                                                                                                     |
+| invert          | Effect from spectaing an enderman                                                                                                                                                                                                                                                       |
+| ntsc            | Gives the player's view the impression of a CRT Monitor/Television Screen.                                                                                                                                                                                                              |
+| outline         | Outlines color differences similarly to Bumpy, but less complex. Has no effect on some computers.                                                                                                                                                                                       |
+| phosphor        | Pixels on screen linger, being "dragged out" when in motion before fading away.                                                                                                                                                                                                         |
+| scan_pincushion | Similar to NTSC, but without the blurring and much less graphically intensive.                                                                                                                                                                                                          |
+| sobel           | Turns the view black except for the edges of textures.                                                                                                                                                                                                                                  |
+| bits            | Lowers the resolution and uses an 8-bit color scheme.                                                                                                                                                                                                                                   |
+| desaturate      | Reduces intensity of colors drastically, causing, as the name suggests, a desaturated effect.                                                                                                                                                                                           |
+| green           | Scan Pincushion and Bits, but with a green overlay.                                                                                                                                                                                                                                     |
+| blur            | Blurs the screen overall, independent of what is being displayed.                                                                                                                                                                                                                       |
+| wobble          | Colors cycle through the hue range constantly. All displayed pixels move up and down via a sine calculation. It should be noted that this affects only the screen plane and not the vertices being displayed by it, as observing the edge of the screen reveals the pixels being moved. |
+| blobs           | Similar to Blobs2 and Art, but the spots are tiny when close up and big when far away.                                                                                                                                                                                                  |
+| antialias       | Blurs the edges of pixels to reduce jaggedness. This is blurrier than FXAA, but is better at eliminating jagged edges in textures and blocks.                                                                                                                                           |
