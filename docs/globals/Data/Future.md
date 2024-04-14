@@ -23,7 +23,7 @@ getOrError()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -45,7 +45,7 @@ getValue()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -67,7 +67,7 @@ hasError()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -89,7 +89,7 @@ isDone()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -111,7 +111,7 @@ throwError()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

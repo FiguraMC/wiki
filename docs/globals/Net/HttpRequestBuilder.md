@@ -45,7 +45,7 @@ getBody()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -67,7 +67,7 @@ getHeaders()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -89,7 +89,7 @@ getMethod()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -111,7 +111,7 @@ getUri()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -164,7 +164,7 @@ body(data)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -193,7 +193,7 @@ header(header, value)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -221,7 +221,7 @@ method(method)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -243,7 +243,7 @@ send()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -271,7 +271,7 @@ uri(uri)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

@@ -33,7 +33,7 @@ isSerializable(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -55,7 +55,7 @@ newArray()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -77,7 +77,7 @@ newBuilder()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -99,7 +99,7 @@ newObject()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

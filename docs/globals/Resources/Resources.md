@@ -29,7 +29,7 @@ get(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -51,7 +51,7 @@ getPaths()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

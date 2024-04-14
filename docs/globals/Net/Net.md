@@ -33,7 +33,7 @@ isLinkAllowed(link)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -55,7 +55,7 @@ isNetworkingAllowed()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -69,7 +69,7 @@ Instance of HttpAPI
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

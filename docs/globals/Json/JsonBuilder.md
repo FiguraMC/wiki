@@ -23,7 +23,7 @@ build()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -37,7 +37,7 @@ Should serializer apply indentation for objects and arrays. Default - false
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -49,7 +49,7 @@ Should serializer escape non ASCII characters. Default - true
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -61,7 +61,7 @@ Should serializer serialize nils that are put on JSON objects and arrays. Defaul
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

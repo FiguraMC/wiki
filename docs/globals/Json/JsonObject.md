@@ -29,7 +29,7 @@ get(key)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -51,7 +51,7 @@ clear()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -79,7 +79,7 @@ containsKey(key)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -107,7 +107,7 @@ containsValue(value)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -136,7 +136,7 @@ put(key, value)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -164,7 +164,7 @@ remove(key)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -186,7 +186,7 @@ size()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

@@ -23,7 +23,7 @@ close()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -45,7 +45,7 @@ flush()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -73,7 +73,7 @@ write(b)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

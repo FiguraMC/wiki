@@ -55,7 +55,7 @@ createBuffer(capacity)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

@@ -29,7 +29,7 @@ request(uri)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

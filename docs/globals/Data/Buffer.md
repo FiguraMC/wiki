@@ -26,7 +26,7 @@ getLength()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -48,7 +48,7 @@ getMaxCapacity()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -76,7 +76,7 @@ setPosition(position)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -98,7 +98,7 @@ getPosition()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -120,7 +120,7 @@ available()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -142,7 +142,7 @@ clear()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -164,7 +164,7 @@ close()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -186,7 +186,7 @@ isClosed()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -208,7 +208,7 @@ read()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -255,7 +255,7 @@ readBase64(length)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -302,7 +302,7 @@ readByteArray(length)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -324,7 +324,7 @@ readDouble()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -346,7 +346,7 @@ readDoubleLE()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -368,7 +368,7 @@ readFloat()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -390,7 +390,7 @@ readFloatLE()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -419,7 +419,7 @@ readFromStream(stream, amount)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -441,7 +441,7 @@ readInt()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -463,7 +463,7 @@ readIntLE()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -485,7 +485,7 @@ readLong()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -507,7 +507,7 @@ readLongLE()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -529,7 +529,7 @@ readShort()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -551,7 +551,7 @@ readShortLE()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -618,7 +618,7 @@ readString(length, encoding)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -640,7 +640,7 @@ readUShort()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -662,7 +662,7 @@ readUShortLE()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -690,7 +690,7 @@ write(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -718,7 +718,7 @@ writeBase64(base64)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -746,7 +746,7 @@ writeByteArray(array)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -774,7 +774,7 @@ writeDouble(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -802,7 +802,7 @@ writeDoubleLE(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -830,7 +830,7 @@ writeFloat(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -858,7 +858,7 @@ writeFloatLE(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -886,7 +886,7 @@ writeInt(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -914,7 +914,7 @@ writeIntLE(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -942,7 +942,7 @@ writeLong(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -970,7 +970,7 @@ writeLongLE(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -998,7 +998,7 @@ writeShort(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -1026,7 +1026,7 @@ writeShortLE(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -1080,7 +1080,7 @@ writeString(val, encoding)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -1109,7 +1109,7 @@ writeToStream(stream, amount)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -1137,7 +1137,7 @@ writeUShort(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -1165,7 +1165,7 @@ writeUShortLE(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

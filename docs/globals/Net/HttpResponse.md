@@ -23,7 +23,7 @@ getData()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -45,7 +45,7 @@ getHeaders()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -67,7 +67,7 @@ getResponseCode()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

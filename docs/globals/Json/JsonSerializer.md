@@ -29,7 +29,7 @@ deserialize(str)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -57,7 +57,7 @@ serialize(val)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

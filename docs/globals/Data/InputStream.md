@@ -23,7 +23,7 @@ available()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -45,7 +45,7 @@ close()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -67,7 +67,7 @@ isAsyncOnly()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -95,7 +95,7 @@ mark(readLimit)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -117,7 +117,7 @@ markSupported()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -139,7 +139,7 @@ read()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -161,7 +161,7 @@ readAsync()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -183,7 +183,7 @@ reset()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -211,7 +211,7 @@ skip(n)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -239,7 +239,7 @@ transferTo(out)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

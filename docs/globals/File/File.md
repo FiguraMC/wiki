@@ -23,7 +23,7 @@ allowed()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -51,7 +51,7 @@ delete(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -79,7 +79,7 @@ exists(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -107,7 +107,7 @@ isDirectory(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -135,7 +135,7 @@ isFile(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -163,7 +163,7 @@ isPathAllowed(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -191,7 +191,7 @@ list(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -219,7 +219,7 @@ mkdir(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -247,7 +247,7 @@ mkdirs(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -275,7 +275,7 @@ openReadStream(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -303,7 +303,7 @@ openWriteStream(path)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -332,7 +332,7 @@ readString(path, encoding)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -362,7 +362,7 @@ writeString(path, data, encoding)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---

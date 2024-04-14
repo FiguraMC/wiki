@@ -30,7 +30,7 @@ set(index, elem)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -58,7 +58,7 @@ get(index)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -86,7 +86,7 @@ add(elem)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -108,7 +108,7 @@ clear()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -136,7 +136,7 @@ contains(elem)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -164,7 +164,7 @@ indexOf(elem)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -193,7 +193,7 @@ insert(index, elem)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -221,7 +221,7 @@ lastIndexOf(elem)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -249,7 +249,7 @@ remove(elem)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -277,7 +277,7 @@ removeAt(index)
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
@@ -299,7 +299,7 @@ size()
 **Example:**
 
 ```lua
---todo
+-- example coming soon
 ```
 
 ---
