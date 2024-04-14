@@ -34,7 +34,7 @@ If you want your avatar to replace the vanilla model you'll want to select the P
 
 Scripting, or coding, is where Figura gets most of its complexity from. Using Lua (which is a programming language) you can make your avatar do whatever you want. Some examples include custom animations, physics for tails or hair, custom armor, and much, much more.
 
-All Figura scripts are in files that have the .lua extension.
+All Figura scripts are in files that have the .lua extension. Any text editor can open a .lua file, but it's recommended to use [VSCode](https://code.visualstudio.com/) as there are resources for both Lua and Figura available for it.
 
 More on what scripts can do can be found in the Tutorials and Globals section of this wiki, and the [Lua manual](https://www.lua.org/manual/5.2/).
 

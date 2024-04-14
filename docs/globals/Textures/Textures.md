@@ -9,6 +9,30 @@ This page is a WIP. It contains all the information in Figura's documentation bu
 
 ---
 
+### <code>getTextures()</code> \{#getTextures}
+
+Returns a table with all textures used by this avatar's Blockbench models
+
+Does not include generated textures from this API
+
+```lua
+getTextures()
+```
+
+**Returns:**
+
+| Type                                          | Description |
+| --------------------------------------------- | ----------- |
+| <code>[Table](/tutorials/types/Tables)</code> | -           |
+
+**Example:**
+
+```lua
+logTable(textures:getTextures())
+```
+
+---
+
 ### <code>get()</code> \{#get}
 
 Gets a registered texture based on its name, or nil if no texture was found with that name
@@ -33,30 +57,6 @@ get(name)
 
 ```lua
 textures:get("Name")
-```
-
----
-
-### <code>getTextures()</code> \{#getTextures}
-
-Returns a table with all textures used by this avatar
-
-Do not include generated textures from this API
-
-```lua
-getTextures()
-```
-
-**Returns:**
-
-| Type                                          | Description |
-| --------------------------------------------- | ----------- |
-| <code>[Table](/tutorials/types/Tables)</code> | -           |
-
-**Example:**
-
-```lua
-textures:getTextures()
 ```
 
 ---

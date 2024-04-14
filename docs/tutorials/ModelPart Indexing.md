@@ -27,6 +27,16 @@ For example the cube <Emoji icon="blockbench/cube"/> <code>RightArm</code>,<br/>
 
 Would be accessed via <code>models.model.RightArm.RightArm</code>
 
+## Figura Model Format
+
+Using the Figura Model Format Blockbench plugin you can right click a group/cube/mesh and copy the path to your clipboard.
+
+To use the plugin open Blockbench and go to <code>File</code> in the upper left, and go down to the <code>Plugins...</code> option, you can find <code>Figura Model Format</code> there.
+
+Once the plugin is installed, open the Blockbench project and go back to <code>File</code> and then <code>Convert Project</code>. Choose the <code>Figura Model</code> format and press confirm.
+
+After that's complete you can right click on a group/cube/mesh and copy the path to your clibboard. Note that this path will not include any subfolders the Blockbench model is in.
+
 # Storing a ModelPart
 
 As there is nothing special about indexing straight from <code>models</code> all the time (its just another ModelPart), if a specific ModelPart is used multiple times in a script we can store it in a variable for ease of access.

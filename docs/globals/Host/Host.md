@@ -410,7 +410,8 @@ getStatusEffects()
 
 ```lua
 for _, effect in pairs(host:getStatusEffects()) do
-    logTable(effect)
+    logTable(effect) -- prints all the effect information into chat
+    log(effect.name) -- gets the effect's name and prints it into chat
 end
 ```
 

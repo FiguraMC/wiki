@@ -9,10 +9,6 @@ import TabItem from '@theme/TabItem'
 
 A global API which is used for customizing your player's Action Wheel
 
-:::warning
-This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
-:::
-
 ---
 
 ## Page
@@ -36,9 +32,9 @@ newPage()
 
 **Returns:**
 
-| Type                                            | Description |
-| ----------------------------------------------- | ----------- |
-| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | An action wheel page that contains actions |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -49,21 +45,21 @@ newPage(title)
 
 **Parameters:**
 
-| Name  | Type                                            | Description | Default |
-| ----- | ----------------------------------------------- | ----------- | ------- |
-| title | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name  | Type                                            | Description                                   | Default |
+| ----- | ----------------------------------------------- | --------------------------------------------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | The name for the page that is used internally | `nil`   |
 
 **Returns:**
 
-| Type                                            | Description |
-| ----------------------------------------------- | ----------- |
-| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | An action wheel page that contains actions |
 
     </TabItem>
 
 </Tabs>
 
-**Example:**
+**Example (Overload 1):**
 
 ```lua
 local myPage = action_wheel:newPage()
@@ -84,9 +80,9 @@ setPage(pageTitle)
 
 **Parameters:**
 
-| Name      | Type                                            | Description | Default |
-| --------- | ----------------------------------------------- | ----------- | ------- |
-| pageTitle | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name      | Type                                            | Description                                   | Default |
+| --------- | ----------------------------------------------- | --------------------------------------------- | ------- |
+| pageTitle | <code>[String](/tutorials/types/Strings)</code> | The name for the page that is used internally | `nil`   |
 
 **Returns:**
 
@@ -95,7 +91,7 @@ setPage(pageTitle)
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setPage(page)
@@ -103,9 +99,9 @@ setPage(page)
 
 **Parameters:**
 
-| Name | Type                                            | Description | Default |
-| ---- | ----------------------------------------------- | ----------- | ------- |
-| page | <code>[Page](/globals/Action-Wheel/Page)</code> | -           | -       |
+| Name | Type                                            | Description                         | Default |
+| ---- | ----------------------------------------------- | ----------------------------------- | ------- |
+| page | <code>[Page](/globals/Action-Wheel/Page)</code> | A reference to an action wheel page | `nil`   |
 
 **Returns:**
 
@@ -117,9 +113,10 @@ setPage(page)
 
 </Tabs>
 
-**Example:**
+**Example (Overload 2):**
 
 ```lua
+local myPage = action_wheel:newPage()
 action_wheel:setPage(myPage)
 ```
 
@@ -140,12 +137,12 @@ getPage()
 
 **Returns:**
 
-| Type                                          | Description |
-| --------------------------------------------- | ----------- |
-| <code>[Table](/tutorials/types/Tables)</code> | -           |
+| Type                                          | Description                                            |
+| --------------------------------------------- | ------------------------------------------------------ |
+| <code>[Table](/tutorials/types/Tables)</code> | A table where each index is a page in the action wheel |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 getPage(pageTitle)
@@ -153,21 +150,21 @@ getPage(pageTitle)
 
 **Parameters:**
 
-| Name      | Type                                            | Description | Default |
-| --------- | ----------------------------------------------- | ----------- | ------- |
-| pageTitle | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name      | Type                                            | Description                                   | Default |
+| --------- | ----------------------------------------------- | --------------------------------------------- | ------- |
+| pageTitle | <code>[String](/tutorials/types/Strings)</code> | The name for the page that is used internally | `nil`   |
 
 **Returns:**
 
-| Type                                            | Description |
-| ----------------------------------------------- | ----------- |
-| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | An action wheel page that contains actions |
 
     </TabItem>
 
 </Tabs>
 
-**Example:**
+**Example (Overload 2):**
 
 ```lua
 action_wheel:newPage("myPage")
@@ -188,9 +185,9 @@ getCurrentPage()
 
 **Returns:**
 
-| Type                                            | Description |
-| ----------------------------------------------- | ----------- |
-| <code>[Page](/globals/Action-Wheel/Page)</code> | -           |
+| Type                                            | Description                                |
+| ----------------------------------------------- | ------------------------------------------ |
+| <code>[Page](/globals/Action-Wheel/Page)</code> | An action wheel page that contains actions |
 
 **Example:**
 
@@ -202,7 +199,7 @@ action_wheel:getCurrentPage()
 
 ## Action
 
-For more on pages go to [Action](./Action.md)
+For more on actions go to [Action](./Action.md)
 
 ### <code>newAction()</code> \{#newAction}
 
@@ -214,9 +211,9 @@ newAction()
 
 **Returns:**
 
-| Type                                                | Description |
-| --------------------------------------------------- | ----------- |
-| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
 
 **Example:**
 
@@ -236,9 +233,9 @@ getSelectedAction()
 
 **Returns:**
 
-| Type                                                | Description |
-| --------------------------------------------------- | ----------- |
-| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
 
 **Example:**
 
@@ -258,9 +255,9 @@ getSelected()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| Type                                             | Description                                              |
+| ------------------------------------------------ | -------------------------------------------------------- |
+| <code>[Integer](/tutorials/types/Numbers)</code> | A number indicating which slot the selected action is in |
 
 **Example:**
 
@@ -278,7 +275,7 @@ Executes the action of the given index
 
 If the index is null, it will execute the last selected action
 
-A second parameter can be given to specify if it should be executed the left or right action
+A second parameter can be given to specify if it should execute the left click or right click action
 
 <Tabs>
     <TabItem value="overload-1" label="Overload 1">
@@ -302,9 +299,9 @@ execute(index)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| Name  | Type                                             | Description                                        | Default |
+| ----- | ------------------------------------------------ | -------------------------------------------------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | A number indicating which slot's action to execute | `nil`   |
 
 **Returns:**
 
@@ -313,7 +310,7 @@ execute(index)
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
     </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+    <TabItem value="overload-3" label="Overload 3" default>
 
 ```lua
 execute(index, rightClick)
@@ -321,10 +318,10 @@ execute(index, rightClick)
 
 **Parameters:**
 
-| Name       | Type                                              | Description | Default |
-| ---------- | ------------------------------------------------- | ----------- | ------- |
-| index      | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| rightClick | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+| Name       | Type                                              | Description                                                    | Default |
+| ---------- | ------------------------------------------------- | -------------------------------------------------------------- | ------- |
+| index      | <code>[Integer](/tutorials/types/Numbers)</code>  | A number indicating which slot's action to execute             | `nil`   |
+| rightClick | <code>[Boolean](/tutorials/types/Booleans)</code> | If set to true it will execute the action's right click action | `false` |
 
 **Returns:**
 
@@ -336,7 +333,7 @@ execute(index, rightClick)
 
 </Tabs>
 
-**Example:**
+**Example (Overload 3):**
 
 ```lua
 action_wheel:execute(1, false)
@@ -354,9 +351,9 @@ isEnabled()
 
 **Returns:**
 
-| Type                                              | Description |
-| ------------------------------------------------- | ----------- |
-| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+| Type                                              | Description                                            |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | If true the action wheel is visible, if false it isn't |
 
 **Example:**
 
@@ -372,12 +369,22 @@ action_wheel:isEnabled()
 
 Function that is executed when the left mouse button is clicked
 
-**Example:**
+**Examples:**
 
 ```lua
+-- pingless example
 function action_wheel.leftClick()
     log("Left click")
 end
+```
+
+```lua
+-- pinged example
+function pings.example()
+    log("Left click")
+end
+
+action_wheel.leftClick = pings.example
 ```
 
 ---

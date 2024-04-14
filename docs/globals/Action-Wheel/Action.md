@@ -3,11 +3,14 @@ import TabItem from '@theme/TabItem'
 
 An action in the Figura Action Wheel
 
-:::warning
-This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
-:::
-
 Actions are either interacted by clicking and scrolling, which also being able to be toggleable
+
+For the entire page assume:
+
+```lua
+local myPage = action_wheel:newPage()
+local myAction = myPage:newAction()
+```
 
 ---
 
@@ -23,15 +26,17 @@ The function has one argument
 
 The first argument is this action itself
 
+See the [action wheel tutorial](/tutorials/ActionWheel#here-is-the-full-copy-paste-for-an-example-action-wheel) for a full example.
+
 ```lua
 setOnLeftClick(leftFunction)
 ```
 
 **Parameters:**
 
-| Name         | Type                                                | Description | Default |
-| ------------ | --------------------------------------------------- | ----------- | ------- |
-| leftFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+| Name         | Type                                                | Description                                                   | Default  |
+| ------------ | --------------------------------------------------- | ------------------------------------------------------------- | -------- |
+| leftFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is left clicked | Required |
 
 **Returns:**
 
@@ -46,8 +51,8 @@ function pings.lefty()
     print("I left clicked this button!")
 end
 
-local myAction = myPage:newAction():setOnLeftClick(pings.lefty)
 -- highlight-next-line
+myAction:setOnLeftClick(pings.lefty)
 ```
 
 ---
@@ -68,9 +73,9 @@ setOnRightClick(rightFunction)
 
 **Parameters:**
 
-| Name          | Type                                                | Description | Default |
-| ------------- | --------------------------------------------------- | ----------- | ------- |
-| rightFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+| Name          | Type                                                | Description                                                    | Default  |
+| ------------- | --------------------------------------------------- | -------------------------------------------------------------- | -------- |
+| rightFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is right clicked | Required |
 
 **Returns:**
 
@@ -85,8 +90,8 @@ function pings.righty()
     print("I right clicked this button!")
 end
 
-local myAction = myPage:newAction():setOnRightClick(pings.righty)
 -- highlight-next-line
+myAction:setOnRightClick(pings.righty)
 ```
 
 ---
@@ -103,15 +108,17 @@ The first argument is toggle state of this action
 
 The second argument is this action itself
 
+See the [action wheel tutorial](/tutorials/ActionWheel#toggle-example) for a full example.
+
 ```lua
-setOnToggle(leftFunction)
+setOnToggle(toggleFunction)
 ```
 
 **Parameters:**
 
-| Name         | Type                                                | Description | Default |
-| ------------ | --------------------------------------------------- | ----------- | ------- |
-| leftFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+| Name           | Type                                                | Description                                              | Default  |
+| -------------- | --------------------------------------------------- | -------------------------------------------------------- | -------- |
+| toggleFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is toggled | Required |
 
 **Returns:**
 
@@ -123,13 +130,10 @@ setOnToggle(leftFunction)
 
 ```lua
 function pings.setVisible(state)
-    models:setVisible(state)
+    models:setVisible(state) -- toggles the visibility of the entire avatar because state swaps between true and false every click
 end
 
-local myAction = myPage:newAction():title("disabled"):toggleTitle("enabled"):item("red_wool"):toggleItem(
-    "green_wool"
-    -- highlight-next-line
-):setOnToggle(pings.setVisible)
+myAction:setOnToggle(pings.setVisible)
 ```
 
 ---
@@ -137,6 +141,10 @@ local myAction = myPage:newAction():title("disabled"):toggleTitle("enabled"):ite
 ### <code>setOnUntoggle()</code> \{#setOnUntoggle}
 
 **Aliases:** `onUntoggle()`
+
+:::warning
+This method is a noob trap, anything it can do setOnToggle does better because setOnToggle also runs its function when untoggled
+:::
 
 Sets the function that is executed when the Action is untoggled
 
@@ -147,14 +155,14 @@ The first argument is toggle state of this action
 The second argument is this action itself
 
 ```lua
-setOnUntoggle(rightFunction)
+setOnUntoggle(toggleFunction)
 ```
 
 **Parameters:**
 
-| Name          | Type                                                | Description | Default |
-| ------------- | --------------------------------------------------- | ----------- | ------- |
-| rightFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+| Name           | Type                                                | Description                                                | Default  |
+| -------------- | --------------------------------------------------- | ---------------------------------------------------------- | -------- |
+| toggleFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is untoggled | Required |
 
 **Returns:**
 
@@ -166,7 +174,7 @@ setOnUntoggle(rightFunction)
 
 ```lua
 function pings.toggley(bool)
-    print('This is always true: ', .. bool)
+    print('This is always true: ', .. bool) -- this is always true because setOnUnToggle changes the behavior of setOnToggle. Without setOnUnToggle this would swap between true and false
 end
 
 function pings.untoggley(bool)
@@ -200,9 +208,9 @@ setOnScroll(scrollFunction)
 
 **Parameters:**
 
-| Name           | Type                                                | Description | Default |
-| -------------- | --------------------------------------------------- | ----------- | ------- |
-| scrollFunction | <code>[Function](/tutorials/types/Functions)</code> | -           | -       |
+| Name           | Type                                                | Description                                                    | Default  |
+| -------------- | --------------------------------------------------- | -------------------------------------------------------------- | -------- |
+| scrollFunction | <code>[Function](/tutorials/types/Functions)</code> | The function that will be run when the action is scrolled over | Required |
 
 **Returns:**
 
@@ -213,21 +221,17 @@ setOnScroll(scrollFunction)
 **Example:**
 
 ```lua
-local current = 0
-
 function pings.scrolling(dir)
-    print("Scrolled in this direction: " .. dir)
+    log(dir)
+    if dir > 0 then
+        log("Scrolled up")
+    else
+        log("Scrolled down")
+    end
 end
 
-local myAction = myPage:newAction():title(
-    "Current: ",
-    current
-    -- highlight-start
-):setOnScroll(function(dir, self)
-    pings.scrolling(dir)
-    current = current + dir
-    self:title("Current: ", current)
-end)
+-- highlight-start
+myAction:setOnScroll(pings.scrolling)
 -- highlight-end
 ```
 
@@ -239,7 +243,7 @@ end)
 
 **Aliases:** `color()`
 
-Sets the color of the Action
+Sets the background color of the Action
 
 <Tabs>
     <TabItem value="overload-1" label="Overload 1">
@@ -250,9 +254,9 @@ setColor(color)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| Name  | Type                                             | Description                                                      | Default      |
+| ----- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------ |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the background, with each value between 0 and 1 | `vec(0,0,0)` |
 
 **Returns:**
 
@@ -269,11 +273,11 @@ setColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                                            | Description | Default |
-| ---- | ----------------------------------------------- | ----------- | ------- |
-| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
-| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
-| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| Name | Type                                            | Description                                        | Default |
+| ---- | ----------------------------------------------- | -------------------------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The red value of the background, between 0 and 1   | `0`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The green value of the background, between 0 and 1 | `0`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The blue value of the background, between 0 and 1  | `0`     |
 
 **Returns:**
 
@@ -285,19 +289,17 @@ setColor(r, g, b)
 
 </Tabs>
 
-**Example:**
+**Example (Overload 2):**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setColor(255 / 255, 192 / 155, 203 / 255)
--- highlight-next-line
+myAction:setColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
 ---
 
 ### <code>getColor()</code> \{#getColor}
 
-Gets this Action color
+Gets this Action's background color
 
 ```lua
 getColor()
@@ -305,18 +307,14 @@ getColor()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| Type                                             | Description                              |
+| ------------------------------------------------ | ---------------------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB background color for this action |
 
 **Example:**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setColor(255 / 255, 192 / 155, 203 / 255)
-
--- highlight-next-line
-print(myAction:getColor())
+myAction:getColor()
 ```
 
 ---
@@ -325,7 +323,7 @@ print(myAction:getColor())
 
 **Aliases:** `hoverColor()`
 
-Sets the color of the Action when it is being hovered
+Sets the background color of the Action when it is being hovered
 
 <Tabs>
     <TabItem value="overload-1" label="Overload 1">
@@ -336,9 +334,9 @@ setHoverColor(color)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| Name  | Type                                             | Description                                                      | Default      |
+| ----- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------ |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the background, with each value between 0 and 1 | `vec(0,0,0)` |
 
 **Returns:**
 
@@ -355,11 +353,11 @@ setHoverColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                                            | Description | Default |
-| ---- | ----------------------------------------------- | ----------- | ------- |
-| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
-| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
-| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| Name | Type                                            | Description                                        | Default |
+| ---- | ----------------------------------------------- | -------------------------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The red value of the background, between 0 and 1   | `0`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The green value of the background, between 0 and 1 | `0`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The blue value of the background, between 0 and 1  | `0`     |
 
 **Returns:**
 
@@ -374,16 +372,14 @@ setHoverColor(r, g, b)
 **Example:**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setHoverColor(255 / 255, 192 / 155, 203 / 255)
--- highlight-next-line
+myAction:setHoverColor(255 / 255, 192 / 155, 203 / 255)
 ```
 
 ---
 
 ### <code>getHoverColor()</code> \{#getHoverColor}
 
-Gets this Action hover color
+Gets this Action's background hover color
 
 ```lua
 getHoverColor()
@@ -391,18 +387,14 @@ getHoverColor()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| Type                                             | Description                                    |
+| ------------------------------------------------ | ---------------------------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB background hover color for this action |
 
 **Example:**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setHoverColor(255 / 255, 192 / 155, 203 / 255)
-
--- highlight-next-line
-print(myAction:getHoverColor())
+myAction:getHoverColor()
 ```
 
 ---
@@ -422,9 +414,9 @@ setHoverItem(item)
 
 **Parameters:**
 
-| Name | Type                                               | Description | Default |
-| ---- | -------------------------------------------------- | ----------- | ------- |
-| item | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
+| Name | Type                                               | Description                         | Default |
+| ---- | -------------------------------------------------- | ----------------------------------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | The item that's shown in the action | `nil`   |
 
 **Returns:**
 
@@ -433,7 +425,7 @@ setHoverItem(item)
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setHoverItem(item)
@@ -441,9 +433,9 @@ setHoverItem(item)
 
 **Parameters:**
 
-| Name | Type                                            | Description | Default |
-| ---- | ----------------------------------------------- | ----------- | ------- |
-| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name | Type                                            | Description                        | Default           |
+| ---- | ----------------------------------------------- | ---------------------------------- | ----------------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | The item id for the item to be set | `"minecraft:air"` |
 
 **Returns:**
 
@@ -455,10 +447,10 @@ setHoverItem(item)
 
 </Tabs>
 
-**Example:**
+**Example (Overload 2):**
 
 ```lua
---todo
+myAction:setHoverItem("diamond")
 ```
 
 ---
@@ -482,9 +474,9 @@ setHoverTexture(texture)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
 
 **Returns:**
 
@@ -501,11 +493,11 @@ setHoverTexture(texture, u, v)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`      |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`      |
 
 **Returns:**
 
@@ -522,13 +514,13 @@ setHoverTexture(texture, u, v, width, height)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
 
 **Returns:**
 
@@ -545,14 +537,14 @@ setHoverTexture(texture, u, v, width, height, scale)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | The scale of the texture               | `1`            |
 
 **Returns:**
 
@@ -568,12 +560,10 @@ setHoverTexture(texture, u, v, width, height, scale)
 
 ```lua
 -- basic
-local myAction = myPage:newAction():setHoverTexture(textures["myTexture"])
--- highlight-next-line
+myAction:setHoverTexture(textures["myTexture"])
 
 -- advanced
-local myAction = myPage:newAction():setHoverTexture(textures["myTexture"], 16, 32, nil, nil, 2)
--- highlight-next-line
+myAction:setHoverTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 ```
 
 ---
@@ -593,9 +583,9 @@ setItem(item)
 
 **Parameters:**
 
-| Name | Type                                               | Description | Default |
-| ---- | -------------------------------------------------- | ----------- | ------- |
-| item | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
+| Name | Type                                               | Description                         | Default |
+| ---- | -------------------------------------------------- | ----------------------------------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | The item that's shown in the action | `nil`   |
 
 **Returns:**
 
@@ -604,7 +594,7 @@ setItem(item)
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setItem(item)
@@ -612,9 +602,9 @@ setItem(item)
 
 **Parameters:**
 
-| Name | Type                                            | Description | Default |
-| ---- | ----------------------------------------------- | ----------- | ------- |
-| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name | Type                                            | Description                        | Default           |
+| ---- | ----------------------------------------------- | ---------------------------------- | ----------------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | The item id for the item to be set | `"minecraft:air"` |
 
 **Returns:**
 
@@ -626,12 +616,10 @@ setItem(item)
 
 </Tabs>
 
-**Example:**
+**Example (Overload 2):**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setItem("minecraft:stone")
--- highlight-next-line
+myAction:setItem("minecraft:stone")
 ```
 
 ---
@@ -655,9 +643,9 @@ setTexture(texture)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
 
 **Returns:**
 
@@ -674,11 +662,11 @@ setTexture(texture, u, v)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`      |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`      |
 
 **Returns:**
 
@@ -695,13 +683,13 @@ setTexture(texture, u, v, width, height)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
 
 **Returns:**
 
@@ -718,14 +706,14 @@ setTexture(texture, u, v, width, height, scale)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | The scale of the texture               | `1`            |
 
 **Returns:**
 
@@ -741,12 +729,10 @@ setTexture(texture, u, v, width, height, scale)
 
 ```lua
 -- basic
-local myAction = myPage:newAction():setTexture(textures["myTexture"])
--- highlight-next-line
+myAction:setTexture(textures["myTexture"])
 
 -- advanced
-local myAction = myPage:newAction():setTexture(textures["myTexture"], 16, 32, nil, nil, 2)
--- highlight-next-line
+myAction:setTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 ```
 
 ---
@@ -771,7 +757,7 @@ setTitle()
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setTitle(title)
@@ -779,9 +765,9 @@ setTitle(title)
 
 **Parameters:**
 
-| Name  | Type                                            | Description | Default |
-| ----- | ----------------------------------------------- | ----------- | ------- |
-| title | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name  | Type                                            | Description                                                    | Default |
+| ----- | ----------------------------------------------- | -------------------------------------------------------------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over | `nil`   |
 
 **Returns:**
 
@@ -793,12 +779,10 @@ setTitle(title)
 
 </Tabs>
 
-**Example:**
+**Example (Overload 2):**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setTitle("Click me!")
--- highlight-next-line
+myAction:setTitle("Click me!")
 ```
 
 ---
@@ -813,17 +797,14 @@ getTitle()
 
 **Returns:**
 
-| Type                                            | Description |
-| ----------------------------------------------- | ----------- |
-| <code>[String](/tutorials/types/Strings)</code> | -           |
+| Type                                            | Description                                                    |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over |
 
 **Example:**
 
 ```lua
-local myAction = myPage:newAction():setTitle("Click me!")
-
--- highlight-next-line
-print(myAction:getTitle())
+myAction:getTitle()
 ```
 
 ---
@@ -845,9 +826,9 @@ setToggleColor(color)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| Name  | Type                                             | Description                                                             | Default     |
+| ----- | ------------------------------------------------ | ----------------------------------------------------------------------- | ----------- |
+| color | <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the toggle background, with each value between 0 and 1 | `vec(0,0,0) |
 
 **Returns:**
 
@@ -856,7 +837,7 @@ setToggleColor(color)
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setToggleColor(r, g, b)
@@ -864,11 +845,11 @@ setToggleColor(r, g, b)
 
 **Parameters:**
 
-| Name | Type                                            | Description | Default |
-| ---- | ----------------------------------------------- | ----------- | ------- |
-| r    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
-| g    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
-| b    | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| Name | Type                                            | Description                                               | Default |
+| ---- | ----------------------------------------------- | --------------------------------------------------------- | ------- |
+| r    | <code>[Number](/tutorials/types/Numbers)</code> | The red value of the toggle background, between 0 and 1   | `0`     |
+| g    | <code>[Number](/tutorials/types/Numbers)</code> | The green value of the toggle background, between 0 and 1 | `0`     |
+| b    | <code>[Number](/tutorials/types/Numbers)</code> | The blue value of the toggle background, between 0 and 1  | `0`     |
 
 **Returns:**
 
@@ -883,13 +864,7 @@ setToggleColor(r, g, b)
 **Example:**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setColor(
-    255 / 255,
-    192 / 255,
-    203 / 255
-    -- highlight-next-line
-):setToggleColor(0, 128 / 255, 128 / 255)
+myAction:setToggleColor(0, 128 / 255, 128 / 255)
 ```
 
 ---
@@ -904,18 +879,14 @@ getToggleColor()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
+| Type                                             | Description                                                             |
+| ------------------------------------------------ | ----------------------------------------------------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | The RGB value of the toggle background, with each value between 0 and 1 |
 
 **Example:**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setToggleColor(255 / 255, 192 / 155, 203 / 255)
-
--- highlight-next-line
-print(myAction:getToggleColor())
+myAction:getToggleColor()
 ```
 
 ---
@@ -935,9 +906,9 @@ setToggleItem(item)
 
 **Parameters:**
 
-| Name | Type                                               | Description | Default |
-| ---- | -------------------------------------------------- | ----------- | ------- |
-| item | <code>[ItemStack](/globals/World/ItemStack)</code> | -           | -       |
+| Name | Type                                               | Description                     | Default |
+| ---- | -------------------------------------------------- | ------------------------------- | ------- |
+| item | <code>[ItemStack](/globals/World/ItemStack)</code> | The item to be set when toggled | `nil`   |
 
 **Returns:**
 
@@ -946,7 +917,7 @@ setToggleItem(item)
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
     </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+    <TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setToggleItem(item)
@@ -954,9 +925,9 @@ setToggleItem(item)
 
 **Parameters:**
 
-| Name | Type                                            | Description | Default |
-| ---- | ----------------------------------------------- | ----------- | ------- |
-| item | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name | Type                                            | Description                                     | Default           |
+| ---- | ----------------------------------------------- | ----------------------------------------------- | ----------------- |
+| item | <code>[String](/tutorials/types/Strings)</code> | The item id for the item to be set when toggled | `"minecraft:air"` |
 
 **Returns:**
 
@@ -968,14 +939,10 @@ setToggleItem(item)
 
 </Tabs>
 
-**Example:**
+**Example (Overload 2):**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setTitle("Sit"):setItem("spruce_stairs"):setOnToggle(pings.sit):setToggleTitle(
-    "Stand"
-    -- highlight-next-line
-):setToggleItem("armor_stand")
+myAction:setToggleItem("armor_stand")
 ```
 
 ---
@@ -999,9 +966,9 @@ setToggleTexture(texture)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
 
 **Returns:**
 
@@ -1018,11 +985,11 @@ setToggleTexture(texture, u, v)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| Name    | Type                                              | Description                            | Default  |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`      |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`      |
 
 **Returns:**
 
@@ -1039,13 +1006,13 @@ setToggleTexture(texture, u, v, width, height)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
 
 **Returns:**
 
@@ -1062,14 +1029,14 @@ setToggleTexture(texture, u, v, width, height, scale)
 
 **Parameters:**
 
-| Name    | Type                                              | Description | Default |
-| ------- | ------------------------------------------------- | ----------- | ------- |
-| texture | <code>[Texture](/globals/Textures/Texture)</code> | -           | -       |
-| u       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| v       | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
-| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | -           | -       |
-| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | -           | -       |
+| Name    | Type                                              | Description                            | Default        |
+| ------- | ------------------------------------------------- | -------------------------------------- | -------------- |
+| texture | <code>[Texture](/globals/Textures/Texture)</code> | The texture that's shown in the action | Required       |
+| u       | <code>[Number](/tutorials/types/Numbers)</code>   | The u position of the uv               | `0`            |
+| v       | <code>[Number](/tutorials/types/Numbers)</code>   | The v position of the uv               | `0`            |
+| width   | <code>[Integer](/tutorials/types/Numbers)</code>  | The width of the uv                    | Texture width  |
+| height  | <code>[Integer](/tutorials/types/Numbers)</code>  | The height of the uv                   | Texture height |
+| scale   | <code>[Number](/tutorials/types/Numbers)</code>   | The scale of the texture               | `1`            |
 
 **Returns:**
 
@@ -1085,21 +1052,10 @@ setToggleTexture(texture, u, v, width, height, scale)
 
 ```lua
 -- basic
-local myAction = myPage:newAction():setTexture(
-    textures["myTexture"]
-    -- highlight-next-line
-):setToggleTexture(textures["myToggleTexture"])
+myAction:setToggleTexture(textures["myToggleTexture"])
 
 -- advanced
-local myAction = myPage:newAction():setTexture(
-    textures["myTexture"],
-    0,
-    32,
-    nil,
-    nil,
-    2
-    -- highlight-next-line
-):setToggleTexture(textures["myTexture"], 16, 32, nil, nil, 2)
+myAction:setToggleTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 ```
 
 ---
@@ -1116,9 +1072,9 @@ setToggleTitle(title)
 
 **Parameters:**
 
-| Name  | Type                                            | Description | Default |
-| ----- | ----------------------------------------------- | ----------- | ------- |
-| title | <code>[String](/tutorials/types/Strings)</code> | -           | -       |
+| Name  | Type                                            | Description                                                    | Default |
+| ----- | ----------------------------------------------- | -------------------------------------------------------------- | ------- |
+| title | <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over | `nil`   |
 
 **Returns:**
 
@@ -1129,11 +1085,7 @@ setToggleTitle(title)
 **Example:**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setTitle("Sit"):setOnToggle(
-    pings.sit
-    -- highlight-next-line
-):setToggleTitle("Stand")
+myAction:setToggleTitle("Stand")
 ```
 
 ---
@@ -1148,19 +1100,14 @@ getToggleTitle()
 
 **Returns:**
 
-| Type                                            | Description |
-| ----------------------------------------------- | ----------- |
-| <code>[String](/tutorials/types/Strings)</code> | -           |
+| Type                                            | Description                                                    |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | The title of the action, shown when the action is hovered over |
 
 **Example:**
 
 ```lua
-local myPage = action_wheel:new_page()
-local myAction = myPage:newAction():setToggleTitle("Stand")
--- highlight-next-line
-
--- highlight-next-line
-print(myAction:getToggleTitle())
+myAction:getToggleTitle()
 ```
 
 ---
@@ -1177,9 +1124,9 @@ setToggled(bool)
 
 **Parameters:**
 
-| Name | Type                                              | Description | Default |
-| ---- | ------------------------------------------------- | ----------- | ------- |
-| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+| Name | Type                                              | Description                                                | Default |
+| ---- | ------------------------------------------------- | ---------------------------------------------------------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | If true the toggle will be on, and if false it will be off | `false` |
 
 **Returns:**
 
@@ -1190,20 +1137,7 @@ setToggled(bool)
 **Example:**
 
 ```lua
-local myAction = myPage:newAction():setOnToggle(function(b)
-    print("Toggled: " .. b)
-end)
-
-local t = 0
-
-function events.tick()
-    if t % 20 == 0 then
-        local wasToggled = myAction:isToggled()
-        -- highlight-next-line
-        myAction:setToggled(not wasToggled)
-    end
-    t = t + 1
-end
+myAction:setToggled(true)
 ```
 
 ---
@@ -1218,27 +1152,14 @@ isToggled()
 
 **Returns:**
 
-| Type                                              | Description |
-| ------------------------------------------------- | ----------- |
-| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+| Type                                              | Description                                      |
+| ------------------------------------------------- | ------------------------------------------------ |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | If true the toggle is on, and if false it is off |
 
 **Example:**
 
 ```lua
-local myAction = myPage:newAction():setOnToggle(function(b)
-    print("Toggled: " .. b)
-end)
-
-local t = 0
-
-function events.tick()
-    if t % 20 == 0 then
-        -- highlight-next-line
-        local wasToggled = myAction:isToggled()
-        myAction:setToggled(not wasToggled)
-    end
-    t = t + 1
-end
+myAction:isToggled()
 ```
 
 ---
@@ -1253,7 +1174,23 @@ The function has one argument
 
 The first argument is this action itself
 
-See [`onLeftClick`](#onLeftClick) to see how to set it
+**Examples:**
+
+```lua
+-- pingless example
+function myAction.leftClick()
+    log("Left click")
+end
+```
+
+```lua
+-- pinged example
+function pings.example()
+    log("Left click")
+end
+
+myAction.leftClick = pings.example
+```
 
 ---
 
@@ -1265,7 +1202,13 @@ The function has one argument
 
 The first argument is this action itself
 
-See [`onRightClick`](#onRightClick) to see how to set it
+**Example:**
+
+```lua
+function myAction.rightClick()
+    log("Right click")
+end
+```
 
 ---
 
@@ -1279,7 +1222,13 @@ The first argument is toggle state of this action
 
 The second argument is this action itself
 
-See [`setOnToggle`](#setOnToggle) to see how to set it
+**Example:**
+
+```lua
+function myAction.toggle(bool)
+    log("The toggle is " .. tostring(bool))
+end
+```
 
 ---
 
@@ -1293,7 +1242,13 @@ The first argument is toggle state of this action
 
 The second argument is this action itself
 
-See [`setOnUntoggle`](#setOnUntoggle) to see how to set it
+**Example:**
+
+```lua
+function myAction.untoggle(bool)
+    log("The toggle is " .. tostring(bool))
+end
+```
 
 ---
 
@@ -1307,6 +1262,17 @@ The first argument is mouse wheel direction
 
 The second argument is this action itself
 
-See [`setOnScroll`](#setOnScroll) to see how to set it
+**Example:**
+
+```lua
+function myAction.scroll(dir)
+    log(dir)
+    if dir > 0 then
+        log("Scrolling up")
+    else
+        log("Scrolling down")
+    end
+end
+```
 
 ---

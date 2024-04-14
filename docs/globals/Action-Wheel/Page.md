@@ -3,30 +3,10 @@ import TabItem from '@theme/TabItem'
 
 An Action Wheel container which is used to store up to 8 actions
 
-:::warning
-This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
-:::
-
----
-
-### <code>getTitle()</code> \{#getTitle}
-
-Returns the title of this Page
+For the entire page assume:
 
 ```lua
-getTitle()
-```
-
-**Returns:**
-
-| Type                                            | Description |
-| ----------------------------------------------- | ----------- |
-| <code>[String](/tutorials/types/Strings)</code> | -           |
-
-**Example:**
-
-```lua
-myPage:getTitle()
+local myPage = action_wheel:newPage()
 ```
 
 ---
@@ -48,9 +28,9 @@ newAction()
 
 **Returns:**
 
-| Type                                                | Description |
-| --------------------------------------------------- | ----------- |
-| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -61,15 +41,15 @@ newAction(index)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| Name  | Type                                             | Description                   | Default |
+| ----- | ------------------------------------------------ | ----------------------------- | ------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | The slot to set the action to | `nil`   |
 
 **Returns:**
 
-| Type                                                | Description |
-| --------------------------------------------------- | ----------- |
-| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
 
     </TabItem>
 
@@ -93,15 +73,15 @@ getAction(index)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| index | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| Name  | Type                                             | Description                     | Default  |
+| ----- | ------------------------------------------------ | ------------------------------- | -------- |
+| index | <code>[Integer](/tutorials/types/Numbers)</code> | The slot to get the action from | Required |
 
 **Returns:**
 
-| Type                                                | Description |
-| --------------------------------------------------- | ----------- |
-| <code>[Action](/globals/Action-Wheel/Action)</code> | -           |
+| Type                                                | Description            |
+| --------------------------------------------------- | ---------------------- |
+| <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
 
 **Example:**
 
@@ -128,9 +108,9 @@ getActions()
 
 **Returns:**
 
-| Type                 | Description |
-| -------------------- | ----------- |
-| <code>AnyType</code> | -           |
+| Type                                          | Description                                   |
+| --------------------------------------------- | --------------------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code> | A table that contains all actions in the page |
 
     </TabItem>
     <TabItem value="overload-2" label="Overload 2">
@@ -141,21 +121,21 @@ getActions(shift)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| shift | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| Name  | Type                                             | Description                        | Default |
+| ----- | ------------------------------------------------ | ---------------------------------- | ------- |
+| shift | <code>[Integer](/tutorials/types/Numbers)</code> | The page shift to get actions from | `nil`   |
 
 **Returns:**
 
-| Type                 | Description |
-| -------------------- | ----------- |
-| <code>AnyType</code> | -           |
+| Type                                          | Description                                                      |
+| --------------------------------------------- | ---------------------------------------------------------------- |
+| <code>[Table](/tutorials/types/Tables)</code> | A table that contains all actions in the page's given slot shift |
 
     </TabItem>
 
 </Tabs>
 
-**Example:**
+**Example (Overload 1):**
 
 ```lua
 myPage:getActions()
@@ -177,10 +157,10 @@ setAction(index, action)
 
 **Parameters:**
 
-| Name   | Type                                                | Description | Default |
-| ------ | --------------------------------------------------- | ----------- | ------- |
-| index  | <code>[Integer](/tutorials/types/Numbers)</code>    | -           | -       |
-| action | <code>[Action](/globals/Action-Wheel/Action)</code> | -           | -       |
+| Name   | Type                                                | Description                               | Default  |
+| ------ | --------------------------------------------------- | ----------------------------------------- | -------- |
+| index  | <code>[Integer](/tutorials/types/Numbers)</code>    | The slot on the page to set the action to | Required |
+| action | <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action                    | Required |
 
 **Returns:**
 
@@ -209,9 +189,9 @@ setKeepSlots(bool)
 
 **Parameters:**
 
-| Name | Type                                              | Description | Default |
-| ---- | ------------------------------------------------- | ----------- | ------- |
-| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | -           | -       |
+| Name | Type                                              | Description                                          | Default |
+| ---- | ------------------------------------------------- | ---------------------------------------------------- | ------- |
+| bool | <code>[Boolean](/tutorials/types/Booleans)</code> | If true the slots won't be reset, if false they will | `false` |
 
 **Returns:**
 
@@ -227,13 +207,35 @@ myPage:setKeepSlots(true)
 
 ---
 
+### <code>shouldKeepSlots()</code> \{#shouldKeepSlots}
+
+Gets if this page's current slots should be reset when adding this page on the Action Wheel
+
+```lua
+shouldKeepSlots()
+```
+
+**Returns:**
+
+| Type                                              | Description                                          |
+| ------------------------------------------------- | ---------------------------------------------------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | If true the slots won't be reset, if false they will |
+
+**Example:**
+
+```lua
+myPage:shouldKeepSlots(true)
+```
+
+---
+
 ### <code>setSlotsShift()</code> \{#setSlotsShift}
 
 **Aliases:** `slotsShift()`
 
 Sets this page's current slots shift
 
-The value is the current shown slots, divided by 8, rounded up
+Slots 1-8 are shift 1, slots 9-16 are 2, etc
 
 ```lua
 setSlotsShift(shift)
@@ -241,9 +243,9 @@ setSlotsShift(shift)
 
 **Parameters:**
 
-| Name  | Type                                             | Description | Default |
-| ----- | ------------------------------------------------ | ----------- | ------- |
-| shift | <code>[Integer](/tutorials/types/Numbers)</code> | -           | -       |
+| Name  | Type                                             | Description                         | Default |
+| ----- | ------------------------------------------------ | ----------------------------------- | ------- |
+| shift | <code>[Integer](/tutorials/types/Numbers)</code> | The page shift that will be visible | `1`     |
 
 **Returns:**
 
@@ -263,7 +265,7 @@ myPage:setSlotsShift(1)
 
 Gets this page's current slots shift
 
-This value is the current shown slots, divided by 8, rounded up
+Slots 1-8 are shift 1, slots 9-16 are 2, etc
 
 ```lua
 getSlotsShift()
@@ -271,9 +273,9 @@ getSlotsShift()
 
 **Returns:**
 
-| Type                                             | Description |
-| ------------------------------------------------ | ----------- |
-| <code>[Integer](/tutorials/types/Numbers)</code> | -           |
+| Type                                             | Description                    |
+| ------------------------------------------------ | ------------------------------ |
+| <code>[Integer](/tutorials/types/Numbers)</code> | The page shift that is visible |
 
 **Example:**
 
@@ -283,24 +285,26 @@ myPage:getSlotsShift()
 
 ---
 
-### <code>shouldKeepSlots()</code> \{#shouldKeepSlots}
+## Misc
 
-Gets if this page's current slots should be reset when adding this page on the Action Wheel
+### <code>getTitle()</code> \{#getTitle}
+
+Returns the title of this Page
 
 ```lua
-shouldKeepSlots()
+getTitle()
 ```
 
 **Returns:**
 
-| Type                                              | Description |
-| ------------------------------------------------- | ----------- |
-| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+| Type                                            | Description                                   |
+| ----------------------------------------------- | --------------------------------------------- |
+| <code>[String](/tutorials/types/Strings)</code> | The name for the page that is used internally |
 
 **Example:**
 
 ```lua
-myPage:shouldKeepSlots()
+myPage:getTitle()
 ```
 
 ---
@@ -312,5 +316,11 @@ myPage:shouldKeepSlots()
 Whether or not this page's current slots should be reset when adding this page on the Action Wheel
 
 See [`setKeepSlots`](#setKeepSlots) for an example of how to set it
+
+**Example:**
+
+```lua
+myPage.keepSlots = true
+```
 
 ---
