@@ -1,79 +1,55 @@
-For convenience these have been ordered identically to vanilla's keybind menu
+List of valid KeyIDs. Used within the KeybindAPI.
 
-<code>key.jump</code><br/>
+**Example**:
 
-<code>key.sneak</code><br/>
+```lua
+local myKeybind = keybinds:fromVanilla("key.jump")
+```
 
-<code>key.sprint</code><br/>
+---
 
-<code>key.left</code><br/>
+## All Key IDs
 
-<code>key.right</code><br/>
+For convenience these have been ordered identically to vanilla's keybind menu.
 
-<code>key.back</code><br/>
-
-<code>key.forward</code><br/>
-
-<code>key.attack</code><br/>
-
-<code>key.pickItem</code><br/>
-
-<code>key.use</code><br/>
-
-<code>key.drop</code><br/>
-
-<code>key.hotbar.1</code><br/>
-
-<code>key.hotbar.2</code><br/>
-
-<code>key.hotbar.3</code><br/>
-
-<code>key.hotbar.4</code><br/>
-
-<code>key.hotbar.5</code><br/>
-
-<code>key.hotbar.6</code><br/>
-
-<code>key.hotbar.7</code><br/>
-
-<code>key.hotbar.8</code><br/>
-
-<code>key.hotbar.9</code><br/>
-
-<code>key.inventory</code><br/>
-
-<code>key.swapOffhand</code><br/>
-
-<code>key.loadToolbarActivator</code><br/>
-
-<code>key.saveToolbarActivator</code><br/>
-
-<code>key.playerlist</code><br/>
-
-<code>key.chat</code><br/>
-
-<code>key.command</code><br/>
-
-<code>key.socialInteractions</code><br/>
-
-<code>key.advancements</code><br/>
-
-<code>key.spectatorOutlines</code><br/>
-
-<code>key.screenshot</code><br/>
-
-<code>key.smoothCamera</code><br/>
-
-<code>key.fullscreen</code><br/>
-
-<code>key.togglePerspective</code><br/>
-
-<code>figura.config.action_wheel_button</code><br/>
-
-<code>figura.config.panic_button</code><br/>
-
-<code>figura.config.popup_button</code><br/>
-
-<code>figura.config.reload_button</code><br/>
-
-<code>figura.config.wardrobe_button</code><br/>
+| Description            | Key ID                              |
+| ---------------------- | ----------------------------------- |
+| Jump                   | `key.jump`                          |
+| Sneak                  | `key.sneak`                         |
+| Sprint                 | `key.sprint`                        |
+| Left                   | `key.left`                          |
+| Right                  | `key.right`                         |
+| Back                   | `key.back`                          |
+| Forward                | `key.forward`                       |
+| Attack                 | `key.attack`                        |
+| Pick Item              | `key.pickItem`                      |
+| Use                    | `key.use`                           |
+| Drop                   | `key.drop`                          |
+| Hotbar 1               | `key.hotbar.1`                      |
+| Hotbar 2               | `key.hotbar.2`                      |
+| Hotbar 3               | `key.hotbar.3`                      |
+| Hotbar 4               | `key.hotbar.4`                      |
+| Hotbar 5               | `key.hotbar.5`                      |
+| Hotbar 6               | `key.hotbar.6`                      |
+| Hotbar 7               | `key.hotbar.7`                      |
+| Hotbar 8               | `key.hotbar.8`                      |
+| Hotbar 9               | `key.hotbar.9`                      |
+| Inventory              | `key.inventory`                     |
+| Swap Offhand           | `key.swapOffhand`                   |
+| Load Toolbar Activator | `key.loadToolbarActivator`          |
+| Save Toolbar Activator | `key.saveToolbarActivator`          |
+| Playerlist             | `key.playerlist`                    |
+| Chat                   | `key.chat`                          |
+| Command                | `key.command`                       |
+| Social Interactions    | `key.socialInteractions`            |
+| Advancements           | `key.advancements`                  |
+| Spectator Outlines     | `key.spectatorOutlines`             |
+| Screenshot             | `key.screenshot`                    |
+| Cinematic Camera       | `key.smoothCamera`                  |
+| Fullscreen             | `key.fullscreen`                    |
+| Toggle Perspective     | `key.togglePerspective`             |
+| ActionWheel Button     | `figura.config.action_wheel_button` |
+| Panic Button           | `figura.config.panic_button`        |
+| Popup Button           | `figura.config.popup_button`        |
+| Reload Button          | `figura.config.reload_button`       |
+| Wardrobe Button        | `figura.config.wardrobe_button`     |

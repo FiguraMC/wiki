@@ -1,3 +1,5 @@
+Information on pings
+
 With normal mods, there is comunication between the Minecraft Server and it's clients which allows everything to stay in sync. <br/>
 Figura is completely client-side. It will never comunicate with the Minecraft Server you are connected to. Figura does not have a server-side component, meaning nothing will happen if you put the mod on a server.<br/>
 
@@ -36,11 +38,11 @@ All pingable types use a single byte to represent the type of data that is being
 -   <code>nil</code> - 0 Bytes
     -   if a type that is not supported is used as a parameter, it will be replaced with <code>nil</code>.
 -   <code>boolean</code> - 0 Bytes
--   <code>integear</code> - 1-4 Bytes
-    -   <code>integears</code> only take up as many bytes as it needs.
-    -   <code>integears</code> are signed. For example, to only use a single byte the value must be between -128 and 127.
+-   <code>integer</code> - 1-4 Bytes
+    -   <code>integers</code> only take up as many bytes as it needs.
+    -   <code>integers</code> are signed. For example, to only use a single byte the value must be between -128 and 127.
 -   <code>double</code> - 8 Bytes
-    -   If the number has a decimal at all, or is outside the range of a 4 byte <code>integear</code>, it will be sent as a <code>double</code>.
+    -   If the number has a decimal at all, or is outside the range of a 4 byte <code>integer</code>, it will be sent as a <code>double</code>.
 -   <code>string</code> - 2+n Bytes
     -   <code>strings</code> will always use 2 bytes to store the length.
     -   Ascii characters will be a single byte each.
@@ -51,7 +53,7 @@ All pingable types use a single byte to represent the type of data that is being
     -   It is recommended to never send a table over pings.
 -   <code>VectorN</code> - 1+8\*N Bytes
     -   Vectors have a single byte that stores the size of the Vector.
-    -   Vectors are always assumed to store <code>doubles</code>. If you have a Vector of integears, I recommend sending them as 3 seperate arguments instead.
+    -   Vectors are always assumed to store <code>doubles</code>. If you have a Vector of integers, I recommend sending them as 3 seperate arguments instead.
 -   <code>MatrixN</code> - 2+8\*W\*H Bytes
     -   Matrices store both the width and height of the matrix, then every value as a <code>double</code>.
 

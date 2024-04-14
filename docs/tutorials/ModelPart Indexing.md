@@ -6,7 +6,7 @@ This page describes the process to access any ModelPart from the global ModelPar
 
 # Getting a ModelPart
 
-A property of all ModelParts is that you can get a child ModelPart of a parent ModelPart by [indexing](../tutorials/Tables#generic-indexing) the parent with the child's name.<br/>
+A property of all ModelParts is that you can get a child ModelPart of a parent ModelPart by [indexing](/tutorials/types/Tables#generic-indexing) the parent with the child's name.<br/>
 <code>models</code> itself is a ModelPart. All bbmodel files in the avatar act as child ModelParts to <code>models</code>.<br/>
 Everything in the root of a Blockbench project is a child of the bbmodel ModelPart.<br/>
 After that, parenting follows the parent structure as defined in the Blockbench OUTLINER.<br/>
@@ -26,6 +26,16 @@ For example the cube <Emoji icon="blockbench/cube"/> <code>RightArm</code>,<br/>
 </FileTreeRoot>
 
 Would be accessed via <code>models.model.RightArm.RightArm</code>
+
+## Figura Model Format
+
+Using the Figura Model Format Blockbench plugin you can right click a group/cube/mesh and copy the path to your clipboard.
+
+To use the plugin open Blockbench and go to <code>File</code> in the upper left, and go down to the <code>Plugins...</code> option, you can find <code>Figura Model Format</code> there.
+
+Once the plugin is installed, open the Blockbench project and go back to <code>File</code> and then <code>Convert Project</code>. Choose the <code>Figura Model</code> format and press confirm.
+
+After that's complete you can right click on a group/cube/mesh and copy the path to your clibboard. Note that this path will not include any subfolders the Blockbench model is in.
 
 # Storing a ModelPart
 

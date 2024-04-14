@@ -1,261 +1,145 @@
 # KeybindsList
 
-List of keybind ids
-
-<code>key.keyboard.unknown</code><br/>
-
-<code>key.mouse.left</code><br/>
-
-<code>key.mouse.right</code><br/>
-
-<code>key.mouse.middle</code><br/>
-
-<code>key.mouse.4</code><br/>
-
-<code>key.mouse.5</code><br/>
-
-<code>key.mouse.6</code><br/>
-
-<code>key.mouse.7</code><br/>
-
-<code>key.mouse.8</code><br/>
-
-<code>key.keyboard.0</code><br/>
-
-<code>key.keyboard.1</code><br/>
-
-<code>key.keyboard.2</code><br/>
-
-<code>key.keyboard.3</code><br/>
-
-<code>key.keyboard.4</code><br/>
-
-<code>key.keyboard.5</code><br/>
-
-<code>key.keyboard.6</code><br/>
-
-<code>key.keyboard.7</code><br/>
-
-<code>key.keyboard.8</code><br/>
-
-<code>key.keyboard.9</code><br/>
-
-<code>key.keyboard.a</code><br/>
-
-<code>key.keyboard.b</code><br/>
-
-<code>key.keyboard.c</code><br/>
-
-<code>key.keyboard.d</code><br/>
-
-<code>key.keyboard.e</code><br/>
-
-<code>key.keyboard.f</code><br/>
-
-<code>key.keyboard.g</code><br/>
-
-<code>key.keyboard.h</code><br/>
-
-<code>key.keyboard.i</code><br/>
-
-<code>key.keyboard.j</code><br/>
-
-<code>key.keyboard.k</code><br/>
-
-<code>key.keyboard.l</code><br/>
-
-<code>key.keyboard.m</code><br/>
-
-<code>key.keyboard.n</code><br/>
-
-<code>key.keyboard.o</code><br/>
-
-<code>key.keyboard.p</code><br/>
-
-<code>key.keyboard.q</code><br/>
-
-<code>key.keyboard.r</code><br/>
-
-<code>key.keyboard.s</code><br/>
-
-<code>key.keyboard.t</code><br/>
-
-<code>key.keyboard.u</code><br/>
-
-<code>key.keyboard.v</code><br/>
-
-<code>key.keyboard.w</code><br/>
-
-<code>key.keyboard.x</code><br/>
-
-<code>key.keyboard.y</code><br/>
-
-<code>key.keyboard.z</code><br/>
-
-<code>key.keyboard.f1</code><br/>
-
-<code>key.keyboard.f2</code><br/>
-
-<code>key.keyboard.f3</code><br/>
-
-<code>key.keyboard.f4</code><br/>
-
-<code>key.keyboard.f5</code><br/>
-
-<code>key.keyboard.f6</code><br/>
-
-<code>key.keyboard.f7</code><br/>
-
-<code>key.keyboard.f8</code><br/>
-
-<code>key.keyboard.f9</code><br/>
-
-<code>key.keyboard.f10</code><br/>
-
-<code>key.keyboard.f11</code><br/>
-
-<code>key.keyboard.f12</code><br/>
-
-<code>key.keyboard.f13</code><br/>
-
-<code>key.keyboard.f14</code><br/>
-
-<code>key.keyboard.f15</code><br/>
-
-<code>key.keyboard.f16</code><br/>
-
-<code>key.keyboard.f17</code><br/>
-
-<code>key.keyboard.f18</code><br/>
-
-<code>key.keyboard.f19</code><br/>
-
-<code>key.keyboard.f20</code><br/>
-
-<code>key.keyboard.f21</code><br/>
-
-<code>key.keyboard.f22</code><br/>
-
-<code>key.keyboard.f23</code><br/>
-
-<code>key.keyboard.f24</code><br/>
-
-<code>key.keyboard.f25</code><br/>
-
-<code>key.keyboard.num.lock</code><br/>
-
-<code>key.keyboard.keypad.0</code><br/>
-
-<code>key.keyboard.keypad.1</code><br/>
-
-<code>key.keyboard.keypad.2</code><br/>
-
-<code>key.keyboard.keypad.3</code><br/>
-
-<code>key.keyboard.keypad.4</code><br/>
-
-<code>key.keyboard.keypad.5</code><br/>
-
-<code>key.keyboard.keypad.6</code><br/>
-
-<code>key.keyboard.keypad.7</code><br/>
-
-<code>key.keyboard.keypad.8</code><br/>
-
-<code>key.keyboard.keypad.9</code><br/>
-
-<code>key.keyboard.keypad.add</code><br/>
-
-<code>key.keyboard.keypad.decimal</code><br/>
-
-<code>key.keyboard.keypad.enter</code><br/>
-
-<code>key.keyboard.keypad.equal</code><br/>
-
-<code>key.keyboard.keypad.multiply</code><br/>
-
-<code>key.keyboard.keypad.divide</code><br/>
-
-<code>key.keyboard.keypad.subtract</code><br/>
-
-<code>key.keyboard.down</code><br/>
-
-<code>key.keyboard.left</code><br/>
-
-<code>key.keyboard.right</code><br/>
-
-<code>key.keyboard.up</code><br/>
-
-<code>key.keyboard.apostrophe</code><br/>
-
-<code>key.keyboard.backslash</code><br/>
-
-<code>key.keyboard.comma</code><br/>
-
-<code>key.keyboard.equal</code><br/>
-
-<code>key.keyboard.grave.accent</code><br/>
-
-<code>key.keyboard.left.bracket</code><br/>
-
-<code>key.keyboard.minus</code><br/>
-
-<code>key.keyboard.period</code><br/>
-
-<code>key.keyboard.right.bracket</code><br/>
-
-<code>key.keyboard.semicolon</code><br/>
-
-<code>key.keyboard.slash</code><br/>
-
-<code>key.keyboard.space</code><br/>
-
-<code>key.keyboard.tab</code><br/>
-
-<code>key.keyboard.left.alt</code><br/>
-
-<code>key.keyboard.left.control</code><br/>
-
-<code>key.keyboard.left.shift</code><br/>
-
-<code>key.keyboard.left.win</code><br/>
-
-<code>key.keyboard.right.alt</code><br/>
-
-<code>key.keyboard.right.control</code><br/>
-
-<code>key.keyboard.right.shift</code><br/>
-
-<code>key.keyboard.right.win</code><br/>
-
-<code>key.keyboard.enter</code><br/>
-
-<code>key.keyboard.escape</code><br/>
-
-<code>key.keyboard.backspace</code><br/>
-
-<code>key.keyboard.delete</code><br/>
-
-<code>key.keyboard.end</code><br/>
-
-<code>key.keyboard.home</code><br/>
-
-<code>key.keyboard.insert</code><br/>
-
-<code>key.keyboard.page.down</code><br/>
-
-<code>key.keyboard.page.up</code><br/>
-
-<code>key.keyboard.caps.lock</code><br/>
-
-<code>key.keyboard.pause</code><br/>
-
-<code>key.keyboard.scroll.lock</code><br/>
-
-<code>key.keyboard.menu</code><br/>
-
-<code>key.keyboard.print.screen</code><br/>
-
-<code>key.keyboard.world.1</code><br/>
-
-<code>key.keyboard.world.2</code><br/>
+List of valid keybind keys. Used within the KeybindAPI.
+
+**Example**:
+
+```lua
+local myKeybind = keybinds:newKeybind("Zoom", "key.keyboard.c")
+```
+
+---
+
+## All Keybind IDs
+
+| Key             | ID                             |
+| --------------- | ------------------------------ |
+| unknown         | `key.keyboard.unknown`         |
+| Left Mouse      | `key.mouse.left`               |
+| Right Mouse     | `key.mouse.right`              |
+| Middle Mouse    | `key.mouse.middle`             |
+| Mouse 4         | `key.mouse.4`                  |
+| Mouse 5         | `key.mouse.5`                  |
+| Mouse 6         | `key.mouse.6`                  |
+| Mouse 7         | `key.mouse.7`                  |
+| Mouse 8         | `key.mouse.8`                  |
+| 0               | `key.keyboard.0`               |
+| 1               | `key.keyboard.1`               |
+| 2               | `key.keyboard.2`               |
+| 3               | `key.keyboard.3`               |
+| 4               | `key.keyboard.4`               |
+| 5               | `key.keyboard.5`               |
+| 6               | `key.keyboard.6`               |
+| 7               | `key.keyboard.7`               |
+| 8               | `key.keyboard.8`               |
+| 9               | `key.keyboard.9`               |
+| a               | `key.keyboard.a`               |
+| b               | `key.keyboard.b`               |
+| c               | `key.keyboard.c`               |
+| d               | `key.keyboard.d`               |
+| e               | `key.keyboard.e`               |
+| f               | `key.keyboard.f`               |
+| g               | `key.keyboard.g`               |
+| h               | `key.keyboard.h`               |
+| i               | `key.keyboard.i`               |
+| j               | `key.keyboard.j`               |
+| k               | `key.keyboard.k`               |
+| l               | `key.keyboard.l`               |
+| m               | `key.keyboard.m`               |
+| n               | `key.keyboard.n`               |
+| o               | `key.keyboard.o`               |
+| p               | `key.keyboard.p`               |
+| q               | `key.keyboard.q`               |
+| r               | `key.keyboard.r`               |
+| s               | `key.keyboard.s`               |
+| t               | `key.keyboard.t`               |
+| u               | `key.keyboard.u`               |
+| v               | `key.keyboard.v`               |
+| w               | `key.keyboard.w`               |
+| x               | `key.keyboard.x`               |
+| y               | `key.keyboard.y`               |
+| z               | `key.keyboard.z`               |
+| F1              | `key.keyboard.f1`              |
+| F2              | `key.keyboard.f2`              |
+| F3              | `key.keyboard.f3`              |
+| F4              | `key.keyboard.f4`              |
+| F5              | `key.keyboard.f5`              |
+| F6              | `key.keyboard.f6`              |
+| F7              | `key.keyboard.f7`              |
+| F8              | `key.keyboard.f8`              |
+| F9              | `key.keyboard.f9`              |
+| F10             | `key.keyboard.f10`             |
+| F11             | `key.keyboard.f11`             |
+| F12             | `key.keyboard.f12`             |
+| F13             | `key.keyboard.f13`             |
+| F14             | `key.keyboard.f14`             |
+| F15             | `key.keyboard.f15`             |
+| F16             | `key.keyboard.f16`             |
+| F17             | `key.keyboard.f17`             |
+| F18             | `key.keyboard.f18`             |
+| F19             | `key.keyboard.f19`             |
+| F20             | `key.keyboard.f20`             |
+| F21             | `key.keyboard.f21`             |
+| F22             | `key.keyboard.f22`             |
+| F23             | `key.keyboard.f23`             |
+| F24             | `key.keyboard.f24`             |
+| F25             | `key.keyboard.f25`             |
+| Lock            | `key.keyboard.num.lock`        |
+| Numpad 0        | `key.keyboard.keypad.0`        |
+| Numpad 1        | `key.keyboard.keypad.1`        |
+| Numpad 2        | `key.keyboard.keypad.2`        |
+| Numpad 3        | `key.keyboard.keypad.3`        |
+| Numpad 4        | `key.keyboard.keypad.4`        |
+| Numpad 5        | `key.keyboard.keypad.5`        |
+| Numpad 6        | `key.keyboard.keypad.6`        |
+| Numpad 7        | `key.keyboard.keypad.7`        |
+| Numpad 8        | `key.keyboard.keypad.8`        |
+| Numpad 9        | `key.keyboard.keypad.9`        |
+| Numpad Add      | `key.keyboard.keypad.add`      |
+| Numpad Decimal  | `key.keyboard.keypad.decimal`  |
+| Numpad Enter    | `key.keyboard.keypad.enter`    |
+| Numpad Equal    | `key.keyboard.keypad.equal`    |
+| Numpad Multiply | `key.keyboard.keypad.multiply` |
+| Numpad Divide   | `key.keyboard.keypad.divide`   |
+| Numpad Subtract | `key.keyboard.keypad.subtract` |
+| Down            | `key.keyboard.down`            |
+| Left            | `key.keyboard.left`            |
+| Right           | `key.keyboard.right`           |
+| Up              | `key.keyboard.up`              |
+| Apostrophe      | `key.keyboard.apostrophe`      |
+| Backslash       | `key.keyboard.backslash`       |
+| Comma           | `key.keyboard.comma`           |
+| Equal           | `key.keyboard.equal`           |
+| Accent          | `key.keyboard.grave.accent`    |
+| Bracket         | `key.keyboard.left.bracket`    |
+| Minus           | `key.keyboard.minus`           |
+| Period          | `key.keyboard.period`          |
+| Bracket         | `key.keyboard.right.bracket`   |
+| Semicolon       | `key.keyboard.semicolon`       |
+| Slash           | `key.keyboard.slash`           |
+| Space           | `key.keyboard.space`           |
+| Tab             | `key.keyboard.tab`             |
+| Alt             | `key.keyboard.left.alt`        |
+| Control         | `key.keyboard.left.control`    |
+| Shift           | `key.keyboard.left.shift`      |
+| Win             | `key.keyboard.left.win`        |
+| Alt             | `key.keyboard.right.alt`       |
+| Control         | `key.keyboard.right.control`   |
+| Shift           | `key.keyboard.right.shift`     |
+| Win             | `key.keyboard.right.win`       |
+| Enter           | `key.keyboard.enter`           |
+| Escape          | `key.keyboard.escape`          |
+| Backspace       | `key.keyboard.backspace`       |
+| Delete          | `key.keyboard.delete`          |
+| End             | `key.keyboard.end`             |
+| Home            | `key.keyboard.home`            |
+| Insert          | `key.keyboard.insert`          |
+| Down            | `key.keyboard.page.down`       |
+| Up              | `key.keyboard.page.up`         |
+| Lock            | `key.keyboard.caps.lock`       |
+| Pause           | `key.keyboard.pause`           |
+| Lock            | `key.keyboard.scroll.lock`     |
+| Menu            | `key.keyboard.menu`            |
+| Print Screen    | `key.keyboard.print.screen`    |
+| World 1         | `key.keyboard.world.1`         |
+| World 2         | `key.keyboard.world.2`         |

@@ -1,0 +1,29 @@
+# Clones the repository which then begins with building the environment,
+# Once built, It deploys the built wiki.
+
+name: Deploy Wiki
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup and Build
+        uses: ./.github/actions/setup-env
+        with:
+          build: true
+
+      - name: Deploy built wiki
+        uses: cloudflare/pages-action@v1
+        with:
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          projectName: figura-wiki
+          directory: ./build
+          gitHubToken: ${{ secrets.GH_BOT_TOKEN }}
