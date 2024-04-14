@@ -108,7 +108,7 @@ Sets the current color string of your avatar, used as your avatar theme, if the 
 The color is a value between 0 and 1. Standard RGB values can be divided by 255 to get a number the function can use.
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setColor(color)
@@ -126,8 +126,8 @@ setColor(color)
 | ----------------------------------------- | ----------------------------------- |
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setColor(r, g, b)
@@ -147,8 +147,8 @@ setColor(r, g, b)
 | ----------------------------------------- | ----------------------------------- |
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setColor(color, badgeName)
@@ -167,8 +167,8 @@ setColor(color, badgeName)
 | ----------------------------------------- | ----------------------------------- |
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 setColor(r, g, b, badgeName)
@@ -189,8 +189,7 @@ setColor(r, g, b, badgeName)
 | ----------------------------------------- | ----------------------------------- |
 | <code>[AvatarAPI](/globals/Avatar)</code> | Returns the avatar API for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

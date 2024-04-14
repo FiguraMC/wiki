@@ -158,7 +158,7 @@ textures:newTexture("Name", 64, 64)
 Reads a texture from a base64 string or a byte array
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 read(name, base64Text)
@@ -177,8 +177,8 @@ read(name, base64Text)
 | ------------------------------------------------- | ----------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 read(name, byteArray)
@@ -197,8 +197,7 @@ read(name, byteArray)
 | ------------------------------------------------- | ----------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

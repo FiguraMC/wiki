@@ -33,7 +33,7 @@ A second argument, boolean, can be given to also list files inside subfolders
 Folders can be accessed relative to the executing script using `./` and `../`
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 listFiles()
@@ -45,8 +45,8 @@ listFiles()
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 listFiles(folder)
@@ -64,8 +64,8 @@ listFiles(folder)
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 listFiles(folder, subFolders)
@@ -84,8 +84,7 @@ listFiles(folder, subFolders)
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -244,7 +243,7 @@ Default value for maxDepth is 1
 Third argument, "silent", will skip the chat print and will only return the string
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 printTable(table)
@@ -262,8 +261,8 @@ printTable(table)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 printTable(javaObject)
@@ -281,8 +280,8 @@ printTable(javaObject)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 printTable(table, maxDepth)
@@ -301,8 +300,8 @@ printTable(table, maxDepth)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 printTable(javaObject, maxDepth)
@@ -321,8 +320,8 @@ printTable(javaObject, maxDepth)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-5" label="Overload 5">
+</TabItem>
+<TabItem value="overload-5" label="Overload 5">
 
 ```lua
 printTable(table, maxDepth, silent)
@@ -342,8 +341,8 @@ printTable(table, maxDepth, silent)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-6" label="Overload 6">
+</TabItem>
+<TabItem value="overload-6" label="Overload 6">
 
 ```lua
 printTable(javaObject, maxDepth, silent)
@@ -363,8 +362,7 @@ printTable(javaObject, maxDepth, silent)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

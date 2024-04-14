@@ -18,7 +18,7 @@ Can be queried for vanilla transform values
 Offsets this part's rotation, adding on top of the vanilla values
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOffsetRot(offsetRot)
@@ -36,8 +36,8 @@ setOffsetRot(offsetRot)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOffsetRot(x, y, z)
@@ -57,8 +57,7 @@ setOffsetRot(x, y, z)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -98,7 +97,7 @@ vanilla_model.HEAD:getOffsetRot()
 Offsets this part's scale, multiplying with the vanilla values
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOffsetScale(offsetScale)
@@ -116,8 +115,8 @@ setOffsetScale(offsetScale)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOffsetScale(x, y, z)
@@ -137,8 +136,7 @@ setOffsetScale(x, y, z)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -266,7 +264,7 @@ vanilla_model.HEAD:getOriginVisible()
 Set this part's position, preserving the previous values
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -284,8 +282,8 @@ setPos(pos)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -305,8 +303,7 @@ setPos(x, y, z)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -348,7 +345,7 @@ vanilla_model.HEAD:getPos()
 Set this part's rotation
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setRot(rot)
@@ -366,8 +363,8 @@ setRot(rot)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setRot(x, y, z)
@@ -387,8 +384,7 @@ setRot(x, y, z)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -430,7 +426,7 @@ vanilla_model.HEAD:getRot()
 Set this part's scale
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setScale(scale)
@@ -448,8 +444,8 @@ setScale(scale)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setScale(x, y, z)
@@ -469,8 +465,7 @@ setScale(x, y, z)
 | -------------------------------------------------------------- | ----------- |
 | <code>[VanillaPart](/globals/Vanilla-Model/VanillaPart)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

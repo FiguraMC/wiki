@@ -138,7 +138,7 @@ Slot -1 uses the first available slot
 Only runs for creative mode
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setSlot(slot)
@@ -156,8 +156,8 @@ setSlot(slot)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setSlot(slot)
@@ -175,8 +175,8 @@ setSlot(slot)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setSlot(slot, item)
@@ -195,8 +195,8 @@ setSlot(slot, item)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 setSlot(slot, item)
@@ -215,8 +215,7 @@ setSlot(slot, item)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -235,7 +234,7 @@ Gets an ItemStack for the item in the given slot
 The slot is either their numerical id (0 indexed) or the slot string, as used in the /item command
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getSlot(slot)
@@ -253,8 +252,8 @@ getSlot(slot)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getSlot(slot)
@@ -272,8 +271,7 @@ getSlot(slot)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -293,7 +291,7 @@ The slot is either their numerical id (0 indexed) or the slot string, as used in
 If the player is not currently in a screen, the screen has no slots, or the slot index is greater than the maximum, returns nil
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getScreenSlot(slot)
@@ -311,8 +309,8 @@ getScreenSlot(slot)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getScreenSlot(slot)
@@ -330,8 +328,7 @@ getScreenSlot(slot)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -628,7 +625,7 @@ host:sendChatMessage("Hello World")
 Sets the color of the text that is currently being typed into the chat window
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setChatColor(color)
@@ -646,8 +643,8 @@ setChatColor(color)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setChatColor(r, g, b)
@@ -667,8 +664,7 @@ setChatColor(r, g, b)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -710,7 +706,7 @@ Takes an index, were 1 means the last message on chat
 Setting the message to nil will effectively remove it from the chat
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setChatMessage(index)
@@ -728,8 +724,8 @@ setChatMessage(index)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setChatMessage(index, newMessage)
@@ -748,8 +744,8 @@ setChatMessage(index, newMessage)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setChatMessage(index, newMessage, backgroundColor)
@@ -769,8 +765,7 @@ setChatMessage(index, newMessage, backgroundColor)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -906,7 +901,7 @@ Sets the action bar message to the given text
 The boolean parameter defaults to false
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setActionbar(text)
@@ -924,8 +919,8 @@ setActionbar(text)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setActionbar(text, animated)
@@ -944,8 +939,7 @@ setActionbar(text, animated)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1079,7 +1073,7 @@ host:setTitle("Hello World")
 Sets the duration of the title on the screen, also its fade-in and fade-out durations
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setTitleTimes(timesData)
@@ -1097,8 +1091,8 @@ setTitleTimes(timesData)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setTitleTimes(fadeInTime, stayTime, fadeOutTime)
@@ -1118,8 +1112,7 @@ setTitleTimes(fadeInTime, stayTime, fadeOutTime)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1261,7 +1254,7 @@ Animates swinging the player's arm
 If the boolean is true, then the offhand is the one that swings
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 swingArm()
@@ -1273,8 +1266,8 @@ swingArm()
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 swingArm(offhand)
@@ -1292,8 +1285,7 @@ swingArm(offhand)
 | ------------------------------------- | ------------------------- |
 | <code>[HostAPI](/globals/Host)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

@@ -18,7 +18,7 @@ Some particles have special properties, like the "dust" particle
 For these particles, the special properties can be put into the "name" parameter, the same way as it works for commands
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newParticle(name, pos)
@@ -37,8 +37,8 @@ newParticle(name, pos)
 | ---------------------------------------------------- | ----------------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 newParticle(name, pos, vel)
@@ -58,8 +58,8 @@ newParticle(name, pos, vel)
 | ---------------------------------------------------- | ----------------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 newParticle(name, posX, posY, posZ)
@@ -80,8 +80,8 @@ newParticle(name, posX, posY, posZ)
 | ---------------------------------------------------- | ----------------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 newParticle(name, pos, velX, velY, velZ)
@@ -103,8 +103,8 @@ newParticle(name, pos, velX, velY, velZ)
 | ---------------------------------------------------- | ----------------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-5" label="Overload 5">
+</TabItem>
+<TabItem value="overload-5" label="Overload 5">
 
 ```lua
 newParticle(name, posX, posY, posZ, vel)
@@ -126,8 +126,8 @@ newParticle(name, posX, posY, posZ, vel)
 | ---------------------------------------------------- | ----------------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-6" label="Overload 6">
+</TabItem>
+<TabItem value="overload-6" label="Overload 6">
 
 ```lua
 newParticle(name, posX, posY, posZ, velX, velY, velZ)
@@ -151,8 +151,7 @@ newParticle(name, posX, posY, posZ, velX, velY, velZ)
 | ---------------------------------------------------- | ----------------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the spawned particle for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**

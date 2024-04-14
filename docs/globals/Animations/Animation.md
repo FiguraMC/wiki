@@ -120,7 +120,7 @@ A function that merges "play" and "stop" together
 Takes a boolean parameter, where if true, the animation will play, and when false, the animation will stop
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPlaying()
@@ -132,8 +132,8 @@ setPlaying()
 | ------------------------------------------------------- | ---------------------------------------- |
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setPlaying(bool)
@@ -151,8 +151,7 @@ setPlaying(bool)
 | ------------------------------------------------------- | ---------------------------------------- |
 | <code>[Animation](/globals/Animations/Animation)</code> | Returns the given animation for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**

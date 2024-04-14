@@ -22,7 +22,7 @@ Values are given from 0 to 15, indicating the block light and sky light levels y
 Passing nil will reset the lighting override for this task
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setLight(light)
@@ -40,8 +40,8 @@ setLight(light)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setLight(blockLight, skyLight)
@@ -60,8 +60,7 @@ setLight(blockLight, skyLight)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 ---
@@ -173,7 +172,7 @@ Values you give are 0 to 15, indicating the white overlay and the damage overlay
 Passing nil will reset the overlay override for this task
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOverlay(overlay)
@@ -191,8 +190,8 @@ setOverlay(overlay)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOverlay(whiteOverlay, hurtOverlay)
@@ -211,8 +210,7 @@ setOverlay(whiteOverlay, hurtOverlay)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 ---
@@ -242,7 +240,7 @@ Sets the position of the task, relative to its attached part
 Uses model coordinates
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -260,8 +258,8 @@ setPos(pos)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -281,8 +279,7 @@ setPos(x, y, z)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 ---
@@ -344,7 +341,7 @@ getPositionMatrixRaw()
 Sets the rotation of the task, relative to its attached part
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setRot(rot)
@@ -362,8 +359,8 @@ setRot(rot)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setRot(x, y, z)
@@ -383,8 +380,7 @@ setRot(x, y, z)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 ---
@@ -412,7 +408,7 @@ getRot()
 Sets the scale of the task, relative to its attached part
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setScale(scale)
@@ -430,8 +426,8 @@ setScale(scale)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setScale(x, y, z)
@@ -451,8 +447,7 @@ setScale(x, y, z)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 ---

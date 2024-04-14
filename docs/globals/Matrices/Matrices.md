@@ -20,7 +20,7 @@ Creates a Matrix2 using the given parameters as columns
 If you call the function with no parameters, returns the 2x2 identity matrix
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 mat2()
@@ -32,8 +32,8 @@ mat2()
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 mat2(col1, col2)
@@ -52,8 +52,7 @@ mat2(col1, col2)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -99,7 +98,7 @@ matrices.rotation2(90)
 Creates a new Matrix2 that scales by the specified factors
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 scale2(vec)
@@ -117,8 +116,8 @@ scale2(vec)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 scale2(x, y)
@@ -137,8 +136,7 @@ scale2(x, y)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -158,7 +156,7 @@ Creates a Matrix3 using the given parameters as columns
 If you call the function with no parameters, returns the 3x3 identity matrix
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 mat3()
@@ -170,8 +168,8 @@ mat3()
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 mat3(col1, col2, col3)
@@ -191,8 +189,7 @@ mat3(col1, col2, col3)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -210,7 +207,7 @@ Creates a new Matrix3 that rotates by the specified angles
 Angles are given in degrees, and the rotation order is ZYX
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 rotation3(vec)
@@ -228,8 +225,8 @@ rotation3(vec)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 rotation3(x, y, z)
@@ -249,8 +246,7 @@ rotation3(x, y, z)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -266,7 +262,7 @@ matrices.rotation3(90, 90, 90)
 Creates a new Matrix3 that scales by the specified factors
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 scale3(vec)
@@ -284,8 +280,8 @@ scale3(vec)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 scale3(x, y, z)
@@ -305,8 +301,7 @@ scale3(x, y, z)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -322,7 +317,7 @@ matrices.scale3(2, 2, 2)
 Creates a new Matrix3 that translates by the specified offset
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 translate3(vec)
@@ -340,8 +335,8 @@ translate3(vec)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 translate3(x, y)
@@ -360,8 +355,7 @@ translate3(x, y)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -471,7 +465,7 @@ Creates a Matrix4 using the given parameters as columns
 If you call the function with no parameters, returns the 4x4 identity matrix
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 mat4()
@@ -483,8 +477,8 @@ mat4()
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 mat4(col1, col2, col3, col4)
@@ -505,8 +499,7 @@ mat4(col1, col2, col3, col4)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -524,7 +517,7 @@ Creates a new Matrix4 that rotates by the specified angles
 Angles are given in degrees, and the rotation order is ZYX
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 rotation4(vec)
@@ -542,8 +535,8 @@ rotation4(vec)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 rotation4(x, y, z)
@@ -563,8 +556,7 @@ rotation4(x, y, z)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -580,7 +572,7 @@ matrices.rotation4(90, 90, 90)
 Creates a new Matrix4 that scales by the specified factors
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 scale4(vec)
@@ -598,8 +590,8 @@ scale4(vec)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 scale4(x, y, z)
@@ -619,8 +611,7 @@ scale4(x, y, z)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -636,7 +627,7 @@ matrices.scale4(2, 2, 2)
 Creates a new Matrix4 that translates by the specified offset
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 translate4(vec)
@@ -654,8 +645,8 @@ translate4(vec)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 translate4(x, y, z)
@@ -675,8 +666,7 @@ translate4(x, y, z)
 | ------------------------------------------------- | ----------- |
 | <code>[Matrix4](/globals/Matrices/Matrix4)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

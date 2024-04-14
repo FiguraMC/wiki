@@ -20,7 +20,7 @@ Functions are run in registration order
 An optional string argument can be given, grouping functions under that name, for an easier management later on
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 register(func)
@@ -38,8 +38,8 @@ register(func)
 | ------------------------------------------- | ------------------------- |
 | <code>[Event](/globals/Events/Event)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 register(func, name)
@@ -58,8 +58,7 @@ register(func, name)
 | ------------------------------------------- | ------------------------- |
 | <code>[Event](/globals/Events/Event)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -99,7 +98,7 @@ Removes either a function from this event or when given a string, remove all fun
 Returns the number of functions that were removed
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 remove(name)
@@ -117,8 +116,8 @@ remove(name)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 remove(function)
@@ -136,8 +135,7 @@ remove(function)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

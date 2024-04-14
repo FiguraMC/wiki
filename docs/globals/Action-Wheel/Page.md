@@ -20,7 +20,7 @@ Adds a new Action on the selected Page's index
 If no index is given it is added in the first available index
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newAction()
@@ -32,8 +32,8 @@ newAction()
 | --------------------------------------------------- | ---------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 newAction(index)
@@ -51,8 +51,7 @@ newAction(index)
 | --------------------------------------------------- | ---------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | An action wheel action |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -100,7 +99,7 @@ If no shift is specified, it returns all Actions from this page
 Note that the table is indexed as its slot number as key, so blank slots will result in nil values
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getActions()
@@ -112,8 +111,8 @@ getActions()
 | --------------------------------------------- | --------------------------------------------- |
 | <code>[Table](/tutorials/types/Tables)</code> | A table that contains all actions in the page |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getActions(shift)
@@ -131,8 +130,7 @@ getActions(shift)
 | --------------------------------------------- | ---------------------------------------------------------------- |
 | <code>[Table](/tutorials/types/Tables)</code> | A table that contains all actions in the page's given slot shift |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 1):**

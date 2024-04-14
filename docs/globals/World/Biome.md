@@ -278,7 +278,7 @@ Sets the saved position for this Biome's proxy
 The saved position is used in Biome functions that require a position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -296,8 +296,8 @@ setPos(pos)
 | ------------------------------------------ | ------------------------- |
 | <code>[Biome](/globals/World/Biome)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -317,8 +317,7 @@ setPos(x, y, z)
 | ------------------------------------------ | ------------------------- |
 | <code>[Biome](/globals/World/Biome)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

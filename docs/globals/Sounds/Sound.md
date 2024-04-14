@@ -136,7 +136,7 @@ Position is given in world coordinates
 Default 0
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -154,8 +154,8 @@ setPos(pos)
 | ------------------------------------- | ------------------------- |
 | <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -175,8 +175,7 @@ setPos(x, y, z)
 | ------------------------------------- | ------------------------- |
 | <code>[Sound](/globals/Sounds)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

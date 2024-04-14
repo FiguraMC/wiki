@@ -28,7 +28,7 @@ The texture's width and height must be provided if the texture is a location
 For custom textures, the dimensions are optional
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setTexture(textureLocation, width, height)
@@ -48,8 +48,8 @@ setTexture(textureLocation, width, height)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setTexture(texture)
@@ -67,8 +67,8 @@ setTexture(texture)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setTexture(texture, width, height)
@@ -88,8 +88,8 @@ setTexture(texture, width, height)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 setTexture(textureLocation, dimensions)
@@ -108,8 +108,8 @@ setTexture(textureLocation, dimensions)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-5" label="Overload 5">
+</TabItem>
+<TabItem value="overload-5" label="Overload 5">
 
 ```lua
 setTexture(texture, dimensions)
@@ -128,8 +128,7 @@ setTexture(texture, dimensions)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -180,7 +179,7 @@ Values are RGBA from 0 to 1
 Default values are 1, alpha is optional
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setColor(rgb)
@@ -198,8 +197,8 @@ setColor(rgb)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setColor(rgba)
@@ -217,8 +216,8 @@ setColor(rgba)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setColor(r, g, b, a)
@@ -239,8 +238,7 @@ setColor(r, g, b, a)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -282,7 +280,7 @@ mySprite:getColor()
 Sets the texture dimensions, used in UV calculation
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setDimensions(dimensions)
@@ -300,8 +298,8 @@ setDimensions(dimensions)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setDimensions(width, height)
@@ -320,8 +318,7 @@ setDimensions(width, height)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -366,7 +363,7 @@ Sets the texture UV region
 Uses its dimensions to calculate the max UV
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setRegion(region)
@@ -384,8 +381,8 @@ setRegion(region)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setRegion(width, height)
@@ -404,8 +401,7 @@ setRegion(width, height)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -501,7 +497,7 @@ mySprite:getRenderType()
 Sets the width and height used to render this sprite
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setSize(size)
@@ -519,8 +515,8 @@ setSize(size)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setSize(width, height)
@@ -539,8 +535,7 @@ setSize(width, height)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -584,7 +579,7 @@ Sets this texture UV offset
 The Region and Dimension are used to calculate the end UV
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setUV(uv)
@@ -602,8 +597,8 @@ setUV(uv)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setUV(u, v)
@@ -622,8 +617,7 @@ setUV(u, v)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -674,7 +668,7 @@ mySprite:getUV()
 Set this texture UV offset, in pixels, based on the texture's dimension
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setUVPixels(uv)
@@ -692,8 +686,8 @@ setUVPixels(uv)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setUVPixels(u, v)
@@ -712,8 +706,7 @@ setUVPixels(u, v)
 | ----------------------------------------------------- | ------------------------- |
 | <code>[SpriteTask](/globals/Models/SpriteTask)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -794,7 +787,7 @@ Values are given from 0 to 15, indicating the block light and sky light levels y
 Passing nil will reset the lighting override for this task
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setLight(light)
@@ -812,8 +805,8 @@ setLight(light)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setLight(blockLight, skyLight)
@@ -832,8 +825,7 @@ setLight(blockLight, skyLight)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -983,7 +975,7 @@ Values you give are 0 to 15, indicating the white overlay and the damage overlay
 Passing nil will reset the overlay override for this task
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOverlay(overlay)
@@ -1001,8 +993,8 @@ setOverlay(overlay)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOverlay(whiteOverlay, hurtOverlay)
@@ -1021,8 +1013,7 @@ setOverlay(whiteOverlay, hurtOverlay)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1065,7 +1056,7 @@ Sets the position of the task, relative to its attached part
 Uses model coordinates
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -1083,8 +1074,8 @@ setPos(pos)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -1104,8 +1095,7 @@ setPos(x, y, z)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1191,7 +1181,7 @@ mySprite:getPositionMatrixRaw()
 Sets the rotation of the task, relative to its attached part
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setRot(rot)
@@ -1209,8 +1199,8 @@ setRot(rot)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setRot(x, y, z)
@@ -1230,8 +1220,7 @@ setRot(x, y, z)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1271,7 +1260,7 @@ mySprite:getRot()
 Sets the scale of the task, relative to its attached part
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setScale(scale)
@@ -1289,8 +1278,8 @@ setScale(scale)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setScale(x, y, z)
@@ -1310,8 +1299,7 @@ setScale(x, y, z)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

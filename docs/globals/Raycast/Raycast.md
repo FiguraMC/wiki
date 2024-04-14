@@ -20,7 +20,7 @@ AABBs are encoded as a table with indicies 1 and 2 being a Vector3.
 This function returns the AABB table that was hit, the exact position hit as a Vector3, the side of the AABB hit as a string or nil if inside an AABB, and the index of the AABB that was hit in the array
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 aabb(startpos, endpos, aabbs)
@@ -43,8 +43,8 @@ aabb(startpos, endpos, aabbs)
 | <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
 | <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 aabb(startX, startY, startZ, endpos, aabbs)
@@ -69,8 +69,8 @@ aabb(startX, startY, startZ, endpos, aabbs)
 | <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
 | <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 aabb(startpos, endX, endY, endZ, aabbs)
@@ -95,8 +95,8 @@ aabb(startpos, endX, endY, endZ, aabbs)
 | <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
 | <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 aabb(startX, startY, startZ, endX, endY, endZ, aabbs)
@@ -123,8 +123,7 @@ aabb(startX, startY, startZ, endX, endY, endZ, aabbs)
 | <code>[String](/tutorials/types/Strings)</code>  | Hit side or nil if inside the AABB |
 | <code>[Integer](/tutorials/types/Numbers)</code> | Integer of hit AABB                |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -150,7 +149,7 @@ blockCastType and fluidCastType determine how the raycast handles block shapes a
 Will default to "COLLIDER" and "NONE" when nil
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 block(startpos, endpos, blockCastType, fluidCastType)
@@ -173,8 +172,8 @@ block(startpos, endpos, blockCastType, fluidCastType)
 | <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
 | <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 block(startX, startY, startZ, endpos, blockCastType, fluidCastType)
@@ -199,8 +198,8 @@ block(startX, startY, startZ, endpos, blockCastType, fluidCastType)
 | <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
 | <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 block(startpos, endX, endY, endZ, blockCastType, fluidCastType)
@@ -225,8 +224,8 @@ block(startpos, endX, endY, endZ, blockCastType, fluidCastType)
 | <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
 | <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 block(startX, startY, startZ, endX, endY, endZ, blockCastType, fluidCastType)
@@ -253,8 +252,7 @@ block(startX, startY, startZ, endX, endY, endZ, blockCastType, fluidCastType)
 | <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position   |
 | <code>[String](/tutorials/types/Strings)</code>      | Hit block face |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -282,7 +280,7 @@ Takes in a single EntityAPI object. Return true for valid entities, false for in
 Marks all entities as valid when nil
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 entity(startpos, endpos, predicate)
@@ -303,8 +301,8 @@ entity(startpos, endpos, predicate)
 | <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 entity(startX, startY, startZ, endpos, predicate)
@@ -327,8 +325,8 @@ entity(startX, startY, startZ, endpos, predicate)
 | <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 entity(startpos, endX, endY, endZ, predicate)
@@ -351,8 +349,8 @@ entity(startpos, endX, endY, endZ, predicate)
 | <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 entity(startX, startY, startZ, endX, endY, endZ, predicate)
@@ -377,8 +375,7 @@ entity(startX, startY, startZ, endX, endY, endZ, predicate)
 | <code>[Entity](/globals/Player/Entity)</code>    | Hit entity   |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

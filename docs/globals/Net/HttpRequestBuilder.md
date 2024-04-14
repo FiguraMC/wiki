@@ -14,7 +14,7 @@ This page is a WIP. It contains all the information in Figura's documentation bu
 Returns body of this request
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getBody()
@@ -26,8 +26,8 @@ getBody()
 | ----------------------------------------------------- | ----------- |
 | <code>[InputStream](/globals/Data/InputStream)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getBody()
@@ -39,8 +39,7 @@ getBody()
 | ------------------------------------------- | ----------- |
 | <code>[Buffer](/globals/Data/Buffer)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -122,7 +121,7 @@ getUri()
 Sets body for this request, returns itself for chaining. If data is nil request will be sent without body
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 body(data)
@@ -140,8 +139,8 @@ body(data)
 | ------------------------------------------------------------------ | ------------------------- |
 | <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 body(data)
@@ -159,8 +158,7 @@ body(data)
 | ------------------------------------------------------------------ | ------------------------- |
 | <code>[HttpRequestBuilder](/globals/Net/HttpRequestBuilder)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

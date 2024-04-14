@@ -246,7 +246,7 @@ myAction:setOnScroll(pings.scrolling)
 Sets the background color of the Action
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setColor(color)
@@ -264,8 +264,8 @@ setColor(color)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setColor(r, g, b)
@@ -285,8 +285,7 @@ setColor(r, g, b)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**
@@ -326,7 +325,7 @@ myAction:getColor()
 Sets the background color of the Action when it is being hovered
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setHoverColor(color)
@@ -344,8 +343,8 @@ setHoverColor(color)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setHoverColor(r, g, b)
@@ -365,8 +364,7 @@ setHoverColor(r, g, b)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -406,7 +404,7 @@ myAction:getHoverColor()
 Sets the item of the Action when it is being hovered
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setHoverItem(item)
@@ -424,8 +422,8 @@ setHoverItem(item)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setHoverItem(item)
@@ -443,8 +441,7 @@ setHoverItem(item)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**
@@ -466,7 +463,7 @@ All values are measured in pixels
 Default UV is 0, 0, the default dimensions are the texture dimensions and the default scale of 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setHoverTexture(texture)
@@ -484,8 +481,8 @@ setHoverTexture(texture)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setHoverTexture(texture, u, v)
@@ -505,8 +502,8 @@ setHoverTexture(texture, u, v)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setHoverTexture(texture, u, v, width, height)
@@ -528,8 +525,8 @@ setHoverTexture(texture, u, v, width, height)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 setHoverTexture(texture, u, v, width, height, scale)
@@ -552,8 +549,7 @@ setHoverTexture(texture, u, v, width, height, scale)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -575,7 +571,7 @@ myAction:setHoverTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 Sets the item of the Action
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setItem(item)
@@ -593,8 +589,8 @@ setItem(item)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setItem(item)
@@ -612,8 +608,7 @@ setItem(item)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**
@@ -635,7 +630,7 @@ All values are measured in pixels
 Default UV is 0, 0, the default dimensions are the texture dimensions and the default scale of 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setTexture(texture)
@@ -653,8 +648,8 @@ setTexture(texture)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setTexture(texture, u, v)
@@ -674,8 +669,8 @@ setTexture(texture, u, v)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setTexture(texture, u, v, width, height)
@@ -697,8 +692,8 @@ setTexture(texture, u, v, width, height)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 setTexture(texture, u, v, width, height, scale)
@@ -721,8 +716,7 @@ setTexture(texture, u, v, width, height, scale)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -744,7 +738,7 @@ myAction:setTexture(textures["myTexture"], 16, 32, nil, nil, 2)
 Sets the title of the Action
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setTitle()
@@ -756,8 +750,8 @@ setTitle()
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setTitle(title)
@@ -775,8 +769,7 @@ setTitle(title)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**
@@ -818,7 +811,7 @@ myAction:getTitle()
 Sets the color of the Action when it is toggled
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setToggleColor(color)
@@ -836,8 +829,8 @@ setToggleColor(color)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setToggleColor(r, g, b)
@@ -857,8 +850,7 @@ setToggleColor(r, g, b)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -898,7 +890,7 @@ myAction:getToggleColor()
 Sets the item of the Action when it is toggled
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setToggleItem(item)
@@ -916,8 +908,8 @@ setToggleItem(item)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setToggleItem(item)
@@ -935,8 +927,7 @@ setToggleItem(item)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**
@@ -958,7 +949,7 @@ All values are measured in pixels
 Default UV is 0, 0, the default dimensions are the texture dimensions and the default scale of 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setToggleTexture(texture)
@@ -976,8 +967,8 @@ setToggleTexture(texture)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setToggleTexture(texture, u, v)
@@ -997,8 +988,8 @@ setToggleTexture(texture, u, v)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setToggleTexture(texture, u, v, width, height)
@@ -1020,8 +1011,8 @@ setToggleTexture(texture, u, v, width, height)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 setToggleTexture(texture, u, v, width, height, scale)
@@ -1044,8 +1035,7 @@ setToggleTexture(texture, u, v, width, height, scale)
 | --------------------------------------------------- | ------------------------- |
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

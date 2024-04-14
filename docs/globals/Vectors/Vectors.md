@@ -40,7 +40,7 @@ For example; if you call vec(3, 4, 0, 2), then the function will return a Vector
 There is a global alias "vec" for this function, meaning the "vectors." can be omitted
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 vec(x, y)
@@ -59,8 +59,8 @@ vec(x, y)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 vec(x, y, z)
@@ -80,8 +80,8 @@ vec(x, y, z)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 vec(x, y, z, w)
@@ -102,8 +102,7 @@ vec(x, y, z, w)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -250,7 +249,7 @@ vectors.hexToRGB("SOFT_BLUE")
 Converts the given color from HSV format to RGB format
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 hsvToRGB(hsv)
@@ -268,8 +267,8 @@ hsvToRGB(hsv)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 hsvToRGB(h, s, v)
@@ -289,8 +288,7 @@ hsvToRGB(h, s, v)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -334,7 +332,7 @@ vectors.intToRGB(838860750)
 Converts the given color from RGB format to HSV format
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 rgbToHSV(rgb)
@@ -352,8 +350,8 @@ rgbToHSV(rgb)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 rgbToHSV(r, g, b)
@@ -373,8 +371,7 @@ rgbToHSV(r, g, b)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -392,7 +389,7 @@ Converts the given color from RGB format to Hex format
 The "#" is not included on the return value
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 rgbToHex(rgb)
@@ -410,8 +407,8 @@ rgbToHex(rgb)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 rgbToHex(r, g, b)
@@ -431,8 +428,7 @@ rgbToHex(r, g, b)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -448,7 +444,7 @@ vectors.rgbToHex(81, 68, 66)
 Converts the given color from RGB format to Integer format
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 rgbToInt(rgb)
@@ -466,8 +462,8 @@ rgbToInt(rgb)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 rgbToInt(r, g, b)
@@ -487,8 +483,7 @@ rgbToInt(r, g, b)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -506,7 +501,7 @@ vectors.rgbToInt(50, 50, 50)
 Converts a pitch/yaw angle (in degrees) into a direction vector
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 angleToDir(vec)
@@ -524,8 +519,8 @@ angleToDir(vec)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 angleToDir(pitch, yaw)
@@ -544,8 +539,7 @@ angleToDir(pitch, yaw)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -561,7 +555,7 @@ vectors.angleToDir(90, 70)
 Rotates a vector relative to a rotation vector
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 rotateAroundAxis(angle, vec, axis)
@@ -581,8 +575,8 @@ rotateAroundAxis(angle, vec, axis)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 rotateAroundAxis(angle, x, y, z, axis)
@@ -604,8 +598,8 @@ rotateAroundAxis(angle, x, y, z, axis)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 rotateAroundAxis(angle, vec, axisX, axisY, axisZ)
@@ -627,8 +621,8 @@ rotateAroundAxis(angle, vec, axisX, axisY, axisZ)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
@@ -652,8 +646,7 @@ rotateAroundAxis(angle, x, y, z, axisX, axisY, axisZ)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -669,7 +662,7 @@ vectors.rotateAroundAxis(180, vec(1, 2, 3), vec(0, 1, 0))
 Converts a position in the world into a position relative to the viewer's camera
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 toCameraSpace(vec)
@@ -687,8 +680,8 @@ toCameraSpace(vec)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 toCameraSpace(x, y, z)
@@ -708,8 +701,7 @@ toCameraSpace(x, y, z)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -725,7 +717,7 @@ vectors.toCameraSpace(vec(1, 2, 3))
 Converts a position in the world into a position relative to the viewer's screen
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 worldToScreenSpace(vec)
@@ -743,8 +735,8 @@ worldToScreenSpace(vec)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 worldToScreenSpace(x, y, z)
@@ -764,8 +756,7 @@ worldToScreenSpace(x, y, z)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector4](/globals/Vectors/Vector4)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

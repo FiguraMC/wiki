@@ -60,7 +60,7 @@ world.exists()
 Gets the Biome located at the given position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getBiome(pos)
@@ -78,8 +78,8 @@ getBiome(pos)
 | ------------------------------------------ | --------------------------- |
 | <code>[Biome](/globals/World/Biome)</code> | Biome of the given position |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getBiome(x, y, z)
@@ -99,8 +99,7 @@ getBiome(x, y, z)
 | ------------------------------------------ | --------------------------- |
 | <code>[Biome](/globals/World/Biome)</code> | Biome of the given position |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -163,7 +162,7 @@ Returns the highest point at the given position according to the provided height
 Defaults to MOTION_BLOCKING if no heightmap is provided
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getHeight(pos, heightmap)
@@ -182,8 +181,8 @@ getHeight(pos, heightmap)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getHeight(x, z, heightmap)
@@ -203,8 +202,7 @@ getHeight(x, z, heightmap)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -244,7 +242,7 @@ Checks if the position has a chunk loaded
 If you need to access the block, it's usually more efficient to use `getBlockState()`
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 isChunkLoaded(pos)
@@ -262,8 +260,8 @@ isChunkLoaded(pos)
 | ------------------------------------------------- | ----------- |
 | <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 isChunkLoaded(x, y, z)
@@ -283,8 +281,7 @@ isChunkLoaded(x, y, z)
 | ------------------------------------------------- | ----------- |
 | <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -300,7 +297,7 @@ world.isChunkLoaded(player:getPos())
 Gets whether or not the sky is open at the given position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 isOpenSky(pos)
@@ -318,8 +315,8 @@ isOpenSky(pos)
 | ------------------------------------------------- | ----------- |
 | <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 isOpenSky(x, y, z)
@@ -339,8 +336,7 @@ isOpenSky(x, y, z)
 | ------------------------------------------------- | ----------- |
 | <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -360,7 +356,7 @@ Gets the BlockState of the block at the given position
 If it is not loaded, returns void_air
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getBlockState(pos)
@@ -378,8 +374,8 @@ getBlockState(pos)
 | ---------------------------------------------------- | ---------------------------------- |
 | <code>[BlockState](/globals/World/BlockState)</code> | `BlockState` of the given position |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getBlockState(x, y, z)
@@ -399,8 +395,7 @@ getBlockState(x, y, z)
 | ---------------------------------------------------- | ---------------------------------- |
 | <code>[BlockState](/globals/World/BlockState)</code> | `BlockState` of the given position |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -418,7 +413,7 @@ Gets a list of all BlockStates in the specified area
 The maximum area size is 8 x 8 x 8
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getBlocks(min, max)
@@ -437,8 +432,8 @@ getBlocks(min, max)
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getBlocks(minX, minY, minZ, max)
@@ -459,8 +454,8 @@ getBlocks(minX, minY, minZ, max)
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 getBlocks(min, maxX, maxY, maxZ)
@@ -481,8 +476,8 @@ getBlocks(min, maxX, maxY, maxZ)
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 getBlocks(minX, minY, minZ, maxX, maxY, maxZ)
@@ -505,8 +500,7 @@ getBlocks(minX, minY, minZ, maxX, maxY, maxZ)
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -528,7 +522,7 @@ Parses and creates a new BlockState from the given string
 A world position can be optionally given for the blockstate functions that rely on its position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newBlock(block)
@@ -546,8 +540,8 @@ newBlock(block)
 | ---------------------------------------------------- | ----------- |
 | <code>[BlockState](/globals/World/BlockState)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 newBlock(block, pos)
@@ -566,8 +560,8 @@ newBlock(block, pos)
 | ---------------------------------------------------- | ----------- |
 | <code>[BlockState](/globals/World/BlockState)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 newBlock(block, x, y, z)
@@ -588,8 +582,7 @@ newBlock(block, x, y, z)
 | ---------------------------------------------------- | ----------- |
 | <code>[BlockState](/globals/World/BlockState)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -607,7 +600,7 @@ Parses and creates a new ItemStack from the given string
 A count and damage can be given, to be applied on this itemstack
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newItem(item)
@@ -625,8 +618,8 @@ newItem(item)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 newItem(item, count)
@@ -645,8 +638,8 @@ newItem(item, count)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 newItem(item, count, damage)
@@ -666,8 +659,7 @@ newItem(item, count, damage)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -769,7 +761,7 @@ If delta is passed in, then it adds delta to the time
 The default value of delta is zero
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getDay()
@@ -781,8 +773,8 @@ getDay()
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getDay(delta)
@@ -800,8 +792,7 @@ getDay(delta)
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -821,7 +812,7 @@ If delta is passed in, then it adds delta to the time
 The default value of delta is zero
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getDayTime()
@@ -833,8 +824,8 @@ getDayTime()
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getDayTime(delta)
@@ -852,8 +843,7 @@ getDayTime(delta)
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -895,7 +885,7 @@ If delta is passed in, then it adds delta to the time
 The default value of delta is zero
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getTime()
@@ -907,8 +897,8 @@ getTime()
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getTime(delta)
@@ -926,8 +916,7 @@ getTime(delta)
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -947,7 +936,7 @@ If delta is passed in, then it adds delta to the time
 The default value of delta is zero
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getTimeOfDay()
@@ -959,8 +948,8 @@ getTimeOfDay()
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getTimeOfDay(delta)
@@ -978,8 +967,7 @@ getTimeOfDay(delta)
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -998,7 +986,7 @@ Gets the block light level of the block at the given position.
 Read more about block light on the [Minecraft Wiki](https://minecraft.wiki/w/Light#Block_light).
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getBlockLightLevel(pos)
@@ -1016,8 +1004,8 @@ getBlockLightLevel(pos)
 | ------------------------------------------------ | ---------------------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | The light level (0-15) |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getBlockLightLevel(x, y, z)
@@ -1037,8 +1025,7 @@ getBlockLightLevel(x, y, z)
 | ------------------------------------------------ | ---------------------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | The light level (0-15) |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1054,7 +1041,7 @@ world.getBlockLightLevel(player:getPos())
 Gets the overall light level of the block at the given position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getLightLevel(pos)
@@ -1072,8 +1059,8 @@ getLightLevel(pos)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getLightLevel(x, y, z)
@@ -1093,8 +1080,7 @@ getLightLevel(x, y, z)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1110,7 +1096,7 @@ world.getLightLevel(player:getPos())
 Gets the skylight level of the block at the given position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getSkyLightLevel(pos)
@@ -1128,8 +1114,8 @@ getSkyLightLevel(pos)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getSkyLightLevel(x, y, z)
@@ -1149,8 +1135,7 @@ getSkyLightLevel(x, y, z)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1170,7 +1155,7 @@ Gets the current rain gradient in the world, interpolated from the previous tick
 The default value of delta is 1, which is the current tick
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getRainGradient()
@@ -1182,8 +1167,8 @@ getRainGradient()
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getRainGradient(delta)
@@ -1201,8 +1186,7 @@ getRainGradient(delta)
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1242,7 +1226,7 @@ world.isThundering()
 Gets the redstone power level of the block at the given position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getRedstonePower(pos)
@@ -1260,8 +1244,8 @@ getRedstonePower(pos)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getRedstonePower(x, y, z)
@@ -1281,8 +1265,7 @@ getRedstonePower(x, y, z)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1298,7 +1281,7 @@ world.getRedstonePower(player:getPos())
 Gets the direct redstone power level of the block at the given position
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getStrongRedstonePower(pos)
@@ -1316,8 +1299,8 @@ getStrongRedstonePower(pos)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getStrongRedstonePower(x, y, z)
@@ -1337,8 +1320,7 @@ getStrongRedstonePower(x, y, z)
 | ------------------------------------------------ | ----------- |
 | <code>[Integer](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

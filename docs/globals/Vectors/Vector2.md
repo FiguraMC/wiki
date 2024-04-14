@@ -24,7 +24,7 @@ local vec2 = vec(2, 5)
 Adds the given vector or values to this one, and returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 add(vec)
@@ -42,8 +42,8 @@ add(vec)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 add(x, y)
@@ -62,8 +62,7 @@ add(x, y)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -79,7 +78,7 @@ vec2:add(2, 0.5)
 Divides this vector by the given vector or values, and returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 div(vec)
@@ -97,8 +96,8 @@ div(vec)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 div(x, y)
@@ -117,8 +116,7 @@ div(x, y)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -134,7 +132,7 @@ vec2:div(2, 3)
 Multiplies the given vector or values into this one, and returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 mul(vec)
@@ -152,8 +150,8 @@ mul(vec)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 mul(x, y)
@@ -172,8 +170,7 @@ mul(x, y)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -189,7 +186,7 @@ vec2:mul(2, 3)
 Subtracts the given vector or values from this one, and returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 sub(vec)
@@ -207,8 +204,8 @@ sub(vec)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 sub(x, y)
@@ -227,8 +224,7 @@ sub(x, y)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -530,7 +526,7 @@ vec2:offset(2)
 Reduces this vector modulo the given vector or values, and returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 reduce(vec)
@@ -548,8 +544,8 @@ reduce(vec)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 reduce(x, y)
@@ -568,8 +564,7 @@ reduce(x, y)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -619,7 +614,7 @@ Nil values are treated as zero
 Returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 set(vec)
@@ -637,8 +632,8 @@ set(vec)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 set(x, y)
@@ -657,8 +652,7 @@ set(x, y)
 | ------------------------------------------------ | ------------------------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -715,7 +709,7 @@ The augmented form is a Vector of the same length + 1
 The new axis will have the given value, or 1 when it is not specified
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 augmented()
@@ -727,8 +721,8 @@ augmented()
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 augmented(value)
@@ -746,8 +740,7 @@ augmented(value)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

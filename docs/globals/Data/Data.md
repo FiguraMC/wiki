@@ -18,7 +18,7 @@ This page is a WIP. It contains all the information in Figura's documentation bu
 Creates an empty buffer
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 createBuffer()
@@ -30,8 +30,8 @@ createBuffer()
 | ------------------------------------------- | ----------- |
 | <code>[Buffer](/globals/Data/Buffer)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 createBuffer(capacity)
@@ -49,8 +49,7 @@ createBuffer(capacity)
 | ------------------------------------------- | ----------- |
 | <code>[Buffer](/globals/Data/Buffer)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

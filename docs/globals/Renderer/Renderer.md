@@ -197,7 +197,7 @@ Nil values for pivot are assumed to be 0
 For relative rotation values, check out the "offset" pivot function
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setCameraPivot(pivot)
@@ -215,8 +215,8 @@ setCameraPivot(pivot)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setCameraPivot(x, y, z)
@@ -236,8 +236,7 @@ setCameraPivot(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -280,7 +279,7 @@ Sets the position offset for the camera
 Nil values for position are assumed to be 0
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setCameraPos(pos)
@@ -298,8 +297,8 @@ setCameraPos(pos)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setCameraPos(x, y, z)
@@ -319,8 +318,7 @@ setCameraPos(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -366,7 +364,7 @@ Nil values for rotation are assumed to be 0
 For relative rotation values, check out the "offset" rot function
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setCameraRot(rot)
@@ -384,8 +382,8 @@ setCameraRot(rot)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setCameraRot(x, y, z)
@@ -405,8 +403,7 @@ setCameraRot(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -454,7 +451,7 @@ Nil values for pivot are assumed to be 0
 For relative rotation values, check out the non-offset pivot function
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOffsetCameraPivot(pivot)
@@ -472,8 +469,8 @@ setOffsetCameraPivot(pivot)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOffsetCameraPivot(x, y, z)
@@ -493,8 +490,7 @@ setOffsetCameraPivot(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -518,7 +514,7 @@ Angles are given in degrees
 For absolute rotation values, check out the non-offset rot function
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOffsetCameraRot(rot)
@@ -536,8 +532,8 @@ setOffsetCameraRot(rot)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOffsetCameraRot(x, y, z)
@@ -557,8 +553,7 @@ setOffsetCameraRot(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -628,7 +623,7 @@ Default alpha is 0.4
 Might not be compatible with shaders
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setBlockOutlineColor(rgb)
@@ -646,8 +641,8 @@ setBlockOutlineColor(rgb)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setBlockOutlineColor(rgba)
@@ -665,8 +660,8 @@ setBlockOutlineColor(rgba)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setBlockOutlineColor(r, g, b, a)
@@ -687,8 +682,7 @@ setBlockOutlineColor(r, g, b, a)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -730,7 +724,7 @@ renderer:getBlockOutlineColor()
 Sets the offset of your crosshair
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setCrosshairOffset(vec)
@@ -748,8 +742,8 @@ setCrosshairOffset(vec)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setCrosshairOffset(x, y)
@@ -768,8 +762,7 @@ setCrosshairOffset(x, y)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -809,7 +802,7 @@ renderer:getCrosshairOffset()
 Sets an offset for the entity eye position, altering the targeted block and entity
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setEyeOffset(pos)
@@ -827,8 +820,8 @@ setEyeOffset(pos)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setEyeOffset(x, y, z)
@@ -848,8 +841,7 @@ setEyeOffset(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -893,7 +885,7 @@ Sets the multiplier of your fov
 The default value is nil, which means no changes will be applied to your fov
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setFOV()
@@ -905,8 +897,8 @@ setFOV()
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setFOV(fov)
@@ -924,8 +916,7 @@ setFOV(fov)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -993,7 +984,7 @@ renderer:setForcePaperdoll(true)
 Sets the custom glowing effect's outline color
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOutlineColor(rgb)
@@ -1011,8 +1002,8 @@ setOutlineColor(rgb)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOutlineColor(r, g, b)
@@ -1032,8 +1023,7 @@ setOutlineColor(r, g, b)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1495,7 +1485,7 @@ The default value is nil, which means to use the vanilla default of 0.5 for play
 The maximum value is 12
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setShadowRadius()
@@ -1507,8 +1497,8 @@ setShadowRadius()
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setShadowRadius(radius)
@@ -1526,8 +1516,7 @@ setShadowRadius(radius)
 | --------------------------------------------- | ------------------------- |
 | <code>[RendererAPI](/globals/Renderer)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

@@ -24,7 +24,7 @@ A Title can be given to store this page internally
 If no Title is given, the Page will just be returned from this function
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newPage()
@@ -36,8 +36,8 @@ newPage()
 | ----------------------------------------------- | ------------------------------------------ |
 | <code>[Page](/globals/Action-Wheel/Page)</code> | An action wheel page that contains actions |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 newPage(title)
@@ -55,8 +55,7 @@ newPage(title)
 | ----------------------------------------------- | ------------------------------------------ |
 | <code>[Page](/globals/Action-Wheel/Page)</code> | An action wheel page that contains actions |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 1):**
@@ -72,7 +71,7 @@ local myPage = action_wheel:newPage()
 Sets the Page of the action wheel to the given Title or Page
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPage(pageTitle)
@@ -90,8 +89,8 @@ setPage(pageTitle)
 | ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setPage(page)
@@ -109,8 +108,7 @@ setPage(page)
 | ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**
@@ -129,7 +127,7 @@ Returns a stored Page by the given title
 If no title is given, returns a table with all registered Pages
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getPage()
@@ -141,8 +139,8 @@ getPage()
 | --------------------------------------------- | ------------------------------------------------------ |
 | <code>[Table](/tutorials/types/Tables)</code> | A table where each index is a page in the action wheel |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2" default>
+</TabItem>
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 getPage(pageTitle)
@@ -160,8 +158,7 @@ getPage(pageTitle)
 | ----------------------------------------------- | ------------------------------------------ |
 | <code>[Page](/globals/Action-Wheel/Page)</code> | An action wheel page that contains actions |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 2):**
@@ -278,7 +275,7 @@ If the index is null, it will execute the last selected action
 A second parameter can be given to specify if it should execute the left click or right click action
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 execute()
@@ -290,8 +287,8 @@ execute()
 | ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 execute(index)
@@ -309,8 +306,8 @@ execute(index)
 | ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3" default>
+</TabItem>
+<TabItem value="overload-3" label="Overload 3" default>
 
 ```lua
 execute(index, rightClick)
@@ -329,8 +326,7 @@ execute(index, rightClick)
 | ---------------------------------------------------- | ------------------------- |
 | <code>[ActionWheelAPI](/globals/Action-Wheel)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example (Overload 3):**

@@ -24,7 +24,7 @@ The boolean gui indicates whether the keybind should always work, or if it shoul
 Check the docs enum command for all key names
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newKeybind(name)
@@ -42,8 +42,8 @@ newKeybind(name)
 | ------------------------------------------------- | ----------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 newKeybind(name, key)
@@ -62,8 +62,8 @@ newKeybind(name, key)
 | ------------------------------------------------- | ----------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3" default>
+</TabItem>
+<TabItem value="overload-3" label="Overload 3" default>
 
 ```lua
 newKeybind(name, key, gui)
@@ -83,8 +83,7 @@ newKeybind(name, key, gui)
 | ------------------------------------------------- | ----------- |
 | <code>[Keybind](/globals/Keybinds/Keybind)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

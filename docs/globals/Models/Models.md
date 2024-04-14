@@ -86,7 +86,7 @@ Angles are given in degrees
 For relative rotation values, check out the "offset" rot functions
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setRot(rot)
@@ -104,8 +104,8 @@ setRot(rot)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setRot(x, y, z)
@@ -125,8 +125,7 @@ setRot(x, y, z)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -170,7 +169,7 @@ Sets the position offset for this part from its Blockbench position
 Nil values for position are assumed to be 0
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -188,8 +187,8 @@ setPos(pos)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -209,8 +208,7 @@ setPos(x, y, z)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -254,7 +252,7 @@ Sets the scale factor for this part
 Nil values for scale are assumed to be 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setScale(scale)
@@ -272,8 +270,8 @@ setScale(scale)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setScale(x, y, z)
@@ -293,8 +291,7 @@ setScale(x, y, z)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -340,7 +337,7 @@ Nil values are assumed to be 0
 For relative pivot offsets, check out the "offset" pivot functions
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPivot(pivot)
@@ -358,8 +355,8 @@ setPivot(pivot)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPivot(x, y, z)
@@ -379,8 +376,7 @@ setPivot(x, y, z)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -428,7 +424,7 @@ Angles are given in degrees
 For absolute rotation values, check out the non-offset rot functions
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOffsetRot(offsetRot)
@@ -446,8 +442,8 @@ setOffsetRot(offsetRot)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOffsetRot(x, y, z)
@@ -467,8 +463,7 @@ setOffsetRot(x, y, z)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -514,7 +509,7 @@ Nil values are assumed to be 1
 For absolute scale values, check out the non-offset rot functions
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOffsetScale(offsetScale)
@@ -532,8 +527,8 @@ setOffsetScale(offsetScale)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOffsetScale(x, y, z)
@@ -553,8 +548,7 @@ setOffsetScale(x, y, z)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -600,7 +594,7 @@ Nil values are assumed to be 0
 For absolute pivot point values, check out the non-offset pivot functions
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOffsetPivot(offsetPivot)
@@ -618,8 +612,8 @@ setOffsetPivot(offsetPivot)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOffsetPivot(x, y, z)
@@ -639,8 +633,7 @@ setOffsetPivot(x, y, z)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1156,7 +1149,7 @@ Values you give are 0 to 15, indicating the block light and sky light levels you
 Passing nil will reset the lighting override for this part
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setLight(light)
@@ -1174,8 +1167,8 @@ setLight(light)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setLight(blockLight, skyLight)
@@ -1194,8 +1187,7 @@ setLight(blockLight, skyLight)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1244,7 +1236,7 @@ Values you give are 0 to 15, indicating the white overlay and the damage overlay
 Passing nil will reset the overlay override for this part
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOverlay(overlay)
@@ -1262,8 +1254,8 @@ setOverlay(overlay)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOverlay(whiteOverlay, hurtOverlay)
@@ -1282,8 +1274,7 @@ setOverlay(whiteOverlay, hurtOverlay)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1329,7 +1320,7 @@ Sets the color multiplier for this part for primary and secondary colors
 Values are RGB from 0 to 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setColor(color)
@@ -1347,8 +1338,8 @@ setColor(color)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setColor(r, g, b)
@@ -1368,8 +1359,7 @@ setColor(r, g, b)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1413,7 +1403,7 @@ Sets the primary color multiplier for this part
 Values are RGB from 0 to 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPrimaryColor(color)
@@ -1431,8 +1421,8 @@ setPrimaryColor(color)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPrimaryColor(r, g, b)
@@ -1452,8 +1442,7 @@ setPrimaryColor(r, g, b)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1497,7 +1486,7 @@ Sets the secondary color multiplier for this part
 Values are RGB from 0 to 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setSecondaryColor(color)
@@ -1515,8 +1504,8 @@ setSecondaryColor(color)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setSecondaryColor(r, g, b)
@@ -1536,8 +1525,7 @@ setSecondaryColor(r, g, b)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1811,7 +1799,7 @@ If using "resource", the second parameter should indicate the path to the Minecr
 If using "custom", the second parameter should indicate a texture object
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPrimaryTexture(textureType)
@@ -1829,8 +1817,8 @@ setPrimaryTexture(textureType)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPrimaryTexture(resource, path)
@@ -1849,8 +1837,8 @@ setPrimaryTexture(resource, path)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setPrimaryTexture(custom, texture)
@@ -1869,8 +1857,7 @@ setPrimaryTexture(custom, texture)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1948,7 +1935,7 @@ If using "resource", the second parameter should indicate the path to the Minecr
 If using "custom", the second parameter should indicate a texture object
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setSecondaryTexture(textureType)
@@ -1966,8 +1953,8 @@ setSecondaryTexture(textureType)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setSecondaryTexture(resource, path)
@@ -1986,8 +1973,8 @@ setSecondaryTexture(resource, path)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setSecondaryTexture(custom, texture)
@@ -2006,8 +1993,7 @@ setSecondaryTexture(custom, texture)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -2131,7 +2117,7 @@ This function is normalized, meaning it works with values 0 to 1
 If you say setUV(0.5, 0.25), for example, it will scroll by half of your texture width to the right, and one-fourth of the texture width downwards
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setUV(uv)
@@ -2149,8 +2135,8 @@ setUV(uv)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setUV(u, v)
@@ -2169,8 +2155,7 @@ setUV(u, v)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -2218,7 +2203,7 @@ Errors if the part has multiple different-sized textures
 If this part is a Group, it will attempt to setUVPixels on its children
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setUVPixels(uv)
@@ -2236,8 +2221,8 @@ setUVPixels(uv)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setUVPixels(u, v)
@@ -2256,8 +2241,7 @@ setUVPixels(u, v)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -2530,7 +2514,7 @@ Gets the Render Task with the given name from this part
 Returns a table with all tasks if a name is not given
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getTask()
@@ -2542,8 +2526,8 @@ getTask()
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getTask(taskName)
@@ -2561,8 +2545,7 @@ getTask(taskName)
 | ----------------------------------------------------- | ----------- |
 | <code>[RenderTask](/globals/Models/RenderTask)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -2580,7 +2563,7 @@ Removes the Task with the given name from this part
 Removes ALL tasks if a name is not given
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 removeTask()
@@ -2592,8 +2575,8 @@ removeTask()
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 removeTask(taskName)
@@ -2611,8 +2594,8 @@ removeTask(taskName)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 removeTask(renderTask)
@@ -2630,8 +2613,7 @@ removeTask(renderTask)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -2974,7 +2956,7 @@ Creates a new, empty, group model part as a child of this part, at the same pivo
 Takes two arguments, the new part's name, and optionally its parent type
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newPart(name)
@@ -2992,8 +2974,8 @@ newPart(name)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 newPart(name, parentType)
@@ -3012,8 +2994,7 @@ newPart(name, parentType)
 | ----------------------------------------- | ------------------------- |
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

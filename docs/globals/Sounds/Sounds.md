@@ -22,7 +22,7 @@ Volume in Minecraft refers to how far away people can hear the sound from, not t
 If you don't give values for volume and pitch, the default values are 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 playSound(sound, pos)
@@ -41,8 +41,8 @@ playSound(sound, pos)
 | ------------------------------------- | ----------- |
 | <code>[Sound](/globals/Sounds)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 playSound(sound, posX, posY, posZ)
@@ -63,8 +63,8 @@ playSound(sound, posX, posY, posZ)
 | ------------------------------------- | ----------- |
 | <code>[Sound](/globals/Sounds)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 playSound(sound, pos, volume, pitch, loop)
@@ -86,8 +86,8 @@ playSound(sound, pos, volume, pitch, loop)
 | ------------------------------------- | ----------- |
 | <code>[Sound](/globals/Sounds)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-4" label="Overload 4">
+</TabItem>
+<TabItem value="overload-4" label="Overload 4">
 
 ```lua
 playSound(sound, posX, posY, posZ, volume, pitch, loop)
@@ -111,8 +111,7 @@ playSound(sound, posX, posY, posZ, volume, pitch, loop)
 | ------------------------------------- | ----------- |
 | <code>[Sound](/globals/Sounds)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -130,7 +129,7 @@ Stops the playing sounds from this avatar
 If an id is specified, it only stops the sounds from that id
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 stopSound()
@@ -142,8 +141,8 @@ stopSound()
 | ---------------------------------------------- | ------------------------- |
 | <code>[SoundAPI](/globals/Sounds/Sound)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 stopSound(id)
@@ -161,8 +160,7 @@ stopSound(id)
 | ---------------------------------------------- | ------------------------- |
 | <code>[SoundAPI](/globals/Sounds/Sound)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -180,7 +178,7 @@ Registers a new custom sound for this avatar
 The first argument is the sound id while the second argument is either a byte array of the sound data or a base64 string representation of the same
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 newSound(name, byteArray)
@@ -199,8 +197,8 @@ newSound(name, byteArray)
 | ---------------------------------------------- | ------------------------- |
 | <code>[SoundAPI](/globals/Sounds/Sound)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 newSound(name, base64Text)
@@ -219,8 +217,7 @@ newSound(name, base64Text)
 | ---------------------------------------------- | ------------------------- |
 | <code>[SoundAPI](/globals/Sounds/Sound)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

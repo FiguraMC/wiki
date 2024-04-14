@@ -1211,7 +1211,7 @@ client:getTabList()
 Returns the width and height of the given text, wrapping lines and trimming to a max width
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getTextDimensions(text)
@@ -1229,8 +1229,8 @@ getTextDimensions(text)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getTextDimensions(text, maxWidth, wrap)
@@ -1250,8 +1250,7 @@ getTextDimensions(text, maxWidth, wrap)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1351,7 +1350,7 @@ Translation is done using the current client language
 Optionally takes a single argument, or a list with all arguments, that will populate the translation
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getTranslatedString(text)
@@ -1369,8 +1368,8 @@ getTranslatedString(text)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getTranslatedString(text, args)
@@ -1389,8 +1388,7 @@ getTranslatedString(text, args)
 | ----------------------------------------------- | ----------- |
 | <code>[String](/tutorials/types/Strings)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

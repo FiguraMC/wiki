@@ -88,7 +88,7 @@ myText:getPath()
 Sets the RGBA color of the specified pixel
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPixel(x, y, rgb)
@@ -108,8 +108,8 @@ setPixel(x, y, rgb)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPixel(x, y, rgba)
@@ -129,8 +129,8 @@ setPixel(x, y, rgba)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setPixel(x, y, r, g, b, a)
@@ -153,8 +153,7 @@ setPixel(x, y, r, g, b, a)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -283,7 +282,7 @@ myTex:applyMatrix(0, 0, dimensions.x, dimensions.y, matrices.mat4():scale(color)
 Sets the RGBA color of the entire specified region
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 fill(x, y, width, height, rgb)
@@ -305,8 +304,8 @@ fill(x, y, width, height, rgb)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 fill(x, y, width, height, rgba)
@@ -328,8 +327,8 @@ fill(x, y, width, height, rgba)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 fill(x, y, width, height, r, g, b, a)
@@ -354,8 +353,7 @@ fill(x, y, width, height, r, g, b, a)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Texture](/globals/Textures/Texture)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

@@ -50,7 +50,7 @@ Linearly interpolates from its first argument to its second argument, with the t
 Works on both regular numbers, vectors of the same type, and matrices of the same type
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 lerp(a, b, t)
@@ -70,8 +70,8 @@ lerp(a, b, t)
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 lerp(a, b, t)
@@ -91,8 +91,8 @@ lerp(a, b, t)
 | ---------------------------------------- | ----------- |
 | <code>[Vector](/category/vectors)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 lerp(a, b, t)
@@ -112,8 +112,7 @@ lerp(a, b, t)
 | ----------------------------------------- | ----------- |
 | <code>[Matrix](/category/matrices)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

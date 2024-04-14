@@ -274,7 +274,7 @@ myMat:getRow(1)
 Treats the given values as a vector, augments this vector with a 1, multiplies it against the matrix, and returns a deaugmented vector of the first values
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 apply(vec)
@@ -292,8 +292,8 @@ apply(vec)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 apply(x, y)
@@ -312,8 +312,7 @@ apply(x, y)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -329,7 +328,7 @@ myMat:apply()
 Treats the given values as a vector, augments this vector with a 0, multiplies it against the matrix, and returns a deaugmented vector of the first values
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 applyDir(vec)
@@ -347,8 +346,8 @@ applyDir(vec)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 applyDir(x, y)
@@ -367,8 +366,7 @@ applyDir(x, y)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -388,7 +386,7 @@ Angles are given in degrees
 Returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 rotate(vec)
@@ -406,8 +404,8 @@ rotate(vec)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 rotate(x, y, z)
@@ -427,8 +425,7 @@ rotate(x, y, z)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -536,7 +533,7 @@ Scales this matrix by the specified amount, changing the values inside
 Returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 scale(vec)
@@ -554,8 +551,8 @@ scale(vec)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 scale(x, y, z)
@@ -575,8 +572,7 @@ scale(x, y, z)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -594,7 +590,7 @@ Translates this matrix by the specified amount, changing the values inside
 Returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 translate(vec)
@@ -612,8 +608,8 @@ translate(vec)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 translate(x, y)
@@ -632,8 +628,7 @@ translate(x, y)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix3](/globals/Matrices/Matrix3)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

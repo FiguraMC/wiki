@@ -122,7 +122,7 @@ nameplate.Entity:hasOutline()
 Sets the color used for the outline in the outline mode
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setOutlineColor(color)
@@ -140,8 +140,8 @@ setOutlineColor(color)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setOutlineColor(r, g, b)
@@ -161,8 +161,7 @@ setOutlineColor(r, g, b)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -238,7 +237,7 @@ Sets the color of the nameplate background
 If the alpha value is not given, it will use the vanilla value (as in the accessibility settings)
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setBackgroundColor(rgba)
@@ -256,8 +255,8 @@ setBackgroundColor(rgba)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setBackgroundColor(r, g, b, a)
@@ -278,8 +277,7 @@ setBackgroundColor(r, g, b, a)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -323,7 +321,7 @@ Values are given from 0 to 15, indicating the block light and sky light levels y
 Passing nil will reset the lighting override
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setLight(light)
@@ -341,8 +339,8 @@ setLight(light)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setLight(blockLight, skyLight)
@@ -361,8 +359,7 @@ setLight(blockLight, skyLight)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -402,7 +399,7 @@ nameplate.Entity:getLight()
 Sets the pivot of the nameplate, in world coordinates
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPivot(pivot)
@@ -420,8 +417,8 @@ setPivot(pivot)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPivot(x, y, z)
@@ -441,8 +438,7 @@ setPivot(x, y, z)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -482,7 +478,7 @@ nameplate.Entity:getPivot()
 Sets the position offset of the nameplate, in world coordinates
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -500,8 +496,8 @@ setPos(pos)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -521,8 +517,7 @@ setPos(x, y, z)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -562,7 +557,7 @@ nameplate.Entity:getPos()
 Sets the scale factor of the nameplate
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setScale(scale)
@@ -580,8 +575,8 @@ setScale(scale)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setScale(x, y, z)
@@ -601,8 +596,7 @@ setScale(x, y, z)
 | -------------------------------------------------------------------------------------------- | ------------------------- |
 | <code>[EntityNameplateCustomization](/globals/Nameplate/EntityNameplateCustomization)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

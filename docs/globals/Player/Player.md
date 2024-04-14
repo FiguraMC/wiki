@@ -55,7 +55,7 @@ If delta is passed in, then it will be used to linearly interpolate the position
 The default value of delta is 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getPos()
@@ -67,8 +67,8 @@ getPos()
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getPos(delta)
@@ -86,8 +86,7 @@ getPos(delta)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -107,7 +106,7 @@ If delta is passed in, then it will be used to linearly interpolate the rotation
 The default value of delta is 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getRot()
@@ -119,8 +118,8 @@ getRot()
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getRot(delta)
@@ -138,8 +137,7 @@ getRot(delta)
 | ------------------------------------------------ | ----------- |
 | <code>[Vector2](/globals/Vectors/Vector2)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -159,7 +157,7 @@ If delta is passed in, then it will be used to linearly interpolate the rotation
 The default value of delta is 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getBodyYaw()
@@ -171,8 +169,8 @@ getBodyYaw()
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getBodyYaw(delta)
@@ -190,8 +188,7 @@ getBodyYaw(delta)
 | ----------------------------------------------- | ----------- |
 | <code>[Number](/tutorials/types/Numbers)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -606,7 +603,7 @@ player:getExperienceLevel()
 Returns a table of the nbt of this entity left or right shoulder entity
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getShoulderEntity()
@@ -618,8 +615,8 @@ getShoulderEntity()
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getShoulderEntity(right)
@@ -637,8 +634,7 @@ getShoulderEntity(right)
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1510,7 +1506,7 @@ This Entity appears on the F3 screen
 Maximum and Default distance is 20, Minimum is 0
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getTargetedEntity()
@@ -1523,8 +1519,8 @@ getTargetedEntity()
 | <code>[Entity](/globals/Player/Entity)</code>    | Targeted entity |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position    |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getTargetedEntity(distance)
@@ -1543,8 +1539,7 @@ getTargetedEntity(distance)
 | <code>[Entity](/globals/Player/Entity)</code>    | Targeted entity |
 | <code>[Vector3](/globals/Vectors/Vector3)</code> | Hit position    |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1569,7 +1564,7 @@ The maximum (and default) distance is 20, minimum is -20
 Returns the block, the hit position, and the targeted block face as three separate values
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getTargetedBlock()
@@ -1583,8 +1578,8 @@ getTargetedBlock()
 | <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position        |
 | <code>[String](/tutorials/types/Strings)</code>      | Targeted block face |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getTargetedBlock(ignoreLiquids)
@@ -1604,8 +1599,8 @@ getTargetedBlock(ignoreLiquids)
 | <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position        |
 | <code>[String](/tutorials/types/Strings)</code>      | Targeted block face |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 getTargetedBlock(ignoreLiquids, distance)
@@ -1626,8 +1621,7 @@ getTargetedBlock(ignoreLiquids, distance)
 | <code>[Vector3](/globals/Vectors/Vector3)</code>     | Hit position        |
 | <code>[String](/tutorials/types/Strings)</code>      | Targeted block face |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -1894,7 +1888,7 @@ If true is passed in for "offhand", then it will instead look at the item in the
 If the entity isn't holding an item in that hand, returns air
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getHeldItem()
@@ -1906,8 +1900,8 @@ getHeldItem()
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getHeldItem(offhand)
@@ -1925,8 +1919,7 @@ getHeldItem(offhand)
 | -------------------------------------------------- | ----------- |
 | <code>[ItemStack](/globals/World/ItemStack)</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -2219,7 +2212,7 @@ player:getUUID()
 Gets the value of a variable this entity stored in themselves using the Avatar API's store() function
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 getVariable()
@@ -2231,8 +2224,8 @@ getVariable()
 | -------------------- | ----------- |
 | <code>AnyType</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 getVariable(key)
@@ -2250,8 +2243,7 @@ getVariable(key)
 | -------------------- | ----------- |
 | <code>AnyType</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

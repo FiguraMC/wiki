@@ -70,7 +70,7 @@ Loads a saved variable under the specific key
 If no key is given, it will return a table with all saved variables
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 load()
@@ -82,8 +82,8 @@ load()
 | --------------------------------------------- | ----------- |
 | <code>[Table](/tutorials/types/Tables)</code> | -           |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 load(key)
@@ -101,8 +101,7 @@ load(key)
 | -------------------- | ----------- |
 | <code>AnyType</code> | -           |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

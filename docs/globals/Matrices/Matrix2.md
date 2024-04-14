@@ -364,7 +364,7 @@ Scales this matrix by the specified amount, changing the values inside
 Returns self for chaining
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 scale(vec)
@@ -382,8 +382,8 @@ scale(vec)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 scale(x, y)
@@ -402,8 +402,7 @@ scale(x, y)
 | ------------------------------------------------- | ------------------------- |
 | <code>[Matrix2](/globals/Matrices/Matrix2)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

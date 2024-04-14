@@ -46,7 +46,7 @@ Sets this particle position
 The position is given in world coordinates
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -64,8 +64,8 @@ setPos(pos)
 | ---------------------------------------------------- | --------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -85,8 +85,7 @@ setPos(x, y, z)
 | ---------------------------------------------------- | --------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -133,7 +132,7 @@ Accepts an alpha value, but most particles do not support it
 Default RGBA of 1
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setColor(rgb)
@@ -151,8 +150,8 @@ setColor(rgb)
 | ---------------------------------------------------- | --------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setColor(rgba)
@@ -170,8 +169,8 @@ setColor(rgba)
 | ---------------------------------------------------- | --------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-3" label="Overload 3">
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
 
 ```lua
 setColor(r, g, b, a)
@@ -192,8 +191,7 @@ setColor(r, g, b, a)
 | ---------------------------------------------------- | --------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -289,7 +287,7 @@ Sets the velocity of this particle
 The velocity is given in world coordinates
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setVelocity(velocity)
@@ -307,8 +305,8 @@ setVelocity(velocity)
 | ---------------------------------------------------- | --------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setVelocity(x, y, z)
@@ -328,8 +326,7 @@ setVelocity(x, y, z)
 | ---------------------------------------------------- | --------------------------------- |
 | <code>[Particle](/globals/Particles/Particle)</code> | Returns the particle for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**

@@ -22,7 +22,7 @@ local myVertex = models:getVertices("myTexture")[1]
 Sets the position vector of this vertex
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setPos(pos)
@@ -40,8 +40,8 @@ setPos(pos)
 | --------------------------------------------- | ------------------------- |
 | <code>[Vertex](/globals/Models/Vertex)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setPos(x, y, z)
@@ -61,8 +61,7 @@ setPos(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[Vertex](/globals/Models/Vertex)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -102,7 +101,7 @@ myVertex:getPos()
 Sets the UV vector of this vertex
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setUV(UV)
@@ -120,8 +119,8 @@ setUV(UV)
 | --------------------------------------------- | ------------------------- |
 | <code>[Vertex](/globals/Models/Vertex)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setUV(u, v)
@@ -140,8 +139,7 @@ setUV(u, v)
 | --------------------------------------------- | ------------------------- |
 | <code>[Vertex](/globals/Models/Vertex)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -181,7 +179,7 @@ myVertex:getUV()
 Sets the normal vector of this vertex
 
 <Tabs>
-    <TabItem value="overload-1" label="Overload 1">
+<TabItem value="overload-1" label="Overload 1">
 
 ```lua
 setNormal(normal)
@@ -199,8 +197,8 @@ setNormal(normal)
 | --------------------------------------------- | ------------------------- |
 | <code>[Vertex](/globals/Models/Vertex)</code> | Returns self for chaining |
 
-    </TabItem>
-    <TabItem value="overload-2" label="Overload 2">
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
 
 ```lua
 setNormal(x, y, z)
@@ -220,8 +218,7 @@ setNormal(x, y, z)
 | --------------------------------------------- | ------------------------- |
 | <code>[Vertex](/globals/Models/Vertex)</code> | Returns self for chaining |
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 **Example:**
