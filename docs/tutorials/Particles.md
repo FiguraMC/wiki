@@ -54,4 +54,4 @@ It's in an entity_init event to protect from an entity init error
 
 ### Confetti by Manuel
 
-Spawns custom particles that you make in Blockbench. [Find it here on GitHub](https://github.com/Manuel-3/confetti)
+Spawns custom particles that you make in Blockbench. [Find it here on GitHub](https://github.com/Manuel-3/figura-scripts/tree/main/src/confetti)
