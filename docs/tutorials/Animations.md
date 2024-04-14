@@ -32,7 +32,7 @@ If you're looking at your animation in Blockbench and there's two names, the sma
 
 <img src={require("@site/static/img/animation/exampleLie.png").default} width="400"></img>
 
-**You can't use the method above to play the animation if it looks like this iamge**
+**You can't use the method above to play the animation if it looks like this image**
 
 You have two options: Rename the animation, or deal with the long animation name
 
