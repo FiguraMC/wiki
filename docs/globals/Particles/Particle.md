@@ -445,6 +445,12 @@ myParticle:setPower(2)
 
 Gets the last number passed into setPower, but not the total power of the particle
 
+:::caution
+
+getPower doesn't get the particle's actual power, but the number last passed into setPower
+
+:::
+
 ```lua
 getPower()
 ```

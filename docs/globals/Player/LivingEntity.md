@@ -1305,6 +1305,19 @@ thisEntity:isOnFire()
 
 ### <code>isOnGround()</code> \{#isOnGround}
 
+:::caution
+
+Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block.
+
+**Work Around:**
+
+```lua
+-- check the blockstate of the block directly underneath the entity
+world.getBlockState(thisEntity:getPos():add(0, -0.1, 0)):isSolidBlock()
+```
+
+:::
+
 Returns whether or not this entity is currently on the ground
 
 ```lua

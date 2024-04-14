@@ -143,7 +143,9 @@ myAction:setOnToggle(pings.setVisible)
 **Aliases:** `onUntoggle()`
 
 :::warning
-This method is a noob trap, anything it can do setOnToggle does better because setOnToggle also runs its function when untoggled
+
+This method is a noob trap, anything it can do [`setOnToggle`](#setOnToggle) does better because `setOnToggle` also runs its function when untoggled
+
 :::
 
 Sets the function that is executed when the Action is untoggled

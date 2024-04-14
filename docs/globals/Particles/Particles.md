@@ -17,6 +17,12 @@ Some particles have special properties, like the "dust" particle
 
 For these particles, the special properties can be put into the "name" parameter, the same way as it works for commands
 
+:::caution
+
+Particle behavior and spawning methods vary per particle, refer to the /particle command for assistance spawning some particles
+
+:::
+
 <Tabs>
 <TabItem value="overload-1" label="Overload 1">
 

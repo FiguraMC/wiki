@@ -81,6 +81,12 @@ mySound:pause()
 
 ### <code>isPlaying()</code> \{#isPlaying}
 
+:::caution
+
+This function is unreliable and may not work as intended. A usable workaround is to stop the sound before you play it (even if it isn't playing) so you can reset the playing state.
+
+:::
+
 Checks if this sound is being played
 
 ```lua

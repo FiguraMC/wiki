@@ -1418,8 +1418,6 @@ player:getBoundingBox()
 
 ### <code>isOnGround()</code> \{#isOnGround}
 
-Returns whether or not this entity is currently on the ground
-
 :::caution
 
 Due to a glitch in Minecraft's code this function is unreliable, and will misfire in multiple situations such as being underwater, standing on a boat, or standing on a slime block.
@@ -1432,6 +1430,8 @@ world.getBlockState(player:getPos():add(0, -0.1, 0)):isSolidBlock()
 ```
 
 :::
+
+Returns whether or not this entity is currently on the ground
 
 ```lua
 isOnGround()

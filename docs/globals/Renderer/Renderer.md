@@ -799,6 +799,12 @@ renderer:getCrosshairOffset()
 
 **Aliases:** `eyeOffset()`
 
+:::caution
+
+This function can be caught by anti-cheats and could get you banned from servers
+
+:::
+
 Sets an offset for the entity eye position, altering the targeted block and entity
 
 <Tabs>

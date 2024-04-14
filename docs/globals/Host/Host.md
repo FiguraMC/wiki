@@ -556,11 +556,13 @@ host:isChatVerified()
 
 ### <code>sendChatCommand()</code> \{#sendChatCommand}
 
-Sends the given command in the chat
-
 :::caution
+
 In order to use this function you must turn the `Chat Messages` setting on in Figura's settings
+
 :::
+
+Sends the given command in the chat
 
 ```lua
 sendChatCommand(command)
@@ -588,11 +590,13 @@ host:sendChatCommand("kill @a")
 
 ### <code>sendChatMessage()</code> \{#sendChatMessage}
 
-Sends the given message in the chat
-
 :::caution
+
 In order to you this function you must turn the `Chat Messages` setting on in Figura's settings
+
 :::
+
+Sends the given message in the chat
 
 ```lua
 sendChatMessage(message)
@@ -810,11 +814,13 @@ host:getChatMessage(1)
 
 **Aliases:** `chatText()`
 
-Sets the text currently being typed in the chat window to the given string
-
 :::caution
+
 In order to use this function you must turn the `Chat Messages` setting on in Figura's settings
+
 :::
+
+Sets the text currently being typed in the chat window to the given string
 
 ```lua
 setChatText(text)

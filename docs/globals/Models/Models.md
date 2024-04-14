@@ -2060,6 +2060,12 @@ models:getSecondaryDefinedTextures()
 
 ### <code>getTextures()</code> \{#getTextures}
 
+:::caution
+
+This function is currently bugged, but it is mainly useless anyway
+
+:::
+
 Returns a table with all textures used by this part
 
 Does not include children textures, so groups usually will return an empty table
