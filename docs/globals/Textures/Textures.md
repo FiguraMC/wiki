@@ -203,8 +203,18 @@ read(name, byteArray)
 
 **Example:**
 
+<!-- prettier-ignore -->
 ```lua
---todo
+-- Reads a texture stored in an item's name...
+local page = action_wheel:newPage()
+action_wheel:setPage(page)
+page:newAction()
+    :onLeftClick(function()
+        local base64 = parseJson(player:getItem(1):getTag().display.Name).text
+        -- highlight-next-line
+        local tex = textures:read('tex', base64)
+        models.myModel:setPrimaryTexture('custom', tex)
+    end)
 ```
 
 ---

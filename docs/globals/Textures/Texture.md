@@ -223,7 +223,19 @@ applyFunc(x, y, width, height, func)
 **Example:**
 
 ```lua
---todo
+-- multiplying each pixel in the texture by a color to tint it
+local dimensions = myTex:getDimensions()
+local tint = vec(140 / 255, 254 / 255, 254 / 255, 255 / 255)
+
+-- create a function that accepts the color of the pixel, and its x, y position
+function tintFunc(color, x, y)
+    -- multiply the color of the pixel by our tint
+    return color:mul(tint)
+end
+
+-- call the function on each pixel with applyFunc
+-- highlight-next-line
+myTex:applyFunc(0, 0, dimensions.x, dimensions.y, tintFunc)
 ```
 
 ---
@@ -258,7 +270,10 @@ applyMatrix(x, y, width, height, matrix, clip)
 **Example:**
 
 ```lua
---todo
+-- multiplying each pixel in the texture by a color to tint it
+local color = vec(140 / 255, 254 / 255, 254 / 255)
+local dimensions = myTex:getDimensions()
+myTex:applyMatrix(0, 0, dimensions.x, dimensions.y, matrices.mat4():scale(color))
 ```
 
 ---

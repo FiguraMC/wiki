@@ -7,6 +7,12 @@ A matrix with 4 rows and 4 columns
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
+For this entire page assume:
+
+```lua
+local myMat = matrices.mat4()
+```
+
 ---
 
 ## Math
@@ -18,7 +24,7 @@ Adds the other matrix to this one
 Returns self for chaining
 
 ```lua
---todo
+add(other)
 ```
 
 **Parameters:**
@@ -36,7 +42,7 @@ Returns self for chaining
 **Example:**
 
 ```lua
---todo
+myMat:add(matrices.mat4():scale(2))
 ```
 
 ---
@@ -66,7 +72,7 @@ sub(other)
 **Example:**
 
 ```lua
---todo
+myMat:sub(matrices.mat4():scale(2))
 ```
 
 ---
@@ -164,7 +170,7 @@ multiply(other)
 **Example:**
 
 ```lua
---todo
+myMat:multiply(matrices.mat4():scale(2))
 ```
 
 ---
@@ -194,7 +200,7 @@ rightMultiply(other)
 **Example:**
 
 ```lua
---todo
+myMat:rightMultiply(matrices.mat4():scale(2))
 ```
 
 ---

@@ -7,6 +7,12 @@ A matrix with 2 rows and 2 columns
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
+For this entire page assume:
+
+```lua
+local myMat = matrices.mat2()
+```
+
 ---
 
 ## Math
@@ -36,7 +42,7 @@ add(other)
 **Example:**
 
 ```lua
---todo
+myMat:add(matrices.mat2():scale(2))
 ```
 
 ---
@@ -66,7 +72,7 @@ sub(other)
 **Example:**
 
 ```lua
---todo
+myMat:sub(matrices.mat2():scale(2))
 ```
 
 ---
@@ -164,7 +170,7 @@ multiply(other)
 **Example:**
 
 ```lua
---todo
+myMat:multiply(matrices.mat2():scale(2))
 ```
 
 ---
@@ -194,7 +200,7 @@ rightMultiply(other)
 **Example:**
 
 ```lua
---todo
+myMat:rightMultiply(matrices.mat2():scale(2))
 ```
 
 ---

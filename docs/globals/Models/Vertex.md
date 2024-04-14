@@ -7,6 +7,12 @@ A vertex object
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
+For this entire page assume:
+
+```lua
+local myVertex = models:getVertices("myTexture")[1]
+```
+
 ---
 
 ### <code>setPos()</code> \{#setPos}
@@ -62,7 +68,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
---todo
+myVertex:setPos(1, 2, 3)
 ```
 
 ---
@@ -84,7 +90,7 @@ getPos()
 **Example:**
 
 ```lua
---todo
+myVertex:getPos()
 ```
 
 ---
@@ -141,7 +147,7 @@ setUV(u, v)
 **Example:**
 
 ```lua
---todo
+myVertex:setUV(8, 8)
 ```
 
 ---
@@ -163,7 +169,7 @@ getUV()
 **Example:**
 
 ```lua
---todo
+myVertex:getUV()
 ```
 
 ---
@@ -221,7 +227,7 @@ setNormal(x, y, z)
 **Example:**
 
 ```lua
---todo
+myVertex:setNormal(0, 1, 0)
 ```
 
 ---
@@ -243,7 +249,7 @@ getNormal()
 **Example:**
 
 ```lua
---todo
+myVertex:getNormal()
 ```
 
 ---
