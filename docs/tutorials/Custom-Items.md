@@ -4,6 +4,8 @@ import FileTreeNode from '@site/src/components/FileTree/Node';
 
 # Custom Items
 
+Custom items tutorial
+
 Using Figura you can make custom items that are visible in first and third person.
 
 You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the item_render event combined.
@@ -11,6 +13,8 @@ You'll need to use the Item [keyword](../enums/ModelPartParentTypes) and the ite
 ## Item Keyword
 
 If you give a Blockbench group the Item keyword (by starting the group name with <code>Item</code>) it will be primed and ready to be used as an item. Without the event the Item group will vanish- and so will every item you hold. It has to be Item with a capital I.
+
+<img src={require("@site/static/img/items/good-keyword.png").default} width="400"></img>
 
 ## Item Render Event
 
@@ -28,11 +32,21 @@ This will replace every single item you're holding with your custom item
 
 ## Replacing Specific Items
 
-Here's an exmaple for replacing a single item:
+Here's an exmaple for replacing a single item by id:
 
 ```lua
 function events.item_render(item)
     if item.id == "minecraft:crossbow" then
+        return models.model.ItemBow
+    end
+end
+```
+
+Here's an exmaple for replacing a single item by name:
+
+```lua
+function events.item_render(item)
+    if item:getName() == "Lightning" then
         return models.model.ItemBow
     end
 end
@@ -89,6 +103,8 @@ or
 </FileTreeRoot>
 
 because you can have more than one of these keywords. Do **not** nest Item keywords inside another. And, do **not** have more than one custom item per instance of the Item keyword.
+
+<img src={require("@site/static/img/items/bad-location.png").default} width="400"></img>
 
 You **could** put your Item group in another group but be careful, doing so makes it easier to cause unwanted behavior. For example, if you put it into RightArm or LeftArm it will be force unrendered, defeating the point of it.
 

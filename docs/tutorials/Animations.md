@@ -1,3 +1,5 @@
+Tutorial for playing and troubleshooting Blockbench animations
+
 Figura can play animations from Blockbench using the Animation API.
 
 ## Playing an Animation

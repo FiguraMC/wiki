@@ -10,7 +10,7 @@ This page is a WIP. It contains all the information in Figura's documentation bu
 For this entire page assume:
 
 ```lua
-local mySprite = models:newSprite("myCoolSpritesName")
+local mySprite = models:newSprite("myCoolSpriteName")
 ```
 
 ---

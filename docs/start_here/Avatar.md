@@ -28,7 +28,7 @@ All Figura models are files from the program Blockbench which have the extension
 
 See more on Blockbench models [here](./BlockBench). If you want to learn how to use Blockbench there are many tutorials on Youtube made by the Blockbench community. You can download Blockbench from its [website](https://www.blockbench.net/).
 
-If you want your avatar to replace the vanilla model you'll want to select the Player Model option in the wizard (it becomes visible after selecting Include a Model). If you're going to be animating the custom player model it's suggested that you include all the other options under Include a Model.
+If you want your avatar to replace the vanilla model you'll want to select the Player Model option in the wizard (it becomes visible after selecting Include a Model). If you're going to be animating the custom player model it's suggested that you include all the other options under `Include a Model`.
 
 ## Scripts
 
@@ -40,14 +40,14 @@ More on what scripts can do can be found in the Tutorials and Globals section of
 
 Figura uses Lua 5.2.
 
-It is strongly suggested that you include dummy events (the option becomes visible after selecting Include a Script). If you're going to be replacing the player model it's suggested to include Hide Vanilla Player (which becomes visible after selecting Player Model in the Include a Model section).
+It is strongly suggested that you include dummy events (the option becomes visible after selecting `Include a Script`). If you're going to be replacing the player model it's suggested to include `Hide Vanilla Player` (which becomes visible after selecting `Player Model` in the `Include a Model` section).
 
 ## avatar.json
 
-When you press create in the avatar wizard it will open a folder with at least two files, one of which will be called avatar.json. This file is what's telling Figura that the stuff in that folder is a part of the same avatar.
+When you press create in the avatar wizard it will open a folder with at least two files, one of which will be called `avatar.json`. This file is what's telling Figura that the stuff in that folder is a part of the same avatar.
 
-You can find out more about the avatar.json file [here](../tutorials/Avatar-Metadata)
+You can find out more about the `avatar.json` file [here](../tutorials/Avatar-Metadata).
 
 ## avatar.png
 
-If the avatar has a file named avatar.png in it, that png file will become the image shown next to the avatar's name in the Figura menu.
+If the avatar has a file named `avatar.png` in it, that png file will become the image shown next to the avatar's name in the Figura menu.

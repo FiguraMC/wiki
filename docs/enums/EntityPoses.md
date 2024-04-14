@@ -29,6 +29,6 @@ end
 | `SNIFFING`     | _sniff_                                                                                | Warden         |
 | `EMERGING`     | Oh god oh no he's coming watch out                                                     | Warden         |
 | `DIGGING`      | I'm a dwarf and I'm...                                                                 | Warden         |
-| `INHALING`     | -                                                                                      | -              |
-| `SHOOTING`     | -                                                                                      | -              |
-| `SLIDING`      | -                                                                                      | -              |
+| `INHALING`     | -                                                                                      | Breeze         |
+| `SHOOTING`     | -                                                                                      | Breeze         |
+| `SLIDING`      | -                                                                                      | Breeze         |

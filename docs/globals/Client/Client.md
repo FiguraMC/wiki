@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A global API used to interact with the current Minecraft client
+
 :::warning
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
-
-A global API used to interact with the current Minecraft client
 
 Most of its functions return things that can be found in the F3 menu
 

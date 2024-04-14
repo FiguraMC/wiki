@@ -1,3 +1,5 @@
+Spawning particles tutorial
+
 Using the particle API you can spawn particles from Minecraft. These work similarly to the <code>/particle</code> command in-game. For particles with special properties like dust, they are placed in the name.
 
 Most of the article assumes you know to avoid calling the player in init.

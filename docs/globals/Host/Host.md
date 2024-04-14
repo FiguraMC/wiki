@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+A global API dedicated to specifically the host of the avatar
+
 :::warning
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
-
-A global API dedicated to specifically the host of the avatar
 
 For other viewers, these do nothing
 

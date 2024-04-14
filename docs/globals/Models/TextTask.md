@@ -10,7 +10,7 @@ This page is a WIP. It contains all the information in Figura's documentation bu
 For this entire page assume:
 
 ```lua
-local myText = models:newText("myCoolTextsName")
+local myText = models:newText("myCoolTextName")
 ```
 
 ---

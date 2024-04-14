@@ -6,10 +6,6 @@ A global API that provides functions to interact with the vanilla player model a
 
 Accessed using the global field `vanilla_model`
 
-:::warning
-This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
-:::
-
 ---
 
 ## Groups

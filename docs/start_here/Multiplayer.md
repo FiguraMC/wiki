@@ -20,6 +20,8 @@ If your fourth part is a red X, you’re not connected to the cloud.
 
 Figura will automatically attempt to connect you to the cloud when you join a server.
 
+If you're not connected there's a few options you can try.
+
 -   Check your internet connection
 -   Press the reload button, this will attempt to get information from the cloud and may connect you
 -   Leave and re-join the server, or restart Minecraft

@@ -1,3 +1,5 @@
+Information on pings
+
 With normal mods, there is comunication between the Minecraft Server and it's clients which allows everything to stay in sync. <br/>
 Figura is completely client-side. It will never comunicate with the Minecraft Server you are connected to. Figura does not have a server-side component, meaning nothing will happen if you put the mod on a server.<br/>
 

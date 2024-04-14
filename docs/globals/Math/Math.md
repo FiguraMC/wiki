@@ -1,11 +1,11 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+Contains functions which Figura adds to the default Lua "math" library table
+
 :::warning
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
-
-Contains functions which Figura adds to the default Lua "math" library table
 
 ---
 

@@ -6,11 +6,11 @@ import FileTreeNode from '@site/src/components/FileTree/Node';
 
 # Misc Globals
 
+Documentation for the various things Figura adds to the global lua state
+
 :::warning
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
-
-Documentation for the various things Figura adds to the global lua state
 
 ---
 

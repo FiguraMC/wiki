@@ -265,7 +265,7 @@ setColor(color)
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 </TabItem>
-<TabItem value="overload-2" label="Overload 2">
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setColor(r, g, b)
@@ -344,7 +344,7 @@ setHoverColor(color)
 | <code>[Action](/globals/Action-Wheel/Action)</code> | Returns self for chaining |
 
 </TabItem>
-<TabItem value="overload-2" label="Overload 2">
+<TabItem value="overload-2" label="Overload 2" default>
 
 ```lua
 setHoverColor(r, g, b)

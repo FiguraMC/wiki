@@ -4,6 +4,8 @@ import FileTreeNode from '@site/src/components/FileTree/Node';
 
 # Avatar Metadata
 
+avatar.json information
+
 <Emoji icon="file/json"/> <code>avatar.json</code> is the file that contains Avatar Metadata. It tells Figura specific information about the avatar.
 
 ## Json Basics

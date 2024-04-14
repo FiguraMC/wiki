@@ -4,10 +4,6 @@ sidebar_position: 1
 
 A global API that contains all of the figura Events
 
-:::warning
-This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
-:::
-
 Accessed using the name `events`
 
 ---
