@@ -1,8 +1,10 @@
 {
-    "label": "Events",
-    "link": {
-      "type": "generated-index",
-      "description": "List of all classes in the Events API."
-    }
+  "label": "Events",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Events API."
+  },
+  "customProps": {
+    "description": "A global API that contains all of the figura Events"
   }
-  
+}

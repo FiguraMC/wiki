@@ -1,8 +1,10 @@
 {
-    "label": "Particles",
-    "link": {
-      "type": "generated-index",
-      "description": "List of all classes in the Particles API."
-    }
+  "label": "Particles",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Particles API."
+  },
+  "customProps": {
+    "description": "A global API which is used for dealing with Minecraft's particles"
   }
-  
+}

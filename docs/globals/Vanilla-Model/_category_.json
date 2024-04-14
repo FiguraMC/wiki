@@ -1,8 +1,10 @@
 {
-    "label": "Vanilla Model",
-    "link": {
-      "type": "generated-index",
-      "description": "List of all classes in the Vanilla Model API."
-    }
+  "label": "Vanilla Model",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Vanilla Model API."
+  },
+  "customProps": {
+    "description": "A global API that provides functions to interact with the vanilla player model and its parts"
   }
-  
+}

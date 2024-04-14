@@ -1,8 +1,10 @@
 {
-    "label": "Data",
-    "link": {
-      "type": "generated-index",
-      "description": "List of all classes in the Data API."
-    }
+  "label": "Data",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Data API."
+  },
+  "customProps": {
+    "description": "A global API that provides functions to work with data related features"
   }
-  
+}

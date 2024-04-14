@@ -1,8 +1,10 @@
 {
-    "label": "Action Wheel",
-    "link": {
-      "type": "generated-index",
-      "description": "List of all classes in the Action Wheel API."
-    }
+  "label": "Action Wheel",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Action Wheel API."
+  },
+  "customProps": {
+    "description": "A global API which is used for customizing your player's Action Wheel"
   }
-  
+}

@@ -1,8 +1,10 @@
 {
-    "label": "Matrices",
-    "link": {
-      "type": "generated-index",
-      "description": "List of all classes in the Matrices API."
-    }
+  "label": "Matrices",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Matrices API."
+  },
+  "customProps": {
+    "description": "A global API which provides functions dedicated to creating and otherwise manipulating matrices"
   }
-  
+}

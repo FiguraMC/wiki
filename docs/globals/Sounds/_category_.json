@@ -1,8 +1,10 @@
 {
-    "label": "Sound",
-    "link": {
-      "type": "generated-index",
-      "description": "List of all classes in the Sound API."
-    }
+  "label": "Sound",
+  "link": {
+    "type": "generated-index",
+    "description": "List of all classes in the Sound API."
+  },
+  "customProps": {
+    "description": "A global API which is used to play Minecraft sounds"
   }
-  
+}
