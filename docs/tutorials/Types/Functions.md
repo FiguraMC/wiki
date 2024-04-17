@@ -31,11 +31,9 @@ This will output the following:
 You can also give the function some values to work with by putting variable names inside the (). These variables are called parameters. The function can also return a new value itself that is accessible from where the function is called. If no return is specified, the function returns nil (see "Types" section below).
 Here is an example of a function that calculates the sum of two numbers.
 
-````lua
-function sum(
-a,
-    b -- parameters seperated by commas
-)
+<!-- prettier-ignore -->
+```lua
+function sum(a, b) -- parameters seperated by commas
     local s = a + b -- calculate the sum
     return s -- return the sum to be used by the caller
 end
@@ -43,8 +41,8 @@ end
 local var1 = 2
 local var2 = 8
 local var3 = sum(var1, var2) -- call the function and pass two variables. note that these do not have to be called a and b
-print(var3) --> 10, as you might have noticed, `print` is also a function that takes a parameter```
-````
+print(var3) --> 10, as you might have noticed, `print` is also a function that takes a parameter
+```
 
 Some functions are called by Figura, you're probably familiar with events.
 

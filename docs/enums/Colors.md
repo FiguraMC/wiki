@@ -6,7 +6,7 @@ Used anywhere you can input a hex color
 | -------------- | ------------------------------------------------------------------------- |
 | `AWESOME_BLUE` | <code style={{color: 'black', backgroundColor: '#5EA5FF'}}>#5EA5FF</code> |
 | `PURPLE`       | <code style={{color: 'black', backgroundColor: '#A672EF'}}>#A672EF</code> |
-| `BLUE`         | <code style={{color: 'black', backgroundColor: '#5EA5FF'}}>#5EA5FF</code> |
+| `BLUE`         | <code style={{color: 'black', backgroundColor: '#00F0FF'}}>#00F0FF</code> |
 | `SOFT_BLUE`    | <code style={{color: 'black', backgroundColor: '#99BBEE'}}>#99BBEE</code> |
 | `RED`          | <code style={{backgroundColor: '#FF2400'}}>#FF2400</code>                 |
 | `ORANGE`       | <code style={{color: 'black', backgroundColor: '#FFC400'}}>#FFC400</code> |
