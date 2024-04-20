@@ -2051,6 +2051,8 @@ end
 
 ---
 
+## Hand Functions
+
 ### <code>isLeftHanded()</code> \{#isLeftHanded}
 
 Returns true if the entity's main hand is its left
