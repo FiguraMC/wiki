@@ -118,7 +118,7 @@ Consider the following avatar:<br/>
     </FileTreeNode>
     <FileTreeNode label="script.lua" icon="file/lua"/>
     <FileTreeNode label="skin.png" icon="file/texture"/>
-    <FileTreeNode label="skull.bbmodel" icon="file/bbmodel"/>
+    <FileTreeNode label="pet.bbmodel" icon="file/bbmodel"/>
   </FileTreeNode>
 </FileTreeRoot>
 
@@ -164,7 +164,7 @@ Consider the following avatar:<br/>
     </FileTreeNode>
     <FileTreeNode label="script.lua" icon="file/lua"/>
     <FileTreeNode label="skin.png" icon="file/texture"/>
-    <FileTreeNode label="skull.bbmodel" icon="file/bbmodel"/>
+    <FileTreeNode label="pet.bbmodel" icon="file/bbmodel"/>
   </FileTreeNode>
 </FileTreeRoot>
 
@@ -210,7 +210,7 @@ Consider this avatar:<br/>
     </FileTreeNode>
     <FileTreeNode label="script.lua" icon="file/lua"/>
     <FileTreeNode label="skin.png" icon="file/texture"/>
-    <FileTreeNode label="skull.bbmodel" icon="file/bbmodel"/>
+    <FileTreeNode label="pet.bbmodel" icon="file/bbmodel"/>
   </FileTreeNode>
 </FileTreeRoot>
 
