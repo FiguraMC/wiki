@@ -15,7 +15,7 @@ Raycasts based on a start position, an end position, and an array of Axis Aligne
 
 AABBs are encoded as a table with indicies 1 and 2 being a Vector3.
 
-`\{vec(0,0,0),vec(1,0.5,1)}` is a valid AABB, with `\{ \{vec(0,0,0),vec(1,0.5,1)}, \{vec(0,0.5,0.5),vec(1,1,1)} }` being a valid AABB array.
+`{vec(0,0,0),vec(1,0.5,1)}` is a valid AABB, with `{ {vec(0,0,0),vec(1,0.5,1)}, {vec(0,0.5,0.5),vec(1,1,1)} }` being a valid AABB array.
 
 This function returns the AABB table that was hit, the exact position hit as a Vector3, the side of the AABB hit as a string or nil if inside an AABB, and the index of the AABB that was hit in the array
 

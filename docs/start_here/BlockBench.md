@@ -1,6 +1,6 @@
 import Emoji from '@site/src/components/Emoji';
 
-The basics on how Blockbench
+The basics on how to use Blockbench
 
 Proper tutorials for blockbench can be found online. This page just explains Figura specific stuff. This page assumes you are using the Desktop version of BlockBench, not the online app.<br/>
 
