@@ -294,7 +294,7 @@ hsvToRGB(h, s, v)
 **Example:**
 
 ```lua
-vectors.hsvToRGB(181, 68, 66)
+vectors.hsvToRGB(181 / 360, 68 / 100, 66 / 100)
 ```
 
 ---
@@ -377,7 +377,7 @@ rgbToHSV(r, g, b)
 **Example:**
 
 ```lua
-vectors.rgbToHSV(81, 68, 66)
+vectors.rgbToHSV(81 / 255, 68 / 255, 66 / 255)
 ```
 
 ---
@@ -434,7 +434,7 @@ rgbToHex(r, g, b)
 **Example:**
 
 ```lua
-vectors.rgbToHex(81, 68, 66)
+vectors.rgbToHex(81 / 255, 68 / 255, 66 / 255)
 ```
 
 ---
@@ -489,7 +489,7 @@ rgbToInt(r, g, b)
 **Example:**
 
 ```lua
-vectors.rgbToInt(50, 50, 50)
+vectors.rgbToInt(50 / 255, 50 / 255, 50 / 255)
 ```
 
 ---
