@@ -225,10 +225,10 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 
 ```lua
 function events.chat_receive_message(raw, text)
-    host:setActionbar(msg)
+    host:setActionbar(raw)
     -- Blocking any messages with my name so I can focus
     if raw:find("joey") then
-        return nil
+        return false
     end
     return text
 end
@@ -254,7 +254,7 @@ It have 5 arguments, as listed below:
 
 (entity) - the entity, when rendered from an entity
 
-(string) - the type of the rendering (LEFT_HAND, HEAD, BLOCK, ΓÇª)
+(mode) - the type of the rendering (LEFT_HAND, HEAD, BLOCK, etc)
 
 If the return value is true, the skull will not render
 

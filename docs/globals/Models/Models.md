@@ -1877,7 +1877,7 @@ models:setPrimaryTexture("Resource", "textures/entity/pig/pig.png")
 
 Gets the primary texture of this part
 
-Returns two values, first being the override type, second being the value, if any.
+Returns two values, first being the override type, second being the texture object, if any.
 
 ```lua
 getPrimaryTexture()
@@ -1893,7 +1893,8 @@ getPrimaryTexture()
 **Example:**
 
 ```lua
-local texType, tex = models:getPrimaryTexture()
+local texType, tex = models:getPrimaryTexture() -- this saves both of the potential returns to two variables in a single line of code
+log(textType, tex)
 ```
 
 ---

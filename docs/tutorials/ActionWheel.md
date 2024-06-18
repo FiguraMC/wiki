@@ -130,6 +130,8 @@ action_wheel:setPage(mainPage)
 
 function pings.actionClicked()
     print("Hello World!")
+    -- animation example (commented out to avoid erroring):
+    -- animations.bbmodelname.animationname:play()
 end
 
 local action = mainPage:newAction()
@@ -147,6 +149,8 @@ This is an exmaple of the onToggle function, which swaps between two states. It 
 ```lua
 function pings.toggling(state)
     models:setVisible(state)
+    -- animation toggle example (commented out to avoid erroring):
+    -- animations.bbmodelname.animationname:setPlaying(state)
 end
 
 local toggleaction = mainPage:newAction() -- If you're getting an error here it's probably because you didn't make the page

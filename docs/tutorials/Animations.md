@@ -55,6 +55,8 @@ There is another function that can play animations, <code>setPlaying(bool)</code
 
 You can put a boolean value inside the parenthesis for the function and it will play the animation if the boolean is true, or stop it if the boolean is false
 
+This is often used for toggles in the action wheel.
+
 ### setPlaying Example
 
 By nature, setPlaying needs to be in a function that will run multiple times, we're going to use a tick event but you could use a ping or anything else
@@ -131,6 +133,16 @@ It only overrides while the animation is playing.
 <img src={require("@site/static/img/animation/exampleCheck.png").default} width="400"></img>
 
 <img src={require("@site/static/img/animation/exampleOverride.png").default} width="400"></img>
+
+## Special Keyframe Types
+
+Blockbench animations have a special category of keyframes called Effects keyframes. There are three of them and Figura ignores Particle and Sound
+
+### Instruction Keyframes
+
+The third special keyframe type is Instruction, Instruction keyframes run lua code when the animation reaches that keyframe. This can be used to play sounds, spawn particles, literally anything. Remember that Lua code is what goes in this spot, not Molang.
+
+Each instruction is its own 'scope' meaning that variables local to any of the scripts can't be accessed by the keyframes without specifically interfacing between them.
 
 ## Community Resources
 
