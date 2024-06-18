@@ -743,8 +743,8 @@ getPlayers()
 **Example:**
 
 ```lua
-for _, players in pairs(world.getPlayers()) do
-    log(players)
+for _, value in pairs(world.getPlayers()) do
+    log(value)
 end
 ```
 

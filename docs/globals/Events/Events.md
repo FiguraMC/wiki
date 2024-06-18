@@ -198,7 +198,7 @@ end
 
 function events.chat_send_message(msg)
     host:setActionbar(msg)
-    -- return a modified message, makes sure you're always excited abotu everything
+    -- return a modified message, makes sure you're always excited about everything
     return msg .. "!"
 end
 ```
