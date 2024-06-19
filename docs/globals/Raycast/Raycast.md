@@ -131,7 +131,8 @@ aabb(startX, startY, startZ, endX, endY, endZ, aabbs)
 ```lua
 local eyePos = player:getPos() + vec(0, player:getEyeHeight(), 0)
 local eyeEnd = eyePos + (player:getLookDir() * 20)
-local aabb, hitPos, side, aabbHitIndex = raycast:aabb(eyePos, eyeEnd, { { vec(0, 0, 0), vec(1, 1, 1) } })
+local hitLocation = { { vec(0, 0, 0), vec(1, 1, 1) } } -- this is the block location of 0,0,0 in the world
+local aabb, hitPos, side, aabbHitIndex = raycast:aabb(eyePos, eyeEnd, hitLocation)
 ```
 
 ---
@@ -380,10 +381,17 @@ entity(startX, startY, startZ, endX, endY, endZ, predicate)
 
 **Example:**
 
+<!-- prettier-ignore -->
 ```lua
 local eyePos = player:getPos() + vec(0, player:getEyeHeight(), 0)
 local eyeEnd = eyePos + (player:getLookDir() * 20)
-local entity, hitPos = raycast:entity(eyePos, eyeEnd)
+local entity, hitPos = raycast:entity(eyePos, eyeEnd,function(x) -- x is the entity hit by the raycast
+    if x == player then -- if the entity hit is the player
+        return false -- don't include the player in the results
+    else 
+        return true 
+    end 
+end)
 ```
 
 ---

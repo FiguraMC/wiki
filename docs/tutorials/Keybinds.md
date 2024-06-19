@@ -94,6 +94,25 @@ function events.tick()
 end
 ```
 
+## Canceling A Key Press
+
+A key press can be "cancelled" (Minecraft won't register it as being pressed) using `return`. Specifically, if you `return true` in the function for the key press it will cancel the press. Returning a non-truthy value will not cancel the key press, so you can use a toggling variable to control the return. Note that returning in the ping will not cancel the key press, only doing it inside the keybind's press function will cancel it.
+
+Below is an example for cancelling the detection of the `w` key while also sending a ping.
+
+<!-- prettier-ignore -->
+```lua
+function pings.examplePing()
+    log("Pressed!")
+end
+local exampleKey = keybinds:newKeybind("Keybind Name", "key.keyboard.w")
+exampleKey.press = function() 
+    pings.examplePing() return true 
+end
+```
+
+If you want to cancel without sending a ping, that is completely possible. But the return always has to be at the end of the function.
+
 ## Using A Vanilla Keybind
 
 If you want to detect a vanilla action like attacking or walking forwards but want it to be compatible in the case that someone bound forward to an arrow key you can directly get the vanilla keybind and use it. There's multiple ways to accomplish this but we'll use the same method as previous examples.

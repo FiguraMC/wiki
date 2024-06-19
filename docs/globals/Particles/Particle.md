@@ -347,9 +347,9 @@ getVelocity()
 
 **Returns:**
 
-| Type                                             | Description              |
-| ------------------------------------------------ | ------------------------ |
-| <code>[Vector3](/globals/Vectors/Vector3)</code> | Gets the velocity of the |
+| Type                                             | Description                       |
+| ------------------------------------------------ | --------------------------------- |
+| <code>[Vector3](/globals/Vectors/Vector3)</code> | Gets the velocity of the particle |
 
 **Example:**
 

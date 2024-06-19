@@ -595,7 +595,7 @@ avatar:getMaxTickCount()
 
 ### <code>getRenderCount()</code> \{#getRenderCount}
 
-Gets the number of events.RENDER and events.POST_RENDER instructions of this avatar's last frame
+Gets the number of instructions of this avatar's last frame from all render events (all events with render in their name) and the setXRender() functions from the models api
 
 ```lua
 getRenderCount()
@@ -617,7 +617,7 @@ avatar:getRenderCount()
 
 ### <code>getMaxRenderCount()</code> \{#getMaxRenderCount}
 
-Gets the maximum allowed instructions in events.RENDER and Events.POST_RENDER as permitted by the viewer
+Gets the maximum allowed instructions as permitted by the viewer from all render events (all events with render in their name) and the setXRender() functions from the models api
 
 ```lua
 getMaxRenderCount()
