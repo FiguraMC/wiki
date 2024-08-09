@@ -1,0 +1,11 @@
+{
+  "label": "Assets",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "List of all assets used in a Figura Theme."
+  },
+  "customProps": {
+    "description": "A list of assets that describe where it is used and where it is located in a Figura Theme."
+  }
+}

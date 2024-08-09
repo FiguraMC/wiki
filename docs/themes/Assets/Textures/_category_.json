@@ -1,0 +1,10 @@
+{
+  "label": "Textures",
+  "link": {
+    "type": "generated-index",
+    "description": "List of textures assets used in a Figura Theme."
+  },
+  "customProps": {
+    "description": "A list of textures that describe where it is used and where it is located in a Figura Theme."
+  }
+}

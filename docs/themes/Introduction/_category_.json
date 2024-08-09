@@ -1,0 +1,11 @@
+{
+  "label": "Introduction",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "This introduction provides a brief understanding on how Figura Themes work and how to make one."
+  },
+  "customProps": {
+    "description": "An introduction that provides a brief understanding on how Figura Themes work and how to make one."
+  }
+}
