@@ -1,54 +1,55 @@
 {
-  "name": "figurawiki",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc",
-    "format": "prettier --write \"{src/**/*.{ts,tsx,js,jsx},docs/**/*.md,*.js}\"",
-    "format:check": "prettier --check \"{src/**/*.{ts,tsx,js,jsx},docs/**/*.md,*.js}\""
-  },
-  "dependencies": {
-    "@docusaurus/core": "^3.0.0",
-    "@docusaurus/preset-classic": "^3.0.0",
-    "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
-    "docusaurus-lunr-search": "^3.2.0",
-    "lunr": "^2.3.9",
-    "prism-react-renderer": "^2.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.0.0",
-    "@prettier/plugin-lua": "^0.0.3",
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "@tsconfig/docusaurus": "^2.0.1",
-    "prettier": "^3.0.3",
-    "swc-loader": "^0.2.3",
-    "typescript": "^5.2.2"
-  },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "engines": {
-    "node": ">=16.14"
-  }
+    "name": "figurawiki",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "docusaurus": "docusaurus",
+        "start": "docusaurus start",
+        "build": "docusaurus build",
+        "swizzle": "docusaurus swizzle",
+        "deploy": "docusaurus deploy",
+        "clear": "docusaurus clear",
+        "serve": "docusaurus serve",
+        "write-translations": "docusaurus write-translations",
+        "write-heading-ids": "docusaurus write-heading-ids",
+        "typecheck": "tsc",
+        "format": "prettier --write \"{src/**/*.{ts,tsx,js,jsx},docs/**/*.md,*.js}\"",
+        "format:check": "prettier --check \"{src/**/*.{ts,tsx,js,jsx},docs/**/*.md,*.js}\""
+    },
+    "dependencies": {
+        "@docusaurus/core": "^3.0.0",
+        "@docusaurus/preset-classic": "^3.0.0",
+        "@mdx-js/react": "^3.0.0",
+        "clsx": "^2.0.0",
+        "docusaurus-lunr-search": "^3.2.0",
+        "lunr": "^2.3.9",
+        "prism-react-renderer": "^2.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@docusaurus/module-type-aliases": "^3.0.0",
+        "@prettier/plugin-lua": "^0.0.3",
+        "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "@tsconfig/docusaurus": "^2.0.1",
+        "prettier": "^3.0.3",
+        "swc-loader": "^0.2.3",
+        "typescript": "^5.2.2"
+    },
+    "browserslist": {
+        "production": [
+            ">0.5%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "engines": {
+        "node": ">=16.14"
+    },
+    "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"
 }
