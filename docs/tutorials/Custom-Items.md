@@ -42,7 +42,7 @@ function events.item_render(item)
 end
 ```
 
-Here's an exmaple for replacing a single item by name:
+Here's an example for replacing a single item by name:
 
 ```lua
 function events.item_render(item)
