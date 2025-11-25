@@ -1,6 +1,6 @@
 Information on pings
 
-With normal mods, there is comunication between the Minecraft Server and it's clients which allows everything to stay in sync. <br/>
+With normal mods, there is communication between the Minecraft Server and it's clients which allows everything to stay in sync. <br/>
 Figura is completely client-side. It will never comunicate with the Minecraft Server you are connected to. Figura does not have a server-side component, meaning nothing will happen if you put the mod on a server.<br/>
 
 What does this mean for you, the user? It means that certain functionality that only your client has access to will not be synced with other players.<br/>
@@ -28,7 +28,7 @@ The developer given limits are:
 -   1024 bytes per second
 -   32 pings per second
 
-If either of these are reached, the backend will ignore any comunication from you for some amount of time.
+If either of these are reached, the backend will ignore any communication from you for some amount of time.
 
 ### Pingable Values
 
