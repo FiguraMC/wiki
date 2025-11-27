@@ -1,4 +1,4 @@
-A global API that contains features to work with files
+A global API that contains features to work with files, specifically under the "data" folder inside of the Figura folder
 
 :::warning
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
@@ -23,7 +23,9 @@ allowed()
 **Example:**
 
 ```lua
--- example coming soon
+if file:allowed() then
+  print(file:readString("hello.txt")) -- This prints the contents of hello.txt
+end
 ```
 
 ---
@@ -79,7 +81,9 @@ exists(path)
 **Example:**
 
 ```lua
--- example coming soon
+if not file:exists("hello.txt") then
+  file:writeString("hello.txt","")
+end
 ```
 
 ---
@@ -107,7 +111,15 @@ isDirectory(path)
 **Example:**
 
 ```lua
--- example coming soon
+function iterateThroughDirectory(Directory)
+  for i, v in ipairs(file:list(Directory)) do
+    if file:isDirectory(v) then
+      iterateThroughDirectory(v)
+    else
+      print(v)
+    end
+end
+iterateThroughDirectory("/") -- This should iterate through all files in the data folder.
 ```
 
 ---
@@ -135,7 +147,9 @@ isFile(path)
 **Example:**
 
 ```lua
--- example coming soon
+if file:isFile("hello.txt") then
+  -- its safe to say its a file.
+end
 ```
 
 ---
@@ -163,7 +177,10 @@ isPathAllowed(path)
 **Example:**
 
 ```lua
--- example coming soon
+print(file:isPathAllowed("C:/")) -- false
+print(file:isPathAllowed("hello.txt")) -- true
+-- error-next-line
+file:writeString("C:/file.txt","text content") -- This errors because it is outside of the data folder.
 ```
 
 ---
@@ -191,7 +208,10 @@ list(path)
 **Example:**
 
 ```lua
--- example coming soon
+-- This prints every directory and file under the data folder (without recursion)
+for i, v in ipairs(file:list("/"))
+  print(v)
+end
 ```
 
 ---
