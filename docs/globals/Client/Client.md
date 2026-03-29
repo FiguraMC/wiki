@@ -28,7 +28,7 @@ getViewer()
 **Example:**
 
 ```lua
-client:getViewer()
+client.getViewer()
 ```
 
 ---
@@ -52,7 +52,7 @@ getVersion()
 **Example:**
 
 ```lua
-client:getVersion()
+client.getVersion()
 ```
 
 ---
@@ -74,7 +74,7 @@ getVersionName()
 **Example:**
 
 ```lua
-client:getVersionName()
+client.getVersionName()
 ```
 
 ---
@@ -96,7 +96,7 @@ getJavaVersion()
 **Example:**
 
 ```lua
-client:getJavaVersion()
+client.getJavaVersion()
 ```
 
 ---
@@ -118,7 +118,7 @@ isSnapshot()
 **Example:**
 
 ```lua
-client:isSnapshot()
+client.isSnapshot()
 ```
 
 ---
@@ -140,7 +140,7 @@ getFiguraVersion()
 **Example:**
 
 ```lua
-client:getFiguraVersion()
+client.getFiguraVersion()
 ```
 
 ---
@@ -169,7 +169,7 @@ compareVersions(version1, version2)
 **Example:**
 
 ```lua
-client:compareVersions("0.1.0", "0.1.3")
+client.compareVersions("0.1.0", "0.1.3")
 ```
 
 ---
@@ -197,7 +197,7 @@ isModLoaded(modID)
 **Example:**
 
 ```lua
-client:isModLoaded("origins")
+client.isModLoaded("origins")
 ```
 
 ---
@@ -219,7 +219,7 @@ hasShaderPackMod()
 **Example:**
 
 ```lua
-client:hasShaderPackMod()
+client.hasShaderPackMod()
 ```
 
 ---
@@ -241,7 +241,7 @@ hasShaderPack()
 **Example:**
 
 ```lua
-client:hasShaderPack()
+client.hasShaderPack()
 ```
 
 ---
@@ -263,7 +263,7 @@ getShaderPackName()
 **Example:**
 
 ```lua
-client:getShaderPackName()
+client.getShaderPackName()
 ```
 
 ---
@@ -285,7 +285,7 @@ getClientBrand()
 **Example:**
 
 ```lua
-client:getClientBrand()
+client.getClientBrand()
 ```
 
 ---
@@ -309,7 +309,7 @@ getServerBrand()
 **Example:**
 
 ```lua
-client:getServerBrand()
+client.getServerBrand()
 ```
 
 ---
@@ -333,7 +333,7 @@ getCameraPos()
 **Example:**
 
 ```lua
-client:getCameraPos()
+client.getCameraPos()
 ```
 
 ---
@@ -355,7 +355,7 @@ getCameraRot()
 **Example:**
 
 ```lua
-client:getCameraRot()
+client.getCameraRot()
 ```
 
 ---
@@ -377,7 +377,7 @@ getCameraDir()
 **Example:**
 
 ```lua
-client:getCameraDir()
+client.getCameraDir()
 ```
 
 ---
@@ -399,7 +399,7 @@ getCameraEntity()
 **Example:**
 
 ```lua
-client:getCameraEntity()
+client.getCameraEntity()
 ```
 
 ---
@@ -421,7 +421,7 @@ getFOV()
 **Example:**
 
 ```lua
-client:getFOV()
+client.getFOV()
 ```
 
 ---
@@ -443,7 +443,7 @@ getWindowSize()
 **Example:**
 
 ```lua
-client:getWindowSize()
+client.getWindowSize()
 ```
 
 ---
@@ -465,7 +465,7 @@ getScaledWindowSize()
 **Example:**
 
 ```lua
-client:getScaledWindowSize()
+client.getScaledWindowSize()
 ```
 
 ---
@@ -489,7 +489,7 @@ getGuiScale()
 **Example:**
 
 ```lua
-client:getGuiScale()
+client.getGuiScale()
 ```
 
 ---
@@ -511,7 +511,7 @@ getMousePos()
 **Example:**
 
 ```lua
-client:getMousePos()
+client.getMousePos()
 ```
 
 ---
@@ -535,7 +535,7 @@ isPaused()
 **Example:**
 
 ```lua
-client:isPaused()
+client.isPaused()
 ```
 
 ---
@@ -557,7 +557,7 @@ isHudEnabled()
 **Example:**
 
 ```lua
-client:isHudEnabled()
+client.isHudEnabled()
 ```
 
 ---
@@ -579,7 +579,7 @@ isDebugOverlayEnabled()
 **Example:**
 
 ```lua
-client:isDebugOverlayEnabled()
+client.isDebugOverlayEnabled()
 ```
 
 ---
@@ -601,7 +601,7 @@ getActiveResourcePacks()
 **Example:**
 
 ```lua
-client:getActiveResourcePacks()
+client.getActiveResourcePacks()
 ```
 
 ---
@@ -629,7 +629,7 @@ hasResource(path)
 **Example:**
 
 ```lua
-client:hasResource()
+client.hasResource()
 ```
 
 ---
@@ -651,7 +651,7 @@ getActiveLang()
 **Example:**
 
 ```lua
-client:getActiveLang()
+client.getActiveLang()
 ```
 
 ---
@@ -673,7 +673,7 @@ isWindowFocused()
 **Example:**
 
 ```lua
-client:isWindowFocused()
+client.isWindowFocused()
 ```
 
 ---
@@ -697,7 +697,7 @@ getCurrentEffect()
 **Example:**
 
 ```lua
-client:getCurrentEffect()
+client.getCurrentEffect()
 ```
 
 ---
@@ -721,7 +721,7 @@ getEntityCount()
 **Example:**
 
 ```lua
-client:getEntityCount()
+client.getEntityCount()
 ```
 
 ---
@@ -745,7 +745,7 @@ getEntityStatistics()
 **Example:**
 
 ```lua
-client:getEntityStatistics()
+client.getEntityStatistics()
 ```
 
 ---
@@ -767,7 +767,7 @@ getServerData()
 **Example:**
 
 ```lua
-client:getServerData()
+client.getServerData()
 ```
 
 ---
@@ -789,7 +789,7 @@ getDate()
 **Example:**
 
 ```lua
-client:getDate()
+client.getDate()
 ```
 
 ---
@@ -811,7 +811,7 @@ getSystemTime()
 **Example:**
 
 ```lua
-client:getSystemTime()
+client.getSystemTime()
 ```
 
 ---
@@ -835,7 +835,7 @@ getFPS()
 **Example:**
 
 ```lua
-client:getFPS()
+client.getFPS()
 ```
 
 ---
@@ -859,7 +859,7 @@ getFPSString()
 **Example:**
 
 ```lua
-client:getFPSString()
+client.getFPSString()
 ```
 
 ---
@@ -883,7 +883,7 @@ getFrameTime()
 **Example:**
 
 ```lua
-client:getFrameTime()
+client.getFrameTime()
 ```
 
 ---
@@ -907,7 +907,7 @@ getSoundStatistics()
 **Example:**
 
 ```lua
-client:getSoundStatistics()
+client.getSoundStatistics()
 ```
 
 ---
@@ -929,7 +929,7 @@ getMaxMemory()
 **Example:**
 
 ```lua
-client:getMaxMemory()
+client.getMaxMemory()
 ```
 
 ---
@@ -951,7 +951,7 @@ getAllocatedMemory()
 **Example:**
 
 ```lua
-client:getAllocatedMemory()
+client.getAllocatedMemory()
 ```
 
 ---
@@ -973,7 +973,7 @@ getUsedMemory()
 **Example:**
 
 ```lua
-client:getUsedMemory()
+client.getUsedMemory()
 ```
 
 ---
@@ -997,7 +997,7 @@ getChunkStatistics()
 **Example:**
 
 ```lua
-client:getChunkStatistics()
+client.getChunkStatistics()
 ```
 
 ---
@@ -1019,7 +1019,7 @@ getParticleCount()
 **Example:**
 
 ```lua
-client:getParticleCount()
+client.getParticleCount()
 ```
 
 ---
@@ -1043,7 +1043,7 @@ getActionbar()
 **Example:**
 
 ```lua
-client:getActionbar()
+client.getActionbar()
 ```
 
 ---
@@ -1073,7 +1073,7 @@ getAtlas(path)
 **Example:**
 
 ```lua
-client:getAtlas()
+client.getAtlas()
 ```
 
 ---
@@ -1103,7 +1103,7 @@ getEnum(enumName)
 **Example:**
 
 ```lua
-client:getEnum("ParentTypes")
+client.getEnum("ParentTypes")
 ```
 
 ---
@@ -1133,7 +1133,7 @@ getRegistry(registryName)
 **Example:**
 
 ```lua
-for _, variant in ipairs(client:getRegistry("frog_variant")) do
+for _, variant in ipairs(client.getRegistry("frog_variant")) do
     print(variant)
 end
 ```
@@ -1157,7 +1157,7 @@ getScoreboard()
 **Example:**
 
 ```lua
-client:getScoreboard()
+client.getScoreboard()
 ```
 
 ---
@@ -1179,7 +1179,7 @@ getSubtitle()
 **Example:**
 
 ```lua
-client:getSubtitle()
+client.getSubtitle()
 ```
 
 ---
@@ -1201,7 +1201,7 @@ getTabList()
 **Example:**
 
 ```lua
-client:getTabList()
+client.getTabList()
 ```
 
 ---
@@ -1256,7 +1256,7 @@ getTextDimensions(text, maxWidth, wrap)
 **Example:**
 
 ```lua
-client:getTextDimensions("Example text", 40, true)
+client.getTextDimensions("Example text", 40, true)
 ```
 
 ---
@@ -1284,7 +1284,7 @@ getTextHeight(text)
 **Example:**
 
 ```lua
-client:getTextHeight("Example text")
+client.getTextHeight("Example text")
 ```
 
 ---
@@ -1314,7 +1314,7 @@ getTextWidth(text)
 **Example:**
 
 ```lua
-client:getTextWidth("Example text")
+client.getTextWidth("Example text")
 ```
 
 ---
@@ -1336,7 +1336,7 @@ getTitle()
 **Example:**
 
 ```lua
-client:getTitle()
+client.getTitle()
 ```
 
 ---
@@ -1419,7 +1419,7 @@ generateUUID()
 **Example:**
 
 ```lua
-local a, b, c, d = client:generateUUID()
+local a, b, c, d = client.generateUUID()
 ```
 
 ---
@@ -1450,7 +1450,7 @@ intUUIDToString(a, b, c, d)
 **Example:**
 
 ```lua
-client:intUUIDToString()
+client.intUUIDToString()
 ```
 
 ---
@@ -1472,7 +1472,7 @@ listAtlases()
 **Example:**
 
 ```lua
-client:listAtlases()
+client.listAtlases()
 ```
 
 ---
@@ -1503,7 +1503,7 @@ uuidToIntArray(uuid)
 **Example:**
 
 ```lua
-local a, b, c, d = client:uuidToIntArray("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
+local a, b, c, d = client.uuidToIntArray("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
 ```
 
 ---
