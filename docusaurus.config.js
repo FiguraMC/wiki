@@ -65,7 +65,25 @@ const config = {
           alt: "Figura Logo",
           src: "img/logo.svg",
         },
-        items: [],
+        items: [
+          {
+            type: "html",
+            position: "left",
+            value: "<b>•</b>",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "tutorials",
+            label: "Tutorials",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "api",
+            label: "API",
+          },
+        ],
       },
       footer: {
         style: "dark",
