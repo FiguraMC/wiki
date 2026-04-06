@@ -4,29 +4,29 @@
 name: Build Pull Request
 
 on:
-  pull_request:
-    branches: ["main"]
+    pull_request:
+        branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v6
 
-      - name: Setup and Build
-        uses: ./.github/actions/setup-env
-        with:
-          build: true
+            - name: Setup and Build
+              uses: ./.github/actions/setup-env
+              with:
+                  build: true
 
-      - name: Write Pull Request Details
-        run: |
-          echo ${{ github.event.number }} > ./build/.pr_number
-          echo ${{ github.event.pull_request.head.sha }} > ./build/.pr_commit_hash
+            - name: Write Pull Request Details
+              run: |
+                  echo ${{ github.event.number }} > ./build/.pr_number
+                  echo ${{ github.event.pull_request.head.sha }} > ./build/.pr_commit_hash
 
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: build
-          path: ./build/
-          retention-days: 1
+            - name: Upload Artifacts
+              uses: actions/upload-artifact@v7
+              with:
+                  name: build
+                  path: ./build/
+                  retention-days: 7

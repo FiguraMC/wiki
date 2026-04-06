@@ -4,18 +4,18 @@
 name: Lint Pull Request
 
 on:
-  pull_request:
-    branches: ["main"]
+    pull_request:
+        branches: [ "main" ]
 
 jobs:
-  lint:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v6
 
-      - name: Setup Environment
-        uses: ./.github/actions/setup-env
+            - name: Setup Environment
+              uses: ./.github/actions/setup-env
 
-      - name: Check Formatting
-        run: pnpm run format:check
+            - name: Check Formatting
+              run: pnpm run format:check

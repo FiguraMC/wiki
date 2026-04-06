@@ -4,26 +4,28 @@
 name: Deploy Wiki
 
 on:
-  push:
-    branches: ["main"]
+    push:
+        branches: [ "main" ]
 
 jobs:
-  deploy:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    deploy:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v6
 
-      - name: Setup and Build
-        uses: ./.github/actions/setup-env
-        with:
-          build: true
+            - name: Setup and Build
+              uses: ./.github/actions/setup-env
+              with:
+                  build: true
 
-      - name: Deploy built wiki
-        uses: cloudflare/pages-action@v1
-        with:
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          projectName: figura-wiki
-          directory: ./build
-          gitHubToken: ${{ secrets.GH_BOT_TOKEN }}
+            - name: Deploy built wiki
+              uses: cloudflare/wrangler-action@v3
+              with:
+                  accountId: ${{ secrets.CF_ACCOUNT_ID }}
+                  apiToken: ${{ secrets.CF_API_TOKEN }}
+                  command: pages deploy ./build --project-name=figura-wiki
+                  gitHubToken: ${{ secrets.GH_BOT_TOKEN }}
