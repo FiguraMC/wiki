@@ -35,6 +35,12 @@ Return a table with all playing animations
 getPlaying()
 ```
 
+**Parameters:**
+
+| Name | Type                                              | Description                                         | Default |
+| ---- | ------------------------------------------------- | --------------------------------------------------- | ------- |
+| hold | <code>[Boolean](/tutorials/Types/Booleans)</code> | Whether to include animations holding on last frame | false   |
+
 **Returns**
 
 | Type                                          | Description                                |
