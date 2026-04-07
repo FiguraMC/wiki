@@ -1302,6 +1302,66 @@ host:swingArm()
 
 ---
 
+### <code>writeToLog()</code> \{#writeToLog}
+
+Write directly to the Minecraft log, allowing for logging debug data without filling chat
+
+This will appear in the log with the prefix <code>[Render thread/INFO]: [FIGURA/LUA] -- </code>
+
+```lua
+writeToLog(message)
+```
+
+**Parameters:**
+
+| Name    | Type                                            | Description | Default |
+| ------- | ----------------------------------------------- | ----------- | ------- |
+| message | <code>[String](/tutorials/Types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
+
+**Example:**
+
+```lua
+host:writeToLog("I'm in the Minecraft log!")
+```
+
+---
+
+### <code>warnToLog()</code> \{#warnToLog}
+
+Write a warning directly to the minecraft log, allowing for logging debug data without filling chat
+
+This will appear in the log with the prefix <code>[Render thread/WARN]: [FIGURA/LUA] -- </code>
+
+```lua
+warnToLog(message)
+```
+
+**Parameters:**
+
+| Name    | Type                                            | Description | Default |
+| ------- | ----------------------------------------------- | ----------- | ------- |
+| message | <code>[String](/tutorials/Types/Strings)</code> | -           | -       |
+
+**Returns:**
+
+| Type             | Description |
+| ---------------- | ----------- |
+| <code>nil</code> | -           |
+
+**Example:**
+
+```lua
+host:warnToLog("Uh oh!")
+```
+
+---
+
 ## Fields
 
 ### <code>unlockCursor</code> \{#unlockCursor}

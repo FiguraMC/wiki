@@ -1024,6 +1024,28 @@ client.getParticleCount()
 
 ---
 
+### <code>isIntegratedServer()</code> \{#isIntegratedServer}
+
+Returns true if the player's connected server is singleplayer
+
+```lua
+isIntegratedServer()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/Types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+client.isIntegratedServer()
+```
+
+---
+
 ## Misc
 
 ### <code>getActionbar()</code> \{#getActionbar}

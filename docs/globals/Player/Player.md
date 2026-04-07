@@ -13,11 +13,11 @@ The player API is accessed through the `player` global. Like so: `player:isGlidi
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
-Player information that isn't synced between clients is kept in the host API. Examples of unsynced data are: Creative flying, status effects, and remaining air amount.
+Player information that isn't synced between clients is kept in the [host](Host) API. Examples of unsynced data are: Creative flying, status effects, and remaining air amount.
 
 :::note
 
-There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event, like [`tick`](globals/Events#TICK). If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the [`entity_init`](globals/Events#TICK) event.
+There are times during a script's functioning where the script will run, but the player global will be empty. This will cause the "Tried to access the EntityAPI before its initialization" error. To solve this, move the player API call into a protected event, like [`tick`](Events#TICK). If you wish to initialize a check during the initialization phase of a script (outside of any other event) you can use the [`entity_init`](Events#ENTITY_INIT) event.
 
 :::
 
@@ -293,6 +293,35 @@ player:isCrouching()
 
 ---
 
+### <code>isMoving()</code> \{#isMoving}
+
+Returns true if this entity has some velocity
+
+Takes a boolean parameter, where if true, the y velocity is ignored
+
+```lua
+isMoving()
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                                              | Default |
+| ------- | ------------------------------------------------- | -------------------------------------------------------- | ------- |
+| ignoreY | <code>[Boolean](/tutorials/Types/Booleans)</code> | Whether to ignore vertical velocity to qualify as moving | false   |
+
+**Returns:**
+| Type | Description |
+|---------------------------------------------------|-------------|
+| <code>[Boolean](/tutorials/Types/Booleans)</code> | - |
+
+**Example:**
+
+```lua
+player:isMoving()
+```
+
+---
+
 ### <code>isGliding()</code> \{#isGliding}
 
 Returns if this entity is gliding with an elytra
@@ -324,6 +353,28 @@ end
 
 -- error-next-line
 player:isGliding() -- will error
+```
+
+---
+
+### <code>isFalling()</code> \{#isFalling}
+
+Returns true if this entity has negative Y-velocity and is not on the ground
+
+```lua
+isFalling()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+| ------------------------------------------------- | ----------- |
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+player:isFalling()
 ```
 
 ---
@@ -1493,6 +1544,69 @@ getEyeHeight()
 
 ```lua
 player:getEyeHeight()
+```
+
+---
+
+### <code>getNearestEntity()</code> \{#getNearestEntity}
+
+Returns the closest entity to this entity
+
+If `type` is an entity id, (e.g. `minecraft:bee`), only entities of that type will be considered
+
+Radius defaults to 20, and controls the size of the area for checking entities as a box expanding in every direction from the player
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+getNearestEntity()
+```
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+getNearestEntity(type)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                               | Default |
+| ---- | ----------------------------------------------- | --------------------------------------------------------- | ------- |
+| type | <code>[String](/tutorials/types/Strings)</code> | Minecraft type ID for the entity, i.e. `minecraft:player` | -       |
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
+
+```lua
+getNearestEntity(type, radius)
+```
+
+**Parameters:**
+
+| Name   | Type                                            | Description                                               | Default |
+| ------ | ----------------------------------------------- | --------------------------------------------------------- | ------- |
+| type   | <code>[String](/tutorials/types/Strings)</code> | Minecraft type ID for the entity, i.e. `minecraft:player` | -       |
+| radius | <code>[Number](/tutorials/types/Numbers)</code> | Radius of the player-centered cube to find entities in    | 20      |
+
+</TabItem>
+</Tabs>
+
+**Returns:**
+
+| Type                                          | Description    |
+| --------------------------------------------- | -------------- |
+| <code>[Entity](/globals/Player/Entity)</code> | Closest entity |
+
+**Example:**
+
+```lua
+-- highlight-next-line
+local entity = player:getNearestEntity()
+if entity and entity:getType() == "minecraft:pig" then
+    log("There's a pig nearby")
+end
 ```
 
 ---

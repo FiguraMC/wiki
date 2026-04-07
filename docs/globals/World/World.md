@@ -29,7 +29,7 @@ world.getBlockState(player:getPos())
 
 ---
 
-## Enviroment
+## Environment
 
 ### <code>exists()</code> \{#exists}
 
@@ -670,6 +670,36 @@ world.newItem("grass_block", 64, 5)
 
 ---
 
+### <code>getMapData()</code> \{#getMapData}
+
+Takes a string, e.g., `map_3`, and returns a table of data if the map exists. This is obtainable from a map [ItemStack](/globals/World/ItemStack)'s NBT
+
+Map data may be unsynced, and will only update when holding the map
+
+```lua
+getMapData(id)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description                                     | Default |
+| ---- | ----------------------------------------------- | ----------------------------------------------- | ------- |
+| id   | <code>[String](/tutorials/types/Strings)</code> | String ID of map, with or without `map_` prefix | -       |
+
+**Returns:**
+
+| Type                                          | Description                    |
+| --------------------------------------------- | ------------------------------ |
+| <code>[Table](/tutorials/Types/Tables)</code> | Various data regarding the map |
+
+**Example:**
+
+```lua
+local mapData = world.getMapData("map_2")
+```
+
+---
+
 ## Entities
 
 ### <code>avatarVars()</code> \{#avatarVars}
@@ -720,6 +750,63 @@ getEntity(UUID)
 
 ```lua
 world.getEntity("5003b2ce-7a8d-4c56-8b91-ec705985fe08")
+```
+
+---
+
+### <code>getEntities()</code> \{#getEntities}
+
+Returns a list of entities within the bounding box formed by the two given positions
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+getEntities(min, max)
+```
+
+**Parameters:**
+
+| Name | Type                                             | Description | Default |
+| ---- | ------------------------------------------------ | ----------- | ------- |
+| min  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+| max  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+getEntities(minX, minY, minZ, maxX, maxY, maxZ)
+```
+
+**Parameters:**
+
+| Name | Type                                            | Description | Default |
+| ---- | ----------------------------------------------- | ----------- | ------- |
+| minX | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| minY | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| minZ | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxX | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxY | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+| maxZ | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
+
+</TabItem>
+</Tabs>
+
+**Returns:**
+
+| Type                                          | Description                          |
+| --------------------------------------------- | ------------------------------------ |
+| <code>[Table](/tutorials/types/Tables)</code> | The entities within the bounding box |
+
+**Example:**
+
+```lua
+local pos = player:getPos()
+local min = pos - vec(4, 4, 4)
+local max = pos + vec(4, 4, 4)
+-- highlight-next-line
+local entities = world.getEntities(min, max)
 ```
 
 ---
