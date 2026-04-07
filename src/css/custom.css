@@ -58,3 +58,7 @@
   background-color: #ff000020;
   border-left-color: #ff000080;
 }
+
+.pixelated {
+  image-rendering: pixelated;
+}
