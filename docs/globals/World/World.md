@@ -29,7 +29,7 @@ world.getBlockState(player:getPos())
 
 ---
 
-## Enviroment
+## Environment
 
 ### <code>exists()</code> \{#exists}
 

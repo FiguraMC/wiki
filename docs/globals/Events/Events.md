@@ -300,7 +300,7 @@ The MOUSE_SCROLL event runs every time the mouse is scrolled
 
 Takes a parameter delta, which is the direction of the scroll
 
-If returned true, the event cancels its vanilla function
+If the return value is true, the event cancels its vanilla function
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -320,7 +320,7 @@ The MOUSE_MOVE event runs every time the mouse is moved around
 
 Takes two parameters, x and y, which is the difference from the mouse position based on the latest saved position
 
-If returned true, the event cancels its vanilla function
+If the return value is true, the event cancels its vanilla function
 
 Note that canceling the vanilla function also cancels saving the last mouse position
 
@@ -342,7 +342,7 @@ The MOUSE_PRESS event runs every time a mouse button is pressed
 
 Takes three number parameters, a "button", which is the number id of the button that was been pressed, the "action", which is the status of the press event (0 for release, 1 for press, 2 for hold), and the "modifier", which is a bitmask number detecting if you have any modifier keys being pressed (like shift or alt, for example)
 
-If returned true, the event cancels its vanilla function
+If the return value is true, the event cancels its vanilla function
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -364,7 +364,7 @@ The KEY_PRESS event runs every time a keyboard key is pressed
 
 Takes three number parameters, a "key", which is the number id of the key that was been pressed, the "action", which is the status of the press event (0 for release, 1 for press, 2 for hold), and the "modifier", which is a bitmask number detecting if you have any modifier keys being pressed (like shift or alt, for example)
 
-If returned true, the event cancels its vanilla function
+If the return value is true, the event cancels its vanilla function
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -404,7 +404,7 @@ The USE_ITEM event is run every time the entity uses an item
 
 The item, action and amount of particles this item would produce is given as argument
 
-If returned true, the event cancels its vanilla function
+If the return value is true, the event cancels its vanilla function
 
 Calling the player without a <code>player:isLoaded()</code> check will error here.
 
@@ -521,7 +521,7 @@ end
 
 Called whenever the player uses a Totem of Undying to cheat death
 
-If returned true, the animation is cancelled
+If the return value is true, the animation is cancelled
 
 **Example:**
 
