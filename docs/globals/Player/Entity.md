@@ -602,6 +602,70 @@ local entity, hitPos = thisEntity:getTargetedEntity()
 
 ---
 
+### <code>getNearestEntity()</code> \{#getNearestEntity}
+
+Returns the closest entity to this entity
+
+If `type` is an entity id, (e.g. `minecraft:bee`), only entities of that type will be considered
+
+Radius defaults to 20, and controls the size of the area for checking entities as a box expanding in every direction from the player
+
+<Tabs>
+<TabItem value="overload-1" label="Overload 1">
+
+```lua
+getNearestEntity()
+```
+
+</TabItem>
+<TabItem value="overload-2" label="Overload 2">
+
+```lua
+getNearestEntity(type)
+```
+
+**Parameters:**
+
+| Name          | Type                                              | Description | Default |
+| ------------- | ------------------------------------------------- | ----------- | ------- |
+| type          | <code>[String](/tutorials/types/Strings)</code>   | Minecraft type ID for the entity, i.e. `minecraft:player`           | -       |
+
+
+</TabItem>
+<TabItem value="overload-3" label="Overload 3">
+
+```lua
+getNearestEntity(type, radius)
+```
+
+**Parameters:**
+
+| Name          | Type                                              | Description | Default |
+| ------------- | ------------------------------------------------- | ----------- | ------- |
+| type          | <code>[String](/tutorials/types/Strings)</code>   | Minecraft type ID for the entity, i.e. `minecraft:player` | -       |
+| radius        | <code>[Number](/tutorials/types/Numbers)</code>   | Radius of the player-centered cube to find entities in    | 20      |
+
+</TabItem>
+</Tabs>
+
+**Returns:**
+
+| Type                                                 | Description         |
+| ---------------------------------------------------- | ------------------- |
+| <code>[Entity](/globals/Player/Entity)</code>        | Closest entity      | 
+
+**Example:**
+
+```lua
+-- highlight-next-line
+local entity = thisEntity:getNearestEntity() 
+if entity and entity:getType() == "minecraft:pig" then
+    log("There's a pig nearby")
+end
+```
+
+---
+
 ### <code>getType()</code> \{#getType}
 
 Gets the Minecraft identifier of this entity
@@ -762,6 +826,28 @@ thisEntity:isGlowing()
 
 ---
 
+### <code>isFalling()</code> \{#isFalling}
+
+Returns true if this entity has negative Y-velocity and is not on the ground
+
+```lua
+isFalling()
+```
+
+**Returns:**
+
+| Type                                              | Description |
+|---------------------------------------------------|-------------|
+| <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+thisEntity:isFalling()
+```
+
+---
+
 ### <code>isInLava()</code> \{#isInLava}
 
 Returns true if this entity is currently in lava
@@ -892,6 +978,35 @@ isLoaded()
 
 ```lua
 thisEntity:isLoaded()
+```
+
+---
+
+### <code>isMoving()</code> \{#isMoving}
+
+Returns true if this entity has some velocity
+
+Takes a boolean parameter, where if true, the y velocity is ignored
+
+```lua
+isMoving()
+```
+
+**Parameters:**
+
+| Name    | Type                                              | Description                                              | Default |
+|---------|---------------------------------------------------|----------------------------------------------------------|---------|
+| ignoreY | <code>[Boolean](/tutorials/Types/Booleans)</code> | Whether to ignore vertical velocity to qualify as moving | false   |
+
+**Returns:**
+| Type                                              | Description |
+|---------------------------------------------------|-------------|
+| <code>[Boolean](/tutorials/Types/Booleans)</code> | -           |
+
+**Example:**
+
+```lua
+thisEntity:isMoving()
 ```
 
 ---

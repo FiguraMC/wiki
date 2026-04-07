@@ -19,3 +19,4 @@ end
 | `STOPPED` | The animation isn't playing                   |
 | `PAUSED`  | The animation is paused on at a specific time |
 | `PLAYING` | The animation is playing                      |
+| `HOLDING` | The animation is holding on its last frame    |

@@ -231,6 +231,22 @@ myAnim:isPaused()
 
 ---
 
+### <code>isHolding()</code> \{#isHolding}
+
+Checks if this animation is holding on its last frame
+
+```lua
+isHolding()
+```
+
+**Returns:**
+
+| Type                                              | Description                                                     |
+|---------------------------------------------------|-----------------------------------------------------------------|
+| <code>[Boolean](/tutorials/Types/Booleans)</code> | Returns true if the animation is holding, and false if it isn't |
+
+---
+
 ### <code>getPlayState()</code> \{#getPlayState}
 
 Get the animation's playback state
