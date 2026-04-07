@@ -319,7 +319,7 @@ isFalling()
 **Returns:**
 
 | Type                                              | Description |
-|---------------------------------------------------|-------------|
+| ------------------------------------------------- | ----------- |
 | <code>[Boolean](/tutorials/types/Booleans)</code> | -           |
 
 **Example:**
@@ -365,13 +365,13 @@ isMoving()
 **Parameters:**
 
 | Name    | Type                                              | Description                                              | Default |
-|---------|---------------------------------------------------|----------------------------------------------------------|---------|
+| ------- | ------------------------------------------------- | -------------------------------------------------------- | ------- |
 | ignoreY | <code>[Boolean](/tutorials/Types/Booleans)</code> | Whether to ignore vertical velocity to qualify as moving | false   |
 
 **Returns:**
-| Type                                              | Description |
+| Type | Description |
 |---------------------------------------------------|-------------|
-| <code>[Boolean](/tutorials/Types/Booleans)</code> | -           |
+| <code>[Boolean](/tutorials/Types/Booleans)</code> | - |
 
 **Example:**
 
@@ -1084,10 +1084,9 @@ getNearestEntity(type)
 
 **Parameters:**
 
-| Name          | Type                                              | Description | Default |
-| ------------- | ------------------------------------------------- | ----------- | ------- |
-| type          | <code>[String](/tutorials/types/Strings)</code>   | Minecraft type ID for the entity, i.e. `minecraft:player`           | -       |
-
+| Name | Type                                            | Description                                               | Default |
+| ---- | ----------------------------------------------- | --------------------------------------------------------- | ------- |
+| type | <code>[String](/tutorials/types/Strings)</code> | Minecraft type ID for the entity, i.e. `minecraft:player` | -       |
 
 </TabItem>
 <TabItem value="overload-3" label="Overload 3">
@@ -1098,25 +1097,25 @@ getNearestEntity(type, radius)
 
 **Parameters:**
 
-| Name          | Type                                              | Description | Default |
-| ------------- | ------------------------------------------------- | ----------- | ------- |
-| type          | <code>[String](/tutorials/types/Strings)</code>   | Minecraft type ID for the entity, i.e. `minecraft:player` | -       |
-| radius        | <code>[Number](/tutorials/types/Numbers)</code>   | Radius of the player-centered cube to find entities in    | 20      |
+| Name   | Type                                            | Description                                               | Default |
+| ------ | ----------------------------------------------- | --------------------------------------------------------- | ------- |
+| type   | <code>[String](/tutorials/types/Strings)</code> | Minecraft type ID for the entity, i.e. `minecraft:player` | -       |
+| radius | <code>[Number](/tutorials/types/Numbers)</code> | Radius of the player-centered cube to find entities in    | 20      |
 
 </TabItem>
 </Tabs>
 
 **Returns:**
 
-| Type                                                 | Description         |
-| ---------------------------------------------------- | ------------------- |
-| <code>[Entity](/globals/Player/Entity)</code>        | Closest entity      | 
+| Type                                          | Description    |
+| --------------------------------------------- | -------------- |
+| <code>[Entity](/globals/Player/Entity)</code> | Closest entity |
 
 **Example:**
 
 ```lua
 -- highlight-next-line
-local entity = thisEntity:getNearestEntity() 
+local entity = thisEntity:getNearestEntity()
 if entity and entity:getType() == "minecraft:pig" then
     log("There's a pig nearby")
 end

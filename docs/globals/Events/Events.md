@@ -261,6 +261,7 @@ function events.damage(type, source, attacker, pos)
     log("Damaged from " .. type .. " by a " .. attacker)
 end
 ```
+
 ---
 
 ### <code>SKULL_RENDER(delta,block,item,entity,mode)</code> \{#SKULL_RENDER}

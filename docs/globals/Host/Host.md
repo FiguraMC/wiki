@@ -1315,13 +1315,13 @@ writeToLog(message)
 **Parameters:**
 
 | Name    | Type                                            | Description | Default |
-|---------|-------------------------------------------------|-------------|---------|
+| ------- | ----------------------------------------------- | ----------- | ------- |
 | message | <code>[String](/tutorials/Types/Strings)</code> | -           | -       |
 
 **Returns:**
 
 | Type             | Description |
-|------------------|-------------|
+| ---------------- | ----------- |
 | <code>nil</code> | -           |
 
 **Example:**
@@ -1345,13 +1345,13 @@ warnToLog(message)
 **Parameters:**
 
 | Name    | Type                                            | Description | Default |
-|---------|-------------------------------------------------|-------------|---------|
+| ------- | ----------------------------------------------- | ----------- | ------- |
 | message | <code>[String](/tutorials/Types/Strings)</code> | -           | -       |
 
 **Returns:**
 
 | Type             | Description |
-|------------------|-------------|
+| ---------------- | ----------- |
 | <code>nil</code> | -           |
 
 **Example:**

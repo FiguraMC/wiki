@@ -1035,7 +1035,7 @@ isIntegratedServer()
 **Returns:**
 
 | Type                                              | Description |
-|---------------------------------------------------|-------------|
+| ------------------------------------------------- | ----------- |
 | <code>[Boolean](/tutorials/Types/Booleans)</code> | -           |
 
 **Example:**
@@ -1043,6 +1043,7 @@ isIntegratedServer()
 ```lua
 client.isIntegratedServer()
 ```
+
 ---
 
 ## Misc

@@ -683,13 +683,13 @@ getMapData(id)
 **Parameters:**
 
 | Name | Type                                            | Description                                     | Default |
-|------|-------------------------------------------------|-------------------------------------------------|---------|
+| ---- | ----------------------------------------------- | ----------------------------------------------- | ------- |
 | id   | <code>[String](/tutorials/types/Strings)</code> | String ID of map, with or without `map_` prefix | -       |
 
 **Returns:**
 
 | Type                                          | Description                    |
-|-----------------------------------------------|--------------------------------|
+| --------------------------------------------- | ------------------------------ |
 | <code>[Table](/tutorials/Types/Tables)</code> | Various data regarding the map |
 
 **Example:**
@@ -768,7 +768,7 @@ getEntities(min, max)
 **Parameters:**
 
 | Name | Type                                             | Description | Default |
-|------|--------------------------------------------------|-------------|---------|
+| ---- | ------------------------------------------------ | ----------- | ------- |
 | min  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 | max  | <code>[Vector3](/globals/Vectors/Vector3)</code> | -           | -       |
 
@@ -782,7 +782,7 @@ getEntities(minX, minY, minZ, maxX, maxY, maxZ)
 **Parameters:**
 
 | Name | Type                                            | Description | Default |
-|------|-------------------------------------------------|-------------|---------|
+| ---- | ----------------------------------------------- | ----------- | ------- |
 | minX | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 | minY | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
 | minZ | <code>[Number](/tutorials/types/Numbers)</code> | -           | -       |
@@ -796,7 +796,7 @@ getEntities(minX, minY, minZ, maxX, maxY, maxZ)
 **Returns:**
 
 | Type                                          | Description                          |
-|-----------------------------------------------|--------------------------------------|
+| --------------------------------------------- | ------------------------------------ |
 | <code>[Table](/tutorials/types/Tables)</code> | The entities within the bounding box |
 
 **Example:**
