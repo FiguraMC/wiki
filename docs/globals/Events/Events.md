@@ -240,6 +240,29 @@ end
 
 ---
 
+### <code>DAMAGE(type,source,attacker,pos)</code> \{#SKULL_RENDER}
+
+Takes four arguments:
+
+(String) - The damage type
+
+(Entity) - The entity that dealt the damage
+
+(Entity) - The attacking entity
+
+(Vec3) - The damage position
+
+The last three arguments may return nil if there is no direct damage source
+
+**Example:**
+
+```lua
+function events.damage(type, source, attacker, pos)
+    log("Damaged from " .. type .. " by a " .. attacker)
+end
+```
+---
+
 ### <code>SKULL_RENDER(delta,block,item,entity,mode)</code> \{#SKULL_RENDER}
 
 Called on every one of your skull blocks placed in the world
@@ -488,6 +511,23 @@ Calling the player without a <code>player:isLoaded()</code> check will error her
 ```lua
 function events.resource_reload()
     log("Resources reloaded")
+end
+```
+
+---
+
+### <code>TOTEM()</code> \{#TOTEM}
+
+Called whenever the player uses a Totem of Undying to cheat death
+
+If returned true, the animation is cancelled
+
+**Example:**
+
+```lua
+function events.totem()
+    log("Almost died!")
+    return true
 end
 ```
 

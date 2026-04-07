@@ -1041,7 +1041,7 @@ isIntegratedServer()
 **Example:**
 
 ```lua
-client:isIntegratedServer()
+client.isIntegratedServer()
 ```
 ---
 
