@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.1.6-pre.1</title>
+    <style>
+        /* stupid simple styles so it doesn't look straight out of CERN */
+
+        :root {
+            --bg: #181818;
+            --surface: #282828;
+            --text: #e8e8e8;
+            --highlight: #80e880;
+            --highlight-bar: #206020;
+            --aside: #b0b0b0;
+            --link: #8080ff;
+            --link-visited: #b080ff;
+        }
+
+        @media screen and (prefers-color-scheme: light) {
+            :root {
+                --bg: #e8e8e8;
+                --surface: #d8d8d8;
+                --text: #181818;
+                --aside: #404040;
+                --highlight: #206020;
+                --highlight-bar: #80e880;
+                --link: #4040b0;
+                --link-visited: #8040b0;
+            }
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: sans-serif;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 60rem;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr min(40rem, 100%) 1fr;
+            grid-auto-flow: row;
+        }
+
+        a {
+            color: var(--link);
+        }
+
+        a:visited {
+            color: var(--link-visited);
+        }
+
+        h1,
+        h2,
+        h3 {
+            position: relative;
+            font-family: serif;
+        }
+
+        h1:target,
+        h2:target,
+        h3:target {
+            color: var(--highlight);
+            position: relative;
+        }
+
+        h1:target::after,
+        h2:target::after,
+        h3:target::after {
+            content: "";
+            position: absolute;
+            width: 4px;
+            inset: 0 auto 0 min(-8px, -0.5rem);
+            background-color: var(--highlight);
+            animation: fade-out 2s 2s ease-in forwards;
+        }
+
+        .versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+            gap: 0.5rem;
+        }
+
+        .version {
+            padding: 0.5rem;
+            border-radius: 0.2rem;
+            background-color: var(--surface);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        main>* {
+            grid-column: 2/3;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        main>.breakout {
+            grid-column: 1/-1;
+        }
+
+        .footer {
+            color: var(--aside);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>
+            0.1.6-pre.1
+        </h1>
+        <p>
+            A Figura pre-release. Select your modloader:
+        </p>
+        <ul>
+            <li><a href="#fabric">Fabric</a></li>
+            <li><a href="#forge">Forge</a></li>
+            <li><a href="#neoforge">NeoForge</a></li>
+        </ul>
+
+        <h2 id="fabric" class="breakout">Fabric</h2>
+
+        <section class="versions breakout">
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.16.5-fabric-mc.jar">1.16.5</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.18.2-fabric-mc.jar">1.18.2</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.19.2-fabric-mc.jar">1.19.2</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.19.3-fabric-mc.jar">1.19.3</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.19.4-fabric-mc.jar">1.19.4</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.1-fabric-mc.jar">1.20.1</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.2-fabric-mc.jar">1.20.2</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.4-fabric-mc.jar">1.20.4</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.6-fabric-mc.jar">1.20.6</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.1-fabric-mc.jar">1.21.1</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.3-fabric-mc.jar">1.21.3</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.4-fabric-mc.jar">1.21.4</a>
+        </section>
+
+        <h2 id="forge" class="breakout">Forge</h2>
+
+        <section class="versions breakout">
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.16.5-forge-mc.jar">1.16.5</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.18.2-forge-mc.jar">1.18.2</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.19.2-forge-mc.jar">1.19.2</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.19.3-forge-mc.jar">1.19.3</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.19.4-forge-mc.jar">1.19.4</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.1-forge-mc.jar">1.20.1</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.2-minecraftforge-mc.jar">1.20.2</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.4-minecraftforge-mc.jar">1.20.4</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.6-minecraftforge-mc.jar">1.20.6</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.1-minecraftforge-mc.jar">1.21.1</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.3-minecraftforge-mc.jar">1.21.3</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.4-minecraftforge-mc.jar">1.21.4</a>
+        </section>
+
+        <h2 id="neoforge" class="breakout">NeoForge</h2>
+
+        <section class="versions breakout">
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.2-neoforge-mc.jar">1.20.2</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.4-neoforge-mc.jar">1.20.4</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.20.6-neoforge-mc.jar">1.20.6</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.1-neoforge-mc.jar">1.21.1</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.3-neoforge-mc.jar">1.21.3</a>
+            <a class="version"
+                href="https://github.com/FiguraMC/Figura/releases/download/0.1.6-pre.1/figura-0.1.6-pre.1+1.21.4-neoforge-mc.jar">1.21.4</a>
+        </section>
+
+        <p class="footer">
+            Files are downloaded from the 0.1.6-pre.1 <a href="https://github.com/FiguraMC/Figura/releases/tag/0.1.6-pre.1">GitHub release</a>.
+        </p>
+    </main>
+</body>
+
+</html>
