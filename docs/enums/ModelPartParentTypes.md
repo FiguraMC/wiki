@@ -145,6 +145,7 @@ ModelParts with this ParentType are only visible while an Elytra is equipped.<br
 
 Mimics the transformation offsets of the Vanilla <code>CAPE</code><br/>
 This ParentType works even if you don't own a vanilla Cape.
+ModelParts with this ParentType aren't visible while an Elytra is equipped.<br/>
 
 ---
 
@@ -404,6 +405,6 @@ This ParentType renders the right boot at the ModelPart's pivot point.
 
 -   #### `HELMET_ITEM_PIVOT` \{#HELMET_ITEM_PIVOT}
 
-This ParentType renders the item that is currently in the Helmet slot. This is for stull like pumpkins, banners, bones. For rendering the vanilla helmet in a different location see see [`HelmetPivot`](#HelmetPivot).
+This ParentType renders the item that is currently in the Helmet slot. This is for stull like pumpkins, banners, bones. For rendering the vanilla helmet in a different location see [`HelmetPivot`](#HelmetPivot).
 
 ---
