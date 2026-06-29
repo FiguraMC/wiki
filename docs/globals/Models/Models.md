@@ -1995,6 +1995,19 @@ setSecondaryTexture(custom, texture)
 | <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
 
 </TabItem>
+<TabItem value="overload-4" label="Overload 4">
+
+```lua
+setSecondaryTexture()
+```
+
+**Returns:**
+
+| Type                                      | Description               |
+| ----------------------------------------- | ------------------------- |
+| <code>[ModelPart](/globals/Models)</code> | Returns self for chaining |
+
+</TabItem>
 </Tabs>
 
 **Example:**
@@ -2006,6 +2019,8 @@ models:setSecondaryTexture("Skin")
 models:setSecondaryTexture("Custom", textures["myTexture"])
 -- Minecraft Resource
 models:setSecondaryTexture("Resource", "textures/entity/pig/pig.png")
+-- None (removes secondary texture)
+models:setSecondaryTexture()
 ```
 
 ---
