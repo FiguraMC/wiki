@@ -19,7 +19,7 @@ end
 | `PAPERDOLL`          | Figura's paperdoll                                                                                                                                        |
 | `MINECRAFT_GUI`      | The inventory menu                                                                                                                                        |
 | `FIRST_PERSON`       | While in first person (contrary to some beliefs, this includes while holding an item in first person, even if your entire avatar is unloaded at the time) |
-| `FIRST_PERSON_WORLD` | Unknown                                                                                                                                                   |
+| `FIRST_PERSON_WORLD` | A world ModelPart rendering (specifically when this part is being rendered from the viewer's avatar)                                                      |
 | `RENDER`             | While in third person (other players render the avatar in this mode)                                                                                      |
-| `WORLD`              | Unknown                                                                                                                                                   |
+| `WORLD`              | A world ModelPart rendering                                                                                                                               |
 | `OTHER`              | Other mods like shaders cause this context                                                                                                                |
