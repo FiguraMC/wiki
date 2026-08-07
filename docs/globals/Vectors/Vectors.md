@@ -716,6 +716,12 @@ vectors.toCameraSpace(vec(1, 2, 3))
 
 Converts a position in the world into a position relative to the viewer's screen
 
+The first and second elements of the returned Vector4 are the x and y positions where `-1 .. 1` is
+the range between the edges of the screen.  
+The third element is `>1.0` when looking at the world position and `<1.0` when
+looking away.  
+The fourth element is the distance of the screen from the world position.
+
 <Tabs>
 <TabItem value="overload-1" label="Overload 1">
 
