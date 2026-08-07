@@ -240,7 +240,7 @@ If the alpha value is not given, it will use the vanilla value (as in the access
 <TabItem value="overload-1" label="Overload 1">
 
 ```lua
-setBackgroundColor(rgba)
+setBackgroundColor(argb)
 ```
 
 **Parameters:**
@@ -259,7 +259,7 @@ setBackgroundColor(rgba)
 <TabItem value="overload-2" label="Overload 2">
 
 ```lua
-setBackgroundColor(r, g, b, a)
+setBackgroundColor(a, r, g, b)
 ```
 
 **Parameters:**
