@@ -1,0 +1,14 @@
+site: build
+
+# keep generated search files inside the website
+output_subdir: pagefind
+
+include_characters: "._:-"
+
+root_selector: "article"
+
+exclude_selectors:
+  - "nav"
+  - "footer"
+  - ".theme-doc-toc-mobile"
+  - ".theme-doc-toc-desktop"
