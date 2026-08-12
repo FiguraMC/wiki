@@ -66,7 +66,12 @@ const config = {
           src: "img/logo.svg",
           srcDark: "img/logoDark.svg",
         },
-        items: [],
+        items: [
+          {
+            type: "search",
+            position: "right"
+          }
+        ]
       },
       footer: {
         style: "dark",
@@ -123,14 +128,6 @@ const config = {
         ],
       },
     }),
-  plugins: [
-    [
-      require.resolve("docusaurus-lunr-search"),
-      {
-        disableVersioning: true,
-      },
-    ],
-  ],
   webpack: {
     jsLoader: (isServer) => ({
       loader: require.resolve("swc-loader"),

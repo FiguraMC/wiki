@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && pagefind --site build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -21,7 +21,6 @@
     "@docusaurus/preset-classic": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
-    "docusaurus-lunr-search": "^3.6.0",
     "lunr": "^2.3.9",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
@@ -32,6 +31,8 @@
     "@prettier/plugin-lua": "^0.0.3",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@tsconfig/docusaurus": "^2.0.1",
+    "@types/node": "^26.2.0",
+    "pagefind": "^1.5.2",
     "prettier": "~3.0.3",
     "swc-loader": "^0.2.3",
     "typescript": "^5.2.2"
