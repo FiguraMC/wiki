@@ -4,6 +4,8 @@ A global API that contains features to work with files
 This page is a WIP. It contains all the information in Figura's documentation but we're working on adding more helpful descriptions.
 :::
 
+All paths used by FileAPI functions are relative to the `figura/data` folder
+
 ---
 
 ### <code>allowed()</code> \{#allowed}
@@ -23,7 +25,7 @@ allowed()
 **Example:**
 
 ```lua
--- example coming soon
+file:allowed()
 ```
 
 ---
@@ -51,7 +53,7 @@ delete(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:delete("myCoolFileName.txt")
 ```
 
 ---
@@ -79,7 +81,7 @@ exists(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:exists("myCoolFileName.txt")
 ```
 
 ---
@@ -107,7 +109,8 @@ isDirectory(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:isDirectory("myCoolFileName.txt") -- false
+file:isDirectory("myCoolFolderName") -- true
 ```
 
 ---
@@ -135,7 +138,8 @@ isFile(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:isFile("myCoolFileName.txt") -- true
+file:isFile("myCoolFolderName") -- false
 ```
 
 ---
@@ -163,7 +167,7 @@ isPathAllowed(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:isPathAllowed("myCoolFolderName")
 ```
 
 ---
@@ -191,14 +195,16 @@ list(path)
 **Example:**
 
 ```lua
--- example coming soon
+local outfits = file:list("outfits")
 ```
 
 ---
 
 ### <code>mkdir()</code> \{#mkdir}
 
-Creates a directory at specified path. Returns true if folder was successfully created
+Creates a directory at specified path. Returns true if folder was successfully created.
+All parent directories have to be present for this to be successful
+
 
 ```lua
 mkdir(path)
@@ -219,14 +225,15 @@ mkdir(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:mkdir("myCoolFolderName")
 ```
 
 ---
 
 ### <code>mkdirs()</code> \{#mkdirs}
 
-Creates a directory at specified path including all parent directories. Returns true if folder was successfully created
+Creates a directory at specified path. Returns true if folder was successfully created.
+Creates parent directories if not present
 
 ```lua
 mkdirs(path)
@@ -247,7 +254,7 @@ mkdirs(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:mkdir("my/cool/sub/directory")
 ```
 
 ---
@@ -275,7 +282,7 @@ openReadStream(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:openReadStream("texture.png")
 ```
 
 ---
@@ -303,7 +310,7 @@ openWriteStream(path)
 **Example:**
 
 ```lua
--- example coming soon
+file:openWriteStream("texture.png")
 ```
 
 ---
@@ -332,7 +339,8 @@ readString(path, encoding)
 **Example:**
 
 ```lua
--- example coming soon
+local string = file:readString("message.txt")
+log(string)
 ```
 
 ---
@@ -362,7 +370,8 @@ writeString(path, data, encoding)
 **Example:**
 
 ```lua
--- example coming soon
+local string = "apple"
+file:writeString("message.txt",string)
 ```
 
 ---
