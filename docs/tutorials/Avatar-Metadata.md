@@ -363,7 +363,7 @@ This customization will prevent the targeted ModelPart from loading at all.<br/>
 {
     "customizations": {
         "accessories.exampleMesh": {
-            "smooth": true
+            "remove": true
         }
     }
 }
