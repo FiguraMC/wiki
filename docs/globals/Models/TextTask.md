@@ -735,7 +735,7 @@ setLight(blockLight, skyLight)
 ```lua
 local blockLight = world.getLightLevel(player:getPos())
 local skyLight = world.getSkyLightLevel(player:getPos())
-myBlock:setLight(blockLight, skyLight)
+myText:setLight(blockLight, skyLight)
 ```
 
 ---
@@ -757,7 +757,7 @@ getLight()
 **Example:**
 
 ```lua
-myBlock:getLight()
+myText:getLight()
 ```
 
 ---
@@ -793,7 +793,7 @@ setMatrix(matrix)
 **Example:**
 
 ```lua
-myBlock:setMatrix(matrices.mat4())
+myText:setMatrix(matrices.mat4())
 ```
 
 ---
@@ -815,7 +815,7 @@ getName()
 **Example:**
 
 ```lua
-myBlock:getName()
+myText:getName()
 ```
 
 ---
@@ -837,7 +837,7 @@ getNormalMatrix()
 **Example:**
 
 ```lua
-myBlock:getNormalMatrix()
+myText:getNormalMatrix()
 ```
 
 ---
@@ -861,7 +861,7 @@ getNormalMatrixRaw()
 **Example:**
 
 ```lua
-myBlock:getNormalMatrixRaw()
+myText:getNormalMatrixRaw()
 ```
 
 ---
@@ -922,7 +922,7 @@ setOverlay(whiteOverlay, hurtOverlay)
 
 ```lua
 local hurt = player:getNbt.HurtTime > 0
-myBlock:setOverlay(hurt and 0 or nil, 1)
+myText:setOverlay(hurt and 0 or nil, 1)
 ```
 
 ---
@@ -944,7 +944,7 @@ getOverlay()
 **Example:**
 
 ```lua
-myBlock:getOverlay()
+myText:getOverlay()
 ```
 
 ---
@@ -1003,7 +1003,7 @@ setPos(x, y, z)
 **Example:**
 
 ```lua
-myBlock:setPos(0, 16, 0)
+myText:setPos(0, 16, 0)
 ```
 
 ---
@@ -1025,7 +1025,7 @@ getPos()
 **Example:**
 
 ```lua
-myBlock:getPos()
+myText:getPos()
 ```
 
 ---
@@ -1047,7 +1047,7 @@ getPositionMatrix()
 **Example:**
 
 ```lua
-myBlock:getPositionMatrix()
+myText:getPositionMatrix()
 ```
 
 ---
@@ -1071,7 +1071,7 @@ getPositionMatrixRaw()
 **Example:**
 
 ```lua
-myBlock:getPositionMatrixRaw()
+myText:getPositionMatrixRaw()
 ```
 
 ---
@@ -1128,7 +1128,7 @@ setRot(x, y, z)
 **Example:**
 
 ```lua
-myBlock:setRot(0, 45, 22.5)
+myText:setRot(0, 45, 22.5)
 ```
 
 ---
@@ -1150,7 +1150,7 @@ getRot()
 **Example:**
 
 ```lua
-myBlock:getRot()
+myText:getRot()
 ```
 
 ---
@@ -1207,7 +1207,7 @@ setScale(x, y, z)
 **Example:**
 
 ```lua
-myBlock:setScale(0.4, 0.4, 0.4) -- myBlock:setScale(0.4) also works
+myText:setScale(0.4, 0.4, 0.4) -- myText:setScale(0.4) also works
 ```
 
 ---
@@ -1229,7 +1229,7 @@ getScale()
 **Example:**
 
 ```lua
-myBlock:getScale()
+myText:getScale()
 ```
 
 ---
@@ -1261,7 +1261,7 @@ setVisible(visible)
 ```lua
 local myPage = action_wheel.newPage()
 myPage:newAction():setOnToggle(function(state)
-    myBlock:setVisible(state)
+    myText:setVisible(state)
 end)
 ```
 
@@ -1284,7 +1284,7 @@ isVisible()
 **Example:**
 
 ```lua
-if myBlock:isVisible() then
+if myText:isVisible() then
     -- do something
 end
 ```
@@ -1308,7 +1308,7 @@ remove()
 **Example:**
 
 ```lua
-myBlock:remove()
+myText:remove()
 ```
 
 ---
